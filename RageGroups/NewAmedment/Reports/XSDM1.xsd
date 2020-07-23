@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XSDM1" targetNamespace="http://tempuri.org/XSDM1.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XSDM1.xsd" xmlns:mstns="http://tempuri.org/XSDM1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dm">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Vou_type" type="xs:string" />
+              <xs:element name="Vou_no" type="xs:string" />
+              <xs:element name="AccCode" type="xs:string" />
+              <xs:element name="AccName" type="xs:string" />
+              <xs:element name="Station" type="xs:string" />
+              <xs:element name="ProductName" type="xs:string" minOccurs="0" />
+              <xs:element name="OutQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OutQtyNos" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BillNo" type="xs:string" minOccurs="0" />
+              <xs:element name="BillDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="InQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InQtyNos" type="xs:string" minOccurs="0" />
+              <xs:element name="Cmp_id" type="xs:string" />
+              <xs:element name="Session" type="xs:string" />
+              <xs:element name="id" type="xs:decimal" />
+              <xs:element name="mrktrate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="authr" type="xs:string" minOccurs="0" />
+              <xs:element name="Prdunit" type="xs:string" minOccurs="0" />
+              <xs:element name="Packing" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Insurance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Discount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CrHead" type="xs:string" minOccurs="0" />
+              <xs:element name="address" type="xs:string" minOccurs="0" />
+              <xs:element name="city" type="xs:string" minOccurs="0" />
+              <xs:element name="state" type="xs:string" minOccurs="0" />
+              <xs:element name="phone" type="xs:string" minOccurs="0" />
+
+              <xs:element name="cgstp" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cgsta" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sgstp" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sgsta" type="xs:decimal" minOccurs="0" />
+              <xs:element name="igstp" type="xs:decimal" minOccurs="0" />
+              <xs:element name="igsta" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="DocumentKey1">
+      <xs:selector xpath=".//mstns:dm" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

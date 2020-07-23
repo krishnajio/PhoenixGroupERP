@@ -1,0 +1,14 @@
+insert into vtype(Cmp_id, Vtype, Seqorder, Vou_no_seq, vprefix, vgrp, session)
+select Cmp_id, Vtype, Seqorder, Vou_no_seq, vprefix, vgrp,'1920' 
+ from vtype where Cmp_id='LWSS' and session='1819'
+ 
+
+
+insert into Groups(Group_name, Suffix, BS_PL, Amount, Sqorder, Cmp_id, Dr_Cr, EffectsIN, session)
+select Group_name, Suffix, BS_PL, Amount, Sqorder, Cmp_id, Dr_Cr, EffectsIN, '1920' from Groups
+where session ='1819' and Cmp_id ='LWSS' 
+
+
+insert into sub_group(Sub_group_name, Group_name, Sqorder, Group_level, Balances, Shedules, Cmp_id, session, Suffix)
+select Sub_group_name, Group_name, Sqorder, Group_level, Balances, Shedules, Cmp_id, '1920', Suffix
+ from sub_group where session ='1819' and Cmp_id ='LWSS' 

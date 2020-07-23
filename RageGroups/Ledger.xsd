@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ledger" targetNamespace="http://tempuri.org/Ledger.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/Ledger.xsd" xmlns:mstns="http://tempuri.org/Ledger.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="Document">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="repGeneralLedger">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Cmpid" type="xs:string" minOccurs="0" />
+							<xs:element name="Uname" type="xs:string" minOccurs="0" />
+							<xs:element name="Entry_id" type="xs:decimal" />
+							<xs:element name="Vou_no" type="xs:string" />
+							<xs:element name="Vou_type" type="xs:string" />
+							<xs:element name="Vou_date" type="xs:dateTime" />
+							<xs:element name="Acc_head_code" type="xs:string" />
+							<xs:element name="Acc_head" type="xs:string" />
+							<xs:element name="dramt" type="xs:double" />
+							<xs:element name="cramt" type="xs:double" />
+							<xs:element name="Pay_mode" type="xs:string" />
+							<xs:element name="Cheque_no" type="xs:string" />
+							<xs:element name="Narration" type="xs:string" />
+							<xs:element name="Group_name" type="xs:string" />
+							<xs:element name="Sub_group_name" type="xs:string" />
+							<xs:element name="Ch_issue_date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Ch_date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="balance" type="xs:double" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

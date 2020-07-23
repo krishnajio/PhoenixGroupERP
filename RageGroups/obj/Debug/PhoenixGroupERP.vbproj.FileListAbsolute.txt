@@ -1,0 +1,1087 @@
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\bin\Debug\Phoenix_GroupERP.exe.config
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.ResolveComReference.cache
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.exe
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.xml
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\PhoenixGroupERP.vbprojResolveAssemblyReference.cache
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmdayBookAuth.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleRegAuthrization.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleOther.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegisterChicksAuthrization.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChichkenBatchWiseSalePurchase.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseSaleDebitCashRecivedSummary.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSale_Purchase_Summary.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonCustomerBalances.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonHeadCustomerBalances.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonList.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.CRVoucherFeeding.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.FrmCstRpt.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCodeList.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustListWithMobileNo.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyBnakPaymentRep.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmDayBookBetweenDays.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmDuePartyPAymentDateList.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.FrmForm49.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.FrmForm49Rpt.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchAmountReport.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchReport.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchReportDetial.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmIntrestCalc.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvFromNarration.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmIyerSirRep.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMortalityRep.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyLetter.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleRegisterProductWise.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSupplementHeadList.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTDSReport.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmXX.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmacheadlist.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmAreamaster.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBackDateChqBankBook.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalancesheet.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalancesheetMonthly.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankBook.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankBook2.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankopening.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankReconcilation.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmbankstate1.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankState2.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankState3.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankStateRepo.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBook.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook2.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChangePassword.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequaAllotuser.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequeIssued.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequeReport.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChicksratemaster.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmchqbook.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChq_conf.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmcpvoucher.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRDebit.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRPrint.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRPrintNew.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRVoucherNarration.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustomerTrailWithSupplyDate.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesVoucherNarration.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmFeedStock.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmFeedTrial.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmGeneralacchead.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmgroups.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHeadDataTransfereToAnotherHead.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHeadTransfer.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmInterest.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvInfo.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemmaster.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmLayout.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmlogin.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmcomp.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMDI.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMisCashReceived.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMisMactchEntryList.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMISRepChqIssueToParty.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMISsalepurexp_rep.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmModifyVoucherDate.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMultiChequeList.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarration.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationEntrybox.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationlist.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationUpdate.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherDetectionVoucherDr.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyaccount.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPaymentDatePopUp.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.Frmpaymentstop.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmProdincvVoucherDr.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseChicken.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseHatchries.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchasePoultrty.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchase_Register.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchase_RegisterOther.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmRepGeneralLedger.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmRevSale.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryBankDr.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransfer.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferHatch.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferPoultryCasual.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferSchool.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleChicken.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoice.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceNewCalculation.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrint.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrintFederation.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceWB.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleRepPHHAPHOE.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegister.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmstockopening.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTransferHeadtoNextSession.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2WithAddress.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial3.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial4.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialWSOS.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherSearch.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalanceSheet3.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusBankDr.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusDebitFrmXls.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusFrmXls.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBookOther.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBTVoucher.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook1.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchDistribution.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchQty.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemMasterOther.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmJournal.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmJournalPurchasePoultrty.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMarkerRatelistaginstchq.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMarketRate.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNoofDays.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyDueBill.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyDueBillG.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPayment.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPaymentandChqprint.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPendlingList.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPostDataToacc.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPostDataToaccNewBAak.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurcahseSumaryItemWise.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurcahseSumaryItemWiseJournal.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseLedeger.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaletax.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSendBulkSms.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmUpdateVouDate.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBillDetialsSale.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyPaymentRepot.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesDailyMonthly.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesVehiclereport.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurchaseJournalRegister.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurchaseRegister.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleReg.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPoAgsBillReport.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmpoultrytmpinv.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmProductLedger.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseRegisterAuthrization.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurRepQtyMonth.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSearch.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSeqVentry.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmServerdetection.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmStockReport.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmsubgroup.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsEntry.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsMaster.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsMultiPleEntry.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial4day.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialbetweendays.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialControl.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmUpdateOpeningofNextSession.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmUserassignment.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmusermgt.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmVentry.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmvoucherlist.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmvtype.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.Resources.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyRate.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpenseEntry.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpenses.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSalePrintInvoice.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmReceipt.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegister2.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherAndChqPrint.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherPrint.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherPrintAll.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrintWithDiscountonAmount.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceWithDiscountOnAmout.resources
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.GenerateResource.Cache
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\bin\Debug\Phoenix_GroupERP.exe.manifest
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\bin\Debug\Phoenix_GroupERP.application
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\bin\Debug\Phoenix_GroupERP.exe
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\bin\Debug\Phoenix_GroupERP.pdb
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\bin\Debug\Phoenix_GroupERP.xml
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.TrustInfo.xml
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.exe.manifest
+D:\Phoenix Prog\Phoenix Group1617 - Copy\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.application
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\bin\Debug\Phoenix_GroupERP.exe.config
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\bin\Debug\Phoenix_GroupERP.exe.manifest
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\bin\Debug\Phoenix_GroupERP.application
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\bin\Debug\Phoenix_GroupERP.exe
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\bin\Debug\Phoenix_GroupERP.pdb
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\bin\Debug\Phoenix_GroupERP.xml
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\PhoenixGroupERP.vbprojResolveAssemblyReference.cache
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.ResolveComReference.cache
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmdayBookAuth.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleRegAuthrization.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleOther.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegisterChicksAuthrization.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChichkenBatchWiseSalePurchase.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseSaleDebitCashRecivedSummary.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSale_Purchase_Summary.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonCustomerBalances.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonHeadCustomerBalances.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonList.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.CRVoucherFeeding.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.FrmCstRpt.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCodeList.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustListWithMobileNo.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyBnakPaymentRep.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmDayBookBetweenDays.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmDuePartyPAymentDateList.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.FrmForm49.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.FrmForm49Rpt.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchAmountReport.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchReport.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchReportDetial.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmIntrestCalc.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvFromNarration.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmIyerSirRep.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMortalityRep.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyLetter.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleRegisterProductWise.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSupplementHeadList.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTDSReport.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmXX.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmacheadlist.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmAreamaster.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBackDateChqBankBook.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalancesheet.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalancesheetMonthly.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankBook.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankBook2.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankopening.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankReconcilation.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmbankstate1.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankState2.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankState3.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankStateRepo.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBook.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook2.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChangePassword.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequaAllotuser.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequeIssued.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequeReport.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChicksratemaster.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmchqbook.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmChq_conf.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmcpvoucher.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRDebit.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRPrint.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRPrintNew.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRVoucherNarration.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustomerTrailWithSupplyDate.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesVoucherNarration.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmFeedStock.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmFeedTrial.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmGeneralacchead.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmgroups.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHeadDataTransfereToAnotherHead.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHeadTransfer.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmInterest.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvInfo.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemmaster.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmLayout.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmlogin.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmcomp.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMDI.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMisCashReceived.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMisMactchEntryList.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMISRepChqIssueToParty.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMISsalepurexp_rep.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmModifyVoucherDate.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMultiChequeList.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarration.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationEntrybox.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationlist.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationUpdate.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherDetectionVoucherDr.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyaccount.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPaymentDatePopUp.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.Frmpaymentstop.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmProdincvVoucherDr.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseChicken.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseHatchries.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchasePoultrty.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchase_Register.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchase_RegisterOther.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmRepGeneralLedger.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmRevSale.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryBankDr.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransfer.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferHatch.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferPoultryCasual.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferSchool.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleChicken.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoice.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceNewCalculation.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrint.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrintFederation.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceWB.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleRepPHHAPHOE.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegister.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmstockopening.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTransferHeadtoNextSession.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2WithAddress.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial3.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial4.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialWSOS.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherSearch.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalanceSheet3.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusBankDr.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusDebitFrmXls.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusFrmXls.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBookOther.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBTVoucher.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook1.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchDistribution.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchQty.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemMasterOther.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmJournal.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmJournalPurchasePoultrty.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMarkerRatelistaginstchq.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmMarketRate.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNoofDays.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyDueBill.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyDueBillG.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPayment.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPaymentandChqprint.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPendlingList.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPostDataToacc.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPostDataToaccNewBAak.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurcahseSumaryItemWise.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurcahseSumaryItemWiseJournal.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseLedeger.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaletax.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSendBulkSms.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmUpdateVouDate.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmBillDetialsSale.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyPaymentRepot.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesDailyMonthly.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesVehiclereport.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurchaseJournalRegister.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurchaseRegister.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleReg.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPoAgsBillReport.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmpoultrytmpinv.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmProductLedger.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseRegisterAuthrization.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurRepQtyMonth.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSearch.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSeqVentry.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmServerdetection.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmStockReport.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmsubgroup.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsEntry.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsMaster.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsMultiPleEntry.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial4day.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialbetweendays.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialControl.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmUpdateOpeningofNextSession.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmUserassignment.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmusermgt.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmVentry.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmvoucherlist.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmvtype.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.Resources.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyRate.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpenseEntry.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpenses.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSalePrintInvoice.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmReceipt.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegister2.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherAndChqPrint.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherPrint.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherPrintAll.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrintWithDiscountonAmount.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceWithDiscountOnAmout.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.GenerateResource.Cache
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.TrustInfo.xml
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.exe.manifest
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.application
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.exe
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.xml
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Interop.VBIDE.dll
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\bin\Debug\Interop.VBIDE.dll
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsModification.resources
+D:\Phoenix Prog VS2013\Phoenix Group1617\Phoenix Group1213\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvPrint.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Interop.VBIDE.dll
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.ResolveComReference.cache
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmdayBookAuth.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleRegAuthrization.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleOther.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegisterChicksAuthrization.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChichkenBatchWiseSalePurchase.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseSaleDebitCashRecivedSummary.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSale_Purchase_Summary.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonCustomerBalances.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonHeadCustomerBalances.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonList.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.CRVoucherFeeding.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.FrmCstRpt.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCodeList.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustListWithMobileNo.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyBnakPaymentRep.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDayBookBetweenDays.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDuePartyPAymentDateList.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.FrmForm49.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.FrmForm49Rpt.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchAmountReport.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchReport.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchReportDetial.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmIntrestCalc.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvFromNarration.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmIyerSirRep.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMortalityRep.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyLetter.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleRegisterProductWise.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSupplementHeadList.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTDSReport.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmXX.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmacheadlist.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmAdvanceLedger.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmAreamaster.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBackDateChqBankBook.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalancesheet.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalancesheetMonthly.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankBook.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankBook2.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankopening.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankReconcilation.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmbankstate1.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankState2.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankState3.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankStateRepo.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBook.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook2.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChangePassword.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequaAllotuser.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequeIssued.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequeReport.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChicksratemaster.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmchqbook.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChq_conf.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmcpvoucher.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRDebit.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRPrint.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRPrintNew.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRVoucherNarration.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustomerTrailWithSupplyDate.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDebitNote.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDisburReg.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesVoucherNarration.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmFeedStock.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmFeedTrial.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmGeneralacchead.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmGeneralacchead_New.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmgroups.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmGSTTDS.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHeadDataTransfereToAnotherHead.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHeadTransfer.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInterest.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvInfo.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemmaster.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmLayout.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmlogin.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmcomp.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMDI.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMisCashReceived.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMisMactchEntryList.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMISRepChqIssueToParty.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMISsalepurexp_rep.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmModifyVoucherDate.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMultiChequeList.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarration.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationEntrybox.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationlist.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationUpdate.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherDetectionVoucherDr.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleIU.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyaccount.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPaymentDatePopUp.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.Frmpaymentstop.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmProdincvVoucherDr.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseChicken.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseHatchries.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchasePoultrty_NewGst.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchasePoultrty_NewGstWithTds.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchase_Register.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchase_RegisterOther.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmRepGeneralLedger.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmRevSale.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryBankDr.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransfer.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferHatch.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferPoultryCasual.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferSchool.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleChicken.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoice.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceNewCalculation.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrint.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrintFederation.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceWB.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleRepPHHAPHOE.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegister.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmstockopening.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTransferHeadtoNextSession.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2WithAddress.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial3.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial4.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialWSOS.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherSearch.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherUnAuthr.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalanceSheet3.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusBankDr.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusDebitFrmXls.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusFrmXls.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBookOther.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBTVoucher.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook1.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpenses.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesWithVeh_Detials.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchDistribution.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchQty.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvPrint.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvRCMPrint.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemMasterOther.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmJournal.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmJournalPurchasePoultrty.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMarkerRatelistaginstchq.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMarketRate.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNoofDays.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyDueBill.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyDueBillG.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPayment.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPaymentandChqprint.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPendlingList.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPostDataToacc.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPostDataToaccNewBAak.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurcahseSumaryItemWise.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurcahseSumaryItemWiseJournal.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseLedeger.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaletax.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSendBulkSms.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsModification.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmUpdateVouDate.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBillDetialsSale.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyPaymentRepot.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDisburmentReg.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDisburRegRep.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesDailyMonthly.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesVehiclereport.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmGSTReg.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurchaseJournalRegister.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurchaseRegister.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurRegGrig.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleReg.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPoAgsBillReport.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmpoultrytmpinv.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmProductLedger.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseRegisterAuthrization.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSearch.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSeqVentry.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmServerdetection.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmStockReport.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmsubgroup.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsEntry.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsMaster.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsMultiPleEntry.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial4day.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialbetweendays.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialControl.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmUpdateOpeningofNextSession.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmUserassignment.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmusermgt.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVentry.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmvoucherlist.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmvtype.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.Resources.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyRate.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpenseEntry.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSalePrintInvoice.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmReceipt.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurRepQtyMonth.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegister2.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherAndChqPrint.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherPrint.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherPrintAll.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDrNote.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemManagementRCM.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmRCMVou.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvRCM.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrintWithDiscountonAmount.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceWithDiscountOnAmout.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.GenerateResource.Cache
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.exe.config
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.exe.manifest
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.application
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.exe
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.pdb
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.xml
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Interop.VBIDE.dll
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.TrustInfo.xml
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.exe.manifest
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.application
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.exe
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.xml
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\PhoenixGroupERP.vbprojResolveAssemblyReference.cache
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBmInvPrint.resources
+D:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustomerBalanceLetter.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.exe.config
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Interop.VBIDE.dll
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.ResolveComReference.cache
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.exe
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.xml
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\PhoenixGroupERP.vbprojResolveAssemblyReference.cache
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmdayBookAuth.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleRegAuthrization.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleOther.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegisterChicksAuthrization.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBmInvPrint.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChichkenBatchWiseSalePurchase.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseSaleDebitCashRecivedSummary.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSale_Purchase_Summary.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonCustomerBalances.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonHeadCustomerBalances.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonList.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.CRVoucherFeeding.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.FrmCstRpt.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCodeList.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustListWithMobileNo.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustomerBalanceLetter.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyBnakPaymentRep.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDayBookBetweenDays.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDuePartyPAymentDateList.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.FrmForm49.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.FrmForm49Rpt.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchAmountReport.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchReport.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchReportDetial.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmIntrestCalc.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvFromNarration.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmIyerSirRep.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMortalityRep.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyLetter.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleRegisterProductWise.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSupplementHeadList.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTDSReport.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmXX.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmacheadlist.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmAdvanceLedger.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmAreamaster.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBackDateChqBankBook.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalancesheet.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalancesheetMonthly.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankBook.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankBook2.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankopening.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankReconcilation.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmbankstate1.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankState2.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankState3.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankStateRepo.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBook.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook2.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChangePassword.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequaAllotuser.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequeIssued.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequeReport.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChicksratemaster.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmchqbook.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChq_conf.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmcpvoucher.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRDebit.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRPrint.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRPrintNew.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRVoucherNarration.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustomerTrailWithSupplyDate.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDebitNote.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDisburReg.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesVoucherNarration.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmFeedStock.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmFeedTrial.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmGeneralacchead.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmGeneralacchead_New.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmgroups.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmGSTTDS.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHeadDataTransfereToAnotherHead.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHeadTransfer.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInterest.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvInfo.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemmaster.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmLayout.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmlogin.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmcomp.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMDI.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMisCashReceived.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMisMactchEntryList.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMISRepChqIssueToParty.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMISsalepurexp_rep.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmModifyVoucherDate.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMultiChequeList.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarration.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationEntrybox.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationlist.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationUpdate.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherDetectionVoucherDr.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleIU.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyaccount.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPaymentDatePopUp.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.Frmpaymentstop.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmProdincvVoucherDr.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseChicken.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseHatchries.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchasePoultrty_NewGst.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchasePoultrty_NewGstWithTds.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchase_Register.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchase_RegisterOther.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmRepGeneralLedger.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmRevSale.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryBankDr.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransfer.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferHatch.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferPoultryCasual.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferSchool.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleChicken.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoice.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceNewCalculation.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrint.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrintFederation.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceWB.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleRepPHHAPHOE.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegister.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmstockopening.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTransferHeadtoNextSession.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2WithAddress.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial3.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial4.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialWSOS.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherSearch.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherUnAuthr.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalanceSheet3.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusBankDr.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusDebitFrmXls.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusFrmXls.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBookOther.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBTVoucher.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook1.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpenses.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesWithVeh_Detials.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchDistribution.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchQty.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvPrint.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvRCMPrint.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemMasterOther.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmJournal.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmJournalPurchasePoultrty.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMarkerRatelistaginstchq.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMarketRate.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNoofDays.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyDueBill.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyDueBillG.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPayment.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPaymentandChqprint.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPendlingList.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPostDataToacc.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPostDataToaccNewBAak.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurcahseSumaryItemWise.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurcahseSumaryItemWiseJournal.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseLedeger.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaletax.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSendBulkSms.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsModification.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmUpdateVouDate.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBillDetialsSale.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyPaymentRepot.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDisburmentReg.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDisburRegRep.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesDailyMonthly.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesVehiclereport.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmGSTReg.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurchaseJournalRegister.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurchaseRegister.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurRegGrig.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleReg.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPoAgsBillReport.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmpoultrytmpinv.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmProductLedger.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseRegisterAuthrization.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSearch.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSeqVentry.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmServerdetection.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmStockReport.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmsubgroup.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsEntry.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsMaster.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsMultiPleEntry.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial4day.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialbetweendays.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialControl.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmUpdateOpeningofNextSession.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmUserassignment.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmusermgt.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVentry.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmvoucherlist.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmvtype.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.Resources.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyRate.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpenseEntry.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSalePrintInvoice.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmReceipt.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurRepQtyMonth.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegister2.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherAndChqPrint.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherPrint.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherPrintAll.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDrNote.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemManagementRCM.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmRCMVou.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvRCM.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrintWithDiscountonAmount.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceWithDiscountOnAmout.resources
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.GenerateResource.Cache
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.TrustInfo.xml
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.exe.manifest
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.application
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.exe
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.pdb
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.xml
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Interop.VBIDE.dll
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.exe.manifest
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.application
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.exe.config
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Interop.VBIDE.dll
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.ResolveComReference.cache
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.exe
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.xml
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.exe.manifest
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.application
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.exe
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.pdb
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Phoenix_GroupERP.xml
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\bin\Debug\Interop.VBIDE.dll
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\PhoenixGroupERP.vbprojResolveAssemblyReference.cache
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmdayBookAuth.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleRegAuthrization.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleOther.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegisterChicksAuthrization.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBmInvPrint.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChichkenBatchWiseSalePurchase.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseSaleDebitCashRecivedSummary.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSale_Purchase_Summary.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonCustomerBalances.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonHeadCustomerBalances.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCommonList.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.CRVoucherFeeding.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.FrmCstRpt.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCodeList.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustListWithMobileNo.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustomerBalanceLetter.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyBnakPaymentRep.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDayBookBetweenDays.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDuePartyPAymentDateList.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.FrmForm49.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.FrmForm49Rpt.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchAmountReport.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchReport.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchReportDetial.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmIntrestCalc.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvFromNarration.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmIyerSirRep.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMortalityRep.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyLetter.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleRegisterProductWise.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSupplementHeadList.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTDSReport.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmXX.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmacheadlist.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmAdvanceLedger.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmAreamaster.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBackDateChqBankBook.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalancesheet.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalancesheetMonthly.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankBook.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankBook2.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankopening.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankReconcilation.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmbankstate1.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankState2.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankState3.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBankStateRepo.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBook.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook2.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChangePassword.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequaAllotuser.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequeIssued.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChequeReport.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChicksratemaster.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmchqbook.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmChq_conf.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmcpvoucher.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRDebit.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRPrint.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRPrintNew.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCRVoucherNarration.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustomerTrailWithSupplyDate.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDebitNote.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDisburReg.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesVoucherNarration.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmFeedStock.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmFeedTrial.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmGeneralacchead.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmGeneralacchead_New.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmgroups.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmGSTTDS.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHeadDataTransfereToAnotherHead.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHeadTransfer.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInterest.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvInfo.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemmaster.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmLayout.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmlogin.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmcomp.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMDI.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMisCashReceived.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMisMactchEntryList.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMISRepChqIssueToParty.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMISsalepurexp_rep.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmModifyVoucherDate.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMultiChequeList.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarration.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationEntrybox.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationlist.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNarrationUpdate.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherDetectionVoucherDr.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleIU.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyaccount.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPaymentDatePopUp.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.Frmpaymentstop.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmProdincvVoucherDr.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseChicken.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseHatchries.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchasePoultrty_NewGst.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchasePoultrty_NewGstWithTds.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchase_Register.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchase_RegisterOther.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmRepGeneralLedger.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmRevSale.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryBankDr.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransfer.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferHatch.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferPoultryCasual.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalaryTransferSchool.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleChicken.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoice.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceNewCalculation.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrint.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrintFederation.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceWB.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleRepPHHAPHOE.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegister.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmstockopening.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTransferHeadtoNextSession.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2WithAddress.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial3.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial4.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialWSOS.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherSearch.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherUnAuthr.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalanceSheet3.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusBankDr.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusDebitFrmXls.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusFrmXls.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBookOther.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBTVoucher.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBook1.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpenses.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesWithVeh_Detials.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchDistribution.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmHatchQty.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvPrint.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvRCMPrint.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemMasterOther.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmJournal.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmJournalPurchasePoultrty.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMarkerRatelistaginstchq.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmMarketRate.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNoofDays.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyDueBill.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPartyDueBillG.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPayment.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPaymentandChqprint.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPendlingList.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPostDataToacc.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPostDataToaccNewBAak.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurcahseSumaryItemWise.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurcahseSumaryItemWiseJournal.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseLedeger.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaletax.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSendBulkSms.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsModification.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmUpdateVouDate.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmBillDetialsSale.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyPaymentRepot.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDisburmentReg.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDisburRegRep.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesDailyMonthly.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpensesVehiclereport.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmGSTReg.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurchaseJournalRegister.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurchaseRegister.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmNewPurRegGrig.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSaleReg.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPoAgsBillReport.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmpoultrytmpinv.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmProductLedger.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseRegisterAuthrization.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSearch.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSeqVentry.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmServerdetection.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmStockReport.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmsubgroup.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsEntry.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsMaster.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsMultiPleEntry.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial4day.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialbetweendays.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialControl.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmUpdateOpeningofNextSession.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmUserassignment.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmusermgt.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVentry.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmvoucherlist.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmvtype.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.Resources.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyRate.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmExpenseEntry.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmOtherSalePrintInvoice.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmReceipt.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurRepQtyMonth.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalesRegister2.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherAndChqPrint.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherPrint.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmVoucherPrintAll.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmDrNote.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmItemManagementRCM.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmRCMVou.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvRCM.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoicePrintWithDiscountonAmount.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaleInvoiceWithDiscountOnAmout.resources
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.GenerateResource.Cache
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.TrustInfo.xml
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.exe.manifest
+G:\Phoenix\Programs\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.application
+E:\Phoenix Prog VS2013\Phoenix GroupGST1718\RageGroups\obj\Debug\Phoenix_GroupERP.frmUserSessionPermission.resources

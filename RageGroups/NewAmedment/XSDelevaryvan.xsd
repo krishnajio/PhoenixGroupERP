@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XSDelevaryvan" targetNamespace="http://tempuri.org/XSDelevaryvan.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XSDelevaryvan.xsd" xmlns:mstns="http://tempuri.org/XSDelevaryvan.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Expenses_det">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vou_type" type="xs:string" minOccurs="0" />
+              <xs:element name="vou_no" type="xs:string" minOccurs="0" />
+              <xs:element name="acc_code" type="xs:string" minOccurs="0" />
+              <xs:element name="acc_name" type="xs:string" minOccurs="0" />
+              <xs:element name="hatch_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="no_of_chicks" type="xs:decimal" minOccurs="0" />
+              <xs:element name="area" type="xs:string" minOccurs="0" />
+              <xs:element name="deisel" type="xs:decimal" minOccurs="0" />
+              <xs:element name="toll_tax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="da" type="xs:decimal" minOccurs="0" />
+              <xs:element name="other" type="xs:string" minOccurs="0" />
+              <xs:element name="driver_name" type="xs:string" minOccurs="0" />
+              <xs:element name="la_ul" type="xs:decimal" minOccurs="0" />
+              <xs:element name="id" type="xs:decimal" />
+              <xs:element name="uname" type="xs:string" minOccurs="0" />
+              <xs:element name="session" type="xs:string" minOccurs="0" />
+              <xs:element name="ltrsmt" type="xs:string" minOccurs="0" />
+              <xs:element name="totalkms" type="xs:string" minOccurs="0" />
+              <xs:element name="ltrscash" type="xs:string" minOccurs="0" />
+              <xs:element name="ltrsbpcl" type="xs:string" minOccurs="0" />
+          
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

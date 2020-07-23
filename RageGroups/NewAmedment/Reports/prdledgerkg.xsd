@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="prdledgerkg" targetNamespace="http://tempuri.org/prdledgerkg.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/prdledgerkg.xsd" xmlns:mstns="http://tempuri.org/prdledgerkg.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ProductLedger">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="acc_code" type="xs:string" minOccurs="0" />
+              <xs:element name="accname" type="xs:string" minOccurs="0" />
+              <xs:element name="SaleQty" type="xs:float" minOccurs="0" />
+              <xs:element name="RetQty" type="xs:float" minOccurs="0" />
+              <xs:element name="Rate" type="xs:float" minOccurs="0" />
+              <xs:element name="dramt" type="xs:float" minOccurs="0" />
+              <xs:element name="billdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cramt" type="xs:float" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

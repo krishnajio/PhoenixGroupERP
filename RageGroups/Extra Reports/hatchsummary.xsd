@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="hatchsummary" targetNamespace="http://tempuri.org/hatchsummary.xsd" xmlns:mstns="http://tempuri.org/hatchsummary.xsd" xmlns="http://tempuri.org/hatchsummary.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RagaGroupConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="RagaGroupConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PhoenixGroups.My.MySettings.GlobalReference.Default.RagaGroupConnectionString1" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="hathsummaryTableAdapter" GeneratorDataComponentClassName="hathsummaryTableAdapter" Name="hathsummary" UserDataComponentName="hathsummaryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RagaGroupConnectionString1 (MySettings)" DbObjectName="RagaGroup.dbo.hathsummary" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT TotalQty, Freeqty, BilledQty, area, hatchdate, productname FROM dbo.hathsummary</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TotalQty" DataSetColumn="TotalQty" />
+              <Mapping SourceColumn="Freeqty" DataSetColumn="Freeqty" />
+              <Mapping SourceColumn="BilledQty" DataSetColumn="BilledQty" />
+              <Mapping SourceColumn="area" DataSetColumn="area" />
+              <Mapping SourceColumn="hatchdate" DataSetColumn="hatchdate" />
+              <Mapping SourceColumn="productname" DataSetColumn="productname" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="hatchsummary" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="hatchsummary" msprop:Generator_DataSetName="hatchsummary">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="hathsummary" msprop:Generator_UserTableName="hathsummary" msprop:Generator_RowDeletedName="hathsummaryRowDeleted" msprop:Generator_RowChangedName="hathsummaryRowChanged" msprop:Generator_RowClassName="hathsummaryRow" msprop:Generator_RowChangingName="hathsummaryRowChanging" msprop:Generator_RowEvArgName="hathsummaryRowChangeEvent" msprop:Generator_RowEvHandlerName="hathsummaryRowChangeEventHandler" msprop:Generator_TableClassName="hathsummaryDataTable" msprop:Generator_TableVarName="tablehathsummary" msprop:Generator_RowDeletingName="hathsummaryRowDeleting" msprop:Generator_TablePropName="hathsummary">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TotalQty" msprop:Generator_UserColumnName="TotalQty" msprop:Generator_ColumnPropNameInRow="TotalQty" msprop:Generator_ColumnVarNameInTable="columnTotalQty" msprop:Generator_ColumnPropNameInTable="TotalQtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Freeqty" msprop:Generator_UserColumnName="Freeqty" msprop:Generator_ColumnPropNameInRow="Freeqty" msprop:Generator_ColumnVarNameInTable="columnFreeqty" msprop:Generator_ColumnPropNameInTable="FreeqtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BilledQty" msdata:ReadOnly="true" msprop:Generator_UserColumnName="BilledQty" msprop:Generator_ColumnPropNameInRow="BilledQty" msprop:Generator_ColumnVarNameInTable="columnBilledQty" msprop:Generator_ColumnPropNameInTable="BilledQtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="area" msprop:Generator_UserColumnName="area" msprop:Generator_ColumnPropNameInRow="area" msprop:Generator_ColumnVarNameInTable="columnarea" msprop:Generator_ColumnPropNameInTable="areaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hatchdate" msprop:Generator_UserColumnName="hatchdate" msprop:Generator_ColumnPropNameInRow="hatchdate" msprop:Generator_ColumnVarNameInTable="columnhatchdate" msprop:Generator_ColumnPropNameInTable="hatchdateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="productname" msprop:Generator_UserColumnName="productname" msprop:Generator_ColumnPropNameInRow="productname" msprop:Generator_ColumnVarNameInTable="columnproductname" msprop:Generator_ColumnPropNameInTable="productnameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="amt" msprop:Generator_UserColumnName="amt" msprop:Generator_ColumnPropNameInRow="amt" msprop:Generator_ColumnVarNameInTable="columnamt" msprop:Generator_ColumnPropNameInTable="amtColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

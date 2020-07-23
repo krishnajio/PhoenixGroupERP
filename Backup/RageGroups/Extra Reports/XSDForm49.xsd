@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XSDForm49" targetNamespace="http://tempuri.org/XSDForm49.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XSDForm49.xsd" xmlns:mstns="http://tempuri.org/XSDForm49.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Form_49">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="party_code" type="xs:string" minOccurs="0" />
+              <xs:element name="frm_no" type="xs:string" minOccurs="0" />
+              <xs:element name="frm_issue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="issue_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="rec_bill_no" type="xs:string" minOccurs="0" />
+              <xs:element name="bill_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="frm_rec_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="session" type="xs:string" minOccurs="0" />
+              <xs:element name="id" type="xs:decimal" />
+              <xs:element name="account_head_name" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

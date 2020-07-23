@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xsdnewtrialbwdays" targetNamespace="http://tempuri.org/xsdnewtrialbwdays.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/xsdnewtrialbwdays.xsd" xmlns:mstns="http://tempuri.org/xsdnewtrialbwdays.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="grp_summary">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="acc_code" type="xs:string" minOccurs="0" />
+              <xs:element name="acc_name" type="xs:string" minOccurs="0" />
+              <xs:element name="td" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="dramt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cramt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Closing" type="xs:decimal" minOccurs="0" />
+              <xs:element name="group_code" type="xs:string" minOccurs="0" />
+              <xs:element name="uname" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,11 @@
+select p.*,q.dramt from (
+select acc_head , sum(qty) qty ,sum(cramt) amount , count(acc_head) count, min(cast(vou_no as int)) min_v , 
+max(cast(vou_no as int)) max_v 
+from sales_rep
+where hatchdate between '11/1/19' and '11/30/19'  and productname in ('LAYER CHICKS','BROILER CHICKS','COCKREL CHICKS') 
+and group_name ='SALE'
+group by acc_head)p inner join 
+(select sum(dramt) dramt ,acc_head,group_name from ventry_phha_1920
+where group_name ='sale' and vou_date between '11/1/19' and '11/30/19'
+group by group_name ,acc_head)q  on q.acc_head=p.acc_head
+ 

@@ -1,0 +1,147 @@
+
+                                                   PHOENIX HATCHERIES
+                                                   DAILY  TRANSACTION BOOK
+    Date: 07/Sep/15                                                                                                   Page No: 1
+----------------------------------------------------------------------------------------------------------------------------------
+    ACCOUNT HEAD                                         PARTICULAR                               DOC NO     DEBIT R/s  CREDIT R/s
+----------------------------------------------------------------------------------------------------------------------------------
+     PHOENIX POULTRY FIRM           BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/583    1200000.00            
+     **IP0078                        CHQ NO. 3064                                           
+
+     BOI - 940520110000019          BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/583                1200000.00
+     **BA0021                        CHQ NO. 3064                                           
+
+     PHOENIX POULTRY FIRM           BEING CHQ ISSUE TO PPF IMPREST AGAINST PURCHASE OF            B/584    1000000.00            
+     **IP0078                       CHICKS  CHQ NO. 102962                                  
+
+     SBI (MARHATAL) -30031517214    BEING CHQ ISSUE TO PPF IMPREST AGAINST PURCHASE OF            B/584                1000000.00
+     **BA0002                       CHICKS  CHQ NO. 102962                                  
+
+     PHOENIX POULTRY FIRM           BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/585    1500000.00            
+     **IP0078                        CHQ NO. 568377                                         
+
+     PNB BANK- 0218002100041885     BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/585                1500000.00
+     **BA0015                        CHQ NO. 568377                                         
+
+     PHOENIX POULTRY FIRM           BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/586     900000.00            
+     **IP0078                        CHQ NO. 534516                                         
+
+     BANK CHARGES                   BEING RTGS CHARGES OF RS 900000/- TO PPF CHQ NO. 534516       B/586         56.00            
+     **GE0001                                                                               
+
+     ALD.BANK-KATANGA -20054295491  BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/586                 900056.00
+     **BA0006                        CHQ NO. 534516                                         
+
+     RAJEEV BEOHAR-BHOPAL           BEING CHQ ISSUE TO RAJEEV BEOHAR AGAINST RENT OF BHOPAL       B/587      15000.00            
+     **PA0212                       FOR THE MONTH OF SEP.15 CHQ NO. 534517                  
+
+     ALD.BANK-KATANGA -20054295491  BEING CHQ ISSUE TO RAJEEV BEOHAR AGAINST RENT OF BHOPAL       B/587                  15000.00
+     **BA0006                       FOR THE MONTH OF SEP.15 CHQ NO. 534517                  
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+                                    TOTAL                                                                  4615056.00   4615056.00
+----------------------------------------------------------------------------------------------------------------------------------
+
+                                    BALANCE                                                                                   0.00
+
+
+   ACCOUNTS MANAGER                                                       ACCOUNTS OFFICER                ACCOUNTANT              
+
+                                                   PHOENIX HATCHERIES
+                                                   DAILY  TRANSACTION BOOK
+    Date: 07/Sep/15                                                                                                   Page No: 1
+----------------------------------------------------------------------------------------------------------------------------------
+    ACCOUNT HEAD                                         PARTICULAR                               DOC NO     DEBIT R/s  CREDIT R/s
+----------------------------------------------------------------------------------------------------------------------------------
+     PHOENIX POULTRY FIRM           BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/583    1200000.00            
+     **IP0078                        CHQ NO. 3064                                           
+
+     BOI - 940520110000019          BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/583                1200000.00
+     **BA0021                        CHQ NO. 3064                                           
+
+     PHOENIX POULTRY FIRM           BEING CHQ ISSUE TO PPF IMPREST AGAINST PURCHASE OF            B/584    1000000.00            
+     **IP0078                       CHICKS  CHQ NO. 102962                                  
+
+     SBI (MARHATAL) -30031517214    BEING CHQ ISSUE TO PPF IMPREST AGAINST PURCHASE OF            B/584                1000000.00
+     **BA0002                       CHICKS  CHQ NO. 102962                                  
+
+     PHOENIX POULTRY FIRM           BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/585    1500000.00            
+     **IP0078                        CHQ NO. 568377                                         
+
+     PNB BANK- 0218002100041885     BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/585                1500000.00
+     **BA0015                        CHQ NO. 568377                                         
+
+     PHOENIX POULTRY FIRM           BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/586     900000.00            
+     **IP0078                        CHQ NO. 534516                                         
+
+     BANK CHARGES                   BEING RTGS CHARGES OF RS 900000/- TO PPF CHQ NO. 534516       B/586         56.00            
+     **GE0001                                                                               
+
+     ALD.BANK-KATANGA -20054295491  BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/586                 900056.00
+     **BA0006                        CHQ NO. 534516                                         
+
+     RAJEEV BEOHAR-BHOPAL           BEING CHQ ISSUE TO RAJEEV BEOHAR AGAINST RENT OF BHOPAL       B/587      15000.00            
+     **PA0212                       FOR THE MONTH OF SEP.15 CHQ NO. 534517                  
+
+     ALD.BANK-KATANGA -20054295491  BEING CHQ ISSUE TO RAJEEV BEOHAR AGAINST RENT OF BHOPAL       B/587                  15000.00
+     **BA0006                       FOR THE MONTH OF SEP.15 CHQ NO. 534517                  
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+                                    TOTAL                                                                  4615056.00   4615056.00
+----------------------------------------------------------------------------------------------------------------------------------
+
+                                    BALANCE                                                                                   0.00
+
+
+   ACCOUNTS MANAGER                                                       ACCOUNTS OFFICER                ACCOUNTANT              
+
+                                                   PHOENIX HATCHERIES
+                                                   DAILY  TRANSACTION BOOK
+    Date: 07/Sep/15                                                                                                   Page No: 1
+----------------------------------------------------------------------------------------------------------------------------------
+    ACCOUNT HEAD                                         PARTICULAR                               DOC NO     DEBIT R/s  CREDIT R/s
+----------------------------------------------------------------------------------------------------------------------------------
+     PHOENIX POULTRY FIRM           BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/583    1200000.00            
+     **IP0078                        CHQ NO. 3064                                           
+
+     BOI - 940520110000019          BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/583                1200000.00
+     **BA0021                        CHQ NO. 3064                                           
+
+     PHOENIX POULTRY FIRM           BEING CHQ ISSUE TO PPF IMPREST AGAINST PURCHASE OF            B/584    1000000.00            
+     **IP0078                       CHICKS  CHQ NO. 102962                                  
+
+     SBI (MARHATAL) -30031517214    BEING CHQ ISSUE TO PPF IMPREST AGAINST PURCHASE OF            B/584                1000000.00
+     **BA0002                       CHICKS  CHQ NO. 102962                                  
+
+     PHOENIX POULTRY FIRM           BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/585    1500000.00            
+     **IP0078                        CHQ NO. 568377                                         
+
+     PNB BANK- 0218002100041885     BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/585                1500000.00
+     **BA0015                        CHQ NO. 568377                                         
+
+     PHOENIX POULTRY FIRM           BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/586     900000.00            
+     **IP0078                        CHQ NO. 534516                                         
+
+     BANK CHARGES                   BEING RTGS CHARGES OF RS 900000/- TO PPF CHQ NO. 534516       B/586         56.00            
+     **GE0001                                                                               
+
+     ALD.BANK-KATANGA -20054295491  BEING CHQ ISSUE TO PPF AGAINST PURCHASE OF CHICKS             B/586                 900056.00
+     **BA0006                        CHQ NO. 534516                                         
+
+     RAJEEV BEOHAR-BHOPAL           BEING CHQ ISSUE TO RAJEEV BEOHAR AGAINST RENT OF BHOPAL       B/587      15000.00            
+     **PA0212                       FOR THE MONTH OF SEP.15 CHQ NO. 534517                  
+
+     ALD.BANK-KATANGA -20054295491  BEING CHQ ISSUE TO RAJEEV BEOHAR AGAINST RENT OF BHOPAL       B/587                  15000.00
+     **BA0006                       FOR THE MONTH OF SEP.15 CHQ NO. 534517                  
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+                                    TOTAL                                                                  4615056.00   4615056.00
+----------------------------------------------------------------------------------------------------------------------------------
+
+                                    BALANCE                                                                                   0.00
+
+
+   ACCOUNTS MANAGER                                                       ACCOUNTS OFFICER                ACCOUNTANT              

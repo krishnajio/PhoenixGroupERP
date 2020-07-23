@@ -1,0 +1,248 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Phoenix_GroupERP
+</name>
+</assembly>
+<members>
+<member name="T:Phoenix_GroupERP.DataSet5.feedsaleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet5.feedsaleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet5.feedsaleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet5">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet5TableAdapters.feedsaleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetDueDate.asdfDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetDueDate.asdfRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetDueDate.asdfRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetDueDate">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetDueDateTableAdapters.asdfTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mobileno.ACC_HEAD_PHAG_0809DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mobileno.ACC_HEAD_PHAG_0809Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mobileno.ACC_HEAD_PHAG_0809RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.mobileno">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mobilenoTableAdapters.ACC_HEAD_PHAG_0809TableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.trials2.aaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.trials2.aaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.trials2.aaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.trials2">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.trials2TableAdapters.aaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Phoenix_GroupERP.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet7.hdfinalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet7.hdfinalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet7.hdfinalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet7">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet7TableAdapters.hdfinalTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetint.tmpprodintDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetint.tmpprodintRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetint.tmpprodintRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetint">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSetintTableAdapters.tmpprodintTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mortalityxsd.PrintDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mortalityxsd.PrintDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mortalityxsd.PrintDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.mortalityxsd">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.mortalityxsdTableAdapters.PrintDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.sendsms">
+	<summary>
+ Summary description for sendsms
+ </summary>
+</member><member name="T:Phoenix_GroupERP.DataSet3.tmpTrial4dateDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet3.tmpTrial4dateRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet3.tmpTrial4dateRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet3">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet3TableAdapters.tmpTrial4dateTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet6.HAtchReportDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet6.HAtchReportRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet6.HAtchReportRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet6">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet6TableAdapters.HAtchReportTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet9.audit_stockDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet9.audit_stockRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet9.audit_stockRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet9">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.DataSet9TableAdapters.audit_stockTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.hatchsummary.hathsummaryDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.hatchsummary.hathsummaryRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Phoenix_GroupERP.hatchsummary.hathsummaryRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Phoenix_GroupERP.hatchsummary">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Phoenix_GroupERP.hatchsummaryTableAdapters.hathsummaryTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+</members>
+</doc>

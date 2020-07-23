@@ -1,0 +1,34 @@
+Private Sub dgbankstate_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles dgbankstate.KeyDown
+        'MsgBox(dgbankstate(6, dgbankstate.CurrentCell.RowIndex - 1).Value & "  " & ei - 1)
+        If e.KeyCode = Keys.Enter Then
+            Dim r, c, tr As Integer
+            If dgbankstate.CurrentCell.ColumnIndex < dgbankstate.ColumnCount - 2 Then
+                SendKeys.Send("{Tab}")
+                'moving tab in current row
+                If dgbankstate.CurrentCell.RowIndex <> dgbankstate.Rows.Count - 1 Then
+                    dgbankstate.CurrentCell = dgbankstate(dgbankstate.CurrentCell.ColumnIndex, dgbankstate.CurrentCell.RowIndex - 1)
+                End If
+                'update existing row
+            End If
+        Else
+            If dgbankstate.CurrentCell.RowIndex = dgbankstate.Rows.Count - 1 Then
+                dgbankstate.Rows.Add()
+                dgbankstate.CurrentCell = dgbankstate(0, dgbankstate.CurrentCell.RowIndex)
+                'save privious row
+
+            End If
+        End If
+    End Sub
+
+    Private Sub dgbankstate_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles dgbankstate.KeyUp
+        If e.KeyCode = Keys.Enter Then
+            Dim r, c, tr As Integer
+            If dgbankstate.CurrentCell.ColumnIndex < dgbankstate.ColumnCount - 2 Then
+                'moving tab in current row
+                If dgbankstate.CurrentCell.RowIndex <> dgbankstate.Rows.Count - 1 Then
+                    dgbankstate.CurrentCell = dgbankstate(dgbankstate.CurrentCell.ColumnIndex, dgbankstate.CurrentCell.RowIndex)
+                End If
+                'update existing row
+            End If
+            End If
+    End Sub

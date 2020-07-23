@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="voucherprint" targetNamespace="http://tempuri.org/voucherprint.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/voucherprint.xsd" xmlns:mstns="http://tempuri.org/voucherprint.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dummy_VENTRY">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cmp_id" type="xs:string" />
+              <xs:element name="Uname" type="xs:string" />
+              <xs:element name="Entry_id" type="xs:decimal" />
+              <xs:element name="Vou_no" type="xs:string" />
+              <xs:element name="Vou_type" type="xs:string" />
+              <xs:element name="Vou_date" type="xs:dateTime" />
+              <xs:element name="Acc_head_code" type="xs:string" />
+              <xs:element name="Acc_head" type="xs:string" />
+              <xs:element name="dramt" type="xs:decimal" />
+              <xs:element name="cramt" type="xs:decimal" />
+              <xs:element name="Pay_mode" type="xs:string" />
+              <xs:element name="Cheque_no" type="xs:string" />
+              <xs:element name="Narration" type="xs:string" />
+              <xs:element name="Group_name" type="xs:string" />
+              <xs:element name="Sub_group_name" type="xs:string" />
+              <xs:element name="Ch_issue_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Ch_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Session" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

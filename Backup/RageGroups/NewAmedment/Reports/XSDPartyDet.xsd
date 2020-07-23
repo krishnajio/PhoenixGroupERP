@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XSDPartyDet" targetNamespace="http://tempuri.org/XSDPartyDet.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XSDPartyDet.xsd" xmlns:mstns="http://tempuri.org/XSDPartyDet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ddk">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="party_code" type="xs:string" />
+              <xs:element name="bill_no" type="xs:string" minOccurs="0" />
+              <xs:element name="bill_date" type="xs:dateTime" />
+              <xs:element name="amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Chq_no" type="xs:string" minOccurs="0" />
+              <xs:element name="favourof" type="xs:string" minOccurs="0" />
+              <xs:element name="recpitid" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Chq_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Uname" type="xs:string" minOccurs="0" />
+              <xs:element name="Vouno" type="xs:string" minOccurs="0" />
+              <xs:element name="vou_type" type="xs:string" minOccurs="0" />
+              <xs:element name="code" type="xs:string" minOccurs="0" />
+              <xs:element name="session" type="xs:string" minOccurs="0" />
+              <xs:element name="account_head_name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

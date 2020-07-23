@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xsdnewpurchaseregister" targetNamespace="http://tempuri.org/xsdnewpurchaseregister.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/xsdnewpurchaseregister.xsd" xmlns:mstns="http://tempuri.org/xsdnewpurchaseregister.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="new_pur_reg">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="For_where" type="xs:string" minOccurs="0" />
+              <xs:element name="Bill_no" type="xs:string" minOccurs="0" />
+              <xs:element name="Bill_date" type="xs:dateTime" />
+              <xs:element name="vou_type" type="xs:string" minOccurs="0" />
+              <xs:element name="vou_no" type="xs:string" />
+              <xs:element name="vou_date" type="xs:dateTime" />
+              <xs:element name="party_code" type="xs:string" />
+              <xs:element name="item_code" type="xs:string" />
+              <xs:element name="item_name" type="xs:string" />
+              <xs:element name="rate" type="xs:decimal" />
+              <xs:element name="lst_rate" type="xs:decimal" />
+              <xs:element name="qty" type="xs:decimal" />
+              <xs:element name="unit" type="xs:string" />
+              <xs:element name="vatcst_code" type="xs:string" minOccurs="0" />
+              <xs:element name="varcst_amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="fr_code" type="xs:string" />
+              <xs:element name="fr_amt" type="xs:decimal" />
+              <xs:element name="pono" type="xs:string" />
+              <xs:element name="inwno" type="xs:string" />
+              <xs:element name="cmp_id" type="xs:string" minOccurs="0" />
+              <xs:element name="session" type="xs:string" />
+              <xs:element name="username" type="xs:string" />
+              <xs:element name="amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="party_amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="inwdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="id" type="xs:decimal" />
+              <xs:element name="vathead" type="xs:string" minOccurs="0" />
+              <xs:element name="csthead" type="xs:string" minOccurs="0" />
+              <xs:element name="cst_code" type="xs:string" minOccurs="0" />
+              <xs:element name="cst_amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="porate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="fr_head" type="xs:string" minOccurs="0" />
+              <xs:element name="account_head_name" type="xs:string" minOccurs="0" />
+              <xs:element name="address" type="xs:string" minOccurs="0" />
+              <xs:element name="remark2" type="xs:string" minOccurs="0" />
+              <xs:element name="mkt_rate" type="xs:decimal" minOccurs="0" />
+               <xs:element name="gst_code" type="xs:string" minOccurs="0" />
+              <xs:element name="gst_head" type="xs:string" minOccurs="0" />
+              <xs:element name="gst_per" type="xs:decimal" minOccurs="0" />
+               <xs:element name="gst_amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="poly" type="xs:decimal" minOccurs="0" />
+              <xs:element name="jute" type="xs:decimal" minOccurs="0" />
+              <xs:element name="vat_per" type="xs:decimal" minOccurs="0" />
+               <xs:element name="cst_per" type="xs:decimal" minOccurs="0" />
+              <xs:element name="itemname" type="xs:string" minOccurs="0" />
+           </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

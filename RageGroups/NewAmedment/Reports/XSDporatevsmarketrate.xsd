@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XSDporatevsmarketrate" targetNamespace="http://tempuri.org/XSDporatevsmarketrate.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XSDporatevsmarketrate.xsd" xmlns:mstns="http://tempuri.org/XSDporatevsmarketrate.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="mrktrate">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="party_code" type="xs:string" minOccurs="0" />
+              <xs:element name="Bill_no" type="xs:string" minOccurs="0" />
+              <xs:element name="Bill_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pono" type="xs:string" minOccurs="0" />
+              <xs:element name="qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="itemname" type="xs:string" minOccurs="0" />
+              <xs:element name="mkt_rate" type="xs:string" minOccurs="0" />
+              <xs:element name="session" type="xs:string" minOccurs="0" />
+              <xs:element name="vou_no" type="xs:string" minOccurs="0" />
+              <xs:element name="cmp_id" type="xs:string" minOccurs="0" />
+              <xs:element name="porate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="po_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="party_amt" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

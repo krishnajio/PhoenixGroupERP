@@ -1,0 +1,34 @@
+USE [RagaGroup]
+GO
+/****** Object:  Table [dbo].[repGeneralLedger1]    Script Date: 06/25/2009 13:00:28 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+--To strart trans id from 1 drop table and then create
+CREATE TABLE [dbo].[repGeneralLedger1](
+	[Cmpid] [varchar](5)  NULL DEFAULT ('-'),
+	[Uname] [varchar](15) NULL DEFAULT ('-'),
+	[Entry_id] [bigint] NOT NULL DEFAULT ((0)),
+	[Vou_no] [varchar](12)  NULL DEFAULT ('-'),
+	[Vou_type] [varchar](20) NULL DEFAULT ('-'),
+	[Vou_date] [datetime] NULL,
+	[Acc_head_code] [varchar](8)  NULL DEFAULT ('-'),
+	[Acc_head] [varchar](30) NULL DEFAULT ('-'),
+	[dramt] [numeric](18, 2) NOT NULL DEFAULT ((0)),
+	[cramt] [numeric](18, 2) NOT NULL DEFAULT ((0)),
+	[Pay_mode] [varchar](10)  NULL DEFAULT ('-'),
+	[Cheque_no] [varchar](15) NULL DEFAULT ('-'),
+	[Narration] [varchar](200)  NULL DEFAULT ('-'),
+	[Group_name] [varchar](40) NULL DEFAULT ('-'),
+	[Sub_group_name] [varchar](60)  NULL DEFAULT ('-'),
+	[Ch_issue_date] [datetime] NULL,
+	[Ch_date] [datetime] NULL,
+	[Balance] [numeric](18, 2) NULL DEFAULT ((0)),
+	[trans_id] [bigint] IDENTITY(1,1) NOT NULL
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF

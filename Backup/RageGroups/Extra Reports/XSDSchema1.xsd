@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XSDSchema1" targetNamespace="http://tempuri.org/XSDSchema1.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XSDSchema1.xsd" xmlns:mstns="http://tempuri.org/XSDSchema1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PrdLedger">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="billno" type="xs:string" minOccurs="0" />
+              <xs:element name="billdate" type="xs:string" minOccurs="0" />
+              <xs:element name="vtype" type="xs:string" minOccurs="0" />
+              <xs:element name="vno" type="xs:string" minOccurs="0" />
+              <xs:element name="inqty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="infree" type="xs:decimal" minOccurs="0" />
+              <xs:element name="invalue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="outbillno" type="xs:string" minOccurs="0" />
+              <xs:element name="outbilldate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="outqty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="outfree" type="xs:decimal" minOccurs="0" />
+              <xs:element name="outvalue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="balqty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="uname" type="xs:string" minOccurs="0" />
+              <xs:element name="id" type="xs:decimal" />
+              <xs:element name="acc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

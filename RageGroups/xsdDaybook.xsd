@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xsdDaybook" targetNamespace="http://tempuri.org/xsdDaybook.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/xsdDaybook.xsd" xmlns:mstns="http://tempuri.org/xsdDaybook.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="Document">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Daybook">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cmpid" type="xs:string" minOccurs="0" />
+							<xs:element name="Acc_code" type="xs:string" minOccurs="0" />
+							<xs:element name="Acc_name" type="xs:string" minOccurs="0" />
+							<xs:element name="Narration" type="xs:string" minOccurs="0" />
+							<xs:element name="Group_name" type="xs:string" minOccurs="0" />
+							<xs:element name="Sub_Group" type="xs:string" minOccurs="0" />
+							<xs:element name="Vtype" type="xs:string" minOccurs="0" />
+							<xs:element name="Vouno" type="xs:string" minOccurs="0" />
+							<xs:element name="dramt" type="xs:decimal" minOccurs="0" />
+							<xs:element name="cramt" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Cheque_x0020_No" type="xs:string" minOccurs="0" />
+							<xs:element name="Vdate" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="entryid" type="xs:int" minOccurs="0" />
+							<xs:element name="Uname" type="xs:string" minOccurs="0" />
+							<xs:element name="vprefix" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

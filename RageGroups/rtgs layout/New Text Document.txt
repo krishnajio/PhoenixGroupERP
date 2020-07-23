@@ -1,0 +1,39 @@
+CREATE TABLE [dbo].[RtgsChqEntry](
+	[id] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[chqdate] [datetime] NULL,
+	[chqno] [varchar](50)  NULL,
+	[chqAmt] [numeric](18, 2) NULL,
+	[ChqSrNo] [numeric](18, 0) NULL
+) ON [PRIMARY]
+
+
+CREATE TABLE [dbo].[chqRTGSLayout](
+	[cmp_id] [varchar](4)  NULL,
+	[acc_head_code] [varchar](8) NULL,
+	[chq_datex] [int] NULL,
+	[chq_datey] [int] NULL,
+	[infavx] [int] NULL,
+	[infavy] [int] NULL,
+	[amtx] [int] NULL,
+	[amty] [int] NULL,
+	[amtinwx] [int] NULL,
+	[amtinwy] [int] NULL,
+	[beneAccNox] [int] NULL,
+	[beneAccNoy] [int] NULL,
+	[bankx] [int] NULL,
+	[banky] [int] NULL,
+	[bankbranchx] [int] NULL,
+	[bankbranchy] [int] NULL,
+	[cityx] [int] NULL,
+	[cityy] [int] NULL,
+	[beneAccNo1x] [int] NULL,
+	[beneAccNo1y] [int] NULL,
+	[beneAddressx] [int] NULL,
+	[beneAddressy] [int] NULL,
+	[chqx] [int] NULL,
+	[chqy] [int] NULL,
+	[chqw] [int] NULL,
+	[cqhh] [int] NULL,
+	[imgpath] [varchar](150) NULL,
+	[layout] [varchar](150)  NULL
+) ON [PRIMARY]

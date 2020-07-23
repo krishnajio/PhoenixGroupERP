@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XSDnewrep" targetNamespace="http://tempuri.org/XSDnewrep.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XSDnewrep.xsd" xmlns:mstns="http://tempuri.org/XSDnewrep.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tmpTrial4date">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="account_code" type="xs:string" minOccurs="0" />
+              <xs:element name="account_head_name" type="xs:string" minOccurs="0" />
+              <xs:element name="odr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ocr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0031_dr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0031_cr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0032_dr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0032_cr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0033_dr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0033_cr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Uname" type="xs:string" minOccurs="0" />
+              <xs:element name="id" type="xs:long" />
+              <xs:element name="grpname" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

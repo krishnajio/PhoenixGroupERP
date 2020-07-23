@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet5" targetNamespace="http://tempuri.org/DataSet5.xsd" xmlns:mstns="http://tempuri.org/DataSet5.xsd" xmlns="http://tempuri.org/DataSet5.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RagaGroupConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="RagaGroupConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PhoenixGroups.My.MySettings.GlobalReference.Default.RagaGroupConnectionString1" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="feedsaleTableAdapter" GeneratorDataComponentClassName="feedsaleTableAdapter" Name="feedsale" UserDataComponentName="feedsaleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RagaGroupConnectionString1 (MySettings)" DbObjectName="RagaGroup.dbo.feedsale" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT qty, itemname, vou_no, billno, acc_head_code, acc_head FROM dbo.feedsale</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="qty" DataSetColumn="qty" />
+              <Mapping SourceColumn="itemname" DataSetColumn="itemname" />
+              <Mapping SourceColumn="vou_no" DataSetColumn="vou_no" />
+              <Mapping SourceColumn="billno" DataSetColumn="billno" />
+              <Mapping SourceColumn="acc_head_code" DataSetColumn="acc_head_code" />
+              <Mapping SourceColumn="acc_head" DataSetColumn="acc_head" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet5" msprop:Generator_DataSetName="DataSet5">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="feedsale" msprop:Generator_UserTableName="feedsale" msprop:Generator_RowDeletedName="feedsaleRowDeleted" msprop:Generator_TableClassName="feedsaleDataTable" msprop:Generator_RowChangedName="feedsaleRowChanged" msprop:Generator_RowClassName="feedsaleRow" msprop:Generator_RowChangingName="feedsaleRowChanging" msprop:Generator_RowEvArgName="feedsaleRowChangeEvent" msprop:Generator_RowEvHandlerName="feedsaleRowChangeEventHandler" msprop:Generator_TablePropName="feedsale" msprop:Generator_TableVarName="tablefeedsale" msprop:Generator_RowDeletingName="feedsaleRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="qty" msprop:Generator_UserColumnName="qty" msprop:Generator_ColumnPropNameInRow="qty" msprop:Generator_ColumnVarNameInTable="columnqty" msprop:Generator_ColumnPropNameInTable="qtyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="itemname" msprop:Generator_UserColumnName="itemname" msprop:Generator_ColumnPropNameInRow="itemname" msprop:Generator_ColumnVarNameInTable="columnitemname" msprop:Generator_ColumnPropNameInTable="itemnameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vou_no" msprop:Generator_UserColumnName="vou_no" msprop:Generator_ColumnPropNameInRow="vou_no" msprop:Generator_ColumnVarNameInTable="columnvou_no" msprop:Generator_ColumnPropNameInTable="vou_noColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="billno" msprop:Generator_UserColumnName="billno" msprop:Generator_ColumnPropNameInRow="billno" msprop:Generator_ColumnVarNameInTable="columnbillno" msprop:Generator_ColumnPropNameInTable="billnoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="acc_head_code" msprop:Generator_UserColumnName="acc_head_code" msprop:Generator_ColumnPropNameInRow="acc_head_code" msprop:Generator_ColumnVarNameInTable="columnacc_head_code" msprop:Generator_ColumnPropNameInTable="acc_head_codeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="acc_head" msprop:Generator_UserColumnName="acc_head" msprop:Generator_ColumnPropNameInRow="acc_head" msprop:Generator_ColumnVarNameInTable="columnacc_head" msprop:Generator_ColumnPropNameInTable="acc_headColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

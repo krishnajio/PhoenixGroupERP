@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="gstr1ph" targetNamespace="http://tempuri.org/gstr1ph.xsd" xmlns:mstns="http://tempuri.org/gstr1ph.xsd" xmlns="http://tempuri.org/gstr1ph.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="PhxGroupERPConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PhxGroupERPConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Phoenix_GroupERP.My.MySettings.GlobalReference.Default.PhxGroupERPConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="gstr1phTableAdapter" GeneratorDataComponentClassName="gstr1phTableAdapter" Name="gstr1ph" UserDataComponentName="gstr1phTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PhxGroupERPConnectionString1 (MySettings)" DbObjectName="PhxGroupERP.dbo.gstr1ph" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Acc_head, qty, amount, count, min_v, max_v, dramt FROM dbo.gstr1ph</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Acc_head" DataSetColumn="Acc_head" />
+              <Mapping SourceColumn="qty" DataSetColumn="qty" />
+              <Mapping SourceColumn="amount" DataSetColumn="amount" />
+              <Mapping SourceColumn="count" DataSetColumn="count" />
+              <Mapping SourceColumn="min_v" DataSetColumn="min_v" />
+              <Mapping SourceColumn="max_v" DataSetColumn="max_v" />
+              <Mapping SourceColumn="dramt" DataSetColumn="dramt" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="gstr1ph" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="gstr1ph" msprop:Generator_UserDSName="gstr1ph">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="gstr1ph" msprop:Generator_TableClassName="gstr1phDataTable" msprop:Generator_TableVarName="tablegstr1ph" msprop:Generator_TablePropName="_gstr1ph" msprop:Generator_RowDeletingName="gstr1phRowDeleting" msprop:Generator_RowChangingName="gstr1phRowChanging" msprop:Generator_RowEvHandlerName="gstr1phRowChangeEventHandler" msprop:Generator_RowDeletedName="gstr1phRowDeleted" msprop:Generator_UserTableName="gstr1ph" msprop:Generator_RowChangedName="gstr1phRowChanged" msprop:Generator_RowEvArgName="gstr1phRowChangeEvent" msprop:Generator_RowClassName="gstr1phRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Acc_head" msprop:Generator_ColumnVarNameInTable="columnAcc_head" msprop:Generator_ColumnPropNameInRow="Acc_head" msprop:Generator_ColumnPropNameInTable="Acc_headColumn" msprop:Generator_UserColumnName="Acc_head">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="qty" msprop:Generator_ColumnVarNameInTable="columnqty" msprop:Generator_ColumnPropNameInRow="qty" msprop:Generator_ColumnPropNameInTable="qtyColumn" msprop:Generator_UserColumnName="qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="count" msprop:Generator_ColumnVarNameInTable="columncount" msprop:Generator_ColumnPropNameInRow="count" msprop:Generator_ColumnPropNameInTable="countColumn" msprop:Generator_UserColumnName="count" type="xs:int" minOccurs="0" />
+              <xs:element name="min_v" msprop:Generator_ColumnVarNameInTable="columnmin_v" msprop:Generator_ColumnPropNameInRow="min_v" msprop:Generator_ColumnPropNameInTable="min_vColumn" msprop:Generator_UserColumnName="min_v" type="xs:int" minOccurs="0" />
+              <xs:element name="max_v" msprop:Generator_ColumnVarNameInTable="columnmax_v" msprop:Generator_ColumnPropNameInRow="max_v" msprop:Generator_ColumnPropNameInTable="max_vColumn" msprop:Generator_UserColumnName="max_v" type="xs:int" minOccurs="0" />
+              <xs:element name="dramt" msprop:Generator_ColumnVarNameInTable="columndramt" msprop:Generator_ColumnPropNameInRow="dramt" msprop:Generator_ColumnPropNameInTable="dramtColumn" msprop:Generator_UserColumnName="dramt" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XSDPoultrytmpinv" targetNamespace="http://tempuri.org/XSDPoultrytmpinv.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XSDPoultrytmpinv.xsd" xmlns:mstns="http://tempuri.org/XSDPoultrytmpinv.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PrintData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Vou_type" type="xs:string" />
+              <xs:element name="Vou_no" type="xs:string" />
+              <xs:element name="AccCode" type="xs:string" minOccurs="0" />
+              <xs:element name="AccName" type="xs:string" minOccurs="0" />
+              <xs:element name="Station" type="xs:string" minOccurs="0" />
+              <xs:element name="ProductName" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DiscountRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DiscountAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NeccRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NeccAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FreePer" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FreeQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="HatchDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BillNo" type="xs:long" minOccurs="0" />
+              <xs:element name="BillDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cmp_id" type="xs:string" />
+              <xs:element name="Session" type="xs:string" />
+              <xs:element name="type" type="xs:string" minOccurs="0" />
+              <xs:element name="PrdUnit" type="xs:string" minOccurs="0" />
+              <xs:element name="authr" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

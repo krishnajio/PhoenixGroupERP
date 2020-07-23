@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BS" targetNamespace="http://tempuri.org/BS.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/BS.xsd" xmlns:mstns="http://tempuri.org/BS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="Document">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="tmppl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cmpid" type="xs:string" minOccurs="0" />
+							<xs:element name="headdr" type="xs:string" minOccurs="0" />
+							<xs:element name="dramt" type="xs:decimal" minOccurs="0" />
+							<xs:element name="headcr" type="xs:string" minOccurs="0" />
+							<xs:element name="cramt" type="xs:decimal" minOccurs="0" />
+							<xs:element name="uname" type="xs:string" minOccurs="0" />
+							<xs:element name="bspl" type="xs:string" minOccurs="0" />
+							<xs:element name="eid" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

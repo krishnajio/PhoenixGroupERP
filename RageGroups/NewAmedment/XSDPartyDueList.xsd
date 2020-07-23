@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XSDPartyDueList" targetNamespace="http://tempuri.org/XSDPartyDueList.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XSDPartyDueList.xsd" xmlns:mstns="http://tempuri.org/XSDPartyDueList.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="Document">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="pb">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="bill_no" type="xs:string" minOccurs="0" />
+							<xs:element name="party_code" type="xs:string" />
+							<xs:element name="bill_date" type="xs:dateTime" />
+							<xs:element name="amt" type="xs:decimal" minOccurs="0" />
+							<xs:element name="session" type="xs:string" />
+							<xs:element name="cmp_id" type="xs:string" minOccurs="0" />
+							<xs:element name="vou_type" type="xs:string" minOccurs="0" />
+							<xs:element name="vou_no" type="xs:string" />
+							<xs:element name="Cmp_id1" type="xs:string" />
+							<xs:element name="Uname" type="xs:string" />
+							<xs:element name="Entry_id" type="xs:decimal" />
+							<xs:element name="Vou_no1" type="xs:string" />
+							<xs:element name="Vou_type1" type="xs:string" />
+							<xs:element name="Vou_date" type="xs:dateTime" />
+							<xs:element name="Acc_head_code" type="xs:string" />
+							<xs:element name="Acc_head" type="xs:string" />
+							<xs:element name="dramt" type="xs:decimal" />
+							<xs:element name="cramt" type="xs:decimal" />
+							<xs:element name="Pay_mode" type="xs:string" />
+							<xs:element name="Cheque_no" type="xs:string" />
+							<xs:element name="Narration" type="xs:string" />
+							<xs:element name="Group_name" type="xs:string" />
+							<xs:element name="Sub_group_name" type="xs:string" />
+							<xs:element name="Ch_issue_date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Ch_date" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

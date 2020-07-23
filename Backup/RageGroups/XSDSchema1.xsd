@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XSDSchema1" targetNamespace="http://tempuri.org/XSDSchema1.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XSDSchema1.xsd" xmlns:mstns="http://tempuri.org/XSDSchema1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Document">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ACC_HEAD_PHOE_0910">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cmp_id" type="xs:string" />
+              <xs:element name="account_code" type="xs:string" />
+              <xs:element name="account_head_name" type="xs:string" />
+              <xs:element name="group_name" type="xs:string" />
+              <xs:element name="sub_group_name" type="xs:string" />
+              <xs:element name="credit_days" type="xs:decimal" />
+              <xs:element name="credit_limit" type="xs:decimal" />
+              <xs:element name="opening_dr" type="xs:decimal" />
+              <xs:element name="opening_cr" type="xs:decimal" />
+              <xs:element name="account_type" type="xs:string" />
+              <xs:element name="address" type="xs:string" />
+              <xs:element name="city" type="xs:string" />
+              <xs:element name="state" type="xs:string" />
+              <xs:element name="phone" type="xs:string" />
+              <xs:element name="pan_no" type="xs:string" />
+              <xs:element name="rate_of_interest" type="xs:decimal" />
+              <xs:element name="interest_rule_id" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Area_code" type="xs:string" minOccurs="0" />
+              <xs:element name="remark1" type="xs:string" />
+              <xs:element name="remark2" type="xs:string" />
+              <xs:element name="remark3" type="xs:string" />
+              <xs:element name="cmp" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="DocumentKey1">
+      <xs:selector xpath=".//mstns:ACC_HEAD_PHOE_0910" />
+      <xs:field xpath="mstns:account_code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

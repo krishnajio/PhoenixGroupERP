@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="trial" targetNamespace="http://tempuri.org/trial.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/trial.xsd" xmlns:mstns="http://tempuri.org/trial.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="Document">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Trial">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="account_code" type="xs:string" />
+							<xs:element name="account_head_name" type="xs:string" />
+							<xs:element name="dr" type="xs:decimal" minOccurs="0" />
+							<xs:element name="cr" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

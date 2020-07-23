@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="exprep" targetNamespace="http://tempuri.org/exprep.xsd" xmlns:mstns="http://tempuri.org/exprep.xsd" xmlns="http://tempuri.org/exprep.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RagaGroupConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="RagaGroupConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Phoenix_GroupERP.My.MySettings.GlobalReference.Default.RagaGroupConnectionString1" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="exp_dayilyTableAdapter" GeneratorDataComponentClassName="exp_dayilyTableAdapter" Name="exp_dayily" UserDataComponentName="exp_dayilyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RagaGroupConnectionString1 (MySettings)" DbObjectName="RagaGroup.dbo.exp_dayily" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT dr, group_name, ch_date FROM dbo.exp_dayily</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="dr" DataSetColumn="dr" />
+              <Mapping SourceColumn="group_name" DataSetColumn="group_name" />
+              <Mapping SourceColumn="ch_date" DataSetColumn="ch_date" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="exprep" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="exprep" msprop:Generator_DataSetName="exprep">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="exp_dayily" msprop:Generator_UserTableName="exp_dayily" msprop:Generator_RowDeletedName="exp_dayilyRowDeleted" msprop:Generator_RowChangedName="exp_dayilyRowChanged" msprop:Generator_RowClassName="exp_dayilyRow" msprop:Generator_RowChangingName="exp_dayilyRowChanging" msprop:Generator_RowEvArgName="exp_dayilyRowChangeEvent" msprop:Generator_RowEvHandlerName="exp_dayilyRowChangeEventHandler" msprop:Generator_TableClassName="exp_dayilyDataTable" msprop:Generator_TableVarName="tableexp_dayily" msprop:Generator_RowDeletingName="exp_dayilyRowDeleting" msprop:Generator_TablePropName="exp_dayily">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dr" msprop:Generator_UserColumnName="dr" msprop:Generator_ColumnVarNameInTable="columndr" msprop:Generator_ColumnPropNameInRow="dr" msprop:Generator_ColumnPropNameInTable="drColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="group_name" msprop:Generator_UserColumnName="group_name" msprop:Generator_ColumnVarNameInTable="columngroup_name" msprop:Generator_ColumnPropNameInRow="group_name" msprop:Generator_ColumnPropNameInTable="group_nameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ch_date" msprop:Generator_UserColumnName="ch_date" msprop:Generator_ColumnVarNameInTable="columnch_date" msprop:Generator_ColumnPropNameInRow="ch_date" msprop:Generator_ColumnPropNameInTable="ch_dateColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
