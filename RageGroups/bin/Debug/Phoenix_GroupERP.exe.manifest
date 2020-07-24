@@ -143,14 +143,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Phoenix_GroupERP.exe" size="10826752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Phoenix_GroupERP.exe" size="10867712">
       <assemblyIdentity name="Phoenix_GroupERP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>l8JPM6hDzRz+qpBvAHI9x0oziKw=</dsig:DigestValue>
+        <dsig:DigestValue>5hwcZr24fbm26G6/NccUsqmLHFw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -199,13 +199,13 @@
       <dsig:DigestValue>g0L42XINAcOXojxcZGMBNU3qmSs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Phoenix_GroupERP.exe.config" size="2931">
+  <file name="Phoenix_GroupERP.exe.config" size="3184">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>xc0WCoWOTjFyhPa3Rw0cJwqC2Dg=</dsig:DigestValue>
+      <dsig:DigestValue>6AUcl/ENH/u3Wyajp/5AK67zo3s=</dsig:DigestValue>
     </hash>
   </file>
   <file name="pss.ico" size="16958">

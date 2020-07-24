@@ -1614,6 +1614,12 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="NewAmedment\Reports\CrpartybankList.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpartybankList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="NewAmedment\Reports\CrPartyBillDetials.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1875,6 +1881,12 @@
     <Compile Include="NewAmedment\Reports\frmOtherSaleReg.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NewAmedment\Reports\frmPartyBankList.Designer.vb">
+      <DependentUpon>frmPartyBankList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\Reports\frmPartyBankList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NewAmedment\Reports\frmPoAgsBillReport.Designer.vb">
       <DependentUpon>frmPoAgsBillReport.vb</DependentUpon>
     </Compile>
@@ -2082,6 +2094,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>gstr1ph.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\Reports\partybankList.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>partybankList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\Reports\partybankList.vb">
+      <DependentUpon>partybankList.xsd</DependentUpon>
     </Compile>
     <Compile Include="NewAmedment\Reports\PrintInv.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -3091,6 +3111,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrNew_Pur_Register1.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\Reports\CrpartybankList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpartybankList.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\CrPartyBillDetials.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrPartyBillDetials.vb</LastGenOutput>
@@ -3250,6 +3274,9 @@
     <EmbeddedResource Include="NewAmedment\Reports\frmOtherSaleReg.resx">
       <DependentUpon>frmOtherSaleReg.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\Reports\frmPartyBankList.resx">
+      <DependentUpon>frmPartyBankList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\frmPoAgsBillReport.resx">
       <SubType>Designer</SubType>
@@ -3483,6 +3510,17 @@
     </None>
     <None Include="NewAmedment\Reports\gstr1ph.xss">
       <DependentUpon>gstr1ph.xsd</DependentUpon>
+    </None>
+    <None Include="NewAmedment\Reports\partybankList.xsc">
+      <DependentUpon>partybankList.xsd</DependentUpon>
+    </None>
+    <None Include="NewAmedment\Reports\partybankList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>partybankList.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="NewAmedment\Reports\partybankList.xss">
+      <DependentUpon>partybankList.xsd</DependentUpon>
     </None>
     <None Include="NewAmedment\Reports\PrintInv.xsc">
       <DependentUpon>PrintInv.xsd</DependentUpon>

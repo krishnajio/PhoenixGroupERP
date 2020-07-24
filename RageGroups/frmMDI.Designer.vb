@@ -257,6 +257,7 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.BankPartyListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1263,7 +1264,7 @@ Partial Class frmMDI
         '
         'ToolStripMenuItem11
         '
-        Me.ToolStripMenuItem11.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PartyPendingListToolStripMenuItem, Me.PendingListConsolidatedMonthlyToolStripMenuItem})
+        Me.ToolStripMenuItem11.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PartyPendingListToolStripMenuItem, Me.PendingListConsolidatedMonthlyToolStripMenuItem, Me.BankPartyListToolStripMenuItem})
         Me.ToolStripMenuItem11.Name = "ToolStripMenuItem11"
         Me.ToolStripMenuItem11.Size = New System.Drawing.Size(341, 22)
         Me.ToolStripMenuItem11.Text = "Bank"
@@ -1768,6 +1769,12 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
+        'BankPartyListToolStripMenuItem
+        '
+        Me.BankPartyListToolStripMenuItem.Name = "BankPartyListToolStripMenuItem"
+        Me.BankPartyListToolStripMenuItem.Size = New System.Drawing.Size(318, 22)
+        Me.BankPartyListToolStripMenuItem.Text = "Bank Party List"
+        '
         'frmMDI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2040,4 +2047,5 @@ Partial Class frmMDI
     Friend WithEvents PhoenixHAtchriesGSTR1ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents SessionPermissionToUserToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BankPartyListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

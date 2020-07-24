@@ -1501,4 +1501,9 @@ Public Class frmMDI
         Dim sessionPermissionObj As New frmUserSessionPermission
         sessionPermissionObj.ShowDialog()
     End Sub
+
+    Private Sub BankPartyListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BankPartyListToolStripMenuItem.Click
+        Dim t As New frmPartyBankList
+        t.ShowDialog()
+    End Sub
 End Class

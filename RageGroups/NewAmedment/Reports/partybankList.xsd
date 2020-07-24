@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="partybankList" targetNamespace="http://tempuri.org/partybankList.xsd" xmlns:mstns="http://tempuri.org/partybankList.xsd" xmlns="http://tempuri.org/partybankList.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="PhxGroupERPConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PhxGroupERPConnectionString2 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Phoenix_GroupERP.My.MySettings.GlobalReference.Default.PhxGroupERPConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="partybanklistTableAdapter" GeneratorDataComponentClassName="partybanklistTableAdapter" Name="partybanklist" UserDataComponentName="partybanklistTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PhxGroupERPConnectionString2 (MySettings)" DbObjectName="" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT account_code, account_head_name, partyCode, bankName, accNumber, ifscCode, branch, id FROM dbo.partybanklist</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="account_code" DataSetColumn="account_code" />
+              <Mapping SourceColumn="account_head_name" DataSetColumn="account_head_name" />
+              <Mapping SourceColumn="partyCode" DataSetColumn="partyCode" />
+              <Mapping SourceColumn="bankName" DataSetColumn="bankName" />
+              <Mapping SourceColumn="accNumber" DataSetColumn="accNumber" />
+              <Mapping SourceColumn="ifscCode" DataSetColumn="ifscCode" />
+              <Mapping SourceColumn="branch" DataSetColumn="branch" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="partybankList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="partybankList" msprop:Generator_UserDSName="partybankList">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="partybanklist" msprop:Generator_TableClassName="partybanklistDataTable" msprop:Generator_TableVarName="tablepartybanklist" msprop:Generator_TablePropName="_partybanklist" msprop:Generator_RowDeletingName="partybanklistRowDeleting" msprop:Generator_RowChangingName="partybanklistRowChanging" msprop:Generator_RowEvHandlerName="partybanklistRowChangeEventHandler" msprop:Generator_RowDeletedName="partybanklistRowDeleted" msprop:Generator_UserTableName="partybanklist" msprop:Generator_RowChangedName="partybanklistRowChanged" msprop:Generator_RowEvArgName="partybanklistRowChangeEvent" msprop:Generator_RowClassName="partybanklistRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="account_code" msprop:Generator_ColumnVarNameInTable="columnaccount_code" msprop:Generator_ColumnPropNameInRow="account_code" msprop:Generator_ColumnPropNameInTable="account_codeColumn" msprop:Generator_UserColumnName="account_code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="account_head_name" msprop:Generator_ColumnVarNameInTable="columnaccount_head_name" msprop:Generator_ColumnPropNameInRow="account_head_name" msprop:Generator_ColumnPropNameInTable="account_head_nameColumn" msprop:Generator_UserColumnName="account_head_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="partyCode" msprop:Generator_ColumnVarNameInTable="columnpartyCode" msprop:Generator_ColumnPropNameInRow="partyCode" msprop:Generator_ColumnPropNameInTable="partyCodeColumn" msprop:Generator_UserColumnName="partyCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bankName" msprop:Generator_ColumnVarNameInTable="columnbankName" msprop:Generator_ColumnPropNameInRow="bankName" msprop:Generator_ColumnPropNameInTable="bankNameColumn" msprop:Generator_UserColumnName="bankName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="accNumber" msprop:Generator_ColumnVarNameInTable="columnaccNumber" msprop:Generator_ColumnPropNameInRow="accNumber" msprop:Generator_ColumnPropNameInTable="accNumberColumn" msprop:Generator_UserColumnName="accNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ifscCode" msprop:Generator_ColumnVarNameInTable="columnifscCode" msprop:Generator_ColumnPropNameInRow="ifscCode" msprop:Generator_ColumnPropNameInTable="ifscCodeColumn" msprop:Generator_UserColumnName="ifscCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="branch" msprop:Generator_ColumnVarNameInTable="columnbranch" msprop:Generator_ColumnPropNameInRow="branch" msprop:Generator_ColumnPropNameInTable="branchColumn" msprop:Generator_UserColumnName="branch" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:partybanklist" />
+      <xs:field xpath="mstns:account_code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
