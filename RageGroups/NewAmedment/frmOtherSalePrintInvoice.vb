@@ -477,7 +477,7 @@ repeatprod:
     End Sub
 
     Private Sub frmOtherSalePrintInvoice_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        sql = "select distinct vou_type from othersaledata where session ='1718' and cmp_id ='phoe'"
+        sql = "select distinct vou_type from othersaledata where session ='" & GMod.Session & "' and cmp_id ='phoe'"
         GMod.DataSetRet(sql, "osvtype")
         cmbVoucherType.DataSource = GMod.ds.Tables("osvtype")
         cmbVoucherType.DisplayMember = "vou_type"
