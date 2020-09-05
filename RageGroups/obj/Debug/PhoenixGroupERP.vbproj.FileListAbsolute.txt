@@ -1313,3 +1313,9 @@ G:\Phoenix\RepoforGitHub\PhoenixGroupERP\RageGroups\obj\Debug\PhoenixGroupERP.vb
 G:\Phoenix\RepoforGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.TrustInfo.xml
 G:\Phoenix\RepoforGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.exe.manifest
 G:\Phoenix\RepoforGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.application
+E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\bin\Debug\Phoenix_GroupERP.exe.config
+E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Interop.VBIDE.dll
+E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\PhoenixGroupERP.vbproj.ResolveComReference.cache
+E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.exe
+E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.xml
+E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
