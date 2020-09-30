@@ -186,6 +186,7 @@ Partial Class frmMDI
         Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PartyPendingListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PendingListConsolidatedMonthlyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BankPartyListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MisReporToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CashReceivedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalePurExpensesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -257,7 +258,7 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.BankPartyListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TCSMasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1281,6 +1282,12 @@ Partial Class frmMDI
         Me.PendingListConsolidatedMonthlyToolStripMenuItem.Size = New System.Drawing.Size(318, 22)
         Me.PendingListConsolidatedMonthlyToolStripMenuItem.Text = "Pending List Consolidated Monthly Party Wise"
         '
+        'BankPartyListToolStripMenuItem
+        '
+        Me.BankPartyListToolStripMenuItem.Name = "BankPartyListToolStripMenuItem"
+        Me.BankPartyListToolStripMenuItem.Size = New System.Drawing.Size(318, 22)
+        Me.BankPartyListToolStripMenuItem.Text = "Bank Party List"
+        '
         'MisReporToolStripMenuItem
         '
         Me.MisReporToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CashReceivedToolStripMenuItem, Me.SalePurExpensesToolStripMenuItem, Me.FeedTrailToolStripMenuItem, Me.MisMatchEntriesToolStripMenuItem, Me.ChichkenCrToolStripMenuItem, Me.HatchAmountReceivedToolStripMenuItem, Me.UpdateSubGroupWithToolStripMenuItem, Me.Trial4DayToolStripMenuItem, Me.HeadTransferToNextSessionToolStripMenuItem, Me.UpdateOpeningToolStripMenuItem, Me.CommonHeadBalancesToolStripMenuItem, Me.HatchReportToolStripMenuItem, Me.HatchReportDetialToolStripMenuItem, Me.ChqIssueToolStripMenuItem, Me.MissingTRToolStripMenuItem, Me.DayWiseSaleCRToolStripMenuItem, Me.XXToolStripMenuItem})
@@ -1392,7 +1399,7 @@ Partial Class frmMDI
         '
         'ToolsToolStripMenuItem
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem23, Me.ToolStripMenuItem20, Me.ChangeSessionToolStripMenuItem, Me.ChangePasswordToolStripMenuItem, Me.ToolStripMenuItem26, Me.ToolStripMenuItem12, Me.NarrationUpdateToolStripMenuItem, Me.BonusEntryBankDrToolStripMenuItem, Me.ToolStripMenuItem10, Me.SendBulkSmsToolStripMenuItem, Me.ToolStripMenuItem19, Me.LogOffToolStripMenuItem, Me.BonusTransferToolStripMenuItem, Me.ExitToolStripMenuItem, Me.NoOfDaysToolStripMenuItem, Me.ToolStripMenuItem32, Me.BonusToolStripMenuItem, Me.UnathrToolStripMenuItem, Me.SessionPermissionToUserToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem23, Me.ToolStripMenuItem20, Me.ChangeSessionToolStripMenuItem, Me.ChangePasswordToolStripMenuItem, Me.ToolStripMenuItem26, Me.ToolStripMenuItem12, Me.NarrationUpdateToolStripMenuItem, Me.BonusEntryBankDrToolStripMenuItem, Me.ToolStripMenuItem10, Me.SendBulkSmsToolStripMenuItem, Me.ToolStripMenuItem19, Me.LogOffToolStripMenuItem, Me.BonusTransferToolStripMenuItem, Me.ExitToolStripMenuItem, Me.NoOfDaysToolStripMenuItem, Me.ToolStripMenuItem32, Me.BonusToolStripMenuItem, Me.UnathrToolStripMenuItem, Me.SessionPermissionToUserToolStripMenuItem, Me.TCSMasterToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
         Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
         Me.ToolsToolStripMenuItem.Text = "&Tools"
@@ -1769,11 +1776,11 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
-        'BankPartyListToolStripMenuItem
+        'TCSMasterToolStripMenuItem
         '
-        Me.BankPartyListToolStripMenuItem.Name = "BankPartyListToolStripMenuItem"
-        Me.BankPartyListToolStripMenuItem.Size = New System.Drawing.Size(318, 22)
-        Me.BankPartyListToolStripMenuItem.Text = "Bank Party List"
+        Me.TCSMasterToolStripMenuItem.Name = "TCSMasterToolStripMenuItem"
+        Me.TCSMasterToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.TCSMasterToolStripMenuItem.Text = "TCS Master"
         '
         'frmMDI
         '
@@ -2048,4 +2055,5 @@ Partial Class frmMDI
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents SessionPermissionToUserToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BankPartyListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TCSMasterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

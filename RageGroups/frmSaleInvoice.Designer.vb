@@ -43,12 +43,9 @@ Partial Class frmSaleInvoice
         Me.Mortality = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dtHatchdate = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.btnsave = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cmbAreaName = New System.Windows.Forms.ComboBox()
         Me.cmbAreaCode = New System.Windows.Forms.ComboBox()
-        Me.btn_modify = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
@@ -57,11 +54,14 @@ Partial Class frmSaleInvoice
         Me.lblno = New System.Windows.Forms.TextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.txtremark1 = New System.Windows.Forms.ComboBox()
-        Me.btnDelete = New System.Windows.Forms.Button()
         Me.cmbsubgrp = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.btn_modify = New System.Windows.Forms.Button()
+        Me.btnsave = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.voutype = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -95,6 +95,15 @@ Partial Class frmSaleInvoice
         Me.lbldr = New System.Windows.Forms.Label()
         Me.lblcr = New System.Windows.Forms.Label()
         Me.CmbState = New System.Windows.Forms.ComboBox()
+        Me.cmbTcsHead = New System.Windows.Forms.ComboBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.txtTcsPer = New System.Windows.Forms.ComboBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.txtTcsAmount = New System.Windows.Forms.ComboBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.cmbTcsType = New System.Windows.Forms.ComboBox()
+        Me.cmbTcsHeadCode = New System.Windows.Forms.ComboBox()
+        Me.chKtcs = New System.Windows.Forms.CheckBox()
         CType(Me.dgSaleVoucher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -280,19 +289,6 @@ Partial Class frmSaleInvoice
         Me.Label7.TabIndex = 106
         Me.Label7.Text = "Hatch Date :"
         '
-        'btnsave
-        '
-        Me.btnsave.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnsave.Image = CType(resources.GetObject("btnsave.Image"), System.Drawing.Image)
-        Me.btnsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnsave.Location = New System.Drawing.Point(143, 11)
-        Me.btnsave.Name = "btnsave"
-        Me.btnsave.Size = New System.Drawing.Size(77, 28)
-        Me.btnsave.TabIndex = 1
-        Me.btnsave.Text = "&Save"
-        Me.btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnsave.UseVisualStyleBackColor = True
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -328,32 +324,6 @@ Partial Class frmSaleInvoice
         Me.cmbAreaCode.Name = "cmbAreaCode"
         Me.cmbAreaCode.Size = New System.Drawing.Size(107, 21)
         Me.cmbAreaCode.TabIndex = 5
-        '
-        'btn_modify
-        '
-        Me.btn_modify.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_modify.Image = CType(resources.GetObject("btn_modify.Image"), System.Drawing.Image)
-        Me.btn_modify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_modify.Location = New System.Drawing.Point(221, 11)
-        Me.btn_modify.Name = "btn_modify"
-        Me.btn_modify.Size = New System.Drawing.Size(88, 28)
-        Me.btn_modify.TabIndex = 1
-        Me.btn_modify.Text = "&Modify"
-        Me.btn_modify.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_modify.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(309, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(109, 28)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "&Print Inv."
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
@@ -454,19 +424,6 @@ Partial Class frmSaleInvoice
         Me.txtremark1.Size = New System.Drawing.Size(133, 21)
         Me.txtremark1.TabIndex = 124
         '
-        'btnDelete
-        '
-        Me.btnDelete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDelete.Image = CType(resources.GetObject("btnDelete.Image"), System.Drawing.Image)
-        Me.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDelete.Location = New System.Drawing.Point(420, 12)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(83, 28)
-        Me.btnDelete.TabIndex = 3
-        Me.btnDelete.Text = "&Delete"
-        Me.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnDelete.UseVisualStyleBackColor = True
-        '
         'cmbsubgrp
         '
         Me.cmbsubgrp.FormattingEnabled = True
@@ -487,7 +444,7 @@ Partial Class frmSaleInvoice
         Me.Panel1.Location = New System.Drawing.Point(1, 649)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(778, 58)
-        Me.Panel1.TabIndex = 14
+        Me.Panel1.TabIndex = 17
         '
         'Label11
         '
@@ -511,6 +468,58 @@ Partial Class frmSaleInvoice
         Me.Button2.Text = "&Close"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'btn_modify
+        '
+        Me.btn_modify.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_modify.Image = CType(resources.GetObject("btn_modify.Image"), System.Drawing.Image)
+        Me.btn_modify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_modify.Location = New System.Drawing.Point(221, 11)
+        Me.btn_modify.Name = "btn_modify"
+        Me.btn_modify.Size = New System.Drawing.Size(88, 28)
+        Me.btn_modify.TabIndex = 1
+        Me.btn_modify.Text = "&Modify"
+        Me.btn_modify.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_modify.UseVisualStyleBackColor = True
+        '
+        'btnsave
+        '
+        Me.btnsave.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnsave.Image = CType(resources.GetObject("btnsave.Image"), System.Drawing.Image)
+        Me.btnsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnsave.Location = New System.Drawing.Point(143, 11)
+        Me.btnsave.Name = "btnsave"
+        Me.btnsave.Size = New System.Drawing.Size(77, 28)
+        Me.btnsave.TabIndex = 1
+        Me.btnsave.Text = "&Save"
+        Me.btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnsave.UseVisualStyleBackColor = True
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.Image = CType(resources.GetObject("btnDelete.Image"), System.Drawing.Image)
+        Me.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDelete.Location = New System.Drawing.Point(420, 12)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(83, 28)
+        Me.btnDelete.TabIndex = 3
+        Me.btnDelete.Text = "&Delete"
+        Me.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(309, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(109, 28)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "&Print Inv."
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -605,9 +614,9 @@ Partial Class frmSaleInvoice
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
-        Me.GroupBox1.Location = New System.Drawing.Point(52, 446)
+        Me.GroupBox1.Location = New System.Drawing.Point(84, 570)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(648, 197)
+        Me.GroupBox1.Size = New System.Drawing.Size(335, 73)
         Me.GroupBox1.TabIndex = 13
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ref Detials"
@@ -616,10 +625,10 @@ Partial Class frmSaleInvoice
         '
         Me.dg.AllowUserToAddRows = False
         Me.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg.Location = New System.Drawing.Point(186, 50)
+        Me.dg.Location = New System.Drawing.Point(563, 171)
         Me.dg.Name = "dg"
         Me.dg.ReadOnly = True
-        Me.dg.Size = New System.Drawing.Size(387, 160)
+        Me.dg.Size = New System.Drawing.Size(10, 39)
         Me.dg.TabIndex = 6
         Me.dg.Visible = False
         '
@@ -714,10 +723,10 @@ Partial Class frmSaleInvoice
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TypeofRef, Me.Ref, Me.DueDate, Me.DataGridViewTextBoxColumn1})
-        Me.DataGridView1.Location = New System.Drawing.Point(60, 77)
+        Me.DataGridView1.Location = New System.Drawing.Point(604, 179)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(554, 165)
+        Me.DataGridView1.Size = New System.Drawing.Size(10, 63)
         Me.DataGridView1.TabIndex = 6
         '
         'TypeofRef
@@ -853,12 +862,128 @@ Partial Class frmSaleInvoice
         Me.CmbState.Size = New System.Drawing.Size(71, 21)
         Me.CmbState.TabIndex = 141
         '
+        'cmbTcsHead
+        '
+        Me.cmbTcsHead.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cmbTcsHead.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbTcsHead.BackColor = System.Drawing.Color.White
+        Me.cmbTcsHead.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbTcsHead.FormattingEnabled = True
+        Me.cmbTcsHead.Location = New System.Drawing.Point(293, 453)
+        Me.cmbTcsHead.Name = "cmbTcsHead"
+        Me.cmbTcsHead.Size = New System.Drawing.Size(469, 21)
+        Me.cmbTcsHead.TabIndex = 14
+        Me.cmbTcsHead.TabStop = False
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
+        Me.Label20.Location = New System.Drawing.Point(228, 455)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(56, 15)
+        Me.Label20.TabIndex = 143
+        Me.Label20.Text = "TCS A/c"
+        '
+        'txtTcsPer
+        '
+        Me.txtTcsPer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.txtTcsPer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.txtTcsPer.BackColor = System.Drawing.Color.White
+        Me.txtTcsPer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.txtTcsPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTcsPer.FormattingEnabled = True
+        Me.txtTcsPer.Location = New System.Drawing.Point(294, 480)
+        Me.txtTcsPer.Name = "txtTcsPer"
+        Me.txtTcsPer.Size = New System.Drawing.Size(110, 21)
+        Me.txtTcsPer.TabIndex = 15
+        Me.txtTcsPer.TabStop = False
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
+        Me.Label21.Location = New System.Drawing.Point(156, 484)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(133, 15)
+        Me.Label21.TabIndex = 145
+        Me.Label21.Text = "TCS Per(%)/Amount"
+        '
+        'txtTcsAmount
+        '
+        Me.txtTcsAmount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.txtTcsAmount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.txtTcsAmount.BackColor = System.Drawing.Color.White
+        Me.txtTcsAmount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.txtTcsAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTcsAmount.FormattingEnabled = True
+        Me.txtTcsAmount.Location = New System.Drawing.Point(410, 480)
+        Me.txtTcsAmount.Name = "txtTcsAmount"
+        Me.txtTcsAmount.Size = New System.Drawing.Size(110, 21)
+        Me.txtTcsAmount.TabIndex = 16
+        Me.txtTcsAmount.TabStop = False
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
+        Me.Label22.Location = New System.Drawing.Point(220, 427)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(71, 15)
+        Me.Label22.TabIndex = 147
+        Me.Label22.Text = "TCS Type:"
+        '
+        'cmbTcsType
+        '
+        Me.cmbTcsType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cmbTcsType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbTcsType.BackColor = System.Drawing.Color.White
+        Me.cmbTcsType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbTcsType.FormattingEnabled = True
+        Me.cmbTcsType.Location = New System.Drawing.Point(294, 427)
+        Me.cmbTcsType.Name = "cmbTcsType"
+        Me.cmbTcsType.Size = New System.Drawing.Size(110, 21)
+        Me.cmbTcsType.TabIndex = 13
+        Me.cmbTcsType.TabStop = False
+        '
+        'cmbTcsHeadCode
+        '
+        Me.cmbTcsHeadCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cmbTcsHeadCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbTcsHeadCode.BackColor = System.Drawing.Color.White
+        Me.cmbTcsHeadCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbTcsHeadCode.FormattingEnabled = True
+        Me.cmbTcsHeadCode.Location = New System.Drawing.Point(608, 439)
+        Me.cmbTcsHeadCode.Name = "cmbTcsHeadCode"
+        Me.cmbTcsHeadCode.Size = New System.Drawing.Size(110, 21)
+        Me.cmbTcsHeadCode.TabIndex = 148
+        Me.cmbTcsHeadCode.TabStop = False
+        '
+        'chKtcs
+        '
+        Me.chKtcs.AutoSize = True
+        Me.chKtcs.Location = New System.Drawing.Point(411, 430)
+        Me.chKtcs.Name = "chKtcs"
+        Me.chKtcs.Size = New System.Drawing.Size(47, 17)
+        Me.chKtcs.TabIndex = 149
+        Me.chKtcs.Text = "TCS"
+        Me.chKtcs.UseVisualStyleBackColor = True
+        '
         'frmSaleInvoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(227, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(797, 709)
+        Me.Controls.Add(Me.chKtcs)
+        Me.Controls.Add(Me.cmbTcsHeadCode)
+        Me.Controls.Add(Me.cmbTcsType)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.txtTcsAmount)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.txtTcsPer)
+        Me.Controls.Add(Me.cmbTcsHead)
+        Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.lblcr)
         Me.Controls.Add(Me.lbldr)
         Me.Controls.Add(Me.Label19)
@@ -986,4 +1111,13 @@ Partial Class frmSaleInvoice
     Friend WithEvents freeper As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents freeqty As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Mortality As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cmbTcsHead As System.Windows.Forms.ComboBox
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents txtTcsPer As System.Windows.Forms.ComboBox
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents txtTcsAmount As System.Windows.Forms.ComboBox
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents cmbTcsType As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbTcsHeadCode As System.Windows.Forms.ComboBox
+    Friend WithEvents chKtcs As System.Windows.Forms.CheckBox
 End Class

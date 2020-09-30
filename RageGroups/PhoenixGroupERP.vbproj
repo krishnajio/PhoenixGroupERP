@@ -1267,6 +1267,18 @@
     <Compile Include="frmstockopening.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmTCSMaster.Designer.vb">
+      <DependentUpon>frmTCSMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTCSMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTdsMaster.Designer.vb">
+      <DependentUpon>frmTdsMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTdsMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTransferHeadtoNextSession.Designer.vb">
       <DependentUpon>frmTransferHeadtoNextSession.vb</DependentUpon>
     </Compile>
@@ -1945,12 +1957,6 @@
       <DependentUpon>frmTdsEntry.vb</DependentUpon>
     </Compile>
     <Compile Include="frmTdsEntry.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTdsMaster.Designer.vb">
-      <DependentUpon>frmTdsMaster.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmTdsMaster.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTdsMultiPleEntry.Designer.vb">
@@ -2891,6 +2897,14 @@
       <DependentUpon>frmstockopening.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTCSMaster.resx">
+      <DependentUpon>frmTCSMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTdsMaster.resx">
+      <DependentUpon>frmTdsMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTransferHeadtoNextSession.resx">
       <DependentUpon>frmTransferHeadtoNextSession.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -3317,10 +3331,6 @@
     <EmbeddedResource Include="frmTdsEntry.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmTdsEntry.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTdsMaster.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>frmTdsMaster.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTdsMultiPleEntry.resx">
       <SubType>Designer</SubType>

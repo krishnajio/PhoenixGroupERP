@@ -51,6 +51,12 @@ Public Class frmSaleInvoice
         fillItems()
         fillArea()
         cmbAreaCode.Text = "JB"
+        'Filling tcs tYPE 
+        GMod.DataSetRet("select * from TCSMaster Where cmp_id='" & GMod.Cmpid & "'", "TCSTYPE")
+        cmbTcsType.DataSource = GMod.ds.Tables("TCSTYPE")
+        cmbTcsType.DisplayMember = "TcsType"
+
+
         'nxtvno()
         Me.Text = Me.Text & "    " & "[" & GMod.Cmpname & "]"
         dgSaleVoucher.Rows.Add()
@@ -396,11 +402,8 @@ Public Class frmSaleInvoice
                     If s.Length = 0 Then
                         s = "-"
                     End If
-
-
                     GMod.ds.Tables("heads").Dispose()
                     'MsgBox(c)
-
                     'getting necc amont 
                     sqlneccamt = "select discount, necc  from ItemMaster where CmP_ID='" & GMod.Cmpid & "' and ItemName='" & dgSaleVoucher(1, i).Value & "'"
                     GMod.DataSetRet(sqlneccamt, "NECCAMOUNT")
@@ -555,11 +558,39 @@ Public Class frmSaleInvoice
                         cmd5.ExecuteNonQuery()
 
                     End If
+
+                    'Inserting TCS tax amount in the Voucher entry Credit 
+                    If Val(txtTcsAmount.Text) > 0 Then
+                        ssaveprdvntry = "insert into " & GMod.VENTRY & " (Cmp_id, Uname," _
+                        & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
+                        & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
+                        ssaveprdvntry &= "'" & GMod.Cmpid & "',"
+                        ssaveprdvntry &= "'" & GMod.username & "',"
+                        ssaveprdvntry &= "'" & i + 1 & "',"
+                        ssaveprdvntry &= "'" & lblno.Text & "',"
+                        ssaveprdvntry &= "'" & voutype.Text & "',"
+                        ssaveprdvntry &= "'" & dtdate.Value.ToShortDateString & "',"
+                        ssaveprdvntry &= "'" & cmbTcsHeadCode.Text & "',"
+                        ssaveprdvntry &= "'" & cmbTcsHead.Text & "',"
+                        ssaveprdvntry &= "'" & Val(zero) & "',"
+                        ssaveprdvntry &= "'" & Val(txtTcsAmount.Text) & "',"
+                        ssaveprdvntry &= "'" & narration.ToString & "',"
+                        ssaveprdvntry &= "'" & g & "',"
+                        ssaveprdvntry &= "'" & s & "','" & dtHatchdate.Value.ToShortDateString & "')"
+                        'MsgBox(ssaveprdvntry)
+                        'MsgBox(GMod.SqlExecuteNonQuery(ssaveprdvntry))
+                        Dim cmdTcstaxentry As New SqlCommand(ssaveprdvntry, GMod.SqlConn, sqltrans)
+                        cmdTcstaxentry.ExecuteNonQuery()
+
+                    End If
+
+
+
                     'Inserting product for PRINT DATA
                     sqlsavenecc = "insert into PrintData (Vou_type, Vou_no, AccCode, AccName, Station, ProductName," _
                                    & "Qty, Rate, Amount, DiscountRate, DiscountAmount, " _
                                    & "NeccRate, NeccAmount, FreePer, FreeQty, HatchDate," _
-                                   & "BillNo, BillDate, Cmp_id, Session,type,PrdUnit,Mortality) VALUES ("
+                                   & "BillNo, BillDate, Cmp_id, Session,type,PrdUnit,Mortality,tcs_head, tcs_per, tcs_amt) VALUES ("
                     sqlsavenecc &= "'" & voutype.Text & "',"
                     sqlsavenecc &= "'" & lblno.Text & "',"
                     sqlsavenecc &= "'" & cmbacheadcode.Text & "',"
@@ -582,7 +613,11 @@ Public Class frmSaleInvoice
                     sqlsavenecc &= "'" & GMod.Session & "',"
                     sqlsavenecc &= "'P',"
                     sqlsavenecc &= "'" & cmbPrdUnit.Text & "',"
-                    sqlsavenecc &= "'" & dgSaleVoucher(7, i).Value & "')"
+                    sqlsavenecc &= "'" & dgSaleVoucher(7, i).Value & "',"
+                    sqlsavenecc &= "'" & cmbTcsHeadCode.Text & "',"
+                    sqlsavenecc &= "'" & Val(txtTcsPer.Text) & "',"
+                    sqlsavenecc &= "'" & Val(txtTcsAmount.Text) & "')"
+
                     'MsgBox(sqlsavenecc)
                     'MsgBox(GMod.SqlExecuteNonQuery(sqlsavenecc))
                     Dim cmd2 As New SqlCommand(sqlsavenecc, GMod.SqlConn, sqltrans)
@@ -609,7 +644,7 @@ Public Class frmSaleInvoice
                 ssaveprdvntry &= "'" & dtdate.Value.ToShortDateString & "',"
                 ssaveprdvntry &= "'" & cmbacheadcode.Text & "',"
                 ssaveprdvntry &= "'" & cmbacheadname.Text & "',"
-                ssaveprdvntry &= "'" & productamount.ToString & "',"
+                ssaveprdvntry &= "'" & Val(productamount) + Val(txtTcsAmount.Text) & "',"
                 ssaveprdvntry &= "'0',"
                 ssaveprdvntry &= "'" & nar & "',"
                 ssaveprdvntry &= "'" & ComboBox1.Text & "',"
@@ -1512,6 +1547,46 @@ Public Class frmSaleInvoice
     End Sub
 
     Private Sub dgSaleVoucher_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgSaleVoucher.CellContentClick
+
+    End Sub
+    Private Sub FetchTcsDetilas()
+        Dim sql As String
+        Try
+            sql = "select tcs.*,a.account_head_name from TCsMaster tcs inner join acc_head_phha_" & GMod.Session & " a on tcs.Acc_code = a.account_code  where TcStype ='" & cmbTcsType.Text & "'"
+            GMod.DataSetRet(sql, "tcsdata")
+
+            cmbTcsHead.Text = GMod.ds.Tables("tcsdata").Rows(0)("account_head_name").ToString
+            cmbTcsHeadCode.Text = GMod.ds.Tables("tcsdata").Rows(0)("Acc_code").ToString
+            txtTcsPer.Text = GMod.ds.Tables("tcsdata").Rows(0)("Per").ToString
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub cmbTcsType_Leave(sender As Object, e As EventArgs) Handles cmbTcsType.Leave
+        FetchTcsDetilas()
+    End Sub
+
+    Private Sub cmbTcsType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTcsType.SelectedIndexChanged
+        FetchTcsDetilas()
+    End Sub
+
+    Private Sub chKtcs_CheckedChanged(sender As Object, e As EventArgs) Handles chKtcs.CheckedChanged
+        Try
+            'Dim sql As String
+            'If chKtcs.Checked = True Then
+            'sql = "select discount, necc  from ItemMaster where CmP_ID='" & GMod.Cmpid & "' and ItemName='" & dgSaleVoucher(1, 0).Value & "'"
+            'GMod.DataSetRet(sql, "neccamyfortcs")
+            'MessageBox.Show(Val(GMod.ds.Tables("neccamyfortcs").Rows(0)(1)))
+            'End If
+
+            Dim tcs As Double
+            tcs = Math.Round(Val(dgSaleVoucher(4, 0).Value) * (Val(txtTcsPer.Text) / 100), 0)
+            txtTcsAmount.Text = tcs.ToString
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 End Class

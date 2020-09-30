@@ -1526,4 +1526,8 @@ x1:
     Private Sub dtInvVate_ValueChanged(sender As Object, e As EventArgs) Handles dtInvVate.ValueChanged
 
     End Sub
+
+    Private Sub dgPurchase_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgPurchase.CellContentClick
+
+    End Sub
 End Class

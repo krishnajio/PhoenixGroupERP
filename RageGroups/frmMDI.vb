@@ -1506,4 +1506,9 @@ Public Class frmMDI
         Dim t As New frmPartyBankList
         t.ShowDialog()
     End Sub
+
+    Private Sub TCSMasterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TCSMasterToolStripMenuItem.Click
+        Dim t As New frmTCSMaster
+        t.Show()
+    End Sub
 End Class
