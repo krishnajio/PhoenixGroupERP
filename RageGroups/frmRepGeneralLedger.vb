@@ -1717,7 +1717,7 @@ Public Class frmRepGeneralLedger
                         Dim str As String
                         Dim codeprefic As String = codefor10.Substring(0, 2)
                         If codeprefic = "**" Then
-                            If codeprefic.Length = 8 Then
+                            If codefor10.Length = 8 Then
                                 str = codefor10.Substring(2, 6)
                             Else
                                 str = codefor10.Substring(2, 8)
@@ -1766,7 +1766,7 @@ Public Class frmRepGeneralLedger
                         Dim str As String
                         Dim codeprefic As String = codefor10.Substring(0, 2)
                         If codeprefic = "**" Then
-                            If codeprefic.Length = 8 Then
+                            If codefor10.Length = 8 Then
                                 str = codefor10.Substring(2, 6)
                             Else
                                 str = codefor10.Substring(2, 8)
