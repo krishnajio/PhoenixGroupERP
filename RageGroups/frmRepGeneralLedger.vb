@@ -1717,7 +1717,11 @@ Public Class frmRepGeneralLedger
                         Dim str As String
                         Dim codeprefic As String = codefor10.Substring(0, 2)
                         If codeprefic = "**" Then
-                            str = codefor10.Substring(2, 6)
+                            If codeprefic.Length = 8 Then
+                                str = codefor10.Substring(2, 6)
+                            Else
+                                str = codefor10.Substring(2, 8)
+                            End If
                         Else
                             str = codefor10
                         End If
@@ -1762,33 +1766,37 @@ Public Class frmRepGeneralLedger
                         Dim str As String
                         Dim codeprefic As String = codefor10.Substring(0, 2)
                         If codeprefic = "**" Then
-                            str = codefor10.Substring(2, 6)
+                            If codeprefic.Length = 8 Then
+                                str = codefor10.Substring(2, 6)
+                            Else
+                                str = codefor10.Substring(2, 8)
+                            End If
                         Else
                             str = codefor10
                         End If
-                        Dim str1 As String = str
-                        Dim CrExportOptions As ExportOptions
-                        Dim CrDiskFileDestinationOptions As New  _
-                        DiskFileDestinationOptions()
-                        Dim CrFormatTypeOptions As New PdfRtfWordFormatOptions()
+                            Dim str1 As String = str
+                            Dim CrExportOptions As ExportOptions
+                            Dim CrDiskFileDestinationOptions As New  _
+                            DiskFileDestinationOptions()
+                            Dim CrFormatTypeOptions As New PdfRtfWordFormatOptions()
 
-                        CrDiskFileDestinationOptions.DiskFileName = System.Environment.CurrentDirectory & "\Ledger\" & str1 & ".pdf"
-                        CrExportOptions = r.ExportOptions
-                        With CrExportOptions
-                            .ExportDestinationType = ExportDestinationType.DiskFile
-                            .ExportFormatType = ExportFormatType.PortableDocFormat
-                            .DestinationOptions = CrDiskFileDestinationOptions
-                            .FormatOptions = CrFormatTypeOptions
-                        End With
-                        r.Export()
-                        Dim ii As Integer
-                        For ii = 0 To 1000
+                            CrDiskFileDestinationOptions.DiskFileName = System.Environment.CurrentDirectory & "\Ledger\" & str1 & ".pdf"
+                            CrExportOptions = r.ExportOptions
+                            With CrExportOptions
+                                .ExportDestinationType = ExportDestinationType.DiskFile
+                                .ExportFormatType = ExportFormatType.PortableDocFormat
+                                .DestinationOptions = CrDiskFileDestinationOptions
+                                .FormatOptions = CrFormatTypeOptions
+                            End With
+                            r.Export()
+                            Dim ii As Integer
+                            For ii = 0 To 1000
 
-                        Next
+                            Next
 
 
 
-                    End If
+                        End If
                 End If
                 code(0) = ""
                 code(1) = ""
