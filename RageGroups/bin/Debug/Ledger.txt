@@ -1,43 +1,37 @@
 
                                                    PHOENIX POULTRY FIRM
-                                                   LEDGER :COMPUTER VISION-JABALPUR **PA3740
-Date: 01/APR/18 TO 31/MAR/19                                                                                      Page No: 1
+                                                   LEDGER :***NOVYRATE BE PURCHASE (OS) **AI0003
+Date: 01/APR/19 TO 31/MAR/20                                                                                      Page No: 1
 ------------------------------------------------------------------------------------------------------------------------------------
    DATE                       PARTICULAR                                      DOC NO         DEBIT R/s       CREDIT R/s
 -------------------------------------------------------------------------------------------------------------------------------------
-                OLD BALANCE                                                                                           
+                OLD BALANCE                                                                   2812.59            
 
-                OLD BALANCE                                                                                           
+                OLD BALANCE                                                                   2812.59            
 
-                OLD BALANCE                                                                                           
+                OLD BALANCE                                                                   2812.59            
 
-   12/7/2018    BILL NO 256 DT.06/Jul/2018 #BEING AMT.OF LAPTOP PURCHASE        PJ/667                        28200.00
-                Nb Pc 15-Bs658TU HPBATCH.NO.CND8164CFD I NO.@ 23135/-       
-                NEW ENTRY BACK PACK @ 762/- PUR FOR ROMIKA PATHAK FROM COMPUTER VISION-JABALPUR Inw. No.-0 Inw Date 06-Jul-2018 #PO.No/92  
+                OLD BALANCE                                                                   2812.59            
 
-   12/7/2018    BILL NO 256 DT.06/Jul/2018 #BEING AMT.OF LAPTOP PURCHASE        PJ/667                        28200.00
-                Nb Pc 15-Bs658TU HPBATCH.NO.CND8164CFD I NO.@ 23135/-       
-                NEW ENTRY BACK PACK @ 762/- PUR FOR ROMIKA PATHAK FROM COMPUTER VISION-JABALPUR Inw. No.-0 Inw Date 06-Jul-2018 #PO.No/92  
+   31/3/2020    BEING AMOUNT OF A/C MAINT & MINIMUM BALANCE CHARGES             EJ/1430                        2812.59
+                DEBITED BY BANK BOI A/C NO. 940520110000021 PHOENIX         
+                FARMING FEDERATION FOR THE PERIOD 1 APRIL-19 TO 31 MARCH-20 AS PER BANK STAT  
 
-   12/7/2018    BILL NO 256 DT.06/Jul/2018 #BEING AMT.OF LAPTOP PURCHASE        PJ/667                        28200.00
-                Nb Pc 15-Bs658TU HPBATCH.NO.CND8164CFD I NO.@ 23135/-       
-                NEW ENTRY BACK PACK @ 762/- PUR FOR ROMIKA PATHAK FROM COMPUTER VISION-JABALPUR Inw. No.-0 Inw Date 06-Jul-2018 #PO.No/92  
+   31/3/2020    BEING AMOUNT OF A/C MAINT & MINIMUM BALANCE CHARGES             EJ/1430                        2812.59
+                DEBITED BY BANK BOI A/C NO. 940520110000021 PHOENIX         
+                FARMING FEDERATION FOR THE PERIOD 1 APRIL-19 TO 31 MARCH-20 AS PER BANK STAT  
 
-   18/7/2018    BEING CHQ.NO. 905944 ISSUED TO COMPUTER VISION AGST             B/1258       28200.00            
-                LABTOP OUR FOR ROMIKA AGST BILL NO. 256 DT 6.7.18           
-                CHQ NO. 905944  
+   31/3/2020    BEING AMOUNT OF A/C MAINT & MINIMUM BALANCE CHARGES             EJ/1430                        2812.59
+                DEBITED BY BANK BOI A/C NO. 940520110000021 PHOENIX         
+                FARMING FEDERATION FOR THE PERIOD 1 APRIL-19 TO 31 MARCH-20 AS PER BANK STAT  
 
-   18/7/2018    BEING CHQ.NO. 905944 ISSUED TO COMPUTER VISION AGST             B/1258       28200.00            
-                LABTOP OUR FOR ROMIKA AGST BILL NO. 256 DT 6.7.18           
-                CHQ NO. 905944  
-
-   18/7/2018    BEING CHQ.NO. 905944 ISSUED TO COMPUTER VISION AGST             B/1258       28200.00            
-                LABTOP OUR FOR ROMIKA AGST BILL NO. 256 DT 6.7.18           
-                CHQ NO. 905944  
+   31/3/2020    BEING AMOUNT OF A/C MAINT & MINIMUM BALANCE CHARGES             EJ/1430                        2812.59
+                DEBITED BY BANK BOI A/C NO. 940520110000021 PHOENIX         
+                FARMING FEDERATION FOR THE PERIOD 1 APRIL-19 TO 31 MARCH-20 AS PER BANK STAT  
 
 
 ------------------------------------------------------------------------------------------------------------------------------------
-                                    TOTAL                                                   84600.00         84600.00
+                                    TOTAL                                                   11250.36         11250.36
 ------------------------------------------------------------------------------------------------------------------------------------
 
                                     BALANCE                                                                   0.00 Cr

@@ -143,14 +143,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Phoenix_GroupERP.exe" size="10875904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Phoenix_GroupERP.exe" size="10879488">
       <assemblyIdentity name="Phoenix_GroupERP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>gJTudtVNM1/Snm1h7F9b9nlpG1s=</dsig:DigestValue>
+        <dsig:DigestValue>UClIE1/YBjwXtb3VBgMm/8SSv1s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

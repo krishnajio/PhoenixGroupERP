@@ -2,6 +2,10 @@ Imports System.IO
 Imports System.Diagnostics
 Imports System.Data
 Imports System.Data.SqlClient
+Imports CrystalDecisions.ReportSource
+Imports CrystalDecisions.CrystalReports
+Imports CrystalDecisions.Shared
+
 Public Class frmRepGeneralLedger
 
     Private Sub frmRepGeneralLedger_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
@@ -81,7 +85,7 @@ Public Class frmRepGeneralLedger
         fillArea()
 
         cmbAreaCode.Text = "JB"
-        
+
         CrViewerGenralLedger.Height = Me.Height - 198
         dgGridLeger.Location = CrViewerGenralLedger.Location
         dgParty.Location = CrViewerGenralLedger.Location
@@ -625,7 +629,7 @@ Public Class frmRepGeneralLedger
             p.StartInfo.UseShellExecute = False
             p.StartInfo.RedirectStandardOutput = True
             p.Start()
-           
+
             cmbacheadname.Enabled = True
             cmbacheadcode.Enabled = True
             cmbgrpname.Enabled = True
@@ -831,7 +835,7 @@ Public Class frmRepGeneralLedger
             btnshow_Click(sender, e)
             'MsgBox(cmbacheadname.Text)
             'sw.WriteLine(Convert.ToChar(12).ToString)
-          
+
 
             LedgerDOSPrint(cmbacheadcode.Text, cmbacheadname.Text)
             'Dim p As New Process
@@ -1538,5 +1542,267 @@ Public Class frmRepGeneralLedger
                 Next
             End If
         End If
+    End Sub
+
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        Dim codefor10 As String = ""
+        CheckBoxSelect.Enabled = False
+        'If chklistled.CheckedItems.Count > 11 Then
+        '    MsgBox("Select only 10 Ledger at time", MsgBoxStyle.Critical)
+        '    Exit Sub
+        'End If
+
+        Dim cmd As SqlCommand
+        Try
+
+            Dim code(3) As String
+            boolall = True
+            Dim z As Integer, i As Integer, K As Double
+            z = 0
+            Dim zzz As Double
+            pageno = Val(TextBox1.Text)
+            ' sw = File.CreateText("Ledger.txt")
+            For z = 0 To chklistled.CheckedItems.Count - 1
+                'cmbacheadcode.SelectedIndex = z
+
+                Dim trans As SqlTransaction
+                trans = GMod.SqlConn.BeginTransaction
+
+                For K = 0 To 10000000
+
+                Next
+                panel1.BringToFront()
+                'MsgBox(cmbacheadname.Text)
+                'sw.WriteLine(Convert.ToChar(12).ToString)
+
+                code = chklistled.CheckedItems.Item(z).ToString().Split("#")
+                'MsgBox(code(0))
+                'cmbacheadcode.Text = code(0)
+                '------------------------------------------------------------------------------------------------
+                'btnshow_Click(sender, e)
+                HEAD = code(1)
+                codefor10 = code(0)
+
+                'dleting old data for that use 
+                'GMod.SqlExecuteNonQuery("delete  from repGeneralLedger1 where cmpid='" & GMod.Cmpid & "' and upper(Uname)='" & GMod.username.ToUpper & "'")
+                'GMod.SqlExecuteNonQuery("delete  from repPartyLedger where cmpid='" & GMod.Cmpid & "' and upper(Uname)='" & GMod.username.ToUpper & "'")
+                cmd = New SqlCommand("delete  from repGeneralLedger1 where cmpid='" & GMod.Cmpid & "' and upper(Uname)='" & GMod.username.ToUpper & "'", GMod.SqlConn, trans)
+                cmd.ExecuteNonQuery()
+
+                cmd = New SqlCommand("delete  from repPartyLedger where cmpid='" & GMod.Cmpid & "' and upper(Uname)='" & GMod.username.ToUpper & "'", GMod.SqlConn, trans)
+                cmd.ExecuteNonQuery()
+
+                'Calulating openng and inserint into table 
+
+
+                Dim sqlopen As String
+                Dim opnbal, dr, cr As Double
+                opnbal = 0
+                dr = 0
+                cr = 0
+                Try
+                    GMod.ds.Tables("opening").Clear()
+                Catch ex As Exception
+
+                End Try
+                sqlopen = "select isnull(sum(dramt),0) - isnull(sum(cramt),0)  from " _
+                          & " " & GMod.VENTRY & " where Acc_head_code='" & codefor10 & "' and  vou_date<'" & dtfrom.Text & "' and vou_type<>'BANKREC' and Pay_mode<>'-'"
+                GMod.DataSetRet(sqlopen, "opening")
+                opnbal = CDbl(GMod.ds.Tables("opening").Rows(0)(0))
+                Try
+                    GMod.ds.Tables("opening").Clear()
+                Catch ex As Exception
+
+                End Try
+                sqlopen = "select isnull(sum(opening_dr),0) - isnull(sum(opening_cr),0) from " & GMod.ACC_HEAD _
+                           & " where Account_code='" & codefor10 & "'"
+                GMod.DataSetRet(sqlopen, "opening")
+                opnbal = opnbal + CDbl(GMod.ds.Tables("opening").Rows(0)(0))
+                Try
+                    GMod.ds.Tables("opening").Clear()
+                Catch ex As Exception
+
+                End Try
+                'MsgBox(opnbal.ToString)
+                If opnbal > 0 Then
+                    dr = opnbal
+                    cr = 0
+                Else
+                    dr = 0
+                    cr = -1 * opnbal
+                End If
+                Dim sqlsave As String
+                If RadioButton1.Checked Then
+                    sqlsave = "insert into repGeneralLedger1(cmpid, Acc_head_code, Narration,vou_type, dramt, cramt, Uname)  values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & codefor10 & "',"
+                    sqlsave &= "'OLD BALANCE',"
+                    sqlsave &= "'OPEN',"
+                    sqlsave &= "'" & dr.ToString & "',"
+                    sqlsave &= "'" & cr.ToString & "',"
+                    sqlsave &= "'" & GMod.username & "')"
+                    'GMod.SqlExecuteNonQuery(sqlsave)
+                    cmd = New SqlCommand(sqlsave, GMod.SqlConn, trans)
+                    cmd.ExecuteNonQuery()
+                Else
+                    sqlsave = "insert into repPartyLedger(cmpid, Acc_head_code, Narration,vou_type, dramt, cramt, Uname)  values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & codefor10 & "',"
+                    sqlsave &= "'OLD BALANCE',"
+                    sqlsave &= "'OPEN',"
+                    sqlsave &= "'" & dr.ToString & "',"
+                    sqlsave &= "'" & cr.ToString & "',"
+                    sqlsave &= "'" & GMod.username & "')"
+                    'GMod.SqlExecuteNonQuery(sqlsave)
+                    cmd = New SqlCommand(sqlsave, GMod.SqlConn, trans)
+                    cmd.ExecuteNonQuery()
+                End If
+                '------------------------------------------------------------------------------------------------------
+                'Now inserting transtion os that accont head 
+                If RadioButton1.Checked Then
+                    sqlsave = "insert into repGeneralLedger1(cmpid, Acc_head_code, Narration, Vou_no, Vou_date,  vou_type, dramt, cramt, Cheque_no, Uname) " _
+                    & " select Cmp_id,Acc_head_code,Narration,Vou_no,Vou_date,Vou_type,dramt,cramt,Cheque_no ,'" & GMod.username & "' from " & GMod.VENTRY _
+                    & " where vou_date between '" & dtfrom.Value.ToShortDateString & "' and '" & dtto.Value.ToShortDateString & "' and Acc_head_code='" & codefor10 & "' and vou_type<>'BANKREC' and left(Uname,1)<>'$' and Pay_mode<>'-' order by vou_date,vou_no"
+                    ' GMod.SqlExecuteNonQuery(sqlsave)
+                    cmd = New SqlCommand(sqlsave, GMod.SqlConn, trans)
+                    cmd.ExecuteNonQuery()
+                Else
+                    sqlsave = "insert into repPartyLedger(Cmpid, Uname,  Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head," _
+                    & " dramt, cramt, Pay_mode, Cheque_no, Narration, Group_name, Sub_group_name, Ch_issue_date, Ch_date)" _
+                    & " select Cmp_id,'" & GMod.username & "',vou_no,vou_type,vou_date,Acc_head_code,acc_head,dramt,cramt,pay_mode,Cheque_no," _
+                    & " Narration, group_name, sub_group_name, ch_issue_date, ch_date " _
+                    & " from " & GMod.VENTRY & " where vou_date between '" & dtfrom.Value.ToShortDateString & "' and '" & dtto.Value.ToShortDateString & "' and Acc_head_code='" & codefor10 & "' and vou_type<>'BANKREC'  and left(Uname,1)<>'$' and Pay_mode<>'-' order by vou_date,vou_no,Entry_id"
+                    'GMod.SqlExecuteNonQuery(sqlsave)
+                    cmd = New SqlCommand(sqlsave, GMod.SqlConn, trans)
+                    cmd.ExecuteNonQuery()
+                End If
+                '----------------------------------------------------------------------------------------
+                'Deleyting Zero Valus
+                'GMod.SqlExecuteNonQuery("delete from repGeneralLedger1 where (dramt=0 and cramt=0) and vou_type<>'OPEN' and   uname='" & GMod.username & "' and cmpid='" & GMod.Cmpid & "'")
+                'GMod.SqlExecuteNonQuery("delete from repPartyLedger where (dramt=0 and cramt=0) and vou_type<>'OPEN' and uname='" & GMod.username & "' and cmpid='" & GMod.Cmpid & "'")
+
+
+                'GMod.SqlExecuteNonQuery("delete from repGeneralLedger1 where (dramt=0 and cramt=0) and   uname='" & GMod.username & "' and cmpid='" & GMod.Cmpid & "'")
+                'GMod.SqlExecuteNonQuery("delete from repPartyLedger where (dramt=0 and cramt=0) and  uname='" & GMod.username & "' and cmpid='" & GMod.Cmpid & "'")
+
+                cmd = New SqlCommand("delete from repGeneralLedger1 where (dramt=0 and cramt=0) and   uname='" & GMod.username & "' and cmpid='" & GMod.Cmpid & "'", GMod.SqlConn, trans)
+                cmd.ExecuteNonQuery()
+
+                cmd = New SqlCommand("delete from repPartyLedger where (dramt=0 and cramt=0) and  uname='" & GMod.username & "' and cmpid='" & GMod.Cmpid & "'", GMod.SqlConn, trans)
+                cmd.ExecuteNonQuery()
+                Try
+                    trans.Commit()
+                Catch ex As Exception
+                    trans.Rollback()
+                End Try
+
+                '----------------------------------------------------------------------------------------
+
+                If RadioButton1.Checked Then
+                    GMod.DataSetRet("select Narration, Vou_no, Vou_date,  vou_type, dramt, cramt, Cheque_no,balance  from repGeneralLedger1 where uname='" & GMod.username & "' and cmpid='" & GMod.Cmpid & "' order by Vou_date,cast(Vou_no as bigint)", "ledPrint")
+                    If GMod.ds.Tables("ledPrint").Rows.Count > 0 Then
+                        Dim r As New CrLedger 'CrCrLedger is name of report
+                        r.SetDataSource(GMod.ds.Tables("ledPrint"))
+                        r.SetParameterValue("cmpname", GMod.Cmpname)
+                        r.SetParameterValue("accholder", "Account Holder : " & codefor10 & " " & HEAD)
+                        r.SetParameterValue("subhead", "Date from :" & dtfrom.Text & " to " & dtto.Text)
+                        r.SetParameterValue("uname", GMod.username)
+                        CrViewerGenralLedger.ReportSource = r
+                        'For displaying in Data grid  setting fields--------------------
+                        'rdOnscreen_Click(sender, e)
+                        '----------------------------------------------------------------
+                        'CrViewerGenralLedger.PrintReport()
+                        'r.PrintToPrinter(1, True, 1, 0)
+                        'r = Nothing
+                        Dim str As String
+                        Dim codeprefic As String = codefor10.Substring(0, 2)
+                        If codeprefic = "**" Then
+                            str = codefor10.Substring(2, 6)
+                        Else
+                            str = codefor10
+                        End If
+
+
+                        Dim str1 As String = str
+                        Dim CrExportOptions As ExportOptions
+                        Dim CrDiskFileDestinationOptions As New  _
+                        DiskFileDestinationOptions()
+                        Dim CrFormatTypeOptions As New PdfRtfWordFormatOptions()
+
+                        CrDiskFileDestinationOptions.DiskFileName = System.Environment.CurrentDirectory & "\Ledger\" & str1 & ".pdf"
+                        CrExportOptions = r.ExportOptions
+                        With CrExportOptions
+                            .ExportDestinationType = ExportDestinationType.DiskFile
+                            .ExportFormatType = ExportFormatType.PortableDocFormat
+                            .DestinationOptions = CrDiskFileDestinationOptions
+                            .FormatOptions = CrFormatTypeOptions
+                        End With
+                        r.Export()
+                        Dim ii As Integer
+                        For ii = 0 To 1000
+
+                        Next
+
+                    End If
+                Else
+                    GMod.DataSetRet("select * from repPartyLedger where uname='" & GMod.username & "' and cmpid='" & GMod.Cmpid & "' order by Vou_date,cast(Vou_no as bigint)", "ledPrint")
+                    If GMod.ds.Tables("ledPrint").Rows.Count > 0 Then
+                        Dim r As New partyled
+                        r.SetDataSource(GMod.ds.Tables("ledPrint"))
+                        r.SetParameterValue("cmpname", GMod.Cmpname)
+                        r.SetParameterValue("accholder", "Account Holder : " & codefor10 & " " & HEAD)
+                        r.SetParameterValue("subhead", "Date from :" & dtfrom.Text & " to " & dtto.Text)
+                        r.SetParameterValue("uname", GMod.username)
+                        CrViewerGenralLedger.ReportSource = r
+                        'CrViewerGenralLedger.PrintReport()
+                        'r.PrintToPrinter(1, True, 1, 0)
+                        'r = Nothing
+
+                        '----------------------------------------------------
+                        Dim str As String
+                        Dim codeprefic As String = codefor10.Substring(0, 2)
+                        If codeprefic = "**" Then
+                            str = codefor10.Substring(2, 6)
+                        Else
+                            str = codefor10
+                        End If
+                        Dim str1 As String = str
+                        Dim CrExportOptions As ExportOptions
+                        Dim CrDiskFileDestinationOptions As New  _
+                        DiskFileDestinationOptions()
+                        Dim CrFormatTypeOptions As New PdfRtfWordFormatOptions()
+
+                        CrDiskFileDestinationOptions.DiskFileName = System.Environment.CurrentDirectory & "\Ledger\" & str1 & ".pdf"
+                        CrExportOptions = r.ExportOptions
+                        With CrExportOptions
+                            .ExportDestinationType = ExportDestinationType.DiskFile
+                            .ExportFormatType = ExportFormatType.PortableDocFormat
+                            .DestinationOptions = CrDiskFileDestinationOptions
+                            .FormatOptions = CrFormatTypeOptions
+                        End With
+                        r.Export()
+                        Dim ii As Integer
+                        For ii = 0 To 1000
+
+                        Next
+
+
+
+                    End If
+                End If
+                code(0) = ""
+                code(1) = ""
+                codefor10 = ""
+            Next
+            z = 0
+            MsgBox("ALL Ledger Printed", MsgBoxStyle.Information)
+            boolall = False
+            panel1.Visible = False
+            z = 0
+            Me.Close()
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

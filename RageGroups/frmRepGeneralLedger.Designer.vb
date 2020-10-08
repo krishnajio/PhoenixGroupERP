@@ -19,8 +19,8 @@ Partial Class frmRepGeneralLedger
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnshow = New System.Windows.Forms.Button()
         Me.dtfrom = New System.Windows.Forms.DateTimePicker()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -83,6 +83,7 @@ Partial Class frmRepGeneralLedger
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.rdwithopening = New System.Windows.Forms.CheckBox()
+        Me.btnExport = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgGridLeger, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -428,10 +429,10 @@ Partial Class frmRepGeneralLedger
         'VouDate
         '
         Me.VouDate.DataPropertyName = "Vou_date"
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.Format = "dd/MMM/yyyy"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.VouDate.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.Format = "dd/MMM/yyyy"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.VouDate.DefaultCellStyle = DataGridViewCellStyle3
         Me.VouDate.HeaderText = "Vou Date"
         Me.VouDate.MaxInputLength = 10
         Me.VouDate.Name = "VouDate"
@@ -525,10 +526,10 @@ Partial Class frmRepGeneralLedger
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "Vou_date"
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.Format = "dd/MMM/yyyy"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.Format = "dd/MMM/yyyy"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewTextBoxColumn1.HeaderText = "Vou Date"
         Me.DataGridViewTextBoxColumn1.MaxInputLength = 10
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
@@ -641,6 +642,7 @@ Partial Class frmRepGeneralLedger
         'panel1
         '
         Me.panel1.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.panel1.Controls.Add(Me.btnExport)
         Me.panel1.Controls.Add(Me.Button6)
         Me.panel1.Controls.Add(Me.Button5)
         Me.panel1.Controls.Add(Me.chklistled)
@@ -655,7 +657,7 @@ Partial Class frmRepGeneralLedger
         Me.Button6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.Location = New System.Drawing.Point(4, 314)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(117, 26)
+        Me.Button6.Size = New System.Drawing.Size(92, 26)
         Me.Button6.TabIndex = 109
         Me.Button6.Text = "&Print ALL"
         Me.Button6.UseVisualStyleBackColor = True
@@ -663,9 +665,9 @@ Partial Class frmRepGeneralLedger
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(4, 314)
+        Me.Button5.Location = New System.Drawing.Point(59, 315)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(117, 26)
+        Me.Button5.Size = New System.Drawing.Size(23, 26)
         Me.Button5.TabIndex = 108
         Me.Button5.Text = "&Print ALL"
         Me.Button5.UseVisualStyleBackColor = True
@@ -681,9 +683,9 @@ Partial Class frmRepGeneralLedger
         'btnPrint
         '
         Me.btnPrint.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrint.Location = New System.Drawing.Point(164, 314)
+        Me.btnPrint.Location = New System.Drawing.Point(173, 314)
         Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(117, 26)
+        Me.btnPrint.Size = New System.Drawing.Size(113, 26)
         Me.btnPrint.TabIndex = 106
         Me.btnPrint.Text = "&DOS Print ALL"
         Me.btnPrint.UseVisualStyleBackColor = True
@@ -741,6 +743,15 @@ Partial Class frmRepGeneralLedger
         Me.rdwithopening.TabIndex = 114
         Me.rdwithopening.Text = "With Opening"
         Me.rdwithopening.UseVisualStyleBackColor = True
+        '
+        'btnExport
+        '
+        Me.btnExport.Location = New System.Drawing.Point(98, 315)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(75, 23)
+        Me.btnExport.TabIndex = 110
+        Me.btnExport.Text = "Export"
+        Me.btnExport.UseVisualStyleBackColor = True
         '
         'frmRepGeneralLedger
         '
@@ -864,4 +875,5 @@ Partial Class frmRepGeneralLedger
     Friend WithEvents rdwithopening As System.Windows.Forms.CheckBox
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents btnExport As System.Windows.Forms.Button
 End Class
