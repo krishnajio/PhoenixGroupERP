@@ -2118,11 +2118,5 @@ Public Class frmPurchasePoultrty_NewGstWithTds
         End If
     End Sub
 
-    Private Sub cmbacheadcode_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadcode.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub txtBillNo_TextChanged(sender As Object, e As EventArgs) Handles txtBillNo.TextChanged
-
-    End Sub
+   
 End Class

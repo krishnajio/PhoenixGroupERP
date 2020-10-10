@@ -209,6 +209,20 @@ Public Class frmPurchasePoultrty_NewGst
         cmbWiOs.SelectedIndex = 0
         cmbPrdType.SelectedIndex = 0
 
+
+        sql = "select * from [TCSMaster] where cmp_id ='" & GMod.Cmpid & "'"
+        GMod.DataSetRet(sql, "tdm")
+
+        cmbTCSType.DataSource = GMod.ds.Tables("tdm")
+        cmbTCSType.DisplayMember = "TcsType"
+
+
+        cmbTCSper.DataSource = GMod.ds.Tables("tdm")
+        cmbTCSper.DisplayMember = "Per"
+
+        cmbacheadcodeTCS.DataSource = GMod.ds.Tables("tdm")
+        cmbacheadcodeTCS.DisplayMember = "Acc_Code"
+
         GMod.DataSetRet("select stock_val from company where cmp_id ='" & GMod.Cmpid & "'", "othercmpCheck")
         If Val(GMod.ds.Tables("othercmpCheck").Rows(0)(0)) = 1.11 Then
             OtherCheck = 1.11
@@ -1695,16 +1709,26 @@ Public Class frmPurchasePoultrty_NewGst
         checkBill()
     End Sub
 
-   
-    Private Sub txtImwno_TextChanged(sender As Object, e As EventArgs) Handles txtImwno.TextChanged
-
+    Private Sub cmbacheadcodeTCS_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadcodeTCS.SelectedIndexChanged
+        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and account_code='" & cmbacheadcodeTCS.Text & "'"
+        GMod.DataSetRet(sql, "aclist2")
+        cmbTcsCode.DataSource = GMod.ds.Tables("aclist2")
+        cmbTcsCode.DisplayMember = "account_code"
+        cmbTcsHead.DataSource = GMod.ds.Tables("aclist2")
+        cmbTcsHead.DisplayMember = "account_head_name"
+        CmbTcsGroup.DataSource = GMod.ds.Tables("aclist2")
+        CmbTcsGroup.DisplayMember = "group_name"
+        cmbTcsSubGroup.DataSource = GMod.ds.Tables("aclist2")
+        cmbTcsSubGroup.DisplayMember = "sub_group_name"
     End Sub
 
-    Private Sub txtBillNo_Leave(sender As Object, e As EventArgs) Handles txtBillNo.Leave
-
+    
+    
+    Private Sub txtTcsAmount_TextChanged(sender As Object, e As EventArgs) Handles txtTcsAmount.TextChanged
+        txtGrandTotal.Text = Val(txtTcsAmount.Text) + Val(txtTotal.Text)
     End Sub
 
-    Private Sub txtBillNo_TextChanged(sender As Object, e As EventArgs) Handles txtBillNo.TextChanged
-
+    Private Sub txtTotal_TextChanged(sender As Object, e As EventArgs) Handles txtTotal.TextChanged
+        txtGrandTotal.Text = Val(txtTcsAmount.Text) + Val(txtTotal.Text)
     End Sub
 End Class
