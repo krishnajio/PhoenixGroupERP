@@ -373,6 +373,10 @@ Public Class frmPurchasePoultrty_NewGst
                     sql = "delete from Purchase_Payment where vou_type='" & voutype.Text & "' and  vou_no='" & lblvouno.Text & "' and cmp_id='" & GMod.Cmpid & "' and session='" & GMod.Session & "'"
                     Dim cmddel As New SqlCommand(sql, GMod.SqlConn, sqltrans)
                     cmddel.ExecuteNonQuery()
+
+                    sql = "delete from tdsentry where vou_type='" & voutype.Text & "' and  vou_no='" & lblvouno.Text & "' and cmp_id='" & GMod.Cmpid & "' and session='" & GMod.Session & "' and taxtype =1 "
+                    Dim cmddeltcs As New SqlCommand(sql, GMod.SqlConn, sqltrans)
+                    cmddeltcs.ExecuteNonQuery()
                 Else
                     nxtvno()
                 End If
@@ -581,6 +585,60 @@ Public Class frmPurchasePoultrty_NewGst
                     cmd5.ExecuteNonQuery()
 
                 Next 'end loop od items 
+
+                'TCS Amount Debit Entry 
+                If Val(txtTcsAmount.Text) > 0 Then
+                    sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                    & " Vou_type, Vou_date, Acc_head_code, Acc_head, cramt, dramt, Pay_mode, Cheque_no, " _
+                    & "Narration, Group_name, Sub_group_name,Ch_issue_date,ch_date) values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & GMod.username & "',"
+                    sqlsave &= "'1',"
+                    sqlsave &= "'" & lblvouno.Text & "',"
+                    sqlsave &= "'" & voutype.Text & "',"
+                    sqlsave &= "'" & dtVdate.Value.ToShortDateString & "',"
+                    sqlsave &= "'" & cmbacheadcodeTCS.Text & "',"
+                    sqlsave &= "'" & cmbTcsHead.Text & "',"
+                    sqlsave &= "'0',"
+                    sqlsave &= "'" & Val(txtTcsAmount.Text) & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & narration & "',"
+                    sqlsave &= "'" & CmbTcsGroup.Text & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & PaymentDate.ToShortDateString & "',"
+                    sqlsave &= "'" & dtbilldate.Value.ToShortDateString & "')"
+                    'MsgBox(sqlsave)
+                    Dim cmdTcs As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmdTcs.ExecuteNonQuery()
+
+                    'Insert into TCS Report
+                    sql = "insert into TdsEntry(Vou_Type, Vou_no, TdsType, Per, TdsDate, " _
+                                  & " BilltyNo, BilltyDt, VehicleNo, Qty, Prd, Paidamt," _
+                                  & " Actualamt, session,Paidto,vou_date, TdsAmt,dcode,cmp_id,taxtype ) values( "
+                    sql &= "'" & voutype.Text & "',"
+                    sql &= "'" & lblvouno.Text & "',"
+                    sql &= "'" & cmbTCSType.Text & "',"
+                    sql &= "'" & cmbTCSper.Text & "',"
+                    sql &= "'" & dtbilldate.Value.ToShortDateString & "',"
+                    sql &= "'-',"
+                    sql &= "'-',"
+                    sql &= "'-',"
+                    sql &= "'-',"
+                    sql &= "'0',"
+                    sql &= "'" & Val(txtGrandTotal.Text) & "',"
+                    sql &= "'" & Val("") & "',"
+                    sql &= "'" & GMod.Session & "',"
+                    sql &= "'YES',"
+                    sql &= "'" & dtVdate.Value.ToShortDateString & "',"
+                    sql &= "'" & Val(txtTcsAmount.Text) & "',"
+                    sql &= "'" & cmbPartCode.Text & "',"
+                    sql &= "'" & GMod.Cmpid & "','1')"
+
+                    Dim cmdTcsReport As New SqlCommand(sql, SqlConn, sqltrans)
+                    cmdTcsReport.ExecuteNonQuery()
+
+                End If
 
 
                 'PARTY A/C Cr
@@ -1726,9 +1784,14 @@ Public Class frmPurchasePoultrty_NewGst
     
     Private Sub txtTcsAmount_TextChanged(sender As Object, e As EventArgs) Handles txtTcsAmount.TextChanged
         txtGrandTotal.Text = Val(txtTcsAmount.Text) + Val(txtTotal.Text)
+       
+
     End Sub
 
     Private Sub txtTotal_TextChanged(sender As Object, e As EventArgs) Handles txtTotal.TextChanged
+
         txtGrandTotal.Text = Val(txtTcsAmount.Text) + Val(txtTotal.Text)
+
+       
     End Sub
 End Class
