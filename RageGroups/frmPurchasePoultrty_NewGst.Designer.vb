@@ -19,17 +19,15 @@ Partial Class frmPurchasePoultrty_NewGst
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPurchasePoultrty_NewGst))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPurchasePoultrty_NewGst))
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblvouno = New System.Windows.Forms.TextBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.btn_modify = New System.Windows.Forms.Button()
-        Me.btnsave = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmbacheadcode = New System.Windows.Forms.ComboBox()
@@ -73,7 +71,6 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.dtVdate = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cmbacheadname = New System.Windows.Forms.ComboBox()
-        Me.btndelete = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.cmbSubGroup = New System.Windows.Forms.ComboBox()
         Me.dtpdate = New System.Windows.Forms.DateTimePicker()
@@ -106,7 +103,6 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.ChkCform = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.dtppodate = New System.Windows.Forms.DateTimePicker()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.txtform49no = New System.Windows.Forms.TextBox()
@@ -175,6 +171,10 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.txtTcsAmount = New System.Windows.Forms.TextBox()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.txtGrandTotal = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btndelete = New System.Windows.Forms.Button()
+        Me.btn_modify = New System.Windows.Forms.Button()
+        Me.btnsave = New System.Windows.Forms.Button()
         CType(Me.dgvoucher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dg, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -216,32 +216,6 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.CheckBox2.TabIndex = 180
         Me.CheckBox2.Text = "Add New Party Head"
         Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'btn_modify
-        '
-        Me.btn_modify.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_modify.Image = CType(resources.GetObject("btn_modify.Image"), System.Drawing.Image)
-        Me.btn_modify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_modify.Location = New System.Drawing.Point(309, 689)
-        Me.btn_modify.Name = "btn_modify"
-        Me.btn_modify.Size = New System.Drawing.Size(101, 35)
-        Me.btn_modify.TabIndex = 46
-        Me.btn_modify.Text = "&Modify"
-        Me.btn_modify.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_modify.UseVisualStyleBackColor = True
-        '
-        'btnsave
-        '
-        Me.btnsave.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnsave.Image = CType(resources.GetObject("btnsave.Image"), System.Drawing.Image)
-        Me.btnsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnsave.Location = New System.Drawing.Point(202, 689)
-        Me.btnsave.Name = "btnsave"
-        Me.btnsave.Size = New System.Drawing.Size(101, 35)
-        Me.btnsave.TabIndex = 34
-        Me.btnsave.Text = "&Save"
-        Me.btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnsave.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -610,20 +584,6 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.cmbacheadname.Size = New System.Drawing.Size(472, 24)
         Me.cmbacheadname.TabIndex = 11
         '
-        'btndelete
-        '
-        Me.btndelete.Enabled = False
-        Me.btndelete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btndelete.Image = CType(resources.GetObject("btndelete.Image"), System.Drawing.Image)
-        Me.btndelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btndelete.Location = New System.Drawing.Point(416, 689)
-        Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(101, 35)
-        Me.btndelete.TabIndex = 47
-        Me.btndelete.Text = "&Delete"
-        Me.btndelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btndelete.UseVisualStyleBackColor = True
-        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
@@ -946,19 +906,6 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.ChkCform.Text = "C-Form"
         Me.ChkCform.UseVisualStyleBackColor = True
         Me.ChkCform.Visible = False
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(523, 689)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(85, 33)
-        Me.Button1.TabIndex = 48
-        Me.Button1.Text = "&Close"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'dtppodate
         '
@@ -1550,7 +1497,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.cmbTCSType.Location = New System.Drawing.Point(123, 598)
         Me.cmbTCSType.Name = "cmbTCSType"
         Me.cmbTCSType.Size = New System.Drawing.Size(161, 21)
-        Me.cmbTCSType.TabIndex = 30049
+        Me.cmbTCSType.TabIndex = 41
         '
         'cmbacheadcodeTCS
         '
@@ -1625,7 +1572,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.cmbTcsHead.Location = New System.Drawing.Point(123, 625)
         Me.cmbTcsHead.Name = "cmbTcsHead"
         Me.cmbTcsHead.Size = New System.Drawing.Size(266, 21)
-        Me.cmbTcsHead.TabIndex = 30054
+        Me.cmbTcsHead.TabIndex = 42
         '
         'Label47
         '
@@ -1653,7 +1600,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.txtTcsAmount.Location = New System.Drawing.Point(123, 652)
         Me.txtTcsAmount.Name = "txtTcsAmount"
         Me.txtTcsAmount.Size = New System.Drawing.Size(118, 21)
-        Me.txtTcsAmount.TabIndex = 30060
+        Me.txtTcsAmount.TabIndex = 43
         '
         'Label35
         '
@@ -1673,6 +1620,59 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.txtGrandTotal.ReadOnly = True
         Me.txtGrandTotal.Size = New System.Drawing.Size(221, 22)
         Me.txtGrandTotal.TabIndex = 30062
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(523, 689)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(85, 33)
+        Me.Button1.TabIndex = 48
+        Me.Button1.Text = "&Close"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btndelete
+        '
+        Me.btndelete.Enabled = False
+        Me.btndelete.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndelete.Image = CType(resources.GetObject("btndelete.Image"), System.Drawing.Image)
+        Me.btndelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btndelete.Location = New System.Drawing.Point(416, 689)
+        Me.btndelete.Name = "btndelete"
+        Me.btndelete.Size = New System.Drawing.Size(101, 35)
+        Me.btndelete.TabIndex = 47
+        Me.btndelete.Text = "&Delete"
+        Me.btndelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btndelete.UseVisualStyleBackColor = True
+        '
+        'btn_modify
+        '
+        Me.btn_modify.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_modify.Image = CType(resources.GetObject("btn_modify.Image"), System.Drawing.Image)
+        Me.btn_modify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_modify.Location = New System.Drawing.Point(309, 689)
+        Me.btn_modify.Name = "btn_modify"
+        Me.btn_modify.Size = New System.Drawing.Size(101, 35)
+        Me.btn_modify.TabIndex = 46
+        Me.btn_modify.Text = "&Modify"
+        Me.btn_modify.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_modify.UseVisualStyleBackColor = True
+        '
+        'btnsave
+        '
+        Me.btnsave.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnsave.Image = CType(resources.GetObject("btnsave.Image"), System.Drawing.Image)
+        Me.btnsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnsave.Location = New System.Drawing.Point(202, 689)
+        Me.btnsave.Name = "btnsave"
+        Me.btnsave.Size = New System.Drawing.Size(101, 35)
+        Me.btnsave.TabIndex = 34
+        Me.btnsave.Text = "&Save"
+        Me.btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnsave.UseVisualStyleBackColor = True
         '
         'frmPurchasePoultrty_NewGst
         '

@@ -1511,4 +1511,9 @@ Public Class frmMDI
         Dim t As New frmTCSMaster
         t.Show()
     End Sub
+
+    Private Sub TCSReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TCSReportToolStripMenuItem.Click
+        Dim tcsrep As New frmTCSReport
+        tcsrep.ShowDialog()
+    End Sub
 End Class

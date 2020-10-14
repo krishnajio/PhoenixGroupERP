@@ -225,6 +225,7 @@ Partial Class frmMDI
         Me.BonusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnathrToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SessionPermissionToUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TCSMasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChequeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem13 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem14 = New System.Windows.Forms.ToolStripMenuItem()
@@ -258,7 +259,7 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TCSMasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TCSReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -941,7 +942,7 @@ Partial Class frmMDI
         '
         'PurchaseToolStripMenuItem3
         '
-        Me.PurchaseToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PurchaseRegisterToolStripMenuItem, Me.PurchasePaymentToolStripMenuItem, Me.JournalPurchaseRegisterToolStripMenuItem, Me.PurchaseQtyMonthlyToolStripMenuItem, Me.PurchaseSummaryToolStripMenuItem, Me.PoAndBillReportToolStripMenuItem, Me.CFormReportToolStripMenuItem, Me.Form49ReportToolStripMenuItem, Me.PToolStripMenuItem, Me.ToolStripMenuItem33, Me.PartyBalanceLetterToolStripMenuItem, Me.TrailWSOSToolStripMenuItem, Me.GSTRegisterToolStripMenuItem, Me.PurchaseRegisterGridViewToolStripMenuItem})
+        Me.PurchaseToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PurchaseRegisterToolStripMenuItem, Me.PurchasePaymentToolStripMenuItem, Me.JournalPurchaseRegisterToolStripMenuItem, Me.PurchaseQtyMonthlyToolStripMenuItem, Me.PurchaseSummaryToolStripMenuItem, Me.PoAndBillReportToolStripMenuItem, Me.CFormReportToolStripMenuItem, Me.Form49ReportToolStripMenuItem, Me.PToolStripMenuItem, Me.ToolStripMenuItem33, Me.PartyBalanceLetterToolStripMenuItem, Me.TrailWSOSToolStripMenuItem, Me.GSTRegisterToolStripMenuItem, Me.PurchaseRegisterGridViewToolStripMenuItem, Me.TCSReportToolStripMenuItem})
         Me.PurchaseToolStripMenuItem3.Name = "PurchaseToolStripMenuItem3"
         Me.PurchaseToolStripMenuItem3.Size = New System.Drawing.Size(268, 22)
         Me.PurchaseToolStripMenuItem3.Text = "Purchase"
@@ -1518,6 +1519,12 @@ Partial Class frmMDI
         Me.SessionPermissionToUserToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.SessionPermissionToUserToolStripMenuItem.Text = "Session Permission To User"
         '
+        'TCSMasterToolStripMenuItem
+        '
+        Me.TCSMasterToolStripMenuItem.Name = "TCSMasterToolStripMenuItem"
+        Me.TCSMasterToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.TCSMasterToolStripMenuItem.Text = "TCS Master"
+        '
         'ChequeToolStripMenuItem
         '
         Me.ChequeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem13, Me.ToolStripMenuItem14, Me.AllotChequeToUserToolStripMenuItem, Me.ToolStripMenuItem15, Me.ChequeLayoutToolStripMenuItem, Me.ToolStripMenuItem9, Me.ChequeIssueToolStripMenuItem, Me.ToolStripMenuItem16, Me.ChequeSearchPrintToolStripMenuItem})
@@ -1776,11 +1783,11 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
-        'TCSMasterToolStripMenuItem
+        'TCSReportToolStripMenuItem
         '
-        Me.TCSMasterToolStripMenuItem.Name = "TCSMasterToolStripMenuItem"
-        Me.TCSMasterToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
-        Me.TCSMasterToolStripMenuItem.Text = "TCS Master"
+        Me.TCSReportToolStripMenuItem.Name = "TCSReportToolStripMenuItem"
+        Me.TCSReportToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.TCSReportToolStripMenuItem.Text = "TCS Report"
         '
         'frmMDI
         '
@@ -2056,4 +2063,5 @@ Partial Class frmMDI
     Friend WithEvents SessionPermissionToUserToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BankPartyListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TCSMasterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TCSReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

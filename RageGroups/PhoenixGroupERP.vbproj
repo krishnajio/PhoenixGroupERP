@@ -564,11 +564,17 @@
       <DependentUpon>CrSRPW.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Extra Reports\CrTDSRep.vb">
+    <Compile Include="Extra Reports\CrTCSRep.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>CrTCSRep.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extra Reports\CrTDSRep.vb">
       <DependentUpon>CrTDSRep.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Extra Reports\DataSet3.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -711,6 +717,12 @@
       <DependentUpon>frmSupplementHeadList.vb</DependentUpon>
     </Compile>
     <Compile Include="Extra Reports\frmSupplementHeadList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extra Reports\frmTCSReport.Designer.vb">
+      <DependentUpon>frmTCSReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Extra Reports\frmTCSReport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Extra Reports\frmTDSReport.Designer.vb">
@@ -2469,6 +2481,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrSRPW.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Extra Reports\CrTCSRep.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrTCSRep.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Extra Reports\CrTDSRep.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrTDSRep.vb</LastGenOutput>
@@ -2544,6 +2560,10 @@
     <EmbeddedResource Include="Extra Reports\frmSupplementHeadList.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmSupplementHeadList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extra Reports\frmTCSReport.resx">
+      <DependentUpon>frmTCSReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Extra Reports\frmTDSReport.resx">
       <DependentUpon>frmTDSReport.vb</DependentUpon>

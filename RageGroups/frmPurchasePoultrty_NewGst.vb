@@ -653,7 +653,7 @@ Public Class frmPurchasePoultrty_NewGst
                 sqlsave &= "'" & dtVdate.Value.ToShortDateString & "',"
                 sqlsave &= "'" & cmbacheadcode.Text & "',"
                 sqlsave &= "'" & cmbacheadname.Text & "',"
-                sqlsave &= "'" & total & "',"
+                sqlsave &= "'" & total + Val(txtTcsAmount.Text) & "',"
                 sqlsave &= "'0',"
                 sqlsave &= "'-',"
                 sqlsave &= "'-',"

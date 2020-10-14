@@ -56,12 +56,6 @@ Public Class frmTDSReport
             MessageBox.Show(ex.Message)
         End Try
 
-
-
-
-
-
-
         Dim party As String
         If ChkAllParty.Checked = True Then
 
@@ -77,8 +71,8 @@ Public Class frmTDSReport
         Dim crTds As New CrTDSRep
         crTds.SetDataSource(GMod.ds.Tables("tddsrep"))
         crTds.SetParameterValue("p1", "Date From:" & dt1.Text & " To :" & dt2.Text)
-        crTds.SetParameterValue("p2", "Tds Type:" & cmbtdsType.Text & "---- Tds Per:" & cmbTdsper.Text)
-        crTds.SetParameterValue("p3", "Deductee Namr:" & party)
+        crTds.SetParameterValue("p2", "TDS Type:" & cmbtdsType.Text & "---- TDS Per:" & cmbTdsper.Text)
+        crTds.SetParameterValue("p3", "Deductee Name:" & party)
 
         CrystalReportViewer1.ReportSource = crTds
 
