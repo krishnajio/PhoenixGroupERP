@@ -214,6 +214,20 @@ Public Class frmPurchasePoultrty_NewGstWithTds
         cmbacheadcodetds.DataSource = GMod.ds.Tables("tdm")
         cmbacheadcodetds.DisplayMember = "Acc_Code"
 
+
+        sql = "select * from [TCSMaster] where cmp_id ='" & GMod.Cmpid & "'"
+        GMod.DataSetRet(sql, "tdm")
+
+        cmbTCSType.DataSource = GMod.ds.Tables("tdm")
+        cmbTCSType.DisplayMember = "TcsType"
+
+
+        cmbTCSper.DataSource = GMod.ds.Tables("tdm")
+        cmbTCSper.DisplayMember = "Per"
+
+        cmbacheadcodeTCS.DataSource = GMod.ds.Tables("tdm")
+        cmbacheadcodeTCS.DisplayMember = "Acc_Code"
+
         GMod.DataSetRet("select stock_val from company where cmp_id ='" & GMod.Cmpid & "'", "othercmpCheck")
         If Val(GMod.ds.Tables("othercmpCheck").Rows(0)(0)) = 1.11 Then
             OtherCheck = 1.11
@@ -555,6 +569,59 @@ Public Class frmPurchasePoultrty_NewGstWithTds
 
                 Next 'end loop od items 
 
+                'TCS Amount Debit Entry 
+                If Val(txtTcsAmount.Text) > 0 Then
+                    sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                    & " Vou_type, Vou_date, Acc_head_code, Acc_head, cramt, dramt, Pay_mode, Cheque_no, " _
+                    & "Narration, Group_name, Sub_group_name,Ch_issue_date,ch_date) values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & GMod.username & "',"
+                    sqlsave &= "'1',"
+                    sqlsave &= "'" & lblvouno.Text & "',"
+                    sqlsave &= "'" & voutype.Text & "',"
+                    sqlsave &= "'" & dtVdate.Value.ToShortDateString & "',"
+                    sqlsave &= "'" & cmbacheadcodeTCS.Text & "',"
+                    sqlsave &= "'" & cmbTcsHead.Text & "',"
+                    sqlsave &= "'0',"
+                    sqlsave &= "'" & Val(txtTcsAmount.Text) & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & narration & "',"
+                    sqlsave &= "'" & CmbTcsGroup.Text & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & PaymentDate.ToShortDateString & "',"
+                    sqlsave &= "'" & dtbilldate.Value.ToShortDateString & "')"
+                    'MsgBox(sqlsave)
+                    Dim cmdTcs As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmdTcs.ExecuteNonQuery()
+
+                    'Insert into TCS Report
+                    sql = "insert into TdsEntry(Vou_Type, Vou_no, TdsType, Per, TdsDate, " _
+                                  & " BilltyNo, BilltyDt, VehicleNo, Qty, Prd, Paidamt," _
+                                  & " Actualamt, session,Paidto,vou_date, TdsAmt,dcode,cmp_id,taxtype ) values( "
+                    sql &= "'" & voutype.Text & "',"
+                    sql &= "'" & lblvouno.Text & "',"
+                    sql &= "'" & cmbTCSType.Text & "',"
+                    sql &= "'" & cmbTCSper.Text & "',"
+                    sql &= "'" & dtbilldate.Value.ToShortDateString & "',"
+                    sql &= "'-',"
+                    sql &= "'-',"
+                    sql &= "'-',"
+                    sql &= "'-',"
+                    sql &= "'0',"
+                    sql &= "'" & Val(txtGrandTotal.Text) & "',"
+                    sql &= "'" & Val("") & "',"
+                    sql &= "'" & GMod.Session & "',"
+                    sql &= "'YES',"
+                    sql &= "'" & dtVdate.Value.ToShortDateString & "',"
+                    sql &= "'" & Val(txtTcsAmount.Text) & "',"
+                    sql &= "'" & cmbPartCode.Text & "',"
+                    sql &= "'" & GMod.Cmpid & "','1')"
+
+                    Dim cmdTcsReport As New SqlCommand(sql, SqlConn, sqltrans)
+                    cmdTcsReport.ExecuteNonQuery()
+
+                End If
 
                 'PARTY A/C Cr
                 sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
@@ -568,7 +635,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
                 sqlsave &= "'" & dtVdate.Value.ToShortDateString & "',"
                 sqlsave &= "'" & cmbacheadcode.Text & "',"
                 sqlsave &= "'" & cmbacheadname.Text & "',"
-                sqlsave &= "'" & total - Val("") & "',"
+                sqlsave &= "'" & total - Val("") + vat(txtTcsAmount.Text) & "',"
                 sqlsave &= "'0',"
                 sqlsave &= "'-',"
                 sqlsave &= "'-',"
@@ -2119,4 +2186,20 @@ Public Class frmPurchasePoultrty_NewGstWithTds
     End Sub
 
    
+    Private Sub cmbacheadcodeTCS_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadcodeTCS.SelectedIndexChanged
+        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and account_code='" & cmbacheadcodeTCS.Text & "'"
+        GMod.DataSetRet(sql, "aclist2")
+        cmbTcsCode.DataSource = GMod.ds.Tables("aclist2")
+        cmbTcsCode.DisplayMember = "account_code"
+        cmbTcsHead.DataSource = GMod.ds.Tables("aclist2")
+        cmbTcsHead.DisplayMember = "account_head_name"
+        CmbTcsGroup.DataSource = GMod.ds.Tables("aclist2")
+        CmbTcsGroup.DisplayMember = "group_name"
+        cmbTcsSubGroup.DataSource = GMod.ds.Tables("aclist2")
+        cmbTcsSubGroup.DisplayMember = "sub_group_name"
+    End Sub
+
+    Private Sub txtTcsAmount_TextChanged(sender As Object, e As EventArgs) Handles txtTcsAmount.TextChanged
+        txtGrandTotal.Text = Val(txtTcsAmount.Text) + Val(txtTotal.Text)
+    End Sub
 End Class
