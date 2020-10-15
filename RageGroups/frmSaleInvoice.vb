@@ -711,21 +711,22 @@ Public Class frmSaleInvoice
                 btn_modify.Text = "&Modify"
                 sqltrans.Commit()
                 'Sending Sms
-                If GMod.Cmpid = "PHHA" Then
-                    'End If
-                    Try
-                        If CmbMobileNo.Text.Length >= 10 Then
-                            Dim snd As New sendsms
-                            snd.send_sms(CmbMobileNo.Text, smsmsg)
-                        End If
-                    Catch ex As Exception
+                'If GMod.Cmpid = "PHHA" Then
+                '    'End If
+                '    Try
+                '        If CmbMobileNo.Text.Length >= 10 Then
+                '            Dim snd As New sendsms
+                '            snd.send_sms(CmbMobileNo.Text, smsmsg)
+                '        End If
+                '    Catch ex As Exception
 
-                    End Try
-                End If
+                '    End Try
+                'End If
                 '-------------------------------------------
                 MessageBox.Show(voutype.Text & "/" & lblno.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 dgSaleVoucher.Rows.Clear()
                 DataGridView1.Rows.Clear()
+
                 dgSaleVoucher.Rows.Add()
                 txtinvoiceno.Focus()
                 voutype.Enabled = True
@@ -736,6 +737,8 @@ Public Class frmSaleInvoice
             sqltrans.Dispose()
             'nxtvno()
             txtinvoiceno.Text = ""
+            txtTcsAmount.Text = "0"
+            chKtcs.Checked = False
             ' sqltrans.Dispose()
         Else
             Exit Sub

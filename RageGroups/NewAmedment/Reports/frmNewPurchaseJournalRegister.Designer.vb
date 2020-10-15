@@ -19,26 +19,26 @@ Partial Class frmNewPurchaseJournalRegister
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.btn_modify = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Panel1 = New System.Windows.Forms.Panel
-        Me.voutype = New System.Windows.Forms.ComboBox
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.cmbprdunit = New System.Windows.Forms.ComboBox
-        Me.Label23 = New System.Windows.Forms.Label
-        Me.txtv2 = New System.Windows.Forms.TextBox
-        Me.txtv1 = New System.Windows.Forms.TextBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.chkcform = New System.Windows.Forms.CheckBox
-        Me.txti2 = New System.Windows.Forms.TextBox
-        Me.txti1 = New System.Windows.Forms.TextBox
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.txtp2 = New System.Windows.Forms.TextBox
-        Me.txtp1 = New System.Windows.Forms.TextBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btn_modify = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.voutype = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.cmbprdunit = New System.Windows.Forms.ComboBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.txtv2 = New System.Windows.Forms.TextBox()
+        Me.txtv1 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.chkcform = New System.Windows.Forms.CheckBox()
+        Me.txti2 = New System.Windows.Forms.TextBox()
+        Me.txti1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtp2 = New System.Windows.Forms.TextBox()
+        Me.txtp1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -70,7 +70,7 @@ Partial Class frmNewPurchaseJournalRegister
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(851, 5)
+        Me.Button1.Location = New System.Drawing.Point(932, 36)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 25)
         Me.Button1.TabIndex = 34
@@ -109,7 +109,7 @@ Partial Class frmNewPurchaseJournalRegister
         Me.voutype.FormattingEnabled = True
         Me.voutype.Location = New System.Drawing.Point(708, 36)
         Me.voutype.Name = "voutype"
-        Me.voutype.Size = New System.Drawing.Size(137, 21)
+        Me.voutype.Size = New System.Drawing.Size(218, 21)
         Me.voutype.TabIndex = 206
         '
         'Label6
@@ -131,7 +131,7 @@ Partial Class frmNewPurchaseJournalRegister
         Me.cmbprdunit.FormattingEnabled = True
         Me.cmbprdunit.Location = New System.Drawing.Point(708, 5)
         Me.cmbprdunit.Name = "cmbprdunit"
-        Me.cmbprdunit.Size = New System.Drawing.Size(137, 25)
+        Me.cmbprdunit.Size = New System.Drawing.Size(218, 25)
         Me.cmbprdunit.TabIndex = 204
         '
         'Label23
@@ -246,6 +246,7 @@ Partial Class frmNewPurchaseJournalRegister
         '
         Me.CrystalReportViewer1.ActiveViewIndex = -1
         Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 114)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"

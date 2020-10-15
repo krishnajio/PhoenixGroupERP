@@ -614,9 +614,9 @@ Partial Class frmSaleInvoice
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
-        Me.GroupBox1.Location = New System.Drawing.Point(84, 570)
+        Me.GroupBox1.Location = New System.Drawing.Point(763, 549)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(335, 73)
+        Me.GroupBox1.Size = New System.Drawing.Size(34, 10)
         Me.GroupBox1.TabIndex = 13
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ref Detials"
@@ -953,7 +953,7 @@ Partial Class frmSaleInvoice
         Me.cmbTcsHeadCode.BackColor = System.Drawing.Color.White
         Me.cmbTcsHeadCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbTcsHeadCode.FormattingEnabled = True
-        Me.cmbTcsHeadCode.Location = New System.Drawing.Point(608, 439)
+        Me.cmbTcsHeadCode.Location = New System.Drawing.Point(607, 453)
         Me.cmbTcsHeadCode.Name = "cmbTcsHeadCode"
         Me.cmbTcsHeadCode.Size = New System.Drawing.Size(110, 21)
         Me.cmbTcsHeadCode.TabIndex = 148
@@ -976,7 +976,6 @@ Partial Class frmSaleInvoice
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(227, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(797, 709)
         Me.Controls.Add(Me.chKtcs)
-        Me.Controls.Add(Me.cmbTcsHeadCode)
         Me.Controls.Add(Me.cmbTcsType)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.txtTcsAmount)
@@ -1025,6 +1024,7 @@ Partial Class frmSaleInvoice
         Me.Controls.Add(Me.cmbsubgrp)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.CmbState)
+        Me.Controls.Add(Me.cmbTcsHeadCode)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False

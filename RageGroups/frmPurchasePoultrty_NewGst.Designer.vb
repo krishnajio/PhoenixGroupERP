@@ -19,11 +19,11 @@ Partial Class frmPurchasePoultrty_NewGst
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPurchasePoultrty_NewGst))
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblvouno = New System.Windows.Forms.TextBox()
@@ -312,8 +312,8 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         'srno
         '
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.srno.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.srno.DefaultCellStyle = DataGridViewCellStyle1
         Me.srno.HeaderText = "Sr. No."
         Me.srno.MaxInputLength = 2
         Me.srno.Name = "srno"
@@ -322,9 +322,9 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         'Accode
         '
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.NullValue = "-"
-        Me.Accode.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.NullValue = "-"
+        Me.Accode.DefaultCellStyle = DataGridViewCellStyle2
         Me.Accode.HeaderText = "A/C Code"
         Me.Accode.MaxInputLength = 10
         Me.Accode.Name = "Accode"
@@ -332,8 +332,8 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         'acname
         '
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.acname.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.acname.DefaultCellStyle = DataGridViewCellStyle3
         Me.acname.HeaderText = "A/C Name"
         Me.acname.MaxInputLength = 30
         Me.acname.Name = "acname"
@@ -342,11 +342,11 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         'amount
         '
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.Format = "N2"
-        DataGridViewCellStyle14.NullValue = "0.00"
-        Me.amount.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.Format = "N2"
+        DataGridViewCellStyle4.NullValue = "0.00"
+        Me.amount.DefaultCellStyle = DataGridViewCellStyle4
         Me.amount.HeaderText = "Amount"
         Me.amount.MaxInputLength = 18
         Me.amount.Name = "amount"
@@ -355,8 +355,8 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         'Qty
         '
-        DataGridViewCellStyle15.NullValue = "0"
-        Me.Qty.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle5.NullValue = "0"
+        Me.Qty.DefaultCellStyle = DataGridViewCellStyle5
         Me.Qty.HeaderText = "Qty"
         Me.Qty.MaxInputLength = 20
         Me.Qty.Name = "Qty"
@@ -548,9 +548,9 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(70, 494)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(50, 13)
+        Me.Label15.Size = New System.Drawing.Size(42, 13)
         Me.Label15.TabIndex = 202
-        Me.Label15.Text = "Freight:"
+        Me.Label15.Text = "Other:"
         '
         'dtVdate
         '

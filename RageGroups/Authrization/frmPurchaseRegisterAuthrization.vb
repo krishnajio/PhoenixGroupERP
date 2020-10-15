@@ -73,7 +73,6 @@ Public Class frmPurchaseRegisterAuthrization
     Dim OtherCheck As Double = 0.0
     Private Sub frmNewPurchaseRegister_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-
         'filling production unit 
         GMod.DataSetRet("select prdunit from prdunit where cmp_id='" & GMod.Cmpid & "'", "prdunit")
         cmbprdunit.DataSource = GMod.ds.Tables("prdunit")
@@ -110,8 +109,13 @@ Public Class frmPurchaseRegisterAuthrization
             Dim cmdtds As New SqlCommand(sql, GMod.SqlConn, trans)
             cmdtds.ExecuteNonQuery()
 
+            sql = " update tdsentry  set authr='" & GMod.username & "'  where vou_type='" & voutype.Text _
+                                    & "' and cast(vou_no as bigint) between '" & txtv1.Text & "' and '" & txtv2.Text & "' and session ='" & GMod.Session & "' and cmp_id='" & GMod.Cmpid & "'"
+            Dim cmdtcs As New SqlCommand(sql, GMod.SqlConn, trans)
+            cmdtcs.ExecuteNonQuery()
 
-           
+
+
             trans.Commit()
             MsgBox("Authorization Complete", MsgBoxStyle.Information)
         Catch ex As Exception

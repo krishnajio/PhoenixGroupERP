@@ -46,17 +46,20 @@ Public Class frmNewPurchaseJournalRegister
 
         GMod.DataSetRet(sql, "npr")
 
-        Dim r As New CrNew_JurnalPur_Register
+        'Dim r As New CrNew_JurnalPur_Register
+        Dim r As New CrNew_Pur_Register
         r.SetDataSource(GMod.ds.Tables("npr"))
         r.SetParameterValue("p1", GMod.Cmpname)
         r.SetParameterValue("p2", p2)
         r.SetParameterValue("p3", p3)
         r.SetParameterValue("p4", p4)
         r.SetParameterValue("p5", p5)
+        r.SetParameterValue("p5", "")
         r.SetParameterValue("p6", voutype.Text.ToUpper & "- REGISTER")
         r.SetParameterValue("p7", GMod.username)
         CrystalReportViewer1.ReportSource = r
         ' cmbprdunit.Text = ""
+        voutype.Enabled = True
     End Sub
 
     Private Sub frmNewPurchaseRegister_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -68,7 +71,7 @@ Public Class frmNewPurchaseJournalRegister
         cmbprdunit.Text = ""
 
 
-        GMod.DataSetRet("select vtype from vtype where cmp_id='" & GMod.Cmpid & "' and vtype like '%pur journal%' and vtype NOT like '%bank%'", "vt")
+        GMod.DataSetRet("select vtype from vtype where cmp_id='" & GMod.Cmpid & "' and vtype like '%pur journal%' and vtype NOT like '%bank%' and session = '" & GMod.Session & "'", "vt")
         voutype.DataSource = GMod.ds.Tables("vt")
         voutype.DisplayMember = "vtype"
 

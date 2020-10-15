@@ -530,7 +530,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
                     sqlsave &= "'" & dgvoucher(15, i).Value & "',"
                     sqlsave &= "'" & Val(dgvoucher(14, i).Value) & "',"
                     sqlsave &= "'" & cmbfercode.Text & "',"
-                    sqlsave &= "'" & Val(txtFreight.Text) & "',"
+                    sqlsave &= "'" & Val(txtTcsAmount.Text) & "',"
                     sqlsave &= "'" & txtPoNo.Text & "',"
                     sqlsave &= "'" & txtImwno.Text & "',"
                     sqlsave &= "'" & GMod.Cmpid & "',"
@@ -615,7 +615,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
                     sql &= "'YES',"
                     sql &= "'" & dtVdate.Value.ToShortDateString & "',"
                     sql &= "'" & Val(txtTcsAmount.Text) & "',"
-                    sql &= "'" & cmbPartCode.Text & "',"
+                    sql &= "'" & cmbacheadcode.Text & "',"
                     sql &= "'" & GMod.Cmpid & "','1')"
 
                     Dim cmdTcsReport As New SqlCommand(sql, SqlConn, sqltrans)
@@ -635,7 +635,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
                 sqlsave &= "'" & dtVdate.Value.ToShortDateString & "',"
                 sqlsave &= "'" & cmbacheadcode.Text & "',"
                 sqlsave &= "'" & cmbacheadname.Text & "',"
-                sqlsave &= "'" & total - Val("") + vat(txtTcsAmount.Text) & "',"
+                sqlsave &= "'" & total - Val("") + Val(txtTcsAmount.Text) & "',"
                 sqlsave &= "'0',"
                 sqlsave &= "'-',"
                 sqlsave &= "'-',"
