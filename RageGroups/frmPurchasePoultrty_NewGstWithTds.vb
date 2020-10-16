@@ -216,16 +216,16 @@ Public Class frmPurchasePoultrty_NewGstWithTds
 
 
         sql = "select * from [TCSMaster] where cmp_id ='" & GMod.Cmpid & "'"
-        GMod.DataSetRet(sql, "tdm")
+        GMod.DataSetRet(sql, "tcsmaster")
 
-        cmbTCSType.DataSource = GMod.ds.Tables("tdm")
+        cmbTCSType.DataSource = GMod.ds.Tables("tcsmaster")
         cmbTCSType.DisplayMember = "TcsType"
 
 
-        cmbTCSper.DataSource = GMod.ds.Tables("tdm")
+        cmbTCSper.DataSource = GMod.ds.Tables("tcsmaster")
         cmbTCSper.DisplayMember = "Per"
 
-        cmbacheadcodeTCS.DataSource = GMod.ds.Tables("tdm")
+        cmbacheadcodeTCS.DataSource = GMod.ds.Tables("tcsmaster")
         cmbacheadcodeTCS.DisplayMember = "Acc_Code"
 
         GMod.DataSetRet("select stock_val from company where cmp_id ='" & GMod.Cmpid & "'", "othercmpCheck")
@@ -2188,14 +2188,14 @@ Public Class frmPurchasePoultrty_NewGstWithTds
    
     Private Sub cmbacheadcodeTCS_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadcodeTCS.SelectedIndexChanged
         sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and account_code='" & cmbacheadcodeTCS.Text & "'"
-        GMod.DataSetRet(sql, "aclist2")
-        cmbTcsCode.DataSource = GMod.ds.Tables("aclist2")
+        GMod.DataSetRet(sql, "tcsaclist2")
+        cmbTcsCode.DataSource = GMod.ds.Tables("tcsaclist2")
         cmbTcsCode.DisplayMember = "account_code"
-        cmbTcsHead.DataSource = GMod.ds.Tables("aclist2")
+        cmbTcsHead.DataSource = GMod.ds.Tables("tcsaclist2")
         cmbTcsHead.DisplayMember = "account_head_name"
-        CmbTcsGroup.DataSource = GMod.ds.Tables("aclist2")
+        CmbTcsGroup.DataSource = GMod.ds.Tables("tcsaclist2")
         CmbTcsGroup.DisplayMember = "group_name"
-        cmbTcsSubGroup.DataSource = GMod.ds.Tables("aclist2")
+        cmbTcsSubGroup.DataSource = GMod.ds.Tables("tcsaclist2")
         cmbTcsSubGroup.DisplayMember = "sub_group_name"
     End Sub
 

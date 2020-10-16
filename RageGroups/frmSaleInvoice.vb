@@ -584,8 +584,6 @@ Public Class frmSaleInvoice
 
                     End If
 
-
-
                     'Inserting product for PRINT DATA
                     sqlsavenecc = "insert into PrintData (Vou_type, Vou_no, AccCode, AccName, Station, ProductName," _
                                    & "Qty, Rate, Amount, DiscountRate, DiscountAmount, " _
