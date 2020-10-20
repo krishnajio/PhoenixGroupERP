@@ -43,16 +43,23 @@ Public Class frmJournal
     End Sub
     Private Sub frmPayment_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Checking For Entry Per mission
-        If GMod.PerviousSession = True Then
-            GMod.DataSetRet("select entry_status from SessionMaster where Uname ='" & GMod.username & "' and session ='" & GMod.Session & "'", "entry_status")
-            GMod.EntryStatus = CInt(GMod.ds.Tables("entry_status").Rows(0)(0))
-            If GMod.EntryStatus = 1 Then
+
+        Try
+            If GMod.PerviousSession = True Then
+                GMod.DataSetRet("select entry_status from SessionMaster where Uname ='" & GMod.username & "' and session ='" & GMod.Session & "'", "entry_status")
+                GMod.EntryStatus = CInt(GMod.ds.Tables("entry_status").Rows(0)(0))
+                If GMod.EntryStatus = 1 Then
+                Else
+                    MessageBox.Show("Permission denied", "Permision denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    'Me.Close()
+                End If
             Else
-                MessageBox.Show("Permission denied", "Permision denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Me.Close()
             End If
-        Else
-        End If
+
+        Catch ex As Exception
+
+        End Try
+  
         'date set as per sessiion
         dtvdate.Value = GMod.SessionCurrentDate
         dtvdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))

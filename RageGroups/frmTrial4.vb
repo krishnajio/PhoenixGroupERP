@@ -174,31 +174,27 @@ Public Class frmTrial4
     Dim sql As String
     Public Sub AllGroup()
         If chkArea.Checked = False Then
-
-            sql = "select * from grp_summary where cmp_id ='" & GMod.Cmpid & "'"
+            sql = "select * from grp_summary where cmp_id ='" & GMod.Cmpid & "' order by acc_code"
             GMod.DataSetRet(sql, "trial2")
         Else
-            sql = "select * from grp_summary where cmp_id ='" & GMod.Cmpid & "' and left(acc_code,2)='" & cmbAreaCode.Text & "'"
+            sql = "select * from grp_summary where cmp_id ='" & GMod.Cmpid & "' and left(acc_code,2)='" & cmbAreaCode.Text & "' order by acc_code"
             GMod.DataSetRet(sql, "trial2")
 
         End If
-
-
-
     End Sub
 
     Sub subgrp()
-        sql = "select g.* from grp_summary g inner join " & GMod.ACC_HEAD & "  s on g.acc_code=s.account_code  and sub_group_name ='" & ComboBox1.Text & "'  and g.cmp_id ='" & GMod.Cmpid & "'"
+        sql = "select g.* from grp_summary g inner join " & GMod.ACC_HEAD & "  s on g.acc_code=s.account_code  and sub_group_name ='" & ComboBox1.Text & "'  and g.cmp_id ='" & GMod.Cmpid & "' order by acc_code"
         GMod.DataSetRet(sql, "trial2")
 
     End Sub
     Dim sqlSelect, SqlSelect1 As String
     Public Sub GroupWise()
         If chkArea.Checked = False Then
-            sql = "select * from grp_summary where group_code ='" & cmbgrpname.Text & "' and cmp_id='" & GMod.Cmpid & "'"
+            sql = "select * from grp_summary where group_code ='" & cmbgrpname.Text & "' and cmp_id='" & GMod.Cmpid & "' order by acc_code"
             GMod.DataSetRet(sql, "trial2")
         Else
-            sql = "select * from grp_summary where group_code ='" & cmbgrpname.Text & "' and cmp_id='" & GMod.Cmpid & "' and left(acc_code,2)='" & cmbAreaCode.Text & "'"
+            sql = "select * from grp_summary where group_code ='" & cmbgrpname.Text & "' and cmp_id='" & GMod.Cmpid & "' and left(acc_code,2)='" & cmbAreaCode.Text & "' order by acc_code"
             GMod.DataSetRet(sql, "trial2")
 
         End If
