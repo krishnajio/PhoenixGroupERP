@@ -24,9 +24,9 @@ Public Class frmSalesRegister2
             'neccamt, pheadname, prd_name, Rate, area, uanme
             GMod.SqlExecuteNonQuery("delete from salereg")
             sql2 = " insert into salereg (invno, invdate, hdate, code, cname, qty, free," _
-                    & " invamt, neccamt,prd_name, Rate, area, uanme,vou_type,prdunit ,mortality,gstin) " _
+                    & " invamt, neccamt,prd_name, Rate, area, uanme,vou_type,prdunit ,mortality,gstin,tcs_per,tcs_amt) " _
                     & " select vou_no, BillDate,HatchDate,AccCode,h.account_head_name, " _
-                    & " Qty,FreeQty,Amount,NeccAmount,ProductName,Rate,Station,'" & GMod.username & "',p.vou_type,PrdUnit,mortality,h.account_type from Printdata p " _
+                    & " Qty,FreeQty,Amount,NeccAmount,ProductName,Rate,Station,'" & GMod.username & "',p.vou_type,PrdUnit,mortality,h.account_type,p.tcs_per,p.tcs_amt from Printdata p " _
                     & " inner join " & GMod.ACC_HEAD & " h  on p.AccCode = h.account_code left join " _
                     & " Area on Area.prefix = h.Area_code  WHERE vou_type='" & voutype.Text & "' and cast(vou_no as bigint) " _
                     & " between " & txtCrNoFrom.Text & " and " & txtCrNoTo.Text & "  and (FreeQty<>0 OR ProductName in (select ItemName from itemmaster where p.cmp_id='" & GMod.Cmpid & "') " _
@@ -88,7 +88,7 @@ Public Class frmSalesRegister2
 
         End If
 
-        GMod.DataSetRet("select invno, CONVERT(VARCHAR(11), invdate, 103) invdate ,CONVERT(VARCHAR(11), hdate, 103)  hdate, code, cname,gstin, prd_name, qty, free,  qty + free total ,rate, invamt, neccamt,pheadname, prdunit,mortality  from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleRegGrid")
+        GMod.DataSetRet("select invno, CONVERT(VARCHAR(11), invdate, 103) invdate ,CONVERT(VARCHAR(11), hdate, 103)  hdate, code, cname,gstin, prd_name, qty, free,  qty + free total ,rate, invamt, neccamt,pheadname, prdunit,mortality, isnull(tcs_amt,0) tcs_amt from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleRegGrid")
         DataGridView1.DataSource = GMod.ds.Tables("SaleRegGrid")
 
         Dim crsr As New CrySaleReg1

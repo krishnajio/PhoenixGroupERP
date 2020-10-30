@@ -11,7 +11,7 @@ Public Class frmSalaryBankDr
 
         If GMod.Getsession(dtdate.Value) = GMod.Session Then
         Else
-            Me.Close()
+            'Me.Close()
         End If
 
 
@@ -57,7 +57,7 @@ Public Class frmSalaryBankDr
             If GMod.Getsession(dtdate.Value) = GMod.Session Then
 
             Else
-                Me.Close()
+            ' Me.Close()
         End If
         Rdothr.Checked = True
     End Sub

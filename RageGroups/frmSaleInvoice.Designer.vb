@@ -104,6 +104,7 @@ Partial Class frmSaleInvoice
         Me.cmbTcsType = New System.Windows.Forms.ComboBox()
         Me.cmbTcsHeadCode = New System.Windows.Forms.ComboBox()
         Me.chKtcs = New System.Windows.Forms.CheckBox()
+        Me.lblpan = New System.Windows.Forms.Label()
         CType(Me.dgSaleVoucher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -969,12 +970,24 @@ Partial Class frmSaleInvoice
         Me.chKtcs.Text = "TCS"
         Me.chKtcs.UseVisualStyleBackColor = True
         '
+        'lblpan
+        '
+        Me.lblpan.AutoSize = True
+        Me.lblpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
+        Me.lblpan.ForeColor = System.Drawing.Color.Red
+        Me.lblpan.Location = New System.Drawing.Point(604, 159)
+        Me.lblpan.Name = "lblpan"
+        Me.lblpan.Size = New System.Drawing.Size(13, 16)
+        Me.lblpan.TabIndex = 150
+        Me.lblpan.Text = "-"
+        '
         'frmSaleInvoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(227, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(797, 709)
+        Me.Controls.Add(Me.lblpan)
         Me.Controls.Add(Me.chKtcs)
         Me.Controls.Add(Me.cmbTcsType)
         Me.Controls.Add(Me.Label22)
@@ -1120,4 +1133,5 @@ Partial Class frmSaleInvoice
     Friend WithEvents cmbTcsType As System.Windows.Forms.ComboBox
     Friend WithEvents cmbTcsHeadCode As System.Windows.Forms.ComboBox
     Friend WithEvents chKtcs As System.Windows.Forms.CheckBox
+    Friend WithEvents lblpan As System.Windows.Forms.Label
 End Class

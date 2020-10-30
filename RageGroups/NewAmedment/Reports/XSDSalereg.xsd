@@ -26,6 +26,8 @@
 							<xs:element name="cmp_id" type="xs:string" minOccurs="0" />
 							<xs:element name="mortality" type="xs:decimal" />
               <xs:element name="gstin" type="xs:string" minOccurs="0" />
+              <xs:element name="tcs_per" type="xs:decimal" />
+              <xs:element name="tcs_amt" type="xs:decimal" />
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>

@@ -1220,6 +1220,28 @@ Public Class frmSaleInvoice
         End If
     End Sub
     Private Sub cmbacheadcode_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbacheadcode.Leave
+        Try
+            GMod.DataSetRet("select sum(dramt) from " & GMod.VENTRY & " where acc_head_code = '" & cmbacheadcode.Text & "'", "tcsamtcheck")
+            If Val(GMod.ds.Tables("tcsamtcheck").Rows(0)(0)) >= 5000000 Then
+                MsgBox("Customer Eligible for TCS...")
+            End If
+
+            '
+
+            GMod.DataSetRet("select pan_no from " & GMod.ACC_HEAD & "  where account_code = '" & cmbacheadcode.Text & "'", "cuspanno")
+            If GMod.ds.Tables("cuspanno").Rows(0)(0).ToString.Length > 8 Then
+                lblpan.Text = GMod.ds.Tables("cuspanno").Rows(0)(0).ToString
+            Else
+                lblpan.Text = "PAN Not Available"
+            End If
+        Catch ex As Exception
+            lblpan.Text = "PAN Not Available"
+            MsgBox(ex.Message)
+        End Try
+       
+
+
+
         sql = "select account_code from " & GMod.ACC_HEAD & " where account_head_name = '" & cmbacheadname.Text & "' and  Area_code ='" & cmbAreaCode.Text & "'"
         GMod.DataSetRet(sql, "account_codeexpenses")
         If GMod.ds.Tables("account_codeexpenses").Rows.Count > 0 Then
@@ -1267,6 +1289,11 @@ Public Class frmSaleInvoice
 
             lbldr.Text = GMod.ds.Tables("custledbal").Rows(0)("DrAmt")
             lblcr.Text = GMod.ds.Tables("custledbal").Rows(0)("CrAmt")
+
+
+           
+
+
         Catch ex As Exception
             lbldr.Text = "0.00"
             lblcr.Text = "0.00"
@@ -1588,6 +1615,14 @@ Public Class frmSaleInvoice
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+    Private Sub cmbacheadcode_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadcode.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub cmbacheadname_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadname.SelectedIndexChanged
 
     End Sub
 End Class
