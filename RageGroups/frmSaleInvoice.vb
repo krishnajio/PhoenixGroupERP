@@ -678,11 +678,11 @@ Public Class frmSaleInvoice
                         pv = pv + Val(dgSaleVoucher(4, i).Value)
                     Next
                     If cr <> pv Then
-                        MsgBox("Amount not matching!!", MsgBoxStyle.Critical)
+                        'MsgBox("Amount not matching!!", MsgBoxStyle.Critical)
                         cmbacheadname.Focus()
                         cr = 0.0
                         pv = 0.0
-                        Exit Sub
+                        'Exit Sub
                     End If
                     For i = 0 To DataGridView1.RowCount - 1
                         sqlsavecr = "insert into  Sale_Receipt (Ref_Type, Ref, Acc_Code, Vou_Type," & _
