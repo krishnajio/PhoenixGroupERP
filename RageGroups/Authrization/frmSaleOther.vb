@@ -96,8 +96,29 @@ Public Class frmSaleOther
         Me.Particular.DisplayMember = "ItemName"
         dgPurchase.Rows.Add()
 
+        'Filling tcs tYPE 
+        GMod.DataSetRet("select * from TCSMaster Where cmp_id='" & GMod.Cmpid & "'", "TCSTYPE")
+        cmbTcsType.DataSource = GMod.ds.Tables("TCSTYPE")
+        cmbTcsType.DisplayMember = "TcsType"
+
+
 
     End Sub
+    Private Sub FetchTcsDetilas()
+        Dim sql As String
+        Try
+            sql = "select tcs.*,a.account_head_name from TCsMaster tcs inner join acc_head_phha_" & GMod.Session & " a on tcs.Acc_code = a.account_code  where TcStype ='" & cmbTcsType.Text & "'"
+            GMod.DataSetRet(sql, "tcsdata")
+
+            cmbTcsHead.Text = GMod.ds.Tables("tcsdata").Rows(0)("account_head_name").ToString
+            cmbTcsHeadCode.Text = GMod.ds.Tables("tcsdata").Rows(0)("Acc_code").ToString
+            txtTcsPer.Text = GMod.ds.Tables("tcsdata").Rows(0)("Per").ToString
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
     Sub nxtvno()
         Dim sql As String
         Try
@@ -309,7 +330,7 @@ Public Class frmSaleOther
 
                             sqlsave = " insert into OtherSaledata (Vou_type, Vou_no, AccCode," & _
                             " AccName, Station, ProductName, OutQty, Rate, Amount, OutQtyNos," & _
-                            " BillNo, BillDate, InQty, InQtyNos, Cmp_id, Session,mrktrate,authr,Prdunit,Packing, Insurance, Discount,crHead,cgstp, cgsta, sgstp, sgsta, igstp, igsta ) values ("
+                            " BillNo, BillDate, InQty, InQtyNos, Cmp_id, Session,mrktrate,authr,Prdunit,Packing, Insurance, Discount,crHead,cgstp, cgsta, sgstp, sgsta, igstp, igsta,tcs_per,tcs_amt) values ("
                             sqlsave &= "'" & cmbVoucherType.Text & "',"
                             sqlsave &= "'" & txtVoucherNo.Text & "',"
                             sqlsave &= "'" & cmbacheadcode.Text & "',"
@@ -347,7 +368,9 @@ Public Class frmSaleOther
                             sqlsave &= "'" & Val(txtsgstper.Text) & "',"
                             sqlsave &= "'" & Val(txtsgstamt.Text) & "',"
                             sqlsave &= "'" & Val(txtigstper.Text) & "',"
-                            sqlsave &= "'" & Val(txtigstamt.Text) & "')"
+                            sqlsave &= "'" & Val(txtigstamt.Text) & "',"
+                            sqlsave &= "'" & Val(txtTcsPer.Text) & "',"
+                            sqlsave &= "'" & Val(txtTcsAmount.Text) & "')"
 
 
                             Dim cmd1 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
@@ -367,7 +390,7 @@ Public Class frmSaleOther
                     sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
                     sqlsave &= "'" & cmbacheadcode.Text & "',"
                     sqlsave &= "'" & cmbacheadname.Text & "',"
-                    sqlsave &= "'" & Val(txtgtotal.Text) - Val(txtgstamtdr.Text) & "',"
+                    sqlsave &= "'" & Val(txtgtotal.Text) - Val(txtgstamtdr.Text) + Val(txtTcsAmount.Text) & "',"
                     sqlsave &= "'0',"
                     sqlsave &= "'-',"
                     sqlsave &= "'-',"
@@ -565,8 +588,31 @@ Public Class frmSaleOther
                         Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
                         cmd4.ExecuteNonQuery()
                     End If
+                    Dim ssaveprdvntry As String
+                    'Inserting TCS tax amount in the Voucher entry Credit 
+                    If Val(txtTcsAmount.Text) > 0 Then
+                        ssaveprdvntry = "insert into " & GMod.VENTRY & " (Cmp_id, Uname," _
+                        & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
+                        & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
+                        ssaveprdvntry &= "'" & GMod.Cmpid & "',"
+                        ssaveprdvntry &= "'" & GMod.username & "',"
+                        ssaveprdvntry &= "'" & i + 1 & "',"
+                        ssaveprdvntry &= "'" & txtVoucherNo.Text & "',"
+                        ssaveprdvntry &= "'" & cmbVoucherType.Text & "',"
+                        ssaveprdvntry &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                        ssaveprdvntry &= "'" & cmbTcsHeadCode.Text & "',"
+                        ssaveprdvntry &= "'" & cmbTcsHead.Text & "',"
+                        ssaveprdvntry &= "'" & Val("") & "',"
+                        ssaveprdvntry &= "'" & Val(txtTcsAmount.Text) & "',"
+                        ssaveprdvntry &= "'" & narrinv & narrcust & "',"
+                        ssaveprdvntry &= "'',"
+                        ssaveprdvntry &= "'','" & dtVouDate.Value.ToShortDateString & "')"
+                        'MsgBox(ssaveprdvntry)
+                        'MsgBox(GMod.SqlExecuteNonQuery(ssaveprdvntry))
+                        Dim cmdTcstaxentry As New SqlCommand(ssaveprdvntry, GMod.SqlConn, sqltrans)
+                        cmdTcstaxentry.ExecuteNonQuery()
+                    End If
                    
-
                     sqltrans.Commit()
                     MsgBox("Voucher NO. " & txtVoucherNo.Text & " Saved ...", MsgBoxStyle.Information)
                     dgPurchase.Rows.Clear()
@@ -813,6 +859,7 @@ Public Class frmSaleOther
                     txtinsurance.Text = "0"
                     txtpacking.Text = "0"
                     txtcgstper.Text = "0"
+                    txtTcsAmount.Text = "0"
                     ''*************************
                 End If
                 txtpacking_Leave(sender, e)
@@ -856,9 +903,9 @@ x1:
                     cmbacheadcode.Text = GMod.ds.Tables("inv").Rows(0)("AccCode")
                     ' cmbacheadname.Text = GMod.ds.Tables("inv").Rows(0)("Acc_head")
                     txtInvnoNo.Text = GMod.ds.Tables("inv").Rows(0)("BillNo")
-                    ' dtInvVate.Value = CDate(GMod.ds.Tables("inv").Rows(0)("BillDate").ToString)
+                    dtInvVate.Value = CDate(GMod.ds.Tables("inv").Rows(0)("BillDate").ToString)
                     txtVoucherNo.Text = vou_no
-                    'dtVouDate.MinDate = CDate(GMod.ds.Tables("inv").Rows(0)("BillDate").ToString)
+                    dtVouDate.MinDate = CDate(GMod.ds.Tables("inv").Rows(0)("BillDate").ToString)
                     dtVouDate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
                     ' dtVouDate.Value = CDate(GMod.ds.Tables("inv").Rows(0)("BillDate").ToString)
 
@@ -1529,5 +1576,25 @@ x1:
 
     Private Sub dgPurchase_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgPurchase.CellContentClick
 
+    End Sub
+
+    Private Sub cmbTcsType_Leave(sender As Object, e As EventArgs) Handles cmbTcsType.Leave
+        FetchTcsDetilas()
+    End Sub
+
+    Private Sub cmbTcsType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTcsType.SelectedIndexChanged
+        FetchTcsDetilas()
+    End Sub
+
+    Private Sub chKtcs_CheckedChanged(sender As Object, e As EventArgs) Handles chKtcs.CheckedChanged
+        Try
+            
+
+            Dim tcs As Double
+            tcs = Math.Round(Val(txtgtotal.Text) * (Val(txtTcsPer.Text) / 100), 0)
+            txtTcsAmount.Text = tcs.ToString
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

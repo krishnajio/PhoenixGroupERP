@@ -1625,4 +1625,8 @@ Public Class frmSaleInvoice
     Private Sub cmbacheadname_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadname.SelectedIndexChanged
 
     End Sub
+
+    Private Sub txtTcsPer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtTcsPer.SelectedIndexChanged
+
+    End Sub
 End Class

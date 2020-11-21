@@ -41,6 +41,8 @@
               <xs:element name="sgsta" type="xs:decimal" minOccurs="0" />
               <xs:element name="igstp" type="xs:decimal" minOccurs="0" />
               <xs:element name="igsta" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tcs_per" type="xs:decimal" minOccurs="0" />
+            <xs:element name="tcs_amt" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

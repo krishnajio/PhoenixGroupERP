@@ -19,15 +19,15 @@ Partial Class frmSaleOther
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmbacheadname = New System.Windows.Forms.ComboBox()
         Me.cmbacheadcode = New System.Windows.Forms.ComboBox()
@@ -136,6 +136,15 @@ Partial Class frmSaleOther
         Me.cmbgstheaddr = New System.Windows.Forms.ComboBox()
         Me.ComboBox9 = New System.Windows.Forms.ComboBox()
         Me.cmbcodegstdr = New System.Windows.Forms.ComboBox()
+        Me.chKtcs = New System.Windows.Forms.CheckBox()
+        Me.cmbTcsType = New System.Windows.Forms.ComboBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.txtTcsAmount = New System.Windows.Forms.ComboBox()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.txtTcsPer = New System.Windows.Forms.ComboBox()
+        Me.cmbTcsHead = New System.Windows.Forms.ComboBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.cmbTcsHeadCode = New System.Windows.Forms.ComboBox()
         CType(Me.dgPurchase, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -180,45 +189,45 @@ Partial Class frmSaleOther
         'dgPurchase
         '
         Me.dgPurchase.AllowUserToAddRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgPurchase.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgPurchase.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle28
         Me.dgPurchase.ColumnHeadersHeight = 30
         Me.dgPurchase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgPurchase.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Particular, Me.Quantity_No, Me.Quantity_Kg, Me.Rate, Me.Amount, Me.mrktrate, Me.Unit})
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgPurchase.DefaultCellStyle = DataGridViewCellStyle8
-        Me.dgPurchase.Location = New System.Drawing.Point(50, 173)
+        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgPurchase.DefaultCellStyle = DataGridViewCellStyle35
+        Me.dgPurchase.Location = New System.Drawing.Point(50, 165)
         Me.dgPurchase.Name = "dgPurchase"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgPurchase.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgPurchase.RowHeadersDefaultCellStyle = DataGridViewCellStyle36
         Me.dgPurchase.RowHeadersWidth = 20
         Me.dgPurchase.RowTemplate.Height = 40
-        Me.dgPurchase.Size = New System.Drawing.Size(736, 248)
+        Me.dgPurchase.Size = New System.Drawing.Size(888, 230)
         Me.dgPurchase.TabIndex = 9
         '
         'Particular
         '
         Me.Particular.DataPropertyName = "Particular"
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Particular.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle29.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Particular.DefaultCellStyle = DataGridViewCellStyle29
         Me.Particular.FillWeight = 449.2385!
         Me.Particular.HeaderText = "Particular"
         Me.Particular.Name = "Particular"
@@ -229,9 +238,9 @@ Partial Class frmSaleOther
         'Quantity_No
         '
         Me.Quantity_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.NullValue = "0"
-        Me.Quantity_No.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle30.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle30.NullValue = "0"
+        Me.Quantity_No.DefaultCellStyle = DataGridViewCellStyle30
         Me.Quantity_No.FillWeight = 12.69035!
         Me.Quantity_No.HeaderText = "Quantity in No"
         Me.Quantity_No.Name = "Quantity_No"
@@ -239,9 +248,9 @@ Partial Class frmSaleOther
         'Quantity_Kg
         '
         Me.Quantity_Kg.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.NullValue = "0"
-        Me.Quantity_Kg.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle31.NullValue = "0"
+        Me.Quantity_Kg.DefaultCellStyle = DataGridViewCellStyle31
         Me.Quantity_Kg.FillWeight = 12.69035!
         Me.Quantity_Kg.HeaderText = "Quantity in kg"
         Me.Quantity_Kg.Name = "Quantity_Kg"
@@ -249,8 +258,8 @@ Partial Class frmSaleOther
         'Rate
         '
         Me.Rate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Rate.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle32.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Rate.DefaultCellStyle = DataGridViewCellStyle32
         Me.Rate.FillWeight = 12.69035!
         Me.Rate.HeaderText = "Rate"
         Me.Rate.MaxInputLength = 10
@@ -259,8 +268,8 @@ Partial Class frmSaleOther
         'Amount
         '
         Me.Amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Amount.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle33.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Amount.DefaultCellStyle = DataGridViewCellStyle33
         Me.Amount.FillWeight = 12.69035!
         Me.Amount.HeaderText = "Amount"
         Me.Amount.Name = "Amount"
@@ -274,8 +283,8 @@ Partial Class frmSaleOther
         '
         'Unit
         '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Unit.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Unit.DefaultCellStyle = DataGridViewCellStyle34
         Me.Unit.HeaderText = "Unit"
         Me.Unit.MaxInputLength = 25
         Me.Unit.Name = "Unit"
@@ -349,7 +358,7 @@ Partial Class frmSaleOther
         Me.Panel2.Controls.Add(Me.btnClose)
         Me.Panel2.Controls.Add(Me.btnDelete)
         Me.Panel2.Controls.Add(Me.btnModify)
-        Me.Panel2.Location = New System.Drawing.Point(0, 685)
+        Me.Panel2.Location = New System.Drawing.Point(35, 664)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(772, 41)
         Me.Panel2.TabIndex = 24
@@ -457,7 +466,7 @@ Partial Class frmSaleOther
         '
         Me.txtgtotal.BackColor = System.Drawing.Color.MistyRose
         Me.txtgtotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtgtotal.Location = New System.Drawing.Point(313, 638)
+        Me.txtgtotal.Location = New System.Drawing.Point(310, 584)
         Me.txtgtotal.Name = "txtgtotal"
         Me.txtgtotal.ReadOnly = True
         Me.txtgtotal.Size = New System.Drawing.Size(117, 22)
@@ -467,7 +476,7 @@ Partial Class frmSaleOther
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(230, 643)
+        Me.Label17.Location = New System.Drawing.Point(227, 589)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(78, 13)
         Me.Label17.TabIndex = 183
@@ -556,7 +565,7 @@ Partial Class frmSaleOther
         Me.cmbSaleAcc.BackColor = System.Drawing.Color.White
         Me.cmbSaleAcc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbSaleAcc.FormattingEnabled = True
-        Me.cmbSaleAcc.Location = New System.Drawing.Point(311, 580)
+        Me.cmbSaleAcc.Location = New System.Drawing.Point(311, 553)
         Me.cmbSaleAcc.Name = "cmbSaleAcc"
         Me.cmbSaleAcc.Size = New System.Drawing.Size(378, 24)
         Me.cmbSaleAcc.TabIndex = 23
@@ -567,7 +576,7 @@ Partial Class frmSaleOther
         Me.cmbSaleAccCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSaleAccCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbSaleAccCode.FormattingEnabled = True
-        Me.cmbSaleAccCode.Location = New System.Drawing.Point(698, 580)
+        Me.cmbSaleAccCode.Location = New System.Drawing.Point(698, 553)
         Me.cmbSaleAccCode.Name = "cmbSaleAccCode"
         Me.cmbSaleAccCode.Size = New System.Drawing.Size(92, 24)
         Me.cmbSaleAccCode.TabIndex = 21
@@ -576,7 +585,7 @@ Partial Class frmSaleOther
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(247, 580)
+        Me.Label20.Location = New System.Drawing.Point(247, 553)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(57, 13)
         Me.Label20.TabIndex = 174
@@ -585,9 +594,9 @@ Partial Class frmSaleOther
         'txtAuthorisation
         '
         Me.txtAuthorisation.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAuthorisation.Location = New System.Drawing.Point(311, 610)
+        Me.txtAuthorisation.Location = New System.Drawing.Point(138, 548)
         Me.txtAuthorisation.Name = "txtAuthorisation"
-        Me.txtAuthorisation.Size = New System.Drawing.Size(378, 22)
+        Me.txtAuthorisation.Size = New System.Drawing.Size(103, 22)
         Me.txtAuthorisation.TabIndex = 22
         Me.txtAuthorisation.Text = "-"
         '
@@ -640,7 +649,7 @@ Partial Class frmSaleOther
         Me.Label16.ForeColor = System.Drawing.Color.White
         Me.Label16.Location = New System.Drawing.Point(0, 31)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(33, 702)
+        Me.Label16.Size = New System.Drawing.Size(33, 757)
         Me.Label16.TabIndex = 193
         Me.Label16.Text = "SALE OTHER PRODUCTS"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -652,7 +661,7 @@ Partial Class frmSaleOther
         Me.cmbinsurancehead.BackColor = System.Drawing.Color.White
         Me.cmbinsurancehead.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbinsurancehead.FormattingEnabled = True
-        Me.cmbinsurancehead.Location = New System.Drawing.Point(314, 460)
+        Me.cmbinsurancehead.Location = New System.Drawing.Point(314, 433)
         Me.cmbinsurancehead.Name = "cmbinsurancehead"
         Me.cmbinsurancehead.Size = New System.Drawing.Size(378, 24)
         Me.cmbinsurancehead.TabIndex = 13
@@ -663,14 +672,14 @@ Partial Class frmSaleOther
         Me.cmbinsurancecode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbinsurancecode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbinsurancecode.FormattingEnabled = True
-        Me.cmbinsurancecode.Location = New System.Drawing.Point(694, 460)
+        Me.cmbinsurancecode.Location = New System.Drawing.Point(694, 433)
         Me.cmbinsurancecode.Name = "cmbinsurancecode"
         Me.cmbinsurancecode.Size = New System.Drawing.Size(92, 24)
         Me.cmbinsurancecode.TabIndex = 17
         '
         'txtinsurance
         '
-        Me.txtinsurance.Location = New System.Drawing.Point(136, 456)
+        Me.txtinsurance.Location = New System.Drawing.Point(136, 429)
         Me.txtinsurance.Name = "txtinsurance"
         Me.txtinsurance.Size = New System.Drawing.Size(85, 20)
         Me.txtinsurance.TabIndex = 12
@@ -679,7 +688,7 @@ Partial Class frmSaleOther
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(68, 459)
+        Me.Label21.Location = New System.Drawing.Point(68, 432)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(71, 13)
         Me.Label21.TabIndex = 236
@@ -687,7 +696,7 @@ Partial Class frmSaleOther
         '
         'txtpacking
         '
-        Me.txtpacking.Location = New System.Drawing.Point(136, 427)
+        Me.txtpacking.Location = New System.Drawing.Point(136, 400)
         Me.txtpacking.Name = "txtpacking"
         Me.txtpacking.Size = New System.Drawing.Size(85, 20)
         Me.txtpacking.TabIndex = 10
@@ -696,7 +705,7 @@ Partial Class frmSaleOther
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(47, 430)
+        Me.Label22.Location = New System.Drawing.Point(47, 403)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(86, 13)
         Me.Label22.TabIndex = 235
@@ -704,7 +713,7 @@ Partial Class frmSaleOther
         '
         'txtcgstper
         '
-        Me.txtcgstper.Location = New System.Drawing.Point(96, 489)
+        Me.txtcgstper.Location = New System.Drawing.Point(96, 462)
         Me.txtcgstper.Name = "txtcgstper"
         Me.txtcgstper.Size = New System.Drawing.Size(43, 20)
         Me.txtcgstper.TabIndex = 14
@@ -716,7 +725,7 @@ Partial Class frmSaleOther
         Me.cmbother.BackColor = System.Drawing.Color.White
         Me.cmbother.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbother.FormattingEnabled = True
-        Me.cmbother.Location = New System.Drawing.Point(314, 490)
+        Me.cmbother.Location = New System.Drawing.Point(314, 463)
         Me.cmbother.Name = "cmbother"
         Me.cmbother.Size = New System.Drawing.Size(378, 24)
         Me.cmbother.TabIndex = 16
@@ -727,7 +736,7 @@ Partial Class frmSaleOther
         Me.cmbothercode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbothercode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbothercode.FormattingEnabled = True
-        Me.cmbothercode.Location = New System.Drawing.Point(796, 492)
+        Me.cmbothercode.Location = New System.Drawing.Point(796, 465)
         Me.cmbothercode.Name = "cmbothercode"
         Me.cmbothercode.Size = New System.Drawing.Size(92, 24)
         Me.cmbothercode.TabIndex = 19
@@ -739,7 +748,7 @@ Partial Class frmSaleOther
         Me.cmbpackinghead.BackColor = System.Drawing.Color.White
         Me.cmbpackinghead.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbpackinghead.FormattingEnabled = True
-        Me.cmbpackinghead.Location = New System.Drawing.Point(314, 430)
+        Me.cmbpackinghead.Location = New System.Drawing.Point(314, 403)
         Me.cmbpackinghead.Name = "cmbpackinghead"
         Me.cmbpackinghead.Size = New System.Drawing.Size(378, 24)
         Me.cmbpackinghead.TabIndex = 11
@@ -750,7 +759,7 @@ Partial Class frmSaleOther
         Me.cmbpackingcode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbpackingcode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbpackingcode.FormattingEnabled = True
-        Me.cmbpackingcode.Location = New System.Drawing.Point(694, 430)
+        Me.cmbpackingcode.Location = New System.Drawing.Point(694, 403)
         Me.cmbpackingcode.Name = "cmbpackingcode"
         Me.cmbpackingcode.Size = New System.Drawing.Size(92, 24)
         Me.cmbpackingcode.TabIndex = 15
@@ -759,7 +768,7 @@ Partial Class frmSaleOther
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(47, 492)
+        Me.Label23.Location = New System.Drawing.Point(47, 465)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(41, 13)
         Me.Label23.TabIndex = 237
@@ -769,7 +778,7 @@ Partial Class frmSaleOther
         '
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(247, 580)
+        Me.Label31.Location = New System.Drawing.Point(247, 553)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(57, 13)
         Me.Label31.TabIndex = 174
@@ -779,7 +788,7 @@ Partial Class frmSaleOther
         '
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(219, 615)
+        Me.Label32.Location = New System.Drawing.Point(44, 553)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(88, 13)
         Me.Label32.TabIndex = 189
@@ -789,7 +798,7 @@ Partial Class frmSaleOther
         '
         Me.Label33.AutoSize = True
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(227, 430)
+        Me.Label33.Location = New System.Drawing.Point(227, 403)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(86, 13)
         Me.Label33.TabIndex = 238
@@ -799,7 +808,7 @@ Partial Class frmSaleOther
         '
         Me.Label34.AutoSize = True
         Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(225, 459)
+        Me.Label34.Location = New System.Drawing.Point(225, 432)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(88, 13)
         Me.Label34.TabIndex = 239
@@ -809,7 +818,7 @@ Partial Class frmSaleOther
         '
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(247, 492)
+        Me.Label35.Location = New System.Drawing.Point(247, 465)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(57, 13)
         Me.Label35.TabIndex = 240
@@ -821,7 +830,7 @@ Partial Class frmSaleOther
         Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(694, 430)
+        Me.ComboBox4.Location = New System.Drawing.Point(694, 403)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(92, 24)
         Me.ComboBox4.TabIndex = 241
@@ -832,7 +841,7 @@ Partial Class frmSaleOther
         Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(694, 460)
+        Me.ComboBox5.Location = New System.Drawing.Point(694, 433)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(92, 24)
         Me.ComboBox5.TabIndex = 242
@@ -843,7 +852,7 @@ Partial Class frmSaleOther
         Me.ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Location = New System.Drawing.Point(698, 490)
+        Me.ComboBox6.Location = New System.Drawing.Point(698, 463)
         Me.ComboBox6.Name = "ComboBox6"
         Me.ComboBox6.Size = New System.Drawing.Size(92, 24)
         Me.ComboBox6.TabIndex = 243
@@ -852,7 +861,7 @@ Partial Class frmSaleOther
         '
         Me.TextBox4.BackColor = System.Drawing.Color.MistyRose
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(436, 638)
+        Me.TextBox4.Location = New System.Drawing.Point(433, 584)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(117, 22)
@@ -871,7 +880,7 @@ Partial Class frmSaleOther
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
-        Me.GroupBox1.Location = New System.Drawing.Point(778, 685)
+        Me.GroupBox1.Location = New System.Drawing.Point(778, 658)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(10, 16)
         Me.GroupBox1.TabIndex = 245
@@ -1024,7 +1033,7 @@ Partial Class frmSaleOther
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(149, 492)
+        Me.Label4.Location = New System.Drawing.Point(149, 465)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(32, 13)
         Me.Label4.TabIndex = 247
@@ -1032,7 +1041,7 @@ Partial Class frmSaleOther
         '
         'txtcgstamt
         '
-        Me.txtcgstamt.Location = New System.Drawing.Point(198, 489)
+        Me.txtcgstamt.Location = New System.Drawing.Point(198, 462)
         Me.txtcgstamt.Name = "txtcgstamt"
         Me.txtcgstamt.Size = New System.Drawing.Size(43, 20)
         Me.txtcgstamt.TabIndex = 15
@@ -1041,7 +1050,7 @@ Partial Class frmSaleOther
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(149, 522)
+        Me.Label24.Location = New System.Drawing.Point(149, 495)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(40, 13)
         Me.Label24.TabIndex = 255
@@ -1049,7 +1058,7 @@ Partial Class frmSaleOther
         '
         'txtsgstamt
         '
-        Me.txtsgstamt.Location = New System.Drawing.Point(198, 519)
+        Me.txtsgstamt.Location = New System.Drawing.Point(198, 492)
         Me.txtsgstamt.Name = "txtsgstamt"
         Me.txtsgstamt.Size = New System.Drawing.Size(43, 20)
         Me.txtsgstamt.TabIndex = 18
@@ -1058,7 +1067,7 @@ Partial Class frmSaleOther
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(247, 522)
+        Me.Label25.Location = New System.Drawing.Point(247, 495)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(65, 13)
         Me.Label25.TabIndex = 252
@@ -1068,7 +1077,7 @@ Partial Class frmSaleOther
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(47, 522)
+        Me.Label26.Location = New System.Drawing.Point(47, 495)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(49, 13)
         Me.Label26.TabIndex = 251
@@ -1076,7 +1085,7 @@ Partial Class frmSaleOther
         '
         'txtsgstper
         '
-        Me.txtsgstper.Location = New System.Drawing.Point(96, 519)
+        Me.txtsgstper.Location = New System.Drawing.Point(96, 492)
         Me.txtsgstper.Name = "txtsgstper"
         Me.txtsgstper.Size = New System.Drawing.Size(43, 20)
         Me.txtsgstper.TabIndex = 17
@@ -1088,7 +1097,7 @@ Partial Class frmSaleOther
         Me.cmbsgsthead.BackColor = System.Drawing.Color.White
         Me.cmbsgsthead.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbsgsthead.FormattingEnabled = True
-        Me.cmbsgsthead.Location = New System.Drawing.Point(314, 520)
+        Me.cmbsgsthead.Location = New System.Drawing.Point(314, 493)
         Me.cmbsgsthead.Name = "cmbsgsthead"
         Me.cmbsgsthead.Size = New System.Drawing.Size(378, 24)
         Me.cmbsgsthead.TabIndex = 19
@@ -1099,7 +1108,7 @@ Partial Class frmSaleOther
         Me.ComboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox7.FormattingEnabled = True
-        Me.ComboBox7.Location = New System.Drawing.Point(796, 522)
+        Me.ComboBox7.Location = New System.Drawing.Point(796, 495)
         Me.ComboBox7.Name = "ComboBox7"
         Me.ComboBox7.Size = New System.Drawing.Size(92, 24)
         Me.ComboBox7.TabIndex = 250
@@ -1110,7 +1119,7 @@ Partial Class frmSaleOther
         Me.cmbsgstcode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbsgstcode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbsgstcode.FormattingEnabled = True
-        Me.cmbsgstcode.Location = New System.Drawing.Point(698, 520)
+        Me.cmbsgstcode.Location = New System.Drawing.Point(698, 493)
         Me.cmbsgstcode.Name = "cmbsgstcode"
         Me.cmbsgstcode.Size = New System.Drawing.Size(92, 24)
         Me.cmbsgstcode.TabIndex = 253
@@ -1119,7 +1128,7 @@ Partial Class frmSaleOther
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(149, 552)
+        Me.Label27.Location = New System.Drawing.Point(149, 525)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(36, 13)
         Me.Label27.TabIndex = 263
@@ -1127,7 +1136,7 @@ Partial Class frmSaleOther
         '
         'txtigstamt
         '
-        Me.txtigstamt.Location = New System.Drawing.Point(198, 549)
+        Me.txtigstamt.Location = New System.Drawing.Point(198, 522)
         Me.txtigstamt.Name = "txtigstamt"
         Me.txtigstamt.Size = New System.Drawing.Size(43, 20)
         Me.txtigstamt.TabIndex = 21
@@ -1136,7 +1145,7 @@ Partial Class frmSaleOther
         '
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(247, 552)
+        Me.Label28.Location = New System.Drawing.Point(247, 525)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(61, 13)
         Me.Label28.TabIndex = 260
@@ -1146,7 +1155,7 @@ Partial Class frmSaleOther
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(47, 552)
+        Me.Label29.Location = New System.Drawing.Point(47, 525)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(45, 13)
         Me.Label29.TabIndex = 259
@@ -1154,7 +1163,7 @@ Partial Class frmSaleOther
         '
         'txtigstper
         '
-        Me.txtigstper.Location = New System.Drawing.Point(96, 549)
+        Me.txtigstper.Location = New System.Drawing.Point(96, 522)
         Me.txtigstper.Name = "txtigstper"
         Me.txtigstper.Size = New System.Drawing.Size(43, 20)
         Me.txtigstper.TabIndex = 20
@@ -1166,7 +1175,7 @@ Partial Class frmSaleOther
         Me.cmbigsthead.BackColor = System.Drawing.Color.White
         Me.cmbigsthead.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbigsthead.FormattingEnabled = True
-        Me.cmbigsthead.Location = New System.Drawing.Point(314, 550)
+        Me.cmbigsthead.Location = New System.Drawing.Point(314, 523)
         Me.cmbigsthead.Name = "cmbigsthead"
         Me.cmbigsthead.Size = New System.Drawing.Size(378, 24)
         Me.cmbigsthead.TabIndex = 22
@@ -1177,7 +1186,7 @@ Partial Class frmSaleOther
         Me.ComboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox8.FormattingEnabled = True
-        Me.ComboBox8.Location = New System.Drawing.Point(796, 552)
+        Me.ComboBox8.Location = New System.Drawing.Point(796, 525)
         Me.ComboBox8.Name = "ComboBox8"
         Me.ComboBox8.Size = New System.Drawing.Size(92, 24)
         Me.ComboBox8.TabIndex = 258
@@ -1188,7 +1197,7 @@ Partial Class frmSaleOther
         Me.cmbigstcode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbigstcode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbigstcode.FormattingEnabled = True
-        Me.cmbigstcode.Location = New System.Drawing.Point(698, 550)
+        Me.cmbigstcode.Location = New System.Drawing.Point(698, 523)
         Me.cmbigstcode.Name = "cmbigstcode"
         Me.cmbigstcode.Size = New System.Drawing.Size(92, 24)
         Me.cmbigstcode.TabIndex = 261
@@ -1197,7 +1206,7 @@ Partial Class frmSaleOther
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(167, 145)
+        Me.Label8.Location = New System.Drawing.Point(167, 141)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(36, 13)
         Me.Label8.TabIndex = 271
@@ -1205,7 +1214,7 @@ Partial Class frmSaleOther
         '
         'txtgstamtdr
         '
-        Me.txtgstamtdr.Location = New System.Drawing.Point(216, 142)
+        Me.txtgstamtdr.Location = New System.Drawing.Point(216, 138)
         Me.txtgstamtdr.Name = "txtgstamtdr"
         Me.txtgstamtdr.Size = New System.Drawing.Size(43, 20)
         Me.txtgstamtdr.TabIndex = 265
@@ -1214,7 +1223,7 @@ Partial Class frmSaleOther
         '
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(265, 145)
+        Me.Label30.Location = New System.Drawing.Point(265, 141)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(61, 13)
         Me.Label30.TabIndex = 269
@@ -1224,7 +1233,7 @@ Partial Class frmSaleOther
         '
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(65, 145)
+        Me.Label36.Location = New System.Drawing.Point(65, 141)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(45, 13)
         Me.Label36.TabIndex = 268
@@ -1232,7 +1241,7 @@ Partial Class frmSaleOther
         '
         'txtgstperdr
         '
-        Me.txtgstperdr.Location = New System.Drawing.Point(114, 142)
+        Me.txtgstperdr.Location = New System.Drawing.Point(114, 138)
         Me.txtgstperdr.Name = "txtgstperdr"
         Me.txtgstperdr.Size = New System.Drawing.Size(43, 20)
         Me.txtgstperdr.TabIndex = 264
@@ -1244,7 +1253,7 @@ Partial Class frmSaleOther
         Me.cmbgstheaddr.BackColor = System.Drawing.Color.White
         Me.cmbgstheaddr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbgstheaddr.FormattingEnabled = True
-        Me.cmbgstheaddr.Location = New System.Drawing.Point(332, 143)
+        Me.cmbgstheaddr.Location = New System.Drawing.Point(332, 139)
         Me.cmbgstheaddr.Name = "cmbgstheaddr"
         Me.cmbgstheaddr.Size = New System.Drawing.Size(378, 24)
         Me.cmbgstheaddr.TabIndex = 266
@@ -1255,7 +1264,7 @@ Partial Class frmSaleOther
         Me.ComboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox9.FormattingEnabled = True
-        Me.ComboBox9.Location = New System.Drawing.Point(814, 145)
+        Me.ComboBox9.Location = New System.Drawing.Point(814, 141)
         Me.ComboBox9.Name = "ComboBox9"
         Me.ComboBox9.Size = New System.Drawing.Size(92, 24)
         Me.ComboBox9.TabIndex = 267
@@ -1266,16 +1275,132 @@ Partial Class frmSaleOther
         Me.cmbcodegstdr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbcodegstdr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbcodegstdr.FormattingEnabled = True
-        Me.cmbcodegstdr.Location = New System.Drawing.Point(716, 143)
+        Me.cmbcodegstdr.Location = New System.Drawing.Point(716, 139)
         Me.cmbcodegstdr.Name = "cmbcodegstdr"
         Me.cmbcodegstdr.Size = New System.Drawing.Size(92, 24)
         Me.cmbcodegstdr.TabIndex = 270
+        '
+        'chKtcs
+        '
+        Me.chKtcs.AutoSize = True
+        Me.chKtcs.Location = New System.Drawing.Point(428, 615)
+        Me.chKtcs.Name = "chKtcs"
+        Me.chKtcs.Size = New System.Drawing.Size(47, 17)
+        Me.chKtcs.TabIndex = 279
+        Me.chKtcs.Text = "TCS"
+        Me.chKtcs.UseVisualStyleBackColor = True
+        '
+        'cmbTcsType
+        '
+        Me.cmbTcsType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cmbTcsType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbTcsType.BackColor = System.Drawing.Color.White
+        Me.cmbTcsType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbTcsType.FormattingEnabled = True
+        Me.cmbTcsType.Location = New System.Drawing.Point(311, 612)
+        Me.cmbTcsType.Name = "cmbTcsType"
+        Me.cmbTcsType.Size = New System.Drawing.Size(110, 21)
+        Me.cmbTcsType.TabIndex = 272
+        Me.cmbTcsType.TabStop = False
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
+        Me.Label37.Location = New System.Drawing.Point(237, 612)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(71, 15)
+        Me.Label37.TabIndex = 278
+        Me.Label37.Text = "TCS Type:"
+        '
+        'txtTcsAmount
+        '
+        Me.txtTcsAmount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.txtTcsAmount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.txtTcsAmount.BackColor = System.Drawing.Color.White
+        Me.txtTcsAmount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.txtTcsAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTcsAmount.FormattingEnabled = True
+        Me.txtTcsAmount.Location = New System.Drawing.Point(428, 637)
+        Me.txtTcsAmount.Name = "txtTcsAmount"
+        Me.txtTcsAmount.Size = New System.Drawing.Size(110, 21)
+        Me.txtTcsAmount.TabIndex = 275
+        Me.txtTcsAmount.TabStop = False
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
+        Me.Label38.Location = New System.Drawing.Point(174, 638)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(133, 15)
+        Me.Label38.TabIndex = 277
+        Me.Label38.Text = "TCS Per(%)/Amount"
+        '
+        'txtTcsPer
+        '
+        Me.txtTcsPer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.txtTcsPer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.txtTcsPer.BackColor = System.Drawing.Color.White
+        Me.txtTcsPer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.txtTcsPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTcsPer.FormattingEnabled = True
+        Me.txtTcsPer.Location = New System.Drawing.Point(312, 637)
+        Me.txtTcsPer.Name = "txtTcsPer"
+        Me.txtTcsPer.Size = New System.Drawing.Size(110, 21)
+        Me.txtTcsPer.TabIndex = 274
+        Me.txtTcsPer.TabStop = False
+        '
+        'cmbTcsHead
+        '
+        Me.cmbTcsHead.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cmbTcsHead.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbTcsHead.BackColor = System.Drawing.Color.White
+        Me.cmbTcsHead.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbTcsHead.FormattingEnabled = True
+        Me.cmbTcsHead.Location = New System.Drawing.Point(538, 613)
+        Me.cmbTcsHead.Name = "cmbTcsHead"
+        Me.cmbTcsHead.Size = New System.Drawing.Size(379, 21)
+        Me.cmbTcsHead.TabIndex = 273
+        Me.cmbTcsHead.TabStop = False
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
+        Me.Label39.Location = New System.Drawing.Point(473, 615)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(56, 15)
+        Me.Label39.TabIndex = 276
+        Me.Label39.Text = "TCS A/c"
+        '
+        'cmbTcsHeadCode
+        '
+        Me.cmbTcsHeadCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cmbTcsHeadCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbTcsHeadCode.BackColor = System.Drawing.Color.White
+        Me.cmbTcsHeadCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbTcsHeadCode.FormattingEnabled = True
+        Me.cmbTcsHeadCode.Location = New System.Drawing.Point(807, 614)
+        Me.cmbTcsHeadCode.Name = "cmbTcsHeadCode"
+        Me.cmbTcsHeadCode.Size = New System.Drawing.Size(110, 21)
+        Me.cmbTcsHeadCode.TabIndex = 280
+        Me.cmbTcsHeadCode.TabStop = False
         '
         'frmSaleOther
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.LightGray
-        Me.ClientSize = New System.Drawing.Size(960, 733)
+        Me.ClientSize = New System.Drawing.Size(960, 788)
+        Me.Controls.Add(Me.cmbTcsHead)
+        Me.Controls.Add(Me.cmbTcsHeadCode)
+        Me.Controls.Add(Me.chKtcs)
+        Me.Controls.Add(Me.cmbTcsType)
+        Me.Controls.Add(Me.Label37)
+        Me.Controls.Add(Me.txtTcsAmount)
+        Me.Controls.Add(Me.Label38)
+        Me.Controls.Add(Me.txtTcsPer)
+        Me.Controls.Add(Me.Label39)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.txtgstamtdr)
         Me.Controls.Add(Me.Label30)
@@ -1480,4 +1605,13 @@ Partial Class frmSaleOther
     Friend WithEvents Amount As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents mrktrate As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Unit As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents chKtcs As System.Windows.Forms.CheckBox
+    Friend WithEvents cmbTcsType As System.Windows.Forms.ComboBox
+    Friend WithEvents Label37 As System.Windows.Forms.Label
+    Friend WithEvents txtTcsAmount As System.Windows.Forms.ComboBox
+    Friend WithEvents Label38 As System.Windows.Forms.Label
+    Friend WithEvents txtTcsPer As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbTcsHead As System.Windows.Forms.ComboBox
+    Friend WithEvents Label39 As System.Windows.Forms.Label
+    Friend WithEvents cmbTcsHeadCode As System.Windows.Forms.ComboBox
 End Class
