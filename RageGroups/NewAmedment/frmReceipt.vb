@@ -267,17 +267,17 @@ Public Class frmReceipt
                 txtCrmat.Text = ""
                 DataGridView1.Rows.Clear()
                 'dg.Rows.Clear()
-                If GMod.username.ToUpper = "CASHCOUNTER" Then
-                    _CASHCOUNTER = 1
-                    Dim tt As New frmCRPrint
-                    tt.txtfrom.Text = vouno
-                    tt.txtto.Text = vouno
-                    tt.btnshow_Click(sender, e)
-                    tt.btnprint_Click(sender, e)
-                    'tt.ShowDialog()
-                    tt.Close()
-                    tt.Dispose()
-                End If
+                'If GMod.username.ToUpper = "CASHCOUNTER" Then
+                '    _CASHCOUNTER = 1
+                '    Dim tt As New frmCRPrint
+                '    tt.txtfrom.Text = vouno
+                '    tt.txtto.Text = vouno
+                '    tt.btnshow_Click(sender, e)
+                '    tt.btnprint_Click(sender, e)
+                '    'tt.ShowDialog()
+                '    tt.Close()
+                '    tt.Dispose()
+                'End If
 
                 txtamount.Clear()
                 txtvouno.Clear()
