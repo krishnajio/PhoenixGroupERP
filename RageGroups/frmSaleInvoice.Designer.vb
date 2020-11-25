@@ -891,7 +891,7 @@ Partial Class frmSaleInvoice
         Me.txtTcsPer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.txtTcsPer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.txtTcsPer.BackColor = System.Drawing.Color.White
-        Me.txtTcsPer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.txtTcsPer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.txtTcsPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTcsPer.FormattingEnabled = True
         Me.txtTcsPer.Location = New System.Drawing.Point(294, 480)

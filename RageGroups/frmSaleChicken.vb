@@ -759,4 +759,25 @@ x1:
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Private Sub chKtcs_CheckedChanged(sender As Object, e As EventArgs) Handles chKtcs.CheckedChanged
+        Try
+            'Dim sql As String
+            'If chKtcs.Checked = True Then
+            'sql = "select discount, necc  from ItemMaster where CmP_ID='" & GMod.Cmpid & "' and ItemName='" & dgSaleVoucher(1, 0).Value & "'"
+            'GMod.DataSetRet(sql, "neccamyfortcs")
+            'MessageBox.Show(Val(GMod.ds.Tables("neccamyfortcs").Rows(0)(1)))
+            'End If
+            If chKtcs.Checked = True Then
+                Dim tcs As Double
+                tcs = Math.Round(Val(txtgtotal.Text) * (Val(txtTcsPer.Text) / 100), 0)
+                txtTcsAmount.Text = tcs.ToString
+            Else
+                txtTcsAmount.Text = 0
+            End If
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 End Class

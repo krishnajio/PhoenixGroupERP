@@ -1425,10 +1425,14 @@ Public Class frmPurchaseHatchries
             'GMod.DataSetRet(sql, "neccamyfortcs")
             'MessageBox.Show(Val(GMod.ds.Tables("neccamyfortcs").Rows(0)(1)))
             'End If
+            If chKtcs.Checked = True Then
 
-            Dim tcs As Double
-            tcs = Math.Round(Val(dgSaleVoucher(4, 0).Value) * (Val(txtTcsPer.Text) / 100), 0)
-            txtTcsAmount.Text = tcs.ToString
+                Dim tcs As Double
+                tcs = Math.Round(Val(dgSaleVoucher(4, 0).Value) * (Val(txtTcsPer.Text) / 100), 0, MidpointRounding.AwayFromZero)
+                txtTcsAmount.Text = tcs.ToString
+            Else
+                txtTcsAmount.Text = 0
+            End If
         Catch ex As Exception
 
         End Try

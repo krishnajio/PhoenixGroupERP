@@ -150,7 +150,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ixjfpXYsva7I2tm6mOYD/4ZLJH0=</dsig:DigestValue>
+        <dsig:DigestValue>xxszHH7jWM7tDWkHVk+ob0AXvqQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
