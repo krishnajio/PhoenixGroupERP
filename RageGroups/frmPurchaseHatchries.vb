@@ -362,8 +362,8 @@ Public Class frmPurchaseHatchries
                     cmddel2.ExecuteNonQuery()
 
                     sql = "delete from Sale_Receipt where vou_type='" & voutype.Text & "' and  vou_no='" & txtinvoiceno.Text & "' and cmp_id='" & GMod.Cmpid & "' and Session='" & GMod.Session & "'"
-                    Dim cmddel As New SqlCommand(sql, GMod.SqlConn, sqltrans)
-                    cmddel.ExecuteNonQuery()
+                    'Dim cmddel As New SqlCommand(sql, GMod.SqlConn, sqltrans)
+                    'cmddel.ExecuteNonQuery()
 
                 End If
                 Dim qty As Double
@@ -1427,14 +1427,24 @@ Public Class frmPurchaseHatchries
             'End If
             If chKtcs.Checked = True Then
 
+                Dim neccamt As Integer
+                Dim neccval As Double
+                Dim s As String = "select discount, necc  from ItemMaster where CmP_ID='" & GMod.Cmpid & "' and ItemName='" & dgSaleVoucher(1, 0).Value & "'"
+                GMod.DataSetRet(s, "NECCAMOUNTfortcs")
+                neccamt = Val(GMod.ds.Tables("NECCAMOUNTfortcs").Rows(0)(1))
+                
+                If neccamt > 0 Then 'FOR NECC CONTRIBUTION
+                    neccval = Val(dgSaleVoucher(2, 0).Value) * neccamt
+                End If
+
                 Dim tcs As Double
-                tcs = Math.Round(Val(dgSaleVoucher(4, 0).Value) * (Val(txtTcsPer.Text) / 100), 0, MidpointRounding.AwayFromZero)
+                tcs = Math.Round((Val(dgSaleVoucher(4, 0).Value) + neccval) * (Val(txtTcsPer.Text) / 100), 0, MidpointRounding.AwayFromZero)
                 txtTcsAmount.Text = tcs.ToString
             Else
                 txtTcsAmount.Text = 0
             End If
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 
