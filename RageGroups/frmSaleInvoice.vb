@@ -52,7 +52,7 @@ Public Class frmSaleInvoice
         fillArea()
         cmbAreaCode.Text = "JB"
         'Filling tcs tYPE 
-        GMod.DataSetRet("select * from TCSMaster Where cmp_id='" & GMod.Cmpid & "'", "TCSTYPE")
+        GMod.DataSetRet("select * from TCSMaster Where cmp_id='" & GMod.Cmpid & "' and type =1", "TCSTYPE")
         cmbTcsType.DataSource = GMod.ds.Tables("TCSTYPE")
         cmbTcsType.DisplayMember = "TcsType"
 

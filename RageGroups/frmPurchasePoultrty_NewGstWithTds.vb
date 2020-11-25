@@ -201,7 +201,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
         cmbWiOs.SelectedIndex = 0
         cmbPrdType.SelectedIndex = 0
 
-        sql = "select * from TdsMater where cmp_id ='" & GMod.Cmpid & "'"
+        sql = "select * from TdsMater where cmp_id ='" & GMod.Cmpid & "' and type = 0"
         GMod.DataSetRet(sql, "tdm")
 
         cmbtdsType.DataSource = GMod.ds.Tables("tdm")

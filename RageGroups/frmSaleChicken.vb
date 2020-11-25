@@ -17,6 +17,11 @@ Public Class frmSaleChicken
             '  Me.Close()
         End If
         cmbvtype.SelectedIndex = 0
+        'Filling tcs tYPE 
+        GMod.DataSetRet("select * from TCSMaster Where cmp_id='" & GMod.Cmpid & "' and type =1", "TCSTYPE")
+        cmbTcsType.DataSource = GMod.ds.Tables("TCSTYPE")
+        cmbTcsType.DisplayMember = "TcsType"
+
     End Sub
     Sub nxtvno()
         Dim sql As String
@@ -212,7 +217,7 @@ Public Class frmSaleChicken
 
                 sqlsave = " insert into InvPhxChicken (Cmp_id, Uname, Vou_no, Vou_type" _
                & ", Vou_date, Acc_head_code, Acc_head, ItemName, Qty, QtyNos, Unit, Rate," _
-               & "  Amount, Free_Qty, BillType, BillNo, BillDate, AreaCode,BatchNo,Session) values ("
+               & "  Amount, Free_Qty, BillType, BillNo, BillDate, AreaCode,BatchNo,Session,tcs_per,tcs_amt) values ("
                 sqlsave &= "'" & GMod.Cmpid & "',"
                 sqlsave &= "'" & GMod.username & "',"
                 sqlsave &= "'" & txtVoucherNo.Text & "',"
@@ -232,7 +237,9 @@ Public Class frmSaleChicken
                 sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "',"
                 sqlsave &= "'" & cmbAreaCode.Text & "',"
                 sqlsave &= "'" & lblbatchno.Text & "',"
-                sqlsave &= "'" & GMod.Session & "')"
+                sqlsave &= "'" & GMod.Session & "',"
+                sqlsave &= "'" & txtTcsPer.Text & "',"
+                sqlsave &= "'" & txtTcsAmount.Text & "')"
 
                 CrAmt = CrAmt + Val(dgPurchase(4, i).Value)
 
@@ -257,6 +264,31 @@ Public Class frmSaleChicken
 
             Next
 
+            'Inserting TCS tax amount in the Voucher entry Credit 
+            If Val(txtTcsAmount.Text) > 0 Then
+                sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname," _
+                & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
+                & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
+                sqlsave &= "'" & GMod.Cmpid & "',"
+                sqlsave &= "'" & GMod.username & "',"
+                sqlsave &= "'" & i + 1 & "',"
+                sqlsave &= "'" & txtVoucherNo.Text & "',"
+                sqlsave &= "'" & cmbvtype.Text & "',"
+                sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                sqlsave &= "'" & cmbTcsHeadCode.Text & "',"
+                sqlsave &= "'" & cmbTcsHead.Text & "',"
+                sqlsave &= "'" & Val("") & "',"
+                sqlsave &= "'" & Val(txtTcsAmount.Text) & "',"
+                sqlsave &= "'" & narration.ToString & "',"
+                sqlsave &= "'',"
+                sqlsave &= "'" & " " & "','1/1/2000')"
+                'MsgBox(ssaveprdvntry)
+                'MsgBox(GMod.SqlExecuteNonQuery(ssaveprdvntry))
+                Dim cmdTcstaxentry As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                cmdTcstaxentry.ExecuteNonQuery()
+
+            End If
+
 
             'CUSTOMER A/C Dr
             sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
@@ -270,7 +302,7 @@ Public Class frmSaleChicken
             sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
             sqlsave &= "'" & cmbacheadcode.Text & "',"
             sqlsave &= "'" & cmbacheadname.Text & "',"
-            sqlsave &= "'" & txtgtotal.Text & "',"
+            sqlsave &= "'" & Val(txtgtotal.Text) + Val(txtTcsAmount.Text) & "',"
             sqlsave &= "'0',"
             sqlsave &= "'-',"
             sqlsave &= "'-',"
@@ -704,5 +736,27 @@ x1:
 
     Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
 
+    End Sub
+
+    Private Sub cmbTcsType_Leave(sender As Object, e As EventArgs) Handles cmbTcsType.Leave
+        FetchTcsDetilas()
+    End Sub
+
+    Private Sub cmbTcsType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTcsType.SelectedIndexChanged
+        FetchTcsDetilas()
+    End Sub
+    Private Sub FetchTcsDetilas()
+        Dim sql As String
+        Try
+            sql = "select tcs.*,a.account_head_name from TCsMaster tcs inner join acc_head_phha_" & GMod.Session & " a on tcs.Acc_code = a.account_code  where TcStype ='" & cmbTcsType.Text & "'"
+            GMod.DataSetRet(sql, "tcsdata")
+
+            cmbTcsHead.Text = GMod.ds.Tables("tcsdata").Rows(0)("account_head_name").ToString
+            cmbTcsHeadCode.Text = GMod.ds.Tables("tcsdata").Rows(0)("Acc_code").ToString
+            txtTcsPer.Text = GMod.ds.Tables("tcsdata").Rows(0)("Per").ToString
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class
