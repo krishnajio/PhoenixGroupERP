@@ -1438,7 +1438,9 @@ Public Class frmPurchaseHatchries
                 End If
 
                 Dim tcs As Double
-                tcs = Math.Round((Val(dgSaleVoucher(4, 0).Value) + neccval) * (Val(txtTcsPer.Text) / 100), 0, MidpointRounding.AwayFromZero)
+                'tcs = Val(dgSaleVoucher(4, 0).Value) + neccval) * ((Val(txtTcsPer.Text) / 100)
+                tcs = ((Val(dgSaleVoucher(4, 0).Value) + neccval) * (Val(txtTcsPer.Text) / 100))
+                tcs = Math.Ceiling(tcs)
                 txtTcsAmount.Text = tcs.ToString
             Else
                 txtTcsAmount.Text = 0

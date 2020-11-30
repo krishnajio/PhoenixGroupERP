@@ -1794,4 +1794,12 @@ Public Class frmPurchasePoultrty_NewGst
 
        
     End Sub
+
+    Private Sub cmbTCSType_Resize(sender As Object, e As EventArgs) Handles cmbTCSType.Resize
+
+    End Sub
+
+    Private Sub cmbTCSType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTCSType.SelectedIndexChanged
+
+    End Sub
 End Class

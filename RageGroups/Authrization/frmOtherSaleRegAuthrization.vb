@@ -5,7 +5,7 @@ Public Class frmOtherSaleRegAuthrization
         txtCrNoFrom.Enabled = False
         txtCrNoTo.Enabled = False
         'If CheckBox1.Checked = False Then
-        GMod.DataSetRet("select Vou_type, Vou_no, AccCode, AccName, Station, ProductName, OutQty, Rate, Amount, OutQtyNos, BillNo, BillDate, InQty, InQtyNos, Cmp_id, Session, id, tcs_amt as mrktrate, authr, Prdunit, Packing, Insurance, Discount, CrHead, cgstp, cgsta, sgstp, sgsta, igstp, igsta  from OtherSaleData  where vou_type in ('" & voutype.Text & "') and cast(Vou_no as numeric(20)) between " & txtCrNoFrom.Text & " and  " & txtCrNoTo.Text & "  AND session = '" & GMod.Session & "' and authr='-' ORDER BY CAST(VOU_NO AS BIGINT),ID ", "SaleReg1")
+        GMod.DataSetRet("select Vou_type, Vou_no, AccCode, AccName, Station, ProductName, OutQty, Rate, Amount, OutQtyNos, BillNo, BillDate, InQty, InQtyNos, Cmp_id, Session, id, isnull(tcs_amt,0) as mrktrate, authr, Prdunit, Packing, Insurance, Discount, CrHead, cgstp, cgsta, sgstp, sgsta, igstp, igsta  from OtherSaleData  where vou_type in ('" & voutype.Text & "') and cast(Vou_no as numeric(20)) between " & txtCrNoFrom.Text & " and  " & txtCrNoTo.Text & "  AND session = '" & GMod.Session & "' and authr='-' ORDER BY CAST(VOU_NO AS BIGINT),ID ", "SaleReg1")
         'Else
         'GMod.DataSetRet("select * from OtherSaleData  where vou_type='OTHER SALE RET.' and cast(Vou_no as bigint) between " & txtCrNoFrom.Text & " and  " & txtCrNoTo.Text & " ORDER BY ID ", "SaleReg1")
 

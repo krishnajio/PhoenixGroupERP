@@ -1412,83 +1412,83 @@ Public Class frmSaleInvoice
 
     Private Sub voutype_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles voutype.Leave
         Dim sql As String
-        If GMod.Cmpid = "PHHA" Then
-            If btnsave.Enabled = True Then
-                If voutype.Text = "SALE BR(GST)" Or voutype.Text = "SALES" Then
-                    sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' and  ItemName like '%BROILER%'  order by ItemName "
-                    GMod.DataSetRet(sql, "Item1")
+        'If GMod.Cmpid = "PHHA" Then
+        '    If btnsave.Enabled = True Then
+        '        If voutype.Text = "SALE BR(GST)" Or voutype.Text = "SALES" Then
+        '            sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' and  ItemName like '%BROILER%'  order by ItemName "
+        '            GMod.DataSetRet(sql, "Item1")
 
-                    Me.pcname.DataSource = GMod.ds.Tables("Item1")
-                    Me.pcname.DisplayMember = "ItemName"
-                End If
-                If voutype.Text = "SALE LR(GST)" Or voutype.Text = "SALES LAYER" Or voutype.Text = "SALE LR RAIPUR(GST)" Or voutype.Text = "SALE LR JBP(GST)" Then
-                    sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' and  ItemName like '%LAYER%'  order by ItemName "
-                    GMod.DataSetRet(sql, "Item1")
+        '            Me.pcname.DataSource = GMod.ds.Tables("Item1")
+        '            Me.pcname.DisplayMember = "ItemName"
+        '        End If
+        '        If voutype.Text = "SALE LR(GST)" Or voutype.Text = "SALES LAYER" Or voutype.Text = "SALE LR RAIPUR(GST)" Or voutype.Text = "SALE LR JBP(GST)" Then
+        '            sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' and  ItemName like '%LAYER%'  order by ItemName "
+        '            GMod.DataSetRet(sql, "Item1")
 
-                    Me.pcname.DataSource = GMod.ds.Tables("Item1")
-                    Me.pcname.DisplayMember = "ItemName"
-                End If
-                If voutype.Text = "SALE CR(GST)" Or voutype.Text = "SALE CR RAIPUR(GST)" Or voutype.Text = "SALE CR JBP(GST)" Then
-                    sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' and  ItemName like '%COCKREL%'  order by ItemName "
-                    GMod.DataSetRet(sql, "Item1")
+        '            Me.pcname.DataSource = GMod.ds.Tables("Item1")
+        '            Me.pcname.DisplayMember = "ItemName"
+        '        End If
+        '        If voutype.Text = "SALE CR(GST)" Or voutype.Text = "SALE CR RAIPUR(GST)" Or voutype.Text = "SALE CR JBP(GST)" Then
+        '            sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' and  ItemName like '%COCKREL%'  order by ItemName "
+        '            GMod.DataSetRet(sql, "Item1")
 
-                    Me.pcname.DataSource = GMod.ds.Tables("Item1")
-                    Me.pcname.DisplayMember = "ItemName"
-                End If
-                If voutype.Text = "SALE WBH-1(GST)" Then
-                    sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' and  ItemName like '%BROILER%'  order by ItemName "
-                    GMod.DataSetRet(sql, "Item1")
+        '            Me.pcname.DataSource = GMod.ds.Tables("Item1")
+        '            Me.pcname.DisplayMember = "ItemName"
+        '        End If
+        '        If voutype.Text = "SALE WBH-1(GST)" Then
+        '            sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' and  ItemName like '%BROILER%'  order by ItemName "
+        '            GMod.DataSetRet(sql, "Item1")
 
-                    Me.pcname.DataSource = GMod.ds.Tables("Item1")
-                    Me.pcname.DisplayMember = "ItemName"
-                End If
-                If voutype.Text = "SALE WBH-1(GST)" Or voutype.Text = "SALES WBR" Then
-                    sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' and  ItemName like '%BROILER%'  order by ItemName "
-                    GMod.DataSetRet(sql, "Item1")
+        '            Me.pcname.DataSource = GMod.ds.Tables("Item1")
+        '            Me.pcname.DisplayMember = "ItemName"
+        '        End If
+        '        If voutype.Text = "SALE WBH-1(GST)" Or voutype.Text = "SALES WBR" Then
+        '            sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' and  ItemName like '%BROILER%'  order by ItemName "
+        '            GMod.DataSetRet(sql, "Item1")
 
-                    Me.pcname.DataSource = GMod.ds.Tables("Item1")
-                    Me.pcname.DisplayMember = "ItemName"
-                End If
-                If voutype.Text = "SALE HAJIPUR(GST)" Or voutype.Text = "SALES HJ" Then
-                    sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' order by ItemName "
-                    GMod.DataSetRet(sql, "Item1")
+        '            Me.pcname.DataSource = GMod.ds.Tables("Item1")
+        '            Me.pcname.DisplayMember = "ItemName"
+        '        End If
+        '        If voutype.Text = "SALE HAJIPUR(GST)" Or voutype.Text = "SALES HJ" Then
+        '            sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' order by ItemName "
+        '            GMod.DataSetRet(sql, "Item1")
 
-                    Me.pcname.DataSource = GMod.ds.Tables("Item1")
-                    Me.pcname.DisplayMember = "ItemName"
-                End If
+        '            Me.pcname.DataSource = GMod.ds.Tables("Item1")
+        '            Me.pcname.DisplayMember = "ItemName"
+        '        End If
 
-                If voutype.Text = "SALE VARANASI(GST)" Or voutype.Text = "SALES VNS" Then
-                    sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' order by ItemName "
-                    GMod.DataSetRet(sql, "Item1")
+        '        If voutype.Text = "SALE VARANASI(GST)" Or voutype.Text = "SALES VNS" Then
+        '            sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' order by ItemName "
+        '            GMod.DataSetRet(sql, "Item1")
 
-                    Me.pcname.DataSource = GMod.ds.Tables("Item1")
-                    Me.pcname.DisplayMember = "ItemName"
+        '            Me.pcname.DataSource = GMod.ds.Tables("Item1")
+        '            Me.pcname.DisplayMember = "ItemName"
 
-                End If
-                'SALE RAIPUR
-                If voutype.Text = "SALE RAIPUR(GST)" Or voutype.Text = "SALES RP" Then
-                    sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' order by ItemName "
-                    GMod.DataSetRet(sql, "Item1")
+        '        End If
+        '        'SALE RAIPUR
+        '        If voutype.Text = "SALE RAIPUR(GST)" Or voutype.Text = "SALES RP" Then
+        '            sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' order by ItemName "
+        '            GMod.DataSetRet(sql, "Item1")
 
-                    Me.pcname.DataSource = GMod.ds.Tables("Item1")
-                    Me.pcname.DisplayMember = "ItemName"
-                End If
-            Else
+        '            Me.pcname.DataSource = GMod.ds.Tables("Item1")
+        '            Me.pcname.DisplayMember = "ItemName"
+        '        End If
+        '    Else
 
-                sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' order by ItemName "
-                GMod.DataSetRet(sql, "Item1")
+        '        sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' order by ItemName "
+        '        GMod.DataSetRet(sql, "Item1")
 
-                Me.pcname.DataSource = GMod.ds.Tables("Item1")
-                Me.pcname.DisplayMember = "ItemName"
+        '        Me.pcname.DataSource = GMod.ds.Tables("Item1")
+        '        Me.pcname.DisplayMember = "ItemName"
 
-            End If
-        Else
-            sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' order by ItemName "
-            GMod.DataSetRet(sql, "Item1")
+        '    End If
+        'Else
+        sql = "select * from ItemMaster where Cmp_id='" & GMod.Cmpid & "' and prdtype='CHICKS' order by ItemName "
+        GMod.DataSetRet(sql, "Item1")
 
-            Me.pcname.DataSource = GMod.ds.Tables("Item1")
-            Me.pcname.DisplayMember = "ItemName"
-        End If
+        Me.pcname.DataSource = GMod.ds.Tables("Item1")
+        Me.pcname.DisplayMember = "ItemName"
+        'End If
         voutype.Enabled = False
     End Sub
 
@@ -1580,7 +1580,7 @@ Public Class frmSaleInvoice
     Private Sub FetchTcsDetilas()
         Dim sql As String
         Try
-            sql = "select tcs.*,a.account_head_name from TCsMaster tcs inner join acc_head_phha_" & GMod.Session & " a on tcs.Acc_code = a.account_code  where TcStype ='" & cmbTcsType.Text & "'"
+            sql = "select tcs.*,a.account_head_name from TCsMaster tcs inner join " & GMod.ACC_HEAD & " a on tcs.Acc_code = a.account_code  where TcStype ='" & cmbTcsType.Text & "'"
             GMod.DataSetRet(sql, "tcsdata")
 
             cmbTcsHead.Text = GMod.ds.Tables("tcsdata").Rows(0)("account_head_name").ToString
@@ -1601,6 +1601,8 @@ Public Class frmSaleInvoice
     End Sub
 
     Private Sub chKtcs_CheckedChanged(sender As Object, e As EventArgs) Handles chKtcs.CheckedChanged
+        Dim neccamttcs As Integer = 0
+        Dim neccvaltcs As Double = 0
         Try
             'Dim sql As String
             'If chKtcs.Checked = True Then
@@ -1609,12 +1611,23 @@ Public Class frmSaleInvoice
             'MessageBox.Show(Val(GMod.ds.Tables("neccamyfortcs").Rows(0)(1)))
             'End If
             If chKtcs.Checked = True Then
+                'If GMod.Cmpid = "PHHA" Then
+                '    Dim s As String = "select discount, necc  from ItemMaster where CmP_ID='" & GMod.Cmpid & "' and ItemName='" & dgSaleVoucher(1, 0).Value & "'"
+                '    GMod.DataSetRet(s, "NECCAMOUNTfortcs")
+                '    neccamttcs = Val(GMod.ds.Tables("NECCAMOUNTfortcs").Rows(0)(1))
+
+                '    If neccamttcs > 0 Then 'FOR NECC CONTRIBUTION
+                '        neccvaltcs = (Val(dgSaleVoucher(2, 0).Value) - Val(dgSaleVoucher(6, 0).Value)) * neccamttcs
+                '    End If
+                'End If
                 Dim tcs As Double
-                tcs = Math.Round(Val(dgSaleVoucher(4, 0).Value) * (Val(txtTcsPer.Text) / 100), 0, MidpointRounding.AwayFromZero)
+                tcs = Math.Ceiling((Val(dgSaleVoucher(4, 0).Value) + neccvaltcs) * (Val(txtTcsPer.Text) / 100))
                 txtTcsAmount.Text = tcs.ToString
             Else
                 txtTcsAmount.Text = 0
             End If
+            neccamttcs = 0
+            neccvaltcs = 0
         Catch ex As Exception
 
         End Try

@@ -19,8 +19,8 @@ Partial Class frmRepGeneralLedger
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnshow = New System.Windows.Forms.Button()
         Me.dtfrom = New System.Windows.Forms.DateTimePicker()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -74,6 +74,7 @@ Partial Class frmRepGeneralLedger
         Me.Button3 = New System.Windows.Forms.Button()
         Me.CheckBoxSelect = New System.Windows.Forms.CheckBox()
         Me.panel1 = New System.Windows.Forms.Panel()
+        Me.btnExport = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.chklistled = New System.Windows.Forms.CheckedListBox()
@@ -83,7 +84,7 @@ Partial Class frmRepGeneralLedger
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.rdwithopening = New System.Windows.Forms.CheckBox()
-        Me.btnExport = New System.Windows.Forms.Button()
+        Me.chkWithoutSubgroup = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgGridLeger, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -274,10 +275,10 @@ Partial Class frmRepGeneralLedger
         Me.CrViewerGenralLedger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CrViewerGenralLedger.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrViewerGenralLedger.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.CrViewerGenralLedger.Location = New System.Drawing.Point(0, 196)
+        Me.CrViewerGenralLedger.Location = New System.Drawing.Point(0, 214)
         Me.CrViewerGenralLedger.Name = "CrViewerGenralLedger"
         Me.CrViewerGenralLedger.SelectionFormula = ""
-        Me.CrViewerGenralLedger.Size = New System.Drawing.Size(1139, 392)
+        Me.CrViewerGenralLedger.Size = New System.Drawing.Size(1139, 374)
         Me.CrViewerGenralLedger.TabIndex = 92
         Me.CrViewerGenralLedger.ViewTimeSelectionFormula = ""
         '
@@ -429,10 +430,10 @@ Partial Class frmRepGeneralLedger
         'VouDate
         '
         Me.VouDate.DataPropertyName = "Vou_date"
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.Format = "dd/MMM/yyyy"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.VouDate.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.Format = "dd/MMM/yyyy"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.VouDate.DefaultCellStyle = DataGridViewCellStyle5
         Me.VouDate.HeaderText = "Vou Date"
         Me.VouDate.MaxInputLength = 10
         Me.VouDate.Name = "VouDate"
@@ -526,10 +527,10 @@ Partial Class frmRepGeneralLedger
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "Vou_date"
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.Format = "dd/MMM/yyyy"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.Format = "dd/MMM/yyyy"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewTextBoxColumn1.HeaderText = "Vou Date"
         Me.DataGridViewTextBoxColumn1.MaxInputLength = 10
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
@@ -652,6 +653,15 @@ Partial Class frmRepGeneralLedger
         Me.panel1.Size = New System.Drawing.Size(289, 344)
         Me.panel1.TabIndex = 109
         '
+        'btnExport
+        '
+        Me.btnExport.Location = New System.Drawing.Point(98, 315)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(75, 23)
+        Me.btnExport.TabIndex = 110
+        Me.btnExport.Text = "Export"
+        Me.btnExport.UseVisualStyleBackColor = True
+        '
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -744,14 +754,15 @@ Partial Class frmRepGeneralLedger
         Me.rdwithopening.Text = "With Opening"
         Me.rdwithopening.UseVisualStyleBackColor = True
         '
-        'btnExport
+        'chkWithoutSubgroup
         '
-        Me.btnExport.Location = New System.Drawing.Point(98, 315)
-        Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(75, 23)
-        Me.btnExport.TabIndex = 110
-        Me.btnExport.Text = "Export"
-        Me.btnExport.UseVisualStyleBackColor = True
+        Me.chkWithoutSubgroup.AutoSize = True
+        Me.chkWithoutSubgroup.Location = New System.Drawing.Point(75, 45)
+        Me.chkWithoutSubgroup.Name = "chkWithoutSubgroup"
+        Me.chkWithoutSubgroup.Size = New System.Drawing.Size(72, 17)
+        Me.chkWithoutSubgroup.TabIndex = 115
+        Me.chkWithoutSubgroup.Text = "On Group"
+        Me.chkWithoutSubgroup.UseVisualStyleBackColor = True
         '
         'frmRepGeneralLedger
         '
@@ -759,6 +770,7 @@ Partial Class frmRepGeneralLedger
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGoldenrodYellow
         Me.ClientSize = New System.Drawing.Size(1139, 588)
+        Me.Controls.Add(Me.chkWithoutSubgroup)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
@@ -876,4 +888,5 @@ Partial Class frmRepGeneralLedger
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents btnExport As System.Windows.Forms.Button
+    Friend WithEvents chkWithoutSubgroup As System.Windows.Forms.CheckBox
 End Class

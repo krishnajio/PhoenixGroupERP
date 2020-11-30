@@ -914,26 +914,36 @@ Public Class frmRepGeneralLedger
     End Sub
     Private Sub cmbgrpname_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbgrpname.SelectedIndexChanged
         If GMod.Cmpid = "PHOE" Then
-            GMod.DataSetRet("select * from sub_group where group_name='" & cmbgrpname.Text & "' and  cmp_id='" & GMod.Cmpid & "' and session = '" & GMod.Session & "'", "sgrp")
-            cmbsubgrpname.DataSource = GMod.ds.Tables("sgrp")
-            cmbsubgrpname.DisplayMember = "sub_group_name"
-        Else
-            Dim sql As String
-            sql = "select account_code,account_head_name from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" _
-                   & " and group_name = '" & cmbgrpname.Text & "' order by account_code"
-            GMod.DataSetRet(sql, "acchead")
-            cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
-            cmbacheadcode.DisplayMember = "account_code"
 
-            cmbacheadname.DataSource = GMod.ds.Tables("acchead")
-            cmbacheadname.DisplayMember = "account_head_name"
-            If CheckBoxSelect.Checked = True Then
-                chklistled.Items.Clear()
-                For rw = 0 To GMod.ds.Tables("acchead").Rows.Count - 1
-                    chklistled.Items.Add(GMod.ds.Tables("acchead").Rows(rw)("account_code") & "#" & GMod.ds.Tables("acchead").Rows(rw)("account_head_name"))
-                Next
+            If chkWithoutSubgroup.Checked = False Then
+                GMod.DataSetRet("select * from sub_group where group_name='" & cmbgrpname.Text & "' and  cmp_id='" & GMod.Cmpid & "' and session = '" & GMod.Session & "'", "sgrp")
+                cmbsubgrpname.DataSource = GMod.ds.Tables("sgrp")
+                cmbsubgrpname.DisplayMember = "sub_group_name"
+            Else
+                GMod.ds.Tables("sgrp").Clear()
+                fillHead()
             End If
 
+        Else
+            fillHead()
+        End If
+
+    End Sub
+    Public Sub fillHead()
+        Dim sql As String
+        sql = "select account_code,account_head_name from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" _
+               & " and group_name = '" & cmbgrpname.Text & "' order by account_code"
+        GMod.DataSetRet(sql, "acchead")
+        cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
+        cmbacheadcode.DisplayMember = "account_code"
+
+        cmbacheadname.DataSource = GMod.ds.Tables("acchead")
+        cmbacheadname.DisplayMember = "account_head_name"
+        If CheckBoxSelect.Checked = True Then
+            chklistled.Items.Clear()
+            For rw = 0 To GMod.ds.Tables("acchead").Rows.Count - 1
+                chklistled.Items.Add(GMod.ds.Tables("acchead").Rows(rw)("account_code") & "#" & GMod.ds.Tables("acchead").Rows(rw)("account_head_name"))
+            Next
         End If
     End Sub
     Private Sub btnPrint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrint.Click
@@ -1527,20 +1537,27 @@ Public Class frmRepGeneralLedger
     Private Sub cmbsubgrpname_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbsubgrpname.SelectedIndexChanged
         If GMod.Cmpid = "PHOE" Then
             Dim sql As String
-            sql = "select account_code,account_head_name from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" _
-                   & " and group_name = '" & cmbgrpname.Text & "' and sub_group_name = '" & cmbsubgrpname.Text & "' order by account_code"
-            GMod.DataSetRet(sql, "acchead")
-            cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
-            cmbacheadcode.DisplayMember = "account_code"
 
-            cmbacheadname.DataSource = GMod.ds.Tables("acchead")
-            cmbacheadname.DisplayMember = "account_head_name"
-            If CheckBoxSelect.Checked = True Then
-                chklistled.Items.Clear()
-                For rw = 0 To GMod.ds.Tables("acchead").Rows.Count - 1
-                    chklistled.Items.Add(GMod.ds.Tables("acchead").Rows(rw)("account_code") & "#" & GMod.ds.Tables("acchead").Rows(rw)("account_head_name"))
-                Next
+            If cmbsubgrpname.Text <> "" Then
+
+                sql = "select account_code,account_head_name from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" _
+                       & " and group_name = '" & cmbgrpname.Text & "' and sub_group_name = '" & cmbsubgrpname.Text & "' order by account_code"
+                GMod.DataSetRet(sql, "acchead")
+                cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
+                cmbacheadcode.DisplayMember = "account_code"
+
+                cmbacheadname.DataSource = GMod.ds.Tables("acchead")
+                cmbacheadname.DisplayMember = "account_head_name"
+                If CheckBoxSelect.Checked = True Then
+                    chklistled.Items.Clear()
+                    For rw = 0 To GMod.ds.Tables("acchead").Rows.Count - 1
+                        chklistled.Items.Add(GMod.ds.Tables("acchead").Rows(rw)("account_code") & "#" & GMod.ds.Tables("acchead").Rows(rw)("account_head_name"))
+                    Next
+                End If
+            Else
+
             End If
+
         End If
     End Sub
 
@@ -1812,5 +1829,9 @@ Public Class frmRepGeneralLedger
 
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    Private Sub chkWithoutSubgroup_CheckedChanged(sender As Object, e As EventArgs) Handles chkWithoutSubgroup.CheckedChanged
+
     End Sub
 End Class

@@ -63,7 +63,7 @@ Partial Class frmOtherSaleReg
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.SelectionFormula = ""
         Me.CrystalReportViewer1.ShowPrintButton = False
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1028, 678)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1370, 678)
         Me.CrystalReportViewer1.TabIndex = 167
         Me.CrystalReportViewer1.ViewTimeSelectionFormula = ""
         '
@@ -76,7 +76,7 @@ Partial Class frmOtherSaleReg
         Me.Label6.ForeColor = System.Drawing.Color.SandyBrown
         Me.Label6.Location = New System.Drawing.Point(0, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(1020, 31)
+        Me.Label6.Size = New System.Drawing.Size(1370, 31)
         Me.Label6.TabIndex = 165
         Me.Label6.Text = "OTHER SALE REGISTER"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -84,7 +84,7 @@ Partial Class frmOtherSaleReg
         'btnshow
         '
         Me.btnshow.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnshow.Location = New System.Drawing.Point(850, 36)
+        Me.btnshow.Location = New System.Drawing.Point(850, 35)
         Me.btnshow.Name = "btnshow"
         Me.btnshow.Size = New System.Drawing.Size(58, 28)
         Me.btnshow.TabIndex = 161
@@ -174,7 +174,7 @@ Partial Class frmOtherSaleReg
         Me.dgCRDebit.Location = New System.Drawing.Point(0, 319)
         Me.dgCRDebit.Name = "dgCRDebit"
         Me.dgCRDebit.ReadOnly = True
-        Me.dgCRDebit.Size = New System.Drawing.Size(1020, 414)
+        Me.dgCRDebit.Size = New System.Drawing.Size(1370, 414)
         Me.dgCRDebit.TabIndex = 164
         '
         'INVNO_DATE
@@ -251,7 +251,7 @@ Partial Class frmOtherSaleReg
         'btnprint
         '
         Me.btnprint.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnprint.Location = New System.Drawing.Point(914, 34)
+        Me.btnprint.Location = New System.Drawing.Point(914, 33)
         Me.btnprint.Name = "btnprint"
         Me.btnprint.Size = New System.Drawing.Size(62, 28)
         Me.btnprint.TabIndex = 174
@@ -263,7 +263,7 @@ Partial Class frmOtherSaleReg
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
-        Me.ClientSize = New System.Drawing.Size(1020, 733)
+        Me.ClientSize = New System.Drawing.Size(1370, 733)
         Me.Controls.Add(Me.btnprint)
         Me.Controls.Add(Me.voutype)
         Me.Controls.Add(Me.Label1)

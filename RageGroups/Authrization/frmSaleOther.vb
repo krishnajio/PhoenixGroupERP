@@ -97,7 +97,7 @@ Public Class frmSaleOther
         dgPurchase.Rows.Add()
 
         'Filling tcs tYPE 
-        GMod.DataSetRet("select * from TCSMaster Where cmp_id='" & GMod.Cmpid & "'", "TCSTYPE")
+        GMod.DataSetRet("select * from TCSMaster Where cmp_id='" & GMod.Cmpid & "' and type =1", "TCSTYPE")
         cmbTcsType.DataSource = GMod.ds.Tables("TCSTYPE")
         cmbTcsType.DisplayMember = "TcsType"
 
@@ -107,7 +107,7 @@ Public Class frmSaleOther
     Private Sub FetchTcsDetilas()
         Dim sql As String
         Try
-            sql = "select tcs.*,a.account_head_name from TCsMaster tcs inner join acc_head_phha_" & GMod.Session & " a on tcs.Acc_code = a.account_code  where TcStype ='" & cmbTcsType.Text & "'"
+            sql = "select tcs.*,a.account_head_name from TCsMaster tcs inner join " & GMod.ACC_HEAD & " a on tcs.Acc_code = a.account_code  where TcStype ='" & cmbTcsType.Text & "'"
             GMod.DataSetRet(sql, "tcsdata")
 
             cmbTcsHead.Text = GMod.ds.Tables("tcsdata").Rows(0)("account_head_name").ToString
@@ -1588,10 +1588,8 @@ x1:
 
     Private Sub chKtcs_CheckedChanged(sender As Object, e As EventArgs) Handles chKtcs.CheckedChanged
         Try
-            
-
             Dim tcs As Double
-            tcs = Math.Round(Val(txtgtotal.Text) * (Val(txtTcsPer.Text) / 100), 0)
+            tcs = Math.Ceiling(Val(txtgtotal.Text) * (Val(txtTcsPer.Text) / 100))
             txtTcsAmount.Text = tcs.ToString
         Catch ex As Exception
 

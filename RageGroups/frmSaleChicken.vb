@@ -50,10 +50,7 @@ Public Class frmSaleChicken
 
     End Sub
     Dim total As Double, i As Integer
-
     Private Sub dgPurchase_CellEndEdit(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgPurchase.CellEndEdit
-        
-
 
         Dim amt As Double
         If e.ColumnIndex = 1 Or e.ColumnIndex = 2 Or e.ColumnIndex = 3 Then
@@ -238,8 +235,8 @@ Public Class frmSaleChicken
                 sqlsave &= "'" & cmbAreaCode.Text & "',"
                 sqlsave &= "'" & lblbatchno.Text & "',"
                 sqlsave &= "'" & GMod.Session & "',"
-                sqlsave &= "'" & txtTcsPer.Text & "',"
-                sqlsave &= "'" & txtTcsAmount.Text & "')"
+                sqlsave &= "'" & Val(txtTcsPer.Text) & "',"
+                sqlsave &= "'" & Val(txtTcsAmount.Text) & "')"
 
                 CrAmt = CrAmt + Val(dgPurchase(4, i).Value)
 
@@ -280,8 +277,8 @@ Public Class frmSaleChicken
                 sqlsave &= "'" & Val("") & "',"
                 sqlsave &= "'" & Val(txtTcsAmount.Text) & "',"
                 sqlsave &= "'" & narration.ToString & "',"
-                sqlsave &= "'',"
-                sqlsave &= "'" & " " & "','1/1/2000')"
+                sqlsave &= "'TCS',"
+                sqlsave &= "'TCS','1/1/2000')"
                 'MsgBox(ssaveprdvntry)
                 'MsgBox(GMod.SqlExecuteNonQuery(ssaveprdvntry))
                 Dim cmdTcstaxentry As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
@@ -748,7 +745,7 @@ x1:
     Private Sub FetchTcsDetilas()
         Dim sql As String
         Try
-            sql = "select tcs.*,a.account_head_name from TCsMaster tcs inner join acc_head_phha_" & GMod.Session & " a on tcs.Acc_code = a.account_code  where TcStype ='" & cmbTcsType.Text & "'"
+            sql = "select tcs.*,a.account_head_name from TCsMaster tcs inner join " & GMod.ACC_HEAD & " a on tcs.Acc_code = a.account_code  where TcStype ='" & cmbTcsType.Text & "'"
             GMod.DataSetRet(sql, "tcsdata")
 
             cmbTcsHead.Text = GMod.ds.Tables("tcsdata").Rows(0)("account_head_name").ToString
@@ -770,7 +767,7 @@ x1:
             'End If
             If chKtcs.Checked = True Then
                 Dim tcs As Double
-                tcs = Math.Round(Val(txtgtotal.Text) * (Val(txtTcsPer.Text) / 100), 0)
+                tcs = Math.Ceiling(Val(txtgtotal.Text) * (Val(txtTcsPer.Text) / 100))
                 txtTcsAmount.Text = tcs.ToString
             Else
                 txtTcsAmount.Text = 0
