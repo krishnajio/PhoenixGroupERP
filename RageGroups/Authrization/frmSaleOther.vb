@@ -624,6 +624,8 @@ Public Class frmSaleOther
                     txtinsurance.Text = "0"
                     txtpacking.Text = "0"
                     txtcgstper.Text = "0"
+                    txtTcsAmount.Text = "0"
+                    chKtcs.Checked = False
                     ''*************************
                 ElseIf cmbVoucherType.Text = "OTHER SALE RET." Then
                     'saving other sale return data
@@ -1587,12 +1589,16 @@ x1:
     End Sub
 
     Private Sub chKtcs_CheckedChanged(sender As Object, e As EventArgs) Handles chKtcs.CheckedChanged
-        Try
-            Dim tcs As Double
-            tcs = Math.Ceiling(Val(txtgtotal.Text) * (Val(txtTcsPer.Text) / 100))
-            txtTcsAmount.Text = tcs.ToString
-        Catch ex As Exception
+        If chKtcs.Checked = True Then
+            Try
+                Dim tcs As Double
+                tcs = Math.Ceiling(Val(txtgtotal.Text) * (Val(txtTcsPer.Text) / 100))
+                txtTcsAmount.Text = tcs.ToString
+            Catch ex As Exception
 
-        End Try
+            End Try
+        Else
+            txtTcsAmount.Text = 0
+        End If
     End Sub
 End Class
