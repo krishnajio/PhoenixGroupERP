@@ -522,9 +522,6 @@ Public Class frmPurchasePoultrty_NewGst
                         cmd11.ExecuteNonQuery()
                     End If
 
-
-
-
                     sqlsave = "insert into Purchase_Data(For_where, Bill_no, Bill_date,vou_type, vou_no, " & _
                     " vou_date, party_code, item_code, item_name, rate, lst_rate, qty, " & _
                     " unit, vatcst_code, varcst_amt, fr_code, fr_amt, pono, inwno, " & _
@@ -546,7 +543,11 @@ Public Class frmPurchasePoultrty_NewGst
                     sqlsave &= "'" & dgvoucher(15, i).Value & "',"
                     sqlsave &= "'" & Val(dgvoucher(14, i).Value) & "',"
                     sqlsave &= "'" & cmbfercode.Text & "',"
-                    sqlsave &= "'" & Val(txtTcsAmount.Text) & "',"
+                    If i = 0 Then
+                        sqlsave &= "'" & Val(txtTcsAmount.Text) & "',"
+                    Else
+                        sqlsave &= "'" & Val("") & "',"
+                    End If
                     sqlsave &= "'" & txtPoNo.Text & "',"
                     sqlsave &= "'" & txtImwno.Text & "',"
                     sqlsave &= "'" & GMod.Cmpid & "',"

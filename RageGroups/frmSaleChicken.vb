@@ -777,4 +777,29 @@ x1:
         End Try
 
     End Sub
+
+    Private Sub cmbacheadcode_Leave(sender As Object, e As EventArgs) Handles cmbacheadcode.Leave
+        Try
+            GMod.DataSetRet("select sum(dramt) from " & GMod.VENTRY & " where acc_head_code = '" & cmbacheadcode.Text & "'", "tcsamtcheck")
+            If Val(GMod.ds.Tables("tcsamtcheck").Rows(0)(0)) >= 5000000 Then
+                MsgBox("Customer Eligible for TCS...")
+            End If
+
+            '
+
+            GMod.DataSetRet("select pan_no from " & GMod.ACC_HEAD & "  where account_code = '" & cmbacheadcode.Text & "'", "cuspanno")
+            If GMod.ds.Tables("cuspanno").Rows(0)(0).ToString.Length > 8 Then
+                lblpan.Text = GMod.ds.Tables("cuspanno").Rows(0)(0).ToString
+            Else
+                lblpan.Text = "PAN Not Available"
+            End If
+        Catch ex As Exception
+            lblpan.Text = "PAN Not Available"
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub cmbacheadcode_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadcode.SelectedIndexChanged
+
+    End Sub
 End Class

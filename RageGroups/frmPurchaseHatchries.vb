@@ -22,10 +22,14 @@ Public Class frmPurchaseHatchries
         voutype.DisplayMember = "vtype"
         'End If
         'date set to server date 
-        GMod.DataSetRet("select getdate()", "serverdate")
-        dtdate.Value = CDate(GMod.ds.Tables("serverdate").Rows(0)(0).ToString)
+
+        ' GMod.DataSetRet("select getdate()", "serverdate")
+        'dtdate.Value = CDate(GMod.ds.Tables("serverdate").Rows(0)(0).ToString)
 
 
+        dtdate.Value = GMod.SessionCurrentDate
+        dtdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
+        dtdate.MaxDate = GMod.SessionCurrentDate
         'End If
         Label3.Text = "Purchase  [" & GMod.Cmpname & "]"
         If cmbsubgrp.Text.Length = 0 Then
@@ -795,14 +799,14 @@ Public Class frmPurchaseHatchries
                         Exit Sub
                     End If
                     dtdate.Focus()
-                    txtinvoiceno.Text = GMod.ds.Tables("PrintData").Rows(0)("BillNo")
+                    txtinvoiceno.Text = GMod.ds.Tables("PrintData").Rows(0)("vou_no")
                     dtdate.MinDate = CDate(GMod.ds.Tables("PrintData").Rows(0)("BillDate"))
                     dtdate.Value = CDate(GMod.ds.Tables("PrintData").Rows(0)("BillDate"))
                     dtHatchdate.Value = CDate(GMod.ds.Tables("PrintData").Rows(0)("HatchDate"))
                     cmbAreaName.Text = GMod.ds.Tables("PrintData").Rows(0)("Station")
                     cmbacheadcode.Text = GMod.ds.Tables("PrintData").Rows(0)("AccCode")
                     ComboBox2.Text = GMod.ds.Tables("PrintData").Rows(0)("AccCode").ToString.Substring(0, 2)
-                    lblno.Text = GMod.ds.Tables("PrintData").Rows(0)("vou_no")
+                    lblno.Text = GMod.ds.Tables("PrintData").Rows(0)("BillNo")
                     'MsgBox(GMod.ds.Tables("PrintData").Rows(0)("AccCode").ToString.Substring(0, 2))
                     cmbacheadname.Text = GMod.ds.Tables("PrintData").Rows(0)("AccName")
                     For i = 0 To GMod.ds.Tables("PrintData").Rows.Count - 1

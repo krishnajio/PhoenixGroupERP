@@ -93,6 +93,7 @@ Partial Class frmSaleChicken
         Me.cmbTcsHead = New System.Windows.Forms.ComboBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.cmbTcsHeadCode = New System.Windows.Forms.ComboBox()
+        Me.lblpan = New System.Windows.Forms.Label()
         CType(Me.dgPurchase, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -144,7 +145,7 @@ Partial Class frmSaleChicken
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(562, 136)
+        Me.Label4.Location = New System.Drawing.Point(604, 112)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(20, 13)
         Me.Label4.TabIndex = 161
@@ -159,7 +160,7 @@ Partial Class frmSaleChicken
         Me.cmbacheadname.FormattingEnabled = True
         Me.cmbacheadname.Location = New System.Drawing.Point(126, 131)
         Me.cmbacheadname.Name = "cmbacheadname"
-        Me.cmbacheadname.Size = New System.Drawing.Size(301, 24)
+        Me.cmbacheadname.Size = New System.Drawing.Size(470, 24)
         Me.cmbacheadname.TabIndex = 7
         '
         'cmbacheadcode
@@ -168,7 +169,7 @@ Partial Class frmSaleChicken
         Me.cmbacheadcode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbacheadcode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbacheadcode.FormattingEnabled = True
-        Me.cmbacheadcode.Location = New System.Drawing.Point(431, 131)
+        Me.cmbacheadcode.Location = New System.Drawing.Point(599, 132)
         Me.cmbacheadcode.Name = "cmbacheadcode"
         Me.cmbacheadcode.Size = New System.Drawing.Size(125, 24)
         Me.cmbacheadcode.TabIndex = 8
@@ -828,12 +829,23 @@ Partial Class frmSaleChicken
         Me.cmbTcsHeadCode.TabIndex = 206
         Me.cmbTcsHeadCode.TabStop = False
         '
+        'lblpan
+        '
+        Me.lblpan.AutoSize = True
+        Me.lblpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblpan.Location = New System.Drawing.Point(672, 95)
+        Me.lblpan.Name = "lblpan"
+        Me.lblpan.Size = New System.Drawing.Size(11, 13)
+        Me.lblpan.TabIndex = 207
+        Me.lblpan.Text = "-"
+        '
         'frmSaleChicken
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGray
         Me.ClientSize = New System.Drawing.Size(736, 624)
+        Me.Controls.Add(Me.lblpan)
         Me.Controls.Add(Me.chKtcs)
         Me.Controls.Add(Me.cmbTcsType)
         Me.Controls.Add(Me.Label22)
@@ -975,4 +987,5 @@ Partial Class frmSaleChicken
     Friend WithEvents cmbTcsHead As System.Windows.Forms.ComboBox
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents cmbTcsHeadCode As System.Windows.Forms.ComboBox
+    Friend WithEvents lblpan As System.Windows.Forms.Label
 End Class

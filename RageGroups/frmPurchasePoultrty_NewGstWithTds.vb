@@ -201,7 +201,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
         cmbWiOs.SelectedIndex = 0
         cmbPrdType.SelectedIndex = 0
 
-        sql = "select * from TdsMater where cmp_id ='" & GMod.Cmpid & "' and type = 0"
+        sql = "select * from TdsMater where cmp_id ='" & GMod.Cmpid & "'"
         GMod.DataSetRet(sql, "tdm")
 
         cmbtdsType.DataSource = GMod.ds.Tables("tdm")
@@ -215,7 +215,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
         cmbacheadcodetds.DisplayMember = "Acc_Code"
 
 
-        sql = "select * from [TCSMaster] where cmp_id ='" & GMod.Cmpid & "'"
+        sql = "select * from [TCSMaster] where cmp_id ='" & GMod.Cmpid & "' and type = 0"
         GMod.DataSetRet(sql, "tcsmaster")
 
         cmbTCSType.DataSource = GMod.ds.Tables("tcsmaster")
@@ -530,7 +530,11 @@ Public Class frmPurchasePoultrty_NewGstWithTds
                     sqlsave &= "'" & dgvoucher(15, i).Value & "',"
                     sqlsave &= "'" & Val(dgvoucher(14, i).Value) & "',"
                     sqlsave &= "'" & cmbfercode.Text & "',"
-                    sqlsave &= "'" & Val(txtTcsAmount.Text) & "',"
+                    If i = 0 Then
+                        sqlsave &= "'" & Val(txtTcsAmount.Text) & "',"
+                    Else
+                        sqlsave &= "'" & Val("") & "',"
+                    End If
                     sqlsave &= "'" & txtPoNo.Text & "',"
                     sqlsave &= "'" & txtImwno.Text & "',"
                     sqlsave &= "'" & GMod.Cmpid & "',"
