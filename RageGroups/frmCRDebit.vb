@@ -34,7 +34,7 @@ Public Class frmCRDebit
         fillArea()
         cmbvtype.Text = "COLLection"
         'nxtvno()
-        GetLastVouDate() 'Getting last voucher date
+        'GetLastVouDate() 'Getting last voucher date
         Dim sql As String
         sql = "select vtype from Vtype where cmp_id='" & GMod.Cmpid & "'  and vtype like '%CR%'  and session = '" & GMod.Session & "'"
         GMod.DataSetRet(sql, "CRVT")

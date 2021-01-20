@@ -185,14 +185,14 @@ Public Class frmCashBook1
             & " [cmpid] [varchar](4), " _
             & "[Acc_code] [varchar](18)," _
             & "[Acc_name] [varchar](50), " _
-            & "[narration][varchar](380)," _
+            & "[narration][varchar](MAX)," _
             & "[Group_name] [varchar](50), " _
             & "[Sub_Group] [varchar](50)," _
             & "[Vtype] [varchar](50)," _
             & "[Vouno] [varchar](18)," _
             & "[dramt] [numeric](18, 2) NULL," _
             & "[cramt] [numeric](18, 2) NULL," _
-            & "[Cheque No] [varchar](20)," _
+            & "[Cheque No] [varchar](50)," _
             & "[Vdate] [datetime] NULL," _
             & "[entryid] [int] NULL, " _
             & "[Uname] [varchar](50)  NULL, " _

@@ -225,6 +225,7 @@ Public Class frmRepGeneralLedger
                     r.SetParameterValue("accholder", "Account Holder : " & CODE & " " & GMod.ds.Tables("ledhanedname").Rows(0)(0).ToString())
                     r.SetParameterValue("subhead", "Date from :" & dtfrom.Text & " to " & dtto.Text)
                     r.SetParameterValue("uname", GMod.username)
+                    r.SetParameterValue("unauth", "")
                     CrViewerGenralLedger.ReportSource = r
                     'For displaying in Data grid  setting fields--------------------
                     'rdOnscreen_Click(sender, e)
@@ -238,6 +239,7 @@ Public Class frmRepGeneralLedger
                     r.SetParameterValue("accholder", "Account Holder : " & CODE & " " & GMod.ds.Tables("ledhanedname").Rows(0)(0).ToString())
                     r.SetParameterValue("subhead", "Date from :" & dtfrom.Text & " to " & dtto.Text)
                     r.SetParameterValue("uname", GMod.username)
+                    r.SetParameterValue("unauth", "")
                     CrViewerGenralLedger.ReportSource = r
                     r = Nothing
                 End If

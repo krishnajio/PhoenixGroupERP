@@ -16,9 +16,9 @@ Public Class frmVentry
         Else
         End If
         'Setting voucher date accrding to session
-        dtVdate.Value = GMod.SessionCurrentDate
-        dtVdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
-        dtVdate.MaxDate = GMod.SessionCurrentDate
+        'dtVdate.Value = GMod.SessionCurrentDate
+        'dtVdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
+        'dtVdate.MaxDate = GMod.SessionCurrentDate
 
         
         ' MsgBox(GMod.Session)
@@ -1307,8 +1307,8 @@ Public Class frmVentry
     Private Sub dtVdate_ValueChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtVdate.ValueChanged
         'Setting voucher date accrding to session
         'dtVdate.Value = GMod.SessionCurrentDate
-        dtVdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
-        dtVdate.MaxDate = GMod.SessionCurrentDate
+        ' dtVdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
+        ' dtVdate.MaxDate = GMod.SessionCurrentDate
     End Sub
 
     Private Sub CheckBox4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox4.CheckedChanged

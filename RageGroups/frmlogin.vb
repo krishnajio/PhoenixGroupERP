@@ -892,17 +892,17 @@ Public Class frmlogin
             & " [cmpid] [varchar](4), " _
             & "[Acc_code] [varchar](18)," _
             & "[Acc_name] [varchar](40), " _
-            & "[narration] [varchar](220)," _
+            & "[narration] [varchar](500)," _
             & "[Group_name] [varchar](40), " _
             & "[Sub_Group] [varchar](40)," _
             & "[Vtype] [varchar](30)," _
             & "[Vouno] [varchar](18)," _
             & "[dramt] [numeric](18, 2) NULL," _
             & "[cramt] [numeric](18, 2) NULL," _
-            & "[Cheque No] [varchar](20)," _
+            & "[Cheque No] [varchar](100)," _
             & "[Vdate] [datetime] NULL," _
             & "[entryid] [int] NULL, " _
-            & "[Uname] [varchar](10)  NULL, " _
+            & "[Uname] [varchar](50)  NULL, " _
             & "[id] [bigint] IDENTITY(1,1) NOT NULL )"
             GMod.SqlExecuteNonQuery(daybook)
         End If

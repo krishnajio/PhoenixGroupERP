@@ -187,10 +187,10 @@ Public Class frmdayBookAuth
             & "[Vouno] [varchar](18)," _
             & "[dramt] [numeric](18, 2) NULL," _
             & "[cramt] [numeric](18, 2) NULL," _
-            & "[Cheque No] [varchar](20)," _
+            & "[Cheque No] [varchar](100)," _
             & "[Vdate] [datetime] NULL," _
             & "[entryid] [int] NULL, " _
-            & "[Uname] [varchar](20)  NULL, " _
+            & "[Uname] [varchar](50)  NULL, " _
             & "[id] [bigint] IDENTITY(1,1) NOT NULL )"
             GMod.SqlExecuteNonQuery(daybook)
         End If

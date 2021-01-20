@@ -198,7 +198,7 @@ Partial Class frmPurchasePoultrty_NewGst
         'lblvouno
         '
         Me.lblvouno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.lblvouno.Location = New System.Drawing.Point(375, 35)
+        Me.lblvouno.Location = New System.Drawing.Point(475, 34)
         Me.lblvouno.MaxLength = 18
         Me.lblvouno.Name = "lblvouno"
         Me.lblvouno.ReadOnly = True
@@ -210,7 +210,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox2.ForeColor = System.Drawing.Color.MediumVioletRed
-        Me.CheckBox2.Location = New System.Drawing.Point(489, 84)
+        Me.CheckBox2.Location = New System.Drawing.Point(589, 83)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(126, 17)
         Me.CheckBox2.TabIndex = 180
@@ -221,7 +221,7 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Label1.Location = New System.Drawing.Point(289, 36)
+        Me.Label1.Location = New System.Drawing.Point(389, 35)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(85, 15)
         Me.Label1.TabIndex = 177
@@ -264,7 +264,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.txtBillNo.Location = New System.Drawing.Point(143, 58)
         Me.txtBillNo.MaxLength = 18
         Me.txtBillNo.Name = "txtBillNo"
-        Me.txtBillNo.Size = New System.Drawing.Size(145, 20)
+        Me.txtBillNo.Size = New System.Drawing.Size(246, 20)
         Me.txtBillNo.TabIndex = 3
         '
         'dtbilldate
@@ -272,7 +272,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.dtbilldate.CustomFormat = "dd/MMM/yyyy"
         Me.dtbilldate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
         Me.dtbilldate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtbilldate.Location = New System.Drawing.Point(375, 58)
+        Me.dtbilldate.Location = New System.Drawing.Point(475, 57)
         Me.dtbilldate.Name = "dtbilldate"
         Me.dtbilldate.Size = New System.Drawing.Size(106, 21)
         Me.dtbilldate.TabIndex = 4
@@ -281,7 +281,7 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Label5.Location = New System.Drawing.Point(304, 58)
+        Me.Label5.Location = New System.Drawing.Point(404, 57)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(70, 15)
         Me.Label5.TabIndex = 173
@@ -557,7 +557,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.dtVdate.CustomFormat = "dd/MMM/yyyy"
         Me.dtVdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
         Me.dtVdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtVdate.Location = New System.Drawing.Point(584, 37)
+        Me.dtVdate.Location = New System.Drawing.Point(684, 36)
         Me.dtVdate.Name = "dtVdate"
         Me.dtVdate.Size = New System.Drawing.Size(105, 21)
         Me.dtVdate.TabIndex = 2
@@ -566,7 +566,7 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Label7.Location = New System.Drawing.Point(486, 40)
+        Me.Label7.Location = New System.Drawing.Point(586, 39)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(101, 15)
         Me.Label7.TabIndex = 208
@@ -589,7 +589,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.MediumVioletRed
-        Me.CheckBox1.Location = New System.Drawing.Point(617, 85)
+        Me.CheckBox1.Location = New System.Drawing.Point(717, 84)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(139, 17)
         Me.CheckBox1.TabIndex = 210
@@ -609,7 +609,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.dtpdate.CustomFormat = "dd/MMM/yy"
         Me.dtpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
         Me.dtpdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpdate.Location = New System.Drawing.Point(448, 105)
+        Me.dtpdate.Location = New System.Drawing.Point(548, 104)
         Me.dtpdate.MinDate = New Date(2000, 1, 1, 0, 0, 0, 0)
         Me.dtpdate.Name = "dtpdate"
         Me.dtpdate.Size = New System.Drawing.Size(118, 22)
@@ -621,7 +621,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.Label8.BackColor = System.Drawing.Color.Red
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label8.Location = New System.Drawing.Point(304, 108)
+        Me.Label8.Location = New System.Drawing.Point(404, 107)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(145, 16)
         Me.Label8.TabIndex = 213
@@ -633,14 +633,14 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.voutype.FormattingEnabled = True
         Me.voutype.Location = New System.Drawing.Point(143, 34)
         Me.voutype.Name = "voutype"
-        Me.voutype.Size = New System.Drawing.Size(145, 21)
+        Me.voutype.Size = New System.Drawing.Size(246, 21)
         Me.voutype.TabIndex = 0
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Label10.Location = New System.Drawing.Point(484, 65)
+        Me.Label10.Location = New System.Drawing.Point(584, 64)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(94, 15)
         Me.Label10.TabIndex = 215
@@ -649,7 +649,7 @@ Partial Class frmPurchasePoultrty_NewGst
         'txtPoNo
         '
         Me.txtPoNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.txtPoNo.Location = New System.Drawing.Point(584, 60)
+        Me.txtPoNo.Location = New System.Drawing.Point(684, 59)
         Me.txtPoNo.MaxLength = 18
         Me.txtPoNo.Name = "txtPoNo"
         Me.txtPoNo.Size = New System.Drawing.Size(105, 20)
@@ -661,7 +661,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.txtImwno.Location = New System.Drawing.Point(143, 81)
         Me.txtImwno.MaxLength = 18
         Me.txtImwno.Name = "txtImwno"
-        Me.txtImwno.Size = New System.Drawing.Size(145, 20)
+        Me.txtImwno.Size = New System.Drawing.Size(246, 20)
         Me.txtImwno.TabIndex = 7
         '
         'Label11
@@ -679,7 +679,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.dtpInwdate.CustomFormat = "dd/MMM/yyyy"
         Me.dtpInwdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
         Me.dtpInwdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpInwdate.Location = New System.Drawing.Point(375, 81)
+        Me.dtpInwdate.Location = New System.Drawing.Point(475, 80)
         Me.dtpInwdate.Name = "dtpInwdate"
         Me.dtpInwdate.Size = New System.Drawing.Size(106, 21)
         Me.dtpInwdate.TabIndex = 8
@@ -688,7 +688,7 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Label13.Location = New System.Drawing.Point(299, 84)
+        Me.Label13.Location = New System.Drawing.Point(399, 83)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(75, 15)
         Me.Label13.TabIndex = 220
@@ -717,7 +717,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.cmbPrdUnit.FormattingEnabled = True
         Me.cmbPrdUnit.Location = New System.Drawing.Point(143, 103)
         Me.cmbPrdUnit.Name = "cmbPrdUnit"
-        Me.cmbPrdUnit.Size = New System.Drawing.Size(144, 21)
+        Me.cmbPrdUnit.Size = New System.Drawing.Size(246, 21)
         Me.cmbPrdUnit.TabIndex = 9
         '
         'Label18
@@ -899,7 +899,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.ChkCform.AutoSize = True
         Me.ChkCform.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChkCform.ForeColor = System.Drawing.Color.MediumVioletRed
-        Me.ChkCform.Location = New System.Drawing.Point(754, 84)
+        Me.ChkCform.Location = New System.Drawing.Point(854, 83)
         Me.ChkCform.Name = "ChkCform"
         Me.ChkCform.Size = New System.Drawing.Size(59, 17)
         Me.ChkCform.TabIndex = 232
@@ -912,7 +912,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.dtppodate.CustomFormat = "dd/MMM/yyyy"
         Me.dtppodate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
         Me.dtppodate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtppodate.Location = New System.Drawing.Point(695, 58)
+        Me.dtppodate.Location = New System.Drawing.Point(795, 57)
         Me.dtppodate.Name = "dtppodate"
         Me.dtppodate.Size = New System.Drawing.Size(105, 21)
         Me.dtppodate.TabIndex = 6
@@ -1228,7 +1228,7 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.Location = New System.Drawing.Point(695, 36)
+        Me.CheckBox3.Location = New System.Drawing.Point(795, 35)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(60, 20)
         Me.CheckBox3.TabIndex = 30019

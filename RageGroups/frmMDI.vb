@@ -1057,7 +1057,7 @@ Public Class frmMDI
         t.ShowDialog()
     End Sub
     Private Sub ToolStripMenuItem25_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem25.Click
-        Dim t As New frmTrial3
+        Dim t As New frmRepGeneralLedgerUnAuthData
         t.ShowDialog()
     End Sub
     Private Sub JournalPurchaseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles JournalPurchaseToolStripMenuItem.Click
@@ -1516,4 +1516,6 @@ Public Class frmMDI
         Dim tcsrep As New frmTCSReport
         tcsrep.ShowDialog()
     End Sub
+
+   
 End Class

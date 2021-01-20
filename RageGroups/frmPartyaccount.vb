@@ -252,7 +252,7 @@ Public Class frmPartyaccount
     Sub showdata(ByVal ano As String)
         GMod.DataSetRet("select * from " & GMod.ACC_HEAD & " where account_code='" & ano & "'", "ser")
 
-        GMod.DataSetRet("select * from partyBankDetials where partyCode ='" & ano & "'", "bankDetials")
+
 
         If GMod.ds.Tables("ser").Rows.Count > 0 Then
             cmbAreaCode.Text = ano.Substring(0, 2)
@@ -282,10 +282,17 @@ Public Class frmPartyaccount
             txtGstIn.Text = GMod.ds.Tables("ser").Rows(0)("account_type").ToString.Trim()
 
             ' bankName, accNumber, ifscCode, branch, id
-            txtBankAccountNumber.Text = GMod.ds.Tables("bankDetials").Rows(0)("accNumber").ToString.Trim()
-            txtBankName.Text = GMod.ds.Tables("bankDetials").Rows(0)("bankName").ToString.Trim()
-            txtIFSCCode.Text = GMod.ds.Tables("bankDetials").Rows(0)("ifscCode").ToString.Trim()
-            txtBranch.Text = GMod.ds.Tables("bankDetials").Rows(0)("branch").ToString.Trim()
+            Try
+                GMod.DataSetRet("select * from partyBankDetials where partyCode ='" & ano & "'", "bankDetials")
+
+                txtBankAccountNumber.Text = GMod.ds.Tables("bankDetials").Rows(0)("accNumber").ToString.Trim()
+                txtBankName.Text = GMod.ds.Tables("bankDetials").Rows(0)("bankName").ToString.Trim()
+                txtIFSCCode.Text = GMod.ds.Tables("bankDetials").Rows(0)("ifscCode").ToString.Trim()
+                txtBranch.Text = GMod.ds.Tables("bankDetials").Rows(0)("branch").ToString.Trim()
+            Catch ex As Exception
+                MessageBox.Show("No Bank Detials Found ")
+            End Try
+           
 
             btnsave.Enabled = False
             btnmodify.Text = "&Update"
@@ -302,7 +309,7 @@ Public Class frmPartyaccount
         r = dgaccounthead.CurrentRow.Index
         code = dgaccounthead(0, r).Value
         showdata(dgaccounthead(0, r).Value)
-        If GMod.role = "ADMIN" Then
+        If GMod.role.ToUpper = "ADMIN" Then
 
         Else
             cmbAreaCode.Enabled = False
@@ -406,9 +413,18 @@ Public Class frmPartyaccount
 
             If GMod.Cmpid = "PHOE" Then
                 Try
-                    Dim UpInv As String = "update partyBankDetials set [bankName] = '" & txtBankName.Text & "', [accNumber]='" & txtBankAccountNumber.Text & "',[ifscCode]='" & txtIFSCCode.Text & "',[branch]='" & txtBranch.Text & "'  where partyCode ='" & code & "'"
-                    Dim cmd4 As New SqlCommand(UpInv, GMod.SqlConn, sqltrans)
-                    cmd4.ExecuteNonQuery()
+                    GMod.DataSetRet("select * from partyBankDetials where partyCode = '" & code & "'", "chkBankDetials")
+
+                    If ds.Tables("chkBankDetials").Rows.Count > 0 Then
+                        Dim UpInv As String = "update partyBankDetials set [bankName] = '" & txtBankName.Text & "', [accNumber]='" & txtBankAccountNumber.Text & "',[ifscCode]='" & txtIFSCCode.Text & "',[branch]='" & txtBranch.Text & "'  where partyCode ='" & code & "'"
+                        Dim cmd4 As New SqlCommand(UpInv, GMod.SqlConn, sqltrans)
+                        cmd4.ExecuteNonQuery()
+                    Else
+                        sql = "insert into [partyBankDetials] (partyCode, bankName, accNumber, ifscCode, branch)"
+                        sql &= " values ('" & lblacheadcode.Text & "','" & txtBankName.Text & "','" & txtBankAccountNumber.Text & "','" & txtIFSCCode.Text & "','" & txtBranch.Text & "')"
+                        Dim cmd5 As New SqlCommand(sql, GMod.SqlConn, sqltrans)
+                        cmd5.ExecuteNonQuery()
+                    End If
                 Catch ex As Exception
 
                 End Try
@@ -643,7 +659,7 @@ Public Class frmPartyaccount
     End Sub
 
     Private Sub lblgroupsuffix_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblgroupsuffix.Leave
-        If GMod.role = "ADMIN" Then
+        If GMod.role.ToUpper = "ADMIN" Then
             nxtid()
         End If
         fillgrid("")

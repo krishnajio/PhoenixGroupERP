@@ -145,6 +145,7 @@ Partial Class frmMDI
         Me.TrailWSOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GSTRegisterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseRegisterGridViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TCSReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExpensesToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DailyExpensesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TdsReportToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -259,7 +260,6 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TCSReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1032,6 +1032,12 @@ Partial Class frmMDI
         Me.PurchaseRegisterGridViewToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
         Me.PurchaseRegisterGridViewToolStripMenuItem.Text = "Purchase Register Grid View"
         '
+        'TCSReportToolStripMenuItem
+        '
+        Me.TCSReportToolStripMenuItem.Name = "TCSReportToolStripMenuItem"
+        Me.TCSReportToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.TCSReportToolStripMenuItem.Text = "TCS Report"
+        '
         'ExpensesToolStripMenuItem2
         '
         Me.ExpensesToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DailyExpensesToolStripMenuItem, Me.TdsReportToolStripMenuItem1, Me.DelevaryVanExpensesToolStripMenuItem})
@@ -1135,7 +1141,7 @@ Partial Class frmMDI
         '
         Me.ToolStripMenuItem25.Name = "ToolStripMenuItem25"
         Me.ToolStripMenuItem25.Size = New System.Drawing.Size(341, 22)
-        Me.ToolStripMenuItem25.Text = "Trial &Between Days"
+        Me.ToolStripMenuItem25.Text = "UnAuthrised Ledger"
         '
         'ToolStripMenuItem31
         '
@@ -1782,12 +1788,6 @@ Partial Class frmMDI
         Me.Label2.Size = New System.Drawing.Size(13, 13)
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
-        '
-        'TCSReportToolStripMenuItem
-        '
-        Me.TCSReportToolStripMenuItem.Name = "TCSReportToolStripMenuItem"
-        Me.TCSReportToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
-        Me.TCSReportToolStripMenuItem.Text = "TCS Report"
         '
         'frmMDI
         '
