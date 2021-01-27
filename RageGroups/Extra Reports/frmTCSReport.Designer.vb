@@ -36,6 +36,9 @@ Partial Class frmTCSReport
         Me.cmbPartCode = New System.Windows.Forms.ComboBox()
         Me.cmbPartyHead = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.cmbTcsHeadCode = New System.Windows.Forms.ComboBox()
+        Me.rdPurchase = New System.Windows.Forms.RadioButton()
+        Me.rdSale = New System.Windows.Forms.RadioButton()
         Me.SuspendLayout()
         '
         'Label3
@@ -46,7 +49,7 @@ Partial Class frmTCSReport
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label3.Location = New System.Drawing.Point(0, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(977, 37)
+        Me.Label3.Size = New System.Drawing.Size(1167, 37)
         Me.Label3.TabIndex = 131
         Me.Label3.Text = "TCS Report"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -59,7 +62,7 @@ Partial Class frmTCSReport
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label1.Location = New System.Drawing.Point(0, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(977, 72)
+        Me.Label1.Size = New System.Drawing.Size(1167, 72)
         Me.Label1.TabIndex = 132
         Me.Label1.Text = " "
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -109,7 +112,7 @@ Partial Class frmTCSReport
         'btnShow
         '
         Me.btnShow.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnShow.Location = New System.Drawing.Point(911, 77)
+        Me.btnShow.Location = New System.Drawing.Point(1101, 77)
         Me.btnShow.Name = "btnShow"
         Me.btnShow.Size = New System.Drawing.Size(54, 28)
         Me.btnShow.TabIndex = 169
@@ -125,7 +128,7 @@ Partial Class frmTCSReport
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 109)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.SelectionFormula = ""
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(977, 633)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1167, 633)
         Me.CrystalReportViewer1.TabIndex = 170
         Me.CrystalReportViewer1.ViewTimeSelectionFormula = ""
         '
@@ -175,9 +178,9 @@ Partial Class frmTCSReport
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
         Me.Label4.Location = New System.Drawing.Point(322, 78)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 15)
+        Me.Label4.Size = New System.Drawing.Size(71, 15)
         Me.Label4.TabIndex = 174
-        Me.Label4.Text = "TDS Type:"
+        Me.Label4.Text = "TCS Type:"
         '
         'ChkAllParty
         '
@@ -242,12 +245,50 @@ Partial Class frmTCSReport
         Me.Label11.TabIndex = 196
         Me.Label11.Text = "Party A/c"
         '
+        'cmbTcsHeadCode
+        '
+        Me.cmbTcsHeadCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cmbTcsHeadCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbTcsHeadCode.BackColor = System.Drawing.Color.White
+        Me.cmbTcsHeadCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbTcsHeadCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbTcsHeadCode.FormattingEnabled = True
+        Me.cmbTcsHeadCode.Location = New System.Drawing.Point(901, 79)
+        Me.cmbTcsHeadCode.Name = "cmbTcsHeadCode"
+        Me.cmbTcsHeadCode.Size = New System.Drawing.Size(194, 21)
+        Me.cmbTcsHeadCode.TabIndex = 199
+        '
+        'rdPurchase
+        '
+        Me.rdPurchase.AutoSize = True
+        Me.rdPurchase.Location = New System.Drawing.Point(853, 44)
+        Me.rdPurchase.Name = "rdPurchase"
+        Me.rdPurchase.Size = New System.Drawing.Size(70, 17)
+        Me.rdPurchase.TabIndex = 200
+        Me.rdPurchase.TabStop = True
+        Me.rdPurchase.Text = "Purchase"
+        Me.rdPurchase.UseVisualStyleBackColor = True
+        '
+        'rdSale
+        '
+        Me.rdSale.AutoSize = True
+        Me.rdSale.Location = New System.Drawing.Point(968, 45)
+        Me.rdSale.Name = "rdSale"
+        Me.rdSale.Size = New System.Drawing.Size(46, 17)
+        Me.rdSale.TabIndex = 201
+        Me.rdSale.TabStop = True
+        Me.rdSale.Text = "Sale"
+        Me.rdSale.UseVisualStyleBackColor = True
+        '
         'frmTCSReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
-        Me.ClientSize = New System.Drawing.Size(977, 742)
+        Me.ClientSize = New System.Drawing.Size(1167, 742)
+        Me.Controls.Add(Me.rdSale)
+        Me.Controls.Add(Me.rdPurchase)
+        Me.Controls.Add(Me.cmbTcsHeadCode)
         Me.Controls.Add(Me.cmbPartyGroup)
         Me.Controls.Add(Me.cmbPartCode)
         Me.Controls.Add(Me.cmbPartyHead)
@@ -289,4 +330,7 @@ Partial Class frmTCSReport
     Friend WithEvents cmbPartCode As System.Windows.Forms.ComboBox
     Friend WithEvents cmbPartyHead As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents cmbTcsHeadCode As System.Windows.Forms.ComboBox
+    Friend WithEvents rdPurchase As System.Windows.Forms.RadioButton
+    Friend WithEvents rdSale As System.Windows.Forms.RadioButton
 End Class

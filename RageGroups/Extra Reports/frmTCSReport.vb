@@ -1,17 +1,70 @@
 Public Class frmTCSReport
 
+    Dim sql As String
+    Dim i As Integer
     Private Sub btnShow_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnShow.Click
         'Cmp_id, account_code, account_head_name, group_name, sub_group_name,
         'credit_days, credit_limit, opening_dr, opening_cr, account_type, 
         'address, city, state, phone, pan_no, rate_of_interest, 
         'interest_rule_id, Area_code, remark1, remark2, remark3
         GMod.SqlExecuteNonQuery("delete from tmpTds")
-        Dim sql As String
-        Dim i As Integer
+       
+        If Cmpid = "PHOE" Then
+            If rdPurchase.Checked = True Then
+                PurchaseTcsReport()
+            End If
+            If rdSale.Checked = True Then
+                SaleTcsReport()
+            End If
+        Else
+            If rdPurchase.Checked = True Then
+                ' PurchaseTcsReport()
+                SaleTcsReport()
+            End If
+            If rdSale.Checked = True Then
+                SaleTcsReport()
+            End If
+        End If
+
+    End Sub
+
+    Private Sub frmTDSReport_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        dt1.MaxDate = CDate("3/31/" & Mid(GMod.Session, 3, 4))
+        dt2.MinDate = CDate("4/1/" & Mid(GMod.Session, 1, 2)).ToShortDateString
+
+        dt1.MaxDate = CDate("3/31/" & Mid(GMod.Session, 3, 4))
+        dt2.MinDate = CDate("4/1/" & Mid(GMod.Session, 1, 2)).ToShortDateString
+
+
+        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" 'and left(account_code,2) in ('**','" & cmbAreaCode.Text & "')"
+        GMod.DataSetRet(sql, "aclist20")
+        cmbPartCode.DataSource = GMod.ds.Tables("aclist20")
+        cmbPartCode.DisplayMember = "account_code"
+        cmbPartyHead.DataSource = GMod.ds.Tables("aclist20")
+        cmbPartyHead.DisplayMember = "account_head_name"
+        cmbPartyGroup.DataSource = GMod.ds.Tables("aclist20")
+        cmbPartyGroup.DisplayMember = "group_name"
+
+        sql = "select * from TcsMaster where cmp_id='" & GMod.Cmpid & "'"
+        GMod.DataSetRet(Sql, "tdm")
+
+        cmbtdsType.DataSource = GMod.ds.Tables("tdm")
+        cmbtdsType.DisplayMember = "TcsType"
+
+        cmbTdsper.DataSource = GMod.ds.Tables("tdm")
+        cmbTdsper.DisplayMember = "Per"
+
+        cmbTcsHeadCode.DataSource = GMod.ds.Tables("tdm")
+        cmbTcsHeadCode.DisplayMember = "Acc_Code"
+
+
+
+    End Sub
+
+    Public Sub PurchaseTcsReport()
         sql = "select * from TdsEntry  where tdstype='" & cmbtdsType.Text & "' and vou_date between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session ='" & GMod.Session & "' AND CMP_ID ='" & GMod.Cmpid & "' and Authr<>'-'  order by vou_date,cast(vou_no as bigint)"
         GMod.DataSetRet(sql, "tdse")
         Try
-
             For i = 0 To GMod.ds.Tables("tdse").Rows.Count - 1
                 sql = "select * from " & GMod.ACC_HEAD & " where account_code ='" & GMod.ds.Tables("tdse").Rows(i)("dcode") & "'"
                 GMod.DataSetRet(sql, "ddata")
@@ -74,37 +127,61 @@ Public Class frmTCSReport
         crTCS.SetParameterValue("p1", "Date From:" & dt1.Text & " To :" & dt2.Text)
         crTCS.SetParameterValue("p2", "TCS Type:" & cmbtdsType.Text & "---- TCS Per:" & cmbTdsper.Text)
         crTCS.SetParameterValue("p3", "Deductee Name:" & party)
-
         CrystalReportViewer1.ReportSource = crTCS
 
     End Sub
-    Dim sql As String
-    Private Sub frmTDSReport_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        dt1.MaxDate = CDate("3/31/" & Mid(GMod.Session, 3, 4))
-        dt2.MinDate = CDate("4/1/" & Mid(GMod.Session, 1, 2)).ToShortDateString
 
-        dt1.MaxDate = CDate("3/31/" & Mid(GMod.Session, 3, 4))
-        dt2.MinDate = CDate("4/1/" & Mid(GMod.Session, 1, 2)).ToShortDateString
+    Public Sub SaleTcsReport()
+        sql = "select * from printdata  where tcs_head='" & cmbTcsHeadCode.Text & "' and BillDate between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session ='" & GMod.Session & "' AND CMP_ID ='" & GMod.Cmpid & "' and tcs_amt>0  and Authr<>'-'  order by billdate,cast(vou_no as bigint)"
+        GMod.DataSetRet(sql, "tdse")
+        Try
+            For i = 0 To GMod.ds.Tables("tdse").Rows.Count - 1
+                sql = "select * from " & GMod.ACC_HEAD & " where account_code ='" & GMod.ds.Tables("tdse").Rows(i)("AccCode") & "'"
+                GMod.DataSetRet(sql, "ddata")
 
+                sql = "insert into tmpTds(dcode, dpan, dname, address, city," _
+                & " state, pin, payamt, ddate, seccode, per, amt,vou_type,vou_no,vou_date,uname,prop) values("
+                sql &= "'" & GMod.ds.Tables("ddata").Rows(0)("account_code") & "',"
+                sql &= "'" & GMod.ds.Tables("ddata").Rows(0)("pan_no") & "',"
+                sql &= "'" & GMod.ds.Tables("ddata").Rows(0)("account_head_name") & "',"
+                sql &= "'" & GMod.ds.Tables("ddata").Rows(0)("address") & "',"
+                sql &= "'" & GMod.ds.Tables("ddata").Rows(0)("city") & "',"
+                sql &= "'" & GMod.ds.Tables("ddata").Rows(0)("state") & "',"
+                sql &= "'" & GMod.ds.Tables("ddata").Rows(0)("rate_of_interest") & "',"
+                sql &= "'" & GMod.ds.Tables("tdse").Rows(i)("Amount") & "',"
+                sql &= "'" & GMod.ds.Tables("tdse").Rows(i)("BillDate") & "',"
+                sql &= "'" & GMod.ds.Tables("ddata").Rows(0)("credit_limit") & "',"
+                sql &= "'" & GMod.ds.Tables("tdse").Rows(i)("tcs_Per") & "',"
+                sql &= "'" & GMod.ds.Tables("tdse").Rows(i)("tcs_amt") & "',"
+                sql &= "'" & GMod.ds.Tables("tdse").Rows(i)("vou_type") & "',"
+                sql &= "'" & GMod.ds.Tables("tdse").Rows(i)("vou_no") & "',"
+                sql &= "'" & CDate(GMod.ds.Tables("tdse").Rows(i)("Billdate")) & "',"
+                sql &= "'" & GMod.username & "',"
+                sql &= "'" & GMod.ds.Tables("ddata").Rows(0)("credit_days").ToString & "')"
+                GMod.SqlExecuteNonQuery(sql)
+            Next
 
-        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" 'and left(account_code,2) in ('**','" & cmbAreaCode.Text & "')"
-        GMod.DataSetRet(sql, "aclist20")
-        cmbPartCode.DataSource = GMod.ds.Tables("aclist20")
-        cmbPartCode.DisplayMember = "account_code"
-        cmbPartyHead.DataSource = GMod.ds.Tables("aclist20")
-        cmbPartyHead.DisplayMember = "account_head_name"
-        cmbPartyGroup.DataSource = GMod.ds.Tables("aclist20")
-        cmbPartyGroup.DisplayMember = "group_name"
+            Dim party As String
+            If ChkAllParty.Checked = True Then
 
-        sql = "select * from TcsMaster where cmp_id='" & GMod.Cmpid & "'"
-        GMod.DataSetRet(Sql, "tdm")
+                sql = "select * from tmpTDS where uname ='" & GMod.username & "' order by vou_date,cast(vou_no as bigint)"
+                GMod.DataSetRet(sql, "tddsrep")
+                party = "ALL"
+            Else
+                sql = "select * from tmpTDS where uname ='" & GMod.username & "' and dcode = '" & cmbPartCode.Text & "' order by vou_date,cast(vou_no as bigint)"
+                GMod.DataSetRet(sql, "tddsrep")
+                party = cmbPartyHead.Text
+            End If
 
-        cmbtdsType.DataSource = GMod.ds.Tables("tdm")
-        cmbtdsType.DisplayMember = "TcsType"
+            Dim crTCS As New CrTCSRep
+            crTCS.SetDataSource(GMod.ds.Tables("tddsrep"))
+            crTCS.SetParameterValue("p1", "Date From:" & dt1.Text & " To :" & dt2.Text)
+            crTCS.SetParameterValue("p2", "TCS Type:" & cmbtdsType.Text & "---- TCS Per:" & cmbTdsper.Text)
+            crTCS.SetParameterValue("p3", "Deductee Name:" & party)
+            CrystalReportViewer1.ReportSource = crTCS
 
+        Catch ex As Exception
 
-        cmbTdsper.DataSource = GMod.ds.Tables("tdm")
-        cmbTdsper.DisplayMember = "Per"
-
+        End Try
     End Sub
 End Class
