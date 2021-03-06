@@ -53,7 +53,7 @@ Partial Class frmServerdetection
         Me.txtpwd1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtpwd1.Size = New System.Drawing.Size(173, 22)
         Me.txtpwd1.TabIndex = 17
-        Me.txtpwd1.Text = "ph@hoenix#g"
+        Me.txtpwd1.Text = "Ph@hoenix#g"
         '
         'txtpwd
         '
@@ -63,7 +63,7 @@ Partial Class frmServerdetection
         Me.txtpwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtpwd.Size = New System.Drawing.Size(173, 22)
         Me.txtpwd.TabIndex = 16
-        Me.txtpwd.Text = "ph@hoenix#g"
+        Me.txtpwd.Text = "Ph@hoenix#g"
         '
         'txtusername
         '

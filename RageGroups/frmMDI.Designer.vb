@@ -1196,7 +1196,7 @@ Partial Class frmMDI
         '
         Me.ChichkenBatchWiseSummToolStripMenuItem.Name = "ChichkenBatchWiseSummToolStripMenuItem"
         Me.ChichkenBatchWiseSummToolStripMenuItem.Size = New System.Drawing.Size(341, 22)
-        Me.ChichkenBatchWiseSummToolStripMenuItem.Text = "Chichken Batch Wise Summary"
+        Me.ChichkenBatchWiseSummToolStripMenuItem.Text = "Trial Between Days"
         '
         'CommonCustomerAccountHeadToolStripMenuItem
         '

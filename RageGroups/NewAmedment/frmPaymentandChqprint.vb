@@ -377,7 +377,7 @@ Public Class frmPaymentandChqprint
                 For rcount = 0 To dgBillNo.Rows.Count - 1
                     If dgBillNo(0, rcount).Value = 1 Then
                         'dgBillNo(0, rcount).Value = 1
-                        sql = "insert into bank_payment(party_code, bill_no, bill_date, amt, session, cmp_id,vou_type,vou_no,dr_amt) values( "
+                        sql = "insert into bank_payment(party_code, bill_no, bill_date, amt, session, cmp_id,vou_type,vou_no,dr_amt,tds_amt) values( "
                         sql &= "'" & acc_code & "',"
                         sql &= "'" & dgBillNo(1, rcount).Value & "',"
                         sql &= "'" & dgBillNo(2, rcount).Value & "',"
@@ -386,7 +386,8 @@ Public Class frmPaymentandChqprint
                         sql &= "'" & GMod.Cmpid & "',"
                         sql &= "'" & cmbvoutype.Text & "',"
                         sql &= "'" & txtvou_no.Text & "',"
-                        sql &= "'" & dgBillNo(5, rcount).Value & "')"
+                        sql &= "'" & Val(dgBillNo(5, rcount).Value) & "',"
+                        sql &= "'" & Val(dgBillNo(6, rcount).Value) & "')"
                         Dim cmd1 As New SqlCommand(sql, GMod.SqlConn, trans)
                         cmd1.ExecuteNonQuery()
 
@@ -655,6 +656,7 @@ Public Class frmPaymentandChqprint
                     dgBillNo(3, party_bill_count).Value = GMod.ds.Tables("party_bill").Rows(party_bill_count)(3).ToString
                     dgBillNo(4, party_bill_count).Value = GMod.ds.Tables("party_bill").Rows(party_bill_count)("Session").ToString
                     dgBillNo(5, party_bill_count).Value = GMod.ds.Tables("party_bill").Rows(party_bill_count)("debit_amt").ToString
+                    dgBillNo(6, party_bill_count).Value = GMod.ds.Tables("party_bill").Rows(party_bill_count)("tds_amt").ToString
                 Next
             End If
 
@@ -843,7 +845,7 @@ Public Class frmPaymentandChqprint
         amtchk = 0
         For rcount = 0 To dgBillNo.Rows.Count - 1
             If dgBillNo(0, rcount).Value = 1 Then
-                amt = amt + (Val(dgBillNo(3, rcount).Value) - Val(dgBillNo(5, rcount).Value))
+                amt = amt + (Val(dgBillNo(3, rcount).Value) - Val(dgBillNo(5, rcount).Value) - Val(dgBillNo(6, rcount).Value))
                 amtchk = amt
 
                 ' MessageBox.Show(dgBillNo(0, rcount).Value.ToString() + "  " + dgBillNo(1, rcount).Value.ToString)

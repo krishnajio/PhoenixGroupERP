@@ -1803,4 +1803,8 @@ Public Class frmPurchasePoultrty_NewGst
     Private Sub cmbTCSType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTCSType.SelectedIndexChanged
 
     End Sub
+
+    Private Sub txtGrandTotal_TextChanged(sender As Object, e As EventArgs) Handles txtGrandTotal.TextChanged
+
+    End Sub
 End Class

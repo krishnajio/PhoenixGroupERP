@@ -128,7 +128,7 @@ Public Class frmVoucherPrint
 
         Try
             'for showing party det 
-            sql = "select party_code, bill_no, bill_date, amt,  Chq_no, favourof, b.dr_amt as recpitid, " & _
+            sql = "select party_code, bill_no, bill_date, amt,  Chq_no, favourof, b.dr_amt as recpitid,b.tds_amt as Uname ," & _
                   " amount, Chq_date, Uname, c.Vouno, c.vou_type, code, c.session,   " & _
                   " a.account_head_name from bank_payment b " & _
                   " left join chq_issue c on b.cmp_id=c.cmp_id and b.session=c.session and b.vou_type=c.vou_type and b.vou_no=c.vouno " & _

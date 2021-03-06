@@ -161,6 +161,42 @@ Public Class frmTCSReport
                 GMod.SqlExecuteNonQuery(sql)
             Next
 
+
+            sql = "select * from othersaledata  where tcs_per='" & cmbTdsper.Text & "' and BillDate between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session ='" & GMod.Session & "' AND CMP_ID ='" & GMod.Cmpid & "' and tcs_amt>0  and Authr<>'-'  order by billdate,cast(vou_no as bigint)"
+            GMod.DataSetRet(sql, "tdseother")
+
+
+
+            For i = 0 To GMod.ds.Tables("tdseother").Rows.Count - 1
+                sql = "select * from " & GMod.ACC_HEAD & " where account_code ='" & GMod.ds.Tables("tdseother").Rows(i)("AccCode") & "'"
+                GMod.DataSetRet(sql, "ddataother")
+
+                sql = "insert into tmpTds(dcode, dpan, dname, address, city," _
+                & " state, pin, payamt, ddate, seccode, per, amt,vou_type,vou_no,vou_date,uname,prop) values("
+                sql &= "'" & GMod.ds.Tables("ddataother").Rows(0)("account_code") & "',"
+                sql &= "'" & GMod.ds.Tables("ddataother").Rows(0)("pan_no") & "',"
+                sql &= "'" & GMod.ds.Tables("ddataother").Rows(0)("account_head_name") & "',"
+                sql &= "'" & GMod.ds.Tables("ddataother").Rows(0)("address") & "',"
+                sql &= "'" & GMod.ds.Tables("ddataother").Rows(0)("city") & "',"
+                sql &= "'" & GMod.ds.Tables("ddataother").Rows(0)("state") & "',"
+                sql &= "'" & GMod.ds.Tables("ddataother").Rows(0)("rate_of_interest") & "',"
+                sql &= "'" & GMod.ds.Tables("tdseother").Rows(i)("Amount") & "',"
+                sql &= "'" & GMod.ds.Tables("tdseother").Rows(i)("BillDate") & "',"
+                sql &= "'" & GMod.ds.Tables("ddataother").Rows(0)("credit_limit") & "',"
+                sql &= "'" & GMod.ds.Tables("tdseother").Rows(i)("tcs_Per") & "',"
+                sql &= "'" & GMod.ds.Tables("tdseother").Rows(i)("tcs_amt") & "',"
+                sql &= "'" & GMod.ds.Tables("tdseother").Rows(i)("vou_type") & "',"
+                sql &= "'" & GMod.ds.Tables("tdseother").Rows(i)("vou_no") & "',"
+                sql &= "'" & CDate(GMod.ds.Tables("tdseother").Rows(i)("Billdate")) & "',"
+                sql &= "'" & GMod.username & "',"
+                sql &= "'" & GMod.ds.Tables("ddataother").Rows(0)("credit_days").ToString & "')"
+                GMod.SqlExecuteNonQuery(sql)
+            Next
+
+
+
+
+
             Dim party As String
             If ChkAllParty.Checked = True Then
 
@@ -172,6 +208,8 @@ Public Class frmTCSReport
                 GMod.DataSetRet(sql, "tddsrep")
                 party = cmbPartyHead.Text
             End If
+
+
 
             Dim crTCS As New CrTCSRep
             crTCS.SetDataSource(GMod.ds.Tables("tddsrep"))

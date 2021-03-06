@@ -61,12 +61,6 @@ Partial Class frmPaymentandChqprint
         Me.cmbAreaName = New System.Windows.Forms.ComboBox()
         Me.cmbAreaCode = New System.Windows.Forms.ComboBox()
         Me.dgBillNo = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Bill_No = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Bill_date = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Session = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.debit_amt = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cmbfavourof = New System.Windows.Forms.ComboBox()
@@ -86,6 +80,13 @@ Partial Class frmPaymentandChqprint
         Me.dtpexpensedate = New System.Windows.Forms.DateTimePicker()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Bill_No = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Bill_date = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Session = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.debit_amt = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TdsAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgPayment, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgBillNo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -94,7 +95,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(1029, 95)
+        Me.Label10.Location = New System.Drawing.Point(1109, 95)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(85, 16)
         Me.Label10.TabIndex = 157
@@ -103,7 +104,7 @@ Partial Class frmPaymentandChqprint
         'txtChqNo
         '
         Me.txtChqNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtChqNo.Location = New System.Drawing.Point(1026, 117)
+        Me.txtChqNo.Location = New System.Drawing.Point(1106, 117)
         Me.txtChqNo.Name = "txtChqNo"
         Me.txtChqNo.Size = New System.Drawing.Size(103, 22)
         Me.txtChqNo.TabIndex = 8
@@ -209,7 +210,7 @@ Partial Class frmPaymentandChqprint
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1247, 43)
+        Me.Label1.Size = New System.Drawing.Size(1320, 43)
         Me.Label1.TabIndex = 123
         Me.Label1.Text = "Payment and Cheque print"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -261,7 +262,7 @@ Partial Class frmPaymentandChqprint
         'btnOk
         '
         Me.btnOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOk.Location = New System.Drawing.Point(1130, 117)
+        Me.btnOk.Location = New System.Drawing.Point(1210, 114)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(34, 28)
         Me.btnOk.TabIndex = 9
@@ -276,7 +277,7 @@ Partial Class frmPaymentandChqprint
         Me.dgPayment.Location = New System.Drawing.Point(30, 146)
         Me.dgPayment.Name = "dgPayment"
         Me.dgPayment.ReadOnly = True
-        Me.dgPayment.Size = New System.Drawing.Size(1199, 169)
+        Me.dgPayment.Size = New System.Drawing.Size(1278, 169)
         Me.dgPayment.TabIndex = 164
         '
         'acname
@@ -340,7 +341,7 @@ Partial Class frmPaymentandChqprint
         Me.txtNarration.MaxLength = 180
         Me.txtNarration.Multiline = True
         Me.txtNarration.Name = "txtNarration"
-        Me.txtNarration.Size = New System.Drawing.Size(255, 50)
+        Me.txtNarration.Size = New System.Drawing.Size(332, 50)
         Me.txtNarration.TabIndex = 7
         '
         'Label9
@@ -363,7 +364,7 @@ Partial Class frmPaymentandChqprint
         Me.Label16.Location = New System.Drawing.Point(0, 661)
         Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(1247, 75)
+        Me.Label16.Size = New System.Drawing.Size(1320, 75)
         Me.Label16.TabIndex = 19
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
@@ -380,7 +381,7 @@ Partial Class frmPaymentandChqprint
         Me.lblDr.AutoSize = True
         Me.lblDr.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDr.ForeColor = System.Drawing.Color.Red
-        Me.lblDr.Location = New System.Drawing.Point(650, 321)
+        Me.lblDr.Location = New System.Drawing.Point(697, 321)
         Me.lblDr.Name = "lblDr"
         Me.lblDr.Size = New System.Drawing.Size(14, 18)
         Me.lblDr.TabIndex = 176
@@ -391,7 +392,7 @@ Partial Class frmPaymentandChqprint
         Me.lblcr.AutoSize = True
         Me.lblcr.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblcr.ForeColor = System.Drawing.Color.Red
-        Me.lblcr.Location = New System.Drawing.Point(741, 318)
+        Me.lblcr.Location = New System.Drawing.Point(788, 318)
         Me.lblcr.Name = "lblcr"
         Me.lblcr.Size = New System.Drawing.Size(14, 18)
         Me.lblcr.TabIndex = 177
@@ -487,52 +488,16 @@ Partial Class frmPaymentandChqprint
         Me.dgBillNo.AllowUserToAddRows = False
         Me.dgBillNo.AllowUserToDeleteRows = False
         Me.dgBillNo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgBillNo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Bill_No, Me.Bill_date, Me.Amount, Me.Session, Me.debit_amt})
-        Me.dgBillNo.Location = New System.Drawing.Point(26, 321)
+        Me.dgBillNo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Bill_No, Me.Bill_date, Me.Amount, Me.Session, Me.debit_amt, Me.TdsAmount})
+        Me.dgBillNo.Location = New System.Drawing.Point(28, 321)
         Me.dgBillNo.Name = "dgBillNo"
-        Me.dgBillNo.Size = New System.Drawing.Size(602, 326)
+        Me.dgBillNo.Size = New System.Drawing.Size(663, 326)
         Me.dgBillNo.TabIndex = 186
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Column1"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.Column1.TrueValue = "1"
-        Me.Column1.Width = 50
-        '
-        'Bill_No
-        '
-        Me.Bill_No.FillWeight = 75.0!
-        Me.Bill_No.HeaderText = "Bill_No"
-        Me.Bill_No.Name = "Bill_No"
-        '
-        'Bill_date
-        '
-        Me.Bill_date.FillWeight = 75.0!
-        Me.Bill_date.HeaderText = "Bill_Date"
-        Me.Bill_date.Name = "Bill_date"
-        '
-        'Amount
-        '
-        Me.Amount.HeaderText = "Amount"
-        Me.Amount.Name = "Amount"
-        '
-        'Session
-        '
-        Me.Session.HeaderText = "Session"
-        Me.Session.Name = "Session"
-        '
-        'debit_amt
-        '
-        Me.debit_amt.HeaderText = "debit_amt"
-        Me.debit_amt.Name = "debit_amt"
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(638, 619)
+        Me.Button1.Location = New System.Drawing.Point(699, 619)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(34, 28)
         Me.Button1.TabIndex = 187
@@ -543,7 +508,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(690, 373)
+        Me.Label7.Location = New System.Drawing.Point(770, 365)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(70, 15)
         Me.Label7.TabIndex = 191
@@ -556,7 +521,7 @@ Partial Class frmPaymentandChqprint
         Me.cmbfavourof.BackColor = System.Drawing.Color.White
         Me.cmbfavourof.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbfavourof.FormattingEnabled = True
-        Me.cmbfavourof.Location = New System.Drawing.Point(758, 367)
+        Me.cmbfavourof.Location = New System.Drawing.Point(841, 359)
         Me.cmbfavourof.MaxLength = 50
         Me.cmbfavourof.Name = "cmbfavourof"
         Me.cmbfavourof.Size = New System.Drawing.Size(471, 23)
@@ -567,7 +532,7 @@ Partial Class frmPaymentandChqprint
         Me.dtchequedate.CustomFormat = "dd/MMM/yy"
         Me.dtchequedate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtchequedate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtchequedate.Location = New System.Drawing.Point(758, 341)
+        Me.dtchequedate.Location = New System.Drawing.Point(841, 333)
         Me.dtchequedate.Name = "dtchequedate"
         Me.dtchequedate.Size = New System.Drawing.Size(104, 22)
         Me.dtchequedate.TabIndex = 188
@@ -576,7 +541,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(658, 344)
+        Me.Label11.Location = New System.Drawing.Point(741, 336)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(102, 15)
         Me.Label11.TabIndex = 190
@@ -673,7 +638,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(718, 399)
+        Me.Label12.Location = New System.Drawing.Point(801, 391)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(37, 15)
         Me.Label12.TabIndex = 195
@@ -687,7 +652,7 @@ Partial Class frmPaymentandChqprint
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"PARTY", "FEED", "MEDICINE", "CAPITAL", "IMPREST", "LOCAL PARTY", "HARDWARE & PACKING MAT.", "PARTNER CAPITAL", "PARENTAL BIRD", "P.P.BIRD MARKETING", "ELECTRICITY", "TELEPHONE", "SALARY & WAGES & BONUS", "TAXES FEES & INSURANCE & CONSULTANCY", "GROUP INSURANCE & GRATUITY", "DIESEL & PETROL", "ADVERTISEMENT", "DONATION & CHARITY", "IMPREST & INCENTIVE", "P.H RENT HATHING EGG PAYMENT", "AREA COLLECTION RET TO P.H", "VEHILE REP MAINT.", "MISC EXPS.", "STAFF WELFARE", "BANK TO BANK TRANSFER(INTERNAL)", "INTERNAL UNIT  TRANSFER"})
-        Me.ComboBox3.Location = New System.Drawing.Point(758, 393)
+        Me.ComboBox3.Location = New System.Drawing.Point(841, 385)
         Me.ComboBox3.MaxLength = 50
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(356, 21)
@@ -698,7 +663,7 @@ Partial Class frmPaymentandChqprint
         Me.dtpexpensedate.CustomFormat = "dd/MMM/yy"
         Me.dtpexpensedate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpexpensedate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpexpensedate.Location = New System.Drawing.Point(771, 420)
+        Me.dtpexpensedate.Location = New System.Drawing.Point(844, 412)
         Me.dtpexpensedate.Name = "dtpexpensedate"
         Me.dtpexpensedate.Size = New System.Drawing.Size(116, 20)
         Me.dtpexpensedate.TabIndex = 218
@@ -707,7 +672,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(667, 420)
+        Me.Label13.Location = New System.Drawing.Point(736, 412)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(105, 16)
         Me.Label13.TabIndex = 219
@@ -716,19 +681,62 @@ Partial Class frmPaymentandChqprint
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(678, 619)
+        Me.Button4.Location = New System.Drawing.Point(739, 619)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(52, 28)
         Me.Button4.TabIndex = 220
         Me.Button4.Text = "&Reset"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Column1"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Column1.TrueValue = "1"
+        Me.Column1.Width = 50
+        '
+        'Bill_No
+        '
+        Me.Bill_No.FillWeight = 75.0!
+        Me.Bill_No.HeaderText = "Bill_No"
+        Me.Bill_No.Name = "Bill_No"
+        '
+        'Bill_date
+        '
+        Me.Bill_date.FillWeight = 75.0!
+        Me.Bill_date.HeaderText = "Bill_Date"
+        Me.Bill_date.Name = "Bill_date"
+        '
+        'Amount
+        '
+        Me.Amount.HeaderText = "Amount"
+        Me.Amount.Name = "Amount"
+        '
+        'Session
+        '
+        Me.Session.FillWeight = 50.0!
+        Me.Session.HeaderText = "Session"
+        Me.Session.MaxInputLength = 10
+        Me.Session.Name = "Session"
+        '
+        'debit_amt
+        '
+        Me.debit_amt.HeaderText = "debit_amt"
+        Me.debit_amt.Name = "debit_amt"
+        '
+        'TdsAmount
+        '
+        Me.TdsAmount.HeaderText = "TdsAmount"
+        Me.TdsAmount.Name = "TdsAmount"
+        '
         'frmPaymentandChqprint
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
-        Me.ClientSize = New System.Drawing.Size(1247, 736)
+        Me.ClientSize = New System.Drawing.Size(1320, 736)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.dtpexpensedate)
         Me.Controls.Add(Me.Label13)
@@ -846,13 +854,14 @@ Partial Class frmPaymentandChqprint
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents dtpexpensedate As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents Bill_No As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Bill_date As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Amount As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Session As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents debit_amt As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents dtpexpensedate As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents TdsAmount As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

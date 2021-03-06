@@ -709,7 +709,7 @@ Public Class frmMDI
     End Sub
 
     Private Sub ChichkenBatchWiseSummToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChichkenBatchWiseSummToolStripMenuItem.Click
-        Dim tfrm As New frmChichkenBatchWiseSalePurchase
+        Dim tfrm As New frmTrial3
         tfrm.ShowDialog()
     End Sub
 
