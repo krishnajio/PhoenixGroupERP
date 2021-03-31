@@ -108,6 +108,10 @@ Partial Class frmMDI
         Me.XLSFiltToVoucherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RCMVoucherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisbursementRegisterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TRAuthToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TRPostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DMAuthToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DMPostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayPrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem22 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripSeparator()
@@ -494,7 +498,7 @@ Partial Class frmMDI
         '
         Me.JournalToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.JournalVouchersToolStripMenuItem})
         Me.JournalToolStripMenuItem1.Name = "JournalToolStripMenuItem1"
-        Me.JournalToolStripMenuItem1.Size = New System.Drawing.Size(192, 22)
+        Me.JournalToolStripMenuItem1.Size = New System.Drawing.Size(247, 22)
         Me.JournalToolStripMenuItem1.Text = "Journal"
         '
         'JournalVouchersToolStripMenuItem
@@ -508,7 +512,7 @@ Partial Class frmMDI
         '
         Me.SaleToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaleToolStripMenuItem2, Me.OtherSaleToolStripMenuItem, Me.ReceiptToolStripMenuItem1, Me.CrDebitToolStripMenuItem, Me.OtherDetectionVoucherEntryToolStripMenuItem, Me.ToolStripMenuItem38, Me.OtherSaleIUToolStripMenuItem})
         Me.SaleToolStripMenuItem1.Name = "SaleToolStripMenuItem1"
-        Me.SaleToolStripMenuItem1.Size = New System.Drawing.Size(192, 22)
+        Me.SaleToolStripMenuItem1.Size = New System.Drawing.Size(247, 22)
         Me.SaleToolStripMenuItem1.Text = "Sale"
         '
         'SaleToolStripMenuItem2
@@ -560,7 +564,7 @@ Partial Class frmMDI
         '
         Me.PurchaseToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PurchaseToolStripMenuItem2, Me.TDSEntryToolStripMenuItem, Me.JournalPurchaseToolStripMenuItem, Me.Form49IssueToolStripMenuItem})
         Me.PurchaseToolStripMenuItem1.Name = "PurchaseToolStripMenuItem1"
-        Me.PurchaseToolStripMenuItem1.Size = New System.Drawing.Size(192, 22)
+        Me.PurchaseToolStripMenuItem1.Size = New System.Drawing.Size(247, 22)
         Me.PurchaseToolStripMenuItem1.Text = "Purchase"
         '
         'PurchaseToolStripMenuItem2
@@ -594,7 +598,7 @@ Partial Class frmMDI
         '
         Me.BankToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PaymnetOthersToolStripMenuItem, Me.ToolStripMenuItem30, Me.TdsEntryToolStripMenuItem2})
         Me.BankToolStripMenuItem.Name = "BankToolStripMenuItem"
-        Me.BankToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.BankToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.BankToolStripMenuItem.Text = "Bank"
         '
         'PaymnetOthersToolStripMenuItem
@@ -619,7 +623,7 @@ Partial Class frmMDI
         '
         Me.ExpensesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExpensesToolStripMenuItem1, Me.TDSEntryToolStripMenuItem1, Me.TDsEntryModifyToolStripMenuItem, Me.ExpensesWithVehicleDetialsToolStripMenuItem})
         Me.ExpensesToolStripMenuItem.Name = "ExpensesToolStripMenuItem"
-        Me.ExpensesToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.ExpensesToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.ExpensesToolStripMenuItem.Text = "Expenses"
         '
         'ExpensesToolStripMenuItem1
@@ -650,7 +654,7 @@ Partial Class frmMDI
         '
         Me.CashCounterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReceiptToolStripMenuItem, Me.PaymentToolStripMenuItem})
         Me.CashCounterToolStripMenuItem.Name = "CashCounterToolStripMenuItem"
-        Me.CashCounterToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.CashCounterToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.CashCounterToolStripMenuItem.Text = "Cash Counter"
         '
         'ReceiptToolStripMenuItem
@@ -668,19 +672,19 @@ Partial Class frmMDI
         'OthersToolStripMenuItem
         '
         Me.OthersToolStripMenuItem.Name = "OthersToolStripMenuItem"
-        Me.OthersToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.OthersToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.OthersToolStripMenuItem.Text = "Other's"
         '
         'SuplementryEntryToolStripMenuItem
         '
         Me.SuplementryEntryToolStripMenuItem.Name = "SuplementryEntryToolStripMenuItem"
-        Me.SuplementryEntryToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.SuplementryEntryToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.SuplementryEntryToolStripMenuItem.Text = "Supplementry Entry"
         '
         'PurchaseToolStripMenuItem4
         '
         Me.PurchaseToolStripMenuItem4.Name = "PurchaseToolStripMenuItem4"
-        Me.PurchaseToolStripMenuItem4.Size = New System.Drawing.Size(192, 22)
+        Me.PurchaseToolStripMenuItem4.Size = New System.Drawing.Size(247, 22)
         Me.PurchaseToolStripMenuItem4.Text = "Purchase"
         Me.PurchaseToolStripMenuItem4.Visible = False
         '
@@ -688,7 +692,7 @@ Partial Class frmMDI
         '
         Me.BMToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaleToolStripMenuItem, Me.PurchaseToolStripMenuItem5, Me.ReceiptToolStripMenuItem2, Me.PaymentToolStripMenuItem1, Me.PJTDSToolStripMenuItem})
         Me.BMToolStripMenuItem.Name = "BMToolStripMenuItem"
-        Me.BMToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.BMToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.BMToolStripMenuItem.Text = "BM"
         '
         'SaleToolStripMenuItem
@@ -725,7 +729,7 @@ Partial Class frmMDI
         '
         Me.HatchToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HatchQtyToolStripMenuItem1, Me.AreaHatchQtyToolStripMenuItem})
         Me.HatchToolStripMenuItem.Name = "HatchToolStripMenuItem"
-        Me.HatchToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.HatchToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.HatchToolStripMenuItem.Text = "Hatch"
         '
         'HatchQtyToolStripMenuItem1
@@ -743,20 +747,20 @@ Partial Class frmMDI
         'MarketRateUpdationToolStripMenuItem
         '
         Me.MarketRateUpdationToolStripMenuItem.Name = "MarketRateUpdationToolStripMenuItem"
-        Me.MarketRateUpdationToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.MarketRateUpdationToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.MarketRateUpdationToolStripMenuItem.Text = "Market Rate Updation"
         '
         'MultipleToolStripMenuItem
         '
         Me.MultipleToolStripMenuItem.Name = "MultipleToolStripMenuItem"
-        Me.MultipleToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.MultipleToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.MultipleToolStripMenuItem.Text = "multiple"
         '
         'SalaryToolStripMenuItem
         '
         Me.SalaryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalaryBankTransferToolStripMenuItem1, Me.SalaryTransferToolStripMenuItem1, Me.SalaryTransferCasualStaffToolStripMenuItem1, Me.ProductionIncentiveVoucherToolStripMenuItem})
         Me.SalaryToolStripMenuItem.Name = "SalaryToolStripMenuItem"
-        Me.SalaryToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.SalaryToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.SalaryToolStripMenuItem.Text = "Salary Voucher"
         Me.SalaryToolStripMenuItem.Visible = False
         '
@@ -787,26 +791,51 @@ Partial Class frmMDI
         'ToolStripMenuItem37
         '
         Me.ToolStripMenuItem37.Name = "ToolStripMenuItem37"
-        Me.ToolStripMenuItem37.Size = New System.Drawing.Size(192, 22)
+        Me.ToolStripMenuItem37.Size = New System.Drawing.Size(247, 22)
         Me.ToolStripMenuItem37.Text = "BT Voucher"
         '
         'XLSFiltToVoucherToolStripMenuItem
         '
         Me.XLSFiltToVoucherToolStripMenuItem.Name = "XLSFiltToVoucherToolStripMenuItem"
-        Me.XLSFiltToVoucherToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.XLSFiltToVoucherToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.XLSFiltToVoucherToolStripMenuItem.Text = "XLS File To Voucher"
         '
         'RCMVoucherToolStripMenuItem
         '
         Me.RCMVoucherToolStripMenuItem.Name = "RCMVoucherToolStripMenuItem"
-        Me.RCMVoucherToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
+        Me.RCMVoucherToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.RCMVoucherToolStripMenuItem.Text = "RCM(Voucher)"
         '
         'DisbursementRegisterToolStripMenuItem
         '
+        Me.DisbursementRegisterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TRAuthToolStripMenuItem, Me.TRPostToolStripMenuItem, Me.DMAuthToolStripMenuItem, Me.DMPostToolStripMenuItem})
         Me.DisbursementRegisterToolStripMenuItem.Name = "DisbursementRegisterToolStripMenuItem"
-        Me.DisbursementRegisterToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
-        Me.DisbursementRegisterToolStripMenuItem.Text = "Disbursement Register"
+        Me.DisbursementRegisterToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
+        Me.DisbursementRegisterToolStripMenuItem.Text = "Mobile App Data Trf To Accounts"
+        '
+        'TRAuthToolStripMenuItem
+        '
+        Me.TRAuthToolStripMenuItem.Name = "TRAuthToolStripMenuItem"
+        Me.TRAuthToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TRAuthToolStripMenuItem.Text = "TR Auth"
+        '
+        'TRPostToolStripMenuItem
+        '
+        Me.TRPostToolStripMenuItem.Name = "TRPostToolStripMenuItem"
+        Me.TRPostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TRPostToolStripMenuItem.Text = "TR Post "
+        '
+        'DMAuthToolStripMenuItem
+        '
+        Me.DMAuthToolStripMenuItem.Name = "DMAuthToolStripMenuItem"
+        Me.DMAuthToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DMAuthToolStripMenuItem.Text = "DM Auth"
+        '
+        'DMPostToolStripMenuItem
+        '
+        Me.DMPostToolStripMenuItem.Name = "DMPostToolStripMenuItem"
+        Me.DMPostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DMPostToolStripMenuItem.Text = "DM Post"
         '
         'DisplayPrintToolStripMenuItem
         '
@@ -2064,4 +2093,8 @@ Partial Class frmMDI
     Friend WithEvents BankPartyListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TCSMasterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TCSReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TRAuthToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TRPostToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DMAuthToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DMPostToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

@@ -1441,8 +1441,7 @@ Public Class frmMDI
     End Sub
 
     Private Sub DisbursementRegisterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DisbursementRegisterToolStripMenuItem.Click
-        Dim disbur As New frmDisburReg
-        disbur.ShowDialog()
+       
     End Sub
     Private Sub ToolStripMenuItem39_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem39.Click
         Dim advledger As New frmAdvanceLedger
@@ -1516,6 +1515,30 @@ Public Class frmMDI
         Dim tcsrep As New frmTCSReport
         tcsrep.ShowDialog()
     End Sub
+    Private Sub ChangePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangePasswordToolStripMenuItem.Click
+        frmChangePassword.Show()
+    End Sub
 
-   
+  
+
+    Private Sub TRAuthToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TRAuthToolStripMenuItem.Click
+        Dim frmTrtep As New FrmAreaWiseReport
+        frmTrtep.ShowDialog()
+    End Sub
+
+    Private Sub TRPostToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TRPostToolStripMenuItem.Click
+
+        Dim frmTrtep As New frmPostToAccounts
+        frmTrtep.ShowDialog()
+    End Sub
+
+    Private Sub DMAuthToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DMAuthToolStripMenuItem.Click
+        Dim frmSupply As New FormSupply
+        frmSupply.ShowDialog()
+    End Sub
+
+    Private Sub DMPostToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DMPostToolStripMenuItem.Click
+        Dim frmSupplyPost As New frmDMPosting
+        frmSupplyPost.ShowDialog()
+    End Sub
 End Class

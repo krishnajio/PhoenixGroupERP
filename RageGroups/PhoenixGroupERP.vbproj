@@ -1345,6 +1345,54 @@
     <Compile Include="frmVoucherUnAuthr.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MobileDataFormsandReports\FormSupply.designer.vb">
+      <DependentUpon>FormSupply.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\FormSupply.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\FrmAreaWiseReport.designer.vb">
+      <DependentUpon>FrmAreaWiseReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\FrmAreaWiseReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\frmDMPosting.designer.vb">
+      <DependentUpon>frmDMPosting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\frmDMPosting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\frmPostToAccounts.designer.vb">
+      <DependentUpon>frmPostToAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\frmPostToAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\Reports\CrAreaWiseTrReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrAreaWiseTrReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\Reports\CrSupplyReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrSupplyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\Reports\CrSupplyReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrSupplyReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\Reports\CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="NewAmedment\CrPurchaeItemWiseSummaryJournal.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2966,6 +3014,34 @@
     <EmbeddedResource Include="frmVoucherUnAuthr.resx">
       <DependentUpon>frmVoucherUnAuthr.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobileDataFormsandReports\FormSupply.resx">
+      <DependentUpon>FormSupply.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobileDataFormsandReports\FrmAreaWiseReport.resx">
+      <DependentUpon>FrmAreaWiseReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobileDataFormsandReports\frmDMPosting.resx">
+      <DependentUpon>frmDMPosting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobileDataFormsandReports\frmPostToAccounts.resx">
+      <DependentUpon>frmPostToAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobileDataFormsandReports\Reports\CrAreaWiseTrReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrAreaWiseTrReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobileDataFormsandReports\Reports\CrSupplyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrSupplyReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobileDataFormsandReports\Reports\CrSupplyReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrSupplyReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobileDataFormsandReports\Reports\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\CrPurchaeItemWiseSummaryJournal.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
