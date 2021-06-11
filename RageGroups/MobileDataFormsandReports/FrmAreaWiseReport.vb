@@ -3,7 +3,7 @@ Public Class FrmAreaWiseReport
     Private Sub btnShow1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnShow1.Click
 
         If ComboBox1.Text = "ALL AREA" Then
-            Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks from [AreaTrPoultry]  order by tridarea" 'Where TrDate='" & DtpTrDate.Text.ToString & "' "
+            Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks from [AreaTrPoultry] where session ='" & GMod.Session & "'  order by tridarea" 'Where TrDate='" & DtpTrDate.Text.ToString & "' "
             GMod.DataSetRet(sql, "allAreatr")
             dg.DataSource = ds.Tables("allAreatr")
         End If
@@ -12,7 +12,7 @@ Public Class FrmAreaWiseReport
         'BY HATCH DATE
 
         If ComboBox1.Text = "SELECTED AREA" Then
-            Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks from [AreaTrPoultry] Where AreaCode='" & txtAreaCode.Text & "'  order by tridarea "
+            Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks from [AreaTrPoultry] Where AreaCode='" & txtAreaCode.Text & "' and session ='" & GMod.Session & "' order by tridarea "
             GMod.DataSetRet(sql, "SelectedArea")
             dg.DataSource = ds.Tables("SelectedArea")
         End If

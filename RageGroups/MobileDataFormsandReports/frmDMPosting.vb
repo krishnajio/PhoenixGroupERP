@@ -6,13 +6,13 @@ Public Class frmDMPosting
 
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
         If ComboBox1.Text = "ALL AREA" Then
-            sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry where isAuth=1 order by dmidarea"
+            sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry where isAuth=1 and isnull([isPosted],0) = 0 and session= '" & GMod.Session & "' and isDm='" & isDm & "' order by dmidarea"
             GMod.DataSetRet(sql, "allAreadm")
             dg.DataSource = ds.Tables("allAreadm")
         End If
 
         If ComboBox1.Text = "SELECTED AREA" Then
-            sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where  AreaCode = '" & txtAreaCode.Text & "' and  isAuth=1 order by dmidarea"
+            sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where  AreaCode = '" & txtAreaCode.Text & "' and  isAuth=1  and isnull([isPosted],0) = 0 and session= '" & GMod.Session & "'  and isDm='" & isDm & "' order by dmidarea"
             GMod.DataSetRet(sql, "SelectedAreadm")
             dg.DataSource = ds.Tables("SelectedAreadm")
         End If
@@ -29,7 +29,7 @@ Public Class frmDMPosting
         End Try
     End Sub
     Private Sub frmDMPosting_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        isDm = 1
 
         tablename = "VENTRY" & "_" & "PHOE" & "_" & GMod.Getsession(Now)
         sql = "select vtype from Vtype where cmp_id='PHOE'  and session='" & GMod.Getsession(Now) & "' and vtype like '%SALE%'"
@@ -94,23 +94,37 @@ Public Class frmDMPosting
                     ' GMod.VENTRY
                     vouno = getvouno + counter
                     'MsgBox(vouno)
-                    sql = " select Insurace,Tcs_Amt, Insurace + Tcs_Amt ins_tcs_amt,Tcs_per from [AreaDMPoultry] where Dmno ='DMNO/43/GSPR/Mar 24 2021  4:25PM/2021'"
+                    sql = " select Insurace,Tcs_Amt, Insurace + Tcs_Amt ins_tcs_amt,Tcs_per from [AreaDMPoultry] where Dmno ='" & dg(5, i).Value & "' and session= '" & GMod.Session & "'"
                     GMod.DataSetRet(sql, "ins_tcs_amt")
 
-                    sql = "select Sum(Amount) amount from [AreaDMPoultry_det] where DmNo ='DMNO/43/GSPR/Mar 24 2021  4:25PM/2021'"
+                    If GMod.ds.Tables("ins_tcs_amt").Rows.Count > 0 Then
+                        tcs_per = Val(GMod.ds.Tables("ins_tcs_amt").Rows(0)(3).ToString)
+                        ins_amount = Val(GMod.ds.Tables("ins_tcs_amt").Rows(0)(0).ToString)
+                        tcs_amt = Val(GMod.ds.Tables("ins_tcs_amt").Rows(0)(1).ToString)
+                    Else
+                        tcs_per = 0
+                        ins_amount = 0
+                        tcs_amt = 0
+                        total = 0
+                    End If
+
+                    sql = "select Sum(Amount) amount from [AreaDMPoultry_det] where DmNo ='" & dg(5, i).Value.ToString & "' and session= '" & GMod.Session & "'"
                     GMod.DataSetRet(sql, "amount")
 
-                    tcs_per = Val(GMod.ds.Tables("ins_tcs_amt").Rows(0)(3).ToString)
-                    ins_amount = Val(GMod.ds.Tables("ins_tcs_amt").Rows(0)(0).ToString)
-                    tcs_amt = Val(GMod.ds.Tables("ins_tcs_amt").Rows(0)(1).ToString)
-                    sale_amt = Val(GMod.ds.Tables("amount").Rows(0)(0).ToString)
-                    total = Val(GMod.ds.Tables("ins_tcs_amt").Rows(0)(2).ToString) + Val(GMod.ds.Tables("amount").Rows(0)(0).ToString)
+                    If GMod.ds.Tables("amount").Rows.Count > 0 Then
+                        sale_amt = Val(GMod.ds.Tables("amount").Rows(0)(0).ToString)
+                        total = Val(GMod.ds.Tables("ins_tcs_amt").Rows(0)(2).ToString) + Val(GMod.ds.Tables("amount").Rows(0)(0).ToString)
 
-                    Narration = "Being Sale of "
-                    sql = "select * from [dbo].[AreaDMPoultry_det] where DmNo ='DMNO/43/GSPR/Mar 24 2021  4:25PM/2021'"
+                    Else
+                        Exit Sub
+
+                    End If
+
+                    Narration = "By " & dg(5, i).Value.ToString & " Being Sale of "
+                    sql = "select * from [dbo].[AreaDMPoultry_det] where DmNo ='" & dg(5, i).Value & "'  and session= '" & GMod.Session & "'"
                     GMod.DataSetRet(sql, "dm_det")
                     For k = 0 To GMod.ds.Tables("dm_det").Rows.Count - 1
-                        NarrationBody &= GMod.ds.Tables("dm_det").Rows(k).Item(0).ToString & "Qty  Nos " & GMod.ds.Tables("dm_det").Rows(k).Item(1).ToString & " Kg " & GMod.ds.Tables("dm_det").Rows(k).Item(2).ToString & " @ " & GMod.ds.Tables("dm_det").Rows(k).Item(3).ToString
+                        NarrationBody &= GMod.ds.Tables("dm_det").Rows(k).Item(0).ToString & " Qty  Nos " & GMod.ds.Tables("dm_det").Rows(k).Item(1).ToString & " Kg " & GMod.ds.Tables("dm_det").Rows(k).Item(2).ToString & " @ " & GMod.ds.Tables("dm_det").Rows(k).Item(3).ToString
                     Next
                     Narration = Narration + NarrationBody
 
@@ -204,7 +218,7 @@ Public Class frmDMPosting
                     End If
 
 
-                    sql = "select * from AreaDMPoultry_det where DmNo ='DMNO/43/GSPR/Mar 24 2021  4:25PM/2021'"
+                    sql = "select * from AreaDMPoultry_det where DmNo ='" & dg(5, i).Value & "'"
                     GMod.DataSetRet(sql, "dm_details")
                     For k = 0 To GMod.ds.Tables("dm_details").Rows.Count - 1
                         'Inserting Other Sale Data
@@ -242,9 +256,9 @@ Public Class frmDMPosting
                         cmd3.ExecuteNonQuery()
                     Next
 
-                    sql = "Update AreaDMData Set isPosted=1  Where DMNo = '" & dg(2, i).Value & "'"
-                    'Dim cmd4 As New SqlCommand(sql, GMod.SqlConn, sqltrans)
-                    'cmd4.ExecuteNonQuery()
+                    sql = "Update AreaDMPoultry Set isPosted=1  Where DMNo ='" & dg(5, i).Value & "'"
+                    Dim cmd4 As New SqlCommand(sql, GMod.SqlConn, sqltrans)
+                    cmd4.ExecuteNonQuery()
 
                     amt = 0
                     billchicks = 0
@@ -286,46 +300,7 @@ Public Class frmDMPosting
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Try
-            If ComboBox1.Text = "ALL AREA" Then
-                sql = "Select Area,DMNo, DMDate, convert(varchar,HatchDate,103) HatchDate,Code,CName,Chick_type,Rate,TotalChicks,Mortality,Hatchries,Remarks,isAuth,HatchDate From AreaDMData where isAuth=1 and isnull(isPosted,0)=1 and Chick_type='" & cmbChicksType.Text & "'  order by dmidarea"
-                GMod.DataSetRet(sql, "allArea")
-                Dim cr As New CrSupplyReport1
-                cr.SetDataSource(ds.Tables("allArea"))
-                CrystalReportViewer1.ReportSource = cr
-            End If
-
-            'SELECTED AREA
-            'BY HATCH DATE
-
-            If ComboBox1.Text = "SELECTED AREA" Then
-                sql = "Select Area,DMNo, DMDate, convert(varchar,HatchDate,103) HatchDate,Code,CName,Chick_type,Rate,TotalChicks,Mortality,Hatchries,Remarks,isAuth,HatchDate From AreaDMData where isAuth=1 and isnull(isPosted,0)=1  and AreaCode = '" & txtAreaCode.Text & "' and Chick_type='" & cmbChicksType.Text & "'  order by dmidarea"
-                GMod.DataSetRet(sql, "allArea")
-                Dim cr As New CrSupplyReport1
-                cr.SetDataSource(ds.Tables("allArea"))
-                CrystalReportViewer1.ReportSource = cr
-            End If
-
-            If ComboBox1.Text = "BY HATCH DATE" Then
-                sql = "Select Area,DMNo, DMDate, convert(varchar,HatchDate,103) HatchDate,Code,CName,Chick_type,Rate,TotalChicks,Mortality,Hatchries,Remarks,isAuth,HatchDate From AreaDMData where isAuth=1 and isnull(isPosted,0)=1  and HatchDate between '" & DtpTrDate.Value.ToShortDateString & "' and '" & dthdate.Value.ToShortDateString & "' and Chick_type='" & cmbChicksType.Text & "'  order by dmidarea"
-                GMod.DataSetRet(sql, "allArea")
-                Dim cr As New CrSupplyReport1
-                cr.SetDataSource(ds.Tables("allArea"))
-                CrystalReportViewer1.ReportSource = cr
-            End If
-
-
-            If ComboBox1.Text = "SELECT AREA AND HATCH DATE" Then
-                sql = "Select Area,DMNo, DMDate, convert(varchar,HatchDate,103) HatchDate,Code,CName,Chick_type,Rate,TotalChicks,Mortality,Hatchries,Remarks,isAuth,HatchDate From AreaDMData where isAuth=1 and isnull(isPosted,0)=1 and HatchDate between '" & DtpTrDate.Value.ToShortDateString & "' and '" & dthdate.Value.ToShortDateString & "' and Chick_type='" & cmbChicksType.Text & "' and AreaCode = '" & txtAreaCode.Text & "'  order by dmidarea"
-                GMod.DataSetRet(sql, "allArea")
-                ' Dim cr As New CrystalReport2
-                'cr.SetDataSource(ds.Tables("allArea"))
-                'CrystalReportViewer1.ReportSource = cr
-
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+       
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
@@ -343,5 +318,15 @@ Public Class frmDMPosting
         Catch ex As Exception
 
         End Try
+    End Sub
+    Dim isDm As Integer
+    Private Sub ChkisDm_CheckedChanged(sender As Object, e As EventArgs) Handles ChkisDm.CheckedChanged
+        ChkisCm.Checked = False
+        isDm = 1
+    End Sub
+
+    Private Sub ChkisCm_CheckedChanged(sender As Object, e As EventArgs) Handles ChkisCm.CheckedChanged
+        ChkisDm.Checked = False
+        isDm = 0
     End Sub
 End Class

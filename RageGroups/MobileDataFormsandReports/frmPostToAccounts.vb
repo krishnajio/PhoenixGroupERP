@@ -4,7 +4,7 @@
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
 
         If ComboBox1.Text = "ALL AREA" Then
-            Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,convert(varchar,TrDate,103) TrDate,convert(varchar,HatchDate,103) HatchDate,convert(varchar,entrydate,103) entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks,Pay_type from [AreaTrPoultry] where isAuth=1 and isnull(isPosted,0)=0 " 'Where TrDate='" & DtpTrDate.Text.ToString & "' "
+            Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,convert(varchar,TrDate,103) TrDate,convert(varchar,HatchDate,103) HatchDate,convert(varchar,entrydate,103) entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks,Pay_type from [AreaTrPoultry] where isAuth=1 and isnull(isPosted,0)=0  and session = '" & GMod.Session & "'" 'Where TrDate='" & DtpTrDate.Text.ToString & "' "
             GMod.DataSetRet(sql, "allAreatrposting")
             dg.DataSource = ds.Tables("allAreatrposting")
         End If
@@ -13,13 +13,13 @@
         'BY HATCH DATE
 
         If ComboBox1.Text = "SELECTED AREA" Then
-            Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks,Pay_type from AreaTrPoultry Where AreaCode='" & txtAreaCode.Text & "' and isAuth=1 and isnull(isPosted,0)=0"
+            Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks,Pay_type from AreaTrPoultry Where AreaCode='" & txtAreaCode.Text & "' and isAuth=1 and isnull(isPosted,0)=0 and session = '" & GMod.Session & "'"
             GMod.DataSetRet(sql, "selectedAreatrposting")
             dg.DataSource = ds.Tables("selectedAreatrposting")
         End If
 
         If ComboBox1.Text = "BY HATCH DATE" Then
-            Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks,Pay_type from AreaTrPoultry Where HatchDate='" & DtpTrDate.Text.ToString & "' and isAuth=1 and isnull(isPosted,0) =0"
+            Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks,Pay_type from AreaTrPoultry Where HatchDate='" & DtpTrDate.Text.ToString & "' and isAuth=1 and isnull(isPosted,0) =0 and session = '" & GMod.Session & "'"
             GMod.DataSetRet(sql, "hatchdatrposting")
             dg.DataSource = ds.Tables("hatchdatrposting")
         End If
@@ -29,7 +29,7 @@
     Dim i As Integer
     Dim sql, Narration, vou_date As String
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        tablename = "VENTRY" & "_" & "PHHA" & "_" & GMod.Getsession(Now)
+        tablename = "VENTRY" & "_" & GMod.Cmpid & "_" & GMod.Getsession(Now)
         'BY  #TR NO. 002# DT. 02/Apr/19# Cash#SHEETAL#ADVANCE PAYMENT
         Dim vouno, getvouno As Integer
         sql = "SELECT isnull(max(cast(vou_no as numeric(18,0))),0) + 1 FROM " & tablename & " where vou_type = '" & cmbVoucherType.Text & "'"
@@ -50,8 +50,8 @@
                     Narration = "By TR NO " & dg(4, i).Value & " Dt." & dg(5, i).Value & " # " & dg(15, i).Value
                     'Customer Account Credited
                     sql = "insert into " & tablename & "(Cmp_id, Uname, Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, "
-                    sql &= "Acc_head, dramt, cramt, Pay_mode, Cheque_no, Narration, Group_name) values("
-                    sql &= "'PHOE',"
+                    sql &= "Acc_head, dramt, cramt, Pay_mode, Cheque_no, Narration, Group_name,sub_group_name) values("
+                    sql &= "'" & GMod.Cmpid & "',"
                     sql &= "'" & GMod.username & "',"
                     sql &= "'0',"
                     sql &= "'" & vouno & "',"
@@ -64,13 +64,14 @@
                     sql &= "'-',"
                     sql &= "'" & dg(14, i).Value & "',"
                     sql &= "'" & Narration & "',"
-                    sql &= "'CUSTOMER')"
+                    sql &= "'CUSTOMER',"
+                    sql &= "'-')"
                     GMod.SqlExecuteNonQuery(sql)
 
                     'Collection Account Debited
                     sql = "insert into " & tablename & "(Cmp_id, Uname, Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, "
-                    sql &= "Acc_head, cramt, dramt, Pay_mode, Cheque_no, Narration, Group_name) values("
-                    sql &= "'PHHA',"
+                    sql &= "Acc_head, cramt, dramt, Pay_mode, Cheque_no, Narration, Group_name,sub_group_name) values("
+                    sql &= "'" & GMod.Cmpid & "',"
                     sql &= "'" & GMod.username & "',"
                     sql &= "'0',"
                     sql &= "'" & vouno & "',"
@@ -83,12 +84,13 @@
                     sql &= "'-',"
                     sql &= "'" & dg(14, i).Value & "',"
                     sql &= "'" & Narration & "',"
+                    sql &= "'-',"
                     sql &= "'-')"
                     GMod.SqlExecuteNonQuery(sql)
 
                     MessageBox.Show(vouno)
                     counter = counter + 1
-                    sql = "Update AreaTrData Set isPosted=1  Where TrNo= '" & dg(4, i).Value & "'"
+                    sql = "Update AreaTrPoultry Set isPosted=1  Where TrNo= '" & dg(4, i).Value & "' and session ='" & GMod.Session & "'"
                     GMod.SqlExecuteNonQuery(sql)
                 End If
             Next

@@ -927,12 +927,12 @@ Public Class frmlogin
             btnlogin.Enabled = True
         End If
     End Sub
-
-    Private Sub cmbSession_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbSession.SelectedIndexChanged
-
-    End Sub
-
     Private Sub cmbcmpname_Leave(sender As Object, e As EventArgs) Handles cmbcmpname.Leave
         cmbSession.SelectedIndex = 0
+    End Sub
+
+   
+    Private Sub txtuname_TextChanged(sender As Object, e As EventArgs) Handles txtuname.TextChanged
+
     End Sub
 End Class

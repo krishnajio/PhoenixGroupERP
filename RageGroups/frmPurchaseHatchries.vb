@@ -567,7 +567,7 @@ Public Class frmPurchaseHatchries
                         ssaveprdvntry &= "'" & Val(txtTcsAmount.Text) & "',"
                         ssaveprdvntry &= "'" & Val(zero) & "',"
                         ssaveprdvntry &= "'" & narration.ToString & "',"
-                        ssaveprdvntry &= "'" & g & "',"
+                        ssaveprdvntry &= "'RECEIVABLE',"
                         ssaveprdvntry &= "'" & s & "','" & dtHatchdate.Value.ToShortDateString & "')"
                         'MsgBox(ssaveprdvntry)
                         'MsgBox(GMod.SqlExecuteNonQuery(ssaveprdvntry))

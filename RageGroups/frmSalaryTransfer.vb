@@ -25,7 +25,7 @@ Public Class frmSalaryTransfer
         'MsgBox(GMod.Getsession(dtvdate.Value))
         If GMod.Getsession(dtVoucherDate.Value) = GMod.Session Then
         Else
-            Me.Close()
+            ' Me.Close()
         End If
         Rdothr.Checked = True
     End Sub
@@ -35,7 +35,9 @@ Public Class frmSalaryTransfer
 
         ' Try
         dgvoucher.Rows.Clear()
-        Dim ConStrSal As String = "Data Source=192.168.0.130;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        'Dim ConStrSal As String = "Data Source=192.168.0.130;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        Dim ConStrSal As String = "Data Source=117.240.18.180;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+
         Dim sql, orgid, sqlname As String
         Dim i, j, row As Integer
         Dim da As New SqlDataAdapter

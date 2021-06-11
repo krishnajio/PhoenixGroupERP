@@ -1,0 +1,86 @@
+--select * from company
+
+CREATE TABLE [dbo].[ACC_HEAD_PHHA_2122](
+	[Cmp_id] [varchar](5)  NOT NULL DEFAULT ('-'),
+	[account_code] [varchar](18)  NOT NULL DEFAULT ('-'),
+	[account_head_name] [varchar](50)  NOT NULL DEFAULT ('-'),
+	[group_name] [varchar](40)  NOT NULL DEFAULT ('-'),
+	[sub_group_name] [varchar](60)  NOT NULL DEFAULT ('-'),
+	[credit_days] [varchar](50)  NOT NULL DEFAULT ('-'),
+	[credit_limit] [varchar](50)  NOT NULL DEFAULT ('-'),
+	[opening_dr] [numeric](18, 2) NOT NULL DEFAULT ((0)),
+	[opening_cr] [numeric](18, 2) NOT NULL DEFAULT ((0)),
+	[account_type] [varchar](50)  NOT NULL DEFAULT ('-'),
+	[address] [varchar](100)  NOT NULL DEFAULT ('-'),
+	[city] [varchar](30)  NOT NULL DEFAULT ('-'),
+	[state] [varchar](30)  NOT NULL DEFAULT ('-'),
+	[phone] [varchar](20)  NOT NULL DEFAULT ('-'),
+	[pan_no] [varchar](20)  NOT NULL DEFAULT ('-'),
+	[rate_of_interest] [varchar](50)  NOT NULL DEFAULT ('-'),
+	[interest_rule_id] [varchar](50)  NULL DEFAULT ('-'),
+	[Area_code] [varchar](2)  NULL DEFAULT ('-'),
+	[remark1] [varchar](100)  NOT NULL DEFAULT ('-'),
+	[remark2] [varchar](100)  NOT NULL DEFAULT ('-'),
+	[remark3] [varchar](100)  NOT NULL DEFAULT ('-'),
+PRIMARY KEY CLUSTERED 
+(
+	[account_code] ASC
+)WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+
+
+CREATE TABLE [dbo].[VENTRY_PHHA_2122](
+	[Cmp_id] [varchar](5)  NOT NULL   DEFAULT ('-'),
+	[Uname] [varchar](15)  NOT NULL   DEFAULT ('-'),
+	[Entry_id] [numeric](18, 2) NOT NULL   DEFAULT ((0)),
+	[Vou_no] [varchar](12)  NOT NULL   DEFAULT ('-'),
+	[Vou_type] [varchar](20)  NOT NULL   DEFAULT ('-'),
+	[Vou_date] [datetime] NOT NULL,
+	[Acc_head_code] [varchar](18)  NOT NULL   DEFAULT ('-'),
+	[Acc_head] [varchar](50)  NOT NULL   DEFAULT ('-'),
+	[dramt] [numeric](18, 2) NOT NULL   DEFAULT ((0)),
+	[cramt] [numeric](18, 2) NOT NULL  DEFAULT ((0)),
+	[Pay_mode] [varchar](20)  NOT NULL   DEFAULT ('-'),
+	[Cheque_no] [varchar](15)  NOT NULL   DEFAULT ('-'),
+	[Narration] [varchar](max)  NOT NULL   DEFAULT ('-'),
+	[Group_name] [varchar](40)  NOT NULL  DEFAULT ('-'),
+	[Sub_group_name] [varchar](60)  NOT NULL   DEFAULT ('-'),
+	[Ch_issue_date] [datetime] NULL,
+	[Ch_date] [datetime] NULL,
+	[id] [bigint] IDENTITY(1,1) NOT NULL,
+	[VoucherTax] [varchar](50)  NULL,
+	[TaxPer] [numeric](18, 2) NULL,
+	[TaxType] [varchar](50)  NULL,
+	[WinOut] [varchar](50)  NULL,
+	[exp_date] [datetime] NULL,
+	[item_name] [varchar](50)  NULL
+) ON [PRIMARY]
+
+--Groups Transfer
+insert Into Groups(Group_name, Suffix, BS_PL, Amount, Sqorder, Cmp_id, Dr_Cr, EffectsIN, session)
+select Group_name, Suffix, BS_PL, Amount, Sqorder, Cmp_id, Dr_Cr, EffectsIN, '2122'
+from Groups where cmp_id='PHHA' and session = '2021'
+
+--Sub Groups Transfer
+insert into Sub_Group(Sub_group_name, Group_name, Sqorder, Group_level, Balances, Shedules, Cmp_id, session, Suffix)
+select Sub_group_name, Group_name, Sqorder, Group_level, Balances, Shedules, Cmp_id, '2122', Suffix
+ from dbo.Sub_Group where cmp_id ='PHHA' and session ='2021'
+
+
+
+--Voucher Type Transfer
+
+insert into vtype(Cmp_id, Vtype, Seqorder, Vou_no_seq, vprefix, vgrp, Session )
+select Cmp_id, Vtype, Seqorder, Vou_no_seq, vprefix, vgrp, '2122' from vtype 
+where cmp_id='PHHA' and session ='2021'
+
+
+--Head Transfer
+insert into ACC_HEAD_PHHA_2122
+select Cmp_id, account_code, account_head_name, group_name, sub_group_name, 
+credit_days, credit_limit, '0', '0', account_type, address, 
+city, state, phone, pan_no, rate_of_interest, interest_rule_id, Area_code, remark1, remark2, remark3
+from dbo.ACC_HEAD_PHHA_2021

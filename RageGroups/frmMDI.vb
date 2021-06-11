@@ -1518,9 +1518,6 @@ Public Class frmMDI
     Private Sub ChangePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangePasswordToolStripMenuItem.Click
         frmChangePassword.Show()
     End Sub
-
-  
-
     Private Sub TRAuthToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TRAuthToolStripMenuItem.Click
         Dim frmTrtep As New FrmAreaWiseReport
         frmTrtep.ShowDialog()

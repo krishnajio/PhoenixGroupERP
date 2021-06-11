@@ -575,7 +575,7 @@ Public Class frmSaleInvoice
                         ssaveprdvntry &= "'" & Val(zero) & "',"
                         ssaveprdvntry &= "'" & Val(txtTcsAmount.Text) & "',"
                         ssaveprdvntry &= "'" & narration.ToString & "',"
-                        ssaveprdvntry &= "'" & g & "',"
+                        ssaveprdvntry &= "'TCS',"
                         ssaveprdvntry &= "'" & s & "','" & dtHatchdate.Value.ToShortDateString & "')"
                         'MsgBox(ssaveprdvntry)
                         'MsgBox(GMod.SqlExecuteNonQuery(ssaveprdvntry))

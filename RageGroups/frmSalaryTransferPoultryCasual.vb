@@ -20,7 +20,9 @@ Public Class frmSalaryTransferPoultryCasual
         cmbvtype.DataSource = GMod.ds.Tables("vty")
         cmbvtype.DisplayMember = "vtype"
 
-        Dim ConStrSal As String = "Data Source=192.168.0.130;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        ' Dim ConStrSal As String = "Data Source=192.168.0.130;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        Dim ConStrSal As String = "Data Source=117.240.18.180;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+
         Dim da1 As New SqlDataAdapter("select distinct orgid from  salacctransfer", ConStrSal)
         Dim ds1 As New DataSet
         da1.Fill(ds1)
@@ -37,7 +39,7 @@ Public Class frmSalaryTransferPoultryCasual
     Private Sub btnShow_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnShow.Click
         dgvoucher.Rows.Clear()
         ' Try
-        Dim ConStrSal As String = "Data Source=192.168.0.130;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        Dim ConStrSal As String = "Data Source=117.240.18.180;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
         Dim sql, orgid, sqlname As String
         Dim i, j, row As Integer
         Dim da As New SqlDataAdapter

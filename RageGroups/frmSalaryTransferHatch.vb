@@ -25,7 +25,7 @@ Public Class frmSalaryTransferHatch
         'MsgBox(GMod.Getsession(dtvdate.Value))
         If GMod.Getsession(dtVoucherDate.Value) = GMod.Session Then
         Else
-            Me.Close()
+            ' Me.Close()
         End If
     End Sub
     Public dsSal As New DataSet
@@ -34,7 +34,8 @@ Public Class frmSalaryTransferHatch
 
         ' Try
         dgvoucher.Rows.Clear()
-        Dim ConStrSal As String = "Data Source=192.168.0.130;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        '  Dim ConStrSal As String = "Data Source=192.168.0.130;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        Dim ConStrSal As String = "Data Source=117.240.18.180;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
         Dim sql, orgid, sqlname As String
         Dim i, j, row As Integer
         Dim da As New SqlDataAdapter
@@ -839,8 +840,8 @@ Public Class frmSalaryTransferHatch
     End Sub
 
     Private Sub dtVoucherDate_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtVoucherDate.ValueChanged
-        GMod.DataSetRet("select getdate()", "serverdate")
-        dtVoucherDate.MinDate = CDate(GMod.ds.Tables("serverdate").Rows(0)(0).ToString).AddDays(-Val(GMod.nofd))
-        dtVoucherDate.MaxDate = CDate(GMod.ds.Tables("serverdate").Rows(0)(0).ToString)
+        '  GMod.DataSetRet("select getdate()", "serverdate")
+        ' dtVoucherDate.MinDate = CDate(GMod.ds.Tables("serverdate").Rows(0)(0).ToString).AddDays(-Val(GMod.nofd))
+        'dtVoucherDate.MaxDate = CDate(GMod.ds.Tables("serverdate").Rows(0)(0).ToString)
     End Sub
 End Class

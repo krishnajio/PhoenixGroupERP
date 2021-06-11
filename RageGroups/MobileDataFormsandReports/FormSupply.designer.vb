@@ -22,22 +22,17 @@ Partial Class FormSupply
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dg = New System.Windows.Forms.DataGridView()
         Me.Auth = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.btnShow = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.dthdate = New System.Windows.Forms.DateTimePicker()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DtpTrDate = New System.Windows.Forms.DateTimePicker()
         Me.txtAreaCode = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.cmbChicksType = New System.Windows.Forms.ComboBox()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
@@ -45,40 +40,42 @@ Partial Class FormSupply
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dm2 = New System.Windows.Forms.TextBox()
         Me.dgDetials = New System.Windows.Forms.DataGridView()
+        Me.ChkisDm = New System.Windows.Forms.CheckBox()
+        Me.ChkisCm = New System.Windows.Forms.CheckBox()
         CType(Me.dg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgDetials, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dg
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Auth})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dg.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dg.DefaultCellStyle = DataGridViewCellStyle11
         Me.dg.Location = New System.Drawing.Point(-4, 124)
         Me.dg.Name = "dg"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.dg.Size = New System.Drawing.Size(1249, 339)
         Me.dg.TabIndex = 15
         '
@@ -92,7 +89,7 @@ Partial Class FormSupply
         'btnShow
         '
         Me.btnShow.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnShow.Location = New System.Drawing.Point(1076, 52)
+        Me.btnShow.Location = New System.Drawing.Point(611, 58)
         Me.btnShow.Name = "btnShow"
         Me.btnShow.Size = New System.Drawing.Size(75, 29)
         Me.btnShow.TabIndex = 13
@@ -113,31 +110,12 @@ Partial Class FormSupply
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(1157, 51)
+        Me.Button1.Location = New System.Drawing.Point(692, 57)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 30)
         Me.Button1.TabIndex = 14
         Me.Button1.Text = "AUTH."
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(664, 56)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(42, 20)
-        Me.Label5.TabIndex = 50
-        Me.Label5.Text = "To :"
-        '
-        'dthdate
-        '
-        Me.dthdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dthdate.Location = New System.Drawing.Point(712, 54)
-        Me.dthdate.Name = "dthdate"
-        Me.dthdate.Size = New System.Drawing.Size(120, 26)
-        Me.dthdate.TabIndex = 49
         '
         'ComboBox1
         '
@@ -149,15 +127,6 @@ Partial Class FormSupply
         Me.ComboBox1.Size = New System.Drawing.Size(186, 21)
         Me.ComboBox1.TabIndex = 48
         '
-        'DtpTrDate
-        '
-        Me.DtpTrDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtpTrDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DtpTrDate.Location = New System.Drawing.Point(538, 54)
-        Me.DtpTrDate.Name = "DtpTrDate"
-        Me.DtpTrDate.Size = New System.Drawing.Size(120, 26)
-        Me.DtpTrDate.TabIndex = 47
-        '
         'txtAreaCode
         '
         Me.txtAreaCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -165,16 +134,6 @@ Partial Class FormSupply
         Me.txtAreaCode.Name = "txtAreaCode"
         Me.txtAreaCode.Size = New System.Drawing.Size(125, 26)
         Me.txtAreaCode.TabIndex = 46
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(415, 57)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(117, 20)
-        Me.Label3.TabIndex = 45
-        Me.Label3.Text = "Hatch Date :"
         '
         'Label2
         '
@@ -186,20 +145,10 @@ Partial Class FormSupply
         Me.Label2.TabIndex = 44
         Me.Label2.Text = "Area :"
         '
-        'cmbChicksType
-        '
-        Me.cmbChicksType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbChicksType.FormattingEnabled = True
-        Me.cmbChicksType.Items.AddRange(New Object() {"Broiler", "Broiler(M)", "Layer", "Cockrel"})
-        Me.cmbChicksType.Location = New System.Drawing.Point(838, 56)
-        Me.cmbChicksType.Name = "cmbChicksType"
-        Me.cmbChicksType.Size = New System.Drawing.Size(232, 21)
-        Me.cmbChicksType.TabIndex = 51
-        '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(994, 90)
+        Me.RadioButton1.Location = New System.Drawing.Point(529, 96)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(76, 17)
         Me.RadioButton1.TabIndex = 52
@@ -210,7 +159,7 @@ Partial Class FormSupply
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(1076, 83)
+        Me.Button2.Location = New System.Drawing.Point(611, 89)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 29)
         Me.Button2.TabIndex = 53
@@ -261,24 +210,45 @@ Partial Class FormSupply
         Me.dgDetials.Size = New System.Drawing.Size(1210, 220)
         Me.dgDetials.TabIndex = 58
         '
+        'ChkisDm
+        '
+        Me.ChkisDm.AutoSize = True
+        Me.ChkisDm.Checked = True
+        Me.ChkisDm.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ChkisDm.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkisDm.Location = New System.Drawing.Point(409, 57)
+        Me.ChkisDm.Name = "ChkisDm"
+        Me.ChkisDm.Size = New System.Drawing.Size(53, 24)
+        Me.ChkisDm.TabIndex = 59
+        Me.ChkisDm.Text = "DM"
+        Me.ChkisDm.UseVisualStyleBackColor = True
+        '
+        'ChkisCm
+        '
+        Me.ChkisCm.AutoSize = True
+        Me.ChkisCm.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkisCm.Location = New System.Drawing.Point(472, 57)
+        Me.ChkisCm.Name = "ChkisCm"
+        Me.ChkisCm.Size = New System.Drawing.Size(51, 24)
+        Me.ChkisCm.TabIndex = 60
+        Me.ChkisCm.Text = "CM"
+        Me.ChkisCm.UseVisualStyleBackColor = True
+        '
         'FormSupply
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1257, 749)
+        Me.Controls.Add(Me.ChkisCm)
+        Me.Controls.Add(Me.ChkisDm)
         Me.Controls.Add(Me.dgDetials)
         Me.Controls.Add(Me.dm2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.dm1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.RadioButton1)
-        Me.Controls.Add(Me.cmbChicksType)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.dthdate)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.DtpTrDate)
         Me.Controls.Add(Me.txtAreaCode)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.dg)
         Me.Controls.Add(Me.btnShow)
@@ -299,14 +269,9 @@ Partial Class FormSupply
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Auth As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents dthdate As System.Windows.Forms.DateTimePicker
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents DtpTrDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents txtAreaCode As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents cmbChicksType As System.Windows.Forms.ComboBox
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
@@ -314,4 +279,6 @@ Partial Class FormSupply
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents dm2 As System.Windows.Forms.TextBox
     Friend WithEvents dgDetials As System.Windows.Forms.DataGridView
+    Friend WithEvents ChkisDm As System.Windows.Forms.CheckBox
+    Friend WithEvents ChkisCm As System.Windows.Forms.CheckBox
 End Class

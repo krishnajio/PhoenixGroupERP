@@ -22,9 +22,9 @@ Partial Class frmDMPosting
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbBankCode = New System.Windows.Forms.ComboBox()
         Me.cmbbankHead = New System.Windows.Forms.ComboBox()
@@ -35,15 +35,10 @@ Partial Class frmDMPosting
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.btnShow = New System.Windows.Forms.Button()
-        Me.DtpTrDate = New System.Windows.Forms.DateTimePicker()
         Me.txtAreaCode = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dg = New System.Windows.Forms.DataGridView()
         Me.Auth = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.dthdate = New System.Windows.Forms.DateTimePicker()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.cmbChicksType = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -54,6 +49,8 @@ Partial Class frmDMPosting
         Me.cmdTcsCode = New System.Windows.Forms.ComboBox()
         Me.cmbTcsHead = New System.Windows.Forms.ComboBox()
         Me.dgDetials = New System.Windows.Forms.DataGridView()
+        Me.ChkisCm = New System.Windows.Forms.CheckBox()
+        Me.ChkisDm = New System.Windows.Forms.CheckBox()
         CType(Me.dg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgDetials, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -81,18 +78,18 @@ Partial Class frmDMPosting
         '
         'cmbbankHead
         '
-        Me.cmbbankHead.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cmbbankHead.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cmbbankHead.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbbankHead.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbbankHead.FormattingEnabled = True
         Me.cmbbankHead.Location = New System.Drawing.Point(734, 73)
         Me.cmbbankHead.Name = "cmbbankHead"
-        Me.cmbbankHead.Size = New System.Drawing.Size(236, 24)
+        Me.cmbbankHead.Size = New System.Drawing.Size(308, 24)
         Me.cmbbankHead.TabIndex = 39
         '
         'cmbVoucherType
         '
-        Me.cmbVoucherType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cmbVoucherType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cmbVoucherType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbVoucherType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbVoucherType.FormattingEnabled = True
@@ -123,7 +120,7 @@ Partial Class frmDMPosting
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(1239, 72)
+        Me.Button1.Location = New System.Drawing.Point(1048, 91)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 41)
         Me.Button1.TabIndex = 35
@@ -143,7 +140,7 @@ Partial Class frmDMPosting
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(1048, 41)
+        Me.RadioButton1.Location = New System.Drawing.Point(814, 40)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(76, 17)
         Me.RadioButton1.TabIndex = 33
@@ -154,21 +151,12 @@ Partial Class frmDMPosting
         'btnShow
         '
         Me.btnShow.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnShow.Location = New System.Drawing.Point(1130, 35)
+        Me.btnShow.Location = New System.Drawing.Point(733, 34)
         Me.btnShow.Name = "btnShow"
         Me.btnShow.Size = New System.Drawing.Size(75, 26)
         Me.btnShow.TabIndex = 32
         Me.btnShow.Text = "SHOW"
         Me.btnShow.UseVisualStyleBackColor = True
-        '
-        'DtpTrDate
-        '
-        Me.DtpTrDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DtpTrDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DtpTrDate.Location = New System.Drawing.Point(536, 39)
-        Me.DtpTrDate.Name = "DtpTrDate"
-        Me.DtpTrDate.Size = New System.Drawing.Size(120, 26)
-        Me.DtpTrDate.TabIndex = 31
         '
         'txtAreaCode
         '
@@ -177,16 +165,7 @@ Partial Class frmDMPosting
         Me.txtAreaCode.Name = "txtAreaCode"
         Me.txtAreaCode.Size = New System.Drawing.Size(125, 26)
         Me.txtAreaCode.TabIndex = 30
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(413, 42)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(117, 20)
-        Me.Label3.TabIndex = 29
-        Me.Label3.Text = "Hatch Date :"
+        Me.txtAreaCode.Text = "GSPR"
         '
         'Label2
         '
@@ -200,34 +179,34 @@ Partial Class frmDMPosting
         '
         'dg
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Auth})
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dg.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dg.DefaultCellStyle = DataGridViewCellStyle8
         Me.dg.Location = New System.Drawing.Point(22, 164)
         Me.dg.Name = "dg"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.dg.Size = New System.Drawing.Size(1292, 343)
         Me.dg.TabIndex = 41
         '
@@ -238,39 +217,10 @@ Partial Class frmDMPosting
         Me.Auth.Name = "Auth"
         Me.Auth.TrueValue = "1"
         '
-        'dthdate
-        '
-        Me.dthdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dthdate.Location = New System.Drawing.Point(710, 39)
-        Me.dthdate.Name = "dthdate"
-        Me.dthdate.Size = New System.Drawing.Size(120, 26)
-        Me.dthdate.TabIndex = 42
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(662, 41)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(42, 20)
-        Me.Label5.TabIndex = 43
-        Me.Label5.Text = "To :"
-        '
-        'cmbChicksType
-        '
-        Me.cmbChicksType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbChicksType.FormattingEnabled = True
-        Me.cmbChicksType.Items.AddRange(New Object() {"Broiler", "Broiler(M)", "Layer", "Cockrel"})
-        Me.cmbChicksType.Location = New System.Drawing.Point(836, 39)
-        Me.cmbChicksType.Name = "cmbChicksType"
-        Me.cmbChicksType.Size = New System.Drawing.Size(206, 21)
-        Me.cmbChicksType.TabIndex = 44
-        '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(1211, 34)
+        Me.Button2.Location = New System.Drawing.Point(896, 31)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(103, 26)
         Me.Button2.TabIndex = 46
@@ -348,13 +298,13 @@ Partial Class frmDMPosting
         '
         'cmbTcsHead
         '
-        Me.cmbTcsHead.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cmbTcsHead.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cmbTcsHead.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbTcsHead.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbTcsHead.FormattingEnabled = True
         Me.cmbTcsHead.Location = New System.Drawing.Point(734, 108)
         Me.cmbTcsHead.Name = "cmbTcsHead"
-        Me.cmbTcsHead.Size = New System.Drawing.Size(236, 24)
+        Me.cmbTcsHead.Size = New System.Drawing.Size(308, 24)
         Me.cmbTcsHead.TabIndex = 53
         '
         'dgDetials
@@ -365,11 +315,37 @@ Partial Class frmDMPosting
         Me.dgDetials.Size = New System.Drawing.Size(1210, 220)
         Me.dgDetials.TabIndex = 59
         '
+        'ChkisCm
+        '
+        Me.ChkisCm.AutoSize = True
+        Me.ChkisCm.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkisCm.Location = New System.Drawing.Point(468, 42)
+        Me.ChkisCm.Name = "ChkisCm"
+        Me.ChkisCm.Size = New System.Drawing.Size(51, 24)
+        Me.ChkisCm.TabIndex = 62
+        Me.ChkisCm.Text = "CM"
+        Me.ChkisCm.UseVisualStyleBackColor = True
+        '
+        'ChkisDm
+        '
+        Me.ChkisDm.AutoSize = True
+        Me.ChkisDm.Checked = True
+        Me.ChkisDm.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ChkisDm.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkisDm.Location = New System.Drawing.Point(405, 42)
+        Me.ChkisDm.Name = "ChkisDm"
+        Me.ChkisDm.Size = New System.Drawing.Size(53, 24)
+        Me.ChkisDm.TabIndex = 61
+        Me.ChkisDm.Text = "DM"
+        Me.ChkisDm.UseVisualStyleBackColor = True
+        '
         'frmDMPosting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1326, 749)
+        Me.Controls.Add(Me.ChkisCm)
+        Me.Controls.Add(Me.ChkisDm)
         Me.Controls.Add(Me.dgDetials)
         Me.Controls.Add(Me.cmdTcsCode)
         Me.Controls.Add(Me.cmbTcsHead)
@@ -379,9 +355,6 @@ Partial Class frmDMPosting
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.cmbChicksType)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.dthdate)
         Me.Controls.Add(Me.dg)
         Me.Controls.Add(Me.cmbBankCode)
         Me.Controls.Add(Me.cmbbankHead)
@@ -392,20 +365,18 @@ Partial Class frmDMPosting
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.btnShow)
-        Me.Controls.Add(Me.DtpTrDate)
         Me.Controls.Add(Me.txtAreaCode)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "frmDMPosting"
         Me.Text = "frmDMPosting"
-        CType(Me.dg, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgDetials, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        CType(Me.dg,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.dgDetials,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
+End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents cmbBankCode As System.Windows.Forms.ComboBox
     Friend WithEvents cmbbankHead As System.Windows.Forms.ComboBox
@@ -416,15 +387,10 @@ Partial Class frmDMPosting
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents btnShow As System.Windows.Forms.Button
-    Friend WithEvents DtpTrDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents txtAreaCode As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents dg As System.Windows.Forms.DataGridView
     Friend WithEvents Auth As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents dthdate As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents cmbChicksType As System.Windows.Forms.ComboBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents Label6 As System.Windows.Forms.Label
@@ -435,4 +401,6 @@ Partial Class frmDMPosting
     Friend WithEvents cmdTcsCode As System.Windows.Forms.ComboBox
     Friend WithEvents cmbTcsHead As System.Windows.Forms.ComboBox
     Friend WithEvents dgDetials As System.Windows.Forms.DataGridView
+    Friend WithEvents ChkisCm As System.Windows.Forms.CheckBox
+    Friend WithEvents ChkisDm As System.Windows.Forms.CheckBox
 End Class
