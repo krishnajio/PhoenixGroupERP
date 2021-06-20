@@ -43,7 +43,7 @@ Public Class frmReceipt
 
         fillArea()
 
-        sql = "select vtype from Vtype where cmp_id='" & GMod.Cmpid & "'  and (vtype like '%CR VOUCHER%'  or  vtype like '%RECEIPT%' or  vtype like '%FRECEIPT%') and vtype not like 'sale CR'  and session = '" & GMod.Session & "'"
+        sql = "select vtype from Vtype where cmp_id='" & GMod.Cmpid & "'  and (vtype like '%CR VOUCHER%'  or  vtype like '%RECEIPT%' or  vtype like '%CASH CR%') and vtype not like 'sale CR'  and session = '" & GMod.Session & "'"
         GMod.DataSetRet(sql, "CRVT")
         cmbvoutype.DataSource = GMod.ds.Tables("CRVT")
         cmbvoutype.DisplayMember = "vtype"
