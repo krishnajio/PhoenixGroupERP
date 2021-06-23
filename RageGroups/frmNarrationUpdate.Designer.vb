@@ -54,14 +54,14 @@ Partial Class frmNarrationUpdate
         Me.dtvdate.CustomFormat = "dd/MMM/yy"
         Me.dtvdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtvdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtvdate.Location = New System.Drawing.Point(477, 37)
+        Me.dtvdate.Location = New System.Drawing.Point(582, 39)
         Me.dtvdate.Name = "dtvdate"
         Me.dtvdate.Size = New System.Drawing.Size(89, 20)
         Me.dtvdate.TabIndex = 73
         '
         'txtvono
         '
-        Me.txtvono.Location = New System.Drawing.Point(379, 38)
+        Me.txtvono.Location = New System.Drawing.Point(484, 40)
         Me.txtvono.Name = "txtvono"
         Me.txtvono.Size = New System.Drawing.Size(92, 20)
         Me.txtvono.TabIndex = 71
@@ -83,14 +83,14 @@ Partial Class frmNarrationUpdate
         Me.cmbcptype.Items.AddRange(New Object() {"Bank", "Cash", "Journal"})
         Me.cmbcptype.Location = New System.Drawing.Point(102, 38)
         Me.cmbcptype.Name = "cmbcptype"
-        Me.cmbcptype.Size = New System.Drawing.Size(184, 21)
+        Me.cmbcptype.Size = New System.Drawing.Size(289, 21)
         Me.cmbcptype.TabIndex = 69
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Label3.Location = New System.Drawing.Point(292, 40)
+        Me.Label3.Location = New System.Drawing.Point(397, 42)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(81, 15)
         Me.Label3.TabIndex = 74
@@ -145,7 +145,7 @@ Partial Class frmNarrationUpdate
         '
         'btnshow
         '
-        Me.btnshow.Location = New System.Drawing.Point(572, 37)
+        Me.btnshow.Location = New System.Drawing.Point(677, 39)
         Me.btnshow.Name = "btnshow"
         Me.btnshow.Size = New System.Drawing.Size(75, 23)
         Me.btnshow.TabIndex = 80

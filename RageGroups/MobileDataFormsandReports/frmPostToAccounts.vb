@@ -116,7 +116,7 @@
 
         headtable = "ACC_HEAD" & "_" & "PHOE" & "_" & GMod.Getsession(Now)
 
-        sql = " select * from " & headtable & " where cmp_id='PHOE' and group_name='COLLECTION'"
+        sql = " select * from " & headtable & " where cmp_id='PHOE' and group_name='COLLECTION' or account_code ='**CU2870'"
         GMod.DataSetRet(sql, "aclistcr")
 
         cmbBankCode.DataSource = GMod.ds.Tables("aclistcr")
@@ -186,4 +186,7 @@
     End Sub
 
 
+    Private Sub cmbbankHead_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbbankHead.SelectedIndexChanged
+
+    End Sub
 End Class

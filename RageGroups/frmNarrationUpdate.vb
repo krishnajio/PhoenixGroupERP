@@ -14,7 +14,7 @@ Public Class frmNarrationUpdate
     End Sub
 
     Private Sub frmNarrationUpdate_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        GMod.DataSetRet("select * from vtype where cmp_id='" & GMod.Cmpid & "' order by seqorder", "vty")
+        GMod.DataSetRet("select * from vtype where cmp_id='" & GMod.Cmpid & "' and session = '" & GMod.Session & "'  order by vtype ", "vty")
         cmbcptype.DataSource = GMod.ds.Tables("vty")
         cmbcptype.DisplayMember = "vtype"
     End Sub
