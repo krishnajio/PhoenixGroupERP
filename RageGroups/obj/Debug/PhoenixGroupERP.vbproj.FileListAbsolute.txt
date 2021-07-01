@@ -1788,3 +1788,4 @@ D:\PhoenixGitRepo\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\PhoenixGro
 D:\PhoenixGitRepo\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.TrustInfo.xml
 D:\PhoenixGitRepo\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.exe.manifest
 D:\PhoenixGitRepo\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.application
+E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\PhoenixGroupERP.vbprojResolveAssemblyReference.cache

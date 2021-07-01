@@ -46,7 +46,8 @@ Public Class frmTCSReport
         cmbPartyGroup.DisplayMember = "group_name"
 
         sql = "select * from TcsMaster where cmp_id='" & GMod.Cmpid & "'"
-        GMod.DataSetRet(Sql, "tdm")
+
+        GMod.DataSetRet(sql, "tdm")
 
         cmbtdsType.DataSource = GMod.ds.Tables("tdm")
         cmbtdsType.DisplayMember = "TcsType"
