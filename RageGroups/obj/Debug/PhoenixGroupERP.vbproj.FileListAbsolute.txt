@@ -1788,3 +1788,4 @@ E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.applicat
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.exe
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.xml
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
+E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\PhoenixGroupERP.vbprojResolveAssemblyReference.cache

@@ -883,7 +883,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.Label30.Location = New System.Drawing.Point(606, 513)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(64, 13)
-        Me.Label30.TabIndex = 243
+        Me.Label30.TabIndex = 5689
         Me.Label30.Text = "Stock No."
         '
         'TxtStockNo
@@ -901,7 +901,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.cmbBrokerName.BackColor = System.Drawing.Color.White
         Me.cmbBrokerName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbBrokerName.FormattingEnabled = True
-        Me.cmbBrokerName.Location = New System.Drawing.Point(130, 530)
+        Me.cmbBrokerName.Location = New System.Drawing.Point(129, 530)
         Me.cmbBrokerName.Name = "cmbBrokerName"
         Me.cmbBrokerName.Size = New System.Drawing.Size(371, 24)
         Me.cmbBrokerName.TabIndex = 42
@@ -934,7 +934,6 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.txtPoly.Name = "txtPoly"
         Me.txtPoly.Size = New System.Drawing.Size(85, 20)
         Me.txtPoly.TabIndex = 33
-        Me.txtPoly.TabStop = False
         Me.txtPoly.Text = "0"
         '
         'Label36
@@ -953,7 +952,6 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.txtJute.Name = "txtJute"
         Me.txtJute.Size = New System.Drawing.Size(85, 20)
         Me.txtJute.TabIndex = 34
-        Me.txtJute.TabStop = False
         Me.txtJute.Text = "0"
         '
         'Label37
@@ -1370,7 +1368,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.cmbVoucherTax.Location = New System.Drawing.Point(141, 238)
         Me.cmbVoucherTax.Name = "cmbVoucherTax"
         Me.cmbVoucherTax.Size = New System.Drawing.Size(100, 21)
-        Me.cmbVoucherTax.TabIndex = 33
+        Me.cmbVoucherTax.TabIndex = 22
         '
         'cmbPrdType
         '
@@ -1468,7 +1466,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.cmbtdsType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbtdsType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbtdsType.FormattingEnabled = True
-        Me.cmbtdsType.Location = New System.Drawing.Point(129, 558)
+        Me.cmbtdsType.Location = New System.Drawing.Point(130, 556)
         Me.cmbtdsType.Name = "cmbtdsType"
         Me.cmbtdsType.Size = New System.Drawing.Size(161, 21)
         Me.cmbtdsType.TabIndex = 36

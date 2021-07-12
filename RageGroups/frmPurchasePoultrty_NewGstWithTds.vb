@@ -2207,7 +2207,5 @@ Public Class frmPurchasePoultrty_NewGstWithTds
         txtGrandTotal.Text = Val(txtTcsAmount.Text) + Val(txtTotal.Text)
     End Sub
 
-    
-
-   
+ 
 End Class
