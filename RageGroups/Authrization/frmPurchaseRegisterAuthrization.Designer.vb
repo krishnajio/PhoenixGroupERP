@@ -72,7 +72,7 @@ Partial Class frmPurchaseRegisterAuthrization
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(283, 31)
+        Me.Button1.Location = New System.Drawing.Point(283, 32)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(125, 25)
         Me.Button1.TabIndex = 34
@@ -119,7 +119,7 @@ Partial Class frmPurchaseRegisterAuthrization
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Label8.Location = New System.Drawing.Point(7, 31)
+        Me.Label8.Location = New System.Drawing.Point(3, 36)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(97, 15)
         Me.Label8.TabIndex = 207
@@ -139,7 +139,7 @@ Partial Class frmPurchaseRegisterAuthrization
         '
         Me.voutype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.voutype.FormattingEnabled = True
-        Me.voutype.Location = New System.Drawing.Point(109, 27)
+        Me.voutype.Location = New System.Drawing.Point(109, 34)
         Me.voutype.Name = "voutype"
         Me.voutype.Size = New System.Drawing.Size(168, 21)
         Me.voutype.TabIndex = 206

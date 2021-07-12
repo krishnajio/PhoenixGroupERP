@@ -528,7 +528,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
                     sqlsave &= "'" & dgvoucher(4, i).Value & "',"
                     sqlsave &= "'" & dgvoucher(5, i).Value & "',"
                     sqlsave &= "'" & dgvoucher(15, i).Value & "',"
-                    sqlsave &= "'" & Val(dgvoucher(14, i).Value) & "',"
+                    sqlsave &= "'" & Val(txtTdsAmt1.Text) & "'," 'varcst_amt BEFORE 12-7-21  Val(dgvoucher(14, i).Value)
                     sqlsave &= "'" & cmbfercode.Text & "',"
                     If i = 0 Then
                         sqlsave &= "'" & Val(txtTcsAmount.Text) & "',"
@@ -1684,7 +1684,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
     End Sub
     Public Function Checkbill()
         Dim ch As String
-        ch = "select bill_no from purchase_data where session ='" & GMod.Session & "' and party_code='" & cmbacheadcode.Text.Trim & "' and bill_no='" & txtBillNo.Text.Trim & "'" ' and authr <>'-'"
+        ch = "select bill_no from purchase_data where session ='" & GMod.Session & "' and party_code='" & cmbacheadcode.Text.Trim & "' and bill_no='" & txtBillNo.Text.Trim & "' and vou_type<>'DR NOTE(PUR)'" ' and authr <>'-'"
         GMod.DataSetRet(ch, "chk_bill")
         If GMod.ds.Tables("chk_bill").Rows.Count > 0 Then
             MessageBox.Show("Duplicate bill", "Duplicate bill", MessageBoxButtons.OKCancel)
@@ -2206,4 +2206,8 @@ Public Class frmPurchasePoultrty_NewGstWithTds
     Private Sub txtTcsAmount_TextChanged(sender As Object, e As EventArgs) Handles txtTcsAmount.TextChanged
         txtGrandTotal.Text = Val(txtTcsAmount.Text) + Val(txtTotal.Text)
     End Sub
+
+    
+
+   
 End Class

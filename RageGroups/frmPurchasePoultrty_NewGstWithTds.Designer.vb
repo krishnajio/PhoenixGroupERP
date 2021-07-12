@@ -221,7 +221,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.btn_modify.Location = New System.Drawing.Point(303, 706)
         Me.btn_modify.Name = "btn_modify"
         Me.btn_modify.Size = New System.Drawing.Size(101, 35)
-        Me.btn_modify.TabIndex = 46
+        Me.btn_modify.TabIndex = 42
         Me.btn_modify.Text = "&Modify"
         Me.btn_modify.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_modify.UseVisualStyleBackColor = True
@@ -234,7 +234,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.btnsave.Location = New System.Drawing.Point(196, 706)
         Me.btnsave.Name = "btnsave"
         Me.btnsave.Size = New System.Drawing.Size(101, 35)
-        Me.btnsave.TabIndex = 36
+        Me.btnsave.TabIndex = 41
         Me.btnsave.Text = "&Save"
         Me.btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnsave.UseVisualStyleBackColor = True
@@ -617,7 +617,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.btndelete.Location = New System.Drawing.Point(410, 706)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(101, 35)
-        Me.btndelete.TabIndex = 47
+        Me.btndelete.TabIndex = 43
         Me.btndelete.Text = "&Delete"
         Me.btndelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btndelete.UseVisualStyleBackColor = True
@@ -801,7 +801,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.Button1.Location = New System.Drawing.Point(517, 706)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(85, 33)
-        Me.Button1.TabIndex = 48
+        Me.Button1.TabIndex = 44
         Me.Button1.Text = "&Close"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.UseVisualStyleBackColor = True
@@ -891,7 +891,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.TxtStockNo.Location = New System.Drawing.Point(673, 509)
         Me.TxtStockNo.Name = "TxtStockNo"
         Me.TxtStockNo.Size = New System.Drawing.Size(67, 20)
-        Me.TxtStockNo.TabIndex = 41
+        Me.TxtStockNo.TabIndex = 35
         Me.TxtStockNo.TabStop = False
         '
         'cmbBrokerName
@@ -933,7 +933,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.txtPoly.Location = New System.Drawing.Point(130, 508)
         Me.txtPoly.Name = "txtPoly"
         Me.txtPoly.Size = New System.Drawing.Size(85, 20)
-        Me.txtPoly.TabIndex = 38
+        Me.txtPoly.TabIndex = 33
         Me.txtPoly.TabStop = False
         Me.txtPoly.Text = "0"
         '
@@ -952,7 +952,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.txtJute.Location = New System.Drawing.Point(254, 509)
         Me.txtJute.Name = "txtJute"
         Me.txtJute.Size = New System.Drawing.Size(85, 20)
-        Me.txtJute.TabIndex = 39
+        Me.txtJute.TabIndex = 34
         Me.txtJute.TabStop = False
         Me.txtJute.Text = "0"
         '
@@ -1370,7 +1370,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.cmbVoucherTax.Location = New System.Drawing.Point(141, 238)
         Me.cmbVoucherTax.Name = "cmbVoucherTax"
         Me.cmbVoucherTax.Size = New System.Drawing.Size(100, 21)
-        Me.cmbVoucherTax.TabIndex = 22
+        Me.cmbVoucherTax.TabIndex = 33
         '
         'cmbPrdType
         '
@@ -1435,7 +1435,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.cmbTdsHead.Location = New System.Drawing.Point(129, 583)
         Me.cmbTdsHead.Name = "cmbTdsHead"
         Me.cmbTdsHead.Size = New System.Drawing.Size(266, 21)
-        Me.cmbTdsHead.TabIndex = 35
+        Me.cmbTdsHead.TabIndex = 38
         '
         'Label47
         '
@@ -1458,7 +1458,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.cmbTdsper.Location = New System.Drawing.Point(293, 558)
         Me.cmbTdsper.Name = "cmbTdsper"
         Me.cmbTdsper.Size = New System.Drawing.Size(49, 21)
-        Me.cmbTdsper.TabIndex = 34
+        Me.cmbTdsper.TabIndex = 37
         '
         'cmbtdsType
         '
@@ -1471,7 +1471,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.cmbtdsType.Location = New System.Drawing.Point(129, 558)
         Me.cmbtdsType.Name = "cmbtdsType"
         Me.cmbtdsType.Size = New System.Drawing.Size(161, 21)
-        Me.cmbtdsType.TabIndex = 33
+        Me.cmbtdsType.TabIndex = 36
         '
         'cmbacheadcodetds
         '
@@ -1569,7 +1569,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.txtTcsAmount.Location = New System.Drawing.Point(126, 663)
         Me.txtTcsAmount.Name = "txtTcsAmount"
         Me.txtTcsAmount.Size = New System.Drawing.Size(118, 21)
-        Me.txtTcsAmount.TabIndex = 43
+        Me.txtTcsAmount.TabIndex = 40
         '
         'Label34
         '
@@ -1654,7 +1654,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.cmbTCSType.Location = New System.Drawing.Point(126, 610)
         Me.cmbTCSType.Name = "cmbTCSType"
         Me.cmbTCSType.Size = New System.Drawing.Size(161, 21)
-        Me.cmbTCSType.TabIndex = 42
+        Me.cmbTCSType.TabIndex = 39
         '
         'cmbacheadcodeTCS
         '
