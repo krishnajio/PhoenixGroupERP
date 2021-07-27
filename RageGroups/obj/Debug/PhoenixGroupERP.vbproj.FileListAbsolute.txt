@@ -1689,6 +1689,7 @@ E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsMa
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmTransferHeadtoNextSession.resources
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2.resources
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2WithAddress.resources
+E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial2_Unauth.resources
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial3.resources
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrial4.resources
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmTrialWSOS.resources
@@ -1698,6 +1699,7 @@ E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.FormSupp
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.FrmAreaWiseReport.resources
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmDMPosting.resources
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmPostToAccounts.resources
+E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmPostToAccounts_Mutiple_Tr.resources
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmBalanceSheet3.resources
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusBankDr.resources
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmBonusDebitFrmXls.resources
@@ -1788,4 +1790,3 @@ E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.applicat
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.exe
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.xml
 E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
-E:\PhoenixGitRepo\PhoenixGroupERP\RageGroups\obj\Debug\PhoenixGroupERP.vbprojResolveAssemblyReference.cache

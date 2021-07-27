@@ -55,7 +55,7 @@ Public Class frmRepGeneralLedger
                     RadioButton1.Enabled = True
                     Dim sql As String
                     sql = "select account_code,account_head_name from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" _
-                           & " and group_name not in ('PARTY','CUSTOMER') order by account_code"
+                           & " and group_name not in ('PARTY','CUSTOMER','STAFF','STAFF(HO)') order by account_code"
                     GMod.DataSetRet(sql, "acchead")
                     cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
                     cmbacheadcode.DisplayMember = "account_code"
@@ -67,7 +67,7 @@ Public Class frmRepGeneralLedger
                     RadioButton1.Enabled = True
                     Dim sql As String
                     sql = "select account_code,account_head_name from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" _
-                     & " and group_name not in ('PARTY','CUSTOMER') order by account_code"
+                     & " and group_name not in ('PARTY','CUSTOMER','STAFF','STAFF(HO)') order by account_code"
                     GMod.DataSetRet(sql, "acchead")
                     cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
                     cmbacheadcode.DisplayMember = "account_code"
@@ -86,7 +86,7 @@ Public Class frmRepGeneralLedger
 
         cmbAreaCode.Text = "JB"
 
-        CrViewerGenralLedger.Height = Me.Height - 198
+        CrViewerGenralLedger.Height = Me.Height - 210
         dgGridLeger.Location = CrViewerGenralLedger.Location
         dgParty.Location = CrViewerGenralLedger.Location
 
@@ -510,12 +510,11 @@ Public Class frmRepGeneralLedger
             Case "ADMIN"
                 If RadioButton1.Checked = True Then
                     cmbgrpname.Enabled = True
-                    'If GMod.Dept = 0 Then
-                    GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where  group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY') order by group_name", "grp")
-                    'Else
-                    'GMod.DataSetRet("select * from groups where cmp_id='" & GMod.Cmpid & "' and group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF') order by group_name", "grp")
-
-                    'End If
+                    If GMod.staff1 = 0 Then
+                        GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where  group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF','STAFF(HO)')   order by group_name", "grp")
+                    ElseIf GMod.staff1 = 1 Then
+                        GMod.DataSetRet("select * from groups where cmp_id='" & GMod.Cmpid & "' and group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY')   order by group_name", "grp")
+                    End If
                     cmbgrpname.DataSource = GMod.ds.Tables("grp")
                     cmbgrpname.DisplayMember = "group_name"
                     cmbgrpname_SelectedIndexChanged(sender, e)
@@ -523,12 +522,12 @@ Public Class frmRepGeneralLedger
             Case Else
                 If RadioButton1.Checked = True Then
                     cmbgrpname.Enabled = True
-                    If GMod.staff1 = 1 And GMod.role = "VIEWER LEVEL-1" Then
-                        GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF(HO)') order by group_name", "grp")
-                    ElseIf GMod.staff1 = 2 And GMod.role = "VIEWER LEVEL-1" Then
-                        GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY') order by group_name", "grp")
+                    If GMod.staff1 = 0 And GMod.role = "VIEWER LEVEL-1" Then
+                        GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF(HO)','STAFF')   order by group_name", "grp")
+                    ElseIf GMod.staff1 = 0 And GMod.role = "VIEWER LEVEL-1" Then
+                        GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY')   order by group_name", "grp")
                     Else
-                        GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF','STAFF(HO)') order by group_name", "grp")
+                        GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF(HO)','STAFF')   order by group_name", "grp")
                     End If
                     cmbgrpname.DataSource = GMod.ds.Tables("grp")
                     cmbgrpname.DisplayMember = "group_name"
@@ -1834,6 +1833,10 @@ Public Class frmRepGeneralLedger
     End Sub
 
     Private Sub chkWithoutSubgroup_CheckedChanged(sender As Object, e As EventArgs) Handles chkWithoutSubgroup.CheckedChanged
+
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
 
     End Sub
 End Class

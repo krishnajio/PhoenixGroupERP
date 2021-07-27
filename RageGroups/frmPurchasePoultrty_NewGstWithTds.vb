@@ -528,8 +528,13 @@ Public Class frmPurchasePoultrty_NewGstWithTds
                     sqlsave &= "'" & dgvoucher(4, i).Value & "',"
                     sqlsave &= "'" & dgvoucher(5, i).Value & "',"
                     sqlsave &= "'" & dgvoucher(15, i).Value & "',"
-                    sqlsave &= "'" & Val(txtTdsAmt1.Text) & "'," 'varcst_amt BEFORE 12-7-21  Val(dgvoucher(14, i).Value)
+                    If i = 0 Then
+                        sqlsave &= "'" & Val(txtTdsAmt1.Text) & "'," 'varcst_amt BEFORE 12-7-21  Val(dgvoucher(14, i).Value)
+                    Else
+                        sqlsave &= "'" & Val("") & "',"
+                    End If
                     sqlsave &= "'" & cmbfercode.Text & "',"
+
                     If i = 0 Then
                         sqlsave &= "'" & Val(txtTcsAmount.Text) & "',"
                     Else

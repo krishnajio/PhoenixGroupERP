@@ -933,7 +933,7 @@ Public Class frmMDI
         t.ShowDialog()
     End Sub
 
-    Private Sub XXToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles XXToolStripMenuItem.Click
+    Private Sub XXToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim xt As New frmXX
         xt.ShowDialog()
     End Sub
@@ -1057,8 +1057,7 @@ Public Class frmMDI
         t.ShowDialog()
     End Sub
     Private Sub ToolStripMenuItem25_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem25.Click
-        Dim t As New frmRepGeneralLedgerUnAuthData
-        t.ShowDialog()
+       
     End Sub
     Private Sub JournalPurchaseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles JournalPurchaseToolStripMenuItem.Click
         Dim t As New frmPurchasePoultrty_NewGstWithTds
@@ -1524,7 +1523,6 @@ Public Class frmMDI
     End Sub
 
     Private Sub TRPostToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TRPostToolStripMenuItem.Click
-
         Dim frmTrtep As New frmPostToAccounts
         frmTrtep.ShowDialog()
     End Sub
@@ -1537,5 +1535,20 @@ Public Class frmMDI
     Private Sub DMPostToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DMPostToolStripMenuItem.Click
         Dim frmSupplyPost As New frmDMPosting
         frmSupplyPost.ShowDialog()
+    End Sub
+
+    Private Sub TRPostMultiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TRPostMultiToolStripMenuItem.Click
+        Dim t As New frmPostToAccounts_Mutiple_Tr
+        t.ShowDialog()
+    End Sub
+
+    Private Sub UnAuthrisedLedgerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnAuthrisedLedgerToolStripMenuItem.Click
+        Dim t As New frmRepGeneralLedgerUnAuthData
+        t.ShowDialog()
+    End Sub
+
+    Private Sub UnAuthridesTrialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnAuthridesTrialToolStripMenuItem.Click
+        Dim t As New frmTrial2_Unauth
+        t.ShowDialog()
     End Sub
 End Class

@@ -61,7 +61,7 @@ Partial Class frmPostToAccounts
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(1120, 82)
+        Me.Button1.Location = New System.Drawing.Point(1191, 89)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 58)
         Me.Button1.TabIndex = 21
@@ -201,7 +201,7 @@ Partial Class frmPostToAccounts
         Me.cmbVoucherType.FormattingEnabled = True
         Me.cmbVoucherType.Location = New System.Drawing.Point(878, 86)
         Me.cmbVoucherType.Name = "cmbVoucherType"
-        Me.cmbVoucherType.Size = New System.Drawing.Size(236, 24)
+        Me.cmbVoucherType.Size = New System.Drawing.Size(307, 24)
         Me.cmbVoucherType.TabIndex = 25
         '
         'cmbbankHead
@@ -210,7 +210,7 @@ Partial Class frmPostToAccounts
         Me.cmbbankHead.FormattingEnabled = True
         Me.cmbbankHead.Location = New System.Drawing.Point(878, 116)
         Me.cmbbankHead.Name = "cmbbankHead"
-        Me.cmbbankHead.Size = New System.Drawing.Size(236, 24)
+        Me.cmbbankHead.Size = New System.Drawing.Size(307, 24)
         Me.cmbbankHead.TabIndex = 26
         '
         'cmbBankCode

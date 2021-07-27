@@ -345,10 +345,10 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="CrTrial2Simple.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>CrTrial2Simple.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="CrTrial2SimpleWithAddress.vb">
       <AutoGen>True</AutoGen>
@@ -356,10 +356,22 @@
       <DependentUpon>CrTrial2SimpleWithAddress.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrTrial2Simple_Unauth.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrTrial2Simple_Unauth.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrTrial2WithAddress.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrTrial2WithAddress.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrTrial2_Unauth.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrTrial2_Unauth.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrTrial3.vb">
@@ -1315,6 +1327,12 @@
     <Compile Include="frmTrial2WithAddress.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmTrial2_Unauth.Designer.vb">
+      <DependentUpon>frmTrial2_Unauth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrial2_Unauth.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTrial3.Designer.vb">
       <DependentUpon>frmTrial3.vb</DependentUpon>
     </Compile>
@@ -1367,6 +1385,12 @@
       <DependentUpon>frmPostToAccounts.vb</DependentUpon>
     </Compile>
     <Compile Include="MobileDataFormsandReports\frmPostToAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\frmPostToAccounts_Multiple_Tr.designer.vb">
+      <DependentUpon>frmPostToAccounts_Multiple_Tr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\frmPostToAccounts_Multiple_Tr.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MobileDataFormsandReports\Reports\CrAreaWiseTrReport.vb">
@@ -2407,9 +2431,17 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrTrial2SimpleWithAddress.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrTrial2Simple_Unauth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrTrial2Simple_Unauth.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrTrial2WithAddress.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrTrial2WithAddress.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrTrial2_Unauth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrTrial2_Unauth.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrTrial3.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -2995,6 +3027,10 @@
       <DependentUpon>frmTrial2WithAddress.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTrial2_Unauth.resx">
+      <DependentUpon>frmTrial2_Unauth.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTrial3.resx">
       <DependentUpon>frmTrial3.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -3026,6 +3062,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MobileDataFormsandReports\frmPostToAccounts.resx">
       <DependentUpon>frmPostToAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobileDataFormsandReports\frmPostToAccounts_Multiple_Tr.resx">
+      <DependentUpon>frmPostToAccounts_Multiple_Tr.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MobileDataFormsandReports\Reports\CrAreaWiseTrReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

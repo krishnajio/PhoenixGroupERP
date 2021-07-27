@@ -116,7 +116,7 @@
 
         headtable = "ACC_HEAD" & "_" & "PHOE" & "_" & GMod.Getsession(Now)
 
-        sql = " select * from " & headtable & " where cmp_id='PHOE' and group_name='COLLECTION' or account_code ='**CU2870'"
+        sql = " select * from " & headtable & " where cmp_id='PHOE' and group_name in ('COLLECTION','BANK') or account_code ='**CU2870'"
         GMod.DataSetRet(sql, "aclistcr")
 
         cmbBankCode.DataSource = GMod.ds.Tables("aclistcr")
