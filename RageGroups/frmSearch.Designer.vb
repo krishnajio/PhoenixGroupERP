@@ -19,19 +19,20 @@ Partial Class frmSearch
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.txtTRNO = New System.Windows.Forms.TextBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.txtBillNO = New System.Windows.Forms.TextBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.txtchqno = New System.Windows.Forms.TextBox
-        Me.txtAmount = New System.Windows.Forms.TextBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.txtInvNo = New System.Windows.Forms.TextBox
-        Me.Label6 = New System.Windows.Forms.Label
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtTRNO = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtBillNO = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtchqno = New System.Windows.Forms.TextBox()
+        Me.txtAmount = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtInvNo = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,10 +41,10 @@ Partial Class frmSearch
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 125)
+        Me.DataGridView1.Location = New System.Drawing.Point(15, 141)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(601, 375)
+        Me.DataGridView1.Size = New System.Drawing.Size(1031, 375)
         Me.DataGridView1.TabIndex = 92
         '
         'Button1
@@ -82,7 +83,7 @@ Partial Class frmSearch
         Me.Label1.ForeColor = System.Drawing.Color.SandyBrown
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(601, 31)
+        Me.Label1.Size = New System.Drawing.Size(1090, 31)
         Me.Label1.TabIndex = 88
         Me.Label1.Text = "Search Data"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -155,12 +156,23 @@ Partial Class frmSearch
         Me.Label6.TabIndex = 99
         Me.Label6.Text = "Invoice No Search:"
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
+        Me.Button2.Location = New System.Drawing.Point(552, 93)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(111, 26)
+        Me.Button2.TabIndex = 101
+        Me.Button2.Text = "&Show Tr Data"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'frmSearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGray
-        Me.ClientSize = New System.Drawing.Size(601, 512)
+        Me.ClientSize = New System.Drawing.Size(1090, 639)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.txtInvNo)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtAmount)
@@ -197,4 +209,5 @@ Partial Class frmSearch
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtInvNo As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

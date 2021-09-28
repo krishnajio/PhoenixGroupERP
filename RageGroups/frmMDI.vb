@@ -262,9 +262,14 @@ Public Class frmMDI
 
 
 
-        If GMod.username = "salphx" Or GMod.username = "salph" Then
+        'If GMod.username = "salphx" Or GMod.username = "salph" Then
+        'SalaryToolStripMenuItem.Visible = True
+        'End If
+        If (GMod.role = "VIEWER LEVEL-1" Or GMod.role.ToLower = "admin") And GMod.staff1 = 1 And GMod.Dept = 99 Then
             SalaryToolStripMenuItem.Visible = True
         End If
+
+
         'backup code
         Dim namebak As String = ""
         Dim sqlbak As String = ""
@@ -606,7 +611,7 @@ Public Class frmMDI
     End Sub
 
     Private Sub BankReconcilationToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BankReconcilationToolStripMenuItem1.Click
-        Dim brec As New frmBankReconcilation
+        Dim brec As New frmTCSReport
         brec.ShowDialog()
     End Sub
 
@@ -1346,27 +1351,27 @@ Public Class frmMDI
     End Sub
     Private Sub SalaryTransferCasualStaffToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SalaryTransferCasualStaffToolStripMenuItem1.Click
         'If GMod.role = "ADMIN" And GMod.role = "VIEWER LEVEL-1" Then
-        If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.username = "admin") Then
+        If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.username.ToLower = "admin") Then
             Dim saltrf As New frmSalaryTransferPoultryCasual
             saltrf.ShowDialog()
         End If
         'End If
     End Sub
     Private Sub ProductionIncentiveVoucherToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductionIncentiveVoucherToolStripMenuItem.Click
-        If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.username = "admin") Then
+        If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.username.ToLower = "admin") Then
             Dim t As New frmProdincvVoucherDr
             t.ShowDialog()
         End If
     End Sub
     Private Sub SalaryTransferToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SalaryTransferToolStripMenuItem1.Click
         If GMod.Cmpid = "PHOE" Then
-            If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.username = "admin") Then
+            If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.role.ToLower = "admin") Then
                 Dim saltrf As New frmSalaryTransfer
                 saltrf.ShowDialog()
             End If
         ElseIf GMod.Cmpid = "PHHA" Then
 
-            If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.username = "admin") Then
+            If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.role.ToLower = "admin") Then
                 Dim saltrf As New frmSalaryTransferHatch
                 saltrf.ShowDialog()
             End If
@@ -1456,7 +1461,6 @@ Public Class frmMDI
         If GMod.username = "admin" Or GMod.username = "sysadmin" Then
             Dim t As New frmVoucherUnAuthr
             t.ShowDialog()
-
         End If
     End Sub
 

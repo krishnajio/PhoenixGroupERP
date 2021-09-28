@@ -168,6 +168,8 @@ Partial Class frmMDI
         Me.TrialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem36 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem25 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UnAuthrisedLedgerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UnAuthridesTrialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem31 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem24 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
@@ -264,8 +266,6 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.UnAuthrisedLedgerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UnAuthridesTrialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1181,6 +1181,18 @@ Partial Class frmMDI
         Me.ToolStripMenuItem25.Size = New System.Drawing.Size(341, 22)
         Me.ToolStripMenuItem25.Text = "UnAuthrised Ledger/Trial"
         '
+        'UnAuthrisedLedgerToolStripMenuItem
+        '
+        Me.UnAuthrisedLedgerToolStripMenuItem.Name = "UnAuthrisedLedgerToolStripMenuItem"
+        Me.UnAuthrisedLedgerToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.UnAuthrisedLedgerToolStripMenuItem.Text = "UnAuthrised Ledger"
+        '
+        'UnAuthridesTrialToolStripMenuItem
+        '
+        Me.UnAuthridesTrialToolStripMenuItem.Name = "UnAuthridesTrialToolStripMenuItem"
+        Me.UnAuthridesTrialToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.UnAuthridesTrialToolStripMenuItem.Text = "UnAuthriseTrial"
+        '
         'ToolStripMenuItem31
         '
         Me.ToolStripMenuItem31.Name = "ToolStripMenuItem31"
@@ -1214,8 +1226,7 @@ Partial Class frmMDI
         '
         Me.BankReconcilationToolStripMenuItem1.Name = "BankReconcilationToolStripMenuItem1"
         Me.BankReconcilationToolStripMenuItem1.Size = New System.Drawing.Size(341, 22)
-        Me.BankReconcilationToolStripMenuItem1.Text = "Bank Re&concilation"
-        Me.BankReconcilationToolStripMenuItem1.Visible = False
+        Me.BankReconcilationToolStripMenuItem1.Text = "TCS Report"
         '
         'BankStatementToolStripMenuItem1
         '
@@ -1820,18 +1831,6 @@ Partial Class frmMDI
         Me.Label2.Size = New System.Drawing.Size(13, 13)
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
-        '
-        'UnAuthrisedLedgerToolStripMenuItem
-        '
-        Me.UnAuthrisedLedgerToolStripMenuItem.Name = "UnAuthrisedLedgerToolStripMenuItem"
-        Me.UnAuthrisedLedgerToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
-        Me.UnAuthrisedLedgerToolStripMenuItem.Text = "UnAuthrised Ledger"
-        '
-        'UnAuthridesTrialToolStripMenuItem
-        '
-        Me.UnAuthridesTrialToolStripMenuItem.Name = "UnAuthridesTrialToolStripMenuItem"
-        Me.UnAuthridesTrialToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
-        Me.UnAuthridesTrialToolStripMenuItem.Text = "UnAuthriseTrial"
         '
         'frmMDI
         '

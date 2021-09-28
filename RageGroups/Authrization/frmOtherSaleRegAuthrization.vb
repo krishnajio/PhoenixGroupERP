@@ -5,7 +5,7 @@ Public Class frmOtherSaleRegAuthrization
         txtCrNoFrom.Enabled = False
         txtCrNoTo.Enabled = False
         'If CheckBox1.Checked = False Then
-        GMod.DataSetRet("select Vou_type, Vou_no, AccCode, AccName, Station, ProductName, OutQty, Rate, Amount, OutQtyNos, BillNo, BillDate, InQty, InQtyNos, Cmp_id, Session, id, isnull(tcs_amt,0) as tcs_amt, authr, Prdunit, Packing, Insurance, Discount, CrHead, cgstp, cgsta, sgstp, sgsta, igstp, igsta  from OtherSaleData  where vou_type in ('" & voutype.Text & "') and cast(Vou_no as numeric(20)) between " & txtCrNoFrom.Text & " and  " & txtCrNoTo.Text & "  AND session = '" & GMod.Session & "' and authr='-' ORDER BY CAST(VOU_NO AS BIGINT),ID ", "SaleReg1")
+        GMod.DataSetRet("select Vou_type, Vou_no, AccCode, AccName, freight as  Station, ProductName, OutQty, Rate, Amount, OutQtyNos, BillNo, BillDate, InQty, InQtyNos, Cmp_id, Session, id, isnull(tcs_amt,0) as tcs_amt, authr, Prdunit, Packing, Insurance, Discount, CrHead, cgstp, cgsta, sgstp, sgsta, igstp, igsta  from OtherSaleData  where vou_type in ('" & voutype.Text & "') and cast(Vou_no as numeric(20)) between " & txtCrNoFrom.Text & " and  " & txtCrNoTo.Text & "  AND session = '" & GMod.Session & "' and authr='-' ORDER BY CAST(VOU_NO AS BIGINT),ID ", "SaleReg1")
         'Else
         'GMod.DataSetRet("select * from OtherSaleData  where vou_type='OTHER SALE RET.' and cast(Vou_no as bigint) between " & txtCrNoFrom.Text & " and  " & txtCrNoTo.Text & " ORDER BY ID ", "SaleReg1")
 
@@ -48,8 +48,6 @@ Public Class frmOtherSaleRegAuthrization
             Dim cmdtds As New SqlCommand(Sql, GMod.SqlConn, trans)
             cmdtds.ExecuteNonQuery()
 
-
-
             trans.Commit()
             MsgBox("Authorization Complete", MsgBoxStyle.Information)
         Catch ex As Exception
@@ -57,7 +55,5 @@ Public Class frmOtherSaleRegAuthrization
         End Try
     End Sub
 
-    Private Sub voutype_SelectedIndexChanged(sender As Object, e As EventArgs) Handles voutype.SelectedIndexChanged
-
-    End Sub
+    
 End Class

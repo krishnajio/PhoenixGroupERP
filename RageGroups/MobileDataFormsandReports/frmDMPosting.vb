@@ -59,6 +59,14 @@ Public Class frmDMPosting
         cmbTcsHead.DataSource = GMod.ds.Tables("aclist_tcs")
         cmbTcsHead.DisplayMember = "account_head_name"
 
+
+        sql = "select account_code,account_head_name from " & headtable & " where group_name like '%PAYBLE%'"
+        GMod.DataSetRet(sql, "aclist_gst")
+        cmbGSTCode.DataSource = GMod.ds.Tables("aclist_gst")
+        cmbGSTCode.DisplayMember = "account_code"
+        cmbGSTHead.DataSource = GMod.ds.Tables("aclist_gst")
+        cmbGSTHead.DisplayMember = "account_head_name"
+
     End Sub
     Dim i, k As Integer
     Dim Narration, NarrationBody, vou_date As String
@@ -79,6 +87,7 @@ Public Class frmDMPosting
         Dim tcs_amt As Double
         Dim sale_amt As Double
         Dim tcs_per As Double
+        Dim gst_amt As Double = 0
 
         sql = "SELECT isnull(max(cast(vou_no as numeric(18,0))),0) + 1 FROM " & tablename & " where vou_type = '" & cmbVoucherType.Text & "'"
         GMod.DataSetRet(sql, "vnor")
@@ -125,6 +134,7 @@ Public Class frmDMPosting
                     GMod.DataSetRet(sql, "dm_det")
                     For k = 0 To GMod.ds.Tables("dm_det").Rows.Count - 1
                         NarrationBody &= GMod.ds.Tables("dm_det").Rows(k).Item(0).ToString & " Qty  Nos " & GMod.ds.Tables("dm_det").Rows(k).Item(1).ToString & " Kg " & GMod.ds.Tables("dm_det").Rows(k).Item(2).ToString & " @ " & GMod.ds.Tables("dm_det").Rows(k).Item(3).ToString
+                        gst_amt = gst_amt + Val(GMod.ds.Tables("dm_det").Rows(k).Item(12).ToString)
                     Next
                     Narration = Narration + NarrationBody
 
@@ -139,7 +149,7 @@ Public Class frmDMPosting
                     sql &= "'" & dtpPostingDate.Value.ToShortDateString & "',"
                     sql &= "'" & dg(9, i).Value & "',"
                     sql &= "'" & dg(10, i).Value & "',"
-                    sql &= "'" & total & "',"
+                    sql &= "'" & total + gst_amt & "',"
                     sql &= "'0',"
                     sql &= "'-',"
                     sql &= "'-',"
@@ -215,6 +225,34 @@ Public Class frmDMPosting
                         sql &= "'-')"
                         Dim cmdTcs As New SqlCommand(sql, GMod.SqlConn, sqltrans)
                         cmdTcs.ExecuteNonQuery()
+
+                        'inserting data into tcs records
+                        'Insert into TCS Report
+                        sql = "insert into TdsEntry(Vou_Type, Vou_no, TdsType, Per, TdsDate, " _
+                                      & " BilltyNo, BilltyDt, VehicleNo, Qty, Prd, Paidamt," _
+                                      & " Actualamt, session,Paidto,vou_date, TdsAmt,dcode,cmp_id,taxtype ) values( "
+                        sql &= "'" & cmbVoucherType.Text & "',"
+                        sql &= "'" & vouno & "',"
+                        sql &= "'TCS',"
+                        sql &= "'" & tcs_per & "',"
+                        sql &= "'" & dtpPostingDate.Value.ToShortDateString & "',"
+                        sql &= "'-',"
+                        sql &= "'-',"
+                        sql &= "'-',"
+                        sql &= "'-',"
+                        sql &= "'0',"
+                        sql &= "'" & total + tcs_amt & "',"
+                        sql &= "'" & Val("") & "',"
+                        sql &= "'" & GMod.Session & "',"
+                        sql &= "'YES',"
+                        sql &= "'" & dtpPostingDate.Value.ToShortDateString & "',"
+                        sql &= "'" & tcs_amt & "',"
+                        sql &= "'-',"
+                        sql &= "'" & GMod.Cmpid & "','1')"
+
+                        Dim cmdTcsReport As New SqlCommand(sql, SqlConn, sqltrans)
+                        cmdTcsReport.ExecuteNonQuery()
+
                     End If
 
 
@@ -225,7 +263,7 @@ Public Class frmDMPosting
                         sql = "insert into OtherSaleData ([Vou_type], [Vou_no], [AccCode], [AccName], [Station], [ProductName], [OutQty]," _
                                        & " [Rate], [Amount], [OutQtyNos], [BillNo], [BillDate], [InQty], [InQtyNos], [Cmp_id], " _
                                        & " [Session],[mrktrate], [authr], [Prdunit], [Packing], [Insurance], [Discount]," _
-                                       & " [CrHead],[tcs_per], [tcs_amt]) VALUES ("
+                                       & " [CrHead],[tcs_per], [tcs_amt],cgstp,cgsta) VALUES ("
                         sql &= "'" & cmbVoucherType.Text & "',"
                         sql &= "'" & vouno & "',"
                         sql &= "'" & dg(9, i).Value & "',"
@@ -250,10 +288,37 @@ Public Class frmDMPosting
                         sql &= "'" & Val("") & "',"
                         sql &= "'" & cmbbankHead.Text & "',"
                         sql &= "'" & tcs_per & "',"
-                        sql &= "'" & tcs_amt & "')"
+                        sql &= "'" & tcs_amt & "',"
+                        sql &= "'" & GMod.ds.Tables("dm_details").Rows(k).Item(11).ToString & "',"
+                        sql &= "'" & GMod.ds.Tables("dm_details").Rows(k).Item(12).ToString & "')"
 
                         Dim cmd3 As New SqlCommand(sql, GMod.SqlConn, sqltrans)
                         cmd3.ExecuteNonQuery()
+
+                        'GST Ppostng to A/C
+                        If Val(GMod.ds.Tables("dm_details").Rows(k).Item(12).ToString) > 0 Then
+                            sql = "insert into " & tablename & "(Cmp_id, Uname, Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, "
+                            sql &= "Acc_head, cramt, dramt, Pay_mode, Cheque_no, Narration, Group_name,Sub_group_name) values("
+                            sql &= "'PHOE',"
+                            sql &= "'" & GMod.username & "',"
+                            sql &= "'3',"
+                            sql &= "'" & vouno & "',"
+                            sql &= "'" & cmbVoucherType.Text & "',"
+                            sql &= "'" & dtpPostingDate.Value.ToShortDateString & "',"
+                            sql &= "'" & cmbGSTCode.Text & "',"
+                            sql &= "'" & cmbGSTHead.Text & "',"
+                            sql &= "'" & Val(GMod.ds.Tables("dm_details").Rows(k).Item(12).ToString) & "',"
+                            sql &= "'0',"
+                            sql &= "'-',"
+                            sql &= "'-',"
+                            sql &= "'" & Narration.ToUpper & "',"
+                            sql &= "'-',"
+                            sql &= "'-')"
+                            Dim cmdGst As New SqlCommand(sql, GMod.SqlConn, sqltrans)
+                            cmdGst.ExecuteNonQuery()
+
+                        End If
+
                     Next
 
                     sql = "Update AreaDMPoultry Set isPosted=1  Where DMNo ='" & dg(5, i).Value & "'"
@@ -271,7 +336,7 @@ Public Class frmDMPosting
                     ins_amount = 0
                     Narration = ""
                     NarrationBody = ""
-
+                    gst_amt = 0
                     MessageBox.Show("Invoice No" & vouno.ToString)
                     counter = counter + 1
                 End If

@@ -276,593 +276,586 @@ Public Class frmSaleOther
                         Dim cmd6 As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
                         cmd6.ExecuteNonQuery()
 
-                        sqldel = "delete from Sale_Receipt where vou_type='" & cmbVoucherType.Text & "' and  vou_no='" & txtVoucherNo.Text & "' and cmp_id='" & GMod.Cmpid & "' and session='" & GMod.Session & "'"
+                        sqldel = "delete from TdsEntry where vou_type='" & cmbVoucherType.Text & "' and  vou_no='" & txtVoucherNo.Text & "' and cmp_id='" & GMod.Cmpid & "' and session='" & GMod.Session & "'"
                         Dim cmddel As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
                         cmddel.ExecuteNonQuery()
                     Else
                         nxtvno()
                     End If
-                    'OTHER SALE
-                    'OTHER SALE CASH
-                    'OTHER SALE RET.
-                    'FEED TRANSFER
-                    'CHICKS TRANSFER
-                    'OTHER SALE(GST)
-                    'OTHER SALE CASH(GST)
-                    'OTHER SALE CASH RP(G
-                    'OTHER SALE FEED(GST)
-                    'OTHER SALE INTER UNI
-                    If cmbVoucherType.Text = "OTHER SALE(GST)" Then
-                        narrinv = "DM No." & txtDmNo.Text & ", INV NO " & txtVoucherNo.Text & " DT." & dtInvVate.Text & " "
-                    ElseIf cmbVoucherType.Text = "OTHER SALE CASH(GST)" Then
-                        narrinv = "CM No." & txtDmNo.Text & " DT." & dtInvVate.Text & " "
-                    ElseIf cmbVoucherType.Text = "FEED TRANSFER" Then
-                        narrinv = "DM No." & txtDmNo.Text & " DT." & dtInvVate.Text & " "
-                    ElseIf cmbVoucherType.Text = "CHICKS TRANSFER" Then
-                        narrinv = "DM No." & txtDmNo.Text & " DT." & dtInvVate.Text & " "
-                    ElseIf cmbVoucherType.Text = "OTHER SALE MANSAR" Then
-                        narrinv = "DM No." & txtDmNo.Text & " DT." & dtInvVate.Text & " "
-                    ElseIf cmbVoucherType.Text = "OTHER SALE CASH RP(G" Then
-                        narrinv = "CM No." & txtDmNo.Text & " DT." & dtInvVate.Text & " "
-                    ElseIf cmbVoucherType.Text = "OTHER SALE FEED(GST)" Then
-                        narrinv = "DM No." & txtDmNo.Text & " DT." & dtInvVate.Text & " "
-                    ElseIf cmbVoucherType.Text = "OTHER SALE INTER UNI" Then
-                        narrinv = "DM No." & txtDmNo.Text & " DT." & dtInvVate.Text & " "
+                    
 
-                    Else
-                        narrinv = " DT." & dtInvVate.Text & " "
-                    End If
+                    narrinv = "DM No." & txtDmNo.Text & " DT." & dtInvVate.Text & " , INV NO " & txtVoucherNo.Text & " DT." & dtInvVate.Text & " "
 
-                    For i = 0 To dgPurchase.Rows.Count - 1
-                        'narration = "INV NO " & txtInvnoNo.Text & " DT." & dtInvVate.Value.ToShortDateString & " BATCH NO " & lblbatchno.Text & " "
-                        If dgPurchase(4, i).Value.ToString.Length > 0 Then
-                            narration = ""
-                            narration &= dgPurchase(0, i).Value
-                            If Val(dgPurchase(2, i).Value) > 0 And Val(dgPurchase(1, i).Value) > 0 Then
-                                narration &= " " & dgPurchase(2, i).Value & " " & "KG " & dgPurchase(1, i).Value & " NO "
-                            ElseIf Val(dgPurchase(1, i).Value) > 0 Then
-                                narration &= " " & dgPurchase(1, i).Value & " NO " & dgPurchase(6, i).Value
-                            ElseIf Val(dgPurchase(2, i).Value) > 0 And Val(dgPurchase(1, i).Value) = 0 Then
-                                narration &= " " & dgPurchase(2, i).Value & " " & "KG " & dgPurchase(1, i).Value & " NO "
-                            End If
-                            narration &= " @ " & dgPurchase(3, i).Value & "HSN Code" & dgPurchase(5, i).Value
-                            narrcust = narrcust & " " & narration
+
+                    Dim framt As Double
+                    framt = Val(txtFreightamt.Text)
+
+
+                For i = 0 To dgPurchase.Rows.Count - 1
+                    'narration = "INV NO " & txtInvnoNo.Text & " DT." & dtInvVate.Value.ToShortDateString & " BATCH NO " & lblbatchno.Text & " "
+                    If dgPurchase(4, i).Value.ToString.Length > 0 Then
+                        narration = ""
+                        narration &= dgPurchase(0, i).Value
+                        If Val(dgPurchase(2, i).Value) > 0 And Val(dgPurchase(1, i).Value) > 0 Then
+                            narration &= " " & dgPurchase(2, i).Value & " " & "KG " & dgPurchase(1, i).Value & " NO "
+                        ElseIf Val(dgPurchase(1, i).Value) > 0 Then
+                            narration &= " " & dgPurchase(1, i).Value & " NO " & dgPurchase(6, i).Value
+                        ElseIf Val(dgPurchase(2, i).Value) > 0 And Val(dgPurchase(1, i).Value) = 0 Then
+                            narration &= " " & dgPurchase(2, i).Value & " " & "KG " & dgPurchase(1, i).Value & " NO "
+                        End If
+                        narration &= " @ " & dgPurchase(3, i).Value & "HSN Code" & dgPurchase(5, i).Value
+                        narrcust = narrcust & " " & narration
 
                             sqlsave = " insert into OtherSaledata (Vou_type, Vou_no, AccCode," & _
                             " AccName, Station, ProductName, OutQty, Rate, Amount, OutQtyNos," & _
-                            " BillNo, BillDate, InQty, InQtyNos, Cmp_id, Session,mrktrate,authr,Prdunit,Packing, Insurance, Discount,crHead,cgstp, cgsta, sgstp, sgsta, igstp, igsta,tcs_per,tcs_amt) values ("
-                            sqlsave &= "'" & cmbVoucherType.Text & "',"
+                            " BillNo, BillDate, InQty, InQtyNos, Cmp_id, Session,mrktrate,authr,Prdunit,Packing, Insurance, Discount,crHead,cgstp, cgsta, sgstp, sgsta, igstp, igsta,tcs_per,tcs_amt,[freight]) values ("
+                        sqlsave &= "'" & cmbVoucherType.Text & "',"
+                        sqlsave &= "'" & txtVoucherNo.Text & "',"
+                        sqlsave &= "'" & cmbacheadcode.Text & "',"
+                        sqlsave &= "'" & cmbacheadname.Text & "',"
+                        sqlsave &= "'" & cmbAreaName.Text & "',"
+                        sqlsave &= "'" & dgPurchase(0, i).Value & "',"
+                        sqlsave &= "'" & Val(dgPurchase(2, i).Value) & "',"
+                        sqlsave &= "'" & Val(dgPurchase(3, i).Value) & "',"
+                        sqlsave &= "'" & Val(dgPurchase(4, i).Value) & "',"
+                        sqlsave &= "'" & Val(dgPurchase(1, i).Value) & "',"
+                        If cmbVoucherType.Text = "OTHER SALE" Then
+                            sqlsave &= "'OS" & txtVoucherNo.Text & "',"
+                        ElseIf cmbVoucherType.Text = "OTHER SALE CASH" Then
+                            sqlsave &= "'CS" & txtVoucherNo.Text & "',"
+                        ElseIf cmbVoucherType.Text = "OTHER SALE MANSAR" Then
+                            sqlsave &= "'SM/" & txtVoucherNo.Text & "',"
+                        Else
                             sqlsave &= "'" & txtVoucherNo.Text & "',"
-                            sqlsave &= "'" & cmbacheadcode.Text & "',"
-                            sqlsave &= "'" & cmbacheadname.Text & "',"
-                            sqlsave &= "'" & cmbAreaName.Text & "',"
-                            sqlsave &= "'" & dgPurchase(0, i).Value & "',"
-                            sqlsave &= "'" & Val(dgPurchase(2, i).Value) & "',"
-                            sqlsave &= "'" & Val(dgPurchase(3, i).Value) & "',"
-                            sqlsave &= "'" & Val(dgPurchase(4, i).Value) & "',"
-                            sqlsave &= "'" & Val(dgPurchase(1, i).Value) & "',"
-                            If cmbVoucherType.Text = "OTHER SALE" Then
-                                sqlsave &= "'OS" & txtVoucherNo.Text & "',"
-                            ElseIf cmbVoucherType.Text = "OTHER SALE CASH" Then
-                                sqlsave &= "'CS" & txtVoucherNo.Text & "',"
-                            ElseIf cmbVoucherType.Text = "OTHER SALE MANSAR" Then
-                                sqlsave &= "'SM/" & txtVoucherNo.Text & "',"
-                            Else
-                                sqlsave &= "'" & txtVoucherNo.Text & "',"
-                            End If
-                            sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "',"
-                            sqlsave &= "'0',"
-                            sqlsave &= "'" & txtDmNo.Text & "',"
-                            sqlsave &= "'" & GMod.Cmpid & "',"
-                            sqlsave &= "'" & GMod.Session & "',"
-                            sqlsave &= "'" & Val(dgPurchase(5, i).Value) & "',"
-                            sqlsave &= "'" & txtAuthorisation.Text & "',"
-                            sqlsave &= "'" & cmbprdunit.Text & "',"
-                            sqlsave &= "'" & Val(txtpacking.Text) & "',"
-                            sqlsave &= "'" & Val(txtinsurance.Text) & "',"
-                            sqlsave &= "'" & Val(txtcgstper.Text) & "',"
-                            sqlsave &= "'" & cmbSaleAcc.Text & "',"
-
-                            sqlsave &= "'" & Val(txtcgstper.Text) & "',"
-                            sqlsave &= "'" & Val(txtcgstamt.Text) & "',"
-                            sqlsave &= "'" & Val(txtsgstper.Text) & "',"
-                            sqlsave &= "'" & Val(txtsgstamt.Text) & "',"
-                            sqlsave &= "'" & Val(txtigstper.Text) & "',"
-                            sqlsave &= "'" & Val(txtigstamt.Text) & "',"
-                            sqlsave &= "'" & Val(txtTcsPer.Text) & "',"
-                            sqlsave &= "'" & Val(txtTcsAmount.Text) & "')"
-
-
-                            Dim cmd1 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                            cmd1.ExecuteNonQuery()
                         End If
-                    Next
-
-                    'CUSTOMER A/C Dr
-                    sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
-                    & " Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt, Pay_mode, Cheque_no, " _
-                    & "Narration, Group_name, Sub_group_name,ch_date) values ("
-                    sqlsave &= "'" & GMod.Cmpid & "',"
-                    sqlsave &= "'" & GMod.username & "',"
-                    sqlsave &= "'0',"
-                    sqlsave &= "'" & txtVoucherNo.Text & "',"
-                    sqlsave &= "'" & cmbVoucherType.Text & "',"
-                    sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                    sqlsave &= "'" & cmbacheadcode.Text & "',"
-                    sqlsave &= "'" & cmbacheadname.Text & "',"
-                    sqlsave &= "'" & Val(txtgtotal.Text) - Val(txtgstamtdr.Text) + Val(txtTcsAmount.Text) & "',"
-                    sqlsave &= "'0',"
-                    sqlsave &= "'-',"
-                    sqlsave &= "'-',"
-                    sqlsave &= "'" & narrinv & narrcust & "',"
-                    sqlsave &= "'" & ComboBox1.Text & "',"
-                    sqlsave &= "'-','" & dtInvVate.Value.ToShortDateString & "')"
-                    'MsgBox(sqlsave)
-                    Dim cmd2 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                    cmd2.ExecuteNonQuery()
-
-
-                    '
-                    If Val(txtgstperdr.Text) > 0 Then
-                        'Vat Dr
-                        sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
-                        & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
-                        & "Narration, Group_name, Sub_group_name,Ch_date) values ("
-                        sqlsave &= "'" & GMod.Cmpid & "',"
-                        sqlsave &= "'" & GMod.username & "',"
-                        sqlsave &= "'3',"
-                        sqlsave &= "'" & txtVoucherNo.Text & "',"
-                        sqlsave &= "'" & cmbVoucherType.Text & "',"
-                        sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                        sqlsave &= "'" & cmbcodegstdr.Text & "',"
-                        sqlsave &= "'" & cmbgstheaddr.Text & "',"
+                        sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "',"
                         sqlsave &= "'0',"
-                        sqlsave &= "'" & Val(txtgstamtdr.Text) & "',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & narrinv & narrcust & "',"
-                        sqlsave &= "'" & ComboBox9.Text & "',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
-                        Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                        cmd4.ExecuteNonQuery()
-                    End If
-
-
-
-
-
-                    sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
-                    & " Vou_type, Vou_date, Acc_head_code, Acc_head, cramt, dramt, Pay_mode, Cheque_no, " _
-                    & " Narration, Group_name, Sub_group_name,ch_date) values ("
-                    sqlsave &= "'" & GMod.Cmpid & "',"
-                    sqlsave &= "'" & GMod.username & "',"
-                    sqlsave &= "'0',"
-                    sqlsave &= "'" & txtVoucherNo.Text & "',"
-                    sqlsave &= "'" & cmbVoucherType.Text & "',"
-                    sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                    sqlsave &= "'" & cmbSaleAccCode.Text & "',"
-                    sqlsave &= "'" & cmbSaleAcc.Text & "',"
-                    sqlsave &= "'" & Val(TextBox4.Text) & "',"
-                    sqlsave &= "'0',"
-                    sqlsave &= "'-',"
-                    sqlsave &= "'-',"
-                    sqlsave &= "'" & narrinv & narrcust & "',"
-                    sqlsave &= "'" & cmbSaleAccCode.SelectedValue & "',"
-                    sqlsave &= "'-','" & dtInvVate.Value.ToShortDateString & "')"
-                    Dim cmd3 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                    cmd3.ExecuteNonQuery()
-
-
-
-
-
-                    If Val(txtpacking.Text) > 0 Then
-                        'Vat Dr
-                        sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
-                        & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
-                        & "Narration, Group_name, Sub_group_name,Ch_date) values ("
+                        sqlsave &= "'" & txtDmNo.Text & "',"
                         sqlsave &= "'" & GMod.Cmpid & "',"
-                        sqlsave &= "'" & GMod.username & "',"
-                        sqlsave &= "'2',"
-                        sqlsave &= "'" & txtVoucherNo.Text & "',"
-                        sqlsave &= "'" & cmbVoucherType.Text & "',"
-                        sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                        sqlsave &= "'" & cmbpackingcode.Text & "',"
-                        sqlsave &= "'" & cmbpackinghead.Text & "',"
+                        sqlsave &= "'" & GMod.Session & "',"
+                        sqlsave &= "'" & Val(dgPurchase(5, i).Value) & "',"
+                        sqlsave &= "'" & txtAuthorisation.Text & "',"
+                        sqlsave &= "'" & cmbprdunit.Text & "',"
                         sqlsave &= "'" & Val(txtpacking.Text) & "',"
-                        sqlsave &= "'0',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & narrinv & narrcust & "',"
-                        sqlsave &= "'" & ComboBox4.Text & "',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
-                        Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                        cmd4.ExecuteNonQuery()
-
-                    End If
-
-
-                    If Val(txtinsurance.Text) > 0 Then
-                        'Vat Dr
-                        sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
-                     & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
-                     & "Narration, Group_name, Sub_group_name,Ch_date) values ("
-                        sqlsave &= "'" & GMod.Cmpid & "',"
-                        sqlsave &= "'" & GMod.username & "',"
-                        sqlsave &= "'3',"
-                        sqlsave &= "'" & txtVoucherNo.Text & "',"
-                        sqlsave &= "'" & cmbVoucherType.Text & "',"
-                        sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                        sqlsave &= "'" & cmbinsurancecode.Text & "',"
-                        sqlsave &= "'" & cmbinsurancehead.Text & "',"
                         sqlsave &= "'" & Val(txtinsurance.Text) & "',"
-                        sqlsave &= "'0',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & narrinv & narrcust & "',"
-                        sqlsave &= "'" & ComboBox5.Text & "',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
-                        Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                        cmd4.ExecuteNonQuery()
-                    End If
+                        sqlsave &= "'" & Val(txtcgstper.Text) & "',"
+                        sqlsave &= "'" & cmbSaleAcc.Text & "',"
 
-
-                    If Val(txtcgstper.Text) > 0 Then
-                        'Vat Dr
-                        sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
-                     & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
-                     & "Narration, Group_name, Sub_group_name,Ch_date) values ("
-                        sqlsave &= "'" & GMod.Cmpid & "',"
-                        sqlsave &= "'" & GMod.username & "',"
-                        sqlsave &= "'3',"
-                        sqlsave &= "'" & txtVoucherNo.Text & "',"
-                        sqlsave &= "'" & cmbVoucherType.Text & "',"
-                        sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                        sqlsave &= "'" & cmbothercode.Text & "',"
-                        sqlsave &= "'" & cmbother.Text & "',"
+                        sqlsave &= "'" & Val(txtcgstper.Text) & "',"
                         sqlsave &= "'" & Val(txtcgstamt.Text) & "',"
-                        sqlsave &= "'0',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & narrinv & narrcust & "',"
-                        sqlsave &= "'" & ComboBox6.Text & "',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
-                        Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                        cmd4.ExecuteNonQuery()
-                    End If
-
-
-
-                    If Val(txtsgstper.Text) > 0 Then
-                        'Vat Dr
-                        sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
-                     & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
-                     & "Narration, Group_name, Sub_group_name,Ch_date) values ("
-                        sqlsave &= "'" & GMod.Cmpid & "',"
-                        sqlsave &= "'" & GMod.username & "',"
-                        sqlsave &= "'3',"
-                        sqlsave &= "'" & txtVoucherNo.Text & "',"
-                        sqlsave &= "'" & cmbVoucherType.Text & "',"
-                        sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                        sqlsave &= "'" & cmbsgstcode.Text & "',"
-                        sqlsave &= "'" & cmbsgsthead.Text & "',"
+                        sqlsave &= "'" & Val(txtsgstper.Text) & "',"
                         sqlsave &= "'" & Val(txtsgstamt.Text) & "',"
-                        sqlsave &= "'0',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & narrinv & narrcust & "',"
-                        sqlsave &= "'" & ComboBox7.Text & "',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
-                        Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                        cmd4.ExecuteNonQuery()
-                    End If
-
-
-
-                    If Val(txtigstper.Text) > 0 Then
-                        'Vat Dr
-                        sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
-                     & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
-                     & "Narration, Group_name, Sub_group_name,Ch_date) values ("
-                        sqlsave &= "'" & GMod.Cmpid & "',"
-                        sqlsave &= "'" & GMod.username & "',"
-                        sqlsave &= "'3',"
-                        sqlsave &= "'" & txtVoucherNo.Text & "',"
-                        sqlsave &= "'" & cmbVoucherType.Text & "',"
-                        sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                        sqlsave &= "'" & cmbigstcode.Text & "',"
-                        sqlsave &= "'" & cmbigsthead.Text & "',"
+                        sqlsave &= "'" & Val(txtigstper.Text) & "',"
                         sqlsave &= "'" & Val(txtigstamt.Text) & "',"
-                        sqlsave &= "'0',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & narrinv & narrcust & "',"
-                        sqlsave &= "'" & ComboBox8.Text & "',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
-                        Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                        cmd4.ExecuteNonQuery()
-                    End If
-                    Dim ssaveprdvntry As String
-                    'Inserting TCS tax amount in the Voucher entry Credit 
-                    If Val(txtTcsAmount.Text) > 0 Then
-                        ssaveprdvntry = "insert into " & GMod.VENTRY & " (Cmp_id, Uname," _
-                        & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
-                        & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
-                        ssaveprdvntry &= "'" & GMod.Cmpid & "',"
-                        ssaveprdvntry &= "'" & GMod.username & "',"
-                        ssaveprdvntry &= "'" & i + 1 & "',"
-                        ssaveprdvntry &= "'" & txtVoucherNo.Text & "',"
-                        ssaveprdvntry &= "'" & cmbVoucherType.Text & "',"
-                        ssaveprdvntry &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                        ssaveprdvntry &= "'" & cmbTcsHeadCode.Text & "',"
-                        ssaveprdvntry &= "'" & cmbTcsHead.Text & "',"
-                        ssaveprdvntry &= "'" & Val("") & "',"
-                        ssaveprdvntry &= "'" & Val(txtTcsAmount.Text) & "',"
-                        ssaveprdvntry &= "'" & narrinv & narrcust & "',"
-                        ssaveprdvntry &= "'',"
-                        ssaveprdvntry &= "'','" & dtVouDate.Value.ToShortDateString & "')"
-                        'MsgBox(ssaveprdvntry)
-                        'MsgBox(GMod.SqlExecuteNonQuery(ssaveprdvntry))
-                        Dim cmdTcstaxentry As New SqlCommand(ssaveprdvntry, GMod.SqlConn, sqltrans)
-                        cmdTcstaxentry.ExecuteNonQuery()
-                    End If
-                   
-                    sqltrans.Commit()
-                    MsgBox("Voucher NO. " & txtVoucherNo.Text & " Saved ...", MsgBoxStyle.Information)
-                    dgPurchase.Rows.Clear()
-                    txtInvnoNo.Focus()
-
-                    dgPurchase.Rows.Add()
-                    txtgtotal.Text = ""
-                    DataGridView1.Rows.Clear()
-                    txtinsurance.Text = "0"
-                    txtpacking.Text = "0"
-                    txtcgstper.Text = "0"
-                    txtTcsAmount.Text = "0"
-                    chKtcs.Checked = False
-                    ''*************************
-                ElseIf cmbVoucherType.Text = "OTHER SALE RET." Then
-                    'saving other sale return data
-                    If btnSave.Enabled = False Then
-                        sqldel = " delete from " & GMod.VENTRY & " where vou_no='" & txtVoucherNo.Text & "' and vou_type='" & cmbVoucherType.Text & "'"
-                        Dim cmd5 As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
-                        cmd5.ExecuteNonQuery()
-
-                        sqldel = " delete from OtherSaledata where vou_no='" & txtVoucherNo.Text & "' and vou_type='" & cmbVoucherType.Text & "' and Session='" & GMod.Session & "' and cmp_id='" & GMod.Cmpid & "'"
-                        Dim cmd6 As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
-                        cmd6.ExecuteNonQuery()
-
-                        sqldel = "delete from Sale_Receipt where vou_type='" & cmbVoucherType.Text & "' and  vou_no='" & txtVoucherNo.Text & "' and cmp_id='" & GMod.Cmpid & "' and session='" & GMod.Session & "'"
-                        Dim cmddel As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
-                        cmddel.ExecuteNonQuery()
-                    Else
-                        nxtvno()
-                    End If
-
-                    narrinv = "DM No." & txtDmNo.Text & ", INV NO " & txtVoucherNo.Text & " DT." & dtInvVate.Value.ToShortDateString & " "
-                    For i = 0 To dgPurchase.Rows.Count - 1
-                        'narration = "INV NO " & txtInvnoNo.Text & " DT." & dtInvVate.Value.ToShortDateString & " BATCH NO " & lblbatchno.Text & " "
-                        If Val(dgPurchase(4, i).Value) > 0 Then
-                            narration = ""
-                            narration &= dgPurchase(0, i).Value
-                            If Val(dgPurchase(2, i).Value) > 0 And Val(dgPurchase(1, i).Value) > 0 Then
-                                narration &= " " & dgPurchase(2, i).Value & " " & "KG " & dgPurchase(1, i).Value & " NO "
-                            ElseIf Val(dgPurchase(1, i).Value) > 0 Then
-                                narration &= " " & dgPurchase(1, i).Value & " NO "
-                            ElseIf Val(dgPurchase(2, i).Value) > 0 And Val(dgPurchase(1, i).Value) = 0 Then
-                                narration &= " " & dgPurchase(2, i).Value & " " & "KG " & dgPurchase(1, i).Value & " NO "
-                            End If
-                            narration &= " @ " & dgPurchase(3, i).Value
-                            narrcust = narrcust & " " & narration
+                        sqlsave &= "'" & Val(txtTcsPer.Text) & "',"
+                            sqlsave &= "'" & Val(txtTcsAmount.Text) & "',"
+                            sqlsave &= "'" & framt & "')"
 
 
-                            sqlsave = "insert into OtherSaledata (Vou_type, Vou_no, AccCode," & _
-                            "AccName, Station, ProductName, OutQty, Rate, Amount, OutQtyNos," & _
-                            "BillNo, BillDate, InQty, InQtyNos, Cmp_id, Session,mrktrate,authr,Prdunit ) values ("
-                            sqlsave &= "'" & cmbVoucherType.Text & "',"
-                            sqlsave &= "'" & txtVoucherNo.Text & "',"
-                            sqlsave &= "'" & cmbacheadcode.Text & "',"
-                            sqlsave &= "'" & cmbacheadname.Text & "',"
-                            sqlsave &= "'" & cmbAreaName.Text & "',"
-                            sqlsave &= "'" & dgPurchase(0, i).Value & "',"
-                            sqlsave &= "'" & Val(dgPurchase(2, i).Value) & "',"
-                            sqlsave &= "'" & Val(dgPurchase(3, i).Value) & "',"
-                            sqlsave &= "'" & Val(dgPurchase(4, i).Value) & "',"
-                            sqlsave &= "'" & Val(dgPurchase(1, i).Value) & "',"
-                            sqlsave &= "'" & txtVoucherNo.Text & "',"
-                            sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "',"
-                            sqlsave &= "'0',"
-                            sqlsave &= "'" & Val(txtDmNo.Text) & "',"
-                            sqlsave &= "'" & GMod.Cmpid & "',"
-                            sqlsave &= "'" & GMod.Session & "',"
-                            sqlsave &= "'" & Val(dgPurchase(5, i).Value) & "',"
-                            sqlsave &= "'" & txtAuthorisation.Text & "',"
-                            sqlsave &= "'" & cmbprdunit.Text & "')"
-
-                            Dim cmd1 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                        Dim cmd1 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
                             cmd1.ExecuteNonQuery()
-                        End If
-                    Next
 
-                    'CUSTOMER A/C cr
+                            framt = 0
+                    End If
+                Next
+
+                'CUSTOMER A/C Dr
+                sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                & " Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt, Pay_mode, Cheque_no, " _
+                & "Narration, Group_name, Sub_group_name,ch_date) values ("
+                sqlsave &= "'" & GMod.Cmpid & "',"
+                sqlsave &= "'" & GMod.username & "',"
+                sqlsave &= "'0',"
+                sqlsave &= "'" & txtVoucherNo.Text & "',"
+                sqlsave &= "'" & cmbVoucherType.Text & "',"
+                sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                sqlsave &= "'" & cmbacheadcode.Text & "',"
+                sqlsave &= "'" & cmbacheadname.Text & "',"
+                    sqlsave &= "'" & Val(txtgtotal.Text) - Val(txtgstamtdr.Text) + Val(txtTcsAmount.Text) & "',"
+                sqlsave &= "'0',"
+                sqlsave &= "'-',"
+                sqlsave &= "'-',"
+                sqlsave &= "'" & narrinv & narrcust & "',"
+                sqlsave &= "'" & ComboBox1.Text & "',"
+                sqlsave &= "'-','" & dtInvVate.Value.ToShortDateString & "')"
+                'MsgBox(sqlsave)
+                Dim cmd2 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                cmd2.ExecuteNonQuery()
+
+
+                '
+                If Val(txtgstperdr.Text) > 0 Then
+
                     sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
                     & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
-                    & "Narration, Group_name, Sub_group_name) values ("
+                    & "Narration, Group_name, Sub_group_name,Ch_date) values ("
                     sqlsave &= "'" & GMod.Cmpid & "',"
                     sqlsave &= "'" & GMod.username & "',"
-                    sqlsave &= "'5',"
+                    sqlsave &= "'3',"
                     sqlsave &= "'" & txtVoucherNo.Text & "',"
                     sqlsave &= "'" & cmbVoucherType.Text & "',"
                     sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                    sqlsave &= "'" & cmbacheadcode.Text & "',"
-                    sqlsave &= "'" & cmbacheadname.Text & "',"
-                    sqlsave &= "'" & txtgtotal.Text & "',"
+                    sqlsave &= "'" & cmbcodegstdr.Text & "',"
+                    sqlsave &= "'" & cmbgstheaddr.Text & "',"
+                    sqlsave &= "'0',"
+                    sqlsave &= "'" & Val(txtgstamtdr.Text) & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & narrinv & narrcust & "',"
+                    sqlsave &= "'" & ComboBox9.Text & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
+                    Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmd4.ExecuteNonQuery()
+                End If
+
+
+                sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                & " Vou_type, Vou_date, Acc_head_code, Acc_head, cramt, dramt, Pay_mode, Cheque_no, " _
+                & " Narration, Group_name, Sub_group_name,ch_date) values ("
+                sqlsave &= "'" & GMod.Cmpid & "',"
+                sqlsave &= "'" & GMod.username & "',"
+                sqlsave &= "'0',"
+                sqlsave &= "'" & txtVoucherNo.Text & "',"
+                sqlsave &= "'" & cmbVoucherType.Text & "',"
+                sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                sqlsave &= "'" & cmbSaleAccCode.Text & "',"
+                sqlsave &= "'" & cmbSaleAcc.Text & "',"
+                sqlsave &= "'" & Val(TextBox4.Text) & "',"
+                sqlsave &= "'0',"
+                sqlsave &= "'-',"
+                sqlsave &= "'-',"
+                sqlsave &= "'" & narrinv & narrcust & "',"
+                sqlsave &= "'" & cmbSaleAccCode.SelectedValue & "',"
+                sqlsave &= "'-','" & dtInvVate.Value.ToShortDateString & "')"
+                Dim cmd3 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                cmd3.ExecuteNonQuery()
+
+
+                If Val(txtpacking.Text) > 0 Then
+                        sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                    & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
+                    & "Narration, Group_name, Sub_group_name,Ch_date) values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & GMod.username & "',"
+                    sqlsave &= "'2',"
+                    sqlsave &= "'" & txtVoucherNo.Text & "',"
+                    sqlsave &= "'" & cmbVoucherType.Text & "',"
+                    sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                    sqlsave &= "'" & cmbpackingcode.Text & "',"
+                    sqlsave &= "'" & cmbpackinghead.Text & "',"
+                    sqlsave &= "'" & Val(txtpacking.Text) & "',"
                     sqlsave &= "'0',"
                     sqlsave &= "'-',"
                     sqlsave &= "'-',"
                     sqlsave &= "'" & narrinv & narrcust & "',"
-                    sqlsave &= "'" & ComboBox1.Text & "',"
-                    sqlsave &= "'-')"
-                    'MsgBox(sqlsave)
-                    Dim cmd2 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                    cmd2.ExecuteNonQuery()
+                    sqlsave &= "'" & ComboBox4.Text & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
+                    Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmd4.ExecuteNonQuery()
 
-                    'SALE DR
+                End If
+
+
+                If Val(txtinsurance.Text) > 0 Then
+
                     sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
-                    & " Vou_type, Vou_date, Acc_head_code, Acc_head, Dramt, Cramt, Pay_mode, Cheque_no, " _
-                    & " Narration, Group_name, Sub_group_name) values ("
+                 & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
+                 & "Narration, Group_name, Sub_group_name,Ch_date) values ("
                     sqlsave &= "'" & GMod.Cmpid & "',"
                     sqlsave &= "'" & GMod.username & "',"
-                    sqlsave &= "'4',"
+                    sqlsave &= "'3',"
                     sqlsave &= "'" & txtVoucherNo.Text & "',"
                     sqlsave &= "'" & cmbVoucherType.Text & "',"
                     sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                    sqlsave &= "'" & cmbSaleAccCode.Text & "',"
-                    sqlsave &= "'" & cmbSaleAcc.Text & "',"
-                    sqlsave &= "'" & Val(TextBox4.Text) & "',"
-                    sqlsave &= "'0.00',"
+                    sqlsave &= "'" & cmbinsurancecode.Text & "',"
+                    sqlsave &= "'" & cmbinsurancehead.Text & "',"
+                    sqlsave &= "'" & Val(txtinsurance.Text) & "',"
+                    sqlsave &= "'0',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & narrinv & narrcust & "',"
+                    sqlsave &= "'" & ComboBox5.Text & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
+                    Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmd4.ExecuteNonQuery()
+                End If
+
+                'Freight amount Cr
+                If Val(txtFreightamt.Text) > 0 Then
+
+                    sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                 & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
+                 & "Narration, Group_name, Sub_group_name,Ch_date) values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & GMod.username & "',"
+                    sqlsave &= "'3',"
+                    sqlsave &= "'" & txtVoucherNo.Text & "',"
+                    sqlsave &= "'" & cmbVoucherType.Text & "',"
+                    sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                    sqlsave &= "'" & cmdFreightCode.Text & "',"
+                    sqlsave &= "'" & cmbFreightac.Text & "',"
+                    sqlsave &= "'" & Val(txtFreightamt.Text) & "',"
+                    sqlsave &= "'0',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & narrinv & narrcust & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
+                    Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmd4.ExecuteNonQuery()
+                End If
+
+
+                If Val(txtcgstper.Text) > 0 Then
+
+                    sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                 & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
+                 & "Narration, Group_name, Sub_group_name,Ch_date) values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & GMod.username & "',"
+                    sqlsave &= "'3',"
+                    sqlsave &= "'" & txtVoucherNo.Text & "',"
+                    sqlsave &= "'" & cmbVoucherType.Text & "',"
+                    sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                    sqlsave &= "'" & cmbothercode.Text & "',"
+                    sqlsave &= "'" & cmbother.Text & "',"
+                    sqlsave &= "'" & Val(txtcgstamt.Text) & "',"
+                    sqlsave &= "'0',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & narrinv & narrcust & "',"
+                    sqlsave &= "'" & ComboBox6.Text & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
+                    Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmd4.ExecuteNonQuery()
+                End If
+
+
+
+                If Val(txtsgstper.Text) > 0 Then
+                        sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                 & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
+                 & "Narration, Group_name, Sub_group_name,Ch_date) values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & GMod.username & "',"
+                    sqlsave &= "'3',"
+                    sqlsave &= "'" & txtVoucherNo.Text & "',"
+                    sqlsave &= "'" & cmbVoucherType.Text & "',"
+                    sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                    sqlsave &= "'" & cmbsgstcode.Text & "',"
+                    sqlsave &= "'" & cmbsgsthead.Text & "',"
+                    sqlsave &= "'" & Val(txtsgstamt.Text) & "',"
+                    sqlsave &= "'0',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & narrinv & narrcust & "',"
+                    sqlsave &= "'" & ComboBox7.Text & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
+                    Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmd4.ExecuteNonQuery()
+                End If
+
+
+
+                If Val(txtigstper.Text) > 0 Then
+                    'Vat Dr
+                    sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                 & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
+                 & "Narration, Group_name, Sub_group_name,Ch_date) values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & GMod.username & "',"
+                    sqlsave &= "'3',"
+                    sqlsave &= "'" & txtVoucherNo.Text & "',"
+                    sqlsave &= "'" & cmbVoucherType.Text & "',"
+                    sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                    sqlsave &= "'" & cmbigstcode.Text & "',"
+                    sqlsave &= "'" & cmbigsthead.Text & "',"
+                    sqlsave &= "'" & Val(txtigstamt.Text) & "',"
+                    sqlsave &= "'0',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & narrinv & narrcust & "',"
+                    sqlsave &= "'" & ComboBox8.Text & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "')"
+                    Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmd4.ExecuteNonQuery()
+                End If
+                Dim ssaveprdvntry As String
+                'Inserting TCS tax amount in the Voucher entry Credit 
+                If Val(txtTcsAmount.Text) > 0 Then
+                    ssaveprdvntry = "insert into " & GMod.VENTRY & " (Cmp_id, Uname," _
+                    & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
+                    & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
+                    ssaveprdvntry &= "'" & GMod.Cmpid & "',"
+                    ssaveprdvntry &= "'" & GMod.username & "',"
+                    ssaveprdvntry &= "'" & i + 1 & "',"
+                    ssaveprdvntry &= "'" & txtVoucherNo.Text & "',"
+                    ssaveprdvntry &= "'" & cmbVoucherType.Text & "',"
+                    ssaveprdvntry &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                    ssaveprdvntry &= "'" & cmbTcsHeadCode.Text & "',"
+                    ssaveprdvntry &= "'" & cmbTcsHead.Text & "',"
+                    ssaveprdvntry &= "'" & Val("") & "',"
+                    ssaveprdvntry &= "'" & Val(txtTcsAmount.Text) & "',"
+                    ssaveprdvntry &= "'" & narrinv & narrcust & "',"
+                    ssaveprdvntry &= "'',"
+                    ssaveprdvntry &= "'','" & dtVouDate.Value.ToShortDateString & "')"
+                    'MsgBox(ssaveprdvntry)
+                    'MsgBox(GMod.SqlExecuteNonQuery(ssaveprdvntry))
+                    Dim cmdTcstaxentry As New SqlCommand(ssaveprdvntry, GMod.SqlConn, sqltrans)
+                    cmdTcstaxentry.ExecuteNonQuery()
+
+
+
+                    'Insert into TCS Report
+                    sql = "insert into TdsEntry(Vou_Type, Vou_no, TdsType, Per, TdsDate, " _
+                                  & " BilltyNo, BilltyDt, VehicleNo, Qty, Prd, Paidamt," _
+                                  & " Actualamt, session,Paidto,vou_date, TdsAmt,dcode,cmp_id,taxtype ) values( "
+                    sql &= "'" & cmbVoucherType.Text & "',"
+                    sql &= "'" & txtVoucherNo.Text & "',"
+                    sql &= "'" & cmbTcsType.Text & "',"
+                    sql &= "'" & txtTcsPer.Text & "',"
+                    sql &= "'" & dtInvVate.Value.ToShortDateString & "',"
+                    sql &= "'-',"
+                    sql &= "'-',"
+                    sql &= "'-',"
+                    sql &= "'-',"
+                    sql &= "'0',"
+                    sql &= "'" & Val(txtgtotal.Text) & "',"
+                    sql &= "'" & Val("") & "',"
+                    sql &= "'" & GMod.Session & "',"
+                    sql &= "'YES',"
+                    sql &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                    sql &= "'" & Val(txtTcsAmount.Text) & "',"
+                    sql &= "'" & cmbacheadcode.Text & "',"
+                    sql &= "'" & GMod.Cmpid & "','1')"
+
+                    Dim cmdTcsReport As New SqlCommand(sql, SqlConn, sqltrans)
+                    cmdTcsReport.ExecuteNonQuery()
+
+                End If
+
+                sqltrans.Commit()
+                MsgBox("Voucher NO. " & txtVoucherNo.Text & " Saved ...", MsgBoxStyle.Information)
+                dgPurchase.Rows.Clear()
+                txtInvnoNo.Focus()
+
+                dgPurchase.Rows.Add()
+                txtgtotal.Text = ""
+                DataGridView1.Rows.Clear()
+                txtinsurance.Text = "0"
+                txtpacking.Text = "0"
+                txtcgstper.Text = "0"
+                txtTcsAmount.Text = "0"
+                chKtcs.Checked = False
+                ''*************************
+                ElseIf cmbVoucherType.Text = "OTHER SALE RET." Then
+                'saving other sale return data
+                If btnSave.Enabled = False Then
+                    sqldel = " delete from " & GMod.VENTRY & " where vou_no='" & txtVoucherNo.Text & "' and vou_type='" & cmbVoucherType.Text & "'"
+                    Dim cmd5 As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
+                    cmd5.ExecuteNonQuery()
+
+                    sqldel = " delete from OtherSaledata where vou_no='" & txtVoucherNo.Text & "' and vou_type='" & cmbVoucherType.Text & "' and Session='" & GMod.Session & "' and cmp_id='" & GMod.Cmpid & "'"
+                    Dim cmd6 As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
+                    cmd6.ExecuteNonQuery()
+
+                    sqldel = "delete from Sale_Receipt where vou_type='" & cmbVoucherType.Text & "' and  vou_no='" & txtVoucherNo.Text & "' and cmp_id='" & GMod.Cmpid & "' and session='" & GMod.Session & "'"
+                    Dim cmddel As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
+                    cmddel.ExecuteNonQuery()
+                Else
+                    nxtvno()
+                End If
+                Dim framt As Double
+                narrinv = "DM No." & txtDmNo.Text & ", INV NO " & txtVoucherNo.Text & " DT." & dtInvVate.Value.ToShortDateString & " "
+                framt = Val(txtFreightamt.Text)
+                For i = 0 To dgPurchase.Rows.Count - 1
+                    'narration = "INV NO " & txtInvnoNo.Text & " DT." & dtInvVate.Value.ToShortDateString & " BATCH NO " & lblbatchno.Text & " "
+                    If Val(dgPurchase(4, i).Value) > 0 Then
+                        narration = ""
+                        narration &= dgPurchase(0, i).Value
+                        If Val(dgPurchase(2, i).Value) > 0 And Val(dgPurchase(1, i).Value) > 0 Then
+                            narration &= " " & dgPurchase(2, i).Value & " " & "KG " & dgPurchase(1, i).Value & " NO "
+                        ElseIf Val(dgPurchase(1, i).Value) > 0 Then
+                            narration &= " " & dgPurchase(1, i).Value & " NO "
+                        ElseIf Val(dgPurchase(2, i).Value) > 0 And Val(dgPurchase(1, i).Value) = 0 Then
+                            narration &= " " & dgPurchase(2, i).Value & " " & "KG " & dgPurchase(1, i).Value & " NO "
+                        End If
+                        narration &= " @ " & dgPurchase(3, i).Value
+                        narrcust = narrcust & " " & narration
+
+
+                        sqlsave = "insert into OtherSaledata (Vou_type, Vou_no, AccCode," & _
+                        "AccName, Station, ProductName, OutQty, Rate, Amount, OutQtyNos," & _
+                        "BillNo, BillDate, InQty, InQtyNos, Cmp_id, Session,mrktrate,authr,Prdunit,[freight] ) values ("
+                        sqlsave &= "'" & cmbVoucherType.Text & "',"
+                        sqlsave &= "'" & txtVoucherNo.Text & "',"
+                        sqlsave &= "'" & cmbacheadcode.Text & "',"
+                        sqlsave &= "'" & cmbacheadname.Text & "',"
+                        sqlsave &= "'" & cmbAreaName.Text & "',"
+                        sqlsave &= "'" & dgPurchase(0, i).Value & "',"
+                        sqlsave &= "'" & Val(dgPurchase(2, i).Value) & "',"
+                        sqlsave &= "'" & Val(dgPurchase(3, i).Value) & "',"
+                        sqlsave &= "'" & Val(dgPurchase(4, i).Value) & "',"
+                        sqlsave &= "'" & Val(dgPurchase(1, i).Value) & "',"
+                        sqlsave &= "'" & txtVoucherNo.Text & "',"
+                        sqlsave &= "'" & dtInvVate.Value.ToShortDateString & "',"
+                        sqlsave &= "'0',"
+                        sqlsave &= "'" & Val(txtDmNo.Text) & "',"
+                        sqlsave &= "'" & GMod.Cmpid & "',"
+                        sqlsave &= "'" & GMod.Session & "',"
+                        sqlsave &= "'" & Val(dgPurchase(5, i).Value) & "',"
+                        sqlsave &= "'" & txtAuthorisation.Text & "',"
+                        sqlsave &= "'" & cmbprdunit.Text & "',"
+                        sqlsave &= "'" & framt & "')"
+
+                        Dim cmd1 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                        cmd1.ExecuteNonQuery()
+
+                        framt = 0
+                    End If
+                Next
+                framt = 0
+                'CUSTOMER A/C cr
+                sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                & " Vou_type, Vou_date, Acc_head_code, Acc_head, Cramt, Dramt, Pay_mode, Cheque_no, " _
+                & "Narration, Group_name, Sub_group_name) values ("
+                sqlsave &= "'" & GMod.Cmpid & "',"
+                sqlsave &= "'" & GMod.username & "',"
+                sqlsave &= "'5',"
+                sqlsave &= "'" & txtVoucherNo.Text & "',"
+                sqlsave &= "'" & cmbVoucherType.Text & "',"
+                sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                sqlsave &= "'" & cmbacheadcode.Text & "',"
+                sqlsave &= "'" & cmbacheadname.Text & "',"
+                sqlsave &= "'" & txtgtotal.Text & "',"
+                sqlsave &= "'0',"
+                sqlsave &= "'-',"
+                sqlsave &= "'-',"
+                sqlsave &= "'" & narrinv & narrcust & "',"
+                sqlsave &= "'" & ComboBox1.Text & "',"
+                sqlsave &= "'-')"
+                'MsgBox(sqlsave)
+                Dim cmd2 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                cmd2.ExecuteNonQuery()
+
+                'SALE DR
+                sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                & " Vou_type, Vou_date, Acc_head_code, Acc_head, Dramt, Cramt, Pay_mode, Cheque_no, " _
+                & " Narration, Group_name, Sub_group_name) values ("
+                sqlsave &= "'" & GMod.Cmpid & "',"
+                sqlsave &= "'" & GMod.username & "',"
+                sqlsave &= "'4',"
+                sqlsave &= "'" & txtVoucherNo.Text & "',"
+                sqlsave &= "'" & cmbVoucherType.Text & "',"
+                sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                sqlsave &= "'" & cmbSaleAccCode.Text & "',"
+                sqlsave &= "'" & cmbSaleAcc.Text & "',"
+                sqlsave &= "'" & Val(TextBox4.Text) & "',"
+                sqlsave &= "'0.00',"
+                sqlsave &= "'-',"
+                sqlsave &= "'-',"
+                sqlsave &= "'" & narrinv & narration & "',"
+                sqlsave &= "'" & cmbSaleAccCode.SelectedValue & "',"
+                sqlsave &= "'-')"
+                Dim cmd3 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                cmd3.ExecuteNonQuery()
+
+
+                If Val(txtpacking.Text) > 0 Then
+                    sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                 & " Vou_type, Vou_date, Acc_head_code, Acc_head, Dramt, Cramt, Pay_mode, Cheque_no, " _
+                 & " Narration, Group_name, Sub_group_name,Ch_issue_date) values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & GMod.username & "',"
+                    sqlsave &= "'3',"
+                    sqlsave &= "'" & txtVoucherNo.Text & "',"
+                    sqlsave &= "'" & cmbVoucherType.Text & "',"
+                    sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                    sqlsave &= "'" & cmbpackingcode.Text & "',"
+                    sqlsave &= "'" & cmbpackinghead.Text & "',"
+                    sqlsave &= "'" & Val(txtpacking.Text) & "',"
+                    sqlsave &= "'0',"
                     sqlsave &= "'-',"
                     sqlsave &= "'-',"
                     sqlsave &= "'" & narrinv & narration & "',"
-                    sqlsave &= "'" & cmbSaleAccCode.SelectedValue & "',"
-                    sqlsave &= "'-')"
-                    Dim cmd3 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                    cmd3.ExecuteNonQuery()
+                    sqlsave &= "'" & ComboBox4.Text & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & CDate("1/1/2000") & "')"
+                    Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmd4.ExecuteNonQuery()
+                End If
 
-
-                    If Val(txtpacking.Text) > 0 Then
-                        sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
-                     & " Vou_type, Vou_date, Acc_head_code, Acc_head, Dramt, Cramt, Pay_mode, Cheque_no, " _
-                     & " Narration, Group_name, Sub_group_name,Ch_issue_date) values ("
-                        sqlsave &= "'" & GMod.Cmpid & "',"
-                        sqlsave &= "'" & GMod.username & "',"
-                        sqlsave &= "'3',"
-                        sqlsave &= "'" & txtVoucherNo.Text & "',"
-                        sqlsave &= "'" & cmbVoucherType.Text & "',"
-                        sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                        sqlsave &= "'" & cmbpackingcode.Text & "',"
-                        sqlsave &= "'" & cmbpackinghead.Text & "',"
-                        sqlsave &= "'" & Val(txtpacking.Text) & "',"
-                        sqlsave &= "'0',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & narrinv & narration & "',"
-                        sqlsave &= "'" & ComboBox4.Text & "',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & CDate("1/1/2000") & "')"
-                        Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                        cmd4.ExecuteNonQuery()
-                    End If
-
-                    If Val(txtinsurance.Text) > 0 Then
-                        'Vat Dr
-                        sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
-                        & " Vou_type, Vou_date, Acc_head_code, Acc_head, Dramt,Cramt, Pay_mode, Cheque_no, " _
-                        & "Narration, Group_name, Sub_group_name,Ch_issue_date) values ("
-                        sqlsave &= "'" & GMod.Cmpid & "',"
-                        sqlsave &= "'" & GMod.username & "',"
-                        sqlsave &= "'2',"
-                        sqlsave &= "'" & txtVoucherNo.Text & "',"
-                        sqlsave &= "'" & cmbVoucherType.Text & "',"
-                        sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                        sqlsave &= "'" & cmbinsurancecode.Text & "',"
-                        sqlsave &= "'" & cmbinsurancehead.Text & "',"
-                        sqlsave &= "'" & Val(txtinsurance.Text) & "',"
-                        sqlsave &= "'0',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & narrinv & narration & "',"
-                        sqlsave &= "'" & ComboBox5.Text & "',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & CDate("1/1/2000") & "')"
-                        Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                        cmd4.ExecuteNonQuery()
-                    End If
-                    If Val(txtcgstper.Text) > 0 Then
-                        'Vat Dr
-                        sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
-                        & " Vou_type, Vou_date, Acc_head_code, Acc_head, Dramt, Cramt, Pay_mode, Cheque_no, " _
-                        & " Narration, Group_name, Sub_group_name,Ch_issue_date) values ("
-                        sqlsave &= "'" & GMod.Cmpid & "',"
-                        sqlsave &= "'" & GMod.username & "',"
-                        sqlsave &= "'3',"
-                        sqlsave &= "'" & txtVoucherNo.Text & "',"
-                        sqlsave &= "'" & cmbVoucherType.Text & "',"
-                        sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                        sqlsave &= "'" & cmbothercode.Text & "',"
-                        sqlsave &= "'" & cmbother.Text & "',"
-                        sqlsave &= "'0',"
-                        sqlsave &= "'" & Val(txtcgstper.Text) & "',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & narrinv & narration & "',"
-                        sqlsave &= "'" & ComboBox6.Text & "',"
-                        sqlsave &= "'-',"
-                        sqlsave &= "'" & CDate("1/1/2000") & "')"
-                        Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                        cmd4.ExecuteNonQuery()
-                    End If
-
-                    If DataGridView1.Rows.Count = 0 Then
-                        sqlsavecr = "insert into  Sale_Receipt (Ref_Type, Ref, Acc_Code, Vou_Type," & _
-                        " Vou_No, Vou_Date, dr, cr, dueon, Session,cmp_id) values( "
-                        sqlsavecr &= "'Ags Ref',"
-                        sqlsavecr &= "'OS" & txtVoucherNo.Text & "',"
-                        sqlsavecr &= "'" & cmbacheadcode.Text & "',"
-                        sqlsavecr &= "'" & cmbVoucherType.Text & "',"
-                        sqlsavecr &= "'" & txtVoucherNo.Text & "',"
-                        sqlsavecr &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                        sqlsavecr &= "'" & Val(txtgtotal.Text) & "',"
-                        sqlsavecr &= "'" & Val("") & "',"
-                        sqlsavecr &= "'" & CDate("1/1/2000") & "',"
-                        sqlsavecr &= "'" & GMod.Session & "',"
-                        sqlsavecr &= "'" & GMod.Cmpid & "')"
-
-                        Dim cmdAG As New SqlCommand(sqlsavecr, GMod.SqlConn, sqltrans)
-                        cmdAG.ExecuteNonQuery()
-                    Else
-                        For i = 0 To DataGridView1.RowCount - 1
-                            sqlsavecr = "insert into  Sale_Receipt (Ref_Type, Ref, Acc_Code, Vou_Type," & _
-                            " Vou_No, Vou_Date, cr, dr, dueon, Session,cmp_id) values( "
-                            sqlsavecr &= "'" & DataGridView1(0, i).Value & "',"
-                            sqlsavecr &= "'" & DataGridView1(1, i).Value & "',"
-                            sqlsavecr &= "'" & cmbacheadcode.Text & "',"
-                            sqlsavecr &= "'" & cmbVoucherType.Text & "',"
-                            sqlsavecr &= "'" & txtVoucherNo.Text & "',"
-                            sqlsavecr &= "'" & dtVouDate.Value.ToShortDateString & "',"
-                            sqlsavecr &= "'" & Val("") & "',"
-                            sqlsavecr &= "'" & Val(DataGridView1(3, i).Value) & "',"
-                            sqlsavecr &= "'" & CDate(DataGridView1(2, i).Value).ToShortDateString & "',"
-                            sqlsavecr &= "'" & GMod.Session & "',"
-                            sqlsavecr &= "'" & GMod.Cmpid & "')"
-
-                            Dim cmdAG As New SqlCommand(sqlsavecr, GMod.SqlConn, sqltrans)
-                            cmdAG.ExecuteNonQuery()
-                        Next
-                    End If
-
-                    Dim cmddd As New SqlCommand("delete from tmpAging where acc_code='" & cmbacheadcode.Text & "' and vou_type='" & cmbVoucherType.Text & "' and cmp_id='" & GMod.Cmpid & "'", GMod.SqlConn, sqltrans)
-                    cmddd.ExecuteNonQuery()
+                If Val(txtinsurance.Text) > 0 Then
+                    'Vat Dr
+                    sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                    & " Vou_type, Vou_date, Acc_head_code, Acc_head, Dramt,Cramt, Pay_mode, Cheque_no, " _
+                    & "Narration, Group_name, Sub_group_name,Ch_issue_date) values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & GMod.username & "',"
+                    sqlsave &= "'2',"
+                    sqlsave &= "'" & txtVoucherNo.Text & "',"
+                    sqlsave &= "'" & cmbVoucherType.Text & "',"
+                    sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                    sqlsave &= "'" & cmbinsurancecode.Text & "',"
+                    sqlsave &= "'" & cmbinsurancehead.Text & "',"
+                    sqlsave &= "'" & Val(txtinsurance.Text) & "',"
+                    sqlsave &= "'0',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & narrinv & narration & "',"
+                    sqlsave &= "'" & ComboBox5.Text & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & CDate("1/1/2000") & "')"
+                    Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmd4.ExecuteNonQuery()
+                End If
+                If Val(txtcgstper.Text) > 0 Then
+                    'Vat Dr
+                    sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                    & " Vou_type, Vou_date, Acc_head_code, Acc_head, Dramt, Cramt, Pay_mode, Cheque_no, " _
+                    & " Narration, Group_name, Sub_group_name,Ch_issue_date) values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & GMod.username & "',"
+                    sqlsave &= "'3',"
+                    sqlsave &= "'" & txtVoucherNo.Text & "',"
+                    sqlsave &= "'" & cmbVoucherType.Text & "',"
+                    sqlsave &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                    sqlsave &= "'" & cmbothercode.Text & "',"
+                    sqlsave &= "'" & cmbother.Text & "',"
+                    sqlsave &= "'0',"
+                    sqlsave &= "'" & Val(txtcgstper.Text) & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & narrinv & narration & "',"
+                    sqlsave &= "'" & ComboBox6.Text & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & CDate("1/1/2000") & "')"
+                    Dim cmd4 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmd4.ExecuteNonQuery()
+                End If
 
                     sqltrans.Commit()
-                    MsgBox("Voucher No. " & txtVoucherNo.Text & " Saved ...", MsgBoxStyle.Information)
-                    dgPurchase.Rows.Clear()
-                    txtInvnoNo.Focus()
+                MsgBox("Voucher No. " & txtVoucherNo.Text & " Saved ...", MsgBoxStyle.Information)
+                dgPurchase.Rows.Clear()
+                txtInvnoNo.Focus()
 
-                    dgPurchase.Rows.Add()
-                    txtgtotal.Text = ""
-                    DataGridView1.Rows.Clear()
-                    txtinsurance.Text = "0"
-                    txtpacking.Text = "0"
-                    txtcgstper.Text = "0"
-                    txtTcsAmount.Text = "0"
-                    ''*************************
+                dgPurchase.Rows.Add()
+                txtgtotal.Text = ""
+                DataGridView1.Rows.Clear()
+                txtinsurance.Text = "0"
+                txtpacking.Text = "0"
+                txtcgstper.Text = "0"
+                txtTcsAmount.Text = "0"
+                framt = 0
+                txtFreightamt.Text = "0"
+                ''*************************
                 End If
                 txtpacking_Leave(sender, e)
                 txtinsurance_Leave(sender, e)
@@ -960,6 +953,7 @@ x1:
                 btnSave.Enabled = True
             End If
             txtgtotal.Focus()
+            txtFreightamt.Text = "0"
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -1417,7 +1411,7 @@ x1:
     End Sub
     Private Sub txtpacking_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtpacking.TextChanged
         CALCSUM()
-        txtgtotal.Text = Val(txtcgstper.Text) + Val(txtpacking.Text) + Val(txtinsurance.Text) + Val(txtgtotal.Text)
+        txtgtotal.Text = Val(txtcgstper.Text) + Val(txtpacking.Text) + Val(txtinsurance.Text) + Val(txtgtotal.Text) + Val(txtFreightamt.Text)
     End Sub
 
     Private Sub txtinsurance_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtinsurance.Leave
@@ -1444,7 +1438,7 @@ x1:
 
     Private Sub txtinsurance_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtinsurance.TextChanged
         CALCSUM()
-        txtgtotal.Text = Val(txtcgstper.Text) + Val(txtpacking.Text) + Val(txtinsurance.Text) + Val(txtgtotal.Text)
+        txtgtotal.Text = Val(txtcgstper.Text) + Val(txtpacking.Text) + Val(txtinsurance.Text) + Val(txtgtotal.Text) + Val(txtFreightamt.Text)
     End Sub
 
     Private Sub txtother_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtcgstper.Leave
@@ -1498,16 +1492,16 @@ x1:
     End Sub
     Private Sub txtcgstamt_TextChanged(sender As Object, e As EventArgs) Handles txtcgstamt.TextChanged
         CALCSUM()
-        txtgtotal.Text = Val(txtpacking.Text) + Val(txtinsurance.Text) + Val(txtgtotal.Text) + Val(txtcgstamt.Text) + Val(txtsgstamt.Text) + Val(txtigstamt.Text)
+        txtgtotal.Text = Val(txtpacking.Text) + Val(txtinsurance.Text) + Val(txtgtotal.Text) + Val(txtcgstamt.Text) + Val(txtsgstamt.Text) + Val(txtigstamt.Text) + Val(txtFreightamt.Text)
     End Sub
     Private Sub txtsgstamt_TextChanged(sender As Object, e As EventArgs) Handles txtsgstamt.TextChanged
         CALCSUM()
-        txtgtotal.Text = Val(txtpacking.Text) + Val(txtinsurance.Text) + Val(txtgtotal.Text) + Val(txtcgstamt.Text) + Val(txtsgstamt.Text) + Val(txtigstamt.Text)
+        txtgtotal.Text = Val(txtpacking.Text) + Val(txtinsurance.Text) + Val(txtgtotal.Text) + Val(txtcgstamt.Text) + Val(txtsgstamt.Text) + Val(txtigstamt.Text) + Val(txtFreightamt.Text)
 
     End Sub
     Private Sub txtigstamt_TextChanged(sender As Object, e As EventArgs) Handles txtigstamt.TextChanged
         CALCSUM()
-        txtgtotal.Text = Val(txtpacking.Text) + Val(txtinsurance.Text) + Val(txtgtotal.Text) + Val(txtcgstamt.Text) + Val(txtsgstamt.Text) + Val(txtigstamt.Text)
+        txtgtotal.Text = Val(txtpacking.Text) + Val(txtinsurance.Text) + Val(txtgtotal.Text) + Val(txtcgstamt.Text) + Val(txtsgstamt.Text) + Val(txtigstamt.Text) + Val(txtFreightamt.Text)
     End Sub
 
     Private Sub txtsgstper_Leave(sender As Object, e As EventArgs) Handles txtsgstper.Leave
@@ -1628,6 +1622,35 @@ x1:
     End Sub
 
     Private Sub cmbcodegstdr_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbcodegstdr.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+
+    End Sub
+
+    Private Sub txtFreightamt_Leave(sender As Object, e As EventArgs) Handles txtFreightamt.Leave
+        If Val(txtFreightamt.Text) > 0 Then
+            Dim Sqlvat As String
+            Sqlvat = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'"
+            GMod.DataSetRet(Sqlvat, "fr_heads")
+            cmbFreightac.DataSource = GMod.ds.Tables("fr_heads")
+            cmbFreightac.DisplayMember = "account_head_name"
+
+            cmdFreightCode.DataSource = GMod.ds.Tables("fr_heads")
+            cmdFreightCode.DisplayMember = "account_code"
+
+           
+        Else
+            cmbinsurancehead.Text = "-"
+            cmbinsurancecode.Text = "-"
+            ComboBox5.Text = "-"
+        End If
+    End Sub
+
+    Private Sub txtFreightamt_TextChanged(sender As Object, e As EventArgs) Handles txtFreightamt.TextChanged
+        CALCSUM()
+        txtgtotal.Text = Val(txtcgstper.Text) + Val(txtpacking.Text) + Val(txtinsurance.Text) + Val(txtgtotal.Text) + Val(txtFreightamt.Text)
 
     End Sub
 End Class

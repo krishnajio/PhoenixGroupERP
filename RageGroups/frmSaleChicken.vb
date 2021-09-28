@@ -168,6 +168,7 @@ Public Class frmSaleChicken
         'End If
     End Sub
     Dim CrAmt As Double
+    Dim Sql, sqldel As String
     Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
         If txtbatch.Text = "" Then
             MsgBox("Enter Batch No:")
@@ -190,6 +191,10 @@ Public Class frmSaleChicken
         sqlsave = "delete from InvPhxChicken where vou_no='" & txtVoucherNo.Text & "' and vou_type='" & cmbvtype.Text & "' and Session='" & GMod.Session & "'"
         Dim cmd13 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
         cmd13.ExecuteNonQuery()
+
+        sqldel = "delete from TdsEntry where vou_type='" & cmbvtype.Text & "' and  vou_no='" & txtVoucherNo.Text & "' and cmp_id='" & GMod.Cmpid & "' and session='" & GMod.Session & "'"
+        Dim cmddel As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
+        cmddel.ExecuteNonQuery()
 
 
         narrinv = "INV NO " & txtInvnoNo.Text & " DT." & dtInvVate.Text & " DM NO " & lblbatchno.Text & " "
@@ -283,6 +288,34 @@ Public Class frmSaleChicken
                 'MsgBox(GMod.SqlExecuteNonQuery(ssaveprdvntry))
                 Dim cmdTcstaxentry As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
                 cmdTcstaxentry.ExecuteNonQuery()
+
+
+                'Insert into TCS Report
+                Sql = "insert into TdsEntry(Vou_Type, Vou_no, TdsType, Per, TdsDate, " _
+                              & " BilltyNo, BilltyDt, VehicleNo, Qty, Prd, Paidamt," _
+                              & " Actualamt, session,Paidto,vou_date, TdsAmt,dcode,cmp_id,taxtype ) values( "
+                Sql &= "'" & cmbvtype.Text & "',"
+                Sql &= "'" & txtVoucherNo.Text & "',"
+                Sql &= "'" & cmbTcsType.Text & "',"
+                Sql &= "'" & txtTcsPer.Text & "',"
+                Sql &= "'" & dtInvVate.Value.ToShortDateString & "',"
+                Sql &= "'-',"
+                Sql &= "'-',"
+                Sql &= "'-',"
+                Sql &= "'-',"
+                Sql &= "'0',"
+                Sql &= "'" & Val(txtgtotal.Text) & "',"
+                Sql &= "'" & Val("") & "',"
+                Sql &= "'" & GMod.Session & "',"
+                Sql &= "'YES',"
+                Sql &= "'" & dtVouDate.Value.ToShortDateString & "',"
+                Sql &= "'" & Val(txtTcsAmount.Text) & "',"
+                Sql &= "'" & cmbacheadcode.Text & "',"
+                Sql &= "'" & GMod.Cmpid & "','1')"
+
+                Dim cmdTcsReport As New SqlCommand(Sql, SqlConn, sqltrans)
+                cmdTcsReport.ExecuteNonQuery()
+
 
             End If
 
