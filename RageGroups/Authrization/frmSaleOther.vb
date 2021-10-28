@@ -148,7 +148,9 @@ Public Class frmSaleOther
     Dim total As Double, i As Integer
     Private Sub dgPurchase_CellEndEdit(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgPurchase.CellEndEdit
         For i = 0 To dgPurchase.Rows.Count - 1
-            total = total + Val(dgPurchase(4, i).Value)
+            If dgPurchase(0, i).Value <> "FREIGHT" Then
+                total = total + Val(dgPurchase(4, i).Value)
+            End If
         Next
 
         total = 0
@@ -1080,7 +1082,9 @@ x1:
     Private Sub dgPurchase_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles dgPurchase.Leave
 
         For i = 0 To dgPurchase.Rows.Count - 1
-            total = total + Val(dgPurchase(4, i).Value)
+            If dgPurchase(0, i).Value <> "FREIGHT" Then
+                total = total + Val(dgPurchase(4, i).Value)
+            End If
         Next
 
         txtgtotal.Text = total.ToString
@@ -1089,7 +1093,9 @@ x1:
     End Sub
     Sub CALCSUM()
         For i = 0 To dgPurchase.Rows.Count - 1
-            total = total + Val(dgPurchase(4, i).Value)
+            If dgPurchase(0, i).Value <> "FREIGHT" Then
+                total = total + Val(dgPurchase(4, i).Value)
+            End If
         Next
 
         txtgtotal.Text = total.ToString
