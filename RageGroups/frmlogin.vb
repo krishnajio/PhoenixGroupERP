@@ -86,7 +86,7 @@ Public Class frmlogin
                 Me.Close()
             Else
                 GMod.Session = cmbSession.Text
-                GMod.DataSetRet("select nofd from nofd_session where session ='" & GMod.Session & "'", "nofd")
+                GMod.DataSetRet("select nofd from nofd_session1 where session ='" & GMod.Session & "'", "nofd")
                 GMod.nofd = GMod.ds.Tables("nofd").Rows(0)(0)
                 MsgBox(GMod.nofd)
 
@@ -148,6 +148,7 @@ Public Class frmlogin
                     sqllogin &= "'1')"
                     GMod.SqlExecuteNonQuery(sqllogin)
                 Catch ex As Exception
+                    Application.Exit()
 
                 End Try
 
@@ -175,6 +176,7 @@ Public Class frmlogin
                     End If
                 Catch ex As Exception
                     MsgBox(ex.Message)
+                    Application.Exit()
                 End Try
 
                 'getting table name

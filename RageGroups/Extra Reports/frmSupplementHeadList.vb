@@ -86,6 +86,7 @@ Public Class frmSupplementHeadList
         r.SetParameterValue("accholder", "Account Holder : " & cmbacheadcode.Text & " " & GMod.ds.Tables("ledhanedname").Rows(0)(0).ToString())
         r.SetParameterValue("subhead", "Date from :" & dtfrom.Text & " to " & dtto.Text)
         r.SetParameterValue("uname", GMod.username)
+        r.SetParameterValue("unauth", "")
         CrystalReportViewer1.ReportSource = r
     End Sub
     Dim sw As StreamWriter

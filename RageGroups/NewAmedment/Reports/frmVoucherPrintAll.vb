@@ -1,7 +1,7 @@
 Public Class frmVoucherPrintAll
     Dim sql As String
     Private Sub frmVoucherPrintAll_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        sql = "select vtype from Vtype where cmp_id='" & GMod.Cmpid & "'  and session = '" & GMod.Session & "'"
+        sql = "select vtype from Vtype where cmp_id='" & GMod.Cmpid & "'  and session = '" & GMod.Session & "' and vtype not in ('SALARY EXPS','SALARY JOURNAL','BANK SAL TRANSFER','BANK TRANS')"
         GMod.DataSetRet(Sql, "CRVT")
         cmbvoutype.DataSource = GMod.ds.Tables("CRVT")
         cmbvoutype.DisplayMember = "vtype"

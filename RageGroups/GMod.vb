@@ -66,8 +66,6 @@ Module GMod
     Public BillNo As String = ""
     Public party_name As String = ""
     Public Billdate As Date
-
-
     Public Sub DataSetRet(ByVal sql As String, ByVal tablename As String)
         Try
             ds.Tables(tablename).Dispose()

@@ -140,7 +140,7 @@ Public Class frmTrial3
            & " Right Join " _
            & " ( select account_code,account_head_name acname ,group_name, isnull(opening_dr,0) odr  , " _
            & " isnull(opening_cr,0) ocr from " & GMod.ACC_HEAD & " where group_name not in ('CASH IN HAND','STAFF','STAFF(HO)')) q " _
-           & " on p.acc_head_code=q.account_code where " _
+           & " on p.acc_head_code=q.account_code  " _
           ' & " where ((isnull(p.dramt,0) + q.odr) <> (isnull(p.cramt,0) + q.ocr)) "
         End If
 
@@ -159,7 +159,7 @@ Public Class frmTrial3
                     & " ( select account_code,account_head_name acname ,group_name, isnull(opening_dr,0) odr  , " _
                     & " isnull(opening_cr,0) ocr from " & GMod.ACC_HEAD & " where group_name not in ('CASH IN HAND','STAFF','STAFF(HO)')) q " _
                     & " on p.acc_head_code=q.account_code  " _
-                    & " where ((isnull(p.dramt,0) + q.odr) <> (isnull(p.cramt,0) + q.ocr)) and q.group_name<>'CASH IN HAND' order by  q.group_name"
+                    & " where ((isnull(p.dramt,0) + q.odr) <> (isnull(p.cramt,0) + q.ocr)) and q.group_name<>'CASH IN HAND' "
         End If
         If BOTH.Checked = True Then
 
@@ -178,13 +178,13 @@ Public Class frmTrial3
 
         End If
         If rdCode.Checked = True Then
-            sqlSelect = sqlSelect & " order by q.group_name,q.account_code"
-            SqlSelect1 = SqlSelect1 & " order by q.group_name,q.account_code"
+            ' sqlSelect = sqlSelect & " order by q.group_name,q.account_code"
+            'SqlSelect1 = SqlSelect1 & " order by q.group_name,q.account_code"
         End If
 
         If rdName.Checked = True Then
-            sqlSelect = sqlSelect & " order by q.group_name,q.acname"
-            SqlSelect1 = SqlSelect1 & " order by q.group_name,q.acname"
+            'sqlSelect = sqlSelect & " order by q.group_name,q.acname"
+            'SqlSelect1 = SqlSelect1 & " order by q.group_name,q.acname"
         End If
 
         If edwoopening.Checked = True Then
@@ -370,10 +370,6 @@ Public Class frmTrial3
         p.StartInfo.UseShellExecute = False
         p.StartInfo.RedirectStandardOutput = True
         p.Start()
-
-
-
-
     End Sub
     Dim grpdr, grpcr As Double
     Sub fotter()
@@ -480,7 +476,5 @@ Public Class frmTrial3
         cmbSubGroup.DisplayMember = "sub_group_name"
     End Sub
 
-    Private Sub cmbSubGroup_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbSubGroup.SelectedIndexChanged
-
-    End Sub
+    
 End Class

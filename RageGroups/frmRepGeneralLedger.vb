@@ -917,7 +917,8 @@ Public Class frmRepGeneralLedger
         If GMod.Cmpid = "PHOE" Then
 
             If chkWithoutSubgroup.Checked = False Then
-                GMod.DataSetRet("select * from sub_group where group_name='" & cmbgrpname.Text & "' and  cmp_id='" & GMod.Cmpid & "' and session = '" & GMod.Session & "'", "sgrp")
+                ' GMod.DataSetRet("select * from sub_group where group_name='" & cmbgrpname.Text & "' and  cmp_id='" & GMod.Cmpid & "' and session = '" & GMod.Session & "'", "sgrp")
+                GMod.DataSetRet("select distinct sub_group_name from " & GMod.ACC_HEAD & " where group_name='" & cmbgrpname.Text & "'", "sgrp")
                 cmbsubgrpname.DataSource = GMod.ds.Tables("sgrp")
                 cmbsubgrpname.DisplayMember = "sub_group_name"
             Else
@@ -1834,13 +1835,5 @@ Public Class frmRepGeneralLedger
 
             MsgBox(ex.Message)
         End Try
-    End Sub
-
-    Private Sub chkWithoutSubgroup_CheckedChanged(sender As Object, e As EventArgs) Handles chkWithoutSubgroup.CheckedChanged
-
-    End Sub
-
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
-
     End Sub
 End Class
