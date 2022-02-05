@@ -1199,7 +1199,7 @@ Public Class frmSaleInvoice
         sqlsavecr &= "'" & DataGridView1.CurrentCell.RowIndex & "',"
         sqlsavecr &= "'" & GMod.Cmpid & "')"
 
-        GMod.SqlExecuteNonQuery(sqlsavecr)
+        'GMod.SqlExecuteNonQuery(sqlsavecr)
 
         'If cr <> Val(dg(0, 4).Value) Then
         '    cmbRefType.Focus()
@@ -1221,7 +1221,7 @@ Public Class frmSaleInvoice
     End Sub
     Private Sub cmbacheadcode_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbacheadcode.Leave
         Try
-            GMod.DataSetRet("select sum(dramt) from " & GMod.VENTRY & " where acc_head_code = '" & cmbacheadcode.Text & "'", "tcsamtcheck")
+            GMod.DataSetRet("select isnull(sum(dramt),0) dramt from " & GMod.VENTRY & " where acc_head_code = '" & cmbacheadcode.Text & "'", "tcsamtcheck")
             If Val(GMod.ds.Tables("tcsamtcheck").Rows(0)(0)) >= 5000000 Then
                 MsgBox("Customer Eligible for TCS...")
             End If
@@ -1240,6 +1240,12 @@ Public Class frmSaleInvoice
         End Try
        
 
+
+        'TCS elegibiltuy by pan number 
+        sql = "select isnull(sum(dramt),0) from " & GMod.VENTRY & " where Acc_head_code in (select account_code from " & GMod.ACC_HEAD & "  where pan_no='" & lblpan.Text & "')"
+        If Val(GMod.ds.Tables("tcsamtcheck").Rows(0)(0)) >= 5000000 Then
+            MsgBox("Customer Eligible for TCS...")
+        End If
 
 
         sql = "select account_code from " & GMod.ACC_HEAD & " where account_head_name = '" & cmbacheadname.Text & "' and  Area_code ='" & cmbAreaCode.Text & "'"
@@ -1262,8 +1268,8 @@ Public Class frmSaleInvoice
               " select Ref_type,Ref,acc_code,sum(cr)-sum(dr) Amount,'S',cmp_id  " & _
               " from Sale_Receipt group by Ref,acc_code,Ref_type,cmp_id having sum(cr)-sum(dr)>0 " & _
               " and acc_code='" & cmbacheadcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
-        GMod.SqlExecuteNonQuery(sql)
-        cmbRefType_Leave(sender, e)
+        ' GMod.SqlExecuteNonQuery(sql)
+        'cmbRefType_Leave(sender, e)
 
 
 

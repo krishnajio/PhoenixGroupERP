@@ -5,6 +5,7 @@ Module GMod
     Public SessionCurrentDate As DateTime
     Public PerviousSession As Boolean = False
     Public EntryStatus As Integer
+    Public PrevSession As String
 
     Public tdsflag As Boolean = False
     Public tdsdcode As String = ""
@@ -121,6 +122,25 @@ Module GMod
             Return yearstrsuff & yearstrpfx
         End If
     End Function
+
+    Public Function GetPrevsiousSession(ByVal statusdate As DateTime) As String
+        Dim year, x As Integer
+        Dim yearstrsuff, yearstrpfx As String
+        If statusdate.Month > 3 Then
+            year = statusdate.Year
+            x = year + 1
+            yearstrsuff = year.ToString.Substring(2, 2) - 1
+            yearstrpfx = x.ToString.Substring(2, 2) - 1
+            Return yearstrsuff & yearstrpfx
+        Else
+            year = statusdate.Year - 1
+            x = year + 1
+            yearstrsuff = year.ToString.Substring(2, 2) - 1
+            yearstrpfx = x.ToString.Substring(2, 2) - 1
+            Return yearstrsuff & yearstrpfx
+        End If
+    End Function
+
     Public Function EncryptionStr(ByVal strval As String, ByVal isencrypt As Boolean) As String
         Dim lenstr, i, t, addval As Integer
         Dim chr1, tmpstr As String

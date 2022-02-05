@@ -19,12 +19,12 @@ Partial Class frmSaleInvoice
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSaleInvoice))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtinvoiceno = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -33,6 +33,14 @@ Partial Class frmSaleInvoice
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.dgSaleVoucher = New System.Windows.Forms.DataGridView()
+        Me.srno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.pcname = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.freeper = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.freeqty = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Mortality = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dtHatchdate = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -97,14 +105,6 @@ Partial Class frmSaleInvoice
         Me.cmbTcsHeadCode = New System.Windows.Forms.ComboBox()
         Me.chKtcs = New System.Windows.Forms.CheckBox()
         Me.lblpan = New System.Windows.Forms.Label()
-        Me.srno = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.pcname = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.rate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.freeper = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.freeqty = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Mortality = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgSaleVoucher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -151,7 +151,7 @@ Partial Class frmSaleInvoice
         Me.cmbacheadname.FormattingEnabled = True
         Me.cmbacheadname.Location = New System.Drawing.Point(288, 133)
         Me.cmbacheadname.Name = "cmbacheadname"
-        Me.cmbacheadname.Size = New System.Drawing.Size(336, 21)
+        Me.cmbacheadname.Size = New System.Drawing.Size(464, 21)
         Me.cmbacheadname.TabIndex = 8
         '
         'cmbacheadcode
@@ -162,7 +162,7 @@ Partial Class frmSaleInvoice
         Me.cmbacheadcode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbacheadcode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbacheadcode.FormattingEnabled = True
-        Me.cmbacheadcode.Location = New System.Drawing.Point(629, 134)
+        Me.cmbacheadcode.Location = New System.Drawing.Point(758, 132)
         Me.cmbacheadcode.Name = "cmbacheadcode"
         Me.cmbacheadcode.Size = New System.Drawing.Size(132, 21)
         Me.cmbacheadcode.TabIndex = 9
@@ -195,8 +195,80 @@ Partial Class frmSaleInvoice
         Me.dgSaleVoucher.Location = New System.Drawing.Point(24, 194)
         Me.dgSaleVoucher.Name = "dgSaleVoucher"
         Me.dgSaleVoucher.RowTemplate.Height = 20
-        Me.dgSaleVoucher.Size = New System.Drawing.Size(755, 196)
+        Me.dgSaleVoucher.Size = New System.Drawing.Size(866, 196)
         Me.dgSaleVoucher.TabIndex = 10
+        '
+        'srno
+        '
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.srno.DefaultCellStyle = DataGridViewCellStyle11
+        Me.srno.Frozen = True
+        Me.srno.HeaderText = "Sr. No."
+        Me.srno.MaxInputLength = 2
+        Me.srno.Name = "srno"
+        Me.srno.Width = 30
+        '
+        'pcname
+        '
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.pcname.DefaultCellStyle = DataGridViewCellStyle12
+        Me.pcname.Frozen = True
+        Me.pcname.HeaderText = "Product Name"
+        Me.pcname.Name = "pcname"
+        Me.pcname.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.pcname.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.pcname.Width = 200
+        '
+        'qty
+        '
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.qty.DefaultCellStyle = DataGridViewCellStyle13
+        Me.qty.Frozen = True
+        Me.qty.HeaderText = "Qty"
+        Me.qty.MaxInputLength = 15
+        Me.qty.Name = "qty"
+        '
+        'rate
+        '
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rate.DefaultCellStyle = DataGridViewCellStyle14
+        Me.rate.Frozen = True
+        Me.rate.HeaderText = "Rate"
+        Me.rate.MaxInputLength = 18
+        Me.rate.Name = "rate"
+        Me.rate.Width = 50
+        '
+        'Amount
+        '
+        Me.Amount.Frozen = True
+        Me.Amount.HeaderText = "Amount"
+        Me.Amount.Name = "Amount"
+        Me.Amount.ReadOnly = True
+        Me.Amount.Width = 125
+        '
+        'freeper
+        '
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.freeper.DefaultCellStyle = DataGridViewCellStyle15
+        Me.freeper.Frozen = True
+        Me.freeper.HeaderText = "Free Per"
+        Me.freeper.MaxInputLength = 3
+        Me.freeper.Name = "freeper"
+        Me.freeper.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.freeper.Width = 50
+        '
+        'freeqty
+        '
+        Me.freeqty.Frozen = True
+        Me.freeqty.HeaderText = "Free Qty"
+        Me.freeqty.Name = "freeqty"
+        Me.freeqty.ReadOnly = True
+        Me.freeqty.Width = 60
+        '
+        'Mortality
+        '
+        Me.Mortality.HeaderText = "Mortality"
+        Me.Mortality.Name = "Mortality"
         '
         'dtHatchdate
         '
@@ -348,7 +420,7 @@ Partial Class frmSaleInvoice
         Me.txtremark1.BackColor = System.Drawing.Color.White
         Me.txtremark1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtremark1.FormattingEnabled = True
-        Me.txtremark1.Location = New System.Drawing.Point(629, 134)
+        Me.txtremark1.Location = New System.Drawing.Point(758, 132)
         Me.txtremark1.Name = "txtremark1"
         Me.txtremark1.Size = New System.Drawing.Size(133, 21)
         Me.txtremark1.TabIndex = 124
@@ -356,7 +428,7 @@ Partial Class frmSaleInvoice
         'cmbsubgrp
         '
         Me.cmbsubgrp.FormattingEnabled = True
-        Me.cmbsubgrp.Location = New System.Drawing.Point(630, 134)
+        Me.cmbsubgrp.Location = New System.Drawing.Point(759, 132)
         Me.cmbsubgrp.Name = "cmbsubgrp"
         Me.cmbsubgrp.Size = New System.Drawing.Size(100, 21)
         Me.cmbsubgrp.TabIndex = 126
@@ -370,7 +442,7 @@ Partial Class frmSaleInvoice
         Me.Panel1.Controls.Add(Me.btnsave)
         Me.Panel1.Controls.Add(Me.btnDelete)
         Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Location = New System.Drawing.Point(12, 602)
+        Me.Panel1.Location = New System.Drawing.Point(38, 523)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(778, 58)
         Me.Panel1.TabIndex = 17
@@ -458,7 +530,7 @@ Partial Class frmSaleInvoice
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label3.Location = New System.Drawing.Point(22, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(775, 35)
+        Me.Label3.Size = New System.Drawing.Size(880, 35)
         Me.Label3.TabIndex = 128
         Me.Label3.Text = "Invoice No :"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -504,7 +576,7 @@ Partial Class frmSaleInvoice
         Me.CmbCrCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.CmbCrCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbCrCode.FormattingEnabled = True
-        Me.CmbCrCode.Location = New System.Drawing.Point(652, 397)
+        Me.CmbCrCode.Location = New System.Drawing.Point(652, 396)
         Me.CmbCrCode.Name = "CmbCrCode"
         Me.CmbCrCode.Size = New System.Drawing.Size(110, 21)
         Me.CmbCrCode.TabIndex = 12
@@ -543,7 +615,7 @@ Partial Class frmSaleInvoice
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
-        Me.GroupBox1.Location = New System.Drawing.Point(763, 549)
+        Me.GroupBox1.Location = New System.Drawing.Point(825, 464)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(34, 10)
         Me.GroupBox1.TabIndex = 13
@@ -910,84 +982,12 @@ Partial Class frmSaleInvoice
         Me.lblpan.TabIndex = 150
         Me.lblpan.Text = "-"
         '
-        'srno
-        '
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.srno.DefaultCellStyle = DataGridViewCellStyle1
-        Me.srno.Frozen = True
-        Me.srno.HeaderText = "Sr. No."
-        Me.srno.MaxInputLength = 2
-        Me.srno.Name = "srno"
-        Me.srno.Width = 30
-        '
-        'pcname
-        '
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pcname.DefaultCellStyle = DataGridViewCellStyle2
-        Me.pcname.Frozen = True
-        Me.pcname.HeaderText = "Product Name"
-        Me.pcname.Name = "pcname"
-        Me.pcname.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.pcname.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.pcname.Width = 200
-        '
-        'qty
-        '
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.qty.DefaultCellStyle = DataGridViewCellStyle3
-        Me.qty.Frozen = True
-        Me.qty.HeaderText = "Qty"
-        Me.qty.MaxInputLength = 15
-        Me.qty.Name = "qty"
-        '
-        'rate
-        '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rate.DefaultCellStyle = DataGridViewCellStyle4
-        Me.rate.Frozen = True
-        Me.rate.HeaderText = "Rate"
-        Me.rate.MaxInputLength = 18
-        Me.rate.Name = "rate"
-        Me.rate.Width = 50
-        '
-        'Amount
-        '
-        Me.Amount.Frozen = True
-        Me.Amount.HeaderText = "Amount"
-        Me.Amount.Name = "Amount"
-        Me.Amount.ReadOnly = True
-        Me.Amount.Width = 125
-        '
-        'freeper
-        '
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.freeper.DefaultCellStyle = DataGridViewCellStyle5
-        Me.freeper.Frozen = True
-        Me.freeper.HeaderText = "Free Per"
-        Me.freeper.MaxInputLength = 3
-        Me.freeper.Name = "freeper"
-        Me.freeper.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.freeper.Width = 50
-        '
-        'freeqty
-        '
-        Me.freeqty.Frozen = True
-        Me.freeqty.HeaderText = "Free Qty"
-        Me.freeqty.Name = "freeqty"
-        Me.freeqty.ReadOnly = True
-        Me.freeqty.Width = 60
-        '
-        'Mortality
-        '
-        Me.Mortality.HeaderText = "Mortality"
-        Me.Mortality.Name = "Mortality"
-        '
         'frmSaleInvoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(797, 709)
+        Me.ClientSize = New System.Drawing.Size(902, 709)
         Me.Controls.Add(Me.lblpan)
         Me.Controls.Add(Me.chKtcs)
         Me.Controls.Add(Me.cmbTcsType)

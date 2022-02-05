@@ -1659,4 +1659,6 @@ x1:
         txtgtotal.Text = Val(txtcgstper.Text) + Val(txtpacking.Text) + Val(txtinsurance.Text) + Val(txtgtotal.Text) + Val(txtFreightamt.Text)
 
     End Sub
+
+  
 End Class

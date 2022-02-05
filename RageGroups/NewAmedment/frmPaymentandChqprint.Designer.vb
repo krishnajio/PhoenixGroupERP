@@ -61,6 +61,13 @@ Partial Class frmPaymentandChqprint
         Me.cmbAreaName = New System.Windows.Forms.ComboBox()
         Me.cmbAreaCode = New System.Windows.Forms.ComboBox()
         Me.dgBillNo = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Bill_No = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Bill_date = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Session = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.debit_amt = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TdsAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cmbfavourof = New System.Windows.Forms.ComboBox()
@@ -80,13 +87,6 @@ Partial Class frmPaymentandChqprint
         Me.dtpexpensedate = New System.Windows.Forms.DateTimePicker()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Bill_No = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Bill_date = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Session = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.debit_amt = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TdsAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgPayment, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgBillNo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -95,7 +95,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(1109, 95)
+        Me.Label10.Location = New System.Drawing.Point(1162, 98)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(85, 16)
         Me.Label10.TabIndex = 157
@@ -104,7 +104,7 @@ Partial Class frmPaymentandChqprint
         'txtChqNo
         '
         Me.txtChqNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtChqNo.Location = New System.Drawing.Point(1106, 117)
+        Me.txtChqNo.Location = New System.Drawing.Point(1165, 120)
         Me.txtChqNo.Name = "txtChqNo"
         Me.txtChqNo.Size = New System.Drawing.Size(103, 22)
         Me.txtChqNo.TabIndex = 8
@@ -121,7 +121,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Cramt.AutoSize = True
         Me.Cramt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cramt.Location = New System.Drawing.Point(681, 94)
+        Me.Cramt.Location = New System.Drawing.Point(735, 97)
         Me.Cramt.Name = "Cramt"
         Me.Cramt.Size = New System.Drawing.Size(49, 16)
         Me.Cramt.TabIndex = 155
@@ -130,7 +130,7 @@ Partial Class frmPaymentandChqprint
         'txtCrmat
         '
         Me.txtCrmat.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCrmat.Location = New System.Drawing.Point(666, 117)
+        Me.txtCrmat.Location = New System.Drawing.Point(720, 120)
         Me.txtCrmat.Name = "txtCrmat"
         Me.txtCrmat.Size = New System.Drawing.Size(101, 22)
         Me.txtCrmat.TabIndex = 6
@@ -142,7 +142,7 @@ Partial Class frmPaymentandChqprint
         Me.cmbcode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbcode.FormattingEnabled = True
         Me.cmbcode.Items.AddRange(New Object() {"SALE"})
-        Me.cmbcode.Location = New System.Drawing.Point(406, 116)
+        Me.cmbcode.Location = New System.Drawing.Point(459, 118)
         Me.cmbcode.Name = "cmbcode"
         Me.cmbcode.Size = New System.Drawing.Size(148, 24)
         Me.cmbcode.TabIndex = 4
@@ -154,9 +154,9 @@ Partial Class frmPaymentandChqprint
         Me.cmbAcHead.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbAcHead.FormattingEnabled = True
         Me.cmbAcHead.Items.AddRange(New Object() {"SALE"})
-        Me.cmbAcHead.Location = New System.Drawing.Point(30, 114)
+        Me.cmbAcHead.Location = New System.Drawing.Point(30, 118)
         Me.cmbAcHead.Name = "cmbAcHead"
-        Me.cmbAcHead.Size = New System.Drawing.Size(370, 24)
+        Me.cmbAcHead.Size = New System.Drawing.Size(423, 24)
         Me.cmbAcHead.TabIndex = 2
         '
         'Label3
@@ -219,7 +219,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(575, 94)
+        Me.Label4.Location = New System.Drawing.Point(629, 97)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(50, 16)
         Me.Label4.TabIndex = 160
@@ -228,7 +228,7 @@ Partial Class frmPaymentandChqprint
         'txtDramt
         '
         Me.txtDramt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDramt.Location = New System.Drawing.Point(559, 117)
+        Me.txtDramt.Location = New System.Drawing.Point(613, 120)
         Me.txtDramt.Name = "txtDramt"
         Me.txtDramt.Size = New System.Drawing.Size(101, 22)
         Me.txtDramt.TabIndex = 5
@@ -238,7 +238,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(403, 97)
+        Me.Label5.Location = New System.Drawing.Point(456, 99)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(76, 16)
         Me.Label5.TabIndex = 161
@@ -262,7 +262,7 @@ Partial Class frmPaymentandChqprint
         'btnOk
         '
         Me.btnOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOk.Location = New System.Drawing.Point(1210, 114)
+        Me.btnOk.Location = New System.Drawing.Point(1274, 114)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(34, 28)
         Me.btnOk.TabIndex = 9
@@ -337,7 +337,7 @@ Partial Class frmPaymentandChqprint
         'txtNarration
         '
         Me.txtNarration.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNarration.Location = New System.Drawing.Point(771, 95)
+        Me.txtNarration.Location = New System.Drawing.Point(827, 92)
         Me.txtNarration.MaxLength = 180
         Me.txtNarration.Multiline = True
         Me.txtNarration.Name = "txtNarration"
@@ -348,7 +348,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(632, 69)
+        Me.Label9.Location = New System.Drawing.Point(824, 76)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(72, 16)
         Me.Label9.TabIndex = 166
@@ -493,6 +493,49 @@ Partial Class frmPaymentandChqprint
         Me.dgBillNo.Name = "dgBillNo"
         Me.dgBillNo.Size = New System.Drawing.Size(663, 326)
         Me.dgBillNo.TabIndex = 186
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Column1"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Column1.TrueValue = "1"
+        Me.Column1.Width = 50
+        '
+        'Bill_No
+        '
+        Me.Bill_No.FillWeight = 75.0!
+        Me.Bill_No.HeaderText = "Bill_No"
+        Me.Bill_No.Name = "Bill_No"
+        '
+        'Bill_date
+        '
+        Me.Bill_date.FillWeight = 75.0!
+        Me.Bill_date.HeaderText = "Bill_Date"
+        Me.Bill_date.Name = "Bill_date"
+        '
+        'Amount
+        '
+        Me.Amount.HeaderText = "Amount"
+        Me.Amount.Name = "Amount"
+        '
+        'Session
+        '
+        Me.Session.FillWeight = 50.0!
+        Me.Session.HeaderText = "Session"
+        Me.Session.MaxInputLength = 10
+        Me.Session.Name = "Session"
+        '
+        'debit_amt
+        '
+        Me.debit_amt.HeaderText = "debit_amt"
+        Me.debit_amt.Name = "debit_amt"
+        '
+        'TdsAmount
+        '
+        Me.TdsAmount.HeaderText = "TdsAmount"
+        Me.TdsAmount.Name = "TdsAmount"
         '
         'Button1
         '
@@ -687,49 +730,6 @@ Partial Class frmPaymentandChqprint
         Me.Button4.TabIndex = 220
         Me.Button4.Text = "&Reset"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Column1"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.Column1.TrueValue = "1"
-        Me.Column1.Width = 50
-        '
-        'Bill_No
-        '
-        Me.Bill_No.FillWeight = 75.0!
-        Me.Bill_No.HeaderText = "Bill_No"
-        Me.Bill_No.Name = "Bill_No"
-        '
-        'Bill_date
-        '
-        Me.Bill_date.FillWeight = 75.0!
-        Me.Bill_date.HeaderText = "Bill_Date"
-        Me.Bill_date.Name = "Bill_date"
-        '
-        'Amount
-        '
-        Me.Amount.HeaderText = "Amount"
-        Me.Amount.Name = "Amount"
-        '
-        'Session
-        '
-        Me.Session.FillWeight = 50.0!
-        Me.Session.HeaderText = "Session"
-        Me.Session.MaxInputLength = 10
-        Me.Session.Name = "Session"
-        '
-        'debit_amt
-        '
-        Me.debit_amt.HeaderText = "debit_amt"
-        Me.debit_amt.Name = "debit_amt"
-        '
-        'TdsAmount
-        '
-        Me.TdsAmount.HeaderText = "TdsAmount"
-        Me.TdsAmount.Name = "TdsAmount"
         '
         'frmPaymentandChqprint
         '

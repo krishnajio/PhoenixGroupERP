@@ -19,15 +19,15 @@ Partial Class frmSaleOther
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmbacheadname = New System.Windows.Forms.ComboBox()
         Me.cmbacheadcode = New System.Windows.Forms.ComboBox()
@@ -195,35 +195,35 @@ Partial Class frmSaleOther
         'dgPurchase
         '
         Me.dgPurchase.AllowUserToAddRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgPurchase.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgPurchase.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.dgPurchase.ColumnHeadersHeight = 30
         Me.dgPurchase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgPurchase.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Particular, Me.Quantity_No, Me.Quantity_Kg, Me.Rate, Me.Amount, Me.mrktrate, Me.Unit})
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgPurchase.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgPurchase.DefaultCellStyle = DataGridViewCellStyle17
         Me.dgPurchase.Location = New System.Drawing.Point(39, 166)
         Me.dgPurchase.Name = "dgPurchase"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgPurchase.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgPurchase.RowHeadersDefaultCellStyle = DataGridViewCellStyle18
         Me.dgPurchase.RowHeadersWidth = 20
         Me.dgPurchase.RowTemplate.Height = 40
         Me.dgPurchase.Size = New System.Drawing.Size(907, 230)
@@ -232,8 +232,8 @@ Partial Class frmSaleOther
         'Particular
         '
         Me.Particular.DataPropertyName = "Particular"
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Particular.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Particular.DefaultCellStyle = DataGridViewCellStyle11
         Me.Particular.FillWeight = 449.2385!
         Me.Particular.HeaderText = "Particular"
         Me.Particular.Name = "Particular"
@@ -244,9 +244,9 @@ Partial Class frmSaleOther
         'Quantity_No
         '
         Me.Quantity_No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.NullValue = "0"
-        Me.Quantity_No.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.NullValue = "0"
+        Me.Quantity_No.DefaultCellStyle = DataGridViewCellStyle12
         Me.Quantity_No.FillWeight = 12.69035!
         Me.Quantity_No.HeaderText = "Quantity in No"
         Me.Quantity_No.Name = "Quantity_No"
@@ -254,9 +254,9 @@ Partial Class frmSaleOther
         'Quantity_Kg
         '
         Me.Quantity_Kg.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.NullValue = "0"
-        Me.Quantity_Kg.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.NullValue = "0"
+        Me.Quantity_Kg.DefaultCellStyle = DataGridViewCellStyle13
         Me.Quantity_Kg.FillWeight = 12.69035!
         Me.Quantity_Kg.HeaderText = "Quantity in kg"
         Me.Quantity_Kg.Name = "Quantity_Kg"
@@ -264,8 +264,8 @@ Partial Class frmSaleOther
         'Rate
         '
         Me.Rate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Rate.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Rate.DefaultCellStyle = DataGridViewCellStyle14
         Me.Rate.FillWeight = 12.69035!
         Me.Rate.HeaderText = "Rate"
         Me.Rate.MaxInputLength = 10
@@ -274,8 +274,8 @@ Partial Class frmSaleOther
         'Amount
         '
         Me.Amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Amount.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Amount.DefaultCellStyle = DataGridViewCellStyle15
         Me.Amount.FillWeight = 12.69035!
         Me.Amount.HeaderText = "Amount"
         Me.Amount.Name = "Amount"
@@ -289,8 +289,8 @@ Partial Class frmSaleOther
         '
         'Unit
         '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Unit.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Unit.DefaultCellStyle = DataGridViewCellStyle16
         Me.Unit.HeaderText = "Unit"
         Me.Unit.MaxInputLength = 25
         Me.Unit.Name = "Unit"
@@ -367,7 +367,7 @@ Partial Class frmSaleOther
         Me.Panel2.Location = New System.Drawing.Point(35, 695)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(772, 41)
-        Me.Panel2.TabIndex = 24
+        Me.Panel2.TabIndex = 33
         '
         'btnSave
         '
@@ -377,7 +377,7 @@ Partial Class frmSaleOther
         Me.btnSave.Location = New System.Drawing.Point(172, 4)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(88, 31)
-        Me.btnSave.TabIndex = 25
+        Me.btnSave.TabIndex = 34
         Me.btnSave.Text = "&Save"
         Me.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSave.UseVisualStyleBackColor = True
@@ -403,7 +403,7 @@ Partial Class frmSaleOther
         Me.btnClose.Location = New System.Drawing.Point(447, 4)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(84, 31)
-        Me.btnClose.TabIndex = 3
+        Me.btnClose.TabIndex = 37
         Me.btnClose.Text = "&Close"
         Me.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnClose.UseVisualStyleBackColor = True
@@ -416,7 +416,7 @@ Partial Class frmSaleOther
         Me.btnDelete.Location = New System.Drawing.Point(358, 4)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(88, 31)
-        Me.btnDelete.TabIndex = 3
+        Me.btnDelete.TabIndex = 36
         Me.btnDelete.Text = "&Delete"
         Me.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnDelete.UseVisualStyleBackColor = True
@@ -429,7 +429,7 @@ Partial Class frmSaleOther
         Me.btnModify.Location = New System.Drawing.Point(266, 4)
         Me.btnModify.Name = "btnModify"
         Me.btnModify.Size = New System.Drawing.Size(89, 31)
-        Me.btnModify.TabIndex = 2
+        Me.btnModify.TabIndex = 35
         Me.btnModify.Text = "&Modify"
         Me.btnModify.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModify.UseVisualStyleBackColor = True
@@ -476,7 +476,7 @@ Partial Class frmSaleOther
         Me.txtgtotal.Name = "txtgtotal"
         Me.txtgtotal.ReadOnly = True
         Me.txtgtotal.Size = New System.Drawing.Size(117, 22)
-        Me.txtgtotal.TabIndex = 24
+        Me.txtgtotal.TabIndex = 27
         '
         'Label17
         '
@@ -574,7 +574,7 @@ Partial Class frmSaleOther
         Me.cmbSaleAcc.Location = New System.Drawing.Point(311, 584)
         Me.cmbSaleAcc.Name = "cmbSaleAcc"
         Me.cmbSaleAcc.Size = New System.Drawing.Size(378, 24)
-        Me.cmbSaleAcc.TabIndex = 23
+        Me.cmbSaleAcc.TabIndex = 26
         '
         'cmbSaleAccCode
         '
@@ -603,7 +603,7 @@ Partial Class frmSaleOther
         Me.txtAuthorisation.Location = New System.Drawing.Point(138, 579)
         Me.txtAuthorisation.Name = "txtAuthorisation"
         Me.txtAuthorisation.Size = New System.Drawing.Size(103, 22)
-        Me.txtAuthorisation.TabIndex = 22
+        Me.txtAuthorisation.TabIndex = 25
         Me.txtAuthorisation.Text = "-"
         '
         'Label9
@@ -682,6 +682,7 @@ Partial Class frmSaleOther
         Me.cmbinsurancecode.Name = "cmbinsurancecode"
         Me.cmbinsurancecode.Size = New System.Drawing.Size(92, 24)
         Me.cmbinsurancecode.TabIndex = 17
+        Me.cmbinsurancecode.TabStop = False
         '
         'txtinsurance
         '
@@ -722,7 +723,7 @@ Partial Class frmSaleOther
         Me.txtcgstper.Location = New System.Drawing.Point(96, 493)
         Me.txtcgstper.Name = "txtcgstper"
         Me.txtcgstper.Size = New System.Drawing.Size(43, 20)
-        Me.txtcgstper.TabIndex = 14
+        Me.txtcgstper.TabIndex = 16
         '
         'cmbother
         '
@@ -734,7 +735,7 @@ Partial Class frmSaleOther
         Me.cmbother.Location = New System.Drawing.Point(314, 494)
         Me.cmbother.Name = "cmbother"
         Me.cmbother.Size = New System.Drawing.Size(378, 24)
-        Me.cmbother.TabIndex = 16
+        Me.cmbother.TabIndex = 18
         '
         'cmbothercode
         '
@@ -769,6 +770,7 @@ Partial Class frmSaleOther
         Me.cmbpackingcode.Name = "cmbpackingcode"
         Me.cmbpackingcode.Size = New System.Drawing.Size(92, 24)
         Me.cmbpackingcode.TabIndex = 15
+        Me.cmbpackingcode.TabStop = False
         '
         'Label23
         '
@@ -1050,7 +1052,7 @@ Partial Class frmSaleOther
         Me.txtcgstamt.Location = New System.Drawing.Point(198, 493)
         Me.txtcgstamt.Name = "txtcgstamt"
         Me.txtcgstamt.Size = New System.Drawing.Size(43, 20)
-        Me.txtcgstamt.TabIndex = 15
+        Me.txtcgstamt.TabIndex = 17
         '
         'Label24
         '
@@ -1067,7 +1069,7 @@ Partial Class frmSaleOther
         Me.txtsgstamt.Location = New System.Drawing.Point(198, 523)
         Me.txtsgstamt.Name = "txtsgstamt"
         Me.txtsgstamt.Size = New System.Drawing.Size(43, 20)
-        Me.txtsgstamt.TabIndex = 18
+        Me.txtsgstamt.TabIndex = 20
         '
         'Label25
         '
@@ -1094,7 +1096,7 @@ Partial Class frmSaleOther
         Me.txtsgstper.Location = New System.Drawing.Point(96, 523)
         Me.txtsgstper.Name = "txtsgstper"
         Me.txtsgstper.Size = New System.Drawing.Size(43, 20)
-        Me.txtsgstper.TabIndex = 17
+        Me.txtsgstper.TabIndex = 19
         '
         'cmbsgsthead
         '
@@ -1106,7 +1108,7 @@ Partial Class frmSaleOther
         Me.cmbsgsthead.Location = New System.Drawing.Point(314, 524)
         Me.cmbsgsthead.Name = "cmbsgsthead"
         Me.cmbsgsthead.Size = New System.Drawing.Size(378, 24)
-        Me.cmbsgsthead.TabIndex = 19
+        Me.cmbsgsthead.TabIndex = 21
         '
         'ComboBox7
         '
@@ -1145,7 +1147,7 @@ Partial Class frmSaleOther
         Me.txtigstamt.Location = New System.Drawing.Point(198, 553)
         Me.txtigstamt.Name = "txtigstamt"
         Me.txtigstamt.Size = New System.Drawing.Size(43, 20)
-        Me.txtigstamt.TabIndex = 21
+        Me.txtigstamt.TabIndex = 23
         '
         'Label28
         '
@@ -1172,7 +1174,7 @@ Partial Class frmSaleOther
         Me.txtigstper.Location = New System.Drawing.Point(96, 553)
         Me.txtigstper.Name = "txtigstper"
         Me.txtigstper.Size = New System.Drawing.Size(43, 20)
-        Me.txtigstper.TabIndex = 20
+        Me.txtigstper.TabIndex = 22
         '
         'cmbigsthead
         '
@@ -1184,7 +1186,7 @@ Partial Class frmSaleOther
         Me.cmbigsthead.Location = New System.Drawing.Point(314, 554)
         Me.cmbigsthead.Name = "cmbigsthead"
         Me.cmbigsthead.Size = New System.Drawing.Size(378, 24)
-        Me.cmbigsthead.TabIndex = 22
+        Me.cmbigsthead.TabIndex = 24
         '
         'ComboBox8
         '
@@ -1292,7 +1294,7 @@ Partial Class frmSaleOther
         Me.chKtcs.Location = New System.Drawing.Point(428, 646)
         Me.chKtcs.Name = "chKtcs"
         Me.chKtcs.Size = New System.Drawing.Size(47, 17)
-        Me.chKtcs.TabIndex = 279
+        Me.chKtcs.TabIndex = 29
         Me.chKtcs.Text = "TCS"
         Me.chKtcs.UseVisualStyleBackColor = True
         '
@@ -1306,7 +1308,7 @@ Partial Class frmSaleOther
         Me.cmbTcsType.Location = New System.Drawing.Point(311, 643)
         Me.cmbTcsType.Name = "cmbTcsType"
         Me.cmbTcsType.Size = New System.Drawing.Size(110, 21)
-        Me.cmbTcsType.TabIndex = 272
+        Me.cmbTcsType.TabIndex = 28
         Me.cmbTcsType.TabStop = False
         '
         'Label37
@@ -1330,7 +1332,7 @@ Partial Class frmSaleOther
         Me.txtTcsAmount.Location = New System.Drawing.Point(428, 668)
         Me.txtTcsAmount.Name = "txtTcsAmount"
         Me.txtTcsAmount.Size = New System.Drawing.Size(110, 21)
-        Me.txtTcsAmount.TabIndex = 275
+        Me.txtTcsAmount.TabIndex = 32
         Me.txtTcsAmount.TabStop = False
         '
         'Label38
@@ -1354,7 +1356,7 @@ Partial Class frmSaleOther
         Me.txtTcsPer.Location = New System.Drawing.Point(312, 668)
         Me.txtTcsPer.Name = "txtTcsPer"
         Me.txtTcsPer.Size = New System.Drawing.Size(110, 21)
-        Me.txtTcsPer.TabIndex = 274
+        Me.txtTcsPer.TabIndex = 31
         Me.txtTcsPer.TabStop = False
         '
         'cmbTcsHead
@@ -1367,7 +1369,7 @@ Partial Class frmSaleOther
         Me.cmbTcsHead.Location = New System.Drawing.Point(538, 644)
         Me.cmbTcsHead.Name = "cmbTcsHead"
         Me.cmbTcsHead.Size = New System.Drawing.Size(379, 21)
-        Me.cmbTcsHead.TabIndex = 273
+        Me.cmbTcsHead.TabIndex = 30
         Me.cmbTcsHead.TabStop = False
         '
         'Label39
@@ -1423,7 +1425,7 @@ Partial Class frmSaleOther
         Me.cmbFreightac.Location = New System.Drawing.Point(314, 464)
         Me.cmbFreightac.Name = "cmbFreightac"
         Me.cmbFreightac.Size = New System.Drawing.Size(375, 24)
-        Me.cmbFreightac.TabIndex = 282
+        Me.cmbFreightac.TabIndex = 15
         '
         'cmdFreightCode
         '
@@ -1451,7 +1453,7 @@ Partial Class frmSaleOther
         Me.txtFreightamt.Location = New System.Drawing.Point(137, 460)
         Me.txtFreightamt.Name = "txtFreightamt"
         Me.txtFreightamt.Size = New System.Drawing.Size(85, 20)
-        Me.txtFreightamt.TabIndex = 286
+        Me.txtFreightamt.TabIndex = 14
         '
         'frmSaleOther
         '

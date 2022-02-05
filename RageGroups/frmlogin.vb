@@ -82,6 +82,7 @@ Public Class frmlogin
             'GMod.DataSetRet("select nofd from nofd", "nofd")
             'GMod.nofd = GMod.ds.Tables("nofd").Rows(0)(0)
             GMod.Session = cmbSession.Text
+
             If GMod.Session = "" Then
                 Me.Close()
             Else
@@ -106,6 +107,7 @@ Public Class frmlogin
             If GMod.Getsession(CDate(GMod.ds.Tables("getserverdate").Rows(0)(0))) = GMod.Session Then
                 GMod.SessionCurrentDate = CDate(GMod.ds.Tables("getserverdate").Rows(0)(0))
                 GMod.PerviousSession = False
+                GMod.PrevSession = GMod.GetPrevsiousSession(CDate(GMod.ds.Tables("getserverdate").Rows(0)(0)))
             Else
                 GMod.SessionCurrentDate = GMod.SessionEndDate
                 GMod.PerviousSession = True

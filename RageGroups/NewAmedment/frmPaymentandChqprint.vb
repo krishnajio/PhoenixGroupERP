@@ -644,8 +644,10 @@ Public Class frmPaymentandChqprint
                 '& " from  purchase_data group by bill_no,bill_date ,party_code,session ,cmp_id,id,paid,vou_type" _
                 '& " having session ='" & GMod.Session & "' and Party_code='" & cmbcode.Text & "' and paid =0 and cmp_id ='" & GMod.Cmpid & "' and vou_type <>'DR Note(PUR)'"
 
-                GMod.SqlExecuteNonQuery("exec p_bank_billing '" & GMod.Session & "','" & cmbcode.Text & "','" & GMod.Cmpid & "'")
-                SelectQuery = "select * from bank_billing  where party_code='" & cmbcode.Text & "' and cmp_id ='" & GMod.Cmpid & "'"
+                GMod.SqlExecuteNonQuery("exec [p_bank_billing_new] '" & GMod.Session & "','" & cmbcode.Text & "','" & GMod.Cmpid & "','" & GMod.username & "'")
+                GMod.SqlExecuteNonQuery("exec [p_bank_billing_new_prev] '" & GMod.PrevSession & "','" & cmbcode.Text & "','" & GMod.Cmpid & "','" & GMod.username & "'")
+
+                SelectQuery = "select * from bank_billing  where party_code='" & cmbcode.Text & "' and cmp_id ='" & GMod.Cmpid & "' and Uname='" & GMod.username & "'"
                 GMod.DataSetRet(SelectQuery, "party_bill")
                 Dim party_bill_count As Integer
                 dgBillNo.Rows.Clear()
