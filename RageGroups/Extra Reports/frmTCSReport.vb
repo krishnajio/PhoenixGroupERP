@@ -194,7 +194,34 @@ Public Class frmTCSReport
                 GMod.SqlExecuteNonQuery(sql)
             Next
 
+            sql = "select * from TdsEntry where TdsType='" & cmbtdsType.Text & "' and  TdsDate between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session='" & GMod.Session & "'  and taxtype =1 and cmp_id='" & GMod.Cmpid & "'"
+            GMod.DataSetRet(sql, "tcsentry")
 
+            For i = 0 To GMod.ds.Tables("tcsentry").Rows.Count - 1
+                sql = "select * from " & GMod.ACC_HEAD & " where account_code ='" & GMod.ds.Tables("tcsentry").Rows(i)("dcode") & "'"
+                GMod.DataSetRet(sql, "ddatatcs")
+
+                sql = "insert into tmpTds(dcode, dpan, dname, address, city," _
+                & " state, pin, payamt, ddate, seccode, per, amt,vou_type,vou_no,vou_date,uname,prop) values("
+                sql &= "'" & GMod.ds.Tables("ddatatcs").Rows(0)("account_code") & "',"
+                sql &= "'" & GMod.ds.Tables("ddatatcs").Rows(0)("pan_no") & "',"
+                sql &= "'" & GMod.ds.Tables("ddatatcs").Rows(0)("account_head_name") & "',"
+                sql &= "'" & GMod.ds.Tables("ddatatcs").Rows(0)("address") & "',"
+                sql &= "'" & GMod.ds.Tables("ddatatcs").Rows(0)("city") & "',"
+                sql &= "'" & GMod.ds.Tables("ddatatcs").Rows(0)("state") & "',"
+                sql &= "'" & GMod.ds.Tables("ddatatcs").Rows(0)("rate_of_interest") & "',"
+                sql &= "'" & GMod.ds.Tables("tcsentry").Rows(i)("Actualamt") & "',"
+                sql &= "'" & GMod.ds.Tables("tcsentry").Rows(i)("vou_Date") & "',"
+                sql &= "'" & GMod.ds.Tables("ddatatcs").Rows(0)("credit_limit") & "',"
+                sql &= "'" & GMod.ds.Tables("tcsentry").Rows(i)("Per") & "',"
+                sql &= "'" & GMod.ds.Tables("tcsentry").Rows(i)("TdsAmt") & "',"
+                sql &= "'" & GMod.ds.Tables("tcsentry").Rows(i)("vou_type") & "',"
+                sql &= "'" & GMod.ds.Tables("tcsentry").Rows(i)("vou_no") & "',"
+                sql &= "'" & CDate(GMod.ds.Tables("tcsentry").Rows(i)("vou_Date")) & "',"
+                sql &= "'" & GMod.username & "',"
+                sql &= "'" & GMod.ds.Tables("ddatatcs").Rows(0)("credit_days").ToString & "')"
+                GMod.SqlExecuteNonQuery(sql)
+            Next
 
 
 
@@ -222,5 +249,9 @@ Public Class frmTCSReport
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub rdPurchase_CheckedChanged(sender As Object, e As EventArgs) Handles rdPurchase.CheckedChanged
+
     End Sub
 End Class
