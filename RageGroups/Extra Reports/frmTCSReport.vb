@@ -163,7 +163,7 @@ Public Class frmTCSReport
             Next
 
 
-            sql = "select * from othersaledata  where tcs_per='" & cmbTdsper.Text & "' and BillDate between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session ='" & GMod.Session & "' AND CMP_ID ='" & GMod.Cmpid & "' and tcs_amt>0  and Authr<>'-'  order by billdate,cast(vou_no as bigint)"
+            sql = "select   AccCode,BillDate,tcs_per,tcs_amt,vou_type,vou_no, sum(amount) Amount from othersaledata  where tcs_per='" & cmbTdsper.Text & "' and BillDate between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session ='" & GMod.Session & "' AND CMP_ID ='" & GMod.Cmpid & "' and tcs_amt>0  and Authr<>'-'  group by AccCode,BillDate,tcs_per,tcs_amt,vou_type,vou_no" ' order by billdate,cast(vou_no as bigint)"
             GMod.DataSetRet(sql, "tdseother")
 
 
