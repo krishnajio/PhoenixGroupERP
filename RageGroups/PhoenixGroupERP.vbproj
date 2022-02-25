@@ -1764,6 +1764,11 @@
       <DependentUpon>CrPrdLedger.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="NewAmedment\Reports\CrPrint data.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrPrint data.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NewAmedment\Reports\CrPrintInvLaser.vb">
       <DependentUpon>CrPrintInvLaser123.rpt</DependentUpon>
       <SubType>Component</SubType>
@@ -1846,6 +1851,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrRCMpp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewAmedment\Reports\CrReceiptPrint.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrReceiptPrint.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="NewAmedment\Reports\CrVprint.vb">
@@ -3354,6 +3365,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrRCMpp.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\Reports\CrReceiptPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrReceiptPrint.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\CrVprint.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrVprint.vb</LastGenOutput>
@@ -3621,6 +3636,17 @@
     </None>
     <None Include="Ledger.xsx">
       <DependentUpon>Ledger.xsd</DependentUpon>
+    </None>
+    <None Include="NewAmedment\Reports\CrPrint data.xsc">
+      <DependentUpon>CrPrint data.xsd</DependentUpon>
+    </None>
+    <None Include="NewAmedment\Reports\CrPrint data.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CrPrint data.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="NewAmedment\Reports\CrPrint data.xss">
+      <DependentUpon>CrPrint data.xsd</DependentUpon>
     </None>
     <None Include="NewAmedment\Reports\DataSet10.xsc">
       <DependentUpon>DataSet10.xsd</DependentUpon>

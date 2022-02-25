@@ -163,10 +163,8 @@ Public Class frmTCSReport
             Next
 
 
-            sql = "select   AccCode,BillDate,tcs_per,tcs_amt,vou_type,vou_no, sum(amount) Amount from othersaledata  where tcs_per='" & cmbTdsper.Text & "' and BillDate between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session ='" & GMod.Session & "' AND CMP_ID ='" & GMod.Cmpid & "' and tcs_amt>0  and Authr<>'-'  group by AccCode,BillDate,tcs_per,tcs_amt,vou_type,vou_no" ' order by billdate,cast(vou_no as bigint)"
+            sql = "select   AccCode,BillDate,tcs_per,tcs_amt,vou_type,vou_no, sum(amount) Amount from othersaledata  where tcs_per='" & cmbTdsper.Text & "' and BillDate between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session ='" & GMod.Session & "' AND CMP_ID ='" & GMod.Cmpid & "' and tcs_amt>0  and Authr<>'-'  and vou_type = 'OTHER SALE(GST)' group by AccCode,BillDate,tcs_per,tcs_amt,vou_type,vou_no" ' order by billdate,cast(vou_no as bigint)"
             GMod.DataSetRet(sql, "tdseother")
-
-
 
             For i = 0 To GMod.ds.Tables("tdseother").Rows.Count - 1
                 sql = "select * from " & GMod.ACC_HEAD & " where account_code ='" & GMod.ds.Tables("tdseother").Rows(i)("AccCode") & "'"
@@ -194,7 +192,7 @@ Public Class frmTCSReport
                 GMod.SqlExecuteNonQuery(sql)
             Next
 
-            sql = "select * from TdsEntry where TdsType='" & cmbtdsType.Text & "' and  TdsDate between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session='" & GMod.Session & "'  and taxtype =1 and cmp_id='" & GMod.Cmpid & "'"
+            sql = "select * from TdsEntry where TdsType='" & cmbtdsType.Text & "' and  TdsDate between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session='" & GMod.Session & "'  and taxtype =1 and cmp_id='" & GMod.Cmpid & "' and vou_type <> 'OTHER SALE(GST)'  order by vou_type"
             GMod.DataSetRet(sql, "tcsentry")
 
             For i = 0 To GMod.ds.Tables("tcsentry").Rows.Count - 1

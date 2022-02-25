@@ -19,23 +19,23 @@ Partial Class frmcpvoucher
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.cmbcptype = New System.Windows.Forms.ComboBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.TextBox1 = New System.Windows.Forms.TextBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.TextBox2 = New System.Windows.Forms.TextBox
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.dtvdate = New System.Windows.Forms.DateTimePicker
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.cmbSessionTo = New System.Windows.Forms.ComboBox
-        Me.cmbSession = New System.Windows.Forms.ComboBox
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
+        Me.cmbcptype = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.dtvdate = New System.Windows.Forms.DateTimePicker()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmbSessionTo = New System.Windows.Forms.ComboBox()
+        Me.cmbSession = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -156,6 +156,7 @@ Partial Class frmcpvoucher
         '
         Me.cmbSessionTo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbSessionTo.FormattingEnabled = True
+        Me.cmbSessionTo.Items.AddRange(New Object() {"1920", "2021", "2122", "2223", "2324"})
         Me.cmbSessionTo.Location = New System.Drawing.Point(95, 72)
         Me.cmbSessionTo.Name = "cmbSessionTo"
         Me.cmbSessionTo.Size = New System.Drawing.Size(62, 24)
@@ -166,6 +167,7 @@ Partial Class frmcpvoucher
         Me.cmbSession.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSession.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbSession.FormattingEnabled = True
+        Me.cmbSession.Items.AddRange(New Object() {"1920", "2021", "2122", "2223", "2324"})
         Me.cmbSession.Location = New System.Drawing.Point(95, 42)
         Me.cmbSession.Name = "cmbSession"
         Me.cmbSession.Size = New System.Drawing.Size(62, 24)

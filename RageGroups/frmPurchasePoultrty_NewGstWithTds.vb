@@ -2089,7 +2089,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
             cmbPer.DataSource = GMod.ds.Tables("Tdsper")
             cmbPer.DisplayMember = "per"
         ElseIf cmbVoucherTax.Text = "GST" Then
-            sql = "select per from dbo.GST where gst ='" & cmbTaxType.Text & "'"
+            sql = "select per from dbo.GST where gst ='" & cmbTaxType.Text & "' and cmp_id = '" & GMod.Cmpid & "'"
             GMod.DataSetRet(sql, "Tdsper")
             cmbPer.DataSource = GMod.ds.Tables("Tdsper")
             cmbPer.DisplayMember = "per"
@@ -2213,4 +2213,5 @@ Public Class frmPurchasePoultrty_NewGstWithTds
     End Sub
 
  
+   
 End Class

@@ -20,11 +20,11 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPurchasePoultrty_NewGstWithTds))
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblvouno = New System.Windows.Forms.TextBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
@@ -334,8 +334,8 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         '
         'srno
         '
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.srno.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.srno.DefaultCellStyle = DataGridViewCellStyle1
         Me.srno.HeaderText = "Sr. No."
         Me.srno.MaxInputLength = 2
         Me.srno.Name = "srno"
@@ -344,9 +344,9 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         '
         'Accode
         '
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.NullValue = "-"
-        Me.Accode.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.NullValue = "-"
+        Me.Accode.DefaultCellStyle = DataGridViewCellStyle2
         Me.Accode.HeaderText = "A/C Code"
         Me.Accode.MaxInputLength = 10
         Me.Accode.Name = "Accode"
@@ -354,8 +354,8 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         '
         'acname
         '
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.acname.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.acname.DefaultCellStyle = DataGridViewCellStyle3
         Me.acname.HeaderText = "A/C Name"
         Me.acname.MaxInputLength = 30
         Me.acname.Name = "acname"
@@ -364,11 +364,11 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         '
         'amount
         '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.Format = "N2"
-        DataGridViewCellStyle9.NullValue = "0.00"
-        Me.amount.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.Format = "N2"
+        DataGridViewCellStyle4.NullValue = "0.00"
+        Me.amount.DefaultCellStyle = DataGridViewCellStyle4
         Me.amount.HeaderText = "Amount"
         Me.amount.MaxInputLength = 18
         Me.amount.Name = "amount"
@@ -377,8 +377,8 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         '
         'Qty
         '
-        DataGridViewCellStyle10.NullValue = "0"
-        Me.Qty.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle5.NullValue = "0"
+        Me.Qty.DefaultCellStyle = DataGridViewCellStyle5
         Me.Qty.HeaderText = "Qty"
         Me.Qty.MaxInputLength = 20
         Me.Qty.Name = "Qty"
@@ -892,7 +892,6 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.TxtStockNo.Name = "TxtStockNo"
         Me.TxtStockNo.Size = New System.Drawing.Size(67, 20)
         Me.TxtStockNo.TabIndex = 35
-        Me.TxtStockNo.TabStop = False
         '
         'cmbBrokerName
         '
@@ -925,7 +924,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.cmbBrokerCode.FormattingEnabled = True
         Me.cmbBrokerCode.Location = New System.Drawing.Point(506, 531)
         Me.cmbBrokerCode.Name = "cmbBrokerCode"
-        Me.cmbBrokerCode.Size = New System.Drawing.Size(119, 21)
+        Me.cmbBrokerCode.Size = New System.Drawing.Size(164, 21)
         Me.cmbBrokerCode.TabIndex = 245
         '
         'txtPoly
@@ -1453,9 +1452,9 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.cmbTdsper.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.cmbTdsper.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbTdsper.FormattingEnabled = True
-        Me.cmbTdsper.Location = New System.Drawing.Point(293, 558)
+        Me.cmbTdsper.Location = New System.Drawing.Point(507, 555)
         Me.cmbTdsper.Name = "cmbTdsper"
-        Me.cmbTdsper.Size = New System.Drawing.Size(49, 21)
+        Me.cmbTdsper.Size = New System.Drawing.Size(61, 21)
         Me.cmbTdsper.TabIndex = 37
         '
         'cmbtdsType
@@ -1468,7 +1467,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.cmbtdsType.FormattingEnabled = True
         Me.cmbtdsType.Location = New System.Drawing.Point(130, 556)
         Me.cmbtdsType.Name = "cmbtdsType"
-        Me.cmbtdsType.Size = New System.Drawing.Size(161, 21)
+        Me.cmbtdsType.Size = New System.Drawing.Size(370, 21)
         Me.cmbtdsType.TabIndex = 36
         '
         'cmbacheadcodetds
@@ -1479,9 +1478,9 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.cmbacheadcodetds.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbacheadcodetds.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbacheadcodetds.FormattingEnabled = True
-        Me.cmbacheadcodetds.Location = New System.Drawing.Point(347, 558)
+        Me.cmbacheadcodetds.Location = New System.Drawing.Point(572, 555)
         Me.cmbacheadcodetds.Name = "cmbacheadcodetds"
-        Me.cmbacheadcodetds.Size = New System.Drawing.Size(93, 21)
+        Me.cmbacheadcodetds.Size = New System.Drawing.Size(98, 21)
         Me.cmbacheadcodetds.TabIndex = 30047
         '
         'Label48

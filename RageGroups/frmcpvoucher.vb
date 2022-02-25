@@ -9,11 +9,11 @@ Public Class frmcpvoucher
     Public Sub FillSession()
         Dim i As Integer
         Dim start As Integer = 8
-        DateTimePicker1.Value = "4/1/08"
-        For i = 0 To 50
-            DateTimePicker1.Value = DateTimePicker1.Value.AddYears(i)
-            cmbSession.Items.Add(GMod.Getsession(DateTimePicker1.Value))
-            cmbSessionTo.Items.Add(GMod.Getsession(DateTimePicker1.Value))
+        DateTimePicker1.Value = "4/1/2016"
+        For i = 0 To 10
+            ' DateTimePicker1.Value = DateTimePicker1.Value.AddYears(i)
+            'cmbSession.Items.Add(GMod.Getsession(DateTimePicker1.Value))
+            'cmbSessionTo.Items.Add(GMod.Getsession(DateTimePicker1.Value))
         Next
     End Sub
     Private Sub Label3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label3.Click

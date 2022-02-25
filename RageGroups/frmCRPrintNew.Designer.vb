@@ -19,25 +19,29 @@ Partial Class frmCRPrintNew
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.txtfrom = New System.Windows.Forms.TextBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.txtto = New System.Windows.Forms.TextBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.btnclose = New System.Windows.Forms.Button
-        Me.btnprint = New System.Windows.Forms.Button
-        Me.btnshow = New System.Windows.Forms.Button
-        Me.dgCRDebit = New System.Windows.Forms.DataGridView
-        Me.vno = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.vdate = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.acc_code = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.acc_head = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.narratio = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cramt = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.dtPrint = New System.Windows.Forms.DateTimePicker
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.txtfrom = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtto = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnclose = New System.Windows.Forms.Button()
+        Me.btnprint = New System.Windows.Forms.Button()
+        Me.btnshow = New System.Windows.Forms.Button()
+        Me.dgCRDebit = New System.Windows.Forms.DataGridView()
+        Me.vno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.vdate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.acc_code = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.acc_head = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.narratio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cramt = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dtPrint = New System.Windows.Forms.DateTimePicker()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtAreaCode = New System.Windows.Forms.TextBox()
         CType(Me.dgCRDebit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -69,7 +73,7 @@ Partial Class frmCRPrintNew
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(681, 35)
+        Me.Label1.Size = New System.Drawing.Size(1130, 35)
         Me.Label1.TabIndex = 38
         Me.Label1.Text = " Print"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -96,7 +100,7 @@ Partial Class frmCRPrintNew
         'btnclose
         '
         Me.btnclose.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnclose.Location = New System.Drawing.Point(617, 315)
+        Me.btnclose.Location = New System.Drawing.Point(63, 323)
         Me.btnclose.Name = "btnclose"
         Me.btnclose.Size = New System.Drawing.Size(56, 31)
         Me.btnclose.TabIndex = 45
@@ -106,7 +110,7 @@ Partial Class frmCRPrintNew
         'btnprint
         '
         Me.btnprint.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnprint.Location = New System.Drawing.Point(554, 315)
+        Me.btnprint.Location = New System.Drawing.Point(0, 323)
         Me.btnprint.Name = "btnprint"
         Me.btnprint.Size = New System.Drawing.Size(57, 31)
         Me.btnprint.TabIndex = 44
@@ -122,6 +126,7 @@ Partial Class frmCRPrintNew
         Me.btnshow.TabIndex = 43
         Me.btnshow.Text = "&Show"
         Me.btnshow.UseVisualStyleBackColor = True
+        Me.btnshow.Visible = False
         '
         'dgCRDebit
         '
@@ -132,7 +137,7 @@ Partial Class frmCRPrintNew
         Me.dgCRDebit.Location = New System.Drawing.Point(-3, 74)
         Me.dgCRDebit.Name = "dgCRDebit"
         Me.dgCRDebit.ReadOnly = True
-        Me.dgCRDebit.Size = New System.Drawing.Size(672, 234)
+        Me.dgCRDebit.Size = New System.Drawing.Size(181, 234)
         Me.dgCRDebit.TabIndex = 98
         Me.dgCRDebit.TabStop = False
         '
@@ -145,9 +150,9 @@ Partial Class frmCRPrintNew
         '
         'vdate
         '
-        DataGridViewCellStyle1.Format = "dd/MMM/yyyy"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.vdate.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Format = "dd/MMM/yyyy"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.vdate.DefaultCellStyle = DataGridViewCellStyle3
         Me.vdate.HeaderText = "Vou Date"
         Me.vdate.Name = "vdate"
         Me.vdate.ReadOnly = True
@@ -176,9 +181,9 @@ Partial Class frmCRPrintNew
         '
         'cramt
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle2.NullValue = "0.00"
-        Me.cramt.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.NullValue = "0.00"
+        Me.cramt.DefaultCellStyle = DataGridViewCellStyle4
         Me.cramt.HeaderText = "Cr Amount"
         Me.cramt.Name = "cramt"
         Me.cramt.ReadOnly = True
@@ -205,12 +210,53 @@ Partial Class frmCRPrintNew
         Me.RadioButton1.Text = "CashCounter"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
-        'frmCRPrint
+        'CrystalReportViewer1
+        '
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 74)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(934, 535)
+        Me.CrystalReportViewer1.TabIndex = 101
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(731, 40)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(56, 26)
+        Me.Button1.TabIndex = 102
+        Me.Button1.Text = "&Show"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(527, 47)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(86, 16)
+        Me.Label4.TabIndex = 103
+        Me.Label4.Text = "AreaCode :"
+        '
+        'txtAreaCode
+        '
+        Me.txtAreaCode.Location = New System.Drawing.Point(620, 46)
+        Me.txtAreaCode.Name = "txtAreaCode"
+        Me.txtAreaCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtAreaCode.TabIndex = 104
+        '
+        'frmCRPrintNew
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGray
-        Me.ClientSize = New System.Drawing.Size(681, 349)
+        Me.ClientSize = New System.Drawing.Size(1130, 621)
+        Me.Controls.Add(Me.txtAreaCode)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.dtPrint)
         Me.Controls.Add(Me.dgCRDebit)
@@ -225,7 +271,7 @@ Partial Class frmCRPrintNew
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "frmCRPrint"
+        Me.Name = "frmCRPrintNew"
         Me.Text = "frmCRPrint"
         CType(Me.dgCRDebit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -249,4 +295,8 @@ Partial Class frmCRPrintNew
     Public WithEvents btnshow As System.Windows.Forms.Button
     Public WithEvents btnprint As System.Windows.Forms.Button
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Public WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents txtAreaCode As System.Windows.Forms.TextBox
 End Class

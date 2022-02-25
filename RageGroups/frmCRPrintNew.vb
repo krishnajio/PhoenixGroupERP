@@ -263,4 +263,22 @@ Public Class frmCRPrintNew
     Private Sub txtfrom_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtfrom.TextChanged
         txtto.Text = txtfrom.Text
     End Sub
+    Dim sql As String
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'sql = "select * from CRPrint where vou_no ='1156'"
+
+
+        sql = "select [account_code], [account_head_name], a.[group_name], a.[sub_group_name], [credit_days], [credit_limit], [opening_dr], "
+        sql = sql + "[opening_cr], [account_type], [address], [city], [state], [phone], [pan_no], [Area_code], [remark1], [remark2], [remark3], "
+
+        sql = sql + "[Vou_no], [Vou_type], [Vou_date], [Acc_head_code], [Acc_head], [dramt], [cramt], [Pay_mode], [Cheque_no], [Narration],"
+        sql = sql + "[Ch_issue_date], [Ch_date]  from " & GMod.VENTRY & "   v inner join "
+        sql = sql + GMod.ACC_HEAD & " a on a.account_code = v.Acc_head_code "
+        sql = sql + "where Vou_type ='CR Voucher' and cramt > 0  and  Area_Code= '" & txtAreaCode.Text & "' and cast(vou_no as bigint) between " & txtfrom.Text & " and " & txtto.Text
+
+        GMod.DataSetRet(sql, "crprint")
+        Dim cr As New CrReceiptPrint
+        cr.SetDataSource(GMod.ds.Tables("crprint"))
+        CrystalReportViewer1.ReportSource = cr
+    End Sub
 End Class
