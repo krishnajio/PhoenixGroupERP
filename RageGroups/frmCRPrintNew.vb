@@ -267,6 +267,8 @@ Public Class frmCRPrintNew
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'sql = "select * from CRPrint where vou_no ='1156'"
 
+        Dim Custcode As String
+        Custcode = txtAreaCode.Text.ToUpper & "CU" & txtCustCode.Text
 
         sql = "select [account_code], [account_head_name], a.[group_name], a.[sub_group_name], [credit_days], [credit_limit], [opening_dr], "
         sql = sql + "[opening_cr], [account_type], [address], [city], [state], [phone], [pan_no], [Area_code], [remark1], [remark2], [remark3], "
@@ -274,7 +276,7 @@ Public Class frmCRPrintNew
         sql = sql + "[Vou_no], [Vou_type], [Vou_date], [Acc_head_code], [Acc_head], [dramt], [cramt], [Pay_mode], [Cheque_no], [Narration],"
         sql = sql + "[Ch_issue_date], [Ch_date]  from " & GMod.VENTRY & "   v inner join "
         sql = sql + GMod.ACC_HEAD & " a on a.account_code = v.Acc_head_code "
-        sql = sql + "where Vou_type ='CR Voucher' and cramt > 0  and  Area_Code= '" & txtAreaCode.Text & "' and cast(vou_no as bigint) between " & txtfrom.Text & " and " & txtto.Text
+        sql = sql + "where Vou_type ='" & cmbVoutype.Text & "' and cramt > 0  and account_code = '" & Custcode & "'  and   Area_Code= '" & txtAreaCode.Text & "' and cast(vou_no as bigint) between " & txtfrom.Text & " and " & txtto.Text
 
         GMod.DataSetRet(sql, "crprint")
         Dim cr As New CrReceiptPrint

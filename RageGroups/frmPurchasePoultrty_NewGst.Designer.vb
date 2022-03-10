@@ -19,11 +19,11 @@ Partial Class frmPurchasePoultrty_NewGst
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPurchasePoultrty_NewGst))
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblvouno = New System.Windows.Forms.TextBox()
@@ -216,6 +216,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.CheckBox2.TabIndex = 180
         Me.CheckBox2.Text = "Add New Party Head"
         Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.CheckBox2.Visible = False
         '
         'Label1
         '
@@ -312,8 +313,8 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         'srno
         '
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.srno.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.srno.DefaultCellStyle = DataGridViewCellStyle6
         Me.srno.HeaderText = "Sr. No."
         Me.srno.MaxInputLength = 2
         Me.srno.Name = "srno"
@@ -322,9 +323,9 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         'Accode
         '
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.NullValue = "-"
-        Me.Accode.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.NullValue = "-"
+        Me.Accode.DefaultCellStyle = DataGridViewCellStyle7
         Me.Accode.HeaderText = "A/C Code"
         Me.Accode.MaxInputLength = 10
         Me.Accode.Name = "Accode"
@@ -332,8 +333,8 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         'acname
         '
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.acname.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.acname.DefaultCellStyle = DataGridViewCellStyle8
         Me.acname.HeaderText = "A/C Name"
         Me.acname.MaxInputLength = 30
         Me.acname.Name = "acname"
@@ -342,11 +343,11 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         'amount
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.Format = "N2"
-        DataGridViewCellStyle4.NullValue = "0.00"
-        Me.amount.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.Format = "N2"
+        DataGridViewCellStyle9.NullValue = "0.00"
+        Me.amount.DefaultCellStyle = DataGridViewCellStyle9
         Me.amount.HeaderText = "Amount"
         Me.amount.MaxInputLength = 18
         Me.amount.Name = "amount"
@@ -355,8 +356,8 @@ Partial Class frmPurchasePoultrty_NewGst
         '
         'Qty
         '
-        DataGridViewCellStyle5.NullValue = "0"
-        Me.Qty.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle10.NullValue = "0"
+        Me.Qty.DefaultCellStyle = DataGridViewCellStyle10
         Me.Qty.HeaderText = "Qty"
         Me.Qty.MaxInputLength = 20
         Me.Qty.Name = "Qty"
@@ -595,6 +596,7 @@ Partial Class frmPurchasePoultrty_NewGst
         Me.CheckBox1.TabIndex = 210
         Me.CheckBox1.Text = "Add New General Head"
         Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CheckBox1.Visible = False
         '
         'cmbSubGroup
         '

@@ -1002,7 +1002,5 @@ Public Class frmJournal
     End Sub
 
   
-    Private Sub dgPayment_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgPayment.CellContentClick
-
-    End Sub
+   
 End Class

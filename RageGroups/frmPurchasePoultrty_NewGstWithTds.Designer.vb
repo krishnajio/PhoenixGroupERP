@@ -212,6 +212,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.CheckBox2.TabIndex = 180
         Me.CheckBox2.Text = "Add New Party Head"
         Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.CheckBox2.Visible = False
         '
         'btn_modify
         '
@@ -633,6 +634,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.CheckBox1.TabIndex = 210
         Me.CheckBox1.Text = "Add New General Head"
         Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CheckBox1.Visible = False
         '
         'cmbSubGroup
         '
@@ -1540,6 +1542,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         Me.CheckBox4.TabIndex = 30058
         Me.CheckBox4.Text = "Reverse"
         Me.CheckBox4.UseVisualStyleBackColor = True
+        Me.CheckBox4.Visible = False
         '
         'txtGrandTotal
         '

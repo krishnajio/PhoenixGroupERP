@@ -19,8 +19,8 @@ Partial Class frmCRPrintNew
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtfrom = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -42,23 +42,26 @@ Partial Class frmCRPrintNew
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtAreaCode = New System.Windows.Forms.TextBox()
+        Me.cmbVoutype = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtCustCode = New System.Windows.Forms.TextBox()
         CType(Me.dgCRDebit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtfrom
         '
         Me.txtfrom.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtfrom.Location = New System.Drawing.Point(123, 43)
+        Me.txtfrom.Location = New System.Drawing.Point(267, 44)
         Me.txtfrom.MaxLength = 60
         Me.txtfrom.Name = "txtfrom"
-        Me.txtfrom.Size = New System.Drawing.Size(76, 22)
+        Me.txtfrom.Size = New System.Drawing.Size(49, 22)
         Me.txtfrom.TabIndex = 34
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(17, 46)
+        Me.Label3.Location = New System.Drawing.Point(161, 47)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(102, 16)
         Me.Label3.TabIndex = 39
@@ -81,17 +84,17 @@ Partial Class frmCRPrintNew
         'txtto
         '
         Me.txtto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtto.Location = New System.Drawing.Point(224, 43)
+        Me.txtto.Location = New System.Drawing.Point(349, 44)
         Me.txtto.MaxLength = 60
         Me.txtto.Name = "txtto"
-        Me.txtto.Size = New System.Drawing.Size(85, 22)
+        Me.txtto.Size = New System.Drawing.Size(53, 22)
         Me.txtto.TabIndex = 41
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(200, 46)
+        Me.Label2.Location = New System.Drawing.Point(325, 47)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(21, 16)
         Me.Label2.TabIndex = 42
@@ -120,7 +123,7 @@ Partial Class frmCRPrintNew
         'btnshow
         '
         Me.btnshow.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnshow.Location = New System.Drawing.Point(315, 41)
+        Me.btnshow.Location = New System.Drawing.Point(945, 44)
         Me.btnshow.Name = "btnshow"
         Me.btnshow.Size = New System.Drawing.Size(56, 26)
         Me.btnshow.TabIndex = 43
@@ -150,9 +153,9 @@ Partial Class frmCRPrintNew
         '
         'vdate
         '
-        DataGridViewCellStyle3.Format = "dd/MMM/yyyy"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.vdate.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Format = "dd/MMM/yyyy"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.vdate.DefaultCellStyle = DataGridViewCellStyle1
         Me.vdate.HeaderText = "Vou Date"
         Me.vdate.Name = "vdate"
         Me.vdate.ReadOnly = True
@@ -181,9 +184,9 @@ Partial Class frmCRPrintNew
         '
         'cramt
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle4.NullValue = "0.00"
-        Me.cramt.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.NullValue = "0.00"
+        Me.cramt.DefaultCellStyle = DataGridViewCellStyle2
         Me.cramt.HeaderText = "Cr Amount"
         Me.cramt.Name = "cramt"
         Me.cramt.ReadOnly = True
@@ -194,7 +197,7 @@ Partial Class frmCRPrintNew
         Me.dtPrint.CustomFormat = "dd/MMM/yy"
         Me.dtPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtPrint.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtPrint.Location = New System.Drawing.Point(377, 45)
+        Me.dtPrint.Location = New System.Drawing.Point(1007, 48)
         Me.dtPrint.Name = "dtPrint"
         Me.dtPrint.Size = New System.Drawing.Size(52, 20)
         Me.dtPrint.TabIndex = 99
@@ -202,7 +205,7 @@ Partial Class frmCRPrintNew
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(435, 45)
+        Me.RadioButton1.Location = New System.Drawing.Point(408, 46)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(86, 17)
         Me.RadioButton1.TabIndex = 100
@@ -223,7 +226,7 @@ Partial Class frmCRPrintNew
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(731, 40)
+        Me.Button1.Location = New System.Drawing.Point(840, 42)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(56, 26)
         Me.Button1.TabIndex = 102
@@ -234,7 +237,7 @@ Partial Class frmCRPrintNew
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(527, 47)
+        Me.Label4.Location = New System.Drawing.Point(12, 45)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(86, 16)
         Me.Label4.TabIndex = 103
@@ -242,10 +245,36 @@ Partial Class frmCRPrintNew
         '
         'txtAreaCode
         '
-        Me.txtAreaCode.Location = New System.Drawing.Point(620, 46)
+        Me.txtAreaCode.Location = New System.Drawing.Point(100, 44)
         Me.txtAreaCode.Name = "txtAreaCode"
-        Me.txtAreaCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtAreaCode.Size = New System.Drawing.Size(55, 20)
         Me.txtAreaCode.TabIndex = 104
+        '
+        'cmbVoutype
+        '
+        Me.cmbVoutype.FormattingEnabled = True
+        Me.cmbVoutype.Items.AddRange(New Object() {"CR Voucher", "Bank Trans"})
+        Me.cmbVoutype.Location = New System.Drawing.Point(501, 45)
+        Me.cmbVoutype.Name = "cmbVoutype"
+        Me.cmbVoutype.Size = New System.Drawing.Size(121, 21)
+        Me.cmbVoutype.TabIndex = 105
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(628, 46)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(87, 16)
+        Me.Label5.TabIndex = 106
+        Me.Label5.Text = "Cust Code :"
+        '
+        'txtCustCode
+        '
+        Me.txtCustCode.Location = New System.Drawing.Point(711, 44)
+        Me.txtCustCode.Name = "txtCustCode"
+        Me.txtCustCode.Size = New System.Drawing.Size(55, 20)
+        Me.txtCustCode.TabIndex = 107
         '
         'frmCRPrintNew
         '
@@ -253,6 +282,9 @@ Partial Class frmCRPrintNew
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGray
         Me.ClientSize = New System.Drawing.Size(1130, 621)
+        Me.Controls.Add(Me.txtCustCode)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.cmbVoutype)
         Me.Controls.Add(Me.txtAreaCode)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
@@ -299,4 +331,7 @@ Partial Class frmCRPrintNew
     Public WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtAreaCode As System.Windows.Forms.TextBox
+    Friend WithEvents cmbVoutype As System.Windows.Forms.ComboBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents txtCustCode As System.Windows.Forms.TextBox
 End Class

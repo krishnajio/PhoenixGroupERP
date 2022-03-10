@@ -174,10 +174,10 @@ Public Class frmTrial4
     Dim sql As String
     Public Sub AllGroup()
         If chkArea.Checked = False Then
-            sql = "select * from grp_summary where cmp_id ='" & GMod.Cmpid & "' and closing > 0 order by acc_code"
+            sql = "select * from grp_summary where cmp_id ='" & GMod.Cmpid & "' and closing <> 0 order by acc_code"
             GMod.DataSetRet(sql, "trial2")
         Else
-            sql = "select * from grp_summary where cmp_id ='" & GMod.Cmpid & "' and left(acc_code,2)='" & cmbAreaCode.Text & "' and closing > 0 order by acc_code"
+            sql = "select * from grp_summary where cmp_id ='" & GMod.Cmpid & "' and left(acc_code,2)='" & cmbAreaCode.Text & "' and closing <> 0 order by acc_code"
             GMod.DataSetRet(sql, "trial2")
 
         End If
@@ -191,10 +191,10 @@ Public Class frmTrial4
     Dim sqlSelect, SqlSelect1 As String
     Public Sub GroupWise()
         If chkArea.Checked = False Then
-            sql = "select * from grp_summary where group_code ='" & cmbgrpname.Text & "' and cmp_id='" & GMod.Cmpid & "' and closing > 0 order by acc_code"
+            sql = "select * from grp_summary where group_code ='" & cmbgrpname.Text & "' and cmp_id='" & GMod.Cmpid & "' and closing <> 0 order by acc_code"
             GMod.DataSetRet(sql, "trial2")
         Else
-            sql = "select * from grp_summary where group_code ='" & cmbgrpname.Text & "' and cmp_id='" & GMod.Cmpid & "' and left(acc_code,2)='" & cmbAreaCode.Text & "' and closing > 0 order by acc_code"
+            sql = "select * from grp_summary where group_code ='" & cmbgrpname.Text & "' and cmp_id='" & GMod.Cmpid & "' and left(acc_code,2)='" & cmbAreaCode.Text & "' and closing <> 0 order by acc_code"
             GMod.DataSetRet(sql, "trial2")
 
         End If

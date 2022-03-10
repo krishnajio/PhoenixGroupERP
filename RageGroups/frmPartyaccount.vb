@@ -740,14 +740,29 @@ Public Class frmPartyaccount
         p.Start()
         p.Close()
     End Sub
+    Private Sub txtpanno_Leave(sender As Object, e As EventArgs) Handles txtpanno.Leave
+        If txtpanno.Text <> "" Then
+            sql = "select pan_no,account_code ,account_head_name from " & GMod.ACC_HEAD & "  where trim(pan_no) ='" & txtpanno.Text.Trim & "'"
+            GMod.DataSetRet(sql, "checkpan")
+            ' MsgBox(GMod.ds.Tables("checkpan").Rows(0)(0))
+            If GMod.ds.Tables("checkpan").Rows.Count > 0 Then
+                ' MsgBox("PAN Already exists...")
 
- 
+                Dim result As DialogResult = MessageBox.Show("PAN Already exists... of Code:-" + GMod.ds.Tables("checkpan").Rows(0)(1) + " Name:- " + GMod.ds.Tables("checkpan").Rows(0)(2), "PAN CHECK", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+                If result = DialogResult.Cancel Then
+                    Me.Close()
+                ElseIf result = Windows.Forms.DialogResult.OK Then
 
-    Private Sub dgaccounthead_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgaccounthead.CellContentClick
+                ElseIf result = DialogResult.Yes Then
 
+                End If
+
+            End If
+        End If
     End Sub
 
-    Private Sub cmbAreaName_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbAreaName.SelectedIndexChanged
+   
+    Private Sub txtpanno_TextChanged(sender As Object, e As EventArgs) Handles txtpanno.TextChanged
 
     End Sub
 End Class

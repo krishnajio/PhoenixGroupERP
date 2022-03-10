@@ -1290,7 +1290,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
         If CheckBox4.Checked = False Then
             Save()
         ElseIf CheckBox4.Checked = True Then
-            Reverse()
+            ' Reverse()
         End If
     End Sub
 
