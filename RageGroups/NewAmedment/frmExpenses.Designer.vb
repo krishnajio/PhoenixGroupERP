@@ -93,6 +93,7 @@ Partial Class frmExpenses
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.txtTdsAmt = New System.Windows.Forms.TextBox()
+        Me.lblPanno = New System.Windows.Forms.Label()
         CType(Me.dgPayment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -839,12 +840,25 @@ Partial Class frmExpenses
         Me.txtTdsAmt.TabIndex = 17
         Me.txtTdsAmt.Visible = False
         '
+        'lblPanno
+        '
+        Me.lblPanno.AutoSize = True
+        Me.lblPanno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblPanno.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPanno.ForeColor = System.Drawing.Color.Red
+        Me.lblPanno.Location = New System.Drawing.Point(877, 185)
+        Me.lblPanno.Name = "lblPanno"
+        Me.lblPanno.Size = New System.Drawing.Size(17, 22)
+        Me.lblPanno.TabIndex = 223
+        Me.lblPanno.Text = "-"
+        '
         'frmExpenses
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(1352, 611)
+        Me.Controls.Add(Me.lblPanno)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.txtTdsAmt)
         Me.Controls.Add(Me.Label20)
@@ -987,4 +1001,5 @@ Partial Class frmExpenses
     Friend WithEvents TdsPartyCode As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ActualAmt As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TdsAmt As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents lblPanno As System.Windows.Forms.Label
 End Class

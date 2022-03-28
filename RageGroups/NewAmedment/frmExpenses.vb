@@ -846,4 +846,19 @@ Public Class frmExpenses
         dtvdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
         dtvdate.MaxDate = GMod.SessionCurrentDate
     End Sub
+
+    Private Sub cmbPartyHead_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPartyHead.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub cmbPartCode_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPartCode.SelectedIndexChanged
+        Try
+            sql = "select pan_no from " & GMod.ACC_HEAD & " where account_code ='" & cmbPartCode.Text & "'"
+            GMod.DataSetRet(sql, "expensepancheck")
+            lblPanno.Text = GMod.ds.Tables("expensepancheck").Rows(0)(0)
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 End Class

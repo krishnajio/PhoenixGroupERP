@@ -197,7 +197,6 @@ Public Class frmMDI
 
     Private Sub frmMDI_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-
         MenuStripRagaGroup.Renderer = New CustomRenderer
 
         'Timer1.Start()
@@ -257,12 +256,8 @@ Public Class frmMDI
             'ToolStripMenuItem29.Visible = False
             'BMToolStripMenuItem.Visible = False
             ' GMod.othcmp = 0.0
-
-
         End If
         ' staff = GMod.ds.Tables("othercmpCheck").Rows(0)(1)
-
-
 
         'If GMod.username = "salphx" Or GMod.username = "salph" Then
         'SalaryToolStripMenuItem.Visible = True
@@ -1556,5 +1551,15 @@ Public Class frmMDI
     Private Sub UnAuthridesTrialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnAuthridesTrialToolStripMenuItem.Click
         Dim t As New frmTrial2_Unauth
         t.ShowDialog()
+    End Sub
+
+    Private Sub WastageEntryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WastageEntryToolStripMenuItem.Click
+        Dim t As New frmPurchaseWastageEntry
+        t.ShowDialog()
+    End Sub
+
+    Private Sub OtherSaleInvoivePrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OtherSaleInvoivePrintToolStripMenuItem.Click
+        Dim tosp As New frmOtherSalePrintInvoice
+        tosp.ShowDialog()
     End Sub
 End Class

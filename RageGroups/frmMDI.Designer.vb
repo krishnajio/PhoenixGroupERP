@@ -73,6 +73,7 @@ Partial Class frmMDI
         Me.TDSEntryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JournalPurchaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Form49IssueToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WastageEntryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BankToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PaymnetOthersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem30 = New System.Windows.Forms.ToolStripMenuItem()
@@ -177,8 +178,8 @@ Partial Class frmMDI
         Me.ToolStripMenuItem34 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BankReconcilationToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BankStatementToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DimSrAsNewFrmSearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChichkenBatchWiseSummToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DimSrAsNewFrmSearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CommonCustomerAccountHeadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeOwnPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaleRegisterAccordingToProductToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -266,6 +267,7 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.OtherSaleInvoivePrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -512,7 +514,7 @@ Partial Class frmMDI
         '
         'SaleToolStripMenuItem1
         '
-        Me.SaleToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaleToolStripMenuItem2, Me.OtherSaleToolStripMenuItem, Me.ReceiptToolStripMenuItem1, Me.CrDebitToolStripMenuItem, Me.OtherDetectionVoucherEntryToolStripMenuItem, Me.ToolStripMenuItem38, Me.OtherSaleIUToolStripMenuItem})
+        Me.SaleToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaleToolStripMenuItem2, Me.OtherSaleToolStripMenuItem, Me.ReceiptToolStripMenuItem1, Me.CrDebitToolStripMenuItem, Me.OtherDetectionVoucherEntryToolStripMenuItem, Me.ToolStripMenuItem38, Me.OtherSaleIUToolStripMenuItem, Me.OtherSaleInvoivePrintToolStripMenuItem})
         Me.SaleToolStripMenuItem1.Name = "SaleToolStripMenuItem1"
         Me.SaleToolStripMenuItem1.Size = New System.Drawing.Size(247, 22)
         Me.SaleToolStripMenuItem1.Text = "Sale"
@@ -564,7 +566,7 @@ Partial Class frmMDI
         '
         'PurchaseToolStripMenuItem1
         '
-        Me.PurchaseToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PurchaseToolStripMenuItem2, Me.TDSEntryToolStripMenuItem, Me.JournalPurchaseToolStripMenuItem, Me.Form49IssueToolStripMenuItem})
+        Me.PurchaseToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PurchaseToolStripMenuItem2, Me.TDSEntryToolStripMenuItem, Me.JournalPurchaseToolStripMenuItem, Me.Form49IssueToolStripMenuItem, Me.WastageEntryToolStripMenuItem})
         Me.PurchaseToolStripMenuItem1.Name = "PurchaseToolStripMenuItem1"
         Me.PurchaseToolStripMenuItem1.Size = New System.Drawing.Size(247, 22)
         Me.PurchaseToolStripMenuItem1.Text = "Purchase"
@@ -595,6 +597,12 @@ Partial Class frmMDI
         Me.Form49IssueToolStripMenuItem.Name = "Form49IssueToolStripMenuItem"
         Me.Form49IssueToolStripMenuItem.Size = New System.Drawing.Size(223, 22)
         Me.Form49IssueToolStripMenuItem.Text = "Debit Note"
+        '
+        'WastageEntryToolStripMenuItem
+        '
+        Me.WastageEntryToolStripMenuItem.Name = "WastageEntryToolStripMenuItem"
+        Me.WastageEntryToolStripMenuItem.Size = New System.Drawing.Size(223, 22)
+        Me.WastageEntryToolStripMenuItem.Text = "Wastage Entry"
         '
         'BankToolStripMenuItem
         '
@@ -1235,17 +1243,17 @@ Partial Class frmMDI
         Me.BankStatementToolStripMenuItem1.Text = "Bank Statement"
         Me.BankStatementToolStripMenuItem1.Visible = False
         '
-        'DimSrAsNewFrmSearchToolStripMenuItem
-        '
-        Me.DimSrAsNewFrmSearchToolStripMenuItem.Name = "DimSrAsNewFrmSearchToolStripMenuItem"
-        Me.DimSrAsNewFrmSearchToolStripMenuItem.Size = New System.Drawing.Size(341, 22)
-        Me.DimSrAsNewFrmSearchToolStripMenuItem.Text = "TR Search"
-        '
         'ChichkenBatchWiseSummToolStripMenuItem
         '
         Me.ChichkenBatchWiseSummToolStripMenuItem.Name = "ChichkenBatchWiseSummToolStripMenuItem"
         Me.ChichkenBatchWiseSummToolStripMenuItem.Size = New System.Drawing.Size(341, 22)
         Me.ChichkenBatchWiseSummToolStripMenuItem.Text = "Trial Between Days"
+        '
+        'DimSrAsNewFrmSearchToolStripMenuItem
+        '
+        Me.DimSrAsNewFrmSearchToolStripMenuItem.Name = "DimSrAsNewFrmSearchToolStripMenuItem"
+        Me.DimSrAsNewFrmSearchToolStripMenuItem.Size = New System.Drawing.Size(341, 22)
+        Me.DimSrAsNewFrmSearchToolStripMenuItem.Text = "TR Search"
         '
         'CommonCustomerAccountHeadToolStripMenuItem
         '
@@ -1832,6 +1840,12 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
+        'OtherSaleInvoivePrintToolStripMenuItem
+        '
+        Me.OtherSaleInvoivePrintToolStripMenuItem.Name = "OtherSaleInvoivePrintToolStripMenuItem"
+        Me.OtherSaleInvoivePrintToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.OtherSaleInvoivePrintToolStripMenuItem.Text = "Other Sale Invoive Print"
+        '
         'frmMDI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2113,4 +2127,6 @@ Partial Class frmMDI
     Friend WithEvents TRPostMultiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UnAuthrisedLedgerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UnAuthridesTrialToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents WastageEntryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OtherSaleInvoivePrintToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

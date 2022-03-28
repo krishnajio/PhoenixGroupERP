@@ -1614,6 +1614,12 @@
     <Compile Include="NewAmedment\frmPurchaseLedeger.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NewAmedment\frmPurchaseWastageEntry.Designer.vb">
+      <DependentUpon>frmPurchaseWastageEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\frmPurchaseWastageEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NewAmedment\frmSaletax.Designer.vb">
       <DependentUpon>frmSaletax.vb</DependentUpon>
     </Compile>
@@ -3168,8 +3174,8 @@
       <DependentUpon>frmMarkerRatelistaginstchq.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmMarketRate.resx">
-      <SubType>Designer</SubType>
       <DependentUpon>frmMarketRate.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmNoofDays.resx">
       <SubType>Designer</SubType>
@@ -3214,6 +3220,10 @@
     <EmbeddedResource Include="NewAmedment\frmPurchaseLedeger.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmPurchaseLedeger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\frmPurchaseWastageEntry.resx">
+      <DependentUpon>frmPurchaseWastageEntry.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmSaletax.resx">
       <SubType>Designer</SubType>

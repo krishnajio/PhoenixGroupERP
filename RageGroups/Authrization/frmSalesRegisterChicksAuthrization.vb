@@ -91,7 +91,6 @@ Public Class frmSalesRegisterChicksAuthrization
         crsr.SetParameterValue("p5", voutype.Text & " - REGISTER")
         CrystalReportViewer1.ReportSource = crsr
 
-
     End Sub
     Dim sw As StreamWriter
     Dim pageno As Integer = 0
@@ -224,7 +223,6 @@ Public Class frmSalesRegisterChicksAuthrization
             p.StartInfo.UseShellExecute = False
             p.StartInfo.RedirectStandardOutput = True
             p.Start()
-
 
         Catch ex As Exception
             'sw.Close()
