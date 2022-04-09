@@ -84,7 +84,23 @@ Public Class frmPurchaseHatchries
             btnDelete.Enabled = False
         End If
 
+        'Tds 
+        Sql = "select * from TdsMater where cmp_id ='" & GMod.Cmpid & "'"
+        GMod.DataSetRet(Sql, "tdm")
+
+        cmbtdsType.DataSource = GMod.ds.Tables("tdm")
+        cmbtdsType.DisplayMember = "TdsType"
+
+
+        cmbTdsper.DataSource = GMod.ds.Tables("tdm")
+        cmbTdsper.DisplayMember = "Per"
+
+        cmbacheadcodetds.DataSource = GMod.ds.Tables("tdm")
+        cmbacheadcodetds.DisplayMember = "Acc_Code"
+
         dtdate.Focus()
+
+
 
         'SESSION CHECK FOR ENTRY 
         'MsgBox(GMod.Getsession(dtvdate.Value))
@@ -1474,5 +1490,18 @@ Public Class frmPurchaseHatchries
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub cmbacheadcodetds_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadcodetds.SelectedIndexChanged
+        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and account_code='" & cmbacheadcodetds.Text & "'"
+        GMod.DataSetRet(sql, "aclist2")
+        cmbTdsCode.DataSource = GMod.ds.Tables("aclist2")
+        cmbTdsCode.DisplayMember = "account_code"
+        cmbTdsHead.DataSource = GMod.ds.Tables("aclist2")
+        cmbTdsHead.DisplayMember = "account_head_name"
+        CmbTdsGroup.DataSource = GMod.ds.Tables("aclist2")
+        CmbTdsGroup.DisplayMember = "group_name"
+        cmbTdsSubGroup.DataSource = GMod.ds.Tables("aclist2")
+        cmbTdsSubGroup.DisplayMember = "sub_group_name"
     End Sub
 End Class

@@ -757,6 +757,31 @@ Public Class frmPurchasePoultrty_NewGstWithTds
                     cmd5.ExecuteNonQuery()
 
 
+
+                    'Party Debit by Tds Amount
+                    sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
+                    & " Vou_type, Vou_date, Acc_head_code, Acc_head, cramt, dramt, Pay_mode, Cheque_no, " _
+                    & "Narration, Group_name, Sub_group_name,ch_date) values ("
+                    sqlsave &= "'" & GMod.Cmpid & "',"
+                    sqlsave &= "'" & GMod.username & "',"
+                    sqlsave &= "'0',"
+                    sqlsave &= "'" & lblvouno.Text & "',"
+                    sqlsave &= "'" & voutype.Text & "',"
+                    sqlsave &= "'" & dtVdate.Value.ToShortDateString & "',"
+                    sqlsave &= "'" & cmbacheadcode.Text & "',"
+                    sqlsave &= "'" & cmbacheadname.Text & "',"
+                    sqlsave &= "'0',"
+                    sqlsave &= "'" & Val(txtTdsAmt1.Text) & "',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'-',"
+                    sqlsave &= "'" & "TDS DEDUCTED ON" & narration & "',"
+                    sqlsave &= "'" & CmbTdsGroup.Text & "',"
+                    sqlsave &= "'-','" & dtbilldate.Value.ToShortDateString & "')"
+                    Dim cmd1001 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                    cmd1001.ExecuteNonQuery()
+
+
+
                     sql = "insert into TdsEntry(Vou_Type, Vou_no, TdsType, Per, TdsDate, " _
                                    & " BilltyNo, BilltyDt, VehicleNo, Qty, Prd, Paidamt," _
                                    & " Actualamt, session,Paidto,vou_date, TdsAmt,dcode,cmp_id ) values( "
@@ -2184,17 +2209,20 @@ Public Class frmPurchasePoultrty_NewGstWithTds
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtTdsAmt1.TextChanged
         If chgFlag = False Then
             gridtotal()
-            txtTotal.Text = -Val(txtFreight.Text) - Val(txtTdsAmt1.Text) + totgridamount + gst + igst
+            'txtTotal.Text = -Val(txtFreight.Text) + Val(txtTdsAmt1.Text) + totgridamount + gst + igst
+            txtTotal.Text = -Val(txtFreight.Text) + totgridamount + gst + igst
+
         End If
     End Sub
 
     Private Sub tdspidamt_TextChanged(sender As Object, e As EventArgs) Handles tdspidamt.TextChanged
         If Val(tdspidamt.Text) > 0 Then
+
             txtTdsAmt1.Text = Math.Round(Val(tdspidamt.Text) * (Val(cmbTdsper.Text) / 100))
         End If
     End Sub
 
-   
+
     Private Sub cmbacheadcodeTCS_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadcodeTCS.SelectedIndexChanged
         sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and account_code='" & cmbacheadcodeTCS.Text & "'"
         GMod.DataSetRet(sql, "tcsaclist2")
@@ -2212,6 +2240,4 @@ Public Class frmPurchasePoultrty_NewGstWithTds
         txtGrandTotal.Text = Val(txtTcsAmount.Text) + Val(txtTotal.Text)
     End Sub
 
- 
-   
 End Class

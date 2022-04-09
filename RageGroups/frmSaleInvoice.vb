@@ -57,6 +57,8 @@ Public Class frmSaleInvoice
         cmbTcsType.DisplayMember = "TcsType"
 
 
+       
+
         'nxtvno()
         Me.Text = Me.Text & "    " & "[" & GMod.Cmpname & "]"
         dgSaleVoucher.Rows.Add()
@@ -91,6 +93,23 @@ Public Class frmSaleInvoice
         CmbCrCode.DisplayMember = "account_code"
         CmbCrHead.DataSource = GMod.ds.Tables("salehead")
         CmbCrHead.DisplayMember = "account_head_name"
+
+
+
+        'Tds 
+        Sql = "select * from TdsMater where cmp_id ='" & GMod.Cmpid & "'"
+        GMod.DataSetRet(Sql, "tdm")
+
+        cmbtdsType.DataSource = GMod.ds.Tables("tdm")
+        cmbtdsType.DisplayMember = "TdsType"
+
+
+        cmbTdsper.DataSource = GMod.ds.Tables("tdm")
+        cmbTdsper.DisplayMember = "Per"
+
+        cmbacheadcodetds.DataSource = GMod.ds.Tables("tdm")
+        cmbacheadcodetds.DisplayMember = "Acc_Code"
+
 
         If GMod.role.ToUpper = "ADMIN" Then
             btn_modify.Enabled = True
@@ -156,7 +175,8 @@ Public Class frmSaleInvoice
                 GMod.DataSetRet(sqlrate, "rate")
 
                 Dim neccamt1, rate1, dis As Double
-                neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
+                ' neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
+                neccamt1 = 0
                 dis = Val(GMod.ds.Tables("rate").Rows(0)(0))
                 'MsgBox(dis)
                 rate1 = Val(GMod.ds.Tables("rate").Rows(0)(2))
@@ -198,7 +218,8 @@ Public Class frmSaleInvoice
                 sqlrate = "select discount, necc , rate  from ItemMaster where CmP_ID='" & GMod.Cmpid & "' and ItemName='" & dgSaleVoucher(1, dgSaleVoucher.CurrentCell.RowIndex).Value & "'"
                 GMod.DataSetRet(sqlrate, "rate")
 
-                neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
+                ' neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
+                neccamt1 = 0
                 dis = Val(GMod.ds.Tables("rate").Rows(0)(0)) 'Discount Amount
                 'MsgBox(dis)
                 rate1 = Val(GMod.ds.Tables("rate").Rows(0)(2))
@@ -947,7 +968,8 @@ Public Class frmSaleInvoice
                     sqlrate = "select discount, necc , rate  from ItemMaster where CmP_ID='" & GMod.Cmpid & "' and ItemName='" & dgSaleVoucher(1, dgSaleVoucher.CurrentCell.RowIndex).Value & "'"
                     GMod.DataSetRet(sqlrate, "rate")
                     Dim neccamt1, rate1, dis As Double
-                    neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
+                    ' neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
+                    neccamt1 = 0
                     dis = Val(GMod.ds.Tables("rate").Rows(0)(0))
                     rate1 = Val(dgSaleVoucher(3, dgSaleVoucher.CurrentCell.RowIndex).Value)
                     If txtremark1.Text = "DISCOUNT" Then
@@ -1641,7 +1663,35 @@ Public Class frmSaleInvoice
     End Sub
 
     
-    Private Sub cmbacheadname_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadname.SelectedIndexChanged
 
+    Private Sub cmbacheadcodetds_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadcodetds.SelectedIndexChanged
+        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and account_code='" & cmbacheadcodetds.Text & "'"
+        GMod.DataSetRet(sql, "aclist2")
+        cmbTdsCode.DataSource = GMod.ds.Tables("aclist2")
+        cmbTdsCode.DisplayMember = "account_code"
+        cmbTdsHead.DataSource = GMod.ds.Tables("aclist2")
+        cmbTdsHead.DisplayMember = "account_head_name"
+        CmbTdsGroup.DataSource = GMod.ds.Tables("aclist2")
+        CmbTdsGroup.DisplayMember = "group_name"
+        cmbTdsSubGroup.DataSource = GMod.ds.Tables("aclist2")
+        cmbTdsSubGroup.DisplayMember = "sub_group_name"
+    End Sub
+
+    Private Sub chkTDS_CheckedChanged(sender As Object, e As EventArgs) Handles chkTDS.CheckedChanged
+        Dim neccamttcs As Integer = 0
+        Dim neccvaltcs As Double = 0
+        Try
+            If chkTDS.Checked = True Then
+                Dim tds As Double
+                tds = Math.Ceiling((Val(dgSaleVoucher(4, 0).Value) + neccvaltcs) * (Val(cmbTdsper.Text) / 100))
+                txtTcsAmount.Text = tds.ToString
+            Else
+                txtTcsAmount.Text = 0
+            End If
+            neccamttcs = 0
+            neccvaltcs = 0
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

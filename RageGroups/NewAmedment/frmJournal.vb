@@ -107,7 +107,7 @@ Public Class frmJournal
 
     End Sub
     Sub fillheads()
-        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and left(account_code,2) in ('**','" & cmbAreaCode.Text & "')  and group_name <> ''"
+        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'  and group_name <> ''"
         GMod.DataSetRet(sql, "aclist1")
         cmbcode.DataSource = GMod.ds.Tables("aclist1")
         cmbcode.DisplayMember = "account_code"

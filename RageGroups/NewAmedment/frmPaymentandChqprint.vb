@@ -265,6 +265,35 @@ Public Class frmPaymentandChqprint
         'End Try
     End Sub
     Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         'If expflag = False Then
         '    MessageBox.Show("Please Select the Expense Month/Date", "Expenses Month/Date:", MessageBoxButtons.OK, MessageBoxIcon.Information)
         '    dtpexpensedate.Focus()
@@ -392,7 +421,7 @@ Public Class frmPaymentandChqprint
                         cmd1.ExecuteNonQuery()
 
                         'updating prcase data table field paid
-                        sql = "update purchase_data set  paid = 1 where party_code ='" & acc_code & "' and session ='" & GMod.Session & "' and cmp_id ='" & GMod.Cmpid & "' and bill_no ='" & dgBillNo(1, rcount).Value & "'" ' and vou_no ='" & txtvou_no.Text & "'"
+                        sql = "update purchase_data set  paid = 1 where party_code ='" & acc_code & "' and session ='" & dgBillNo(4, rcount).Value.ToString.Trim & "' and cmp_id ='" & GMod.Cmpid & "' and bill_no ='" & dgBillNo(1, rcount).Value & "'" ' and vou_no ='" & txtvou_no.Text & "'"
                         Dim cmdpaid As New SqlCommand(sql, GMod.SqlConn, trans)
                         cmdpaid.ExecuteNonQuery()
                     End If
