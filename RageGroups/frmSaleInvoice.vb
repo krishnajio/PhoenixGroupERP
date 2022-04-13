@@ -332,6 +332,12 @@ Public Class frmSaleInvoice
     Dim cr As Double = 0.0
     Dim pv As Double = 0.0
     Dim gloop As Integer = 0
+    Dim tdsper As Double
+    Dim tdsamt As Double
+    Dim tdshead As String
+    Dim tcsper As Double
+    Dim tcsamt As Double
+    Dim tcshead As String
 
     Private Sub btnsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsave.Click
         Dim smsmsg As String
@@ -582,6 +588,12 @@ Public Class frmSaleInvoice
 
                     'Inserting TCS tax amount in the Voucher entry Credit 
                     If Val(txtTcsAmount.Text) > 0 Then
+
+                        tcsper = Val(txtTcsPer.Text)
+                        tcsamt = Val(txtTcsAmount.Text)
+                        tcshead = cmbTcsHeadCode.Text
+
+
                         ssaveprdvntry = "insert into " & GMod.VENTRY & " (Cmp_id, Uname," _
                         & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
                         & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
@@ -603,13 +615,125 @@ Public Class frmSaleInvoice
                         Dim cmdTcstaxentry As New SqlCommand(ssaveprdvntry, GMod.SqlConn, sqltrans)
                         cmdTcstaxentry.ExecuteNonQuery()
 
-                    End If
+
+                        ssaveprdvntry = "insert into " & GMod.VENTRY & " (Cmp_id, Uname," _
+               & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
+               & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
+                        ssaveprdvntry &= "'" & GMod.Cmpid & "',"
+                        ssaveprdvntry &= "'" & GMod.username & "',"
+                        ssaveprdvntry &= "'0',"
+                        ssaveprdvntry &= "'" & lblno.Text & "',"
+                        ssaveprdvntry &= "'" & voutype.Text & "',"
+                        ssaveprdvntry &= "'" & dtdate.Value.ToShortDateString & "',"
+                        ssaveprdvntry &= "'" & cmbacheadcode.Text & "',"
+                        ssaveprdvntry &= "'" & cmbacheadname.Text & "',"
+                        ssaveprdvntry &= "'" & Val(txtTcsAmount.Text) & "',"
+                        ssaveprdvntry &= "'0',"
+                        ssaveprdvntry &= "'" & "TCS " & nar & "',"
+                        ssaveprdvntry &= "'" & ComboBox1.Text & "',"
+                        ssaveprdvntry &= "'" & cmbsubgrp.Text & "','" & dtHatchdate.Value.ToShortDateString & "')"
+
+                        Dim cmdTcstaxentry1 As New SqlCommand(ssaveprdvntry, GMod.SqlConn, sqltrans)
+                        cmdTcstaxentry1.ExecuteNonQuery()
+                    Else
+                        tcsper = 0
+                        tcsamt = 0
+                        tcshead = "-"
+
+                    End If 'TCS Amount 
+
+                    '**************************************************
+                    'Inserting TDS tax amount in the Voucher entry Credit 
+                    If Val(txtTDSAmount.Text) > 0 Then
+
+                        tdsper = Val(cmbTdsper.Text)
+                        tdsamt = Val(txtTDSAmount.Text)
+                        tdshead = cmbTdsCode.Text
+
+                        ssaveprdvntry = "insert into " & GMod.VENTRY & " (Cmp_id, Uname," _
+                        & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
+                        & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
+                        ssaveprdvntry &= "'" & GMod.Cmpid & "',"
+                        ssaveprdvntry &= "'" & GMod.username & "',"
+                        ssaveprdvntry &= "'" & i + 1 & "',"
+                        ssaveprdvntry &= "'" & lblno.Text & "',"
+                        ssaveprdvntry &= "'" & voutype.Text & "',"
+                        ssaveprdvntry &= "'" & dtdate.Value.ToShortDateString & "',"
+                        ssaveprdvntry &= "'" & cmbTdsCode.Text & "',"
+                        ssaveprdvntry &= "'" & cmbTdsHead.Text & "',"
+                        ssaveprdvntry &= "'" & Val(txtTDSAmount.Text) & "',"
+                        ssaveprdvntry &= "'" & Val(zero) & "',"
+                        ssaveprdvntry &= "'" & narration.ToString & "',"
+                        ssaveprdvntry &= "'TCS',"
+                        ssaveprdvntry &= "'" & s & "','" & dtHatchdate.Value.ToShortDateString & "')"
+                        'MsgBox(ssaveprdvntry)
+                        'MsgBox(GMod.SqlExecuteNonQuery(ssaveprdvntry))
+                        Dim cmdTcstaxentry As New SqlCommand(ssaveprdvntry, GMod.SqlConn, sqltrans)
+                        cmdTcstaxentry.ExecuteNonQuery()
+
+
+                        ssaveprdvntry = "insert into " & GMod.VENTRY & " (Cmp_id, Uname," _
+               & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
+               & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
+                        ssaveprdvntry &= "'" & GMod.Cmpid & "',"
+                        ssaveprdvntry &= "'" & GMod.username & "',"
+                        ssaveprdvntry &= "'0',"
+                        ssaveprdvntry &= "'" & lblno.Text & "',"
+                        ssaveprdvntry &= "'" & voutype.Text & "',"
+                        ssaveprdvntry &= "'" & dtdate.Value.ToShortDateString & "',"
+                        ssaveprdvntry &= "'" & cmbacheadcode.Text & "',"
+                        ssaveprdvntry &= "'" & cmbacheadname.Text & "',"
+                        ssaveprdvntry &= "'0',"
+                        ssaveprdvntry &= "'" & Val(txtTDSAmount.Text) & "',"
+                        ssaveprdvntry &= "'" & "TDS " & nar & "',"
+                        ssaveprdvntry &= "'" & ComboBox1.Text & "',"
+                        ssaveprdvntry &= "'" & cmbsubgrp.Text & "','" & dtHatchdate.Value.ToShortDateString & "')"
+
+                        Dim cmdTcstaxentry1 As New SqlCommand(ssaveprdvntry, GMod.SqlConn, sqltrans)
+                        cmdTcstaxentry1.ExecuteNonQuery()
+
+
+                        'Inserting into TDS Report
+                        sql = "insert into TdsEntry(Vou_Type, Vou_no, TdsType, Per, TdsDate, " _
+                                  & " BilltyNo, BilltyDt, VehicleNo, Qty, Prd, Paidamt," _
+                                  & " Actualamt, session,Paidto,vou_date, TdsAmt,dcode,cmp_id ) values( "
+                        sql &= "'" & voutype.Text & "',"
+                        sql &= "'" & lblno.Text & "',"
+                        sql &= "'" & cmbtdsType.Text & "',"
+                        sql &= "'" & cmbTdsper.Text & "',"
+                        sql &= "'" & dtdate.Value.ToShortDateString & "',"
+                        sql &= "'-',"
+                        sql &= "'-',"
+                        sql &= "'-',"
+                        sql &= "'-',"
+                        sql &= "'0',"
+                        sql &= "'" & productamount & "',"
+                        sql &= "'" & Val("") & "',"
+                        sql &= "'" & GMod.Session & "',"
+                        sql &= "'YES',"
+                        sql &= "'" & dtdate.Value.ToShortDateString & "',"
+                        sql &= "'" & Val(txtTDSAmount.Text) & "',"
+                        sql &= "'" & cmbacheadcode.Text & "',"
+                        sql &= "'" & GMod.Cmpid & "')"
+
+                        Dim cmdTdsSale As New SqlCommand(sql, SqlConn, sqltrans)
+                        cmdTdsSale.ExecuteNonQuery()
+                    Else
+                        tdsper = 0
+                        tdsamt = 0
+                        tdshead = ""
+
+                    End If 'TDS Amount 
+                    '********************************************************************************************
+
+
+
 
                     'Inserting product for PRINT DATA
                     sqlsavenecc = "insert into PrintData (Vou_type, Vou_no, AccCode, AccName, Station, ProductName," _
                                    & "Qty, Rate, Amount, DiscountRate, DiscountAmount, " _
                                    & "NeccRate, NeccAmount, FreePer, FreeQty, HatchDate," _
-                                   & "BillNo, BillDate, Cmp_id, Session,type,PrdUnit,Mortality,tcs_head, tcs_per, tcs_amt) VALUES ("
+                                   & "BillNo, BillDate, Cmp_id, Session,type,PrdUnit,Mortality,tcs_head, tcs_per, tcs_amt,tds_head, tds_per, tds_amt) VALUES ("
                     sqlsavenecc &= "'" & voutype.Text & "',"
                     sqlsavenecc &= "'" & lblno.Text & "',"
                     sqlsavenecc &= "'" & cmbacheadcode.Text & "',"
@@ -635,7 +759,10 @@ Public Class frmSaleInvoice
                     sqlsavenecc &= "'" & dgSaleVoucher(7, i).Value & "',"
                     sqlsavenecc &= "'" & cmbTcsHeadCode.Text & "',"
                     sqlsavenecc &= "'" & Val(txtTcsPer.Text) & "',"
-                    sqlsavenecc &= "'" & Val(txtTcsAmount.Text) & "')"
+                    sqlsavenecc &= "'" & Val(txtTcsAmount.Text) & "',"
+                    sqlsavenecc &= "'" & tdshead & "',"
+                    sqlsavenecc &= "'" & tdsper & "',"
+                    sqlsavenecc &= "'" & tdsamt & "')"
 
                     'MsgBox(sqlsavenecc)
                     'MsgBox(GMod.SqlExecuteNonQuery(sqlsavenecc))
@@ -663,7 +790,7 @@ Public Class frmSaleInvoice
                 ssaveprdvntry &= "'" & dtdate.Value.ToShortDateString & "',"
                 ssaveprdvntry &= "'" & cmbacheadcode.Text & "',"
                 ssaveprdvntry &= "'" & cmbacheadname.Text & "',"
-                ssaveprdvntry &= "'" & Val(productamount) + Val(txtTcsAmount.Text) & "',"
+                ssaveprdvntry &= "'" & Val(productamount) & "',"
                 ssaveprdvntry &= "'0',"
                 ssaveprdvntry &= "'" & nar & "',"
                 ssaveprdvntry &= "'" & ComboBox1.Text & "',"
@@ -1684,9 +1811,9 @@ Public Class frmSaleInvoice
             If chkTDS.Checked = True Then
                 Dim tds As Double
                 tds = Math.Ceiling((Val(dgSaleVoucher(4, 0).Value) + neccvaltcs) * (Val(cmbTdsper.Text) / 100))
-                txtTcsAmount.Text = tds.ToString
+                txtTDSAmount.Text = tds.ToString
             Else
-                txtTcsAmount.Text = 0
+                txtTDSAmount.Text = 0
             End If
             neccamttcs = 0
             neccvaltcs = 0

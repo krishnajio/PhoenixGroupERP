@@ -1188,10 +1188,10 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(832, 241)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(825, 241)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(61, 18)
+        Me.Label9.Size = New System.Drawing.Size(65, 16)
         Me.Label9.TabIndex = 30044
         Me.Label9.Text = "Gst Amt:"
         '
@@ -1207,20 +1207,20 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.Location = New System.Drawing.Point(686, 267)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(76, 18)
+        Me.Label20.Size = New System.Drawing.Size(81, 16)
         Me.Label20.TabIndex = 30043
         Me.Label20.Text = "Actual Amt"
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.Location = New System.Drawing.Point(27, 267)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(62, 18)
+        Me.Label19.Size = New System.Drawing.Size(71, 16)
         Me.Label19.TabIndex = 30042
         Me.Label19.Text = "Party A/c"
         '
@@ -1280,40 +1280,40 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(675, 241)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(63, 18)
+        Me.Label14.Size = New System.Drawing.Size(66, 16)
         Me.Label14.TabIndex = 30039
         Me.Label14.Text = "W in/Out"
         '
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.Location = New System.Drawing.Point(549, 241)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(28, 18)
+        Me.Label26.Size = New System.Drawing.Size(32, 16)
         Me.Label26.TabIndex = 30038
         Me.Label26.Text = "Per"
         '
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label32.Location = New System.Drawing.Point(241, 241)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(39, 18)
+        Me.Label32.Size = New System.Drawing.Size(44, 16)
         Me.Label32.TabIndex = 30037
         Me.Label32.Text = "Type"
         '
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.Location = New System.Drawing.Point(99, 241)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(36, 18)
+        Me.Label33.Size = New System.Drawing.Size(39, 16)
         Me.Label33.TabIndex = 30036
         Me.Label33.Text = "GST"
         '
@@ -1696,7 +1696,7 @@ Partial Class frmPurchasePoultrty_NewGstWithTds
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.BurlyWood
+        Me.BackColor = System.Drawing.Color.Cornsilk
         Me.ClientSize = New System.Drawing.Size(1183, 748)
         Me.Controls.Add(Me.txtGrandTotal)
         Me.Controls.Add(Me.Label35)

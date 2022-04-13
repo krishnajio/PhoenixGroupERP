@@ -774,7 +774,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
                     sqlsave &= "'" & Val(txtTdsAmt1.Text) & "',"
                     sqlsave &= "'-',"
                     sqlsave &= "'-',"
-                    sqlsave &= "'" & "TDS DEDUCTED ON" & narration & "',"
+                    sqlsave &= "'" & "TDS DEDUCTED ON " & narration & "',"
                     sqlsave &= "'" & CmbTdsGroup.Text & "',"
                     sqlsave &= "'-','" & dtbilldate.Value.ToShortDateString & "')"
                     Dim cmd1001 As New SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
