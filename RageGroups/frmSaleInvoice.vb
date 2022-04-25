@@ -407,6 +407,7 @@ Public Class frmSaleInvoice
                     cmddel.ExecuteNonQuery()
 
                 End If
+
                 Dim qty As Double
                 Dim nar As String
                 For i = 0 To dgSaleVoucher.Rows.Count - 1
@@ -414,7 +415,7 @@ Public Class frmSaleInvoice
                     qty = dgSaleVoucher(2, i).Value - dgSaleVoucher(6, i).Value
                     pn = "SALE OF " & dgSaleVoucher(1, i).Value.ToString
                     narration = "BEING SALE OF " & dgSaleVoucher(1, i).Value.ToString & "Hatch Date " & dtHatchdate.Text
-                    narration = narration & "TO INV NO." & txtinvoiceno.Text & " QTY " & dgSaleVoucher(2, i).Value - dgSaleVoucher(6, i).Value & " + " & dgSaleVoucher(6, i).Value & "@ " & dgSaleVoucher(3, i).Value
+                    narration = narration & "TO INV NO." & txtinvoiceno.Text & " QTY " & dgSaleVoucher(2, i).Value - dgSaleVoucher(6, i).Value & " + " & dgSaleVoucher(6, i).Value & "@ " & dgSaleVoucher(3, i).Value & " TM " & dgSaleVoucher(7, i).Value
                     nar = nar & narration
 
                     smsmsg = "Your A/c Debited by RS " & dgSaleVoucher(4, i).Value.ToString & " against " & dgSaleVoucher(1, i).Value & " No. " & dgSaleVoucher(2, i).Value - dgSaleVoucher(6, i).Value & " Free " & dgSaleVoucher(6, i).Value & " @ " & dgSaleVoucher(3, i).Value & " Vide Inv. No " & txtinvoiceno.Text & " Hatch Date " & dtHatchdate.Text
@@ -1729,9 +1730,6 @@ Public Class frmSaleInvoice
         dtdate.MaxDate = GMod.SessionCurrentDate
     End Sub
 
-    Private Sub dgSaleVoucher_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgSaleVoucher.CellContentClick
-
-    End Sub
     Private Sub FetchTcsDetilas()
         Dim sql As String
         Try
@@ -1820,5 +1818,10 @@ Public Class frmSaleInvoice
         Catch ex As Exception
 
         End Try
+    End Sub
+
+   
+    Private Sub dgSaleVoucher_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgSaleVoucher.CellContentClick
+
     End Sub
 End Class

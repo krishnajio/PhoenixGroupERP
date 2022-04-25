@@ -88,6 +88,7 @@ Public Class frmDMPosting
         Dim sale_amt As Double
         Dim tcs_per As Double
         Dim gst_amt As Double = 0
+        Dim DMSplit() As String
 
         sql = "SELECT isnull(max(cast(vou_no as numeric(18,0))),0) + 1 FROM " & tablename & " where vou_type = '" & cmbVoucherType.Text & "'"
         GMod.DataSetRet(sql, "vnor")
@@ -128,8 +129,8 @@ Public Class frmDMPosting
                         Exit Sub
 
                     End If
-
-                    Narration = "By " & dg(5, i).Value.ToString & " Being Sale of "
+                    DMSplit = dg(5, i).Value.ToString.Split("/")
+                    Narration = "By " & DMSplit(0) & "/" & DMSplit(1) & "/" & DMSplit(2) & " Being Sale of "
                     sql = "select * from [dbo].[AreaDMPoultry_det] where DmNo ='" & dg(5, i).Value & "'  and session= '" & GMod.Session & "'"
                     GMod.DataSetRet(sql, "dm_det")
                     For k = 0 To GMod.ds.Tables("dm_det").Rows.Count - 1

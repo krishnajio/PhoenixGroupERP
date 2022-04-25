@@ -36,7 +36,7 @@ Public Class frmAdvanceLedger
         rdPrint_Click(sender, e)
         panel1.Visible = False
         Dim sqlrole As String
-        sqlrole = "select [role] from Usertab1 where Uname='" & GMod.username & "'"
+        sqlrole = "select [role] from Usertab2 where Uname='" & GMod.username & "'"
         GMod.DataSetRet(sqlrole, "rr")
         If GMod.ds.Tables("rr").Rows(0)(0).ToString = "LIMITED" Then
             rdPary.Enabled = False

@@ -19,34 +19,34 @@ Partial Class frmBookOther
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
-        Me.dtfrom = New System.Windows.Forms.DateTimePicker
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.btnclose = New System.Windows.Forms.Button
-        Me.btnshow = New System.Windows.Forms.Button
-        Me.btngroup = New System.Windows.Forms.Button
-        Me.Panel1 = New System.Windows.Forms.Panel
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.listgrp = New System.Windows.Forms.CheckedListBox
-        Me.dgBook = New System.Windows.Forms.DataGridView
-        Me.acc_code = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.acc_head = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.narration = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.chqno = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Vouchertype = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.vdate = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.vouno = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.dramt = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cramt = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.rdOnscreen = New System.Windows.Forms.RadioButton
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.rdPrint = New System.Windows.Forms.RadioButton
-        Me.btndosprint = New System.Windows.Forms.Button
-        Me.btnprint = New System.Windows.Forms.Button
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.dtfrom = New System.Windows.Forms.DateTimePicker()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnclose = New System.Windows.Forms.Button()
+        Me.btnshow = New System.Windows.Forms.Button()
+        Me.btngroup = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.listgrp = New System.Windows.Forms.CheckedListBox()
+        Me.dgBook = New System.Windows.Forms.DataGridView()
+        Me.acc_code = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.acc_head = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.narration = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.chqno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Vouchertype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.vdate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.vouno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dramt = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cramt = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rdOnscreen = New System.Windows.Forms.RadioButton()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.rdPrint = New System.Windows.Forms.RadioButton()
+        Me.btndosprint = New System.Windows.Forms.Button()
+        Me.btnprint = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.dgBook, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -56,7 +56,7 @@ Partial Class frmBookOther
         '
         Me.CrystalReportViewer1.ActiveViewIndex = -1
         Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CrystalReportViewer1.DisplayGroupTree = False
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 74)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
@@ -319,7 +319,7 @@ Partial Class frmBookOther
         Me.btnprint.Text = "&Print"
         Me.btnprint.UseVisualStyleBackColor = True
         '
-        'frmBook
+        'frmBookOther
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -336,7 +336,7 @@ Partial Class frmBookOther
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "frmBook"
+        Me.Name = "frmBookOther"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Book"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

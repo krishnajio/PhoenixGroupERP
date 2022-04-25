@@ -13,7 +13,7 @@ Public Class frmUserassignment
     End Sub
 
     Private Sub frmUserassignment_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        GMod.DataSetRet("select * from usertab1 order by uname", "user")
+        GMod.DataSetRet("select * from usertab2 order by uname", "user")
         cmbuname.DataSource = GMod.ds.Tables("user")
         cmbuname.DisplayMember = "uname"
         filltab()

@@ -26,7 +26,7 @@ Public Class frmBookOther
         'Dim sdate As String = "4/1/" & GMod.Session.Substring(0, 2).ToString
         'dtfrom.Value = CDate(sdate)
         listgrp.Items.Clear()
-        GMod.DataSetRet("select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vtype<>'OPEN' and session ='" & GMod.Session & "' order by seqorder", "grp")
+        GMod.DataSetRet("select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vtype<>'OPEN' and session ='" & GMod.Session & "' and Vou_no_seq not in ('99') order by seqorder", "grp")
         For i = 0 To GMod.ds.Tables("grp").Rows.Count - 1
             listgrp.Items.Add(GMod.ds.Tables("grp").Rows(i)(0))
             listgrp.SetSelected(i, True)
