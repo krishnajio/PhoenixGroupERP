@@ -34,7 +34,7 @@ Public Class frmSalesRegister2
                     & " order by cast(BillNo as bigint)"
 
             GMod.SqlExecuteNonQuery(sql2)
-            sql2 = "select  [invno], [invdate], [hdate], [code], [cname], [qty], [free], [invamt], tds_amt  as [neccamt], [pheadname], [prd_name], [rate], [area], [uanme], [vou_type], [prdunit], [Mortality], [gstin], [tcs_per], [tcs_amt] from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  "
+            sql2 = "select  [invno], [invdate], [hdate], [code], [cname], [qty], [free], [invamt], tds_amt  as tcs_per ,[neccamt], [pheadname], [prd_name], [rate], [area], [uanme], [vou_type], [prdunit], [Mortality], [gstin],  [tcs_amt] from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  "
             GMod.DataSetRet(sql2, "SaleReg")
 
             'dgCRDebit.Rows.Clear()
@@ -82,16 +82,18 @@ Public Class frmSalesRegister2
         End Try
 
         If CheckBox1.Checked = True Then
-
             sql2 = "select  [invno], [invdate], [hdate], [code], [cname], [qty], [free], [invamt], tds_amt  as [neccamt], [pheadname], [prd_name], [rate], [area], [uanme], [vou_type], [prdunit], [Mortality], [gstin], [tcs_per], [tcs_amt] from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "'  and area='" & cmbArea.Text & "' order by id  "
             GMod.DataSetRet(sql2, "SaleReg1")
         Else
             sql2 = "select  [invno], [invdate], [hdate], [code], [cname], [qty], [free], [invamt], tds_amt  as [neccamt], [pheadname], [prd_name], [rate], [area], [uanme], [vou_type], [prdunit], [Mortality], [gstin], [tcs_per], [tcs_amt] from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  "
             GMod.DataSetRet(sql2, "SaleReg1")
- 
         End If
 
-        GMod.DataSetRet("select invno, CONVERT(VARCHAR(11), invdate, 103) invdate ,CONVERT(VARCHAR(11), hdate, 103)  hdate, code, cname,gstin, prd_name, qty, free,  qty + free total ,rate, invamt, neccamt,pheadname, prdunit,mortality, isnull(tcs_amt,0) tcs_amt from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleRegGrid")
+        ' GMod.DataSetRet("select invno, CONVERT(VARCHAR(11), invdate, 103) invdate ,CONVERT(VARCHAR(11), hdate, 103)  hdate, code, cname,gstin, prd_name, qty, free,  qty + free total ,rate, invamt, neccamt, tds_amt ,pheadname, prdunit,mortality, isnull(tcs_amt,0) tcs_amt from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleRegGrid")
+        GMod.DataSetRet("select [invno], [invdate], [hdate], [code], [cname], [qty], [free], [invamt], tds_amt  as tcs_per, [neccamt], [pheadname], [prd_name], [rate], [area], [uanme], [vou_type], [prdunit], [Mortality], [gstin],  [tcs_amt] from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleReg1")
+        GMod.DataSetRet("select invno, CONVERT(VARCHAR(11), invdate, 103) invdate ,CONVERT(VARCHAR(11), hdate, 103)  hdate, code, cname, gstin,prd_name, qty, free,  qty + free total ,rate, invamt, neccamt,tds_amt ,pheadname, prdunit,mortality,tcs_amt  from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleRegGrid")
+
+
         DataGridView1.DataSource = GMod.ds.Tables("SaleRegGrid")
 
         Dim crsr As New CrySaleReg1

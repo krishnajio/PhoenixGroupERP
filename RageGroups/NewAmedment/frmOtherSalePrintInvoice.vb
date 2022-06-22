@@ -460,7 +460,7 @@ repeatprod:
     End Sub
     Dim q As String
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        q = " Station, ProductName, OutQty, Rate,  Amount, OutQtyNos, BillNo, BillDate, InQty, InQtyNos, Session,mrktrate, Prdunit, Packing, Insurance, Discount, CrHead, cgstp, cgsta, sgstp, sgsta, igstp, igsta,tcs_per,tcs_amt, "
+        q = " Station, ProductName, OutQty, Rate,  Amount, OutQtyNos, BillNo, BillDate, InQty, InQtyNos, Session,mrktrate, Prdunit, Packing, Insurance, Discount, CrHead,  isnull(cgstp,0) cgstp , isnull(cgsta,0) cgsta, isnull(sgstp,0) sgstp, isnull(sgsta,0)sgsta, isnull(igstp,0) igstp, isnull(igsta,0) igsta,tcs_per,tcs_amt, "
         sql = "select distinct Vou_type, cast(vou_no as bigint) vou_no, AccCode, AccName, BillNo, convert(varchar(50),BillDate,105) BillDate,Station ,ah.account_head_name,ah.address, " & q & " account_type  as authr  from OtherSaleData  os " & _
               "left join " & GMod.ACC_HEAD & " ah on os.accCode=ah.account_code " & _
               " where vou_type='" & cmbVoucherType.Text & "' and os.session=" & GMod.Session & " and cast(vou_no as bigint) between " & txtCrNoFrom.Text & " and " & txtCrNoTo.Text & "  and os.cmp_id = '" & GMod.Cmpid & "' order by cast(os.vou_no as bigint)"

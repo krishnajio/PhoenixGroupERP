@@ -175,8 +175,8 @@ Public Class frmSaleInvoice
                 GMod.DataSetRet(sqlrate, "rate")
 
                 Dim neccamt1, rate1, dis As Double
-                ' neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
-                neccamt1 = 0
+                neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
+                ' neccamt1 = 0
                 dis = Val(GMod.ds.Tables("rate").Rows(0)(0))
                 'MsgBox(dis)
                 rate1 = Val(GMod.ds.Tables("rate").Rows(0)(2))
@@ -187,6 +187,7 @@ Public Class frmSaleInvoice
                     rate1 = rate1 + neccamt1
                 End If
                 'MsgBox(rate1)
+
                 dgSaleVoucher(4, dgSaleVoucher.CurrentCell.RowIndex).Value = qty1 * rate1
             End If
         End If
@@ -218,8 +219,8 @@ Public Class frmSaleInvoice
                 sqlrate = "select discount, necc , rate  from ItemMaster where CmP_ID='" & GMod.Cmpid & "' and ItemName='" & dgSaleVoucher(1, dgSaleVoucher.CurrentCell.RowIndex).Value & "'"
                 GMod.DataSetRet(sqlrate, "rate")
 
-                ' neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
-                neccamt1 = 0
+                neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
+                'neccamt1 = 0
                 dis = Val(GMod.ds.Tables("rate").Rows(0)(0)) 'Discount Amount
                 'MsgBox(dis)
                 rate1 = Val(GMod.ds.Tables("rate").Rows(0)(2))
@@ -230,6 +231,7 @@ Public Class frmSaleInvoice
                     rate1 = rate1 + neccamt1
                 End If
                 'MsgBox(rate1)
+
                 dgSaleVoucher(4, dgSaleVoucher.CurrentCell.RowIndex).Value = qty * rate1
             End If
         End If
@@ -1096,8 +1098,8 @@ Public Class frmSaleInvoice
                     sqlrate = "select discount, necc , rate  from ItemMaster where CmP_ID='" & GMod.Cmpid & "' and ItemName='" & dgSaleVoucher(1, dgSaleVoucher.CurrentCell.RowIndex).Value & "'"
                     GMod.DataSetRet(sqlrate, "rate")
                     Dim neccamt1, rate1, dis As Double
-                    ' neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
-                    neccamt1 = 0
+                    neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
+                    'neccamt1 = 0
                     dis = Val(GMod.ds.Tables("rate").Rows(0)(0))
                     rate1 = Val(dgSaleVoucher(3, dgSaleVoucher.CurrentCell.RowIndex).Value)
                     If txtremark1.Text = "DISCOUNT" Then
@@ -1106,6 +1108,7 @@ Public Class frmSaleInvoice
                         rate1 = rate1 + neccamt1
                     End If
                     'MsgBox(rate1)
+
                     dgSaleVoucher(4, dgSaleVoucher.CurrentCell.RowIndex).Value = qty * rate1
                 End If
             ElseIf e.ColumnIndex = 1 Then
@@ -1752,7 +1755,6 @@ Public Class frmSaleInvoice
     Private Sub cmbTcsType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTcsType.SelectedIndexChanged
         FetchTcsDetilas()
     End Sub
-
     Private Sub chKtcs_CheckedChanged(sender As Object, e As EventArgs) Handles chKtcs.CheckedChanged
         Dim neccamttcs As Integer = 0
         Dim neccvaltcs As Double = 0
@@ -1786,9 +1788,6 @@ Public Class frmSaleInvoice
         End Try
 
     End Sub
-
-    
-
     Private Sub cmbacheadcodetds_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbacheadcodetds.SelectedIndexChanged
         sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and account_code='" & cmbacheadcodetds.Text & "'"
         GMod.DataSetRet(sql, "aclist2")
@@ -1820,7 +1819,6 @@ Public Class frmSaleInvoice
         End Try
     End Sub
 
-   
     Private Sub dgSaleVoucher_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgSaleVoucher.CellContentClick
 
     End Sub
