@@ -68,6 +68,7 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -1474,6 +1475,12 @@
       <DependentUpon>frmCashBook.vb</DependentUpon>
     </Compile>
     <Compile Include="NewAmedment\frmCashBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewAmedment\frmCustomerListForTcs.Designer.vb">
+      <DependentUpon>frmCustomerListForTcs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\frmCustomerListForTcs.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewAmedment\frmExpenses.Designer.vb">
@@ -3134,6 +3141,9 @@
     <EmbeddedResource Include="NewAmedment\frmCashBook.resx">
       <DependentUpon>frmCashBook.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\frmCustomerListForTcs.resx">
+      <DependentUpon>frmCustomerListForTcs.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmExpenses.resx">
       <DependentUpon>frmExpenses.vb</DependentUpon>

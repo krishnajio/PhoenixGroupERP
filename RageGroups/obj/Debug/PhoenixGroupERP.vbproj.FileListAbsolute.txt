@@ -2030,3 +2030,4 @@ E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.exe.manifest
 E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.application
 E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Interop.VBIDE.dll
 E:\RepoGitHub\PhoenixGroupERP\RageGroups\bin\Debug\Interop.VBIDE.dll
+E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustomerListForTcs.resources

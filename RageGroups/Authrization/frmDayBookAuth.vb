@@ -179,7 +179,7 @@ Public Class frmdayBookAuth
             daybook = "CREATE TABLE [Daybook](" _
             & " [cmpid] [varchar](4), " _
             & "[Acc_code] [varchar](18)," _
-            & "[Acc_name] [varchar](500), " _
+            & "[Acc_name] [varchar](50), " _
             & "[narration][varchar](MAX)," _
             & "[Group_name] [varchar](80), " _
             & "[Sub_Group] [varchar](80)," _

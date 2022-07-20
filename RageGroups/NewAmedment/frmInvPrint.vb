@@ -22,7 +22,6 @@
                 sql = "select Vou_type, cast(vou_no as bigint) Vou_no, AccCode, AccName, Station, ProductName, Qty, Rate, Amount,tcs_per as  DiscountRate,tcs_amt as  DiscountAmount  , tds_per as  NeccRate, tds_amt as NeccAmount, FreePer, FreeQty, HatchDate, BillNo, BillDate, Session, type, PrdUnit, Mortality, a.account_type as authr from PrintData p," & GMod.ACC_HEAD & " a where  a.account_code = p.acccode and cast(vou_no as bigint)  between '" & txtCrNoFrom.Text & "' and '" & txtCrNoTo.Text & "' and p.cmp_id ='" & GMod.Cmpid & "' and session ='" & GMod.Session & "' and vou_type ='" & voutype.Text & "' and type ='P' and left(acccode,2)='" & txtAreacode.Text & "' order by cast(vou_no as bigint)"
             Else
                 sql = "select Vou_type, cast(vou_no as bigint) Vou_no, AccCode, AccName, Station, ProductName, Qty, Rate, Amount,tcs_per as  DiscountRate,tcs_amt as  DiscountAmount , tcs_amt, NeccRate, NeccAmount, FreePer, FreeQty, HatchDate, BillNo, BillDate, Session, type, PrdUnit, Mortality, a.account_type as authr from PrintData p," & GMod.ACC_HEAD & " a where  a.account_code = p.acccode and cast(vou_no as bigint)  between '" & txtCrNoFrom.Text & "' and '" & txtCrNoTo.Text & "' and p.cmp_id ='" & GMod.Cmpid & "' and session ='" & GMod.Session & "' and vou_type ='" & voutype.Text & "' and type ='P' AND PRDUNIT ='" & ComboBox1.Text & "' and left(acccode,2)='" & txtAreacode.Text & "' order by cast(vou_no as bigint)"
-
             End If
         End If
         GMod.DataSetRet(sql, "prntinvleser")
