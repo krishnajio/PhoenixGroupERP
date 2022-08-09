@@ -1669,6 +1669,12 @@
       <DependentUpon>CrBookCash.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="NewAmedment\Reports\CrCustomerListForTcs.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrCustomerListForTcs.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="NewAmedment\Reports\CrDaily_MonthlyExp.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -3260,6 +3266,10 @@
     <EmbeddedResource Include="NewAmedment\Reports\CrBookCash.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrBookCash.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\Reports\CrCustomerListForTcs.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrCustomerListForTcs.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\CrDaily_MonthlyExp.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

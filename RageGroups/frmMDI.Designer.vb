@@ -68,6 +68,7 @@ Partial Class frmMDI
         Me.OtherDetectionVoucherEntryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem38 = New System.Windows.Forms.ToolStripMenuItem()
         Me.OtherSaleIUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OtherSaleInvoivePrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.TDSEntryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -267,7 +268,7 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.OtherSaleInvoivePrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Customer5000000ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -563,6 +564,12 @@ Partial Class frmMDI
         Me.OtherSaleIUToolStripMenuItem.Name = "OtherSaleIUToolStripMenuItem"
         Me.OtherSaleIUToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.OtherSaleIUToolStripMenuItem.Text = "Other Sale IU"
+        '
+        'OtherSaleInvoivePrintToolStripMenuItem
+        '
+        Me.OtherSaleInvoivePrintToolStripMenuItem.Name = "OtherSaleInvoivePrintToolStripMenuItem"
+        Me.OtherSaleInvoivePrintToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.OtherSaleInvoivePrintToolStripMenuItem.Text = "Other Sale Invoive Print"
         '
         'PurchaseToolStripMenuItem1
         '
@@ -908,7 +915,7 @@ Partial Class frmMDI
         '
         'SaleToolStripMenuItem3
         '
-        Me.SaleToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaleRegisterToolStripMenuItem, Me.SaleRegisterOthersToolStripMenuItem, Me.InvoiceReceiptDetialsToolStripMenuItem, Me.SaleProductWiseToolStripMenuItem, Me.SaleRepAreaDetialsToolStripMenuItem, Me.FinishedProductLedgerToolStripMenuItem, Me.TempInvoiceToolStripMenuItem, Me.MortalityReportToolStripMenuItem, Me.DisbursmentRegisterToolStripMenuItem, Me.CustomerBalanceLetterToolStripMenuItem, Me.MissingToolStripMenuItem, Me.PhoenixHAtchriesGSTR1ToolStripMenuItem})
+        Me.SaleToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaleRegisterToolStripMenuItem, Me.SaleRegisterOthersToolStripMenuItem, Me.InvoiceReceiptDetialsToolStripMenuItem, Me.SaleProductWiseToolStripMenuItem, Me.SaleRepAreaDetialsToolStripMenuItem, Me.FinishedProductLedgerToolStripMenuItem, Me.TempInvoiceToolStripMenuItem, Me.MortalityReportToolStripMenuItem, Me.DisbursmentRegisterToolStripMenuItem, Me.CustomerBalanceLetterToolStripMenuItem, Me.MissingToolStripMenuItem, Me.PhoenixHAtchriesGSTR1ToolStripMenuItem, Me.Customer5000000ToolStripMenuItem})
         Me.SaleToolStripMenuItem3.Name = "SaleToolStripMenuItem3"
         Me.SaleToolStripMenuItem3.Size = New System.Drawing.Size(268, 22)
         Me.SaleToolStripMenuItem3.Text = "Sale"
@@ -1840,11 +1847,11 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
-        'OtherSaleInvoivePrintToolStripMenuItem
+        'Customer5000000ToolStripMenuItem
         '
-        Me.OtherSaleInvoivePrintToolStripMenuItem.Name = "OtherSaleInvoivePrintToolStripMenuItem"
-        Me.OtherSaleInvoivePrintToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
-        Me.OtherSaleInvoivePrintToolStripMenuItem.Text = "Other Sale Invoive Print"
+        Me.Customer5000000ToolStripMenuItem.Name = "Customer5000000ToolStripMenuItem"
+        Me.Customer5000000ToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.Customer5000000ToolStripMenuItem.Text = "Customer>5000000"
         '
         'frmMDI
         '
@@ -2129,4 +2136,5 @@ Partial Class frmMDI
     Friend WithEvents UnAuthridesTrialToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents WastageEntryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OtherSaleInvoivePrintToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Customer5000000ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

@@ -1562,4 +1562,9 @@ Public Class frmMDI
         Dim tosp As New frmOtherSalePrintInvoice
         tosp.ShowDialog()
     End Sub
+
+    Private Sub Customer5000000ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Customer5000000ToolStripMenuItem.Click
+        Dim tosp As New frmCustomerListForTcs
+        tosp.ShowDialog()
+    End Sub
 End Class

@@ -136,6 +136,17 @@ Public Class frmPaymentandChqprint
         '    Me.Close()
         'End If
 
+        'For Tds
+        sql = "select * from TdsMater where cmp_id ='" & GMod.Cmpid & "'"
+        GMod.DataSetRet(sql, "tdm")
+        cmbtdsType.DataSource = GMod.ds.Tables("tdm")
+        cmbtdsType.DisplayMember = "TdsType"
+        cmbTdsper.DataSource = GMod.ds.Tables("tdm")
+        cmbTdsper.DisplayMember = "Per"
+        cmbacheadcode.DataSource = GMod.ds.Tables("tdm")
+        cmbacheadcode.DisplayMember = "Acc_Code"
+        FillAcHeadfortds()
+
     End Sub
 
     Private Sub dgPayment_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgPayment.CellContentClick
@@ -265,35 +276,6 @@ Public Class frmPaymentandChqprint
         'End Try
     End Sub
     Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         'If expflag = False Then
         '    MessageBox.Show("Please Select the Expense Month/Date", "Expenses Month/Date:", MessageBoxButtons.OK, MessageBoxIcon.Information)
         '    dtpexpensedate.Focus()
@@ -427,8 +409,33 @@ Public Class frmPaymentandChqprint
                     End If
                 Next
 
-                Dim cmd2 As New SqlCommand("delete from tmpAging where acc_code='" & dgPayment(1, 0).Value & "' and vou_type='PAY' and cmp_id='" & GMod.Cmpid & "'", GMod.SqlConn, trans)
-                cmd2.ExecuteNonQuery()
+                If chkTdsEntry.Checked = True Then
+                    sql = "insert into TdsEntry(Vou_Type, Vou_no, TdsType, Per, TdsDate, " _
+                      & " BilltyNo, BilltyDt, VehicleNo, Qty, Prd, Paidamt," _
+                      & " Actualamt, session,Paidto,vou_date, TdsAmt,dcode,cmp_id) values( "
+                    sql &= "'" & cmbvoutype.Text & "',"
+                    sql &= "'" & txtvou_no.Text & "',"
+                    sql &= "'" & cmbtdsType.Text & "',"
+                    sql &= "'" & cmbTdsper.Text & "',"
+                    sql &= "'" & dtvdate.Value.ToShortDateString & "',"
+                    sql &= "'-',"
+                    sql &= "'-',"
+                    sql &= "'-',"
+                    sql &= "'" & Val("") & "',"
+                    sql &= "'-',"
+                    sql &= "'" & Val(txtPaidAmt.Text) & "',"
+                    sql &= "'" & Val(txtActualAmt.Text) & "',"
+                    sql &= "'" & GMod.Session & "',"
+                    sql &= "'-',"
+                    sql &= "'" & dtvdate.Value.ToShortDateString & "',"
+                    sql &= "'" & Val(txttdsAmount.Text) & "',"
+                    sql &= "'" & cmbPartCode.Text & "',"
+                    sql &= "'" & GMod.Cmpid & "')"
+
+                    Dim cmd6 As New SqlCommand(sql, SqlConn, trans)
+                    cmd6.ExecuteNonQuery()
+                End If
+
                 trans.Commit()
                 MsgBox(cmbvoutype.Text & " / " & txtvou_no.Text, MsgBoxStyle.Information)
 
@@ -998,5 +1005,69 @@ Public Class frmPaymentandChqprint
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Sub FillAcHeadfortds()
+       
+
+        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and group_name like '%PARTY%'"
+        GMod.DataSetRet(sql, "aclist20")
+        cmbPartCode.DataSource = GMod.ds.Tables("aclist20")
+        cmbPartCode.DisplayMember = "account_code"
+        cmbPartyHead.DataSource = GMod.ds.Tables("aclist20")
+        cmbPartyHead.DisplayMember = "account_head_name"
+        cmbPartyGroup.DataSource = GMod.ds.Tables("aclist20")
+        cmbPartyGroup.DisplayMember = "group_name"
+       
+
+        
+    End Sub
+
+    Private Sub cmbtdsType_Leave(sender As Object, e As EventArgs)
+
+        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and account_code='" & cmbacheadcode.Text & "'"
+        GMod.DataSetRet(sql, "aclist2")
+        cmbTdsCode.DataSource = GMod.ds.Tables("aclist2")
+        cmbTdsCode.DisplayMember = "account_code"
+        cmbTdsHead.DataSource = GMod.ds.Tables("aclist2")
+        cmbTdsHead.DisplayMember = "account_head_name"
+        CmbTdsGroup.DataSource = GMod.ds.Tables("aclist2")
+        CmbTdsGroup.DisplayMember = "group_name"
+
+    End Sub
+
+    Private Sub cmbtdsType_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub txtPaidAmt_TextChanged(sender As Object, e As EventArgs) Handles txtPaidAmt.TextChanged
+        txttdsAmount.Text = Math.Ceiling(Val(txtPaidAmt.Text) * (Val(cmbTdsper.Text) / 100))
+    End Sub
+
+    Private Sub chkTdsEntry_CheckedChanged(sender As Object, e As EventArgs) Handles chkTdsEntry.CheckedChanged
+        If chkTdsEntry.Checked = True Then
+            Panel1.Visible = True
+        Else
+            Panel1.Visible = False
+        End If
+    End Sub
+
+   
+   
+    Private Sub cmbtdsType_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles cmbtdsType.SelectedIndexChanged
+        cmbtdsType_Leave_1(sender, e)
+    End Sub
+
+    Private Sub cmbtdsType_Leave_1(sender As Object, e As EventArgs) Handles cmbtdsType.Leave
+        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and account_code='" & cmbacheadcode.Text & "'"
+        GMod.DataSetRet(sql, "aclist2")
+        cmbTdsCode.DataSource = GMod.ds.Tables("aclist2")
+        cmbTdsCode.DisplayMember = "account_code"
+        cmbTdsHead.DataSource = GMod.ds.Tables("aclist2")
+        cmbTdsHead.DisplayMember = "account_head_name"
+        CmbTdsGroup.DataSource = GMod.ds.Tables("aclist2")
+        CmbTdsGroup.DisplayMember = "group_name"
+        ' cmbTdsSubGroup.DataSource = GMod.ds.Tables("aclist2")
+        ' cmbTdsSubGroup.DisplayMember = "sub_group_name"
     End Sub
 End Class
