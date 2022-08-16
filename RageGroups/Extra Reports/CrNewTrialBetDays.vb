@@ -123,6 +123,14 @@ Public Class CrNewTrialBetDays
             Return Me.DataDefinition.ParameterFields(1)
         End Get
     End Property
+
+    <Browsable(False), _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)> _
+    Public ReadOnly Property Parameter_s2() As CrystalDecisions.[Shared].IParameterField
+        Get
+            Return Me.DataDefinition.ParameterFields(2)
+        End Get
+    End Property
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _

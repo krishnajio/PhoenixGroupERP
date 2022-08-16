@@ -162,7 +162,7 @@ Public Class frmTrial4
         r.SetDataSource(GMod.ds.Tables("trial2"))
         r.SetParameterValue("cmpname", GMod.Cmpname)
         r.SetParameterValue("s1", "Trial Balance between " & dtfrom.Text & " TO " & dtTo.Text)
-        'r.SetParameterValue("s2", param)
+        r.SetParameterValue("s2", ComboBox1.Text)
         'r.SetParameterValue("grp", "GROUP/SUB GROUP: " & cmbgrpname.Text & "/")
         'r.SetParameterValue("uid", GMod.username)
         CrViewerGenralLedger.ReportSource = r
@@ -184,7 +184,7 @@ Public Class frmTrial4
     End Sub
 
     Sub subgrp()
-        sql = "select g.* from grp_summary g inner join " & GMod.ACC_HEAD & "  s on g.acc_code=s.account_code  and sub_group_name ='" & ComboBox1.Text & "'  and g.cmp_id ='" & GMod.Cmpid & "' and closing > 0  order by acc_code"
+        sql = "select g.* from grp_summary g inner join " & GMod.ACC_HEAD & "  s on g.acc_code=s.account_code  and sub_group_name ='" & ComboBox1.Text & "'  and g.cmp_id ='" & GMod.Cmpid & "'   and closing <> 0 order by acc_code"
         GMod.DataSetRet(sql, "trial2")
 
     End Sub
