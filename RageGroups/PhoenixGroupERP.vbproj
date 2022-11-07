@@ -1573,6 +1573,12 @@
     <Compile Include="NewAmedment\frmPartyDueBillG.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NewAmedment\frmPartyDueMonthly.Designer.vb">
+      <DependentUpon>frmPartyDueMonthly.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\frmPartyDueMonthly.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NewAmedment\frmPayment.Designer.vb">
       <DependentUpon>frmPayment.vb</DependentUpon>
     </Compile>
@@ -3203,6 +3209,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmPartyDueBillG.resx">
       <DependentUpon>frmPartyDueBillG.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\frmPartyDueMonthly.resx">
+      <DependentUpon>frmPartyDueMonthly.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmPayment.resx">

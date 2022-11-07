@@ -107,7 +107,7 @@ Public Class frmSalaryTransfer
             GMod.DataSetRet(sql, "groupinstot")
 
 
-            t = "**TD0001"
+            t = "**TD0004"
             sql = "SELECT account_code,account_head_name,group_name FROM " & GMod.ACC_HEAD & " WHERE account_code='" & t & "'"
             GMod.DataSetRet(sql, "ithead")
 
@@ -255,305 +255,306 @@ Public Class frmSalaryTransfer
 
         End If
         row = 0
-        For i = 0 To dsSal.Tables("Department").Rows.Count - 1
-            'MsgBox(dsSal.Tables("Department").Rows(i)("Department").ToString)
-            'Salary Account Dr with Department total
-            dgvoucher.Rows.Add()
-            Try
-                dsSal.Tables("totaldept").Clear()
-            Catch ex As Exception
 
-            End Try
-            'If GMod.Cmpid = "PHOE" Then
-            If cmbPaymode.Text = "BANK" Then
-                sql = "select sum(amtpay+hra+cca+oa2+da) from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "' and paymode='BANK'" ' and is_ho_emp = '" & RdHO.Checked.ToString & "'"
-            ElseIf cmbPaymode.Text = "CASH" Then
-                sql = "select sum(amtpay+hra+cca+oa2+da) from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "' and paymode='CASH'" ' and is_ho_emp = '" & RdHO.Checked.ToString & "'"
-            End If
+
+        'MsgBox(dsSal.Tables("Department").Rows(i)("Department").ToString)
+        'Salary Account Dr with Department total
+        dgvoucher.Rows.Add()
+        Try
+            dsSal.Tables("totaldept").Clear()
+        Catch ex As Exception
+
+        End Try
+        'If GMod.Cmpid = "PHOE" Then
+        If cmbPaymode.Text = "BANK" Then
+            sql = "select sum(amtpay+hra+cca+oa2+da) from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "' and paymode='BANK'" ' and is_ho_emp = '" & RdHO.Checked.ToString & "'"
+        ElseIf cmbPaymode.Text = "CASH" Then
+            sql = "select sum(amtpay+hra+cca+oa2+da) from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "' and paymode='CASH'" ' and is_ho_emp = '" & RdHO.Checked.ToString & "'"
+        End If
+        da = New SqlDataAdapter(sql, ConStrSal)
+        da.Fill(dsSal, "totaldept")
+
+        ''getting accounting salary head **********************
+
+        Try
+            dsSal.Tables("salcode").Clear()
+        Catch ex As Exception
+        End Try
+
+        Try
+            dsSal.Tables("SALHAED").Clear()
+        Catch ex As Exception
+        End Try
+        Try
+            sql = "select salcode from department where  department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "'  and orgid='" & orgid & "' and isnull(salcode,'') <>'' "
             da = New SqlDataAdapter(sql, ConStrSal)
-            da.Fill(dsSal, "totaldept")
+            da.Fill(dsSal, "salcode")
+        Catch ex As Exception
+            MsgBox("salcode" & ex.Message)
+        End Try
 
-            ''getting accounting salary head **********************
+        Try
+            sql = "SELECT account_code,account_head_name,group_name FROM " & GMod.ACC_HEAD & " WHERE account_code='" & dsSal.Tables("salcode").Rows(0)(0).ToString & "'"
+            GMod.DataSetRet(sql, "SALHAED")
 
-            Try
-                dsSal.Tables("salcode").Clear()
-            Catch ex As Exception
-            End Try
-
-            Try
-                dsSal.Tables("SALHAED").Clear()
-            Catch ex As Exception
-            End Try
-            Try
-                sql = "select salcode from department where  department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "'  and orgid='" & orgid & "' and isnull(salcode,'') <>'' "
-                da = New SqlDataAdapter(sql, ConStrSal)
-                da.Fill(dsSal, "salcode")
-            Catch ex As Exception
-                MsgBox("salcode" & ex.Message)
-            End Try
-
-            Try
-                sql = "SELECT account_code,account_head_name,group_name FROM " & GMod.ACC_HEAD & " WHERE account_code='" & dsSal.Tables("salcode").Rows(0)(0).ToString & "'"
-                GMod.DataSetRet(sql, "SALHAED")
-
-                dgvoucher(0, row).Value = row
-                dgvoucher(1, row).Value = dsSal.Tables("salcode").Rows(0)(0).ToString
-                dgvoucher(1, row).Style.BackColor = Color.Cyan
-                dgvoucher(2, row).Value = GMod.ds.Tables("SALHAED").Rows(0)("Account_head_name")
-                dgvoucher(4, row).Value = dsSal.Tables("totaldept").Rows(0)(0).ToString
-                'dgvoucher(6, row).Value = "Dr"
-                dgvoucher(6, row).Value = GMod.ds.Tables("SALHAED").Rows(0)("group_name")
-                dgvoucher(3, row).Value = "BEING " & dsSal.Tables("Department").Rows(i)("Department").ToString & " SALARY FOR THE MONTH " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
-
-            Catch ex As Exception
-                MsgBox("Salary head not present" & dsSal.Tables("salcode").Rows(0)(0).ToString)
-            End Try
-            '*****************************-----------------------------------------
-               'ElseIf GMod.Cmpid = "PHHA" Then
-
-            'sql = "select sum(amtpay+hra+cca+oa2) from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "'"
-            'da = New SqlDataAdapter(sql, ConStrSal)
-            'da.Fill(dsSal, "totaldept")
-
-            'dgvoucher(0, row).Value = row
-            'dgvoucher(1, row).Value = a
-            'dgvoucher(2, row).Value = GMod.ds.Tables("SALHAED").Rows(0)("Account_head_name")
-            'dgvoucher(4, row).Value = dsSal.Tables("totaldept").Rows(0)(0).ToString
-            ''dgvoucher(6, row).Value = "Dr"
-            'dgvoucher(6, row).Value = GMod.ds.Tables("SALHAED").Rows(0)("group_name")
-            'dgvoucher(3, row).Value = "BEING " & dsSal.Tables("Department").Rows(i)("Department").ToString & " SALARY FOR THE MONTH " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
-            'dgvoucher(1, row).Style.BackColor = Color.Aqua
-
-            'End If
-            'All Indisuasal Accont  cr
-            Try
-                dsSal.Tables("indacc").Clear()
-            Catch ex As Exception
-
-            End Try
-
-            Try
-
-                If cmbPaymode.Text = "BANK" Then
-                    sql = "select empid,name,department,(amtpay+hra+cca+oa2+da) tt from  salacctransfer " _
-                    & " where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and orgid='" & orgid & "' and salmonth='" & dtSalaryDate.Text & "' and amtpay+hra+cca+oa2+oa1>0 and paymode='BANK'  order by amtpay desc"
-                ElseIf cmbPaymode.Text = "CASH" Then
-                    sql = "select empid,name,department,(amtpay+hra+cca+oa2+da) tt from  salacctransfer " _
-                     & " where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and orgid='" & orgid & "' and salmonth='" & dtSalaryDate.Text & "' and amtpay+hra+cca+oa2+oa1+da>0 and paymode='CASH'  order by amtpay desc"
-                End If
-
-                da = New SqlDataAdapter(sql, ConStrSal)
-                da.Fill(dsSal, "indacc")
-
-                For j = 0 To dsSal.Tables("indacc").Rows.Count - 1
-                    'Getting Name of w.t to code    
-
-                    Try
-                        sqlname = "select  account_head_name,group_name from " & GMod.ACC_HEAD & " where account_code='" & dsSal.Tables("indacc").Rows(j)("empid").ToString & "'"
-                        GMod.DataSetRet(sqlname, "empaccname")
-
-                    Catch ex As Exception
-                        MsgBox("insd" & ex.Message)
-                    End Try
-
-                    dgvoucher.Rows.Add()
-                    row = row + 1
-                    dgvoucher(0, row).Value = row
-                    dgvoucher(1, row).Value = dsSal.Tables("indacc").Rows(j)("empid")
-                    dgvoucher(2, row).Value = GMod.ds.Tables("empaccname").Rows(0)("account_head_name")
-                    dgvoucher(5, row).Value = dsSal.Tables("indacc").Rows(j)("tt")
-                    dgvoucher(6, row).Value = GMod.ds.Tables("empaccname").Rows(0)("group_name")
-                    dgvoucher(3, row).Value = "BEING SALARY FOR " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
-                Next
-            Catch ex As Exception
-                MsgBox("ADMIN " & ex.Message)
-                MsgBox("Invalid Month " & ex.Message)
-                Me.Close()
-
-            End Try
-
-            'CPF  Employer's Contribution Dr
-            Try
-                dsSal.Tables("cpftotal").Clear()
-            Catch ex As Exception
-
-            End Try
-
-            dgvoucher.Rows.Add()
-            row = row + 1
-
-            If cmbPaymode.Text = "BANK" Then
-                sql = "select sum(amt833+amt367)  from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "' and paymode='BANK' " ' and is_ho_emp = '" & RdHO.Checked.ToString & "'"
-            ElseIf cmbPaymode.Text = "CASH" Then
-                sql = "select sum(amt833+amt367)  from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "' and paymode='CASH' " 'and is_ho_emp = '" & RdHO.Checked.ToString & "'"
-            End If
-            da = New SqlDataAdapter(sql, ConStrSal)
-            da.Fill(dsSal, "cpftotal")
-            ''getting employer contribution code **********************
-            Try
-                dsSal.Tables("emplcode").Clear()
-            Catch ex As Exception
-            End Try
-            Try
-                dsSal.Tables("cpfhead").Clear()
-            Catch ex As Exception
-            End Try
-            Try
-                sql = "select cpfcode from department where  department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "'  and orgid='" & orgid & "' and isnull(cpfcode,'') <>'' "
-                da = New SqlDataAdapter(sql, ConStrSal)
-                da.Fill(dsSal, "emplcode")
-            Catch ex As Exception
-                MsgBox("Emplyer's head not present")
-            End Try
-           
-            Try
-                sql = "SELECT account_code,account_head_name,group_name FROM " & GMod.ACC_HEAD & " WHERE account_code='" & dsSal.Tables("emplcode").Rows(0)(0).ToString & "'"
-                GMod.DataSetRet(sql, "cpfhead")
-                dgvoucher(0, row).Value = row
-                dgvoucher(1, row).Value = dsSal.Tables("emplcode").Rows(0)(0).ToString
-                dgvoucher(1, row).Style.BackColor = Color.BurlyWood
-                dgvoucher(2, row).Value = GMod.ds.Tables("cpfhead").Rows(0)("Account_head_name")
-                dgvoucher(4, row).Value = dsSal.Tables("cpftotal").Rows(0)(0).ToString
-                'dgvoucher(6, row).Value = "Dr"
-                dgvoucher(6, row).Value = GMod.ds.Tables("cpfhead").Rows(0)("group_name")
-                dgvoucher(3, row).Value = "BEING " & dsSal.Tables("Department").Rows(i)("Department").ToString & " CPF FOR THE MONTH " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
-            Catch ex As Exception
-                MsgBox("Emplyer's head not present")
-            End Try
-            '*****************************-----------------------------
-
-            'All Indisuasal CP Accont  cr
-            Try
-                dsSal.Tables("cpfacc").Clear()
-            Catch ex As Exception
-
-            End Try
-            Try
-                If cmbPaymode.Text = "BANK" Then
-                    sql = "select empid,name,department,amt833+amt367 tt from  salacctransfer " _
-                          & " where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and orgid='" & orgid & "' and salmonth='" & dtSalaryDate.Text & "' and amt833+amt367>0  and paymode='BANK' order by amtpay desc"
-                Else
-                    sql = "select empid,name,department,amt833+amt367 tt from  salacctransfer " _
-                                             & " where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and orgid='" & orgid & "' and salmonth='" & dtSalaryDate.Text & "' and  amt833+amt367>0 and paymode='CASH' order by amtpay desc"
-
-                End If
-                da = New SqlDataAdapter(sql, ConStrSal)
-                da.Fill(dsSal, "cpfacc")
-
-                For j = 0 To dsSal.Tables("cpfacc").Rows.Count - 1
-                    Try
-                        sqlname = "select  account_head_name,group_name from " & GMod.ACC_HEAD & " where account_code='" & dsSal.Tables("cpfacc").Rows(j)("empid").ToString & "'"
-                        GMod.DataSetRet(sqlname, "empaccname")
-
-                    Catch ex As Exception
-                        MsgBox(ex.Message)
-                    End Try
-                    'Getting Name of w.t to code    
-
-
-                    dgvoucher.Rows.Add()
-                    row = row + 1
-                    dgvoucher(0, row).Value = row
-                    dgvoucher(1, row).Value = dsSal.Tables("cpfacc").Rows(j)("empid")
-                    dgvoucher(2, row).Value = GMod.ds.Tables("empaccname").Rows(0)("account_head_name")
-                    dgvoucher(4, row).Value = dsSal.Tables("cpfacc").Rows(j)("tt")
-                    dgvoucher(6, row).Value = GMod.ds.Tables("empaccname").Rows(0)("group_name")
-                    dgvoucher(3, row).Value = "BEING CPF COLLECTION FOR " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
-                Next
-            Catch ex As Exception
-                MsgBox("cpf" & ex.Message)
-            End Try
-
-            'CPF Account BOTH 
-            'MsgBox(dsSal.Tables("cpftotal").Rows(0)(0))
-            Try
-                dsSal.Tables("cpf").Clear()
-            Catch ex As Exception
-            End Try
-            dgvoucher.Rows.Add()
-            row = row + 1
-            If cmbPaymode.Text = "BANK" Then
-                sql = "select sum(amt833+amt367)  from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "' and paymode='BANK' " 'and is_ho_emp = '" & RdHO.Checked.ToString & "'"
-            Else
-                sql = "select sum(amt833+amt367)  from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "' and paymode='CASH' " ' and is_ho_emp = '" & RdHO.Checked.ToString & "'"
-            End If
-            da = New SqlDataAdapter(sql, ConStrSal)
-            da.Fill(dsSal, "cpf")
             dgvoucher(0, row).Value = row
-            dgvoucher(1, row).Value = c
-            dgvoucher(2, row).Value = GMod.ds.Tables("cpfsum").Rows(0)("Account_head_name")
-            dgvoucher(5, row).Value = Val(dsSal.Tables("cpf").Rows(0)(0).ToString) * 2
-            dgvoucher(6, row).Value = GMod.ds.Tables("cpfsum").Rows(0)("group_name")
-            dgvoucher(3, row).Value = "BEING " & dsSal.Tables("Department").Rows(i)("Department").ToString & " CPF BOTH FOR THE MONTH " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
+            dgvoucher(1, row).Value = dsSal.Tables("salcode").Rows(0)(0).ToString
+            dgvoucher(1, row).Style.BackColor = Color.Cyan
+            dgvoucher(2, row).Value = GMod.ds.Tables("SALHAED").Rows(0)("Account_head_name")
+            dgvoucher(4, row).Value = dsSal.Tables("totaldept").Rows(0)(0).ToString
+            'dgvoucher(6, row).Value = "Dr"
+            dgvoucher(6, row).Value = GMod.ds.Tables("SALHAED").Rows(0)("group_name")
+            dgvoucher(3, row).Value = "BEING " & dsSal.Tables("Department").Rows(i)("Department").ToString & " SALARY FOR THE MONTH " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
 
-            'Group Insurance detecthed 
-            'All Indisuasal Accont  cr
-            Try
-                dsSal.Tables("groupinsurance").Clear()
-            Catch ex As Exception
+        Catch ex As Exception
+            MsgBox("Salary head not present" & dsSal.Tables("salcode").Rows(0)(0).ToString)
+        End Try
+        '*****************************-----------------------------------------
+        'ElseIf GMod.Cmpid = "PHHA" Then
 
-            End Try
+        'sql = "select sum(amtpay+hra+cca+oa2) from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "'"
+        'da = New SqlDataAdapter(sql, ConStrSal)
+        'da.Fill(dsSal, "totaldept")
+
+        'dgvoucher(0, row).Value = row
+        'dgvoucher(1, row).Value = a
+        'dgvoucher(2, row).Value = GMod.ds.Tables("SALHAED").Rows(0)("Account_head_name")
+        'dgvoucher(4, row).Value = dsSal.Tables("totaldept").Rows(0)(0).ToString
+        ''dgvoucher(6, row).Value = "Dr"
+        'dgvoucher(6, row).Value = GMod.ds.Tables("SALHAED").Rows(0)("group_name")
+        'dgvoucher(3, row).Value = "BEING " & dsSal.Tables("Department").Rows(i)("Department").ToString & " SALARY FOR THE MONTH " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
+        'dgvoucher(1, row).Style.BackColor = Color.Aqua
+
+        'End If
+        'All Indisuasal Accont  cr
+        Try
+            dsSal.Tables("indacc").Clear()
+        Catch ex As Exception
+
+        End Try
+
+        Try
+
             If cmbPaymode.Text = "BANK" Then
-                sql = "select empid,name,department,groupinsded from  salacctransfer " _
-                      & " where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and orgid='" & orgid & "' and salmonth='" & dtSalaryDate.Text & "' and groupinsded > 0  and paymode='BANK' order by amtpay desc"
-            Else
-                sql = "select empid,name,department,groupinsded from  salacctransfer " _
-                      & " where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and orgid='" & orgid & "' and salmonth='" & dtSalaryDate.Text & "' and groupinsded > 0  and paymode='CASH' order by amtpay desc"
-
+                sql = "select empid,name,department,(amtpay+hra+cca+oa2+da) tt from  salacctransfer " _
+                & " where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and orgid='" & orgid & "' and salmonth='" & dtSalaryDate.Text & "' and amtpay+hra+cca+oa2+oa1>0 and paymode='BANK'  order by amtpay desc"
+            ElseIf cmbPaymode.Text = "CASH" Then
+                sql = "select empid,name,department,(amtpay+hra+cca+oa2+da) tt from  salacctransfer " _
+                 & " where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and orgid='" & orgid & "' and salmonth='" & dtSalaryDate.Text & "' and amtpay+hra+cca+oa2+oa1+da>0 and paymode='CASH'  order by amtpay desc"
             End If
 
-
             da = New SqlDataAdapter(sql, ConStrSal)
-            da.Fill(dsSal, "groupinsurance")
-            Try
-                For j = 0 To dsSal.Tables("groupinsurance").Rows.Count - 1
-                    dgvoucher.Rows.Add()
-                    row = row + 1
-                    'Getting Name of w.t to code    
-                    sqlname = "select  account_head_name,group_name from " & GMod.ACC_HEAD & " where account_code='" & dsSal.Tables("groupinsurance").Rows(j)("empid").ToString & "'"
+            da.Fill(dsSal, "indacc")
+
+            For j = 0 To dsSal.Tables("indacc").Rows.Count - 1
+                'Getting Name of w.t to code    
+
+                Try
+                    sqlname = "select  account_head_name,group_name from " & GMod.ACC_HEAD & " where account_code='" & dsSal.Tables("indacc").Rows(j)("empid").ToString & "'"
                     GMod.DataSetRet(sqlname, "empaccname")
-                    dgvoucher(0, row).Value = row
-                    dgvoucher(1, row).Value = dsSal.Tables("groupinsurance").Rows(j)("empid")
-                    dgvoucher(2, row).Value = GMod.ds.Tables("empaccname").Rows(0)("account_head_name")
-                    dgvoucher(4, row).Value = dsSal.Tables("groupinsurance").Rows(j)("groupinsded")
-                    dgvoucher(6, row).Value = GMod.ds.Tables("empaccname").Rows(0)("group_name")
-                    dgvoucher(3, row).Value = "BEING GIS FOR " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
-                Next
-            Catch ex As Exception
-                MsgBox("groupinsurance" & ex.Message)
-                MsgBox("Invalid Month " & ex.Message)
-                Me.Close()
-            End Try
-            'CPF  Employer's Contribution Dr
-            Try
-                dsSal.Tables("groupinstotal").Clear()
-            Catch ex As Exception
 
-            End Try
+                Catch ex As Exception
+                    MsgBox("insd" & ex.Message)
+                End Try
 
-            dgvoucher.Rows.Add()
-            row = row + 1
-            If cmbPaymode.Text = "BANK" Then
-                sql = "select isnull(sum(groupinsded),0)  from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Value.ToShortDateString & "' and orgid='" & orgid & "' and groupinsded>0 and paymode='BANK'" ' and is_ho_emp = '" & RdHO.Checked.ToString & "'"
-            Else
-                sql = "select isnull(sum(groupinsded),0)  from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Value.ToShortDateString & "' and orgid='" & orgid & "' and groupinsded>0 and paymode='CASH' " '  and is_ho_emp = '" & RdHO.Checked.ToString & "'"
-            End If
-
-            da = New SqlDataAdapter(sql, ConStrSal)
-            da.Fill(dsSal, "groupinstotal")
-            If dsSal.Tables("groupinstotal").Rows(0)(0) > 0 Then
-                dgvoucher(0, row).Value = row
-                dgvoucher(1, row).Value = d
-                dgvoucher(2, row).Value = GMod.ds.Tables("groupinstot").Rows(0)("Account_head_name")
-                dgvoucher(5, row).Value = dsSal.Tables("groupinstotal").Rows(0)(0).ToString
-                'dgvoucher(6, row).Value = "Dr"
-                dgvoucher(6, row).Value = GMod.ds.Tables("groupinstot").Rows(0)("group_name")
-                dgvoucher(3, row).Value = "BEING EMPLOYER GROUP INSURANCE FOR " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
-                'totalgis = totalgis + Val(dsSal.Tables("groupinstotal").Rows(0)(0).ToString)
+                dgvoucher.Rows.Add()
                 row = row + 1
-            End If
+                dgvoucher(0, row).Value = row
+                dgvoucher(1, row).Value = dsSal.Tables("indacc").Rows(j)("empid")
+                dgvoucher(2, row).Value = GMod.ds.Tables("empaccname").Rows(0)("account_head_name")
+                dgvoucher(5, row).Value = dsSal.Tables("indacc").Rows(j)("tt")
+                dgvoucher(6, row).Value = GMod.ds.Tables("empaccname").Rows(0)("group_name")
+                dgvoucher(3, row).Value = "BEING SALARY FOR " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
+            Next
+        Catch ex As Exception
+            MsgBox("ADMIN " & ex.Message)
+            MsgBox("Invalid Month " & ex.Message)
+            Me.Close()
 
-        Next ' Department LOOP
+        End Try
+
+        'CPF  Employer's Contribution Dr
+        Try
+            dsSal.Tables("cpftotal").Clear()
+        Catch ex As Exception
+
+        End Try
+
+        dgvoucher.Rows.Add()
+        row = row + 1
+
+        If cmbPaymode.Text = "BANK" Then
+            sql = "select sum(amt833+amt367)  from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "' and paymode='BANK' " ' and is_ho_emp = '" & RdHO.Checked.ToString & "'"
+        ElseIf cmbPaymode.Text = "CASH" Then
+            sql = "select sum(amt833+amt367)  from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "' and paymode='CASH' " 'and is_ho_emp = '" & RdHO.Checked.ToString & "'"
+        End If
+        da = New SqlDataAdapter(sql, ConStrSal)
+        da.Fill(dsSal, "cpftotal")
+        ''getting employer contribution code **********************
+        Try
+            dsSal.Tables("emplcode").Clear()
+        Catch ex As Exception
+        End Try
+        Try
+            dsSal.Tables("cpfhead").Clear()
+        Catch ex As Exception
+        End Try
+        Try
+            sql = "select cpfcode from department where  department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "'  and orgid='" & orgid & "' and isnull(cpfcode,'') <>'' "
+            da = New SqlDataAdapter(sql, ConStrSal)
+            da.Fill(dsSal, "emplcode")
+        Catch ex As Exception
+            MsgBox("Emplyer's head not present")
+        End Try
+
+        Try
+            sql = "SELECT account_code,account_head_name,group_name FROM " & GMod.ACC_HEAD & " WHERE account_code='" & dsSal.Tables("emplcode").Rows(0)(0).ToString & "'"
+            GMod.DataSetRet(sql, "cpfhead")
+            dgvoucher(0, row).Value = row
+            dgvoucher(1, row).Value = dsSal.Tables("emplcode").Rows(0)(0).ToString
+            dgvoucher(1, row).Style.BackColor = Color.BurlyWood
+            dgvoucher(2, row).Value = GMod.ds.Tables("cpfhead").Rows(0)("Account_head_name")
+            dgvoucher(4, row).Value = dsSal.Tables("cpftotal").Rows(0)(0).ToString
+            'dgvoucher(6, row).Value = "Dr"
+            dgvoucher(6, row).Value = GMod.ds.Tables("cpfhead").Rows(0)("group_name")
+            dgvoucher(3, row).Value = "BEING " & dsSal.Tables("Department").Rows(i)("Department").ToString & " CPF FOR THE MONTH " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
+        Catch ex As Exception
+            MsgBox("Emplyer's head not present")
+        End Try
+        '*****************************-----------------------------
+
+        'All Indisuasal CP Accont  cr
+        Try
+            dsSal.Tables("cpfacc").Clear()
+        Catch ex As Exception
+
+        End Try
+        Try
+            If cmbPaymode.Text = "BANK" Then
+                sql = "select empid,name,department,amt833+amt367 tt from  salacctransfer " _
+                      & " where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and orgid='" & orgid & "' and salmonth='" & dtSalaryDate.Text & "' and amt833+amt367>0  and paymode='BANK' order by amtpay desc"
+            Else
+                sql = "select empid,name,department,amt833+amt367 tt from  salacctransfer " _
+                                         & " where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and orgid='" & orgid & "' and salmonth='" & dtSalaryDate.Text & "' and  amt833+amt367>0 and paymode='CASH' order by amtpay desc"
+
+            End If
+            da = New SqlDataAdapter(sql, ConStrSal)
+            da.Fill(dsSal, "cpfacc")
+
+            For j = 0 To dsSal.Tables("cpfacc").Rows.Count - 1
+                Try
+                    sqlname = "select  account_head_name,group_name from " & GMod.ACC_HEAD & " where account_code='" & dsSal.Tables("cpfacc").Rows(j)("empid").ToString & "'"
+                    GMod.DataSetRet(sqlname, "empaccname")
+
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+                'Getting Name of w.t to code    
+
+
+                dgvoucher.Rows.Add()
+                row = row + 1
+                dgvoucher(0, row).Value = row
+                dgvoucher(1, row).Value = dsSal.Tables("cpfacc").Rows(j)("empid")
+                dgvoucher(2, row).Value = GMod.ds.Tables("empaccname").Rows(0)("account_head_name")
+                dgvoucher(4, row).Value = dsSal.Tables("cpfacc").Rows(j)("tt")
+                dgvoucher(6, row).Value = GMod.ds.Tables("empaccname").Rows(0)("group_name")
+                dgvoucher(3, row).Value = "BEING CPF COLLECTION FOR " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
+            Next
+        Catch ex As Exception
+            MsgBox("cpf" & ex.Message)
+        End Try
+
+        'CPF Account BOTH 
+        'MsgBox(dsSal.Tables("cpftotal").Rows(0)(0))
+        Try
+            dsSal.Tables("cpf").Clear()
+        Catch ex As Exception
+        End Try
+        dgvoucher.Rows.Add()
+        row = row + 1
+        If cmbPaymode.Text = "BANK" Then
+            sql = "select sum(amt833+amt367)  from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "' and paymode='BANK' " 'and is_ho_emp = '" & RdHO.Checked.ToString & "'"
+        Else
+            sql = "select sum(amt833+amt367)  from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Text & "' and orgid='" & orgid & "' and paymode='CASH' " ' and is_ho_emp = '" & RdHO.Checked.ToString & "'"
+        End If
+        da = New SqlDataAdapter(sql, ConStrSal)
+        da.Fill(dsSal, "cpf")
+        dgvoucher(0, row).Value = row
+        dgvoucher(1, row).Value = c
+        dgvoucher(2, row).Value = GMod.ds.Tables("cpfsum").Rows(0)("Account_head_name")
+        dgvoucher(5, row).Value = Val(dsSal.Tables("cpf").Rows(0)(0).ToString) * 2
+        dgvoucher(6, row).Value = GMod.ds.Tables("cpfsum").Rows(0)("group_name")
+        dgvoucher(3, row).Value = "BEING " & dsSal.Tables("Department").Rows(i)("Department").ToString & " CPF BOTH FOR THE MONTH " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
+
+        'Group Insurance detecthed 
+        'All Indisuasal Accont  cr
+        Try
+            dsSal.Tables("groupinsurance").Clear()
+        Catch ex As Exception
+
+        End Try
+        If cmbPaymode.Text = "BANK" Then
+            sql = "select empid,name,department,groupinsded from  salacctransfer " _
+                  & " where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and orgid='" & orgid & "' and salmonth='" & dtSalaryDate.Text & "' and groupinsded > 0  and paymode='BANK' order by amtpay desc"
+        Else
+            sql = "select empid,name,department,groupinsded from  salacctransfer " _
+                  & " where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and orgid='" & orgid & "' and salmonth='" & dtSalaryDate.Text & "' and groupinsded > 0  and paymode='CASH' order by amtpay desc"
+
+        End If
+
+
+        da = New SqlDataAdapter(sql, ConStrSal)
+        da.Fill(dsSal, "groupinsurance")
+        Try
+            For j = 0 To dsSal.Tables("groupinsurance").Rows.Count - 1
+                dgvoucher.Rows.Add()
+                row = row + 1
+                'Getting Name of w.t to code    
+                sqlname = "select  account_head_name,group_name from " & GMod.ACC_HEAD & " where account_code='" & dsSal.Tables("groupinsurance").Rows(j)("empid").ToString & "'"
+                GMod.DataSetRet(sqlname, "empaccname")
+                dgvoucher(0, row).Value = row
+                dgvoucher(1, row).Value = dsSal.Tables("groupinsurance").Rows(j)("empid")
+                dgvoucher(2, row).Value = GMod.ds.Tables("empaccname").Rows(0)("account_head_name")
+                dgvoucher(4, row).Value = dsSal.Tables("groupinsurance").Rows(j)("groupinsded")
+                dgvoucher(6, row).Value = GMod.ds.Tables("empaccname").Rows(0)("group_name")
+                dgvoucher(3, row).Value = "BEING GIS FOR " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
+            Next
+        Catch ex As Exception
+            MsgBox("groupinsurance" & ex.Message)
+            MsgBox("Invalid Month " & ex.Message)
+            Me.Close()
+        End Try
+        'CPF  Employer's Contribution Dr
+        Try
+            dsSal.Tables("groupinstotal").Clear()
+        Catch ex As Exception
+
+        End Try
+
+        dgvoucher.Rows.Add()
+        row = row + 1
+        If cmbPaymode.Text = "BANK" Then
+            sql = "select isnull(sum(groupinsded),0)  from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Value.ToShortDateString & "' and orgid='" & orgid & "' and groupinsded>0 and paymode='BANK'" ' and is_ho_emp = '" & RdHO.Checked.ToString & "'"
+        Else
+            sql = "select isnull(sum(groupinsded),0)  from  salacctransfer where department='" & dsSal.Tables("Department").Rows(i)("Department").ToString & "' and salmonth='" & dtSalaryDate.Value.ToShortDateString & "' and orgid='" & orgid & "' and groupinsded>0 and paymode='CASH' " '  and is_ho_emp = '" & RdHO.Checked.ToString & "'"
+        End If
+
+        da = New SqlDataAdapter(sql, ConStrSal)
+        da.Fill(dsSal, "groupinstotal")
+        If dsSal.Tables("groupinstotal").Rows(0)(0) > 0 Then
+            dgvoucher(0, row).Value = row
+            dgvoucher(1, row).Value = d
+            dgvoucher(2, row).Value = GMod.ds.Tables("groupinstot").Rows(0)("Account_head_name")
+            dgvoucher(5, row).Value = dsSal.Tables("groupinstotal").Rows(0)(0).ToString
+            'dgvoucher(6, row).Value = "Dr"
+            dgvoucher(6, row).Value = GMod.ds.Tables("groupinstot").Rows(0)("group_name")
+            dgvoucher(3, row).Value = "BEING EMPLOYER GROUP INSURANCE FOR " & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year
+            'totalgis = totalgis + Val(dsSal.Tables("groupinstotal").Rows(0)(0).ToString)
+            row = row + 1
+        End If
+
+        ' Department LOOP
         If GMod.Cmpid = "PHOE" Then
             Try
                 '''''FOR ESI

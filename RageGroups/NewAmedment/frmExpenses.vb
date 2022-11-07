@@ -452,7 +452,7 @@ Public Class frmExpenses
 
                 sql = "select * from " & GMod.VENTRY & " where  vou_type ='" & cmbvoutype.Text & "' and vou_no='" & txtvou_no.Text & "'  order by entry_id"
                 GMod.DataSetRet(sql, "modifypay")
-                dtvdate.Value = CDate(GMod.ds.Tables("modifypay").Rows(0)("Vou_date"))
+                ' dtvdate.Value = CDate(GMod.ds.Tables("modifypay").Rows(0)("Vou_date"))
                 dtvdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
                 'txtNarration.Text = GMod.ds.Tables("modifypay").Rows(0)("Narration")
                 txtChqNo.Text = GMod.ds.Tables("modifypay").Rows(0)("Cheque_no")

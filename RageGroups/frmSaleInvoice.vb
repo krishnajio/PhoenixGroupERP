@@ -23,6 +23,7 @@ Public Class frmSaleInvoice
         dtdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
         dtdate.MaxDate = GMod.SessionCurrentDate
 
+
         'filling production unit 
         GMod.DataSetRet("select prdunit from prdunit where cmp_id='" & GMod.Cmpid & "'", "prdunit")
         cmbPrdUnit.DataSource = GMod.ds.Tables("prdunit")
@@ -959,8 +960,9 @@ Public Class frmSaleInvoice
                     End If
                     dtdate.Focus()
                     txtinvoiceno.Text = GMod.ds.Tables("PrintData").Rows(0)("BillNo")
-                    dtdate.MinDate = CDate(GMod.ds.Tables("PrintData").Rows(0)("BillDate"))
-                    dtdate.Value = CDate(GMod.ds.Tables("PrintData").Rows(0)("BillDate"))
+                    ' dtdate.MinDate = CDate(GMod.ds.Tables("PrintData").Rows(0)("BillDate"))
+                    'dtdate.Value = CDate(GMod.ds.Tables("PrintData").Rows(0)("BillDate"))
+                    dtdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
                     dtHatchdate.Value = CDate(GMod.ds.Tables("PrintData").Rows(0)("HatchDate"))
                     cmbAreaName.Text = GMod.ds.Tables("PrintData").Rows(0)("Station")
                     cmbacheadcode.Text = GMod.ds.Tables("PrintData").Rows(0)("AccCode")

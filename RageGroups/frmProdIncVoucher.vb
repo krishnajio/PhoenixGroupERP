@@ -12,6 +12,10 @@ Public Class frmProdincvVoucherDr
         'cmbvtype.DataSource = GMod.ds.Tables("vt")
         'cmbvtype.DisplayMember = "vtype"
 
+        dtdate.Value = GMod.SessionCurrentDate
+        dtdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
+        dtdate.MaxDate = GMod.SessionCurrentDate
+
         sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' AND group_name like  '%EXPENSES%' "
         GMod.DataSetRet(sql, "aclist1")
         cmbFrightCode.DataSource = GMod.ds.Tables("aclist1")

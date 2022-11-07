@@ -29,6 +29,12 @@ Public Class frmDMPosting
         End Try
     End Sub
     Private Sub frmDMPosting_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'date set to as per session
+        dtpPostingDate.Value = GMod.SessionCurrentDate
+        dtpPostingDate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
+        dtpPostingDate.MaxDate = GMod.SessionCurrentDate
+
         isDm = 1
 
         tablename = "VENTRY" & "_" & "PHOE" & "_" & GMod.Getsession(Now)

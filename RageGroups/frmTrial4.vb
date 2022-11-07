@@ -159,6 +159,7 @@ Public Class frmTrial4
 
         'If chkadvformat.Checked = True Then
         Dim r As New CrNewTrialBetDays
+
         r.SetDataSource(GMod.ds.Tables("trial2"))
         r.SetParameterValue("cmpname", GMod.Cmpname)
         r.SetParameterValue("s1", "Trial Balance between " & dtfrom.Text & " TO " & dtTo.Text)

@@ -31,6 +31,12 @@ Public Class frmPostDataToacc
                     'GMod.SqlExecuteNonQuery(sql)
                     Dim cmd2 As New SqlCommand(sql, GMod.SqlConn, trans)
                     cmd2.ExecuteNonQuery()
+
+                    sql = "update TdsEntry set authr='" & GMod.username & "' where Vou_no='" & dgBillNo(2, i).Value & "' and Vou_type='" & cmbvoutype.Text & "' and session='" & GMod.Session & "'"
+                    'GMod.SqlExecuteNonQuery(sql)
+                    Dim cmd3 As New SqlCommand(sql, GMod.SqlConn, trans)
+                    cmd3.ExecuteNonQuery()
+
                 End If
             Next
             trans.Commit()

@@ -227,7 +227,7 @@ Module GMod
             sqls = "select getdate()"
             GMod.DataSetRet(sqls, "LD")
             'MsgBox(DateDiff(DateInterval.Day, CDate(GMod.ds.Tables("LD").Rows(0)(0)), CDate(GMod.ds.Tables("VD").Rows(0)(0))))
-            If Math.Abs(DateDiff(DateInterval.Day, CDate(GMod.ds.Tables("LD").Rows(0)(0)), CDate(GMod.ds.Tables("VD").Rows(0)(0)))) >= Val(GMod.nofd) Then
+            If Math.Abs(DateDiff(DateInterval.Day, CDate(GMod.ds.Tables("LD").Rows(0)(0)), CDate(GMod.ds.Tables("VD").Rows(0)(0)))) = 0 Then
                 Return False
             Else
                 'MsgBox(CDate(GMod.ds.Tables("LD").Rows(0)(0)).AddDays(-10))

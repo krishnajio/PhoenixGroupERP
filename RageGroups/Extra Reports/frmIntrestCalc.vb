@@ -9,7 +9,7 @@ Public Class frmIntrestCalc
         dtto.MinDate = CDate("4/1/" & Mid(GMod.Session, 1, 2)).ToShortDateString
 
           Dim sqlrole As String
-        sqlrole = "select [role] from Usertab2 where Uname='" & GMod.username & "'"
+        sqlrole = "select [role] from Usertab3 where Uname='" & GMod.username & "'"
         GMod.DataSetRet(sqlrole, "rr")
         If GMod.ds.Tables("rr").Rows(0)(0).ToString = "LIMITED" Then
             rdPary.Enabled = False

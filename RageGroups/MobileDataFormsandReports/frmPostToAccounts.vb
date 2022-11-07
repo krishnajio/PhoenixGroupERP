@@ -3,6 +3,8 @@
 
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
 
+
+
         If ComboBox1.Text = "ALL AREA" Then
             Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,convert(varchar,TrDate,103) TrDate,convert(varchar,HatchDate,103) HatchDate,convert(varchar,entrydate,103) entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks,Pay_type from [AreaTrPoultry] where isAuth=1 and isnull(isPosted,0)=0  and session = '" & GMod.Session & "'" 'Where TrDate='" & DtpTrDate.Text.ToString & "' "
             GMod.DataSetRet(sql, "allAreatrposting")
@@ -107,6 +109,11 @@
     Dim headtable As String
 
     Private Sub frmPostToAccounts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'date set to as per session
+        dtpPostingDate.Value = GMod.SessionCurrentDate
+        dtpPostingDate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
+        dtpPostingDate.MaxDate = GMod.SessionCurrentDate
 
         tablename = "VENTRY" & "_" & "PHOE" & "_" & GMod.Getsession(Now)
         sql = "select vtype from Vtype where cmp_id='PHHA'  and (vtype like '%CR VOUCHER%'  or  vtype like '%RECEIPT%' or  vtype like '%FRECEIPT%') and vtype not like 'sale CR'  and session = '" & GMod.Getsession(Now) & "'"

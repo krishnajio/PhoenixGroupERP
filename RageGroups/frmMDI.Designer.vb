@@ -137,6 +137,7 @@ Partial Class frmMDI
         Me.CustomerBalanceLetterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MissingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PhoenixHAtchriesGSTR1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Customer5000000ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseRegisterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchasePaymentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -196,6 +197,7 @@ Partial Class frmMDI
         Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PartyPendingListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PendingListConsolidatedMonthlyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem40 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BankPartyListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MisReporToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CashReceivedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -268,7 +270,6 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Customer5000000ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -833,31 +834,31 @@ Partial Class frmMDI
         'TRAuthToolStripMenuItem
         '
         Me.TRAuthToolStripMenuItem.Name = "TRAuthToolStripMenuItem"
-        Me.TRAuthToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.TRAuthToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TRAuthToolStripMenuItem.Text = "TR Auth"
         '
         'TRPostToolStripMenuItem
         '
         Me.TRPostToolStripMenuItem.Name = "TRPostToolStripMenuItem"
-        Me.TRPostToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.TRPostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TRPostToolStripMenuItem.Text = "TR Post "
         '
         'TRPostMultiToolStripMenuItem
         '
         Me.TRPostMultiToolStripMenuItem.Name = "TRPostMultiToolStripMenuItem"
-        Me.TRPostMultiToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.TRPostMultiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TRPostMultiToolStripMenuItem.Text = "TR Post(Multi)"
         '
         'DMAuthToolStripMenuItem
         '
         Me.DMAuthToolStripMenuItem.Name = "DMAuthToolStripMenuItem"
-        Me.DMAuthToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.DMAuthToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DMAuthToolStripMenuItem.Text = "DM Auth"
         '
         'DMPostToolStripMenuItem
         '
         Me.DMPostToolStripMenuItem.Name = "DMPostToolStripMenuItem"
-        Me.DMPostToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.DMPostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DMPostToolStripMenuItem.Text = "DM Post"
         '
         'DisplayPrintToolStripMenuItem
@@ -991,6 +992,12 @@ Partial Class frmMDI
         Me.PhoenixHAtchriesGSTR1ToolStripMenuItem.Name = "PhoenixHAtchriesGSTR1ToolStripMenuItem"
         Me.PhoenixHAtchriesGSTR1ToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.PhoenixHAtchriesGSTR1ToolStripMenuItem.Text = "Phoenix Hatchries GSTR-1"
+        '
+        'Customer5000000ToolStripMenuItem
+        '
+        Me.Customer5000000ToolStripMenuItem.Name = "Customer5000000ToolStripMenuItem"
+        Me.Customer5000000ToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.Customer5000000ToolStripMenuItem.Text = "Customer>5000000"
         '
         'PurchaseToolStripMenuItem3
         '
@@ -1195,6 +1202,7 @@ Partial Class frmMDI
         Me.ToolStripMenuItem25.Name = "ToolStripMenuItem25"
         Me.ToolStripMenuItem25.Size = New System.Drawing.Size(341, 22)
         Me.ToolStripMenuItem25.Text = "UnAuthrised Ledger/Trial"
+        Me.ToolStripMenuItem25.Visible = False
         '
         'UnAuthrisedLedgerToolStripMenuItem
         '
@@ -1336,7 +1344,7 @@ Partial Class frmMDI
         '
         'ToolStripMenuItem11
         '
-        Me.ToolStripMenuItem11.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PartyPendingListToolStripMenuItem, Me.PendingListConsolidatedMonthlyToolStripMenuItem, Me.BankPartyListToolStripMenuItem})
+        Me.ToolStripMenuItem11.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PartyPendingListToolStripMenuItem, Me.PendingListConsolidatedMonthlyToolStripMenuItem, Me.ToolStripMenuItem40, Me.BankPartyListToolStripMenuItem})
         Me.ToolStripMenuItem11.Name = "ToolStripMenuItem11"
         Me.ToolStripMenuItem11.Size = New System.Drawing.Size(341, 22)
         Me.ToolStripMenuItem11.Text = "Bank"
@@ -1352,6 +1360,12 @@ Partial Class frmMDI
         Me.PendingListConsolidatedMonthlyToolStripMenuItem.Name = "PendingListConsolidatedMonthlyToolStripMenuItem"
         Me.PendingListConsolidatedMonthlyToolStripMenuItem.Size = New System.Drawing.Size(318, 22)
         Me.PendingListConsolidatedMonthlyToolStripMenuItem.Text = "Pending List Consolidated Monthly Party Wise"
+        '
+        'ToolStripMenuItem40
+        '
+        Me.ToolStripMenuItem40.Name = "ToolStripMenuItem40"
+        Me.ToolStripMenuItem40.Size = New System.Drawing.Size(318, 22)
+        Me.ToolStripMenuItem40.Text = "Monthly Pending List"
         '
         'BankPartyListToolStripMenuItem
         '
@@ -1847,12 +1861,6 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
-        'Customer5000000ToolStripMenuItem
-        '
-        Me.Customer5000000ToolStripMenuItem.Name = "Customer5000000ToolStripMenuItem"
-        Me.Customer5000000ToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
-        Me.Customer5000000ToolStripMenuItem.Text = "Customer>5000000"
-        '
         'frmMDI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2137,4 +2145,5 @@ Partial Class frmMDI
     Friend WithEvents WastageEntryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OtherSaleInvoivePrintToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Customer5000000ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem40 As System.Windows.Forms.ToolStripMenuItem
 End Class

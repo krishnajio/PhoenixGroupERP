@@ -52,11 +52,11 @@ Public Class frmSaleOther
         dtVouDate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
         dtVouDate.MaxDate = GMod.SessionCurrentDate
 
-        dtInvVate.MaxDate = CDate("3/31/" & Mid(GMod.Session, 3, 4))
-        dtInvVate.MinDate = CDate("4/1/" & Mid(GMod.Session, 1, 2)).ToShortDateString
+        ' dtInvVate.MaxDate = CDate("3/31/" & Mid(GMod.Session, 3, 4))
+        'dtInvVate.MinDate = CDate("4/1/" & Mid(GMod.Session, 1, 2)).ToShortDateString
 
-        dtInvVate.MaxDate = CDate("3/31/" & Mid(GMod.Session, 3, 4))
-        dtInvVate.MinDate = CDate("4/1/" & Mid(GMod.Session, 1, 2)).ToShortDateString
+        'dtInvVate.MaxDate = CDate("3/31/" & Mid(GMod.Session, 3, 4))
+        'dtInvVate.MinDate = CDate("4/1/" & Mid(GMod.Session, 1, 2)).ToShortDateString
 
         If btnSave.Enabled = True Then
             ' GMod.DataSetRet("select getdate()", "serverdate")

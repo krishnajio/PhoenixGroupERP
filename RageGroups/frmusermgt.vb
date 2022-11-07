@@ -28,7 +28,7 @@ Public Class frmusermgt
         'User_id, Uname, Pwd, Role
 
         Dim Sqlsavestr As String, Sqlresult As String
-        Sqlsavestr = "Insert into Usertab2(Uname, Pwd, Role,dept) values ("
+        Sqlsavestr = "Insert into Usertab3(Uname, Pwd, Role,dept) values ("
         Sqlsavestr &= "'" & txtusername.Text & "',"
         Sqlsavestr &= " CAST('" & txtpassword.Text & "' as varbinary(128)),"
         Sqlsavestr &= "'" & cmbrole.Text.ToUpper & "',"
@@ -53,7 +53,7 @@ Public Class frmusermgt
     End Sub
     Public Sub fillgrid()
         Dim sqlselectall As String
-        sqlselectall = "select  Uname, Role,Dept from usertab2"
+        sqlselectall = "select  Uname, Role,Dept from usertab3"
         GMod.DataSetRet(sqlselectall, "usertab")
         dguserinfo.DataSource = ds.Tables("usertab")
     End Sub
@@ -86,7 +86,7 @@ Public Class frmusermgt
     Private Sub btnmodify_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodify.Click
         'User_id, Uname, Pwd, Role
         Dim sqlupdate As String, sqlresult As String
-        sqlupdate = "update usertab2 set"
+        sqlupdate = "update usertab3 set"
         sqlupdate &= " Uname=" & "'" & txtusername.Text & "',"
         sqlupdate &= " Pwd=" & " CAST('" & txtpassword.Text & "' as varbinary(128)),"
         sqlupdate &= " Role=" & "'" & cmbrole.Text.ToUpper & "',"

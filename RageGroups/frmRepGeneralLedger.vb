@@ -40,7 +40,7 @@ Public Class frmRepGeneralLedger
         rdPrint_Click(sender, e)
         panel1.Visible = False
         Dim sqlrole As String
-        sqlrole = "select [role] from Usertab2 where Uname='" & GMod.username & "'"
+        sqlrole = "select [role] from Usertab3 where Uname='" & GMod.username & "'"
         GMod.DataSetRet(sqlrole, "rr")
         If GMod.ds.Tables("rr").Rows(0)(0).ToString = "LIMITED" Then
             rdPary.Enabled = False
@@ -201,7 +201,7 @@ Public Class frmRepGeneralLedger
             Else
                 sqlsave = "insert into repPartyLedger(Cmpid, Uname,  Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head," _
                 & " dramt, cramt, Pay_mode, Cheque_no, Narration, Group_name, Sub_group_name, Ch_issue_date, Ch_date)" _
-                & " select Cmp_id,'" & GMod.username & "',vou_no,vou_type,vou_date,Acc_head_code,acc_head,dramt,cramt,pay_mode,Cheque_no," _
+                & " select Cmp_id,'" & GMod.username & "',vou_no,vou_type,vou_date,Acc_head_code,acc_head,dramt,cramt,pay_mode,isnull(Cheque_no,'') Cheque_no ," _
                 & " Narration, group_name, sub_group_name, ch_issue_date, ch_date " _
                 & " from " & GMod.VENTRY & " where vou_date between '" & dtfrom.Value.ToShortDateString & "' and '" & dtto.Value.ToShortDateString & "' and Acc_head_code='" & cmbacheadcode.Text & "' and vou_type<>'BANKREC' and Pay_mode<>'-' and left(Uname,1)<>'$' order by vou_date,vou_no,Entry_id"
                 GMod.SqlExecuteNonQuery(sqlsave)

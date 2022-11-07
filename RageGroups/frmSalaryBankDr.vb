@@ -9,6 +9,16 @@ Public Class frmSalaryBankDr
         GMod.DataSetRet("select getdate()", "serverdate")
         dtdate.Value = CDate(GMod.ds.Tables("serverdate").Rows(0)(0).ToString)
 
+        Try
+            'date set to as per session
+            '  dtdate.Value = CDate(GMod.SessionCurrentDate)
+            dtdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
+            'dtdate.MaxDate = GMod.SessionCurrentDate
+        Catch ex As Exception
+
+        End Try
+
+
         If GMod.Getsession(dtdate.Value) = GMod.Session Then
         Else
             'Me.Close()

@@ -16,9 +16,9 @@ Public Class frmVentry
         Else
         End If
         'Setting voucher date accrding to session
-        'dtVdate.Value = GMod.SessionCurrentDate
-        'dtVdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
-        'dtVdate.MaxDate = GMod.SessionCurrentDate
+        dtVdate.Value = GMod.SessionCurrentDate
+        dtVdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
+        dtVdate.MaxDate = GMod.SessionCurrentDate
 
         
         ' MsgBox(GMod.Session)

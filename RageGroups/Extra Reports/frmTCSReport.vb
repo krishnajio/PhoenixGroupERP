@@ -218,7 +218,7 @@ Public Class frmTCSReport
                 sql &= "'" & CDate(GMod.ds.Tables("tcsentry").Rows(i)("vou_Date")) & "',"
                 sql &= "'" & GMod.username & "',"
                 sql &= "'" & GMod.ds.Tables("ddatatcs").Rows(0)("credit_days").ToString & "')"
-                GMod.SqlExecuteNonQuery(sql)
+                MsgBox(GMod.SqlExecuteNonQuery(sql))
             Next
 
 

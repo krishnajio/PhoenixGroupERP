@@ -548,7 +548,7 @@ Public Class frmPaymentandChqprint
                 Exit Sub
             End If
             dtvdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
-            dtvdate.Value = CDate(GMod.ds.Tables("modifypay").Rows(0)("Vou_date"))
+            ' dtvdate.Value = CDate(GMod.ds.Tables("modifypay").Rows(0)("Vou_date"))
 
             'txtNarration.Text = GMod.ds.Tables("modifypay").Rows(0)("Narration")
             'txtChqNo.Text = GMod.ds.Tables("modifypay").Rows(0)("Cheque_no")

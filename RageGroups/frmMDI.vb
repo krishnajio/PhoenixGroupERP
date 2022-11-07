@@ -1347,6 +1347,8 @@ Public Class frmMDI
         ' End If
     End Sub
     Private Sub SalaryTransferCasualStaffToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SalaryTransferCasualStaffToolStripMenuItem1.Click
+
+       
         'If GMod.role = "ADMIN" And GMod.role = "VIEWER LEVEL-1" Then
         If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.username.ToLower = "admin") Then
             Dim saltrf As New frmSalaryTransferPoultryCasual
@@ -1566,5 +1568,13 @@ Public Class frmMDI
     Private Sub Customer5000000ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Customer5000000ToolStripMenuItem.Click
         Dim tosp As New frmCustomerListForTcs
         tosp.ShowDialog()
+    End Sub
+
+    Private Sub ToolStripStatusLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripStatusLabel2.Click
+
+    End Sub
+
+    Private Sub ToolStripMenuItem40_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem40.Click
+        frmPartyDueMonthly.ShowDialog()
     End Sub
 End Class
