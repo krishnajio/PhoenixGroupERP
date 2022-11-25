@@ -784,7 +784,7 @@ Public Class frmDrNote
 
                     lblvouno.Text = GMod.ds.Tables("pur_modify").Rows(0)("vou_no")
                     dtVdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
-                    dtVdate.Value = Convert.ToDateTime(GMod.ds.Tables("pur_modify").Rows(0)("vou_date"))
+                    ' dtVdate.Value = Convert.ToDateTime(GMod.ds.Tables("pur_modify").Rows(0)("vou_date"))
                     txtBillNo.Text = GMod.ds.Tables("pur_modify").Rows(0)("Bill_no")
                     dtbilldate.Value = CDate(GMod.ds.Tables("pur_modify").Rows(0)("Bill_date"))
                     txtPoNo.Text = GMod.ds.Tables("pur_modify").Rows(0)("pono")

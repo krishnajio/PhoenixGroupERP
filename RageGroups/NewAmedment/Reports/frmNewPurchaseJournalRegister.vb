@@ -10,7 +10,7 @@ Public Class frmNewPurchaseJournalRegister
         If chkcform.Checked = False Then
             'sql = "select * from new_pur_reg"
             sql = "select pd.*,ach.account_head_name,ach.address,ach.remark2 from Purchase_Data pd"
-            sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and vou_type='" & voutype.Text & "' and authr<>'-'"
+            sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and pd.cmp_id ='" & GMod.Cmpid & "' and vou_type='" & voutype.Text & "' and authr<>'-'"
 
             If txtv1.Text <> "" Then
                 sql &= " and  cast(vou_no as numeric(18,0)) between " & txtv1.Text & " and " & txtv2.Text & ""
@@ -40,7 +40,7 @@ Public Class frmNewPurchaseJournalRegister
 
         Else
             sql = " select pd.*,ach.account_head_name,ach.address,ach.remark2 from Purchase_Data pd"
-            sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and vou_type='" & voutype.Text & "' and cform=1  and for_where=" & cmbprdunit.Text & "' and authr<>'-'"
+            sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and pd.cmp_id ='" & GMod.Cmpid & "' and vou_type='" & voutype.Text & "' and cform=1  and for_where=" & cmbprdunit.Text & "' and authr<>'-'"
             sql &= " ORDER BY cast(vou_no as numeric(18,0))"
         End If
 

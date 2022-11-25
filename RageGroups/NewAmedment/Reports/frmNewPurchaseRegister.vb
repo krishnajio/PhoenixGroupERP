@@ -36,9 +36,10 @@ Public Class frmNewPurchaseRegister
             sql &= " ORDER BY cast(vou_no as numeric(18,0)),id"
         Else
             sql = "select pd.*,ach.account_head_name,ach.address, account_type as remark2 from Purchase_Data pd"
-            sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and vou_type='" & voutype.Text & "' and authr<>'-' and month(bill_date)=" & dtdate.Value.Month & "" '  and for_where='" & cmbprdunit.Text & "'"
+            sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and pd.cmp_id ='" & GMod.Cmpid & "' and vou_type='" & voutype.Text & "' and authr<>'-' and month(bill_date)=" & dtdate.Value.Month & "" '  and for_where='" & cmbprdunit.Text & "'"
             sql &= " ORDER BY bill_date"
         End If
+
         GMod.DataSetRet(sql, "npr")
         Dim r As New CrNew_Pur_Register
         r.SetDataSource(GMod.ds.Tables("npr"))

@@ -59,11 +59,16 @@ Public Class frmJournal
         Catch ex As Exception
 
         End Try
-  
-        'date set as per sessiion
-        dtvdate.Value = GMod.SessionCurrentDate
-        dtvdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
-        dtvdate.MaxDate = GMod.SessionCurrentDate
+
+        Try
+            'date set as per sessiion
+            ' dtvdate.Value = GMod.SessionCurrentDate
+            dtvdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
+            'dtvdate.MaxDate = GMod.SessionCurrentDate
+        Catch ex As Exception
+
+        End Try
+       
 
         If "$" & GMod.usrname <> GMod.username Then
             If GMod.Dept = 1 Then
@@ -501,7 +506,7 @@ Public Class frmJournal
             sql = "select * from " & GMod.VENTRY & " where  vou_type ='" & cmbvoutype.Text & "' and vou_no='" & txtvou_no.Text & "'  order by entry_id"
             GMod.DataSetRet(sql, "modifypay")
             dtvdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
-            dtvdate.Value = CDate(GMod.ds.Tables("modifypay").Rows(0)("Vou_date"))
+            ' dtvdate.Value = CDate(GMod.ds.Tables("modifypay").Rows(0)("Vou_date"))
             'txtNarration.Text = GMod.ds.Tables("modifypay").Rows(0)("Narration")
             'txtChqNo.Text = GMod.ds.Tables("modifypay").Rows(0)("Cheque_no")
             For i = 0 To GMod.ds.Tables("modifypay").Rows.Count - 1
