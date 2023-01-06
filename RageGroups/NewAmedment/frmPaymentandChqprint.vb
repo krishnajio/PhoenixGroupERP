@@ -330,6 +330,10 @@ Public Class frmPaymentandChqprint
                 Dim cmdel2 As New SqlCommand("delete from bank_payment where vou_type='" & cmbvoutype.Text & "' and vou_no= '" & txtvou_no.Text & "' and session='" & GMod.Session & "' and cmp_id='" & GMod.Cmpid & "'", GMod.SqlConn, trans)
                 cmdel2.ExecuteNonQuery()
 
+                Dim cmdel3 As New SqlCommand("delete from TdsEntry where vou_type='" & cmbvoutype.Text & "' and vou_no= '" & txtvou_no.Text & "' and session='" & GMod.Session & "' and cmp_id='" & GMod.Cmpid & "'", GMod.SqlConn, trans)
+                cmdel3.ExecuteNonQuery()
+
+
             End If
 
             If btnSave.Enabled = False Then
@@ -424,11 +428,11 @@ Public Class frmPaymentandChqprint
                     sql &= "'" & Val("") & "',"
                     sql &= "'-',"
                     sql &= "'" & Val(txtPaidAmt.Text) & "',"
-                    sql &= "'" & Val(txtActualAmt.Text) & "',"
+                    sql &= "'" & Val(txttdsAmount.Text) & "',"
                     sql &= "'" & GMod.Session & "',"
                     sql &= "'-',"
                     sql &= "'" & dtvdate.Value.ToShortDateString & "',"
-                    sql &= "'" & Val(txttdsAmount.Text) & "',"
+                    sql &= "'" & Val(txtActualAmt.Text) & "',"
                     sql &= "'" & cmbPartCode.Text & "',"
                     sql &= "'" & GMod.Cmpid & "')"
 

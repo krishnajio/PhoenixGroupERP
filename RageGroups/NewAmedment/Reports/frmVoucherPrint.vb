@@ -6,7 +6,7 @@ Imports System.Net.Mail
 Public Class frmVoucherPrint
 
     Private Sub frmVoucherPrint_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        sql = "select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and Vtype in ('BANK','CASH')"
+        sql = "select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and Vtype in ('BANK','CASH') and session = '" & GMod.Session & "'"
         GMod.DataSetRet(sql, "CRVT")
         cmbvoutype.DataSource = GMod.ds.Tables("CRVT")
         cmbvoutype.DisplayMember = "vtype"

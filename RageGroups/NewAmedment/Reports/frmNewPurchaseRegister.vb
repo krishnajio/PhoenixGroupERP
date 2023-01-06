@@ -13,7 +13,7 @@ Public Class frmNewPurchaseRegister
 
             If txtv1.Text <> "" Then
                 sql &= " and  cast(vou_no as numeric(18,0)) between " & txtv1.Text & " and " & txtv2.Text & ""
-                p2 = "Voucher No." & txtv1.Text & " To " & txtv2.Text
+                p2 = " Voucher No." & txtv1.Text & " To " & txtv2.Text
             End If
 
             If txtp1.Text <> "" Then

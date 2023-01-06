@@ -6,11 +6,11 @@ Public Class frmSalaryTransferPoultryCasual
         GMod.DataSetRet("select getdate()", "serverdate")
 
         'dtvdate.MinDate = CDate(GMod.ds.Tables("serverdate").Rows(0)(0).ToString).AddDays(-2)
-        dtVoucherDate.Value = CDate(GMod.ds.Tables("serverdate").Rows(0)(0).ToString)
+        'dtVoucherDate.Value = CDate(GMod.ds.Tables("serverdate").Rows(0)(0).ToString)
 
-        dtVoucherDate.Value = GMod.SessionCurrentDate
-        dtVoucherDate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
-        dtVoucherDate.MaxDate = GMod.SessionCurrentDate
+        'dtVoucherDate.Value = GMod.SessionCurrentDate
+        ' dtVoucherDate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
+        'dtVoucherDate.MaxDate = GMod.SessionCurrentDate
 
         'dgvoucher.Rows.Add()
         If cmbvtype.Enabled = False Then

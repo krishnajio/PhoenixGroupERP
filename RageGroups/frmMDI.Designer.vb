@@ -497,7 +497,7 @@ Partial Class frmMDI
         '
         Me.TranseectionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.JournalToolStripMenuItem1, Me.SaleToolStripMenuItem1, Me.PurchaseToolStripMenuItem1, Me.BankToolStripMenuItem, Me.ExpensesToolStripMenuItem, Me.CashCounterToolStripMenuItem, Me.OthersToolStripMenuItem, Me.SuplementryEntryToolStripMenuItem, Me.PurchaseToolStripMenuItem4, Me.BMToolStripMenuItem, Me.HatchToolStripMenuItem, Me.MarketRateUpdationToolStripMenuItem, Me.MultipleToolStripMenuItem, Me.SalaryToolStripMenuItem, Me.ToolStripMenuItem37, Me.XLSFiltToVoucherToolStripMenuItem, Me.RCMVoucherToolStripMenuItem, Me.DisbursementRegisterToolStripMenuItem})
         Me.TranseectionToolStripMenuItem.Name = "TranseectionToolStripMenuItem"
-        Me.TranseectionToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
+        Me.TranseectionToolStripMenuItem.Size = New System.Drawing.Size(94, 20)
         Me.TranseectionToolStripMenuItem.Text = "&Voucher's"
         '
         'JournalToolStripMenuItem1
@@ -834,31 +834,31 @@ Partial Class frmMDI
         'TRAuthToolStripMenuItem
         '
         Me.TRAuthToolStripMenuItem.Name = "TRAuthToolStripMenuItem"
-        Me.TRAuthToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TRAuthToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.TRAuthToolStripMenuItem.Text = "TR Auth"
         '
         'TRPostToolStripMenuItem
         '
         Me.TRPostToolStripMenuItem.Name = "TRPostToolStripMenuItem"
-        Me.TRPostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TRPostToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.TRPostToolStripMenuItem.Text = "TR Post "
         '
         'TRPostMultiToolStripMenuItem
         '
         Me.TRPostMultiToolStripMenuItem.Name = "TRPostMultiToolStripMenuItem"
-        Me.TRPostMultiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TRPostMultiToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.TRPostMultiToolStripMenuItem.Text = "TR Post(Multi)"
         '
         'DMAuthToolStripMenuItem
         '
         Me.DMAuthToolStripMenuItem.Name = "DMAuthToolStripMenuItem"
-        Me.DMAuthToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DMAuthToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.DMAuthToolStripMenuItem.Text = "DM Auth"
         '
         'DMPostToolStripMenuItem
         '
         Me.DMPostToolStripMenuItem.Name = "DMPostToolStripMenuItem"
-        Me.DMPostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DMPostToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.DMPostToolStripMenuItem.Text = "DM Post"
         '
         'DisplayPrintToolStripMenuItem

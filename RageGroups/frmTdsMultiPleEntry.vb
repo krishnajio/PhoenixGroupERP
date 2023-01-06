@@ -135,6 +135,7 @@ Public Class frmTdsMultiPleEntry
         End If
         If cmbvtype.Text = "BANK" Then
             sql = "select * from dummy_VENTRY where Posted='N' and cmp_id='" & GMod.Cmpid & "' and Session='" & GMod.Session & "'"
+
             GMod.DataSetRet(sql, "chkforpost")
             If GMod.ds.Tables("chkforpost").Rows.Count > 0 Then
                 MsgBox("Please post bank voucher", MsgBoxStyle.Information)
