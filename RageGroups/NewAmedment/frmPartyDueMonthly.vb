@@ -11,11 +11,18 @@ Public Class frmPartyDueMonthly
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        sql = " select a.account_code,account_head_name,p.Bill_no,Bill_date, vathead itemname from ACC_HEAD_PHOE_2223 a inner join purchase_data p "
-        sql &= " on a.account_code=p.party_code where  p.session ='2223' and paid =0 and vou_type <>'DR NOTE(PUR)' "
-        sql &= " and item_name like '%" & cmbVoucherType.Text & "%'  and Bill_date<= '" & dtpdate.Value.ToShortDateString
-        sql &= "' order by a.account_code,account_head_name,Bill_date desc"
+        If cmbVoucherType.Text = "FEED" Then
+            sql = " select a.account_code,account_head_name,p.Bill_no,Bill_date, vathead itemname from ACC_HEAD_PHOE_2223 a inner join purchase_data p "
+            sql &= " on a.account_code=p.party_code where  p.session ='2223' and paid =0 and vou_type <>'DR NOTE(PUR)' "
+            sql &= " and item_name in ('PARIYAT FEED','TILDA FEED PURCHASE','FEED PURCHASE-(FEED-UNIT)','GOURHA FEED PURCHASE') and Bill_date<= '" & dtpdate.Value.ToShortDateString
+            sql &= "' order by a.account_code,account_head_name,Bill_date desc"
+        Else
+            sql = " select a.account_code,account_head_name,p.Bill_no,Bill_date, vathead itemname from ACC_HEAD_PHOE_2223 a inner join purchase_data p "
+            sql &= " on a.account_code=p.party_code where  p.session ='2223' and paid =0 and vou_type <>'DR NOTE(PUR)' "
+            sql &= " and item_name like '%" & cmbVoucherType.Text & "%' and Bill_date<= '" & dtpdate.Value.ToShortDateString
+            sql &= "' order by a.account_code,account_head_name,Bill_date desc"
 
+        End If
         GMod.DataSetRet(sql, "monyhlypendlinglist")
 
         '  DataGridView1.Rows.Clear()

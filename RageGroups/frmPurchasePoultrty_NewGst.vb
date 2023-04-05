@@ -1785,26 +1785,13 @@ Public Class frmPurchasePoultrty_NewGst
     
     Private Sub txtTcsAmount_TextChanged(sender As Object, e As EventArgs) Handles txtTcsAmount.TextChanged
         txtGrandTotal.Text = Val(txtTcsAmount.Text) + Val(txtTotal.Text)
-       
+
 
     End Sub
 
     Private Sub txtTotal_TextChanged(sender As Object, e As EventArgs) Handles txtTotal.TextChanged
 
         txtGrandTotal.Text = Val(txtTcsAmount.Text) + Val(txtTotal.Text)
-
-       
     End Sub
 
-    Private Sub cmbTCSType_Resize(sender As Object, e As EventArgs) Handles cmbTCSType.Resize
-
-    End Sub
-
-    Private Sub cmbTCSType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTCSType.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub txtGrandTotal_TextChanged(sender As Object, e As EventArgs) Handles txtGrandTotal.TextChanged
-
-    End Sub
 End Class

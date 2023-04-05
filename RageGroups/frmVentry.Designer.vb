@@ -19,55 +19,56 @@ Partial Class frmVentry
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.cmbvtype = New System.Windows.Forms.ComboBox
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.btndelete = New System.Windows.Forms.Button
-        Me.btnsave = New System.Windows.Forms.Button
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.btnclose = New System.Windows.Forms.Button
-        Me.btnmodify = New System.Windows.Forms.Button
-        Me.dgvoucher = New System.Windows.Forms.DataGridView
-        Me.srno = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Accode = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.acname = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.narration = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.chequeno = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.amount = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.drcr = New System.Windows.Forms.DataGridViewComboBoxColumn
-        Me.btnreset = New System.Windows.Forms.Button
-        Me.Panel1 = New System.Windows.Forms.Panel
-        Me.lblcrsum = New System.Windows.Forms.Label
-        Me.lbldrsum = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.cmbacgroup = New System.Windows.Forms.ComboBox
-        Me.cmbacsubgroup = New System.Windows.Forms.ComboBox
-        Me.cmbacheadcode = New System.Windows.Forms.ComboBox
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.cmbacheadname = New System.Windows.Forms.ComboBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox
-        Me.lblvouno = New System.Windows.Forms.TextBox
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox
-        Me.lblvouseq = New System.Windows.Forms.Label
-        Me.lblDrCr = New System.Windows.Forms.Label
-        Me.ChknewCustomer = New System.Windows.Forms.CheckBox
-        Me.dtVdate = New System.Windows.Forms.DateTimePicker
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox
-        Me.Button1 = New System.Windows.Forms.Button
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.cmbvtype = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btndelete = New System.Windows.Forms.Button()
+        Me.btnsave = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnclose = New System.Windows.Forms.Button()
+        Me.btnmodify = New System.Windows.Forms.Button()
+        Me.dgvoucher = New System.Windows.Forms.DataGridView()
+        Me.srno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Accode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.acname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.narration = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.chequeno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.drcr = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.btnreset = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblcrsum = New System.Windows.Forms.Label()
+        Me.lbldrsum = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.cmbacgroup = New System.Windows.Forms.ComboBox()
+        Me.cmbacsubgroup = New System.Windows.Forms.ComboBox()
+        Me.cmbacheadcode = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.cmbacheadname = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.lblvouno = New System.Windows.Forms.TextBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.lblvouseq = New System.Windows.Forms.Label()
+        Me.lblDrCr = New System.Windows.Forms.Label()
+        Me.ChknewCustomer = New System.Windows.Forms.CheckBox()
+        Me.dtVdate = New System.Windows.Forms.DateTimePicker()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.dgvoucher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -257,6 +258,7 @@ Partial Class frmVentry
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.lblcrsum)
         Me.Panel1.Controls.Add(Me.lbldrsum)
@@ -271,6 +273,16 @@ Partial Class frmVentry
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(850, 43)
         Me.Panel1.TabIndex = 6
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(558, 4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(86, 28)
+        Me.Button1.TabIndex = 53
+        Me.Button1.Text = "&Seq Entry"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'lblcrsum
         '
@@ -403,7 +415,7 @@ Partial Class frmVentry
         Me.Label2.Size = New System.Drawing.Size(806, 27)
         Me.Label2.TabIndex = 74
         Me.Label2.Text = "F4 - NARRATION LIST | F3 -  PREVIOUS NARRATION | F1 - INVENTORY | F9 - EXPENSE MO" & _
-            "NTH"
+    "NTH"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'RadioButton1
@@ -531,15 +543,15 @@ Partial Class frmVentry
         Me.CheckBox4.Text = "TDS"
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Button2
         '
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(558, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(86, 28)
-        Me.Button1.TabIndex = 53
-        Me.Button1.Text = "&Seq Entry"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(53, 4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(80, 28)
+        Me.Button2.TabIndex = 54
+        Me.Button2.Text = "&Tds Entry"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'frmVentry
         '
@@ -627,4 +639,5 @@ Partial Class frmVentry
     Friend WithEvents dtVdate As System.Windows.Forms.DateTimePicker
     Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

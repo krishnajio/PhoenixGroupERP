@@ -133,7 +133,9 @@ Public Class frmTCSReport
     End Sub
 
     Public Sub SaleTcsReport()
-        sql = "select * from printdata  where tcs_head='" & cmbTcsHeadCode.Text & "' and BillDate between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session ='" & GMod.Session & "' AND CMP_ID ='" & GMod.Cmpid & "' and tcs_amt>0  and Authr<>'-'  order by billdate,cast(vou_no as bigint)"
+        ' sql = "select * from printdata  where tcs_head='" & cmbTcsHeadCode.Text & "' and BillDate between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session ='" & GMod.Session & "' AND CMP_ID ='" & GMod.Cmpid & "' and tcs_amt>0  and Authr<>'-'  order by billdate,cast(vou_no as bigint)"
+        'Vou_type  like '%SALE%'
+        sql = "select * from printdata  where Vou_type  like '%SALE%' and HatchDate between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session ='" & GMod.Session & "' AND CMP_ID ='" & GMod.Cmpid & "' and tcs_amt>0  and Authr<>'-' order by billdate,cast(vou_no as bigint)"
         GMod.DataSetRet(sql, "tdse")
         Try
             For i = 0 To GMod.ds.Tables("tdse").Rows.Count - 1

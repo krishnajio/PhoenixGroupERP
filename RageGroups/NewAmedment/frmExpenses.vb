@@ -293,7 +293,7 @@ Public Class frmExpenses
             '------------------------------------------------------------------------
             Try
                 For j = 0 To dgPayment.Rows.Count - 1
-                    sql = "insert into " & GMod.VENTRY & "( Cmp_id, Uname, Entry_id," & _
+                    sql = " insert into " & GMod.VENTRY & "( Cmp_id, Uname, Entry_id," & _
                     " Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt," & _
                     " cramt, Pay_mode, Cheque_no, Narration, Group_name," & _
                     " Sub_group_name, Ch_issue_date, exp_date,VoucherTax, TaxPer, TaxType, WinOut) values ("

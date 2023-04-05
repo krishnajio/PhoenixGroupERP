@@ -3,7 +3,7 @@
     Private Sub frmCustomerListForTcs_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim r As New CrCustomerListForTcs
 
-        GMod.DataSetRet("select * from Customelisttcs", "Customelisttcs")
+        GMod.DataSetRet("select * from Customelisttcs order by Acc_head", "Customelisttcs")
         Try
             r.SetDataSource(GMod.ds.Tables("Customelisttcs"))
             ''r.SetParameterValue("p", ComboBox1.Text)

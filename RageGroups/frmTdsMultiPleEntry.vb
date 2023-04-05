@@ -15,9 +15,14 @@ Public Class frmTdsMultiPleEntry
         Try
 
         
-        'dtpexpensedate.Value = CDate("1/1/2000")
-        sql = "select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vou_no_seq='" & GMod.Dept & "'  and session = '" & GMod.Session & "'"
-        GMod.DataSetRet(sql, "vtmultds")
+            'dtpexpensedate.Value = CDate("1/1/2000")
+            If GMod.Cmpid = "PHOE" Then
+                sql = "select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vou_no_seq='" & GMod.Dept & "'  and session = '" & GMod.Session & "'"
+
+            Else
+                sql = "select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and session = '" & GMod.Session & "'"
+            End If
+            GMod.DataSetRet(sql, "vtmultds")
         cmbvtype.DataSource = GMod.ds.Tables("vtmultds")
         cmbvtype.DisplayMember = "vtype"
 

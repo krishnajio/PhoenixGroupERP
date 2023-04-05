@@ -1318,12 +1318,15 @@ Public Class frmVentry
         End If
     End Sub
 
-    Private Sub dgvoucher_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvoucher.CellContentClick
-
-    End Sub
 
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim tseq As New frmSeqVentry
         tseq.ShowDialog()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        '  Me.Close()
+        Dim t As New frmTdsMultiPleEntry
+        t.Show()
     End Sub
 End Class
