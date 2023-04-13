@@ -326,8 +326,9 @@ Public Class frmJournal
                 cmdel.ExecuteNonQuery()
 
                 'sql = "delete from Sale_Receipt where vou_type='" & cmbvoutype.Text & "' and  vou_no='" & txtvou_no.Text & "' and cmp_id='" & GMod.Cmpid & "' and cmp_id='" & GMod.Cmpid & "'"
-                'Dim cmddel1 As New SqlCommand(sql, GMod.SqlConn, trans)
-                'cmddel1.ExecuteNonQuery()
+
+                Dim cmddel1 As New SqlCommand(sql, GMod.SqlConn, trans)
+                cmddel1.ExecuteNonQuery()
             End If
             '------------------------------------------------------------------------
             Try
@@ -524,45 +525,46 @@ Public Class frmJournal
                 cr = cr + Val(dgPayment(3, j).Value)
             Next
             If cmbvoutype.Text <> "" And txtvou_no.Text <> "" Then
-                'sql = "select ref_type,ref,dueon, cr from Sale_Receipt where vou_type='" & cmbvoutype.Text & "' and  vou_no='" & txtvou_no.Text & "' and session ='" & GMod.Session & "' and cmp_id='" & GMod.Cmpid & "'"
+                ' sql = "select ref_type,ref,dueon, cr from Sale_Receipt where vou_type='" & cmbvoutype.Text & "' and  vou_no='" & txtvou_no.Text & "' and session ='" & GMod.Session & "' and cmp_id='" & GMod.Cmpid & "'"
                 dg.Visible = False
-                'GMod.DataSetRet(sql, "mfy")
-                'If GMod.ds.Tables("mfy").Rows.Count > 0 Then
-                ' For k = 0 To GMod.ds.Tables("mfy").Rows.Count - 1
-                'DataGridView1.Rows.Add()
-                'DataGridView1(0, k).Value = GMod.ds.Tables("mfy").Rows(k)(0)
-                'DataGridView1(1, k).Value = GMod.ds.Tables("mfy").Rows(k)(1)
-                'DataGridView1(2, k).Value = GMod.ds.Tables("mfy").Rows(k)(2)
-                'DataGridView1(3, k).Value = GMod.ds.Tables("mfy").Rows(k)(3)
-                'Next
+                GMod.DataSetRet(sql, "mfy")
+                If GMod.ds.Tables("mfy").Rows.Count > 0 Then
+                    For k = 0 To GMod.ds.Tables("mfy").Rows.Count - 1
+                        DataGridView1.Rows.Add()
+                        DataGridView1(0, k).Value = GMod.ds.Tables("mfy").Rows(k)(0)
+                        DataGridView1(1, k).Value = GMod.ds.Tables("mfy").Rows(k)(1)
+                        DataGridView1(2, k).Value = GMod.ds.Tables("mfy").Rows(k)(2)
+                        DataGridView1(3, k).Value = GMod.ds.Tables("mfy").Rows(k)(3)
+                    Next
+                End If
             End If
-        End If
-        lblcr.Text = cr
-        lblDr.Text = dr
-        dr = 0
-        cr = 0
-        cmbAcHead.Focus()
-        If MessageBox.Show("Do U want to Modify", "Confirmation", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-            GMod.Fill_Log(GMod.Cmpid, txtvou_no.Text, cmbvoutype.Text, dtvdate.Value, Now, GMod.Session, "M", GMod.username)
-            btnSave_Click(sender, e)
-            btnModify.Text = "&Modify"
-            btnSave.Enabled = True
-            cmbvoutype.Enabled = True
-            txtvou_no.Clear()
+            lblcr.Text = cr
+            lblDr.Text = dr
+            dr = 0
+            cr = 0
+            cmbAcHead.Focus()
         Else
-            btnModify.Text = "&Modify"
-            btnSave.Enabled = True
-            cmbvoutype.Enabled = True
-            txtvou_no.Clear()
-            dgPayment.Rows.Clear()
-            txtDramt.Clear()
-            txtCrmat.Clear()
-            txtNarration.Clear()
-            txtChqNo.Clear()
-            cmbvoutype.Focus()
+            If MessageBox.Show("Do U want to Modify", "Confirmation", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+                GMod.Fill_Log(GMod.Cmpid, txtvou_no.Text, cmbvoutype.Text, dtvdate.Value, Now, GMod.Session, "M", GMod.username)
+                btnSave_Click(sender, e)
+                btnModify.Text = "&Modify"
+                btnSave.Enabled = True
+                cmbvoutype.Enabled = True
+                txtvou_no.Clear()
+            Else
+                btnModify.Text = "&Modify"
+                btnSave.Enabled = True
+                cmbvoutype.Enabled = True
+                txtvou_no.Clear()
+                dgPayment.Rows.Clear()
+                txtDramt.Clear()
+                txtCrmat.Clear()
+                txtNarration.Clear()
+                txtChqNo.Clear()
+                cmbvoutype.Focus()
+            End If
+            dtvdate_ValueChanged_1(sender, e)
         End If
-        dtvdate_ValueChanged_1(sender, e)
-
     End Sub
 
     Private Sub btnReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReset.Click
@@ -739,21 +741,21 @@ Public Class frmJournal
         End If
         cmbcode.BackColor = Color.White
         If chkpayment.Checked = True Then
-            'If btnSave.Enabled = True Then
-            '    sql = "select *  from tmpAging where acc_code ='" & cmbcode.Text & "' and vou_type='" & cmbvoutype.Text & "' and cmp_id='" & GMod.Cmpid & "'"
-            '    GMod.DataSetRet(sql, "jj")
-            '    If GMod.ds.Tables("jj").Rows.Count > 0 Then
-            '        MsgBox("Please select diffent head")
-            '        Me.Close()
-            '        Exit Sub
-            '    End If
-            'End If
-            'GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbcode.Text & "' and vou_type='" & cmbvoutype.Text & "'")
-            ''sql = "insert into tmpAging select *,'" & GMod.username & "' u,-1 from Sale_Receipt where acc_code='" & cmbcode.Text & "' and session='" & GMod.Session & "' and dr>0"
+            If btnSave.Enabled = True Then
+                'sql = "select *  from tmpAging where acc_code ='" & cmbcode.Text & "' and vou_type='" & cmbvoutype.Text & "' and cmp_id='" & GMod.Cmpid & "'"
+                'GMod.DataSetRet(sql, "jj")
+                If GMod.ds.Tables("jj").Rows.Count > 0 Then
+                    ' MsgBox("Please select diffent head")
+                    Me.Close()
+                    Exit Sub
+                End If
+            End If
+            ' GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbcode.Text & "' and vou_type='" & cmbvoutype.Text & "'")
+            'sql = "insert into tmpAging select *,'" & GMod.username & "' u,-1 from Sale_Receipt where acc_code='" & cmbcode.Text & "' and session='" & GMod.Session & "' and dr>0"
             'sql = " insert into  tmpAging (Ref_Type, Ref, Acc_Code,dr,vou_type,cmp_id) " & _
-            '      " select Ref_type,Ref,acc_code,sum(dr)-sum(cr) Amount,'" & cmbvoutype.Text & "',cmp_id  " & _
-            '      " from Sale_Receipt group by Ref,acc_code,Ref_type,cmp_id having sum(dr)-sum(cr)>0 " & _
-            '      " and acc_code='" & cmbcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
+            '     " select Ref_type,Ref,acc_code,sum(dr)-sum(cr) Amount,'" & cmbvoutype.Text & "',cmp_id  " & _
+            '    " from Sale_Receipt group by Ref,acc_code,Ref_type,cmp_id having sum(dr)-sum(cr)>0 " & _
+            '   " and acc_code='" & cmbcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
             'GMod.SqlExecuteNonQuery(sql)
         End If
     End Sub
