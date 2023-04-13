@@ -3,7 +3,7 @@ Public Class frmReceipt
     Dim sql, sqlsavecr As String
 
     Private Sub frmReceipt_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
-        GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbcode.Text & "' and vou_type='R' and cmp_id='" & GMod.Cmpid & "'")
+        'GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbcode.Text & "' and vou_type='R' and cmp_id='" & GMod.Cmpid & "'")
     End Sub
     Public Sub fillArea()
         Dim sqlarea As String
@@ -123,23 +123,22 @@ Public Class frmReceipt
             DataGridView1.Rows.Add(obj)
         End If
 
-        sqlsavecr = "insert into  tmpAging (Ref_Type, Ref, Acc_Code, Vou_Type," & _
-        " Vou_No, Vou_Date, dr, cr, dueon, Session,usename,id,cmp_id) values( "
-        sqlsavecr &= "'" & cmbRefType.Text & "',"
-        sqlsavecr &= "'" & txtref.Text & "',"
-        sqlsavecr &= "'" & cmbcode.Text & "',"
-        sqlsavecr &= "'R',"
-        sqlsavecr &= "'" & vouno & "',"
-        sqlsavecr &= "'" & dtvdate.Value.ToShortDateString & "',"
-        sqlsavecr &= "'" & Val("") & "',"
-        sqlsavecr &= "'" & Val(txtamount.Text) & "',"
-        sqlsavecr &= "'" & CDate(txtduedate.Text).ToShortDateString & "',"
-        sqlsavecr &= "'" & GMod.Session & "',"
-        sqlsavecr &= "'" & GMod.username & "',"
-        sqlsavecr &= "'" & DataGridView1.CurrentCell.RowIndex & "',"
-        sqlsavecr &= "'" & GMod.Cmpid & "')"
-
-        GMod.SqlExecuteNonQuery(sqlsavecr)
+        'sqlsavecr = "insert into  tmpAging (Ref_Type, Ref, Acc_Code, Vou_Type," & _
+        '" Vou_No, Vou_Date, dr, cr, dueon, Session,usename,id,cmp_id) values( "
+        'sqlsavecr &= "'" & cmbRefType.Text & "',"
+        'sqlsavecr &= "'" & txtref.Text & "',"
+        'sqlsavecr &= "'" & cmbcode.Text & "',"
+        'sqlsavecr &= "'R',"
+        'sqlsavecr &= "'" & vouno & "',"
+        'sqlsavecr &= "'" & dtvdate.Value.ToShortDateString & "',"
+        'sqlsavecr &= "'" & Val("") & "',"
+        'sqlsavecr &= "'" & Val(txtamount.Text) & "',"
+        'sqlsavecr &= "'" & CDate(txtduedate.Text).ToShortDateString & "',"
+        'sqlsavecr &= "'" & GMod.Session & "',"
+        'sqlsavecr &= "'" & GMod.username & "',"
+        'sqlsavecr &= "'" & DataGridView1.CurrentCell.RowIndex & "',"
+        'sqlsavecr &= "'" & GMod.Cmpid & "')"
+        'GMod.SqlExecuteNonQuery(sqlsavecr)
 
         If cr <> Val(txtCrmat.Text) Then
             cmbRefType.SelectedIndex = 0
@@ -202,9 +201,9 @@ Public Class frmReceipt
             End If
             sqltans = GMod.SqlConn.BeginTransaction
             Try
-                sql = "delete from Sale_Receipt where vou_type='" & vt & "' and  vou_no='" & vouno & "' and cmp_id='" & GMod.Cmpid & "' and cmp_id='" & GMod.Cmpid & "'"
-                Dim cmddel As New SqlCommand(sql, GMod.SqlConn, sqltans)
-                cmddel.ExecuteNonQuery()
+                ' sql = "delete from Sale_Receipt where vou_type='" & vt & "' and  vou_no='" & vouno & "' and cmp_id='" & GMod.Cmpid & "' and cmp_id='" & GMod.Cmpid & "'"
+                'Dim cmddel As New SqlCommand(sql, GMod.SqlConn, sqltans)
+                'cmddel.ExecuteNonQuery()
 
                 sql = "delete from " & GMod.VENTRY & " where vou_type='" & vt & "' and  vou_no='" & vouno & "'"
                 Dim cmddel1 As New SqlCommand(sql, GMod.SqlConn, sqltans)
@@ -308,15 +307,15 @@ Public Class frmReceipt
         'New Ref
         'Advance
         'On Account
-        If cmbRefType.Text = "Ags Ref" Then
-            sql = "select Ref,sum(dr)-sum(cr) Amount,acc_code from tmpAging group by Ref,acc_code,cmp_id having sum(dr)-sum(cr)>0  and acc_code='" & cmbcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
-            GMod.DataSetRet(sql, "aging")
-            If GMod.ds.Tables("aging").Rows.Count > 0 Then
-                dg.DataSource = GMod.ds.Tables("aging")
-                dg.Visible = True
-                dg.Focus()
-            End If
-        End If
+        'If cmbRefType.Text = "Ags Ref" Then
+        '    sql = "select Ref,sum(dr)-sum(cr) Amount,acc_code from tmpAging group by Ref,acc_code,cmp_id having sum(dr)-sum(cr)>0  and acc_code='" & cmbcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
+        '    GMod.DataSetRet(sql, "aging")
+        '    If GMod.ds.Tables("aging").Rows.Count > 0 Then
+        '        dg.DataSource = GMod.ds.Tables("aging")
+        '        dg.Visible = True
+        '        dg.Focus()
+        '    End If
+        'End If
     End Sub
     Private Sub dg_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles dg.KeyUp
         If e.KeyCode = Keys.Escape Then
@@ -329,24 +328,24 @@ Public Class frmReceipt
     Private Sub DataGridView1_UserDeletingRow(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewRowCancelEventArgs) Handles DataGridView1.UserDeletingRow
         Try
             If btnSave.Enabled = True Then
-                MsgBox(GMod.SqlExecuteNonQuery("delete from tmpAging where ci = '" & DataGridView1.CurrentCell.RowIndex & "' and usename ='" & GMod.username & "'"))
+                ' MsgBox(GMod.SqlExecuteNonQuery("delete from tmpAging where ci = '" & DataGridView1.CurrentCell.RowIndex & "' and usename ='" & GMod.username & "'"))
             Else
-                sql = "select id from Sale_Receipt where ref_type='" & DataGridView1(0, DataGridView1.CurrentCell.RowIndex).Value & "' and ref='" & DataGridView1(1, DataGridView1.CurrentCell.RowIndex).Value & "' and vou_no='" & txtvouno.Text & "' and cr='" & DataGridView1(3, DataGridView1.CurrentCell.RowIndex).Value & "'"
-                GMod.DataSetRet(sql, "delSale_Receipt")
+                'sql = "select id from Sale_Receipt where ref_type='" & DataGridView1(0, DataGridView1.CurrentCell.RowIndex).Value & "' and ref='" & DataGridView1(1, DataGridView1.CurrentCell.RowIndex).Value & "' and vou_no='" & txtvouno.Text & "' and cr='" & DataGridView1(3, DataGridView1.CurrentCell.RowIndex).Value & "'"
+                'GMod.DataSetRet(sql, "delSale_Receipt")
 
-                sql = "delete from Sale_Receipt where id ='" & GMod.ds.Tables("delSale_Receipt").Rows(0)(0).ToString & "'"
-                GMod.SqlExecuteNonQuery(sql)
+                'sql = "delete from Sale_Receipt where id ='" & GMod.ds.Tables("delSale_Receipt").Rows(0)(0).ToString & "'"
+                'GMod.SqlExecuteNonQuery(sql)
 
 
-                GMod.SqlExecuteNonQuery("delete from tmpAging where ci = '" & DataGridView1.CurrentCell.RowIndex & "' and usename ='" & GMod.username & "'")
+                ' GMod.SqlExecuteNonQuery("delete from tmpAging where ci = '" & DataGridView1.CurrentCell.RowIndex & "' and usename ='" & GMod.username & "'")
             End If
-            GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbcode.Text & "' and vou_type='R'")
+            'GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbcode.Text & "' and vou_type='R'")
             'sql = "insert into tmpAging select *,'" & GMod.username & "' u,-1 from Sale_Receipt where acc_code='" & cmbcode.Text & "' and session='" & GMod.Session & "' and dr>0"
-            sql = "insert into  tmpAging (Ref_Type, Ref, Acc_Code,dr,vou_type,cmp_id) " & _
-                 " select Ref_type,Ref,acc_code,sum(dr)-sum(cr) Amount,'R',cmp_id  " & _
-                " from Sale_Receipt group by Ref,acc_code,Ref_type,cmp_id having sum(dr)-sum(cr)>0 " & _
-                 " and acc_code='" & cmbcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
-            GMod.SqlExecuteNonQuery(sql)
+            'sql = "insert into  tmpAging (Ref_Type, Ref, Acc_Code,dr,vou_type,cmp_id) " & _
+            '    " select Ref_type,Ref,acc_code,sum(dr)-sum(cr) Amount,'R',cmp_id  " & _
+            '  " from Sale_Receipt group by Ref,acc_code,Ref_type,cmp_id having sum(dr)-sum(cr)>0 " & _
+            '  " and acc_code='" & cmbcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
+            'GMod.SqlExecuteNonQuery(sql)
             cmbRefType.SelectedIndex = 0
             cmbRefType.Focus()
         Catch ex As Exception
@@ -371,18 +370,18 @@ Public Class frmReceipt
                     'Exit Sub
                 End If
                 If vt <> "" And vn <> "" Then
-                    sql = "select ref_type,ref,dueon, cr from Sale_Receipt where vou_type='" & vt & "' and  vou_no='" & vn & "' and session ='" & GMod.Session & "' and cmp_id='" & GMod.Cmpid & "'"
+                    ' sql = "select ref_type,ref,dueon, cr from Sale_Receipt where vou_type='" & vt & "' and  vou_no='" & vn & "' and session ='" & GMod.Session & "' and cmp_id='" & GMod.Cmpid & "'"
                     dg.Visible = False
-                    GMod.DataSetRet(sql, "mfy")
-                    If GMod.ds.Tables("mfy").Rows.Count > 0 Then
-                        For k = 0 To GMod.ds.Tables("mfy").Rows.Count - 1
-                            DataGridView1.Rows.Add()
-                            DataGridView1(0, k).Value = GMod.ds.Tables("mfy").Rows(k)(0)
-                            DataGridView1(1, k).Value = GMod.ds.Tables("mfy").Rows(k)(1)
-                            DataGridView1(2, k).Value = GMod.ds.Tables("mfy").Rows(k)(2)
-                            DataGridView1(3, k).Value = GMod.ds.Tables("mfy").Rows(k)(3)
-                        Next
-                    End If
+                    'GMod.DataSetRet(sql, "mfy")
+                    'If GMod.ds.Tables("mfy").Rows.Count > 0 Then
+                    '    For k = 0 To GMod.ds.Tables("mfy").Rows.Count - 1
+                    '        DataGridView1.Rows.Add()
+                    '        DataGridView1(0, k).Value = GMod.ds.Tables("mfy").Rows(k)(0)
+                    '        DataGridView1(1, k).Value = GMod.ds.Tables("mfy").Rows(k)(1)
+                    '        DataGridView1(2, k).Value = GMod.ds.Tables("mfy").Rows(k)(2)
+                    '        DataGridView1(3, k).Value = GMod.ds.Tables("mfy").Rows(k)(3)
+                    '    Next
+                    'End If
                 End If
                 sql = "select acc_head,acc_head_code,vou_date,cramt,narration,acc_head,group_name from " & GMod.VENTRY & " where vou_type='" & vt & "' and  vou_no='" & vn & "'"
                 GMod.DataSetRet(sql, "mfy")
@@ -433,13 +432,13 @@ Public Class frmReceipt
             '    Exit Sub
             'End If
         End If
-        GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbcode.Text & "' and vou_type='R'")
+        'GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbcode.Text & "' and vou_type='R'")
         'sql = "insert into tmpAging select *,'" & GMod.username & "' u,-1 from Sale_Receipt where acc_code='" & cmbcode.Text & "' and session='" & GMod.Session & "' and dr>0"
-        sql = "insert into  tmpAging (Ref_Type, Ref, Acc_Code,dr,vou_type,cmp_id) " & _
-             " select Ref_type,Ref,acc_code,sum(dr)-sum(cr) Amount,'R',cmp_id  " & _
-            " from Sale_Receipt group by Ref,acc_code,Ref_type,cmp_id having sum(dr)-sum(cr)>0 " & _
-             " and acc_code='" & cmbcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
-        GMod.SqlExecuteNonQuery(sql)
+        'sql = "insert into  tmpAging (Ref_Type, Ref, Acc_Code,dr,vou_type,cmp_id) " & _
+        '    " select Ref_type,Ref,acc_code,sum(dr)-sum(cr) Amount,'R',cmp_id  " & _
+        '  " from Sale_Receipt group by Ref,acc_code,Ref_type,cmp_id having sum(dr)-sum(cr)>0 " & _
+        '  " and acc_code='" & cmbcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
+        'GMod.SqlExecuteNonQuery(sql)
     End Sub
     Private Sub cmbAreaCode_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbAreaCode.SelectedIndexChanged
         sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'  and  left(account_code,2) in ('" & cmbAreaCode.Text & "')  order by account_head_name"

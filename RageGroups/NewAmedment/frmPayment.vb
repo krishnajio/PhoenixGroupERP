@@ -299,8 +299,8 @@ Public Class frmPayment
                     cmd1.ExecuteNonQuery()
                 Next
 
-                Dim cmd2 As New SqlCommand("delete from tmpAging where acc_code='" & dgPayment(1, 0).Value & "' and vou_type='PAY' and cmp_id='" & GMod.Cmpid & "'", GMod.SqlConn, trans)
-                cmd2.ExecuteNonQuery()
+                'Dim cmd2 As New SqlCommand("delete from tmpAging where acc_code='" & dgPayment(1, 0).Value & "' and vou_type='PAY' and cmp_id='" & GMod.Cmpid & "'", GMod.SqlConn, trans)
+                'cmd2.ExecuteNonQuery()
                 trans.Commit()
                 MsgBox(cmbvoutype.Text & " / " & txtvou_no.Text, MsgBoxStyle.Information)
 
@@ -494,22 +494,22 @@ Public Class frmPayment
         If chkpayment.Checked = True Then
             If lblpartycode.Text = "-" Then
                 lblpartycode.Text = cmbcode.Text
-                sql = "select *  from tmpAging where acc_code ='" & lblpartycode.Text & "' and vou_type='PAY' and cmp_id='" & GMod.Cmpid & "'"
-                GMod.DataSetRet(sql, "jj")
-                If GMod.ds.Tables("jj").Rows.Count > 0 Then
-                    MsgBox("Please select diffent head")
-                    Me.Close()
-                    Exit Sub
-                End If
-                GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbcode.Text & "' and vou_type='PAY'")
-                'sql = "insert into tmpAging select *,'" & GMod.username & "' u,-1 from Sale_Receipt where acc_code='" & cmbcode.Text & "' and session='" & GMod.Session & "' and dr>0"
-                sql = "insert into  tmpAging (Ref_Type, Ref, Acc_Code,cr,vou_type,cmp_id) " & _
-                     " select Ref_type,Ref,acc_code,sum(cr)-sum(dr) Amount,'PAY',cmp_id  " & _
-                    " from Purchase_Payment group by Ref,acc_code,Ref_type,cmp_id having sum(cr)-sum(dr)>0 " & _
-                     " and acc_code='" & lblpartycode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
-                GMod.SqlExecuteNonQuery(sql)
+                ' sql = "select *  from tmpAging where acc_code ='" & lblpartycode.Text & "' and vou_type='PAY' and cmp_id='" & GMod.Cmpid & "'"
+                'GMod.DataSetRet(sql, "jj")
+                'If GMod.ds.Tables("jj").Rows.Count > 0 Then
+                'MsgBox("Please select diffent head")
+                'Me.Close()
+                'Exit Sub
             End If
+            'GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbcode.Text & "' and vou_type='PAY'")
+            'sql = "insert into tmpAging select *,'" & GMod.username & "' u,-1 from Sale_Receipt where acc_code='" & cmbcode.Text & "' and session='" & GMod.Session & "' and dr>0"
+            'sql = "insert into  tmpAging (Ref_Type, Ref, Acc_Code,cr,vou_type,cmp_id) " & _
+            '    " select Ref_type,Ref,acc_code,sum(cr)-sum(dr) Amount,'PAY',cmp_id  " & _
+            '  " from Purchase_Payment group by Ref,acc_code,Ref_type,cmp_id having sum(cr)-sum(dr)>0 " & _
+            '  " and acc_code='" & lblpartycode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
+            'GMod.SqlExecuteNonQuery(sql)
         End If
+
     End Sub
 
     Private Sub cmbRefType_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles cmbRefType.KeyUp
@@ -522,15 +522,15 @@ Public Class frmPayment
         'New Ref
         'Advance
         'On Account
-        If cmbRefType.Text = "Ags Ref" Then
-            sql = "select Ref,sum(cr)-sum(dr) Amount,acc_code from tmpAging group by Ref,acc_code,cmp_id having sum(cr)-sum(dr)>0  and acc_code='" & lblpartycode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
-            GMod.DataSetRet(sql, "aging")
-            If GMod.ds.Tables("aging").Rows.Count > 0 Then
-                dg.DataSource = GMod.ds.Tables("aging")
-                dg.Visible = True
-                dg.Focus()
-            End If
-        End If
+        'If cmbRefType.Text = "Ags Ref" Then
+        '    sql = "select Ref,sum(cr)-sum(dr) Amount,acc_code from tmpAging group by Ref,acc_code,cmp_id having sum(cr)-sum(dr)>0  and acc_code='" & lblpartycode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
+        '    GMod.DataSetRet(sql, "aging")
+        '    If GMod.ds.Tables("aging").Rows.Count > 0 Then
+        '        dg.DataSource = GMod.ds.Tables("aging")
+        '        dg.Visible = True
+        '        dg.Focus()
+        '    End If
+        'End If
     End Sub
     Dim vouno As Long
     Dim ddate As DateTime = CDate("1/1/2000")
@@ -553,23 +553,23 @@ Public Class frmPayment
             DataGridView1.Rows.Add(obj)
         End If
 
-        sqlsavecr = "insert into  tmpAging (Ref_Type, Ref, Acc_Code, Vou_Type," & _
-        " Vou_No, Vou_Date, dr, cr, dueon, Session,usename,id,cmp_id) values( "
-        sqlsavecr &= "'" & cmbRefType.Text & "',"
-        sqlsavecr &= "'" & txtref.Text & "',"
-        sqlsavecr &= "'" & lblpartycode.Text & "',"
-        sqlsavecr &= "'PAY',"
-        sqlsavecr &= "'" & VouNo & "',"
-        sqlsavecr &= "'" & dtvdate.Value.ToShortDateString & "',"
-        sqlsavecr &= "'" & Val(txtamount.Text) & "',"
-        sqlsavecr &= "'" & Val("") & "',"
-        sqlsavecr &= "'" & CDate(txtduedate.Text).ToShortDateString & "',"
-        sqlsavecr &= "'" & GMod.Session & "',"
-        sqlsavecr &= "'" & GMod.username & "',"
-        sqlsavecr &= "'" & DataGridView1.CurrentCell.RowIndex & "',"
-        sqlsavecr &= "'" & GMod.Cmpid & "')"
+        'sqlsavecr = "insert into  tmpAging (Ref_Type, Ref, Acc_Code, Vou_Type," & _
+        '" Vou_No, Vou_Date, dr, cr, dueon, Session,usename,id,cmp_id) values( "
+        'sqlsavecr &= "'" & cmbRefType.Text & "',"
+        'sqlsavecr &= "'" & txtref.Text & "',"
+        'sqlsavecr &= "'" & lblpartycode.Text & "',"
+        'sqlsavecr &= "'PAY',"
+        'sqlsavecr &= "'" & VouNo & "',"
+        'sqlsavecr &= "'" & dtvdate.Value.ToShortDateString & "',"
+        'sqlsavecr &= "'" & Val(txtamount.Text) & "',"
+        'sqlsavecr &= "'" & Val("") & "',"
+        'sqlsavecr &= "'" & CDate(txtduedate.Text).ToShortDateString & "',"
+        'sqlsavecr &= "'" & GMod.Session & "',"
+        'sqlsavecr &= "'" & GMod.username & "',"
+        'sqlsavecr &= "'" & DataGridView1.CurrentCell.RowIndex & "',"
+        'sqlsavecr &= "'" & GMod.Cmpid & "')"
 
-        GMod.SqlExecuteNonQuery(sqlsavecr)
+        'GMod.SqlExecuteNonQuery(sqlsavecr)
 
         If cr <> Val(txtCrmat.Text) Then
             cmbRefType.SelectedIndex = 0
@@ -622,7 +622,7 @@ Public Class frmPayment
     Private Sub DataGridView1_UserDeletingRow(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewRowCancelEventArgs) Handles DataGridView1.UserDeletingRow
         Try
             If btnSave.Enabled = True Then
-                MsgBox(GMod.SqlExecuteNonQuery("delete from tmpAging where ci = '" & DataGridView1.CurrentCell.RowIndex & "' and usename ='" & GMod.username & "'"))
+                'MsgBox(GMod.SqlExecuteNonQuery("delete from tmpAging where ci = '" & DataGridView1.CurrentCell.RowIndex & "' and usename ='" & GMod.username & "'"))
             Else
                 sql = "select id from purchase_payment where ref_type='" & DataGridView1(0, DataGridView1.CurrentCell.RowIndex).Value & "' and ref='" & DataGridView1(1, DataGridView1.CurrentCell.RowIndex).Value & "' and vou_no='" & txtvou_no.Text & "' and dr='" & DataGridView1(3, DataGridView1.CurrentCell.RowIndex).Value & "'"
                 GMod.DataSetRet(sql, "delSale_Receipt")
@@ -631,15 +631,15 @@ Public Class frmPayment
                 GMod.SqlExecuteNonQuery(sql)
 
 
-                GMod.SqlExecuteNonQuery("delete from tmpAging where ci = '" & DataGridView1.CurrentCell.RowIndex & "' and usename ='" & GMod.username & "'")
+                ' GMod.SqlExecuteNonQuery("delete from tmpAging where ci = '" & DataGridView1.CurrentCell.RowIndex & "' and usename ='" & GMod.username & "'")
             End If
-            GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbcode.Text & "' and vou_type='PAY'")
+            'GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbcode.Text & "' and vou_type='PAY'")
             'sql = "insert into tmpAging select *,'" & GMod.username & "' u,-1 from Sale_Receipt where acc_code='" & cmbcode.Text & "' and session='" & GMod.Session & "' and dr>0"
-            sql = "insert into  tmpAging (Ref_Type, Ref, Acc_Code,cr,vou_type,cmp_id) " & _
-                 " select Ref_type,Ref,acc_code,sum(cr)-sum(dr) Amount,'PAY',cmp_id  " & _
-                " from Purchase_Payment group by Ref,acc_code,Ref_type,cmp_id having sum(cr)-sum(dr)>0 " & _
-                 " and acc_code='" & lblpartycode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
-            GMod.SqlExecuteNonQuery(sql)
+            'sql = "insert into  tmpAging (Ref_Type, Ref, Acc_Code,cr,vou_type,cmp_id) " & _
+            '    " select Ref_type,Ref,acc_code,sum(cr)-sum(dr) Amount,'PAY',cmp_id  " & _
+            '  " from Purchase_Payment group by Ref,acc_code,Ref_type,cmp_id having sum(cr)-sum(dr)>0 " & _
+            '  " and acc_code='" & lblpartycode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
+            'GMod.SqlExecuteNonQuery(sql)
         Catch ex As Exception
 
         End Try

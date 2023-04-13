@@ -141,7 +141,7 @@ Public Class frmPurchasePoultrty_NewGstWithTds
     End Sub
 
     Private Sub frmPurchasePoultrty_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
-        GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbacheadcode.Text & "' and vou_type='P' and cmp_id='" & GMod.Cmpid & "'")
+        ' GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbacheadcode.Text & "' and vou_type='P' and cmp_id='" & GMod.Cmpid & "'")
 
     End Sub
     Dim OtherCheck As Double = 0
@@ -1727,21 +1727,21 @@ Public Class frmPurchasePoultrty_NewGstWithTds
         'txtBillNo_Leave(sender, e)
         Checkbill()
 
-        sql = "select *  from tmpAging where acc_code ='" & cmbacheadcode.Text & "' and vou_type='P' and cmp_id='" & GMod.Cmpid & "'"
-        GMod.DataSetRet(sql, "jj")
-        If GMod.ds.Tables("jj").Rows.Count > 0 Then
-            MsgBox("Please select diffent head")
-            Me.Close()
-            Exit Sub
-        End If
+        'sql = "select *  from tmpAging where acc_code ='" & cmbacheadcode.Text & "' and vou_type='P' and cmp_id='" & GMod.Cmpid & "'"
+        'GMod.DataSetRet(sql, "jj")
+        'If GMod.ds.Tables("jj").Rows.Count > 0 Then
+        '    MsgBox("Please select diffent head")
+        '    Me.Close()
+        '    Exit Sub
+        'End If
 
-        GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbacheadcode.Text & "' and vou_type='P' and cmp_id='" & GMod.Cmpid & "'")
+        ' GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbacheadcode.Text & "' and vou_type='P' and cmp_id='" & GMod.Cmpid & "'")
         'sql = "insert into tmpAging select *,'" & GMod.username & "' u,-1 from Sale_Receipt where acc_code='" & cmbcode.Text & "' and session='" & GMod.Session & "' and dr>0"
-        sql = " insert into  tmpAging (Ref_Type, Ref, Acc_Code,dr,vou_type,cmp_id) " & _
-              " select Ref_type,Ref,acc_code,sum(Dr)-sum(Cr) Amount,'P',cmp_id  " & _
-              " from Purchase_Payment group by Ref,acc_code,Ref_type,cmp_id having sum(dr)-sum(cr)>0 " & _
-              " and acc_code='" & cmbacheadcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
-        GMod.SqlExecuteNonQuery(sql)
+        'sql = " insert into  tmpAging (Ref_Type, Ref, Acc_Code,dr,vou_type,cmp_id) " & _
+        '    " select Ref_type,Ref,acc_code,sum(Dr)-sum(Cr) Amount,'P',cmp_id  " & _
+        ''   " from Purchase_Payment group by Ref,acc_code,Ref_type,cmp_id having sum(dr)-sum(cr)>0 " & _
+        '   " and acc_code='" & cmbacheadcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
+        'GMod.SqlExecuteNonQuery(sql)
         'cmbRefType_Leave(sender, e)
     End Sub
 
