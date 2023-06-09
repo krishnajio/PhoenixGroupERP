@@ -10,7 +10,7 @@ Public Class frmPurchaseHatchries
     Dim frmnarrationlistobj As New frmNarrationEntrybox
 
     Private Sub frmSaleInvoice_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
-        GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbacheadcode.Text & "' and vou_type='S' and cmp_id='" & GMod.Cmpid & "'")
+        'GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbacheadcode.Text & "' and vou_type='S' and cmp_id='" & GMod.Cmpid & "'")
     End Sub
     Private Sub frmSaleInvoice_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -845,8 +845,8 @@ Public Class frmPurchaseHatchries
 
                 End If
 
-                Dim cmddd As New SqlCommand("delete from tmpAging where acc_code='" & cmbacheadcode.Text & "' and vou_type='S' and cmp_id='" & GMod.Cmpid & "'", GMod.SqlConn, sqltrans)
-                cmddd.ExecuteNonQuery()
+                ' Dim cmddd As New SqlCommand("delete from tmpAging where acc_code='" & cmbacheadcode.Text & "' and vou_type='S' and cmp_id='" & GMod.Cmpid & "'", GMod.SqlConn, sqltrans)
+                'cmddd.ExecuteNonQuery()
 
 
                 btnsave.Enabled = True
@@ -1290,15 +1290,15 @@ Public Class frmPurchaseHatchries
     End Sub
 
     Private Sub cmbRefType_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbRefType.Leave
-        If cmbRefType.Text = "Ags Ref" Then
-            sql = "select Ref,sum(cr)-sum(dr) Amount,acc_code from tmpAging group by Ref,acc_code,cmp_id having sum(cr)-sum(dr)>0  and acc_code='" & cmbacheadcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
-            GMod.DataSetRet(sql, "aging")
-            If GMod.ds.Tables("aging").Rows.Count > 0 Then
-                dg.DataSource = GMod.ds.Tables("aging")
-                dg.Visible = True
-                dg.Focus()
-            End If
-        End If
+        'If cmbRefType.Text = "Ags Ref" Then
+        '    sql = "select Ref,sum(cr)-sum(dr) Amount,acc_code from tmpAging group by Ref,acc_code,cmp_id having sum(cr)-sum(dr)>0  and acc_code='" & cmbacheadcode.Text & "' and cmp_id='" & GMod.Cmpid & "'"
+        '    GMod.DataSetRet(sql, "aging")
+        '    If GMod.ds.Tables("aging").Rows.Count > 0 Then
+        '        dg.DataSource = GMod.ds.Tables("aging")
+        '        dg.Visible = True
+        '        dg.Focus()
+        '    End If
+        'End If
     End Sub
 
     Private Sub cmbRefType_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbRefType.SelectedIndexChanged
@@ -1317,23 +1317,23 @@ Public Class frmPurchaseHatchries
             DataGridView1.Rows.Add(obj)
         End If
 
-        sqlsavecr = "insert into  tmpAging (Ref_Type, Ref, Acc_Code, Vou_Type," & _
-        " Vou_No, Vou_Date, cr, dr, dueon, Session,usename,id,cmp_id) values( "
-        sqlsavecr &= "'" & cmbRefType.Text & "',"
-        sqlsavecr &= "'" & txtref.Text & "',"
-        sqlsavecr &= "'" & cmbacheadcode.Text & "',"
-        sqlsavecr &= "'S',"
-        sqlsavecr &= "'" & VouNo & "',"
-        sqlsavecr &= "'" & dtdate.Value.ToShortDateString & "',"
-        sqlsavecr &= "'" & Val("") & "',"
-        sqlsavecr &= "'" & Val(txtamount.Text) & "',"
-        sqlsavecr &= "'" & CDate(txtduedate.Text).ToShortDateString & "',"
-        sqlsavecr &= "'" & GMod.Session & "',"
-        sqlsavecr &= "'" & GMod.username & "',"
-        sqlsavecr &= "'" & DataGridView1.CurrentCell.RowIndex & "',"
-        sqlsavecr &= "'" & GMod.Cmpid & "')"
+        'sqlsavecr = "insert into  tmpAging (Ref_Type, Ref, Acc_Code, Vou_Type," & _
+        '" Vou_No, Vou_Date, cr, dr, dueon, Session,usename,id,cmp_id) values( "
+        'sqlsavecr &= "'" & cmbRefType.Text & "',"
+        'sqlsavecr &= "'" & txtref.Text & "',"
+        'sqlsavecr &= "'" & cmbacheadcode.Text & "',"
+        'sqlsavecr &= "'S',"
+        'sqlsavecr &= "'" & VouNo & "',"
+        'sqlsavecr &= "'" & dtdate.Value.ToShortDateString & "',"
+        'sqlsavecr &= "'" & Val("") & "',"
+        'sqlsavecr &= "'" & Val(txtamount.Text) & "',"
+        'sqlsavecr &= "'" & CDate(txtduedate.Text).ToShortDateString & "',"
+        'sqlsavecr &= "'" & GMod.Session & "',"
+        'sqlsavecr &= "'" & GMod.username & "',"
+        'sqlsavecr &= "'" & DataGridView1.CurrentCell.RowIndex & "',"
+        'sqlsavecr &= "'" & GMod.Cmpid & "')"
 
-        GMod.SqlExecuteNonQuery(sqlsavecr)
+        'GMod.SqlExecuteNonQuery(sqlsavecr)
 
         'If cr <> Val(dg(0, 4).Value) Then
         '    cmbRefType.Focus()

@@ -87,13 +87,15 @@ Public Class frmlogin
                 Me.Close()
             Else
                 GMod.Session = cmbSession.Text
-                GMod.DataSetRet("select nofd from nofd_session1 where session ='" & GMod.Session & "'", "nofd")
+                GMod.DataSetRet("select nofd from nofd_session2 where session ='" & GMod.Session & "'", "nofd")
                 GMod.nofd = GMod.ds.Tables("nofd").Rows(0)(0)
-                MsgBox(GMod.nofd)
+                'MsgBox(GMod.nofd)
 
-                GMod.DataSetRet("select entry_status from SessionMaster where Uname ='" & Trim(txtuname.Text) & "' and session ='" & GMod.Session & "'", "entry_status")
+                GMod.DataSetRet("select entry_status,noofdays from SessionMaster where Uname ='" & Trim(txtuname.Text) & "' and session ='" & GMod.Session & "'", "entry_status")
                 GMod.EntryStatus = CInt(GMod.ds.Tables("entry_status").Rows(0)(0))
-                'MsgBox(GMod.EntryStatus)
+                GMod.nofd = CInt(GMod.ds.Tables("entry_status").Rows(0)(1))
+                MsgBox(GMod.ds.Tables("entry_status").Rows(0)(1))
+
 
             End If
             ' GMod.nofd = 365
@@ -288,7 +290,6 @@ Public Class frmlogin
 
                     ElseIf GMod.Dept = 2 Then
                         'expenses
-
                         frmmdiobj.SaleToolStripMenuItem1.Enabled = False
                         frmmdiobj.SaleToolStripMenuItem2.Enabled = False
                         frmmdiobj.SaleToolStripMenuItem3.Enabled = False

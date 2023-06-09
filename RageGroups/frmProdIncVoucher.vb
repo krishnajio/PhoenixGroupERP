@@ -3,7 +3,8 @@ Public Class frmProdincvVoucherDr
     Dim sql As String, sqlname As String
     Dim row As Integer = 0, j As Integer
     ' Dim ConStrSal As String = "Data Source=192.168.0.130;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
-    Dim ConStrSal As String = "Data Source=117.240.18.180;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+    Dim ConStrSal As String = "Data Source=192.168.0.27;Initial Catalog=PhoenixSALUNOESI;User ID=sa;Password=@hplgsamsung#"
+    'Dim ConStrSal As String = "Data Source=117.240.18.180;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
 
     Private Sub frmSalaryBankDr_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 

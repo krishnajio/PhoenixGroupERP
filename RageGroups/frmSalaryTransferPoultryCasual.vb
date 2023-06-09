@@ -25,7 +25,8 @@ Public Class frmSalaryTransferPoultryCasual
         cmbvtype.DisplayMember = "vtype"
 
         ' Dim ConStrSal As String = "Data Source=192.168.0.130;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
-        Dim ConStrSal As String = "Data Source=117.240.18.180;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        ' Dim ConStrSal As String = "Data Source=117.240.18.180;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        Dim ConStrSal As String = "Data Source=192.168.0.27;Initial Catalog=PhoenixSALUNOESI;User ID=sa;Password=@hplgsamsung#"
 
         Dim da1 As New SqlDataAdapter("select distinct orgid from  salacctransfer", ConStrSal)
         Dim ds1 As New DataSet
@@ -43,7 +44,9 @@ Public Class frmSalaryTransferPoultryCasual
     Private Sub btnShow_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnShow.Click
         dgvoucher.Rows.Clear()
         ' Try
-        Dim ConStrSal As String = "Data Source=117.240.18.180;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        ' Dim ConStrSal As String = "Data Source=117.240.18.180;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        Dim ConStrSal As String = "Data Source=192.168.0.27;Initial Catalog=PhoenixSALUNOESI;User ID=sa;Password=@hplgsamsung#"
+
         Dim sql, orgid, sqlname As String
         Dim i, j, row As Integer
         Dim da As New SqlDataAdapter

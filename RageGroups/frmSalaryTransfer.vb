@@ -36,7 +36,8 @@ Public Class frmSalaryTransfer
         ' Try
         dgvoucher.Rows.Clear()
         'Dim ConStrSal As String = "Data Source=192.168.0.130;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
-        Dim ConStrSal As String = "Data Source=117.240.18.180;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        'Dim ConStrSal As String = "Data Source=117.240.18.180;Initial Catalog=PhoenixSalUNOESI;User ID=sa;Password=Ph@hoenix#g"
+        Dim ConStrSal As String = "Data Source=192.168.0.27;Initial Catalog=PhoenixSALUNOESI;User ID=sa;Password=@hplgsamsung#"
 
         Dim sql, orgid, sqlname As String
         Dim i, j, row As Integer

@@ -1569,16 +1569,11 @@ Public Class frmMDI
         Dim tosp As New frmCustomerListForTcs
         tosp.ShowDialog()
     End Sub
-
-    Private Sub ToolStripStatusLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripStatusLabel2.Click
-
-    End Sub
-
     Private Sub ToolStripMenuItem40_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem40.Click
         frmPartyDueMonthly.ShowDialog()
     End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-
+    Private Sub StockRegisterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StockRegisterToolStripMenuItem.Click
+        Dim t As New frmStocKRegister
+        t.ShowDialog()
     End Sub
 End Class

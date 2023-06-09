@@ -289,6 +289,11 @@ Public Class frmExpenses
 
                 Dim cmdel1 As New SqlCommand("delete from Expenses_det where vou_type='" & cmbvoutype.Text & "' and vou_no= '" & txtvou_no.Text & "' and session='" & GMod.Session & "'", GMod.SqlConn, trans)
                 cmdel1.ExecuteNonQuery()
+
+                Dim cmdel2 As New SqlCommand("delete from TdsEntry where vou_type='" & cmbvoutype.Text & "' and vou_no= '" & txtvou_no.Text & "' and session='" & GMod.Session & "'", GMod.SqlConn, trans)
+                cmdel2.ExecuteNonQuery()
+
+
             End If
             '------------------------------------------------------------------------
             Try
@@ -323,7 +328,7 @@ Public Class frmExpenses
                     cmd.ExecuteNonQuery()
 
 
-                    If dgPayment(7, j).Value.ToString.ToUpper <> "-" Then
+                    If dgPayment(7, j).Value.ToString.ToUpper = "TDS" Then
                         sql = "insert into TdsEntry(Vou_Type, Vou_no, TdsType, Per, TdsDate, " _
                         & " BilltyNo, BilltyDt, VehicleNo, Qty, Prd, Paidamt," _
                          & " Actualamt, session,Paidto,vou_date, TdsAmt,dcode,cmp_id ) values( "
@@ -452,7 +457,7 @@ Public Class frmExpenses
 
                 sql = "select * from " & GMod.VENTRY & " where  vou_type ='" & cmbvoutype.Text & "' and vou_no='" & txtvou_no.Text & "'  order by entry_id"
                 GMod.DataSetRet(sql, "modifypay")
-                ' dtvdate.Value = CDate(GMod.ds.Tables("modifypay").Rows(0)("Vou_date"))
+                dtvdate.Value = CDate(GMod.ds.Tables("modifypay").Rows(0)("Vou_date"))
                 dtvdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
                 'txtNarration.Text = GMod.ds.Tables("modifypay").Rows(0)("Narration")
                 txtChqNo.Text = GMod.ds.Tables("modifypay").Rows(0)("Cheque_no")

@@ -270,6 +270,7 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.StockRegisterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -497,7 +498,7 @@ Partial Class frmMDI
         '
         Me.TranseectionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.JournalToolStripMenuItem1, Me.SaleToolStripMenuItem1, Me.PurchaseToolStripMenuItem1, Me.BankToolStripMenuItem, Me.ExpensesToolStripMenuItem, Me.CashCounterToolStripMenuItem, Me.OthersToolStripMenuItem, Me.SuplementryEntryToolStripMenuItem, Me.PurchaseToolStripMenuItem4, Me.BMToolStripMenuItem, Me.HatchToolStripMenuItem, Me.MarketRateUpdationToolStripMenuItem, Me.MultipleToolStripMenuItem, Me.SalaryToolStripMenuItem, Me.ToolStripMenuItem37, Me.XLSFiltToVoucherToolStripMenuItem, Me.RCMVoucherToolStripMenuItem, Me.DisbursementRegisterToolStripMenuItem})
         Me.TranseectionToolStripMenuItem.Name = "TranseectionToolStripMenuItem"
-        Me.TranseectionToolStripMenuItem.Size = New System.Drawing.Size(94, 20)
+        Me.TranseectionToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
         Me.TranseectionToolStripMenuItem.Text = "&Voucher's"
         '
         'JournalToolStripMenuItem1
@@ -1001,7 +1002,7 @@ Partial Class frmMDI
         '
         'PurchaseToolStripMenuItem3
         '
-        Me.PurchaseToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PurchaseRegisterToolStripMenuItem, Me.PurchasePaymentToolStripMenuItem, Me.JournalPurchaseRegisterToolStripMenuItem, Me.PurchaseQtyMonthlyToolStripMenuItem, Me.PurchaseSummaryToolStripMenuItem, Me.PoAndBillReportToolStripMenuItem, Me.CFormReportToolStripMenuItem, Me.Form49ReportToolStripMenuItem, Me.PToolStripMenuItem, Me.ToolStripMenuItem33, Me.PartyBalanceLetterToolStripMenuItem, Me.TrailWSOSToolStripMenuItem, Me.GSTRegisterToolStripMenuItem, Me.PurchaseRegisterGridViewToolStripMenuItem, Me.TCSReportToolStripMenuItem})
+        Me.PurchaseToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PurchaseRegisterToolStripMenuItem, Me.PurchasePaymentToolStripMenuItem, Me.JournalPurchaseRegisterToolStripMenuItem, Me.PurchaseQtyMonthlyToolStripMenuItem, Me.PurchaseSummaryToolStripMenuItem, Me.PoAndBillReportToolStripMenuItem, Me.CFormReportToolStripMenuItem, Me.Form49ReportToolStripMenuItem, Me.PToolStripMenuItem, Me.ToolStripMenuItem33, Me.PartyBalanceLetterToolStripMenuItem, Me.TrailWSOSToolStripMenuItem, Me.GSTRegisterToolStripMenuItem, Me.PurchaseRegisterGridViewToolStripMenuItem, Me.TCSReportToolStripMenuItem, Me.StockRegisterToolStripMenuItem})
         Me.PurchaseToolStripMenuItem3.Name = "PurchaseToolStripMenuItem3"
         Me.PurchaseToolStripMenuItem3.Size = New System.Drawing.Size(268, 22)
         Me.PurchaseToolStripMenuItem3.Text = "Purchase"
@@ -1861,6 +1862,12 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
+        'StockRegisterToolStripMenuItem
+        '
+        Me.StockRegisterToolStripMenuItem.Name = "StockRegisterToolStripMenuItem"
+        Me.StockRegisterToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.StockRegisterToolStripMenuItem.Text = "Stock Register"
+        '
         'frmMDI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2146,4 +2153,5 @@ Partial Class frmMDI
     Friend WithEvents OtherSaleInvoivePrintToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Customer5000000ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem40 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StockRegisterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
