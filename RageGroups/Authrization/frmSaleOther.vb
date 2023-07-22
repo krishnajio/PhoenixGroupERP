@@ -937,18 +937,7 @@ x1:
                 cmbSaleAccCode.Text = GMod.ds.Tables("cramt").Rows(0)(0).ToString
                 dtVouDate.Value = CDate(GMod.ds.Tables("cramt").Rows(0)("vou_date").ToString)
 
-                sql = "select ref_type,ref,dueon, cr from Sale_Receipt where vou_type='" & cmbVoucherType.Text & "' and  vou_no='" & vou_no & "' and session ='" & GMod.Session & "'"
-                dg.Visible = False
-                GMod.DataSetRet(sql, "mfy")
-                If GMod.ds.Tables("mfy").Rows.Count > 0 Then
-                    For k = 0 To GMod.ds.Tables("mfy").Rows.Count - 1
-                        DataGridView1.Rows.Add()
-                        DataGridView1(0, k).Value = GMod.ds.Tables("mfy").Rows(k)(0)
-                        DataGridView1(1, k).Value = GMod.ds.Tables("mfy").Rows(k)(1)
-                        DataGridView1(2, k).Value = GMod.ds.Tables("mfy").Rows(k)(2)
-                        DataGridView1(3, k).Value = GMod.ds.Tables("mfy").Rows(k)(3)
-                    Next
-                End If
+                        
             Else
                 btnSave_Click(sender, e)
                 btnModify.Text = "&Modify"

@@ -107,7 +107,7 @@ Public Class frmSalaryTransferHatch
             GMod.DataSetRet(sql, "groupinstot")
 
 
-            t = "**TD0001"
+            t = "**TD0004"
             sql = "SELECT account_code,account_head_name,group_name FROM " & GMod.ACC_HEAD & " WHERE account_code='" & t & "'"
             GMod.DataSetRet(sql, "ithead")
 
@@ -210,7 +210,7 @@ Public Class frmSalaryTransferHatch
             GMod.DataSetRet(sql, "groupinstot")
 
 
-            t = "**TD0001"
+            t = "**TD0004"
             sql = "SELECT account_code,account_head_name,group_name FROM " & GMod.ACC_HEAD & " WHERE account_code='" & t & "'"
             GMod.DataSetRet(sql, "ithead")
 
