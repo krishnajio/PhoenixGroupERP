@@ -6,13 +6,13 @@ Public Class frmDMPosting
 
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
         If ComboBox1.Text = "ALL AREA" Then
-            sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry where isAuth=1 and isnull([isPosted],0) = 0 and session= '" & GMod.Session & "' and isDm='" & isDm & "' order by dmidarea"
+            sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo],  CONVERT (varchar(10), DMDate, 103) [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry where isAuth=1 and isnull([isPosted],0) = 0 and session= '" & GMod.Session & "' and isDm='" & isDm & "' order by dmidarea"
             GMod.DataSetRet(sql, "allAreadm")
             dg.DataSource = ds.Tables("allAreadm")
         End If
 
         If ComboBox1.Text = "SELECTED AREA" Then
-            sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where  AreaCode = '" & txtAreaCode.Text & "' and  isAuth=1  and isnull([isPosted],0) = 0 and session= '" & GMod.Session & "'  and isDm='" & isDm & "' order by dmidarea"
+            sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo],  CONVERT (varchar(10), DMDate, 103) [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where  AreaCode = '" & txtAreaCode.Text & "' and  isAuth=1  and isnull([isPosted],0) = 0 and session= '" & GMod.Session & "'  and isDm='" & isDm & "' order by dmidarea"
             GMod.DataSetRet(sql, "SelectedAreadm")
             dg.DataSource = ds.Tables("SelectedAreadm")
         End If
@@ -129,14 +129,14 @@ Public Class frmDMPosting
 
                     If GMod.ds.Tables("amount").Rows.Count > 0 Then
                         sale_amt = Val(GMod.ds.Tables("amount").Rows(0)(0).ToString)
-                        total = Val(GMod.ds.Tables("ins_tcs_amt").Rows(0)(2).ToString) + Val(GMod.ds.Tables("amount").Rows(0)(0).ToString)
+                        total = Val(GMod.ds.Tables("ins_tcs_amt").Rows(0)(0).ToString) + Val(GMod.ds.Tables("amount").Rows(0)(0).ToString)
 
                     Else
                         Exit Sub
 
                     End If
                     DMSplit = dg(5, i).Value.ToString.Split("/")
-                    Narration = "By " & DMSplit(0) & "/" & DMSplit(1) & "/" & DMSplit(2) & " Being Sale of "
+                    Narration = "By " & DMSplit(0) & "/" & DMSplit(1) & "/" & DMSplit(2) & " Date " & dg(6, i).Value.ToString & "   Being Sale of "
                     sql = "select * from [dbo].[AreaDMPoultry_det] where DmNo ='" & dg(5, i).Value & "'  and session= '" & GMod.Session & "'"
                     GMod.DataSetRet(sql, "dm_det")
                     For k = 0 To GMod.ds.Tables("dm_det").Rows.Count - 1
@@ -213,6 +213,28 @@ Public Class frmDMPosting
 
                     'Tcs Amount Cr
                     If tcs_amt > 0 Then
+
+                        sql = "insert into " & tablename & "(Cmp_id, Uname, Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, "
+                        sql &= "Acc_head, dramt, cramt, Pay_mode, Cheque_no, Narration, Group_name,Sub_group_name) values("
+                        sql &= "'PHOE',"
+                        sql &= "'" & GMod.username & "',"
+                        sql &= "'1',"
+                        sql &= "'" & vouno & "',"
+                        sql &= "'" & cmbVoucherType.Text & "',"
+                        sql &= "'" & dtpPostingDate.Value.ToShortDateString & "',"
+                        sql &= "'" & dg(9, i).Value & "',"
+                        sql &= "'" & dg(10, i).Value & "',"
+                        sql &= "'" & tcs_amt & "',"
+                        sql &= "'0',"
+                        sql &= "'-',"
+                        sql &= "'-',"
+                        sql &= "'TCS " & Narration.ToUpper & "',"
+                        sql &= "'CUSTOMER',"
+                        sql &= "'-')"
+                        Dim cmd_tcs_party As New SqlCommand(sql, GMod.SqlConn, sqltrans)
+                        cmd_tcs_party.ExecuteNonQuery()
+
+
                         sql = "insert into " & tablename & "(Cmp_id, Uname, Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, "
                         sql &= "Acc_head, cramt, dramt, Pay_mode, Cheque_no, Narration, Group_name,Sub_group_name) values("
                         sql &= "'PHOE',"

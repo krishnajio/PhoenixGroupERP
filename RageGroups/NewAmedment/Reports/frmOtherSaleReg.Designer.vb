@@ -45,6 +45,7 @@ Partial Class frmOtherSaleReg
         Me.voutype = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnprint = New System.Windows.Forms.Button()
+        Me.cmbOS = New System.Windows.Forms.ComboBox()
         CType(Me.dgCRDebit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -84,7 +85,7 @@ Partial Class frmOtherSaleReg
         'btnshow
         '
         Me.btnshow.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnshow.Location = New System.Drawing.Point(850, 35)
+        Me.btnshow.Location = New System.Drawing.Point(1125, 28)
         Me.btnshow.Name = "btnshow"
         Me.btnshow.Size = New System.Drawing.Size(58, 28)
         Me.btnshow.TabIndex = 161
@@ -251,12 +252,22 @@ Partial Class frmOtherSaleReg
         'btnprint
         '
         Me.btnprint.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnprint.Location = New System.Drawing.Point(914, 33)
+        Me.btnprint.Location = New System.Drawing.Point(1189, 28)
         Me.btnprint.Name = "btnprint"
         Me.btnprint.Size = New System.Drawing.Size(62, 28)
         Me.btnprint.TabIndex = 174
         Me.btnprint.Text = "&Print"
         Me.btnprint.UseVisualStyleBackColor = True
+        '
+        'cmbOS
+        '
+        Me.cmbOS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbOS.FormattingEnabled = True
+        Me.cmbOS.Items.AddRange(New Object() {"ALL", "WS", "OS"})
+        Me.cmbOS.Location = New System.Drawing.Point(851, 35)
+        Me.cmbOS.Name = "cmbOS"
+        Me.cmbOS.Size = New System.Drawing.Size(121, 21)
+        Me.cmbOS.TabIndex = 175
         '
         'frmOtherSaleReg
         '
@@ -264,6 +275,7 @@ Partial Class frmOtherSaleReg
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(1370, 733)
+        Me.Controls.Add(Me.cmbOS)
         Me.Controls.Add(Me.btnprint)
         Me.Controls.Add(Me.voutype)
         Me.Controls.Add(Me.Label1)
@@ -303,4 +315,5 @@ Partial Class frmOtherSaleReg
     Friend WithEvents voutype As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnprint As System.Windows.Forms.Button
+    Friend WithEvents cmbOS As System.Windows.Forms.ComboBox
 End Class

@@ -1376,6 +1376,12 @@
     <Compile Include="MobileDataFormsandReports\FrmAreaWiseReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MobileDataFormsandReports\frmDMList.Designer.vb">
+      <DependentUpon>frmDMList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MobileDataFormsandReports\frmDMList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MobileDataFormsandReports\frmDMPosting.designer.vb">
       <DependentUpon>frmDMPosting.vb</DependentUpon>
     </Compile>
@@ -3098,6 +3104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MobileDataFormsandReports\FrmAreaWiseReport.resx">
       <DependentUpon>FrmAreaWiseReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MobileDataFormsandReports\frmDMList.resx">
+      <DependentUpon>frmDMList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MobileDataFormsandReports\frmDMPosting.resx">
       <DependentUpon>frmDMPosting.vb</DependentUpon>

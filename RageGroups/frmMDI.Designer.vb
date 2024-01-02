@@ -154,6 +154,7 @@ Partial Class frmMDI
         Me.GSTRegisterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseRegisterGridViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TCSReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StockRegisterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExpensesToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DailyExpensesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TdsReportToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -270,7 +271,7 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.StockRegisterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DMListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -827,7 +828,7 @@ Partial Class frmMDI
         '
         'DisbursementRegisterToolStripMenuItem
         '
-        Me.DisbursementRegisterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TRAuthToolStripMenuItem, Me.TRPostToolStripMenuItem, Me.TRPostMultiToolStripMenuItem, Me.DMAuthToolStripMenuItem, Me.DMPostToolStripMenuItem})
+        Me.DisbursementRegisterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TRAuthToolStripMenuItem, Me.TRPostToolStripMenuItem, Me.TRPostMultiToolStripMenuItem, Me.DMAuthToolStripMenuItem, Me.DMPostToolStripMenuItem, Me.DMListToolStripMenuItem})
         Me.DisbursementRegisterToolStripMenuItem.Name = "DisbursementRegisterToolStripMenuItem"
         Me.DisbursementRegisterToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.DisbursementRegisterToolStripMenuItem.Text = "Mobile App Data Trf To Accounts"
@@ -835,31 +836,31 @@ Partial Class frmMDI
         'TRAuthToolStripMenuItem
         '
         Me.TRAuthToolStripMenuItem.Name = "TRAuthToolStripMenuItem"
-        Me.TRAuthToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.TRAuthToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TRAuthToolStripMenuItem.Text = "TR Auth"
         '
         'TRPostToolStripMenuItem
         '
         Me.TRPostToolStripMenuItem.Name = "TRPostToolStripMenuItem"
-        Me.TRPostToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.TRPostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TRPostToolStripMenuItem.Text = "TR Post "
         '
         'TRPostMultiToolStripMenuItem
         '
         Me.TRPostMultiToolStripMenuItem.Name = "TRPostMultiToolStripMenuItem"
-        Me.TRPostMultiToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.TRPostMultiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TRPostMultiToolStripMenuItem.Text = "TR Post(Multi)"
         '
         'DMAuthToolStripMenuItem
         '
         Me.DMAuthToolStripMenuItem.Name = "DMAuthToolStripMenuItem"
-        Me.DMAuthToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.DMAuthToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DMAuthToolStripMenuItem.Text = "DM Auth"
         '
         'DMPostToolStripMenuItem
         '
         Me.DMPostToolStripMenuItem.Name = "DMPostToolStripMenuItem"
-        Me.DMPostToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.DMPostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DMPostToolStripMenuItem.Text = "DM Post"
         '
         'DisplayPrintToolStripMenuItem
@@ -1097,6 +1098,12 @@ Partial Class frmMDI
         Me.TCSReportToolStripMenuItem.Name = "TCSReportToolStripMenuItem"
         Me.TCSReportToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
         Me.TCSReportToolStripMenuItem.Text = "TCS Report"
+        '
+        'StockRegisterToolStripMenuItem
+        '
+        Me.StockRegisterToolStripMenuItem.Name = "StockRegisterToolStripMenuItem"
+        Me.StockRegisterToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
+        Me.StockRegisterToolStripMenuItem.Text = "Stock Register"
         '
         'ExpensesToolStripMenuItem2
         '
@@ -1862,11 +1869,11 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
-        'StockRegisterToolStripMenuItem
+        'DMListToolStripMenuItem
         '
-        Me.StockRegisterToolStripMenuItem.Name = "StockRegisterToolStripMenuItem"
-        Me.StockRegisterToolStripMenuItem.Size = New System.Drawing.Size(220, 22)
-        Me.StockRegisterToolStripMenuItem.Text = "Stock Register"
+        Me.DMListToolStripMenuItem.Name = "DMListToolStripMenuItem"
+        Me.DMListToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DMListToolStripMenuItem.Text = "DM List"
         '
         'frmMDI
         '
@@ -2154,4 +2161,5 @@ Partial Class frmMDI
     Friend WithEvents Customer5000000ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem40 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StockRegisterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DMListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

@@ -3,7 +3,7 @@ Public Class frmUpdateOpeningofNextSession
     Private Sub frmUpdateOpeningofNextSession_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         FillSession()
         Dim sql As String
-        sql = "Select * from Groups where cmp_id ='" & GMod.Cmpid & "'"
+        sql = "Select * from Groups where cmp_id ='" & GMod.Cmpid & "' and Session='" & GMod.Session & "'"
         GMod.DataSetRet(sql, "XX")
         cmbGroups.DataSource = GMod.ds.Tables("XX")
         cmbGroups.DisplayMember = "group_name"
@@ -32,15 +32,15 @@ Public Class frmUpdateOpeningofNextSession
         Dim sql As String, i As Integer
         If Trim(cmbSession.Text) <> "" Then
 
-            cfrom = "VENTRY_" & GMod.Cmpid & "_" & cmbSession.Text
-            cto = "VENTRY_" & GMod.Cmpid & "_" & cmbSessionTo.Text
+            cfrom = " VENTRY_" & GMod.Cmpid & "_" & cmbSession.Text
+            cto = " VENTRY_" & GMod.Cmpid & "_" & cmbSessionTo.Text
             headfrom = "ACC_HEAD_" & GMod.Cmpid & "_" & cmbSession.Text
             headto = "ACC_HEAD_" & GMod.Cmpid & "_" & cmbSessionTo.Text
 
             sql = "select q.account_code,q.account_head_name," _
             & " ClosingDr= case  when ( isnull(q.od,0) + isnull(p.dr,0) )-(isnull(q.oc,0) + isnull(p.cr,0) ) > 0 then  (isnull(q.od,0) + isnull(p.dr,0))-(isnull(q.oc,0) + isnull(p.cr,0)) else 0 end, " _
             & " ClosingCr= case  when ( isnull(q.od,0) + isnull(p.dr,0) )-(isnull(q.oc,0) + isnull(p.cr,0)) < 0 then  abs((isnull(q.od,0) + isnull(p.dr,0))-(isnull(q.oc,0) + isnull(p.cr,0))) else 0 end " _
-            & "from" _
+            & " from" _
             & "(select  isnull(Acc_head_code,'') Acc_head_code , isnull(sum(dramt),0)  dr , isnull(sum(cramt),0)  cr " _
             & " from  " & cfrom _
             & " where group_name='" & cmbGroups.Text & "' and Pay_mode<>'-' group by Acc_head_code  ) p " _

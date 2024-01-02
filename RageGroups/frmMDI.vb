@@ -1576,4 +1576,9 @@ Public Class frmMDI
         Dim t As New frmStocKRegister
         t.ShowDialog()
     End Sub
+
+    Private Sub DMListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DMListToolStripMenuItem.Click
+        Dim t As New frmDMList
+        t.ShowDialog()
+    End Sub
 End Class

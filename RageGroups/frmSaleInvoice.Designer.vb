@@ -1055,10 +1055,11 @@ Partial Class frmSaleInvoice
         Me.cmbTdsper.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.cmbTdsper.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbTdsper.FormattingEnabled = True
-        Me.cmbTdsper.Location = New System.Drawing.Point(671, 506)
+        Me.cmbTdsper.Location = New System.Drawing.Point(671, 509)
         Me.cmbTdsper.Name = "cmbTdsper"
         Me.cmbTdsper.Size = New System.Drawing.Size(61, 21)
         Me.cmbTdsper.TabIndex = 18
+        Me.cmbTdsper.TabStop = False
         '
         'cmbtdsType
         '
@@ -1068,10 +1069,11 @@ Partial Class frmSaleInvoice
         Me.cmbtdsType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbtdsType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbtdsType.FormattingEnabled = True
-        Me.cmbtdsType.Location = New System.Drawing.Point(294, 507)
+        Me.cmbtdsType.Location = New System.Drawing.Point(295, 507)
         Me.cmbtdsType.Name = "cmbtdsType"
         Me.cmbtdsType.Size = New System.Drawing.Size(370, 21)
         Me.cmbtdsType.TabIndex = 17
+        Me.cmbtdsType.TabStop = False
         '
         'cmbacheadcodetds
         '
@@ -1081,10 +1083,11 @@ Partial Class frmSaleInvoice
         Me.cmbacheadcodetds.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbacheadcodetds.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbacheadcodetds.FormattingEnabled = True
-        Me.cmbacheadcodetds.Location = New System.Drawing.Point(736, 506)
+        Me.cmbacheadcodetds.Location = New System.Drawing.Point(736, 508)
         Me.cmbacheadcodetds.Name = "cmbacheadcodetds"
         Me.cmbacheadcodetds.Size = New System.Drawing.Size(98, 21)
         Me.cmbacheadcodetds.TabIndex = 19
+        Me.cmbacheadcodetds.TabStop = False
         '
         'Label48
         '

@@ -57,9 +57,6 @@ Public Class frmSaleInvoice
         cmbTcsType.DataSource = GMod.ds.Tables("TCSTYPE")
         cmbTcsType.DisplayMember = "TcsType"
 
-
-       
-
         'nxtvno()
         Me.Text = Me.Text & "    " & "[" & GMod.Cmpname & "]"
         dgSaleVoucher.Rows.Add()
@@ -94,8 +91,6 @@ Public Class frmSaleInvoice
         CmbCrCode.DisplayMember = "account_code"
         CmbCrHead.DataSource = GMod.ds.Tables("salehead")
         CmbCrHead.DisplayMember = "account_head_name"
-
-
 
         'Tds 
         Sql = "select * from TdsMater where cmp_id ='" & GMod.Cmpid & "'"
@@ -151,8 +146,6 @@ Public Class frmSaleInvoice
 
         CmbState.DataSource = GMod.ds.Tables("Area1")
         CmbState.DisplayMember = "state"
-
-
     End Sub
     Public Sub fillItems()
        
@@ -1821,7 +1814,4 @@ Public Class frmSaleInvoice
         End Try
     End Sub
 
-    Private Sub dgSaleVoucher_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgSaleVoucher.CellContentClick
-
-    End Sub
 End Class
