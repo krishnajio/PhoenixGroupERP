@@ -23,6 +23,7 @@ Partial Class frmNewPurchaseRegister
         Me.btn_modify = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dtdate = New System.Windows.Forms.DateTimePicker()
         Me.voutype = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cmbprdunit = New System.Windows.Forms.ComboBox()
@@ -39,7 +40,7 @@ Partial Class frmNewPurchaseRegister
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.dtdate = New System.Windows.Forms.DateTimePicker()
+        Me.chkAll = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -80,6 +81,7 @@ Partial Class frmNewPurchaseRegister
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.chkAll)
         Me.Panel1.Controls.Add(Me.dtdate)
         Me.Panel1.Controls.Add(Me.voutype)
         Me.Panel1.Controls.Add(Me.Label6)
@@ -102,6 +104,16 @@ Partial Class frmNewPurchaseRegister
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1028, 78)
         Me.Panel1.TabIndex = 35
+        '
+        'dtdate
+        '
+        Me.dtdate.CustomFormat = "dd/MMM/yyyy"
+        Me.dtdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtdate.Location = New System.Drawing.Point(81, 36)
+        Me.dtdate.Name = "dtdate"
+        Me.dtdate.Size = New System.Drawing.Size(107, 21)
+        Me.dtdate.TabIndex = 208
         '
         'voutype
         '
@@ -249,15 +261,15 @@ Partial Class frmNewPurchaseRegister
         Me.CrystalReportViewer1.TabIndex = 36
         Me.CrystalReportViewer1.ViewTimeSelectionFormula = ""
         '
-        'dtdate
+        'chkAll
         '
-        Me.dtdate.CustomFormat = "dd/MMM/yyyy"
-        Me.dtdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtdate.Location = New System.Drawing.Point(81, 36)
-        Me.dtdate.Name = "dtdate"
-        Me.dtdate.Size = New System.Drawing.Size(107, 21)
-        Me.dtdate.TabIndex = 208
+        Me.chkAll.AutoSize = True
+        Me.chkAll.Location = New System.Drawing.Point(851, 38)
+        Me.chkAll.Name = "chkAll"
+        Me.chkAll.Size = New System.Drawing.Size(115, 17)
+        Me.chkAll.TabIndex = 209
+        Me.chkAll.Text = "ALL Voucher Type"
+        Me.chkAll.UseVisualStyleBackColor = True
         '
         'frmNewPurchaseRegister
         '
@@ -298,4 +310,5 @@ Partial Class frmNewPurchaseRegister
     Friend WithEvents voutype As System.Windows.Forms.ComboBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents dtdate As System.Windows.Forms.DateTimePicker
+    Friend WithEvents chkAll As System.Windows.Forms.CheckBox
 End Class

@@ -38,7 +38,7 @@ Public Class frmTDSReport
                 GMod.SqlExecuteNonQuery(sql)
             Next
         Catch ex As Exception
-            MsgBox(ex.Message & sql)
+            MsgBox(ex.Message & sql & GMod.ds.Tables("tdse").Rows(i)("vou_no"))
         End Try
 
         sql = "select * from TdsEntry  where tdstype='" & cmbtdsType.Text & "' and vou_date between '" & dt1.Value.ToShortDateString & "' and '" & dt2.Value.ToShortDateString & "' and session ='" & GMod.Session & "' AND CMP_ID ='" & GMod.Cmpid & "' and Authr<>'-'  order by vou_date,cast(vou_no as bigint)"

@@ -8,8 +8,14 @@ Public Class frmNewPurRegGrig
         p5 = ""
         If chkcform.Checked = False Then
             'sql = "select * from new_pur_reg"
-            sql = "select pd.*,ach.account_head_name,ach.address, account_type as remark2 from Purchase_Data pd"
-            sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and vou_type='" & voutype.Text & "' and pd.cmp_id ='" & GMod.Cmpid & "' and authr<>'-' "
+
+            If chkAll.Checked = False Then
+                sql = "select pd.*,ach.account_head_name,ach.address, account_type as remark2 from Purchase_Data pd"
+                sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and vou_type='" & voutype.Text & "' and pd.cmp_id ='" & GMod.Cmpid & "' and authr<>'-' "
+            Else
+                sql = "select pd.*,ach.account_head_name,ach.address, account_type as remark2 from Purchase_Data pd"
+                sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and pd.cmp_id ='" & GMod.Cmpid & "' and authr<>'-' "
+            End If
 
             If txtv1.Text <> "" Then
                 sql &= " and  cast(vou_no as numeric(18,0)) between " & txtv1.Text & " and " & txtv2.Text & ""
@@ -35,24 +41,32 @@ Public Class frmNewPurRegGrig
             End If
             sql &= " ORDER BY cast(vou_no as numeric(18,0)),id"
         Else
-            sql = "select pd.*,ach.account_head_name,ach.address, account_type as remark2 from Purchase_Data pd"
-            sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and vou_type='" & voutype.Text & "' and authr<>'-' and month(bill_date)=" & dtdate.Value.Month & "" '  and for_where='" & cmbprdunit.Text & "'"
-            sql &= " ORDER BY bill_date"
+
+            If chkAll.Checked = False Then
+                sql = "select pd.*,ach.account_head_name,ach.address, account_type as remark2 from Purchase_Data pd"
+                sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and vou_type='" & voutype.Text & "' and authr<>'-' and month(bill_date)=" & dtdate.Value.Month & "" '  and for_where='" & cmbprdunit.Text & "'"
+                sql &= " ORDER BY bill_date"
+            Else
+                sql = "select pd.*,ach.account_head_name,ach.address, account_type as remark2 from Purchase_Data pd"
+                sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and authr<>'-' and month(bill_date)=" & dtdate.Value.Month & "" '  and for_where='" & cmbprdunit.Text & "'"
+                sql &= " ORDER BY bill_date"
+            End If
+
         End If
-        GMod.DataSetRet(sql, "npr")
-        ' Dim r As New CrNew_Pur_Register
-        'r.SetDataSource(GMod.ds.Tables("npr"))
-        'r.SetParameterValue("p1", GMod.Cmpname)
-        'r.SetParameterValue("p2", p2)
-        'r.SetParameterValue("p3", p3)
-        'r.SetParameterValue("p4", p4)
-        'r.SetParameterValue("p5", p5)
-        'r.SetParameterValue("p6", voutype.Text.ToUpper & "- REGISTER")
-        'r.SetParameterValue("p7", GMod.username)
-        'r.SetParameterValue("p8", OtherCheck)
-        ' CrystalReportViewer1.ReportSource = r
-        ' cmbprdunit.Text = ""
-        DataGridView1.DataSource = GMod.ds.Tables("npr")
+            GMod.DataSetRet(sql, "npr")
+            ' Dim r As New CrNew_Pur_Register
+            'r.SetDataSource(GMod.ds.Tables("npr"))
+            'r.SetParameterValue("p1", GMod.Cmpname)
+            'r.SetParameterValue("p2", p2)
+            'r.SetParameterValue("p3", p3)
+            'r.SetParameterValue("p4", p4)
+            'r.SetParameterValue("p5", p5)
+            'r.SetParameterValue("p6", voutype.Text.ToUpper & "- REGISTER")
+            'r.SetParameterValue("p7", GMod.username)
+            'r.SetParameterValue("p8", OtherCheck)
+            ' CrystalReportViewer1.ReportSource = r
+            ' cmbprdunit.Text = ""
+            DataGridView1.DataSource = GMod.ds.Tables("npr")
 
     End Sub
     Dim OtherCheck As Double = 0.0

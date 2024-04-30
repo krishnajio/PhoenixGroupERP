@@ -197,6 +197,7 @@ Partial Class frmPostToAccounts
         '
         'cmbVoucherType
         '
+        Me.cmbVoucherType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbVoucherType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbVoucherType.FormattingEnabled = True
         Me.cmbVoucherType.Location = New System.Drawing.Point(878, 86)

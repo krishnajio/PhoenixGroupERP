@@ -196,9 +196,9 @@ Public Class frmBookOther
             Dim daybook As String
             daybook = "CREATE TABLE [Daybook](" _
             & " [cmpid] [varchar](4), " _
-            & "[Acc_code] [varchar](8)," _
-            & "[Acc_name] [varchar](30), " _
-            & "[narration][varchar](180)," _
+            & "[Acc_code] [varchar](18)," _
+            & "[Acc_name] [varchar](130), " _
+            & "[narration][varchar](MAX)," _
             & "[Group_name] [varchar](40), " _
             & "[Sub_Group] [varchar](40)," _
             & "[Vtype] [varchar](30)," _

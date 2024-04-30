@@ -23,6 +23,7 @@ Partial Class frmNewPurRegGrig
         Me.btn_modify = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.dtdate = New System.Windows.Forms.DateTimePicker()
         Me.voutype = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -40,7 +41,7 @@ Partial Class frmNewPurRegGrig
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.chkAll = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -82,6 +83,7 @@ Partial Class frmNewPurRegGrig
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.chkAll)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.dtdate)
         Me.Panel1.Controls.Add(Me.voutype)
@@ -106,6 +108,16 @@ Partial Class frmNewPurRegGrig
         Me.Panel1.Size = New System.Drawing.Size(1028, 78)
         Me.Panel1.TabIndex = 35
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(851, 35)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 25)
+        Me.Button2.TabIndex = 209
+        Me.Button2.Text = "ReSet"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'dtdate
         '
         Me.dtdate.CustomFormat = "dd/MMM/yyyy"
@@ -120,16 +132,16 @@ Partial Class frmNewPurRegGrig
         '
         Me.voutype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.voutype.FormattingEnabled = True
-        Me.voutype.Location = New System.Drawing.Point(708, 36)
+        Me.voutype.Location = New System.Drawing.Point(494, 35)
         Me.voutype.Name = "voutype"
-        Me.voutype.Size = New System.Drawing.Size(137, 21)
+        Me.voutype.Size = New System.Drawing.Size(305, 21)
         Me.voutype.TabIndex = 206
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(186, Byte))
-        Me.Label6.Location = New System.Drawing.Point(606, 36)
+        Me.Label6.Location = New System.Drawing.Point(397, 36)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(97, 15)
         Me.Label6.TabIndex = 207
@@ -257,15 +269,15 @@ Partial Class frmNewPurRegGrig
         Me.DataGridView1.Size = New System.Drawing.Size(1010, 462)
         Me.DataGridView1.TabIndex = 36
         '
-        'Button2
+        'chkAll
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(851, 35)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 25)
-        Me.Button2.TabIndex = 209
-        Me.Button2.Text = "ReSet"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.chkAll.AutoSize = True
+        Me.chkAll.Location = New System.Drawing.Point(805, 39)
+        Me.chkAll.Name = "chkAll"
+        Me.chkAll.Size = New System.Drawing.Size(45, 17)
+        Me.chkAll.TabIndex = 210
+        Me.chkAll.Text = "ALL"
+        Me.chkAll.UseVisualStyleBackColor = True
         '
         'frmNewPurRegGrig
         '
@@ -308,4 +320,5 @@ Partial Class frmNewPurRegGrig
     Friend WithEvents dtdate As System.Windows.Forms.DateTimePicker
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents chkAll As System.Windows.Forms.CheckBox
 End Class

@@ -55,7 +55,7 @@ Public Class frmPaymentandChqprint
         'date set to server date 
 
         'sql = "select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and Vtype in ('BANK','CASH')"
-        'GMod.DataSetRet(sql, "CRVT")
+        'GMod.DataSetRet(sql, "CRVT")        
         'cmbvoutype.DataSource = GMod.ds.Tables("CRVT")
         'cmbvoutype.DisplayMember = "vtype"
         cmbvoutype.SelectedIndex = 0
@@ -87,7 +87,15 @@ Public Class frmPaymentandChqprint
             ' Me.Close()
         End If
 
-        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and left(account_code,2) in ('**','" & cmbAreaCode.Text & "')"
+
+        If GMod.Cmpid = "PHOE" Then
+            sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and isActive=1"
+        Else
+            sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and left(account_code,2) in ('**','" & cmbAreaCode.Text & "') and isActive=1"
+        End If
+
+
+
         GMod.DataSetRet(sql, "aclist1")
 
         cmbcode.DataSource = GMod.ds.Tables("aclist1")
@@ -566,7 +574,6 @@ Public Class frmPaymentandChqprint
                 dgPayment(5, i).Value = GMod.ds.Tables("modifypay").Rows(i)("Sub_group_name")
                 dgPayment(6, i).Value = GMod.ds.Tables("modifypay").Rows(i)("Narration")
                 dgPayment(7, i).Value = GMod.ds.Tables("modifypay").Rows(i)("Cheque_no")
-
             Next
             For j = 0 To dgPayment.Rows.Count - 1
                 dr = dr + Val(dgPayment(2, j).Value)
@@ -863,9 +870,13 @@ Public Class frmPaymentandChqprint
     End Sub
 
     Private Sub cmbAreaCode_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbAreaCode.SelectedIndexChanged
-        sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and left(account_code,2) in ('**','" & cmbAreaCode.Text & "')"
-        GMod.DataSetRet(sql, "aclist1")
+        If GMod.Cmpid = "PHOE" Then
+            sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and isActive=1 "
+        Else
+            sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and left(account_code,2) in ('**','" & cmbAreaCode.Text & "')"
+        End If
 
+        GMod.DataSetRet(sql, "aclist1")
         cmbcode.DataSource = GMod.ds.Tables("aclist1")
         cmbcode.DisplayMember = "account_code"
         cmbAcHead.DataSource = GMod.ds.Tables("aclist1")
@@ -1074,4 +1085,6 @@ Public Class frmPaymentandChqprint
         ' cmbTdsSubGroup.DataSource = GMod.ds.Tables("aclist2")
         ' cmbTdsSubGroup.DisplayMember = "sub_group_name"
     End Sub
+
+    
 End Class

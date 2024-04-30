@@ -857,9 +857,9 @@ Partial Class frmExpensesWithVeh_Detials
         Me.Label12.Location = New System.Drawing.Point(12, 69)
         Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(107, 17)
+        Me.Label12.Size = New System.Drawing.Size(110, 17)
         Me.Label12.TabIndex = 227
-        Me.Label12.Text = "Diesel Bpcl(Ltrs):"
+        Me.Label12.Text = "Diesel Card(Ltrs):"
         '
         'txtDCash
         '

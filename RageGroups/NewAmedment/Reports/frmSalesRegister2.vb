@@ -23,19 +23,41 @@ Public Class frmSalesRegister2
             'id, invno, invdate, hdate, code, cname, qty, free, invamt, 
             'neccamt, pheadname, prd_name, Rate, area, uanme
             GMod.SqlExecuteNonQuery("delete from salereg")
-            sql2 = " insert into salereg (invno, invdate, hdate, code, cname, qty, free," _
-                    & " invamt, neccamt,prd_name, Rate, area, uanme,vou_type,prdunit ,mortality,gstin,tcs_per,tcs_amt,tds_amt) " _
-                    & " select vou_no, BillDate,HatchDate,AccCode,h.account_head_name, " _
-                    & " Qty,FreeQty,Amount,NeccAmount,ProductName,Rate,Station,'" & GMod.username & "',p.vou_type,PrdUnit,mortality,h.account_type,p.tcs_per,p.tcs_amt,tds_amt from Printdata p " _
-                    & " inner join " & GMod.ACC_HEAD & " h  on p.AccCode = h.account_code left join " _
-                    & " Area on Area.prefix = h.Area_code  WHERE vou_type='" & voutype.Text & "' and cast(vou_no as bigint) " _
-                    & " between " & txtCrNoFrom.Text & " and " & txtCrNoTo.Text & "  and (FreeQty<>0 OR ProductName in (select ItemName from itemmaster where p.cmp_id='" & GMod.Cmpid & "') " _
-                    & " OR ProductName='INVOICE CANCELLED') AND p.CMP_ID='" & GMod.Cmpid & "' AND SESSION = '" & GMod.Session & "' and p.authr<>'-'" _
-                    & " order by cast(BillNo as bigint)"
+            If chkAll.Checked = False Then
 
-            GMod.SqlExecuteNonQuery(sql2)
-            sql2 = "select  [invno], [invdate], [hdate], [code], [cname], [qty], [free], [invamt], tds_amt  as tcs_per ,[neccamt], [pheadname], [prd_name], [rate], [area], [uanme], [vou_type], [prdunit], [Mortality], [gstin],  [tcs_amt] from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  "
-            GMod.DataSetRet(sql2, "SaleReg")
+                sql2 = " insert into salereg (invno, invdate, hdate, code, cname, qty, free," _
+                        & " invamt, neccamt,prd_name, Rate, area, uanme,vou_type,prdunit ,mortality,gstin,tcs_per,tcs_amt,tds_amt) " _
+                        & " select vou_no, BillDate,HatchDate,AccCode,h.account_head_name, " _
+                        & " Qty,FreeQty,Amount,NeccAmount,ProductName,Rate,Station,'" & GMod.username & "',p.vou_type,PrdUnit,mortality,h.account_type,p.tcs_per,p.tcs_amt,tds_amt from Printdata p " _
+                        & " inner join " & GMod.ACC_HEAD & " h  on p.AccCode = h.account_code left join " _
+                        & " Area on Area.prefix = h.Area_code  WHERE vou_type='" & voutype.Text & "' and cast(vou_no as bigint) " _
+                        & " between " & txtCrNoFrom.Text & " and " & txtCrNoTo.Text & "  and (FreeQty<>0 OR ProductName in (select ItemName from itemmaster where p.cmp_id='" & GMod.Cmpid & "') " _
+                        & " OR ProductName='INVOICE CANCELLED') AND p.CMP_ID='" & GMod.Cmpid & "' AND SESSION = '" & GMod.Session & "' and p.authr<>'-'" _
+                        & " order by cast(BillNo as bigint)"
+
+                GMod.SqlExecuteNonQuery(sql2)
+                sql2 = "select  [invno], [invdate], [hdate], [code], [cname], [qty], [free], [invamt], tds_amt  as tcs_per ,[neccamt], [pheadname], [prd_name], [rate], [area], [uanme], [vou_type], [prdunit], [Mortality], [gstin],  [tcs_amt] from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  "
+                GMod.DataSetRet(sql2, "SaleReg")
+            Else
+
+                sql2 = " insert into salereg (invno, invdate, hdate, code, cname, qty, free," _
+                       & " invamt, neccamt,prd_name, Rate, area, uanme,vou_type,prdunit ,mortality,gstin,tcs_per,tcs_amt,tds_amt) " _
+                       & " select vou_no, BillDate,HatchDate,AccCode,h.account_head_name, " _
+                       & " Qty,FreeQty,Amount,NeccAmount,ProductName,Rate,Station,'" & GMod.username & "',p.vou_type,PrdUnit,mortality,h.account_type,p.tcs_per,p.tcs_amt,tds_amt from Printdata p " _
+                       & " inner join " & GMod.ACC_HEAD & " h  on p.AccCode = h.account_code left join " _
+                       & " Area on Area.prefix = h.Area_code  WHERE cast(vou_no as bigint) " _
+                       & " between " & txtCrNoFrom.Text & " and " & txtCrNoTo.Text & "  and (FreeQty<>0 OR ProductName in (select ItemName from itemmaster where p.cmp_id='" & GMod.Cmpid & "') " _
+                       & " OR ProductName='INVOICE CANCELLED') AND p.CMP_ID='" & GMod.Cmpid & "' AND SESSION = '" & GMod.Session & "' and p.authr<>'-'" _
+                       & " order by cast(BillNo as bigint)"
+
+                GMod.SqlExecuteNonQuery(sql2)
+                sql2 = "select  [invno], [invdate], [hdate], [code], [cname], [qty], [free], [invamt], tds_amt  as tcs_per ,[neccamt], [pheadname], [prd_name], [rate], [area], [uanme], [vou_type], [prdunit], [Mortality], [gstin],  [tcs_amt] from salereg  where uanme='" & GMod.username & "' order by id  "
+                GMod.DataSetRet(sql2, "SaleReg")
+
+
+
+            End If
+
 
             'dgCRDebit.Rows.Clear()
             'Dim r As Integer = 0
@@ -89,10 +111,17 @@ Public Class frmSalesRegister2
             GMod.DataSetRet(sql2, "SaleReg1")
         End If
 
-        ' GMod.DataSetRet("select invno, CONVERT(VARCHAR(11), invdate, 103) invdate ,CONVERT(VARCHAR(11), hdate, 103)  hdate, code, cname,gstin, prd_name, qty, free,  qty + free total ,rate, invamt, neccamt, tds_amt ,pheadname, prdunit,mortality, isnull(tcs_amt,0) tcs_amt from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleRegGrid")
-        GMod.DataSetRet("select [invno], [invdate], [hdate], [code], [cname], [qty], [free], [invamt], tds_amt  as tcs_per, [neccamt], [pheadname], [prd_name], [rate], [area], [uanme], [vou_type], [prdunit], [Mortality], [gstin],  [tcs_amt] from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleReg1")
-        GMod.DataSetRet("select invno, CONVERT(VARCHAR(11), invdate, 103) invdate ,CONVERT(VARCHAR(11), hdate, 103)  hdate, code, cname, gstin,prd_name, qty, free,  qty + free total ,rate, invamt, neccamt,tds_amt ,pheadname, prdunit,mortality,tcs_amt  from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleRegGrid")
+        If chkAll.Checked = True Then
+            ' GMod.DataSetRet("select invno, CONVERT(VARCHAR(11), invdate, 103) invdate ,CONVERT(VARCHAR(11), hdate, 103)  hdate, code, cname,gstin, prd_name, qty, free,  qty + free total ,rate, invamt, neccamt, tds_amt ,pheadname, prdunit,mortality, isnull(tcs_amt,0) tcs_amt from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleRegGrid")
+            GMod.DataSetRet("select [invno], [invdate], [hdate], [code], [cname], [qty], [free], [invamt], tds_amt  as tcs_per, [neccamt], [pheadname], [prd_name], [rate], [area], [uanme], [vou_type], [prdunit], [Mortality], [gstin],  [tcs_amt] from salereg  where  uanme='" & GMod.username & "' order by id  ", "SaleReg1")
+            GMod.DataSetRet("select invno, CONVERT(VARCHAR(11), invdate, 103) invdate ,CONVERT(VARCHAR(11), hdate, 103)  hdate, code, cname, gstin,prd_name, qty, free,  qty + free total ,rate, invamt, neccamt,tds_amt ,pheadname, prdunit,mortality,tcs_amt  from salereg  where uanme='" & GMod.username & "' order by id  ", "SaleRegGrid")
+        Else
 
+            ' GMod.DataSetRet("select invno, CONVERT(VARCHAR(11), invdate, 103) invdate ,CONVERT(VARCHAR(11), hdate, 103)  hdate, code, cname,gstin, prd_name, qty, free,  qty + free total ,rate, invamt, neccamt, tds_amt ,pheadname, prdunit,mortality, isnull(tcs_amt,0) tcs_amt from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleRegGrid")
+            GMod.DataSetRet("select [invno], [invdate], [hdate], [code], [cname], [qty], [free], [invamt], tds_amt  as tcs_per, [neccamt], [pheadname], [prd_name], [rate], [area], [uanme], [vou_type], [prdunit], [Mortality], [gstin],  [tcs_amt] from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleReg1")
+            GMod.DataSetRet("select invno, CONVERT(VARCHAR(11), invdate, 103) invdate ,CONVERT(VARCHAR(11), hdate, 103)  hdate, code, cname, gstin,prd_name, qty, free,  qty + free total ,rate, invamt, neccamt,tds_amt ,pheadname, prdunit,mortality,tcs_amt  from salereg  where vou_type='" & voutype.Text & "' and uanme='" & GMod.username & "' order by id  ", "SaleRegGrid")
+
+        End If
 
         DataGridView1.DataSource = GMod.ds.Tables("SaleRegGrid")
 

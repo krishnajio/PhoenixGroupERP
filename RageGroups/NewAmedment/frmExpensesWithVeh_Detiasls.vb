@@ -754,6 +754,7 @@ Public Class frmExpensesWithVeh_Detials
         txtGprsr.Clear()
         txtMor.Clear()
         txtShot.Clear()
+        txtNoChicks.Clear()
     End Sub
     Sub fillg()
         Try

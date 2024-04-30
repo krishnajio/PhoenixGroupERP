@@ -11,32 +11,30 @@ Public Class frmOtherSaleReg
             chkdaybook = False
         End If
         ''''''''''''''''''''''''''''''*****************************************************
-
-
         txtCrNoFrom.Enabled = False
         txtCrNoTo.Enabled = False
         'If CheckBox1.Checked = False Then
 
         If cmbOS.Text = "WS" Then
-            SqlQuery = "select Vou_type, Vou_no, AccCode, AccName, freight as  Station, ProductName, OutQty, Rate, Amount, OutQtyNos, BillNo, BillDate, InQty, "
-            SqlQuery &= "InQtyNos, o.Cmp_id  Cmp_id , Session, id, isnull(tcs_amt,0) as tcs_amt, authr, Prdunit, Packing, Insurance, Discount, CrHead, cgstp, cgsta, sgstp, sgsta, "
+            SqlQuery = " select Vou_type, Vou_no, AccCode, AccName, freight as  Station, ProductName, OutQty, Rate, Amount, OutQtyNos, BillNo, BillDate, InQty, "
+            SqlQuery &= " InQtyNos, o.Cmp_id  Cmp_id , Session, id, isnull(tcs_amt,0) as tcs_amt, authr, Prdunit, Packing, Insurance, Discount, CrHead, cgstp, cgsta, sgstp, sgsta, "
             SqlQuery &= " igstp, igsta , a.state from OtherSaleData  o"
             SqlQuery &= " inner join Acc_head_phoe_2324 a on o.AccCode= a.account_code "
-            SqlQuery &= "where vou_type in ('" & voutype.Text & "') and cast(Vou_no as numeric(20)) between " & txtCrNoFrom.Text & " and  " & txtCrNoTo.Text & "  AND session = '" & GMod.Session & "' and o.cmp_id='" & GMod.Cmpid & "'and authr<>'-' "
-            SqlQuery &= "and a.state='MADHYA PRADESH' ORDER BY CAST(VOU_NO AS BIGINT),ID "
+            SqlQuery &= " where vou_type in ('" & voutype.Text & "') and cast(Vou_no as numeric(20)) between " & txtCrNoFrom.Text & " and  " & txtCrNoTo.Text & "  AND session = '" & GMod.Session & "' and o.cmp_id='" & GMod.Cmpid & "'and authr<>'-' "
+            SqlQuery &= " and a.state='MADHYA PRADESH' ORDER BY CAST(VOU_NO AS BIGINT),ID "
         ElseIf cmbOS.Text = "OS" Then
-            SqlQuery = "select Vou_type, Vou_no, AccCode, AccName, freight as  Station, ProductName, OutQty, Rate, Amount, OutQtyNos, BillNo, BillDate, InQty, "
-            SqlQuery &= "InQtyNos, o.Cmp_id  Cmp_id , Session, id, isnull(tcs_amt,0) as tcs_amt, authr, Prdunit, Packing, Insurance, Discount, CrHead, cgstp, cgsta, sgstp, sgsta, "
+            SqlQuery = " select Vou_type, Vou_no, AccCode, AccName, freight as  Station, ProductName, OutQty, Rate, Amount, OutQtyNos, BillNo, BillDate, InQty, "
+            SqlQuery &= " InQtyNos, o.Cmp_id  Cmp_id , Session, id, isnull(tcs_amt,0) as tcs_amt, authr, Prdunit, Packing, Insurance, Discount, CrHead, cgstp, cgsta, sgstp, sgsta, "
             SqlQuery &= " igstp, igsta , a.state from OtherSaleData  o"
             SqlQuery &= " inner join Acc_head_phoe_2324 a on o.AccCode= a.account_code "
-            SqlQuery &= "where vou_type in ('" & voutype.Text & "') and cast(Vou_no as numeric(20)) between " & txtCrNoFrom.Text & " and  " & txtCrNoTo.Text & "  AND session = '" & GMod.Session & "' and o.cmp_id='" & GMod.Cmpid & "'and authr<>'-' "
-            SqlQuery &= "and a.state  <> 'MADHYA PRADESH' ORDER BY CAST(VOU_NO AS BIGINT),ID "
+            SqlQuery &= " where vou_type in ('" & voutype.Text & "') and cast(Vou_no as numeric(20)) between " & txtCrNoFrom.Text & " and  " & txtCrNoTo.Text & "  AND session = '" & GMod.Session & "' and o.cmp_id='" & GMod.Cmpid & "'and authr<>'-' "
+            SqlQuery &= " and a.state  <> 'MADHYA PRADESH' ORDER BY CAST(VOU_NO AS BIGINT),ID "
         ElseIf cmbOS.Text = "ALL" Then
-            SqlQuery = "select Vou_type, Vou_no, AccCode, AccName, freight as  Station, ProductName, OutQty, Rate, Amount, OutQtyNos, BillNo, BillDate, InQty, "
-            SqlQuery &= "InQtyNos, o.Cmp_id  Cmp_id , Session, id, isnull(tcs_amt,0) as tcs_amt, authr, Prdunit, Packing, Insurance, Discount, CrHead, cgstp, cgsta, sgstp, sgsta, "
+            SqlQuery = " select Vou_type, Vou_no, AccCode, AccName, freight as  Station, ProductName, OutQty, Rate, Amount, OutQtyNos, BillNo, BillDate, InQty, "
+            SqlQuery &= " InQtyNos, o.Cmp_id  Cmp_id , Session, id, isnull(tcs_amt,0) as tcs_amt, authr, Prdunit, Packing, Insurance, Discount, CrHead, cgstp, cgsta, sgstp, sgsta, "
             SqlQuery &= " igstp, igsta , a.state from OtherSaleData  o"
             SqlQuery &= " inner join Acc_head_phoe_2324 a on o.AccCode= a.account_code "
-            SqlQuery &= "where vou_type in ('" & voutype.Text & "') and cast(Vou_no as numeric(20)) between " & txtCrNoFrom.Text & " and  " & txtCrNoTo.Text & "  AND session = '" & GMod.Session & "' and o.cmp_id='" & GMod.Cmpid & "'and authr<>'-' "
+            SqlQuery &= " where vou_type in ('" & voutype.Text & "') and cast(Vou_no as numeric(20)) between " & txtCrNoFrom.Text & " and  " & txtCrNoTo.Text & "  AND session = '" & GMod.Session & "' and o.cmp_id='" & GMod.Cmpid & "'and authr<>'-' "
             SqlQuery &= " ORDER BY CAST(VOU_NO AS BIGINT),ID "
         End If
         GMod.DataSetRet(SqlQuery, "SaleReg1")
@@ -65,13 +63,7 @@ Public Class frmOtherSaleReg
         'End If
         CrystalReportViewer1.ReportSource = crsr
 
-
     End Sub
-
-    Private Sub frmOtherSaleReg_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub btnprint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnprint.Click
         If chkdaybook = True Then
             MsgBox("Un cheched voucher exixts for the day, please authorise first", MsgBoxStyle.Critical)

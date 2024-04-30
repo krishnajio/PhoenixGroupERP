@@ -46,6 +46,7 @@ Partial Class frmOtherSaleReg
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnprint = New System.Windows.Forms.Button()
         Me.cmbOS = New System.Windows.Forms.ComboBox()
+        Me.chkAll = New System.Windows.Forms.CheckBox()
         CType(Me.dgCRDebit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,7 +61,7 @@ Partial Class frmOtherSaleReg
         Me.CrystalReportViewer1.ActiveViewIndex = -1
         Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 62)
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 64)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.SelectionFormula = ""
         Me.CrystalReportViewer1.ShowPrintButton = False
@@ -85,7 +86,7 @@ Partial Class frmOtherSaleReg
         'btnshow
         '
         Me.btnshow.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnshow.Location = New System.Drawing.Point(1125, 28)
+        Me.btnshow.Location = New System.Drawing.Point(1125, 31)
         Me.btnshow.Name = "btnshow"
         Me.btnshow.Size = New System.Drawing.Size(58, 28)
         Me.btnshow.TabIndex = 161
@@ -252,7 +253,7 @@ Partial Class frmOtherSaleReg
         'btnprint
         '
         Me.btnprint.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnprint.Location = New System.Drawing.Point(1189, 28)
+        Me.btnprint.Location = New System.Drawing.Point(1189, 32)
         Me.btnprint.Name = "btnprint"
         Me.btnprint.Size = New System.Drawing.Size(62, 28)
         Me.btnprint.TabIndex = 174
@@ -269,12 +270,23 @@ Partial Class frmOtherSaleReg
         Me.cmbOS.Size = New System.Drawing.Size(121, 21)
         Me.cmbOS.TabIndex = 175
         '
+        'chkAll
+        '
+        Me.chkAll.AutoSize = True
+        Me.chkAll.Location = New System.Drawing.Point(978, 38)
+        Me.chkAll.Name = "chkAll"
+        Me.chkAll.Size = New System.Drawing.Size(45, 17)
+        Me.chkAll.TabIndex = 177
+        Me.chkAll.Text = "ALL"
+        Me.chkAll.UseVisualStyleBackColor = True
+        '
         'frmOtherSaleReg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(1370, 733)
+        Me.Controls.Add(Me.chkAll)
         Me.Controls.Add(Me.cmbOS)
         Me.Controls.Add(Me.btnprint)
         Me.Controls.Add(Me.voutype)
@@ -316,4 +328,5 @@ Partial Class frmOtherSaleReg
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnprint As System.Windows.Forms.Button
     Friend WithEvents cmbOS As System.Windows.Forms.ComboBox
+    Friend WithEvents chkAll As System.Windows.Forms.CheckBox
 End Class

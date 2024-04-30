@@ -116,7 +116,9 @@
         dtpPostingDate.MaxDate = GMod.SessionCurrentDate
 
         tablename = "VENTRY" & "_" & "PHOE" & "_" & GMod.Getsession(Now)
-        sql = "select vtype from Vtype where cmp_id='PHHA'  and (vtype like '%CR VOUCHER%'  or  vtype like '%RECEIPT%' or  vtype like '%FRECEIPT%') and vtype not like 'sale CR'  and session = '" & GMod.Getsession(Now) & "'"
+        ' sql = "select vtype from Vtype where cmp_id='PHHA'  and (vtype like '%CR VOUCHER%'  or  vtype like '%RECEIPT%' or  vtype like '%FRECEIPT%') and vtype not like 'sale CR'  and session = '" & GMod.Getsession(Now) & "'"
+
+        sql = "select vtype from Vtype where cmp_id='PHOE' and Session='" & GMod.Getsession(Now) & "' and Vtype in ('CR VOUCHER','BANK TRANS(GST)')"
         GMod.DataSetRet(sql, "CRVT")
         cmbVoucherType.DataSource = GMod.ds.Tables("CRVT")
         cmbVoucherType.DisplayMember = "vtype"

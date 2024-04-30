@@ -19,11 +19,11 @@ Partial Class frmSalesRegister2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgCRDebit = New System.Windows.Forms.DataGridView()
         Me.INVNO_DATE = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.INVDATE = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -52,6 +52,7 @@ Partial Class frmSalesRegister2
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cmbArea = New System.Windows.Forms.ComboBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.chkAll = New System.Windows.Forms.CheckBox()
         CType(Me.dgCRDebit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -61,24 +62,24 @@ Partial Class frmSalesRegister2
         '
         Me.dgCRDebit.AllowUserToAddRows = False
         Me.dgCRDebit.AllowUserToDeleteRows = False
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgCRDebit.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgCRDebit.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgCRDebit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgCRDebit.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.INVNO_DATE, Me.INVDATE, Me.Hdate, Me.CUSTCODE, Me.acc_head, Me.NOOFCHICKS, Me.FREE, Me.INVAMOUNT, Me.NECCAMOUNT, Me.PRD})
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgCRDebit.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgCRDebit.DefaultCellStyle = DataGridViewCellStyle5
         Me.dgCRDebit.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.dgCRDebit.Location = New System.Drawing.Point(0, 319)
         Me.dgCRDebit.Name = "dgCRDebit"
@@ -102,9 +103,9 @@ Partial Class frmSalesRegister2
         '
         'Hdate
         '
-        DataGridViewCellStyle7.Format = "dd/MMM/yyyy"
-        DataGridViewCellStyle7.NullValue = Nothing
-        Me.Hdate.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle2.Format = "dd/MMM/yyyy"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.Hdate.DefaultCellStyle = DataGridViewCellStyle2
         Me.Hdate.HeaderText = "HATCH DATE"
         Me.Hdate.Name = "Hdate"
         Me.Hdate.ReadOnly = True
@@ -127,9 +128,9 @@ Partial Class frmSalesRegister2
         '
         'NOOFCHICKS
         '
-        DataGridViewCellStyle8.Format = "N0"
-        DataGridViewCellStyle8.NullValue = "0"
-        Me.NOOFCHICKS.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle3.Format = "N0"
+        DataGridViewCellStyle3.NullValue = "0"
+        Me.NOOFCHICKS.DefaultCellStyle = DataGridViewCellStyle3
         Me.NOOFCHICKS.HeaderText = "QTY"
         Me.NOOFCHICKS.MaxInputLength = 20
         Me.NOOFCHICKS.Name = "NOOFCHICKS"
@@ -145,10 +146,10 @@ Partial Class frmSalesRegister2
         '
         'INVAMOUNT
         '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle9.Format = "N2"
-        DataGridViewCellStyle9.NullValue = "0.00"
-        Me.INVAMOUNT.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "N2"
+        DataGridViewCellStyle4.NullValue = "0.00"
+        Me.INVAMOUNT.DefaultCellStyle = DataGridViewCellStyle4
         Me.INVAMOUNT.HeaderText = "INV AMOUNT"
         Me.INVAMOUNT.Name = "INVAMOUNT"
         Me.INVAMOUNT.ReadOnly = True
@@ -183,7 +184,7 @@ Partial Class frmSalesRegister2
         'btnshow
         '
         Me.btnshow.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnshow.Location = New System.Drawing.Point(923, 58)
+        Me.btnshow.Location = New System.Drawing.Point(972, 58)
         Me.btnshow.Name = "btnshow"
         Me.btnshow.Size = New System.Drawing.Size(58, 28)
         Me.btnshow.TabIndex = 152
@@ -269,7 +270,7 @@ Partial Class frmSalesRegister2
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(760, 63)
+        Me.RadioButton1.Location = New System.Drawing.Point(809, 63)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(70, 17)
         Me.RadioButton1.TabIndex = 171
@@ -280,7 +281,7 @@ Partial Class frmSalesRegister2
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(836, 64)
+        Me.RadioButton2.Location = New System.Drawing.Point(885, 64)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(83, 17)
         Me.RadioButton2.TabIndex = 172
@@ -291,7 +292,7 @@ Partial Class frmSalesRegister2
         'btnprint
         '
         Me.btnprint.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnprint.Location = New System.Drawing.Point(987, 58)
+        Me.btnprint.Location = New System.Drawing.Point(1036, 58)
         Me.btnprint.Name = "btnprint"
         Me.btnprint.Size = New System.Drawing.Size(62, 28)
         Me.btnprint.TabIndex = 173
@@ -301,7 +302,7 @@ Partial Class frmSalesRegister2
         'rdpur
         '
         Me.rdpur.AutoSize = True
-        Me.rdpur.Location = New System.Drawing.Point(1055, 63)
+        Me.rdpur.Location = New System.Drawing.Point(1104, 63)
         Me.rdpur.Name = "rdpur"
         Me.rdpur.Size = New System.Drawing.Size(70, 17)
         Me.rdpur.TabIndex = 174
@@ -337,12 +338,23 @@ Partial Class frmSalesRegister2
         Me.CheckBox1.Text = "Select Area"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'chkAll
+        '
+        Me.chkAll.AutoSize = True
+        Me.chkAll.Location = New System.Drawing.Point(760, 63)
+        Me.chkAll.Name = "chkAll"
+        Me.chkAll.Size = New System.Drawing.Size(45, 17)
+        Me.chkAll.TabIndex = 176
+        Me.chkAll.Text = "ALL"
+        Me.chkAll.UseVisualStyleBackColor = True
+        '
         'frmSalesRegister2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGray
         Me.ClientSize = New System.Drawing.Size(1304, 733)
+        Me.Controls.Add(Me.chkAll)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.rdpur)
@@ -398,4 +410,5 @@ Partial Class frmSalesRegister2
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents cmbArea As System.Windows.Forms.ComboBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents chkAll As System.Windows.Forms.CheckBox
 End Class

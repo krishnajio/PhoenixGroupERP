@@ -32,6 +32,8 @@ Public Class frmExpenses
         txtDramt.Text = "0.0"
         txtNarration.Text = ""
         cmbVoucherTax.SelectedIndex = 0
+        txtActualAmt.Text = ""
+        txtTdsAmt.Text = ""
 
     End Sub
     Dim sql As String
@@ -841,7 +843,7 @@ Public Class frmExpenses
     End Sub
     Private Sub txtActualAmt_TextChanged(sender As Object, e As EventArgs) Handles txtActualAmt.TextChanged
         If Val(txtActualAmt.Text) > 0 Then
-            txtTdsAmt.Text = Val(txtActualAmt.Text) * (Val(cmbPer.Text) / 100)
+            txtTdsAmt.Text = Math.Ceiling(Val(txtActualAmt.Text) * (Val(cmbPer.Text) / 100))
         End If
     End Sub
 
