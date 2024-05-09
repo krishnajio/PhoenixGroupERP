@@ -115,6 +115,7 @@ Partial Class frmMDI
         Me.TRPostMultiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DMAuthToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DMPostToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DMListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayPrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem22 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripSeparator()
@@ -271,7 +272,6 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DMListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -836,32 +836,38 @@ Partial Class frmMDI
         'TRAuthToolStripMenuItem
         '
         Me.TRAuthToolStripMenuItem.Name = "TRAuthToolStripMenuItem"
-        Me.TRAuthToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TRAuthToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.TRAuthToolStripMenuItem.Text = "TR Auth"
         '
         'TRPostToolStripMenuItem
         '
         Me.TRPostToolStripMenuItem.Name = "TRPostToolStripMenuItem"
-        Me.TRPostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TRPostToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.TRPostToolStripMenuItem.Text = "TR Post "
         '
         'TRPostMultiToolStripMenuItem
         '
         Me.TRPostMultiToolStripMenuItem.Name = "TRPostMultiToolStripMenuItem"
-        Me.TRPostMultiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TRPostMultiToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.TRPostMultiToolStripMenuItem.Text = "TR Post(Multi)"
         '
         'DMAuthToolStripMenuItem
         '
         Me.DMAuthToolStripMenuItem.Name = "DMAuthToolStripMenuItem"
-        Me.DMAuthToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DMAuthToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.DMAuthToolStripMenuItem.Text = "DM Auth"
         '
         'DMPostToolStripMenuItem
         '
         Me.DMPostToolStripMenuItem.Name = "DMPostToolStripMenuItem"
-        Me.DMPostToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DMPostToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.DMPostToolStripMenuItem.Text = "DM Post"
+        '
+        'DMListToolStripMenuItem
+        '
+        Me.DMListToolStripMenuItem.Name = "DMListToolStripMenuItem"
+        Me.DMListToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.DMListToolStripMenuItem.Text = "DM List"
         '
         'DisplayPrintToolStripMenuItem
         '
@@ -1342,7 +1348,7 @@ Partial Class frmMDI
         '
         Me.CashRecivedToolStripMenuItem.Name = "CashRecivedToolStripMenuItem"
         Me.CashRecivedToolStripMenuItem.Size = New System.Drawing.Size(341, 22)
-        Me.CashRecivedToolStripMenuItem.Text = " Cash Recived/Payment"
+        Me.CashRecivedToolStripMenuItem.Text = "Poultry Sale Purchase Data"
         '
         'DailyPaymentReportToolStripMenuItem
         '
@@ -1868,12 +1874,6 @@ Partial Class frmMDI
         Me.Label2.Size = New System.Drawing.Size(13, 13)
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
-        '
-        'DMListToolStripMenuItem
-        '
-        Me.DMListToolStripMenuItem.Name = "DMListToolStripMenuItem"
-        Me.DMListToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DMListToolStripMenuItem.Text = "DM List"
         '
         'frmMDI
         '

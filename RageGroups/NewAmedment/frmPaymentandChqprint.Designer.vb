@@ -107,6 +107,7 @@ Partial Class frmPaymentandChqprint
         Me.cmbacheadcode = New System.Windows.Forms.ComboBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.chkTdsEntry = New System.Windows.Forms.CheckBox()
+        Me.chkAllVendor = New System.Windows.Forms.CheckBox()
         CType(Me.dgPayment, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgBillNo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -988,12 +989,25 @@ Partial Class frmPaymentandChqprint
         Me.chkTdsEntry.Text = "TdsEntry"
         Me.chkTdsEntry.UseVisualStyleBackColor = True
         '
+        'chkAllVendor
+        '
+        Me.chkAllVendor.AutoSize = True
+        Me.chkAllVendor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkAllVendor.ForeColor = System.Drawing.Color.Red
+        Me.chkAllVendor.Location = New System.Drawing.Point(1264, 34)
+        Me.chkAllVendor.Name = "chkAllVendor"
+        Me.chkAllVendor.Size = New System.Drawing.Size(48, 17)
+        Me.chkAllVendor.TabIndex = 245
+        Me.chkAllVendor.Text = "ALL"
+        Me.chkAllVendor.UseVisualStyleBackColor = True
+        '
         'frmPaymentandChqprint
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(1320, 749)
+        Me.Controls.Add(Me.chkAllVendor)
         Me.Controls.Add(Me.chkTdsEntry)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button4)
@@ -1144,4 +1158,5 @@ Partial Class frmPaymentandChqprint
     Friend WithEvents cmbacheadcode As System.Windows.Forms.ComboBox
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents chkTdsEntry As System.Windows.Forms.CheckBox
+    Friend WithEvents chkAllVendor As System.Windows.Forms.CheckBox
 End Class

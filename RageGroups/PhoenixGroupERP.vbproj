@@ -1639,6 +1639,12 @@
     <Compile Include="NewAmedment\frmPurchaseWastageEntry.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NewAmedment\frmSalePurchasedata.Designer.vb">
+      <DependentUpon>frmSalePurchasedata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\frmSalePurchasedata.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NewAmedment\frmSaletax.Designer.vb">
       <DependentUpon>frmSaletax.vb</DependentUpon>
     </Compile>
@@ -3266,6 +3272,9 @@
       <DependentUpon>frmPurchaseWastageEntry.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\frmSalePurchasedata.resx">
+      <DependentUpon>frmSalePurchasedata.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmSaletax.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmSaletax.vb</DependentUpon>
@@ -3342,7 +3351,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\CrPartyBillDetials.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrPartyBillDetials.vb</LastGenOutput>
+      <LastGenOutput>CrPartyBillDetials1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\CrPartyDueList.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

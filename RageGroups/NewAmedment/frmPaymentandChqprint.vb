@@ -51,6 +51,42 @@ Public Class frmPaymentandChqprint
     Private Sub frmPayment_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         'GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & dgPayment(1, 0).Value & "' and vou_type='PAY' and cmp_id='" & GMod.Cmpid & "'")
     End Sub
+    Public Sub FillParty()
+        If GMod.Cmpid = "PHOE" Then
+            'sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and isActive=1"
+            If chkAllVendor.Checked = False Then
+                sql = "select account_code,account_head_name,group_name,sub_group_name from " & GMod.ACC_HEAD & " where account_code in ("
+                sql &= " select distinct party_code  from Purchase_Data where session='" & GMod.Session & "')"
+                sql &= " union"
+                sql &= " select account_code,account_head_name,group_name,sub_group_name from " & GMod.ACC_HEAD & " where account_code in ("
+                sql &= " select distinct party_code  from Purchase_Data where session='" & GMod.PrevSession & "' and Paid = 0 )"
+                sql &= " union"
+                sql &= " select account_code,account_head_name,group_name,sub_group_name from " & GMod.ACC_HEAD & " "
+                sql &= " where group_name not in ('PARTY')"
+                sql &= " union "
+                sql &= "  select account_code,account_head_name,group_name,sub_group_name from " & GMod.ACC_HEAD & " where account_code in ("
+                sql &= " select distinct Acc_head_code  from " & GMod.VENTRY & " where Vou_type like '%exp%' and Group_name='PARTY')"
+            Else
+                sql = " select * from " & GMod.ACC_HEAD
+            End If
+        Else
+            sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and left(account_code,2) in ('**','" & cmbAreaCode.Text & "') and isActive=1"
+        End If
+            GMod.DataSetRet(sql, "aclist1")
+            cmbcode.DataSource = GMod.ds.Tables("aclist1")
+            cmbcode.DisplayMember = "account_code"
+            cmbAcHead.DataSource = GMod.ds.Tables("aclist1")
+            cmbAcHead.DisplayMember = "account_head_name"
+            ComboBox1.DataSource = GMod.ds.Tables("aclist1")
+            ComboBox1.DisplayMember = "group_name"
+            ComboBox2.DataSource = GMod.ds.Tables("aclist1")
+            ComboBox2.DisplayMember = "sub_group_name"
+            cmbAcHead.Focus()
+            Label1.Text = cmbvoutype.Text
+            Label6.Text = cmbvoutype.Text
+    End Sub
+
+
     Private Sub frmPayment_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'date set to server date 
 
@@ -84,35 +120,11 @@ Public Class frmPaymentandChqprint
 
         If GMod.Getsession(dtvdate.Value) = GMod.Session Then
         Else
-            ' Me.Close()
+            Me.Close()
         End If
 
 
-        If GMod.Cmpid = "PHOE" Then
-            sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and isActive=1"
-        Else
-            sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and left(account_code,2) in ('**','" & cmbAreaCode.Text & "') and isActive=1"
-        End If
-
-
-
-        GMod.DataSetRet(sql, "aclist1")
-
-        cmbcode.DataSource = GMod.ds.Tables("aclist1")
-        cmbcode.DisplayMember = "account_code"
-        cmbAcHead.DataSource = GMod.ds.Tables("aclist1")
-
-        cmbAcHead.DisplayMember = "account_head_name"
-
-        ComboBox1.DataSource = GMod.ds.Tables("aclist1")
-        ComboBox1.DisplayMember = "group_name"
-
-        ComboBox2.DataSource = GMod.ds.Tables("aclist1")
-        ComboBox2.DisplayMember = "sub_group_name"
-
-        cmbAcHead.Focus()
-        Label1.Text = cmbvoutype.Text
-        Label6.Text = cmbvoutype.Text
+        FillParty()
 
 
         If GMod.role.ToUpper = "ADMIN" Then
@@ -1087,4 +1099,7 @@ Public Class frmPaymentandChqprint
     End Sub
 
     
+    Private Sub chkAllVendor_CheckedChanged(sender As Object, e As EventArgs) Handles chkAllVendor.CheckedChanged
+        FillParty()
+    End Sub
 End Class

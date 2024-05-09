@@ -1168,7 +1168,7 @@ Public Class frmMDI
     End Sub
 
     Private Sub CashRecivedToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CashRecivedToolStripMenuItem.Click
-        Dim ghcash As New frmMisCashReceived
+        Dim ghcash As New frmSalePurchasedata
         ghcash.ShowDialog()
     End Sub
 
