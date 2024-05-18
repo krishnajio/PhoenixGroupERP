@@ -32,18 +32,6 @@ Partial Class frmPartyaccount
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dgaccounthead = New System.Windows.Forms.DataGridView()
-        Me.acheadcode = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.accname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.grp = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.subgrp = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dr = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cr = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.crlimit = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.crdays = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.intrule = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.intrate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.inttype = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GSTNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnDosprint = New System.Windows.Forms.Button()
         Me.btnmodify = New System.Windows.Forms.Button()
@@ -97,6 +85,18 @@ Partial Class frmPartyaccount
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtaddress = New System.Windows.Forms.TextBox()
+        Me.acheadcode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.accname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.grp = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.subgrp = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dr = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cr = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.crlimit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.crdays = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.inttype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GSTNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PAN = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AADHAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgaccounthead, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -215,7 +215,7 @@ Partial Class frmPartyaccount
         Me.Label1.ForeColor = System.Drawing.Color.SandyBrown
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1075, 31)
+        Me.Label1.Size = New System.Drawing.Size(1126, 31)
         Me.Label1.TabIndex = 47
         Me.Label1.Text = "Party Account Heads"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -237,95 +237,12 @@ Partial Class frmPartyaccount
         Me.dgaccounthead.AllowUserToOrderColumns = True
         Me.dgaccounthead.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgaccounthead.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgaccounthead.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.acheadcode, Me.accname, Me.grp, Me.subgrp, Me.dr, Me.cr, Me.crlimit, Me.crdays, Me.intrule, Me.intrate, Me.inttype, Me.GSTNO})
+        Me.dgaccounthead.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.acheadcode, Me.accname, Me.grp, Me.subgrp, Me.dr, Me.cr, Me.crlimit, Me.crdays, Me.inttype, Me.GSTNO, Me.PAN, Me.AADHAR})
         Me.dgaccounthead.Location = New System.Drawing.Point(-14, 479)
         Me.dgaccounthead.Name = "dgaccounthead"
         Me.dgaccounthead.ReadOnly = True
-        Me.dgaccounthead.Size = New System.Drawing.Size(1079, 258)
+        Me.dgaccounthead.Size = New System.Drawing.Size(1128, 258)
         Me.dgaccounthead.TabIndex = 50
-        '
-        'acheadcode
-        '
-        Me.acheadcode.HeaderText = "Account Head Code"
-        Me.acheadcode.Name = "acheadcode"
-        Me.acheadcode.ReadOnly = True
-        Me.acheadcode.Width = 80
-        '
-        'accname
-        '
-        Me.accname.HeaderText = "Account Head Name"
-        Me.accname.Name = "accname"
-        Me.accname.ReadOnly = True
-        Me.accname.Width = 160
-        '
-        'grp
-        '
-        Me.grp.HeaderText = "Group"
-        Me.grp.Name = "grp"
-        Me.grp.ReadOnly = True
-        Me.grp.Width = 80
-        '
-        'subgrp
-        '
-        Me.subgrp.HeaderText = "Sub Group"
-        Me.subgrp.Name = "subgrp"
-        Me.subgrp.ReadOnly = True
-        Me.subgrp.Width = 80
-        '
-        'dr
-        '
-        Me.dr.HeaderText = "Opening Dr"
-        Me.dr.Name = "dr"
-        Me.dr.ReadOnly = True
-        Me.dr.Width = 80
-        '
-        'cr
-        '
-        Me.cr.HeaderText = "Opening Cr"
-        Me.cr.Name = "cr"
-        Me.cr.ReadOnly = True
-        Me.cr.Width = 80
-        '
-        'crlimit
-        '
-        Me.crlimit.HeaderText = "Cr. Limit"
-        Me.crlimit.Name = "crlimit"
-        Me.crlimit.ReadOnly = True
-        Me.crlimit.Width = 80
-        '
-        'crdays
-        '
-        Me.crdays.HeaderText = "Cr. Days"
-        Me.crdays.Name = "crdays"
-        Me.crdays.ReadOnly = True
-        Me.crdays.Width = 50
-        '
-        'intrule
-        '
-        Me.intrule.HeaderText = "Interest Rule"
-        Me.intrule.Name = "intrule"
-        Me.intrule.ReadOnly = True
-        Me.intrule.Width = 80
-        '
-        'intrate
-        '
-        Me.intrate.HeaderText = "Rate of Interest (%)"
-        Me.intrate.Name = "intrate"
-        Me.intrate.ReadOnly = True
-        Me.intrate.Width = 50
-        '
-        'inttype
-        '
-        Me.inttype.HeaderText = "Int Type"
-        Me.inttype.Name = "inttype"
-        Me.inttype.ReadOnly = True
-        Me.inttype.Width = 50
-        '
-        'GSTNO
-        '
-        Me.GSTNO.HeaderText = "GSTNo"
-        Me.GSTNO.Name = "GSTNO"
-        Me.GSTNO.ReadOnly = True
         '
         'Panel1
         '
@@ -765,7 +682,7 @@ Partial Class frmPartyaccount
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Red
-        Me.Label21.Location = New System.Drawing.Point(31, 199)
+        Me.Label21.Location = New System.Drawing.Point(46, 199)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(56, 15)
         Me.Label21.TabIndex = 68
@@ -775,7 +692,7 @@ Partial Class frmPartyaccount
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(35, 278)
+        Me.Label20.Location = New System.Drawing.Point(36, 278)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(66, 15)
         Me.Label20.TabIndex = 67
@@ -812,17 +729,17 @@ Partial Class frmPartyaccount
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(38, 255)
+        Me.Label12.Location = New System.Drawing.Point(29, 255)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(65, 15)
+        Me.Label12.Size = New System.Drawing.Size(73, 15)
         Me.Label12.TabIndex = 65
-        Me.Label12.Text = "TIN NO. :"
+        Me.Label12.Text = "AADHAR. :"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(24, 230)
+        Me.Label8.Location = New System.Drawing.Point(25, 230)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(77, 15)
         Me.Label8.TabIndex = 63
@@ -841,7 +758,7 @@ Partial Class frmPartyaccount
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(31, 176)
+        Me.Label10.Location = New System.Drawing.Point(34, 176)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(68, 15)
         Me.Label10.TabIndex = 61
@@ -860,7 +777,7 @@ Partial Class frmPartyaccount
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(18, 151)
+        Me.Label11.Location = New System.Drawing.Point(20, 151)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(82, 15)
         Me.Label11.TabIndex = 59
@@ -928,12 +845,93 @@ Partial Class frmPartyaccount
         Me.txtaddress.TabIndex = 8
         Me.txtaddress.Text = "-"
         '
+        'acheadcode
+        '
+        Me.acheadcode.HeaderText = "Account Head Code"
+        Me.acheadcode.Name = "acheadcode"
+        Me.acheadcode.ReadOnly = True
+        Me.acheadcode.Width = 80
+        '
+        'accname
+        '
+        Me.accname.HeaderText = "Account Head Name"
+        Me.accname.Name = "accname"
+        Me.accname.ReadOnly = True
+        Me.accname.Width = 160
+        '
+        'grp
+        '
+        Me.grp.HeaderText = "Group"
+        Me.grp.Name = "grp"
+        Me.grp.ReadOnly = True
+        Me.grp.Width = 80
+        '
+        'subgrp
+        '
+        Me.subgrp.HeaderText = "Sub Group"
+        Me.subgrp.Name = "subgrp"
+        Me.subgrp.ReadOnly = True
+        Me.subgrp.Width = 80
+        '
+        'dr
+        '
+        Me.dr.HeaderText = "Opening Dr"
+        Me.dr.Name = "dr"
+        Me.dr.ReadOnly = True
+        Me.dr.Width = 80
+        '
+        'cr
+        '
+        Me.cr.HeaderText = "Opening Cr"
+        Me.cr.Name = "cr"
+        Me.cr.ReadOnly = True
+        Me.cr.Width = 80
+        '
+        'crlimit
+        '
+        Me.crlimit.HeaderText = "Cr. Limit"
+        Me.crlimit.Name = "crlimit"
+        Me.crlimit.ReadOnly = True
+        Me.crlimit.Width = 80
+        '
+        'crdays
+        '
+        Me.crdays.HeaderText = "Cr. Days"
+        Me.crdays.Name = "crdays"
+        Me.crdays.ReadOnly = True
+        Me.crdays.Width = 50
+        '
+        'inttype
+        '
+        Me.inttype.HeaderText = "Int Type"
+        Me.inttype.Name = "inttype"
+        Me.inttype.ReadOnly = True
+        Me.inttype.Width = 50
+        '
+        'GSTNO
+        '
+        Me.GSTNO.HeaderText = "GSTNo"
+        Me.GSTNO.Name = "GSTNO"
+        Me.GSTNO.ReadOnly = True
+        '
+        'PAN
+        '
+        Me.PAN.HeaderText = "PAN"
+        Me.PAN.Name = "PAN"
+        Me.PAN.ReadOnly = True
+        '
+        'AADHAR
+        '
+        Me.AADHAR.HeaderText = "AADHAR"
+        Me.AADHAR.Name = "AADHAR"
+        Me.AADHAR.ReadOnly = True
+        '
         'frmPartyaccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Lavender
-        Me.ClientSize = New System.Drawing.Size(1075, 749)
+        Me.ClientSize = New System.Drawing.Size(1126, 749)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label5)
@@ -1014,18 +1012,6 @@ Partial Class frmPartyaccount
     Friend WithEvents txtEmailID As System.Windows.Forms.TextBox
     Friend WithEvents txtGstIn As System.Windows.Forms.TextBox
     Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents acheadcode As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents accname As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents grp As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents subgrp As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents dr As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cr As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents crlimit As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents crdays As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents intrule As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents intrate As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents inttype As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents GSTNO As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents txtBankName As System.Windows.Forms.TextBox
     Friend WithEvents Label22 As System.Windows.Forms.Label
@@ -1034,4 +1020,16 @@ Partial Class frmPartyaccount
     Friend WithEvents txtBranch As System.Windows.Forms.TextBox
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents txtIFSCCode As System.Windows.Forms.TextBox
+    Friend WithEvents acheadcode As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents accname As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents grp As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents subgrp As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dr As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cr As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents crlimit As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents crdays As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents inttype As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents GSTNO As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PAN As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents AADHAR As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

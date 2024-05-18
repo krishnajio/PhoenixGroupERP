@@ -48,8 +48,12 @@
                     'Dim dd() As String
                     'dd = dg(7, i).Value.ToString().Split("/")
                     'vou_date = dd(1) & "/" & dd(0) & "/" & dd(2)
+                    If txtAreaCode.Text.ToUpper = "BM" Then
+                        Narration = "By TR NO " & dg(4, i).Value & "Bank Dt." & dg(13, i).Value
+                    Else
+                        Narration = "By TR NO " & dg(4, i).Value & " Dt." & dg(5, i).Value & " # " & dg(15, i).Value
+                    End If
 
-                    Narration = "By TR NO " & dg(4, i).Value & " Dt." & dg(5, i).Value & " # " & dg(15, i).Value
                     'Customer Account Credited
                     sql = "insert into " & tablename & "(Cmp_id, Uname, Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, "
                     sql &= "Acc_head, dramt, cramt, Pay_mode, Cheque_no, Narration, Group_name,sub_group_name) values("

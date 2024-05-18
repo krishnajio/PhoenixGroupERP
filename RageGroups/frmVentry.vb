@@ -798,232 +798,232 @@ Public Class frmVentry
                         '--For Inventory---------------------
                         Dim sqlinv As String, sqlsave As String
                         If GMod.Cmpid = "VIBU" Then
-                            sqlinv = "select * from " & GMod.INVENTORY & " where Vou_no=" & lblvouno.Text & " and Vou_type='" & cmbvtype.Text & "'"
-                            GMod.DataSetRet(sqlinv, "Invtab")
-                            If GMod.ds.Tables("Invtab").Rows.Count > 0 Then
-                                GMod.SqlExecuteNonQuery("delete from tmpInvinfo where uname='" & GMod.username & "'")
-                                InventoryFound = True
-                                MsgBox("Inventry in the voucher,please PRESS F1 and then edit", MsgBoxStyle.Information)
-                                sqlsave = "  insert into tmpInvinfo(Cmp_id, Uname, Vou_no, Vou_type, Vou_date, Acc_head_code, " _
-                                             & "Acc_head, ItemName, Qty, QtyNos, Unit, Rate, Amount, Free_Qty, BillType, " _
-                                            & "BillNo, BillDate, AreaCode,Hatch_date)  " _
-                               & " select Cmp_id,'" & GMod.username & "', Vou_no, Vou_type, Vou_date, " _
-                               & " Acc_head_code, Acc_head, ItemName, Qty, QtyNos, Unit, " _
-                               & " Rate, Amount, Free_Qty, BillType, BillNo, BillDate,  " _
-                               & " AreaCode,Hatch_date from " & GMod.INVENTORY & " where Vou_no=" & lblvouno.Text & " and Vou_type='" & cmbvtype.Text & "'"
-                                GMod.SqlExecuteNonQuery(sqlsave)
-                                'Dim t As New frmInvInfo
-                                't.ShowDialog()
-                                'dgvoucher(5, dgvoucher.CurrentCell.RowIndex).Value = t.txtTotal.Text
-                                'dgvoucher(3, dgvoucher.CurrentCell.RowIndex).Value = t.txtNarration.Text
-                            End If
+                            '        sqlinv = "select * from " & GMod.INVENTORY & " where Vou_no=" & lblvouno.Text & " and Vou_type='" & cmbvtype.Text & "'"
+                            '        GMod.DataSetRet(sqlinv, "Invtab")
+                            '        If GMod.ds.Tables("Invtab").Rows.Count > 0 Then
+                            '            GMod.SqlExecuteNonQuery("delete from tmpInvinfo where uname='" & GMod.username & "'")
+                            '            InventoryFound = True
+                            '            MsgBox("Inventry in the voucher,please PRESS F1 and then edit", MsgBoxStyle.Information)
+                            '            sqlsave = "  insert into tmpInvinfo(Cmp_id, Uname, Vou_no, Vou_type, Vou_date, Acc_head_code, " _
+                            '                         & "Acc_head, ItemName, Qty, QtyNos, Unit, Rate, Amount, Free_Qty, BillType, " _
+                            '                        & "BillNo, BillDate, AreaCode,Hatch_date)  " _
+                            '           & " select Cmp_id,'" & GMod.username & "', Vou_no, Vou_type, Vou_date, " _
+                            '           & " Acc_head_code, Acc_head, ItemName, Qty, QtyNos, Unit, " _
+                            '           & " Rate, Amount, Free_Qty, BillType, BillNo, BillDate,  " _
+                            '           & " AreaCode,Hatch_date from " & GMod.INVENTORY & " where Vou_no=" & lblvouno.Text & " and Vou_type='" & cmbvtype.Text & "'"
+                            '            GMod.SqlExecuteNonQuery(sqlsave)
+                            '            'Dim t As New frmInvInfo
+                            '            't.ShowDialog()
+                            '            'dgvoucher(5, dgvoucher.CurrentCell.RowIndex).Value = t.txtTotal.Text
+                            '            'dgvoucher(3, dgvoucher.CurrentCell.RowIndex).Value = t.txtNarration.Text
+                            '        End If
                         End If
                     Catch ex As Exception
 
-                    End Try
-                ElseIf cmbvtype.Text = "PAYMENT" Then
-                    sql = "select * from " & GMod.VENTRY & " where vou_no='" & r.txtvouno.Text & "'"
-                    sql += " and vou_type='" & r.cmbvtype.Text & "' order by cramt desc"
-                    GMod.DataSetRet(sql, "ser")
-                    If GMod.ds.Tables("ser").Rows.Count > 0 Then
-                        cmbacgroup.Text = GMod.ds.Tables("ser").Rows(0)("group_name")
-                        cmbacsubgroup.Text = GMod.ds.Tables("ser").Rows(0)("sub_group_name")
-                        cmbacheadcode.Text = GMod.ds.Tables("ser").Rows(0)("acc_head_code")
-                        cmbacheadname.Text = GMod.ds.Tables("ser").Rows(0)("acc_head")
-                        sql = " select * from " & GMod.VENTRY & " where vou_no='" & r.txtvouno.Text & "'"
-                        sql += " and vou_type='" & r.cmbvtype.Text & "' and dramt>0 order by entry_id"
-                        GMod.DataSetRet(sql, "ser")
-
-                        If dgvoucher.Rows.Count > 0 Then dgvoucher.Rows.Clear()
-                        cmbvtype.Text = GMod.ds.Tables("ser").Rows(0)("vou_type")
-                        dtVdate.Value = GMod.ds.Tables("ser").Rows(0)("vou_date")
-                        lblvouno.Text = GMod.ds.Tables("ser").Rows(0)("vou_no")
-
-                        For i = 0 To GMod.ds.Tables("ser").Rows.Count - 1
-                            dgvoucher.Rows.Add()
-                            dgvoucher(0, i).Value = i + 1
-                            dgvoucher(1, i).Value = GMod.ds.Tables("ser").Rows(i)("acc_head_code")
-                            dgvoucher(2, i).Value = GMod.ds.Tables("ser").Rows(i)("acc_head")
-                            dgvoucher(3, i).Value = GMod.ds.Tables("ser").Rows(i)("narration")
-                            dgvoucher(4, i).Value = GMod.ds.Tables("ser").Rows(i)("cheque_no")
-                            If GMod.ds.Tables("ser").Rows(i)("dramt") > 0 Then
-                                dgvoucher(5, i).Value = GMod.ds.Tables("ser").Rows(i)("dramt")
-                                dgvoucher(6, i).Value = "Dr"
-                            Else
-                                dgvoucher(5, i).Value = GMod.ds.Tables("ser").Rows(i)("cramt")
-                                dgvoucher(6, i).Value = "Dr"
-                            End If
-                        Next
-                        F = 1
-                    End If
-                ElseIf cmbvtype.Text = "RECEIPT" Then
-                    sql = "select * from " & GMod.VENTRY & " where vou_no='" & r.txtvouno.Text & "'"
-                    sql += " and vou_type='" & r.cmbvtype.Text & "' order by dramt desc"
-                    GMod.DataSetRet(sql, "ser")
-                    If GMod.ds.Tables("ser").Rows.Count > 0 Then
-                        cmbacgroup.Text = GMod.ds.Tables("ser").Rows(0)("group_name")
-                        cmbacsubgroup.Text = GMod.ds.Tables("ser").Rows(0)("sub_group_name")
-                        cmbacheadcode.Text = GMod.ds.Tables("ser").Rows(0)("acc_head_code")
-                        cmbacheadname.Text = GMod.ds.Tables("ser").Rows(0)("acc_head")
+                        End Try
+            ElseIf cmbvtype.Text = "PAYMENT" Then
                         sql = "select * from " & GMod.VENTRY & " where vou_no='" & r.txtvouno.Text & "'"
-                        sql += " and vou_type='" & r.cmbvtype.Text & "' and cramt>0 order by entry_id"
+                        sql += " and vou_type='" & r.cmbvtype.Text & "' order by cramt desc"
                         GMod.DataSetRet(sql, "ser")
+                        If GMod.ds.Tables("ser").Rows.Count > 0 Then
+                            cmbacgroup.Text = GMod.ds.Tables("ser").Rows(0)("group_name")
+                            cmbacsubgroup.Text = GMod.ds.Tables("ser").Rows(0)("sub_group_name")
+                            cmbacheadcode.Text = GMod.ds.Tables("ser").Rows(0)("acc_head_code")
+                            cmbacheadname.Text = GMod.ds.Tables("ser").Rows(0)("acc_head")
+                            sql = " select * from " & GMod.VENTRY & " where vou_no='" & r.txtvouno.Text & "'"
+                            sql += " and vou_type='" & r.cmbvtype.Text & "' and dramt>0 order by entry_id"
+                            GMod.DataSetRet(sql, "ser")
 
-                        If dgvoucher.Rows.Count > 0 Then dgvoucher.Rows.Clear()
-                        cmbvtype.Text = GMod.ds.Tables("ser").Rows(0)("vou_type")
-                        dtVdate.MinDate = CDate(GMod.ds.Tables("ser").Rows(0)("vou_date")).AddDays(-GMod.nofd)
-                        lblvouno.Text = GMod.ds.Tables("ser").Rows(0)("vou_no")
-                        For i = 0 To GMod.ds.Tables("ser").Rows.Count - 1
-                            dgvoucher.Rows.Add()
-                            dgvoucher(0, i).Value = i + 1
-                            dgvoucher(1, i).Value = GMod.ds.Tables("ser").Rows(i)("acc_head_code")
-                            dgvoucher(2, i).Value = GMod.ds.Tables("ser").Rows(i)("acc_head")
-                            dgvoucher(3, i).Value = GMod.ds.Tables("ser").Rows(i)("narration")
-                            dgvoucher(4, i).Value = GMod.ds.Tables("ser").Rows(i)("cheque_no")
-                            If GMod.ds.Tables("ser").Rows(i)("dramt") > 0 Then
-                                dgvoucher(5, i).Value = GMod.ds.Tables("ser").Rows(i)("dramt")
-                                dgvoucher(6, i).Value = "Cr"
-                            Else
-                                dgvoucher(5, i).Value = GMod.ds.Tables("ser").Rows(i)("cramt")
-                                dgvoucher(6, i).Value = "Cr"
-                            End If
-                        Next
-                        F = 1
-                    End If
-                End If
-                If F = 1 Then
-                    btnsave.Enabled = False
-                    ' dtvdate.Enabled = False
-                    btnmodify.Text = "&Update"
-                    Me.cmbvtype.Enabled = False
-                    dgvoucher.Focus()
-                Else
-                    MsgBox("Invalid Voucher No", MsgBoxStyle.Critical)
-                End If
-            Else
-                'Dim sqldel, res As String
-                ''delete existing voucher
-                'If GMod.InventoryFound = True Then
-                '    sqldel = "Delete from " & GMod.INVENTORY & " where vou_no='" & lblvouno.Text & "' and vou_type='" & cmbvtype.Text & "'"
-                '    res = GMod.SqlExecuteNonQuery(sqldel)
-                'End If
-                'sqldel = "Delete from " & GMod.VENTRY & " where vou_no='" & lblvouno.Text & "' and vou_type='" & cmbvtype.Text & "'"
-                'res = GMod.SqlExecuteNonQuery(sqldel)
-                'If res = "SUCCESS" Then
-                '    btnsave_Click(sender, e)
-                'Else
-                '    MsgBox(res)
-                'End If
+                            If dgvoucher.Rows.Count > 0 Then dgvoucher.Rows.Clear()
+                            cmbvtype.Text = GMod.ds.Tables("ser").Rows(0)("vou_type")
+                            dtVdate.Value = GMod.ds.Tables("ser").Rows(0)("vou_date")
+                            lblvouno.Text = GMod.ds.Tables("ser").Rows(0)("vou_no")
 
-                '------------------------------------------------------------------------------------------------------------------------------
-
-                If CheckBox3.Checked = True And btnsave.Enabled = True Then
-                    'nxtvno()
-                Else
-                    GMod.Fill_Log(GMod.Cmpid, lblvouno.Text, cmbvtype.Text, dtvdate.Value, Now, GMod.Session, "M", GMod.username)
-                End If
-                Dim i As Integer
-
-                Dim sqltrans As SqlClient.SqlTransaction
-                Dim sqldel, paymod, Group_name, Sub_group_name, SqlGrpsubgrp As String
-                Dim varcr, vardr, eid, c, d As Double
-                sqltrans = GMod.SqlConn.BeginTransaction
-                If GMod.Cmpid = "VIBU" Then
-                    sqldel = "Delete from " & GMod.INVENTORY & " where vou_no='" & lblvouno.Text & "' and vou_type='" & cmbvtype.Text & "'"
-                    Dim cmd0 As New SqlClient.SqlCommand(sqldel, GMod.SqlConn, sqltrans)
-                    cmd0.ExecuteNonQuery()
-                End If
-                sqldel = "Delete from " & GMod.VENTRY & " where vou_no='" & lblvouno.Text & "' and vou_type='" & cmbvtype.Text & "'"
-                Dim cmd1 As New SqlClient.SqlCommand(sqldel, GMod.SqlConn, sqltrans)
-                cmd1.ExecuteNonQuery()
-                d = -1
-                c = 0
-                Try
-                    Dim sqlsave As String = ""
-                    For i = 0 To dgvoucher.Rows.Count - 1
-                        If Len(dgvoucher(1, i).Value) <> 0 Then
-                            If Len(dgvoucher(1, i).Value) > 0 Then 'check for account head code is empaty
-                                If Len(dgvoucher(4, i).Value) > 0 Then 'check for  paymod
-                                    paymod = "CHEQUE"
+                            For i = 0 To GMod.ds.Tables("ser").Rows.Count - 1
+                                dgvoucher.Rows.Add()
+                                dgvoucher(0, i).Value = i + 1
+                                dgvoucher(1, i).Value = GMod.ds.Tables("ser").Rows(i)("acc_head_code")
+                                dgvoucher(2, i).Value = GMod.ds.Tables("ser").Rows(i)("acc_head")
+                                dgvoucher(3, i).Value = GMod.ds.Tables("ser").Rows(i)("narration")
+                                dgvoucher(4, i).Value = GMod.ds.Tables("ser").Rows(i)("cheque_no")
+                                If GMod.ds.Tables("ser").Rows(i)("dramt") > 0 Then
+                                    dgvoucher(5, i).Value = GMod.ds.Tables("ser").Rows(i)("dramt")
+                                    dgvoucher(6, i).Value = "Dr"
                                 Else
-                                    paymod = "CASH"
-                                End If 'for paymode
-                                paymod = "-"
-                                If dgvoucher(6, i).Value = "Dr" Then 'check amount
-                                    vardr = dgvoucher(5, i).Value
-                                    varcr = 0
-                                    eid = d
-                                    d = d - 1 ' for entry id 
-                                Else
-                                    vardr = 0
-                                    varcr = dgvoucher(5, i).Value
-                                    eid = c
-                                    c = c + 1 'for entry id 
+                                    dgvoucher(5, i).Value = GMod.ds.Tables("ser").Rows(i)("cramt")
+                                    dgvoucher(6, i).Value = "Dr"
                                 End If
-                                'Getting Group and sub gropu from Acc_head table on basis of Acc_code
-                                'Code by krishna 
-                                SqlGrpsubgrp = "select group_name,sub_group_name from " & GMod.ACC_HEAD & " where account_code = '" & dgvoucher(1, i).Value & "'"
-                                GMod.DataSetRet(SqlGrpsubgrp, "Grp_Sub")
-                                Group_name = GMod.ds.Tables("Grp_Sub").Rows(0)(0)
-                                Sub_group_name = GMod.ds.Tables("Grp_Sub").Rows(0)(1)
-
-                                If Sub_group_name.Length = 0 Then
-                                    Sub_group_name = "-"
-                                End If
-
-                                sqlsave = "insert into " & GMod.VENTRY & "(Cmp_id, Uname, Entry_id, Vou_no, Vou_type, Vou_date,"
-                                sqlsave += "acc_head_code,Acc_head, dramt, cramt,Pay_mode, Cheque_no, Narration, Group_name, Sub_group_name"
-                                sqlsave += ") values ( "
-                                sqlsave += "'" & GMod.Cmpid & "','" & GMod.username & "'," & Val(dgvoucher(0, i).Value) & ",'" & lblvouno.Text & "',"
-                                sqlsave += "'" & cmbvtype.Text & "','" & dtVdate.Value.ToShortDateString & "','" & dgvoucher(1, i).Value & "','" & dgvoucher(2, i).Value & "'," & Val(vardr) & "," & Val(varcr) & ","
-                                sqlsave += "'" & paymod & "','" & dgvoucher(4, i).Value & "','" & dgvoucher(3, i).Value & "','" & Group_name & "',"
-                                sqlsave += "'" & Sub_group_name & "')"
-                                GMod.ds.Tables("Grp_Sub").Clear()
-                            End If
-                            Dim cmd2 As New SqlClient.SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
-                            cmd2.ExecuteNonQuery()
+                            Next
+                            F = 1
                         End If
-                    Next
-                    If GMod.Cmpid = "VIBU" Then
-                        Dim cmd3 As New SqlClient.SqlCommand("insert into " & GMod.INVENTORY & " select * from tmpInvinfo where Cmp_id='" & GMod.Cmpid & "' and Uname='" & GMod.username & "'", GMod.SqlConn, sqltrans)
-                        'cmd3.ExecuteNonQuery()
+            ElseIf cmbvtype.Text = "RECEIPT" Then
+                        sql = "select * from " & GMod.VENTRY & " where vou_no='" & r.txtvouno.Text & "'"
+                        sql += " and vou_type='" & r.cmbvtype.Text & "' order by dramt desc"
+                        GMod.DataSetRet(sql, "ser")
+                        If GMod.ds.Tables("ser").Rows.Count > 0 Then
+                            cmbacgroup.Text = GMod.ds.Tables("ser").Rows(0)("group_name")
+                            cmbacsubgroup.Text = GMod.ds.Tables("ser").Rows(0)("sub_group_name")
+                            cmbacheadcode.Text = GMod.ds.Tables("ser").Rows(0)("acc_head_code")
+                            cmbacheadname.Text = GMod.ds.Tables("ser").Rows(0)("acc_head")
+                            sql = "select * from " & GMod.VENTRY & " where vou_no='" & r.txtvouno.Text & "'"
+                            sql += " and vou_type='" & r.cmbvtype.Text & "' and cramt>0 order by entry_id"
+                            GMod.DataSetRet(sql, "ser")
 
-                        'delete existing voucher
-                        sqldel = "delete from tmpInvinfo where Cmp_id='" & GMod.Cmpid & "' and Uname='" & GMod.username & "'"
-                        Dim cmd5 As New SqlClient.SqlCommand(sqldel, GMod.SqlConn, sqltrans)
-                        cmd5.ExecuteNonQuery()
+                            If dgvoucher.Rows.Count > 0 Then dgvoucher.Rows.Clear()
+                            cmbvtype.Text = GMod.ds.Tables("ser").Rows(0)("vou_type")
+                            dtVdate.MinDate = CDate(GMod.ds.Tables("ser").Rows(0)("vou_date")).AddDays(-GMod.nofd)
+                            lblvouno.Text = GMod.ds.Tables("ser").Rows(0)("vou_no")
+                            For i = 0 To GMod.ds.Tables("ser").Rows.Count - 1
+                                dgvoucher.Rows.Add()
+                                dgvoucher(0, i).Value = i + 1
+                                dgvoucher(1, i).Value = GMod.ds.Tables("ser").Rows(i)("acc_head_code")
+                                dgvoucher(2, i).Value = GMod.ds.Tables("ser").Rows(i)("acc_head")
+                                dgvoucher(3, i).Value = GMod.ds.Tables("ser").Rows(i)("narration")
+                                dgvoucher(4, i).Value = GMod.ds.Tables("ser").Rows(i)("cheque_no")
+                                If GMod.ds.Tables("ser").Rows(i)("dramt") > 0 Then
+                                    dgvoucher(5, i).Value = GMod.ds.Tables("ser").Rows(i)("dramt")
+                                    dgvoucher(6, i).Value = "Cr"
+                                Else
+                                    dgvoucher(5, i).Value = GMod.ds.Tables("ser").Rows(i)("cramt")
+                                    dgvoucher(6, i).Value = "Cr"
+                                End If
+                            Next
+                            F = 1
+                        End If
+            End If
+            If F = 1 Then
+                btnsave.Enabled = False
+                ' dtvdate.Enabled = False
+                btnmodify.Text = "&Update"
+                Me.cmbvtype.Enabled = False
+                dgvoucher.Focus()
+            Else
+                MsgBox("Invalid Voucher No", MsgBoxStyle.Critical)
+            End If
+            Else
+            'Dim sqldel, res As String
+            ''delete existing voucher
+            'If GMod.InventoryFound = True Then
+            '    sqldel = "Delete from " & GMod.INVENTORY & " where vou_no='" & lblvouno.Text & "' and vou_type='" & cmbvtype.Text & "'"
+            '    res = GMod.SqlExecuteNonQuery(sqldel)
+            'End If
+            'sqldel = "Delete from " & GMod.VENTRY & " where vou_no='" & lblvouno.Text & "' and vou_type='" & cmbvtype.Text & "'"
+            'res = GMod.SqlExecuteNonQuery(sqldel)
+            'If res = "SUCCESS" Then
+            '    btnsave_Click(sender, e)
+            'Else
+            '    MsgBox(res)
+            'End If
+
+            '------------------------------------------------------------------------------------------------------------------------------
+
+            If CheckBox3.Checked = True And btnsave.Enabled = True Then
+                'nxtvno()
+            Else
+                GMod.Fill_Log(GMod.Cmpid, lblvouno.Text, cmbvtype.Text, dtVdate.Value, Now, GMod.Session, "M", GMod.username)
+            End If
+            Dim i As Integer
+
+            Dim sqltrans As SqlClient.SqlTransaction
+            Dim sqldel, paymod, Group_name, Sub_group_name, SqlGrpsubgrp As String
+            Dim varcr, vardr, eid, c, d As Double
+            sqltrans = GMod.SqlConn.BeginTransaction
+            If GMod.Cmpid = "VIBU" Then
+                sqldel = "Delete from " & GMod.INVENTORY & " where vou_no='" & lblvouno.Text & "' and vou_type='" & cmbvtype.Text & "'"
+                    ' Dim cmd0 As New SqlClient.SqlCommand(sqldel, GMod.SqlConn, sqltrans)
+                    ' cmd0.ExecuteNonQuery()
+            End If
+            sqldel = "Delete from " & GMod.VENTRY & " where vou_no='" & lblvouno.Text & "' and vou_type='" & cmbvtype.Text & "'"
+            Dim cmd1 As New SqlClient.SqlCommand(sqldel, GMod.SqlConn, sqltrans)
+            cmd1.ExecuteNonQuery()
+            d = -1
+            c = 0
+            Try
+                Dim sqlsave As String = ""
+                For i = 0 To dgvoucher.Rows.Count - 1
+                    If Len(dgvoucher(1, i).Value) <> 0 Then
+                        If Len(dgvoucher(1, i).Value) > 0 Then 'check for account head code is empaty
+                            If Len(dgvoucher(4, i).Value) > 0 Then 'check for  paymod
+                                paymod = "CHEQUE"
+                            Else
+                                paymod = "CASH"
+                            End If 'for paymode
+                            paymod = "-"
+                            If dgvoucher(6, i).Value = "Dr" Then 'check amount
+                                vardr = dgvoucher(5, i).Value
+                                varcr = 0
+                                eid = d
+                                d = d - 1 ' for entry id 
+                            Else
+                                vardr = 0
+                                varcr = dgvoucher(5, i).Value
+                                eid = c
+                                c = c + 1 'for entry id 
+                            End If
+                            'Getting Group and sub gropu from Acc_head table on basis of Acc_code
+                            'Code by krishna 
+                            SqlGrpsubgrp = "select group_name,sub_group_name from " & GMod.ACC_HEAD & " where account_code = '" & dgvoucher(1, i).Value & "'"
+                            GMod.DataSetRet(SqlGrpsubgrp, "Grp_Sub")
+                            Group_name = GMod.ds.Tables("Grp_Sub").Rows(0)(0)
+                            Sub_group_name = GMod.ds.Tables("Grp_Sub").Rows(0)(1)
+
+                            If Sub_group_name.Length = 0 Then
+                                Sub_group_name = "-"
+                            End If
+
+                            sqlsave = "insert into " & GMod.VENTRY & "(Cmp_id, Uname, Entry_id, Vou_no, Vou_type, Vou_date,"
+                            sqlsave += "acc_head_code,Acc_head, dramt, cramt,Pay_mode, Cheque_no, Narration, Group_name, Sub_group_name"
+                            sqlsave += ") values ( "
+                            sqlsave += "'" & GMod.Cmpid & "','" & GMod.username & "'," & Val(dgvoucher(0, i).Value) & ",'" & lblvouno.Text & "',"
+                            sqlsave += "'" & cmbvtype.Text & "','" & dtVdate.Value.ToShortDateString & "','" & dgvoucher(1, i).Value & "','" & dgvoucher(2, i).Value & "'," & Val(vardr) & "," & Val(varcr) & ","
+                            sqlsave += "'" & paymod & "','" & dgvoucher(4, i).Value & "','" & dgvoucher(3, i).Value & "','" & Group_name & "',"
+                            sqlsave += "'" & Sub_group_name & "')"
+                            GMod.ds.Tables("Grp_Sub").Clear()
+                        End If
+                        Dim cmd2 As New SqlClient.SqlCommand(sqlsave, GMod.SqlConn, sqltrans)
+                        cmd2.ExecuteNonQuery()
                     End If
-                    'Setting Inventry Found to FASLE
+                Next
+                If GMod.Cmpid = "VIBU" Then
+                    Dim cmd3 As New SqlClient.SqlCommand("insert into " & GMod.INVENTORY & " select * from tmpInvinfo where Cmp_id='" & GMod.Cmpid & "' and Uname='" & GMod.username & "'", GMod.SqlConn, sqltrans)
+                    'cmd3.ExecuteNonQuery()
 
-                    sqltrans.Commit()
-                    'nxtvno()
-                    InventoryFound = False
-                    btnsave.Enabled = True
-                    dtVdate.Enabled = True
-                    btnmodify.Text = "&Modify"
-                    cmbvtype.Enabled = True
-                    dgvoucher.Rows.Clear()
-                    dgvoucher.Rows.Add()
-                    dgvoucher.Focus()
-                    MsgBox("Voucher modified")
-                Catch ex As Exception
-                    MsgBox(ex.Message, MsgBoxStyle.Critical, GMod.Cmpname)
-                    sqltrans.Rollback()
-                    InventoryFound = False
-                    InventoryFound = False
-                    btnsave.Enabled = True
-                    dtVdate.Enabled = True
-                    btnmodify.Text = "&Modify"
-                    cmbvtype.Enabled = True
-                    dgvoucher.Rows.Clear()
-                    dgvoucher.Rows.Add()
-                    dgvoucher.Focus()
-                    'nxtvno()
-                End Try
-                sqltrans.Dispose()
-                GMod.ds.Tables.Clear()
-                '------------------------------------------------------------------------------------------------------------------------------
+                    'delete existing voucher
+                    sqldel = "delete from tmpInvinfo where Cmp_id='" & GMod.Cmpid & "' and Uname='" & GMod.username & "'"
+                    Dim cmd5 As New SqlClient.SqlCommand(sqldel, GMod.SqlConn, sqltrans)
+                    cmd5.ExecuteNonQuery()
                 End If
+                'Setting Inventry Found to FASLE
+
+                sqltrans.Commit()
+                'nxtvno()
+                InventoryFound = False
+                btnsave.Enabled = True
+                dtVdate.Enabled = True
+                btnmodify.Text = "&Modify"
+                cmbvtype.Enabled = True
+                dgvoucher.Rows.Clear()
+                dgvoucher.Rows.Add()
+                dgvoucher.Focus()
+                MsgBox("Voucher modified")
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, GMod.Cmpname)
+                sqltrans.Rollback()
+                InventoryFound = False
+                InventoryFound = False
+                btnsave.Enabled = True
+                dtVdate.Enabled = True
+                btnmodify.Text = "&Modify"
+                cmbvtype.Enabled = True
+                dgvoucher.Rows.Clear()
+                dgvoucher.Rows.Add()
+                dgvoucher.Focus()
+                'nxtvno()
+            End Try
+            sqltrans.Dispose()
+            GMod.ds.Tables.Clear()
+            '------------------------------------------------------------------------------------------------------------------------------
+            End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

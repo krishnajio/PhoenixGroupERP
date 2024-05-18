@@ -110,10 +110,12 @@ Public Class frmPartyaccount
             dgaccounthead(5, i).Value = GMod.ds.Tables("acc").Rows(i)("opening_cr")
             dgaccounthead(6, i).Value = GMod.ds.Tables("acc").Rows(i)("credit_limit")
             dgaccounthead(7, i).Value = GMod.ds.Tables("acc").Rows(i)("credit_days")
-            dgaccounthead(8, i).Value = GMod.ds.Tables("acc").Rows(i)("interest_rule_id")
-            dgaccounthead(9, i).Value = GMod.ds.Tables("acc").Rows(i)("rate_of_interest")
-            dgaccounthead(10, i).Value = GMod.ds.Tables("acc").Rows(i)("remark3")
-            dgaccounthead(11, i).Value = GMod.ds.Tables("acc").Rows(i)("account_type")
+            'dgaccounthead(8, i).Value = GMod.ds.Tables("acc").Rows(i)("interest_rule_id")
+            'dgaccounthead(9, i).Value = GMod.ds.Tables("acc").Rows(i)("rate_of_interest")
+            dgaccounthead(8, i).Value = GMod.ds.Tables("acc").Rows(i)("remark3")
+            dgaccounthead(9, i).Value = GMod.ds.Tables("acc").Rows(i)("account_type")
+            dgaccounthead(10, i).Value = GMod.ds.Tables("acc").Rows(i)("pan_no")
+            dgaccounthead(11, i).Value = GMod.ds.Tables("acc").Rows(i)("remark2")
         Next
     End Sub
     Sub filltdsparty()
