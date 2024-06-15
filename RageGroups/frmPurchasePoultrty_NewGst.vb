@@ -179,7 +179,7 @@ Public Class frmPurchasePoultrty_NewGst
         dtVdate.MaxDate = GMod.SessionCurrentDate
 
         'filling production unit 
-        GMod.DataSetRet("select prdunit from prdunit where cmp_id='" & GMod.Cmpid & "'", "prdunit")
+        GMod.DataSetRet("select prdunit from prdunit where cmp_id='" & GMod.Cmpid & "' order by prdunit", "prdunit")
         cmbPrdUnit.DataSource = GMod.ds.Tables("prdunit")
         cmbPrdUnit.DisplayMember = "prdunit"
 
@@ -568,7 +568,7 @@ Public Class frmPurchasePoultrty_NewGst
                     sqlsave &= "'-',"
                     sqlsave &= "'" & dtpf49issuedate.Text & "',"
                     sqlsave &= "'" & cmbBrokerCode.Text & "',"
-                    sqlsave &= "'-',"
+                    sqlsave &= "'" & TxtVehNo.Text & "'," 'Vehicle Number
 
                     sqlsave &= "'" & dgvoucher(12, i).Value & "',"
                     sqlsave &= "'" & Val(dgvoucher(9, i).Value) & "',"
@@ -817,8 +817,6 @@ Public Class frmPurchasePoultrty_NewGst
                 txtImwno.Text = ""
                 TxtVehNo.Text = ""
                 TxtStockNo.Text = ""
-
-
                 dgvoucher.Rows.Clear()
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -1785,13 +1783,11 @@ Public Class frmPurchasePoultrty_NewGst
     
     Private Sub txtTcsAmount_TextChanged(sender As Object, e As EventArgs) Handles txtTcsAmount.TextChanged
         txtGrandTotal.Text = Val(txtTcsAmount.Text) + Val(txtTotal.Text)
-
-
     End Sub
 
     Private Sub txtTotal_TextChanged(sender As Object, e As EventArgs) Handles txtTotal.TextChanged
-
         txtGrandTotal.Text = Val(txtTcsAmount.Text) + Val(txtTotal.Text)
     End Sub
 
+    
 End Class

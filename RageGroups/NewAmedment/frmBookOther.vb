@@ -74,7 +74,7 @@ Public Class frmBookOther
             lst = lst.Remove(lst.Length - 1, 1)
 
             'CHECHKING FOR DAY BOOK UN UTHORISED DATA'''''''''''''''''''''''''''***************************************************
-            GMod.DataSetRet("select * from " & GMod.VENTRY & " where pay_mode ='-' and vou_date = '" & dtfrom.Value.ToShortDateString & "' AND vou_type in (" & lst & ")", "UADATACH")
+            GMod.DataSetRet("select * from " & GMod.VENTRY & " where vou_date = '" & dtfrom.Value.ToShortDateString & "'  and pay_mode='-'  AND vou_type in (" & lst & ")", "UADATACH")
             If GMod.ds.Tables("UADATACH").Rows.Count > 0 Then
                 chkdaybook = True
             Else

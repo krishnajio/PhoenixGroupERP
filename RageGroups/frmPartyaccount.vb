@@ -170,9 +170,9 @@ Public Class frmPartyaccount
             Else
                 MsgBox("Account Head Created Successfully", MsgBoxStyle.Information, GMod.Cmpname)
                 CreateHeadToNextSession()
-                If GMod.Cmpid = "PHOE" Then
-                    sql = "insert into [partyBankDetials] (partyCode, bankName, accNumber, ifscCode, branch)"
-                    sql &= " values ('" & lblacheadcode.Text & "','" & txtBankName.Text & "','" & txtBankAccountNumber.Text & "','" & txtIFSCCode.Text & "','" & txtBranch.Text & "')"
+                If txtBankAccountNumber.Text <> "" Then
+                    sql = "insert into [partyBankDetials] (partyCode, bankName, accNumber, ifscCode, branch,Cmp_id)"
+                    sql &= " values ('" & lblacheadcode.Text & "','" & txtBankName.Text & "','" & txtBankAccountNumber.Text & "','" & txtIFSCCode.Text & "','" & txtBranch.Text & "','" & GMod.Cmpid & "')"
                     GMod.SqlExecuteNonQuery(sql)
                 End If
                 btnreset_Click(sender, e)
@@ -285,7 +285,7 @@ Public Class frmPartyaccount
 
             ' bankName, accNumber, ifscCode, branch, id
             Try
-                GMod.DataSetRet("select * from partyBankDetials where partyCode ='" & ano & "'", "bankDetials")
+                GMod.DataSetRet("select * from partyBankDetials where partyCode ='" & ano & "' and cmp_id ='" & GMod.Cmpid & "'  ", "bankDetials")
 
                 txtBankAccountNumber.Text = GMod.ds.Tables("bankDetials").Rows(0)("accNumber").ToString.Trim()
                 txtBankName.Text = GMod.ds.Tables("bankDetials").Rows(0)("bankName").ToString.Trim()
@@ -413,17 +413,17 @@ Public Class frmPartyaccount
                 'cmd4.ExecuteNonQuery()
             End If
 
-            If GMod.Cmpid = "PHOE" Then
+            If txtBankAccountNumber.Text <> "" Then
                 Try
-                    GMod.DataSetRet("select * from partyBankDetials where partyCode = '" & code & "'", "chkBankDetials")
+                    GMod.DataSetRet("select * from partyBankDetials where partyCode = '" & code & "'  and cmp_id ='" & GMod.Cmpid & "'", "chkBankDetials")
 
                     If ds.Tables("chkBankDetials").Rows.Count > 0 Then
-                        Dim UpInv As String = "update partyBankDetials set [bankName] = '" & txtBankName.Text & "', [accNumber]='" & txtBankAccountNumber.Text & "',[ifscCode]='" & txtIFSCCode.Text & "',[branch]='" & txtBranch.Text & "'  where partyCode ='" & code & "'"
+                        Dim UpInv As String = "update partyBankDetials set [bankName] = '" & txtBankName.Text & "', [accNumber]='" & txtBankAccountNumber.Text & "',[ifscCode]='" & txtIFSCCode.Text & "',[branch]='" & txtBranch.Text & "'  where partyCode ='" & code & "'  and cmp_id ='" & GMod.Cmpid & "'"
                         Dim cmd4 As New SqlCommand(UpInv, GMod.SqlConn, sqltrans)
                         cmd4.ExecuteNonQuery()
                     Else
-                        sql = "insert into [partyBankDetials] (partyCode, bankName, accNumber, ifscCode, branch)"
-                        sql &= " values ('" & lblacheadcode.Text & "','" & txtBankName.Text & "','" & txtBankAccountNumber.Text & "','" & txtIFSCCode.Text & "','" & txtBranch.Text & "')"
+                        sql = "insert into [partyBankDetials] (partyCode, bankName, accNumber, ifscCode, branch,cmp_id)"
+                        sql &= " values ('" & lblacheadcode.Text & "','" & txtBankName.Text & "','" & txtBankAccountNumber.Text & "','" & txtIFSCCode.Text & "','" & txtBranch.Text & "','" & GMod.Cmpid & "')"
                         Dim cmd5 As New SqlCommand(sql, GMod.SqlConn, sqltrans)
                         cmd5.ExecuteNonQuery()
                     End If

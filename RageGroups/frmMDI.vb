@@ -197,6 +197,7 @@ Public Class frmMDI
 
     Private Sub frmMDI_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
+
         MenuStripRagaGroup.Renderer = New CustomRenderer
 
         'Timer1.Start()

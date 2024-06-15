@@ -70,7 +70,7 @@ Public Class frmPaymentandChqprint
                 sql = " select * from " & GMod.ACC_HEAD
             End If
         Else
-            sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and left(account_code,2) in ('**','" & cmbAreaCode.Text & "') and isActive=1"
+            sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and left(account_code,2) in ('**','" & cmbAreaCode.Text & "') "
         End If
             GMod.DataSetRet(sql, "aclist1")
             cmbcode.DataSource = GMod.ds.Tables("aclist1")
@@ -115,8 +115,6 @@ Public Class frmPaymentandChqprint
         dtvdate.Value = GMod.SessionCurrentDate
         dtvdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
         dtvdate.MaxDate = GMod.SessionCurrentDate
-
-
 
         If GMod.Getsession(dtvdate.Value) = GMod.Session Then
         Else
