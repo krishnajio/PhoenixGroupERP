@@ -43,7 +43,6 @@ Public Class frmJournal
     End Sub
     Private Sub frmPayment_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Checking For Entry Per mission
-
         Try
             If GMod.PerviousSession = True Then
                 GMod.DataSetRet("select entry_status from SessionMaster where Uname ='" & GMod.username & "' and session ='" & GMod.Session & "'", "entry_status")

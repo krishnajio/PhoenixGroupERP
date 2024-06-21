@@ -272,6 +272,8 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.BankToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HDFCRtgsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -871,7 +873,7 @@ Partial Class frmMDI
         '
         'DisplayPrintToolStripMenuItem
         '
-        Me.DisplayPrintToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem22, Me.ToolStripMenuItem7, Me.PLBalanceSheetToolStripMenuItem, Me.MonthlyPLToolStripMenuItem, Me.ToolStripMenuItem8, Me.IntrestCalculationToolStripMenuItem, Me.DayBookBwDayaToolStripMenuItem, Me.ToolStripSeparator4, Me.SaleToolStripMenuItem3, Me.PurchaseToolStripMenuItem3, Me.ExpensesToolStripMenuItem2, Me.MarketRateVSPoRateToolStripMenuItem, Me.BMToolStripMenuItem1})
+        Me.DisplayPrintToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem22, Me.ToolStripMenuItem7, Me.PLBalanceSheetToolStripMenuItem, Me.MonthlyPLToolStripMenuItem, Me.ToolStripMenuItem8, Me.IntrestCalculationToolStripMenuItem, Me.DayBookBwDayaToolStripMenuItem, Me.ToolStripSeparator4, Me.SaleToolStripMenuItem3, Me.PurchaseToolStripMenuItem3, Me.ExpensesToolStripMenuItem2, Me.MarketRateVSPoRateToolStripMenuItem, Me.BMToolStripMenuItem1, Me.BankToolStripMenuItem1})
         Me.DisplayPrintToolStripMenuItem.Name = "DisplayPrintToolStripMenuItem"
         Me.DisplayPrintToolStripMenuItem.Size = New System.Drawing.Size(150, 20)
         Me.DisplayPrintToolStripMenuItem.Text = "&Departmental && Report's"
@@ -1875,6 +1877,19 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
+        'BankToolStripMenuItem1
+        '
+        Me.BankToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HDFCRtgsToolStripMenuItem})
+        Me.BankToolStripMenuItem1.Name = "BankToolStripMenuItem1"
+        Me.BankToolStripMenuItem1.Size = New System.Drawing.Size(268, 22)
+        Me.BankToolStripMenuItem1.Text = "Bank"
+        '
+        'HDFCRtgsToolStripMenuItem
+        '
+        Me.HDFCRtgsToolStripMenuItem.Name = "HDFCRtgsToolStripMenuItem"
+        Me.HDFCRtgsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HDFCRtgsToolStripMenuItem.Text = "HDFC Rtgs"
+        '
         'frmMDI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2162,4 +2177,6 @@ Partial Class frmMDI
     Friend WithEvents ToolStripMenuItem40 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StockRegisterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DMListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BankToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HDFCRtgsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

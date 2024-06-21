@@ -1735,6 +1735,12 @@
       <DependentUpon>CrGSTRegister.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="NewAmedment\Reports\CrHDRCRtgs.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrHDRCRtgs.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="NewAmedment\Reports\CrInvoice_Receipt.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2005,6 +2011,12 @@
       <DependentUpon>frmGstReg.vb</DependentUpon>
     </Compile>
     <Compile Include="NewAmedment\Reports\frmGstReg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewAmedment\Reports\frmHDFCRtgs.Designer.vb">
+      <DependentUpon>frmHDFCRtgs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\Reports\frmHDFCRtgs.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewAmedment\Reports\frmNewPurchaseJournalRegister.Designer.vb">
@@ -3333,6 +3345,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrGSTRegister.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\Reports\CrHDRCRtgs.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrHDRCRtgs.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\CrInvoice_Receipt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrInvoice_Receipt.vb</LastGenOutput>
@@ -3496,6 +3512,9 @@
     <EmbeddedResource Include="NewAmedment\Reports\frmGstReg.resx">
       <DependentUpon>frmGstReg.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\Reports\frmHDFCRtgs.resx">
+      <DependentUpon>frmHDFCRtgs.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\frmNewPurchaseJournalRegister.resx">
       <DependentUpon>frmNewPurchaseJournalRegister.vb</DependentUpon>

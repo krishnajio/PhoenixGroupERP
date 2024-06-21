@@ -1582,4 +1582,9 @@ Public Class frmMDI
         Dim t As New frmDMList
         t.ShowDialog()
     End Sub
+
+    Private Sub HDFCRtgsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HDFCRtgsToolStripMenuItem.Click
+        Dim t As New frmHDFCRtgs
+        t.ShowDialog()
+    End Sub
 End Class
