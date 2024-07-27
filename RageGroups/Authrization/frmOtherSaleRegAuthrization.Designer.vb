@@ -19,11 +19,11 @@ Partial Class frmOtherSaleRegAuthrization
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PRD = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.btnshow = New System.Windows.Forms.Button()
@@ -64,7 +64,6 @@ Partial Class frmOtherSaleRegAuthrization
         Me.CrystalReportViewer1.SelectionFormula = ""
         Me.CrystalReportViewer1.ShowExportButton = False
         Me.CrystalReportViewer1.ShowGroupTreeButton = False
-        Me.CrystalReportViewer1.ShowPrintButton = False
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(1354, 678)
         Me.CrystalReportViewer1.TabIndex = 167
         Me.CrystalReportViewer1.ViewTimeSelectionFormula = ""
@@ -128,9 +127,9 @@ Partial Class frmOtherSaleRegAuthrization
         '
         'Hdate
         '
-        DataGridViewCellStyle6.Format = "dd/MMM/yyyy"
-        DataGridViewCellStyle6.NullValue = Nothing
-        Me.Hdate.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Format = "dd/MMM/yyyy"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.Hdate.DefaultCellStyle = DataGridViewCellStyle1
         Me.Hdate.HeaderText = "HATCH DATE"
         Me.Hdate.Name = "Hdate"
         Me.Hdate.ReadOnly = True
@@ -140,24 +139,24 @@ Partial Class frmOtherSaleRegAuthrization
         '
         Me.dgCRDebit.AllowUserToAddRows = False
         Me.dgCRDebit.AllowUserToDeleteRows = False
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgCRDebit.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgCRDebit.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgCRDebit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgCRDebit.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.INVNO_DATE, Me.INVDATE, Me.Hdate, Me.CUSTCODE, Me.acc_head, Me.NOOFCHICKS, Me.FREE, Me.INVAMOUNT, Me.NECCAMOUNT, Me.PRD})
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgCRDebit.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgCRDebit.DefaultCellStyle = DataGridViewCellStyle5
         Me.dgCRDebit.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.dgCRDebit.Location = New System.Drawing.Point(0, 319)
         Me.dgCRDebit.Name = "dgCRDebit"
@@ -189,9 +188,9 @@ Partial Class frmOtherSaleRegAuthrization
         '
         'NOOFCHICKS
         '
-        DataGridViewCellStyle8.Format = "N0"
-        DataGridViewCellStyle8.NullValue = "0"
-        Me.NOOFCHICKS.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle3.Format = "N0"
+        DataGridViewCellStyle3.NullValue = "0"
+        Me.NOOFCHICKS.DefaultCellStyle = DataGridViewCellStyle3
         Me.NOOFCHICKS.HeaderText = "QTY"
         Me.NOOFCHICKS.MaxInputLength = 20
         Me.NOOFCHICKS.Name = "NOOFCHICKS"
@@ -207,10 +206,10 @@ Partial Class frmOtherSaleRegAuthrization
         '
         'INVAMOUNT
         '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle9.Format = "N2"
-        DataGridViewCellStyle9.NullValue = "0.00"
-        Me.INVAMOUNT.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "N2"
+        DataGridViewCellStyle4.NullValue = "0.00"
+        Me.INVAMOUNT.DefaultCellStyle = DataGridViewCellStyle4
         Me.INVAMOUNT.HeaderText = "INV AMOUNT"
         Me.INVAMOUNT.Name = "INVAMOUNT"
         Me.INVAMOUNT.ReadOnly = True

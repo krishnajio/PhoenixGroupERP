@@ -12,10 +12,10 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
 
-            Sql = "select Chq_no,amount from chq_issue where session='" & GMod.Session & "' and Cmp_id='PHOE'"
+            Sql = "select Chq_no,amount from chq_issue where session='" & GMod.Session & "' and Cmp_id='PHOE'  and vouno='" & cmbvono.Text & "'"
             GMod.DataSetRet(Sql, "rtgschqdata")
 
-            Sql = "select Acc_head_code from " & GMod.VENTRY & " where Vou_no='" & cmbvono.Text & "' and Vou_type='BANK'"
+            Sql = "select Acc_head_code from dummy_ventry where Vou_no='" & cmbvono.Text & "' and Vou_type='BANK' and cmp_id='PHOE' and session='" & GMod.Session & "'"
             GMod.DataSetRet(Sql, "rtgsventry")
 
             Sql = "select * from " & GMod.ACC_HEAD & " where account_code='" & GMod.ds.Tables("rtgsventry").Rows(0)("Acc_head_code") & "'"
@@ -30,7 +30,8 @@
             r.SetParameterValue("benifecryName", GMod.ds.Tables("rtgsaccdata").Rows(0)("account_head_name"))
             r.SetParameterValue("address", GMod.ds.Tables("rtgsaccdata").Rows(0)("city"))
             r.SetParameterValue("bankbranch", GMod.ds.Tables("pbakdetails").Rows(0)("bankName"))
-
+            'bankaddress
+            r.SetParameterValue("bankaddress", GMod.ds.Tables("pbakdetails").Rows(0)("branch"))
             r.SetParameterValue("ifsc", GMod.ds.Tables("pbakdetails").Rows(0)("ifscCode"))
             r.SetParameterValue("accno", GMod.ds.Tables("pbakdetails").Rows(0)("accNumber"))
 

@@ -151,7 +151,6 @@ Public Class frmPurchasePoultrty_NewGst
 
     Private Sub frmPurchasePoultrty_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         GMod.SqlExecuteNonQuery("delete from tmpAging where acc_code='" & cmbacheadcode.Text & "' and vou_type='P' and cmp_id='" & GMod.Cmpid & "'")
-
     End Sub
     Dim OtherCheck As Double = 0
     Dim TaxFlag As String

@@ -60,6 +60,7 @@ Public Class frmOtherSaleReg
         'End If
         'If CheckBox1.Checked = True Then
         crsr.SetParameterValue("p5", voutype.Text)
+        crsr.SetParameterValue("p6", "Authorised")
         'End If
         CrystalReportViewer1.ReportSource = crsr
 
