@@ -48,12 +48,12 @@
             CrystalReportViewer1.ReportSource = crobjpp
         Else
 
-            If voutype.Text = "SALE BR(GST)" Or voutype.Text = "SALE CR(GST)" Or voutype.Text = "SALE WBH-1(GST)" Or voutype.Text = "SALE HAJIPUR(GST)" Or voutype.Text = "SALE RAIPUR(GST)" Or voutype.Text = "SALE VARANASI(GST)" Or voutype.Text = "SALE CR RAIPUR(GST)" Or voutype.Text = "SALE CR JBP(GST)" Or voutype.Text = "SALE HAZARIBAGH(GST)" Or voutype.Text = "SALE PURNIA" Then
+            If voutype.Text = "SALE BR(GST)" Or voutype.Text = "SALE CR(GST)" Or voutype.Text = "SALE WBH-1(GST)" Or voutype.Text = "SALE HAJIPUR(GST)" Or voutype.Text = "SALE RAIPUR(GST)" Or voutype.Text = "SALE VARANASI(GST)" Or voutype.Text = "SALE CR RAIPUR(GST)" Or voutype.Text = "SALE CR JBP(GST)" Or voutype.Text = "SALE HAZARIBAGH(GST)" Or voutype.Text = "SALE PURNIA" Or voutype.Text = "SALE ARRAH(GST)" Then
                 If ComboBox1.Text = "WB-1" Or ComboBox1.Text = "WB-2" Then
                     gstno = "GSTIN(W.B)  :  19ADDPD8524C1ZV"
                     adrs = "201/15, Ratan Colony, PB.-75 Gorakhpur,JABALPUR-482001"
                 End If
-                If ComboBox1.Text = "PARIYAT UNIT" Or ComboBox1.Text = "HAZARIBAGH UNIT" Or ComboBox1.Text = "PURNIA UNIT" Then
+                If ComboBox1.Text = "PARIYAT UNIT" Or ComboBox1.Text = "HAZARIBAGH UNIT" Or ComboBox1.Text = "PURNIA UNIT" Or ComboBox1.Text = "ARRAH UNIT" Then
                     gstno = "GSTIN(M.P)  :  23ADDPD8524C1Z6"
                     adrs = "201/15, Ratan Colony, PB.-75 Gorakhpur,JABALPUR-482001"
                 End If

@@ -22,7 +22,7 @@ Public Class frmVoucherPrintAll
              & " Narration, dramt, cramt,  a.Group_name,pay_mode from " _
              & GMod.VENTRY & " v inner join " & GMod.ACC_HEAD & " a on v.Acc_head_code = a.account_code " _
               & " where vou_type='" & cmbvoutype.Text & "' and  " _
-              & " cast(vou_no as numeric(18,0))  between " & TextBox1.Text & " and " & TextBox1.Text & "   order by cast(vou_no as numeric(18,0)),dramt desc"
+              & " cast(vou_no as numeric(18,0))  between " & TextBox1.Text & " and " & TextBox1.Text & "   order by cast(vou_no as numeric(18,0)),dramt desc , cramt desc"
 
             GMod.DataSetRet(sql, "vp")
 

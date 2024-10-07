@@ -40,6 +40,7 @@ Partial Class FrmAreaWiseReport
         Me.tr1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.tr2 = New System.Windows.Forms.TextBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         CType(Me.dg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,7 +69,7 @@ Partial Class FrmAreaWiseReport
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(521, 58)
+        Me.Label3.Location = New System.Drawing.Point(480, 57)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(117, 20)
         Me.Label3.TabIndex = 2
@@ -77,7 +78,7 @@ Partial Class FrmAreaWiseReport
         'txtAreaCode
         '
         Me.txtAreaCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAreaCode.Location = New System.Drawing.Point(270, 55)
+        Me.txtAreaCode.Location = New System.Drawing.Point(263, 55)
         Me.txtAreaCode.Name = "txtAreaCode"
         Me.txtAreaCode.Size = New System.Drawing.Size(58, 26)
         Me.txtAreaCode.TabIndex = 3
@@ -86,7 +87,7 @@ Partial Class FrmAreaWiseReport
         '
         Me.DtpTrDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpTrDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DtpTrDate.Location = New System.Drawing.Point(644, 56)
+        Me.DtpTrDate.Location = New System.Drawing.Point(585, 54)
         Me.DtpTrDate.Name = "DtpTrDate"
         Me.DtpTrDate.Size = New System.Drawing.Size(120, 26)
         Me.DtpTrDate.TabIndex = 4
@@ -94,7 +95,7 @@ Partial Class FrmAreaWiseReport
         'btnShow1
         '
         Me.btnShow1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnShow1.Location = New System.Drawing.Point(904, 51)
+        Me.btnShow1.Location = New System.Drawing.Point(956, 50)
         Me.btnShow1.Name = "btnShow1"
         Me.btnShow1.Size = New System.Drawing.Size(75, 34)
         Me.btnShow1.TabIndex = 6
@@ -144,7 +145,7 @@ Partial Class FrmAreaWiseReport
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(770, 61)
+        Me.RadioButton1.Location = New System.Drawing.Point(709, 57)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(76, 17)
         Me.RadioButton1.TabIndex = 8
@@ -155,7 +156,7 @@ Partial Class FrmAreaWiseReport
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(852, 60)
+        Me.RadioButton2.Location = New System.Drawing.Point(782, 57)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(46, 17)
         Me.RadioButton2.TabIndex = 9
@@ -176,7 +177,7 @@ Partial Class FrmAreaWiseReport
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(985, 47)
+        Me.Button1.Location = New System.Drawing.Point(1037, 48)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 34)
         Me.Button1.TabIndex = 11
@@ -187,7 +188,7 @@ Partial Class FrmAreaWiseReport
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Red
-        Me.Button2.Location = New System.Drawing.Point(1066, 47)
+        Me.Button2.Location = New System.Drawing.Point(1118, 48)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(96, 34)
         Me.Button2.TabIndex = 12
@@ -207,7 +208,7 @@ Partial Class FrmAreaWiseReport
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(1168, 47)
+        Me.Button3.Location = New System.Drawing.Point(1217, 45)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 34)
         Me.Button3.TabIndex = 14
@@ -217,7 +218,7 @@ Partial Class FrmAreaWiseReport
         'tr1
         '
         Me.tr1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tr1.Location = New System.Drawing.Point(370, 55)
+        Me.tr1.Location = New System.Drawing.Point(357, 54)
         Me.tr1.Name = "tr1"
         Me.tr1.Size = New System.Drawing.Size(58, 26)
         Me.tr1.TabIndex = 15
@@ -226,7 +227,7 @@ Partial Class FrmAreaWiseReport
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(334, 57)
+        Me.Label4.Location = New System.Drawing.Point(323, 57)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(33, 20)
         Me.Label4.TabIndex = 16
@@ -235,16 +236,27 @@ Partial Class FrmAreaWiseReport
         'tr2
         '
         Me.tr2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tr2.Location = New System.Drawing.Point(443, 55)
+        Me.tr2.Location = New System.Drawing.Point(420, 54)
         Me.tr2.Name = "tr2"
         Me.tr2.Size = New System.Drawing.Size(58, 26)
         Me.tr2.TabIndex = 17
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"UnAuth", "Auth", "All"})
+        Me.ComboBox2.Location = New System.Drawing.Point(835, 56)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(115, 21)
+        Me.ComboBox2.TabIndex = 18
         '
         'FrmAreaWiseReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1304, 669)
+        Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.tr2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.tr1)
@@ -289,5 +301,6 @@ Partial Class FrmAreaWiseReport
     Friend WithEvents tr1 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents tr2 As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
 
 End Class

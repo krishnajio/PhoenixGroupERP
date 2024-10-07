@@ -144,7 +144,7 @@ Public Class frmPaymentandChqprint
         cmbAreaName.DataSource = GMod.ds.Tables("Area")
         cmbAreaName.DisplayMember = "Areaname"
 
-        GMod.DataSetRet("SELECT DISTINCT favourof FROM chq_issue", "favour")
+        GMod.DataSetRet("SELECT DISTINCT favourof FROM chq_issue  where Cmp_id='" & GMod.Cmpid & "'", "favour")
         cmbfavourof.DataSource = GMod.ds.Tables("favour")
         cmbfavourof.DisplayMember = "favourof"
 
@@ -881,7 +881,7 @@ Public Class frmPaymentandChqprint
 
     Private Sub cmbAreaCode_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbAreaCode.SelectedIndexChanged
         If GMod.Cmpid = "PHOE" Then
-            sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and isActive=1 "
+            sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'"
         Else
             sql = " select * from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "' and left(account_code,2) in ('**','" & cmbAreaCode.Text & "')"
         End If

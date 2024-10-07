@@ -22,9 +22,9 @@ Partial Class FormSupply
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dg = New System.Windows.Forms.DataGridView()
         Me.Auth = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.btnShow = New System.Windows.Forms.Button()
@@ -42,40 +42,41 @@ Partial Class FormSupply
         Me.dgDetials = New System.Windows.Forms.DataGridView()
         Me.ChkisDm = New System.Windows.Forms.CheckBox()
         Me.ChkisCm = New System.Windows.Forms.CheckBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         CType(Me.dg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgDetials, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dg
         '
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Auth})
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dg.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dg.DefaultCellStyle = DataGridViewCellStyle8
         Me.dg.Location = New System.Drawing.Point(-4, 124)
         Me.dg.Name = "dg"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.dg.Size = New System.Drawing.Size(1249, 339)
         Me.dg.TabIndex = 15
         '
@@ -89,7 +90,7 @@ Partial Class FormSupply
         'btnShow
         '
         Me.btnShow.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnShow.Location = New System.Drawing.Point(611, 58)
+        Me.btnShow.Location = New System.Drawing.Point(657, 58)
         Me.btnShow.Name = "btnShow"
         Me.btnShow.Size = New System.Drawing.Size(75, 29)
         Me.btnShow.TabIndex = 13
@@ -110,7 +111,7 @@ Partial Class FormSupply
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(692, 57)
+        Me.Button1.Location = New System.Drawing.Point(738, 57)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 30)
         Me.Button1.TabIndex = 14
@@ -159,7 +160,7 @@ Partial Class FormSupply
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(611, 89)
+        Me.Button2.Location = New System.Drawing.Point(657, 89)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 29)
         Me.Button2.TabIndex = 53
@@ -216,7 +217,7 @@ Partial Class FormSupply
         Me.ChkisDm.Checked = True
         Me.ChkisDm.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ChkisDm.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkisDm.Location = New System.Drawing.Point(409, 57)
+        Me.ChkisDm.Location = New System.Drawing.Point(402, 57)
         Me.ChkisDm.Name = "ChkisDm"
         Me.ChkisDm.Size = New System.Drawing.Size(53, 24)
         Me.ChkisDm.TabIndex = 59
@@ -227,18 +228,29 @@ Partial Class FormSupply
         '
         Me.ChkisCm.AutoSize = True
         Me.ChkisCm.Font = New System.Drawing.Font("Microsoft PhagsPa", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkisCm.Location = New System.Drawing.Point(472, 57)
+        Me.ChkisCm.Location = New System.Drawing.Point(461, 57)
         Me.ChkisCm.Name = "ChkisCm"
         Me.ChkisCm.Size = New System.Drawing.Size(51, 24)
         Me.ChkisCm.TabIndex = 60
         Me.ChkisCm.Text = "CM"
         Me.ChkisCm.UseVisualStyleBackColor = True
         '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"UnAuth", "Auth", "All"})
+        Me.ComboBox2.Location = New System.Drawing.Point(531, 58)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(115, 21)
+        Me.ComboBox2.TabIndex = 61
+        '
         'FormSupply
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1257, 749)
+        Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.ChkisCm)
         Me.Controls.Add(Me.ChkisDm)
         Me.Controls.Add(Me.dgDetials)
@@ -281,4 +293,5 @@ Partial Class FormSupply
     Friend WithEvents dgDetials As System.Windows.Forms.DataGridView
     Friend WithEvents ChkisDm As System.Windows.Forms.CheckBox
     Friend WithEvents ChkisCm As System.Windows.Forms.CheckBox
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
 End Class

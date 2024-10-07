@@ -1,9 +1,20 @@
 Public Class FrmAreaWiseReport
-
+    Dim sql As String
     Private Sub btnShow1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnShow1.Click
-
+        'UnAuth
+        'Auth
+        'All
         If ComboBox1.Text = "ALL AREA" Then
-            Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks from [AreaTrPoultry] where session ='" & GMod.Session & "'  order by tridarea" 'Where TrDate='" & DtpTrDate.Text.ToString & "' "
+            If ComboBox2.Text = "UnAuth" Then
+                sql = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks from [AreaTrPoultry] where session ='" & GMod.Session & "' and isAuth=0 order by tridarea" 'Where TrDate='" & DtpTrDate.Text.ToString & "' "
+
+            ElseIf ComboBox2.Text = "Auth" Then
+                sql = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks from [AreaTrPoultry] where session ='" & GMod.Session & "' and isAuth=1 order by tridarea" 'Where TrDate='" & DtpTrDate.Text.ToString & "' "
+
+            ElseIf ComboBox2.Text = "All" Then
+                sql = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks from [AreaTrPoultry] where session ='" & GMod.Session & "'  order by tridarea" 'Where TrDate='" & DtpTrDate.Text.ToString & "' "
+            End If
+
             GMod.DataSetRet(sql, "allAreatr")
             dg.DataSource = ds.Tables("allAreatr")
         End If
@@ -12,17 +23,20 @@ Public Class FrmAreaWiseReport
         'BY HATCH DATE
 
         If ComboBox1.Text = "SELECTED AREA" Then
-            Dim sql As String = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks from [AreaTrPoultry] Where AreaCode='" & txtAreaCode.Text & "' and session ='" & GMod.Session & "' order by tridarea "
+
+            If ComboBox2.Text = "UnAuth" Then
+                sql = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks from [AreaTrPoultry] Where AreaCode='" & txtAreaCode.Text & "' and session ='" & GMod.Session & "' and isAuth=0 order by tridarea "
+
+            ElseIf ComboBox2.Text = "Auth" Then
+                sql = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks from [AreaTrPoultry] Where AreaCode='" & txtAreaCode.Text & "' and session ='" & GMod.Session & "' and isAuth=1 order by tridarea "
+
+            ElseIf ComboBox2.Text = "All" Then
+                sql = "Select isAuth,Area,AreaCode,TRNo,TrDate,HatchDate,entrydate,Code,CName, TrAmount,Bank_det,Pay_mode,bankdate,DD_No,Chick_type,Rate,Remarks from [AreaTrPoultry] Where AreaCode='" & txtAreaCode.Text & "' and session ='" & GMod.Session & "' order by tridarea "
+            End If
+
             GMod.DataSetRet(sql, "SelectedArea")
             dg.DataSource = ds.Tables("SelectedArea")
         End If
-
-       
-       
-
-    End Sub
-
-    Private Sub FrmAreaWiseReport_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
     End Sub
 
@@ -34,7 +48,6 @@ Public Class FrmAreaWiseReport
 
     End Sub
     Dim i As Integer
-    Dim sql As String
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         For i = 0 To dg.Rows.Count - 1
@@ -101,4 +114,6 @@ Public Class FrmAreaWiseReport
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
         CrystalReportViewer1.BringToFront()
     End Sub
+
+   
 End Class

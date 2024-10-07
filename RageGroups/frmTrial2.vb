@@ -200,7 +200,7 @@ Public Class frmTrial2
            & " DrAmt = case when  ((isnull(p.dramt,0) + q.odr) - (isnull(p.cramt,0) + q.ocr))  > 0 then  (isnull(p.dramt,0) + q.odr) - (isnull(p.cramt,0) + q.ocr) else 0 end, " _
            & " CrAmt = case when  ((isnull(p.dramt,0) + q.odr) - (isnull(p.cramt,0) + q.ocr))  < 0 then  abs((isnull(p.dramt,0) + q.odr) - (isnull(p.cramt,0) + q.ocr)) else 0 end," _
            & " q.group_name," _
-           & " isnull(p.dramt,0) + isnull(q.odr,0) d , isnull(p.cramt,0) + q.ocr c , isnull(q.odr,0) odr , q.ocr " _
+           & " isnull(p.dramt,0) + isnull(0,0) d , isnull(p.cramt,0) + 0 c , isnull(q.odr,0) odr , q.ocr " _
            & " from (" _
            & " select isnull(sum(dramt),0) dramt ,isnull(sum(cramt),0) cramt,acc_head_code" _
            & " from " & GMod.VENTRY & " " _

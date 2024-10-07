@@ -22,13 +22,30 @@
     End Sub
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
         If ComboBox1.Text = "ALL AREA" Then
-            sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where isDm  = " & isDm & "  and session='" & GMod.Session & "'  order by dmidarea"
+            If ComboBox2.Text = "UnAuth" Then
+                sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where isDm  = " & isDm & "  and session='" & GMod.Session & "' and isnull([isAuth],0)=0  order by dmidarea"
+
+            ElseIf ComboBox2.Text = "Auth" Then
+                sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where isDm  = " & isDm & "  and session='" & GMod.Session & "' and isnull([isAuth],0)=1  order by dmidarea"
+
+            ElseIf ComboBox2.Text = "All" Then
+                sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where isDm  = " & isDm & "  and session='" & GMod.Session & "'  order by dmidarea"
+            End If
             GMod.DataSetRet(sql, "allAreadm")
             dg.DataSource = ds.Tables("allAreadm")
         End If
 
         If ComboBox1.Text = "SELECTED AREA" Then
-            sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where  AreaCode = '" & txtAreaCode.Text & "' and isDm  = " & isDm & "  and session='" & GMod.Session & "' order by dmidarea"
+            If ComboBox2.Text = "UnAuth" Then
+                sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where  AreaCode = '" & txtAreaCode.Text & "' and isDm  = " & isDm & "  and session='" & GMod.Session & "' and isnull([isAuth],0) = 0 order by dmidarea"
+
+            ElseIf ComboBox2.Text = "Auth" Then
+                sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where  AreaCode = '" & txtAreaCode.Text & "' and isDm  = " & isDm & "  and session='" & GMod.Session & "'  and isnull([isAuth],0) = 1 order by dmidarea"
+
+            ElseIf ComboBox2.Text = "All" Then
+                sql = "Select  isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where  AreaCode = '" & txtAreaCode.Text & "' and isDm  = " & isDm & "  and session='" & GMod.Session & "' order by dmidarea"
+
+            End If
             GMod.DataSetRet(sql, "SelectedAreadm")
             dg.DataSource = ds.Tables("SelectedAreadm")
         End If
@@ -36,7 +53,17 @@
 
         'DM BETWEEN
         If ComboBox1.Text = "DM BETWEEN" Then
-            sql = "Select isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where  AreaCode = '" & txtAreaCode.Text & "'  and dmidarea between '" & Val(dm1.Text) & "' and '" & Val(dm2.Text) & "' order by dmidarea"
+            If ComboBox2.Text = "UnAuth" Then
+                sql = "Select isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where  AreaCode = '" & txtAreaCode.Text & "'  and dmidarea between '" & Val(dm1.Text) & "' and '" & Val(dm2.Text) & "'  isnull([isAuth],0) = 0 order by dmidarea"
+
+            ElseIf ComboBox2.Text = "Auth" Then
+                sql = "Select isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where  AreaCode = '" & txtAreaCode.Text & "'  and dmidarea between '" & Val(dm1.Text) & "' and '" & Val(dm2.Text) & "'  isnull([isAuth],0) = 1 order by dmidarea"
+
+            ElseIf ComboBox2.Text = "All" Then
+                sql = "Select isnull([isPosted],0) isPosted, isnull([isAuth],0) isAuth,[AreaCode], [Area],[DMNo], [DMDate],[uname], [entrydate], [Code], [CName], [Remarks], [Insurace],[VehNo], [DriverName], [Tcs_Per], [Tcs_Amt] from AreaDmPoultry  where  AreaCode = '" & txtAreaCode.Text & "'  and dmidarea between '" & Val(dm1.Text) & "' and '" & Val(dm2.Text) & "' order by dmidarea"
+
+            End If
+
             GMod.DataSetRet(sql, "areahatchdatedm")
             dg.DataSource = ds.Tables("areahatchdatedm")
         End If

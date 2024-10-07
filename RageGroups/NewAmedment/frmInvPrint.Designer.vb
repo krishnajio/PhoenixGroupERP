@@ -145,7 +145,7 @@ Partial Class frmInvPrint
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"HAJIPUR UNIT", "PARIYAT UNIT", "RAIPUR UNIT", "VARANASI UNIT", "WB-1", "WB-2", "HAZARIBAGH UNIT", "PURNIA UNIT"})
+        Me.ComboBox1.Items.AddRange(New Object() {"HAJIPUR UNIT", "PARIYAT UNIT", "RAIPUR UNIT", "VARANASI UNIT", "WB-1", "WB-2", "HAZARIBAGH UNIT", "PURNIA UNIT", "ARRAH UNIT"})
         Me.ComboBox1.Location = New System.Drawing.Point(737, 35)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(236, 21)
