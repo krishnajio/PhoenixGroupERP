@@ -28,6 +28,7 @@
         Dim crobjprnt
         Dim gstno As String = ""
         Dim adrs As String = ""
+        Dim phone As String = ""
         If GMod.Cmpid = "PHOE" Then
             Dim crobjpp As New CrPrintInvLaserPPall
             If voutype.Text = "SALE JBP(GST)" Or voutype.Text = "SALE HATCHING EGGS" Then
@@ -48,27 +49,38 @@
             CrystalReportViewer1.ReportSource = crobjpp
         Else
 
-            If voutype.Text = "SALE BR(GST)" Or voutype.Text = "SALE CR(GST)" Or voutype.Text = "SALE WBH-1(GST)" Or voutype.Text = "SALE HAJIPUR(GST)" Or voutype.Text = "SALE RAIPUR(GST)" Or voutype.Text = "SALE VARANASI(GST)" Or voutype.Text = "SALE CR RAIPUR(GST)" Or voutype.Text = "SALE CR JBP(GST)" Or voutype.Text = "SALE HAZARIBAGH(GST)" Or voutype.Text = "SALE PURNIA" Or voutype.Text = "SALE ARRAH(GST)" Then
+            If voutype.Text = "SALE BR(GST)" Or voutype.Text = "SALE CR(GST)" Or voutype.Text = "SALE WBH-1(GST)" Or voutype.Text = "SALE HAJIPUR(GST)" Or voutype.Text = "SALE RAIPUR(GST)" Or voutype.Text = "SALE VARANASI(GST)" Or voutype.Text = "SALE CR RAIPUR(GST)" Or voutype.Text = "SALE CR JBP(GST)" Or voutype.Text = "SALE HAZARIBAGH(GST)" Or voutype.Text = "SALE PURNIA" Or voutype.Text = "SALE ARRAH(GST)" Or voutype.Text = "SALE PURNIA(BR)" Or voutype.Text = "SALE ARRAH(BR)" Or voutype.Text = "SALE HAJIPUR(BR)" Then
                 If ComboBox1.Text = "WB-1" Or ComboBox1.Text = "WB-2" Then
                     gstno = "GSTIN(W.B)  :  19ADDPD8524C1ZV"
                     adrs = "201/15, Ratan Colony, PB.-75 Gorakhpur,JABALPUR-482001"
+                    phone = "Phone :2662155,2661102,2661714 Fax0761-2663964,2665383"
                 End If
                 If ComboBox1.Text = "PARIYAT UNIT" Or ComboBox1.Text = "HAZARIBAGH UNIT" Or ComboBox1.Text = "PURNIA UNIT" Or ComboBox1.Text = "ARRAH UNIT" Then
                     gstno = "GSTIN(M.P)  :  23ADDPD8524C1Z6"
                     adrs = "201/15, Ratan Colony, PB.-75 Gorakhpur,JABALPUR-482001"
+                    phone = "Phone :2662155,2661102,2661714 Fax0761-2663964,2665383"
                 End If
                 If ComboBox1.Text = "RAIPUR UNIT" Then
                     gstno = "GSTIN(C.G)  :  22ADDPD8524C1Z8"
                     adrs = "Q3.Sector-2,Near Vidhya Niketan School,Avantivihar Raipur(G.C)"
+                    phone = "Phone :2662155,2661102,2661714 Fax0761-2663964,2665383"
                 End If
                 If ComboBox1.Text = "VARANASI UNIT" Then
                     gstno = "GSTIN(U.P)  :  09ADDPD8524C1ZW"
                     adrs = "201/15, Ratan Colony, PB.-75 Gorakhpur,JABALPUR-482001"
+                    phone = "Phone :2662155,2661102,2661714 Fax0761-2663964,2665383"
+                End If
+
+                If ComboBox1.Text = "PURNIA UNIT" Or ComboBox1.Text = "ARRAH UNIT" Or ComboBox1.Text = "HAJIPUR UNIT" Then
+                    gstno = "GSTIN(BR)  :  10ADDPD8524C1ZD"
+                    adrs = "01, JandahaRoad,Bhidupur,Chak Ganagadhar,Vaishali,Bihar-844102"
+                    phone = "Mob:6386421935,9685043443"
                 End If
                 crobjprnt = New CrPrintInvLaserHat
                 crobjprnt.SetDataSource(GMod.ds.Tables("prntinvleser"))
                 crobjprnt.SetParameterValue("gstno", gstno)
                 crobjprnt.SetParameterValue("adrs", adrs)
+                crobjprnt.SetParameterValue("phone", phone)
                 CrystalReportViewer1.ReportSource = crobjprnt
             End If
         End If
@@ -154,6 +166,8 @@
         GMod.DataSetRet(sql, "prntinvleser")
         Dim crobjprnt
         Dim gstno As String = ""
+        Dim adrs As String = ""
+        Dim phone As String = ""
         If GMod.Cmpid = "PHOE" Then
             Dim crobjpp As New CrPrintInvLaserPPall
             If voutype.Text = "SALE JBP(GST)" Then
@@ -173,20 +187,37 @@
             crobjpp.SetParameterValue("gstno", gstno)
             CrystalReportViewer1.ReportSource = crobjpp
         Else
-            If voutype.Text = "SALE BR(GST)" Or voutype.Text = "SALE CR(GST)" Or voutype.Text = "SALE WBH-1(GST)" Or voutype.Text = "SALE HAJIPUR(GST)" Or voutype.Text = "SALE RAIPUR(GST)" Or voutype.Text = "SALE VARANASI(GST)" Or voutype.Text = "SALE HAZARIBAGH(GST)" Or voutype.Text = "SALE PURNIA" Then
+            If voutype.Text = "SALE BR(GST)" Or voutype.Text = "SALE CR(GST)" Or voutype.Text = "SALE WBH-1(GST)" Or voutype.Text = "SALE HAJIPUR(GST)" Or voutype.Text = "SALE RAIPUR(GST)" Or voutype.Text = "SALE VARANASI(GST)" Or voutype.Text = "SALE CR RAIPUR(GST)" Or voutype.Text = "SALE CR JBP(GST)" Or voutype.Text = "SALE HAZARIBAGH(GST)" Or voutype.Text = "SALE PURNIA" Or voutype.Text = "SALE ARRAH(GST)" Or voutype.Text = "SALE PURNIA(BR)" Or voutype.Text = "SALE ARRAH(BR)" Or voutype.Text = "SALE HAJIPUR(BR)" Then
                 If ComboBox1.Text = "WB-1" Or ComboBox1.Text = "WB-2" Then
                     gstno = "GSTIN(W.B)  :  19ADDPD8524C1ZV"
+                    adrs = "201/15, Ratan Colony, PB.-75 Gorakhpur,JABALPUR-482001"
                 End If
-                If ComboBox1.Text = "PARIYAT UNIT" Or ComboBox1.Text = "HAJIPUR UNIT" Or ComboBox1.Text = "PURNIA UNIT" Or ComboBox1.Text = "HAZARIBAGH UNIT" Then
+                If ComboBox1.Text = "PARIYAT UNIT" Or ComboBox1.Text = "HAZARIBAGH UNIT" Or ComboBox1.Text = "PURNIA UNIT" Or ComboBox1.Text = "ARRAH UNIT" Then
                     gstno = "GSTIN(M.P)  :  23ADDPD8524C1Z6"
+                    adrs = "201/15, Ratan Colony, PB.-75 Gorakhpur,JABALPUR-482001"
                 End If
                 If ComboBox1.Text = "RAIPUR UNIT" Then
                     gstno = "GSTIN(C.G)  :  22ADDPD8524C1Z8"
+                    adrs = "Q3.Sector-2,Near Vidhya Niketan School,Avantivihar Raipur(G.C)"
                 End If
                 If ComboBox1.Text = "VARANASI UNIT" Then
                     gstno = "GSTIN(U.P)  :  09ADDPD8524C1ZW"
+                    adrs = "201/15, Ratan Colony, PB.-75 Gorakhpur,JABALPUR-482001"
+                End If
+
+                If ComboBox1.Text = "PURNIA UNIT" Or ComboBox1.Text = "ARRAH UNIT" Or ComboBox1.Text = "HAJIPUR UNIT" Then
+                    gstno = "GSTIN(BR)  :  10ADDPD8524C1ZD"
+                    adrs = "01, JandahaRoad,Bhidupur,Chak Ganagadhar,Vaishali,Bihar-844102"
+                    phone = "Mob:6386421935,9685043443"
                 End If
                 crobjprnt = New CrPrintInvLaserHat
+                crobjprnt.SetDataSource(GMod.ds.Tables("prntinvleser"))
+                crobjprnt.SetParameterValue("gstno", gstno)
+                crobjprnt.SetParameterValue("adrs", adrs)
+                crobjprnt.SetParameterValue("phone", phone)
+
+                CrystalReportViewer1.ReportSource = crobjprnt
+
             End If
             If voutype.Text = "SALE LR(GST)" Then
                 If ComboBox1.Text = "PARIYAT UNIT" Then
@@ -204,10 +235,11 @@
                 End If
 
                 crobjprnt = New CrPrintInvLaserHatLR
+                crobjprnt.SetDataSource(GMod.ds.Tables("prntinvleser"))
+                crobjprnt.SetParameterValue("gstno", gstno)
+                CrystalReportViewer1.ReportSource = crobjprnt
             End If
-            crobjprnt.SetDataSource(GMod.ds.Tables("prntinvleser"))
-            crobjprnt.SetParameterValue("gstno", gstno)
-            CrystalReportViewer1.ReportSource = crobjprnt
+           
         End If
     End Sub
 

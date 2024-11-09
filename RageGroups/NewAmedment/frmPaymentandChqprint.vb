@@ -620,6 +620,7 @@ Public Class frmPaymentandChqprint
 
     Private Sub btnReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReset.Click
         btnModify.Text = "&Modify"
+        dgBillNo.Rows.Clear()
         btnSave.Enabled = True
         cmbvoutype.Enabled = True
         txtvou_no.Clear()
@@ -629,6 +630,7 @@ Public Class frmPaymentandChqprint
         txtNarration.Clear()
         txtChqNo.Clear()
         cmbvoutype.Focus()
+
     End Sub
 
     Private Sub cmbcode_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles cmbcode.KeyUp
@@ -681,7 +683,11 @@ Public Class frmPaymentandChqprint
             '--------------------------------------------------------------
 
             If dgBillNo.RowCount > 1 Then
-                Exit Sub
+                ' Exit Sub
+                Dim z As Integer
+                For z = 0 To 10000000
+
+                Next
             End If
             If chkpayment.Checked = True Then
                 acc_code = cmbcode.Text

@@ -58,7 +58,7 @@ Public Class frmSalesRegisterChicksAuthrization
             If voutype.Text.Contains("PURCHASE") Then
 
                 For i = 0 To GMod.ds.Tables("SaleReg").Rows.Count - 1
-                    sql2 = "select Acc_head from " & GMod.VENTRY & " where vou_no=" & GMod.ds.Tables("SaleReg").Rows(i)("invno") & " and vou_type='" & voutype.Text & "' and dramt>0 and acc_head like '%PUR%' "
+                    sql2 = "select Acc_head from " & GMod.VENTRY & " where vou_no=" & GMod.ds.Tables("SaleReg").Rows(i)("invno") & " and vou_type='" & voutype.Text & "' and dramt>0 and acc_head like '%PUR%' and group_name ='PURCHASE'"
                     GMod.DataSetRet(sql2, "crhead")
 
                     sql = "update  salereg set  pheadname='" & GMod.ds.Tables("crhead").Rows(0)(0).ToString & "' where invno='" & GMod.ds.Tables("SaleReg").Rows(i)("invno") & "'"

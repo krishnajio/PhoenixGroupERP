@@ -197,7 +197,7 @@ Partial Class frmGeneralacchead
         '
         Me.txtacheadname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtacheadname.Location = New System.Drawing.Point(243, 35)
-        Me.txtacheadname.MaxLength = 30
+        Me.txtacheadname.MaxLength = 80
         Me.txtacheadname.Name = "txtacheadname"
         Me.txtacheadname.Size = New System.Drawing.Size(559, 20)
         Me.txtacheadname.TabIndex = 0
