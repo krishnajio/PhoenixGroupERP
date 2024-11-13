@@ -1657,6 +1657,12 @@
     <Compile Include="NewAmedment\frmSendBulkSms.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NewAmedment\frmStaffSalaryTranferToAcc.Designer.vb">
+      <DependentUpon>frmStaffSalaryTranferToAcc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\frmStaffSalaryTranferToAcc.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NewAmedment\frmTdsModification.Designer.vb">
       <DependentUpon>frmTdsModification.vb</DependentUpon>
     </Compile>
@@ -3294,6 +3300,9 @@
     <EmbeddedResource Include="NewAmedment\frmSendBulkSms.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmSendBulkSms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\frmStaffSalaryTranferToAcc.resx">
+      <DependentUpon>frmStaffSalaryTranferToAcc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmTdsModification.resx">
       <DependentUpon>frmTdsModification.vb</DependentUpon>

@@ -25,7 +25,7 @@ Public Class frmVoucherPrint
         Try
 
             'sql = "select * from vk where vou_type_code='" & cmbvtypecode.Text & "' and vou_no ='" & ComboBox1.Text & "' order by cramt"
-            sql = "SELECT * FROM dummy_VENTRY where vou_type = 'Bank' and vou_no ='" & ComboBox1.Text & "' and session='" & GMod.Session & "' and cmp_id='" & GMod.Cmpid & "' order by dramt desc"
+            sql = "SELECT * FROM dummy_VENTRY where vou_type = 'Bank' and vou_no ='" & ComboBox1.Text & "' and session='" & GMod.Session & "' and cmp_id='" & GMod.Cmpid & "' order by entry_id"
             GMod.DataSetRet(sql, "vp")
 
             'sql = "SELECT * FROM dummy_VENTRY where vou_type = 'Bank' and vou_no=1 and dramt>0"

@@ -1974,6 +1974,7 @@ E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchaseW
 E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmSalePurchasedata.resources
 E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmSaletax.resources
 E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmSendBulkSms.resources
+E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmStaffSalaryTranferToAcc.resources
 E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmTdsModification.resources
 E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmUpdateVouDate.resources
 E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmUserSessionPermission.resources
@@ -2035,4 +2036,3 @@ E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.application
 E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.exe
 E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.xml
 E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
-E:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\PhoenixGroupERP.vbprojResolveAssemblyReference.cache

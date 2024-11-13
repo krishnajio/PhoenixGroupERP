@@ -1351,10 +1351,10 @@ Public Class frmMDI
 
        
         'If GMod.role = "ADMIN" And GMod.role = "VIEWER LEVEL-1" Then
-        If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.username.ToLower = "admin") Then
-            Dim saltrf As New frmSalaryTransferPoultryCasual
-            saltrf.ShowDialog()
-        End If
+        ' If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.username.ToLower = "admin") Then
+        Dim saltrf As New frmStaffSalaryTranferToAcc
+        saltrf.ShowDialog()
+        'End If
         'End If
     End Sub
     Private Sub ProductionIncentiveVoucherToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductionIncentiveVoucherToolStripMenuItem.Click
@@ -1365,16 +1365,16 @@ Public Class frmMDI
     End Sub
     Private Sub SalaryTransferToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SalaryTransferToolStripMenuItem1.Click
         If GMod.Cmpid = "PHOE" Then
-            If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.role.ToLower = "admin") Then
-                Dim saltrf As New frmSalaryTransfer
-                saltrf.ShowDialog()
-            End If
+            'If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.role.ToLower = "admin") Then
+            Dim saltrf As New frmStaffSalaryTranferToAcc
+            saltrf.ShowDialog()
+            'End If
         ElseIf GMod.Cmpid = "PHHA" Then
 
-            If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.role.ToLower = "admin") Then
-                Dim saltrf As New frmSalaryTransferHatch
-                saltrf.ShowDialog()
-            End If
+        If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.role.ToLower = "admin") Then
+            Dim saltrf As New frmSalaryTransferSchool
+            saltrf.ShowDialog()
+        End If
         End If
     End Sub
 
