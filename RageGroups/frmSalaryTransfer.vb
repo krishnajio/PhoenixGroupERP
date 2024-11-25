@@ -844,4 +844,8 @@ Public Class frmSalaryTransfer
     Private Sub Rdothr_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Rdothr.CheckedChanged
 
     End Sub
+
+    Private Sub cmbvtype_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbvtype.SelectedIndexChanged
+
+    End Sub
 End Class

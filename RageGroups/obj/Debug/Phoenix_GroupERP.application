@@ -10,15 +10,18 @@
     </subscription>
     <deploymentProvider codebase="http://phxserver/d/Phoenix_GroupERP.application" />
   </deployment>
+  <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
+    <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
+  </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Phoenix_GroupERP.exe.manifest" size="12454">
+    <dependentAssembly dependencyType="install" codebase="Phoenix_GroupERP.exe.manifest" size="12776">
       <assemblyIdentity name="Phoenix_GroupERP.exe" version="2016.10.19.25" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>RQ72aLa+0P0UPhLcvJ/QE1Zxl7U=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>W6HSrvVmklSvcwwlCl0BTCXQfsuC903WY/FvVBBPo8Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

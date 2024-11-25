@@ -1372,7 +1372,7 @@ Public Class frmMDI
         ElseIf GMod.Cmpid = "PHHA" Then
 
         If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.role.ToLower = "admin") Then
-            Dim saltrf As New frmSalaryTransferSchool
+                Dim saltrf As New frmStaffSalaryTranferToAcc
             saltrf.ShowDialog()
         End If
         End If
@@ -1585,6 +1585,11 @@ Public Class frmMDI
 
     Private Sub HDFCRtgsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HDFCRtgsToolStripMenuItem.Click
         Dim t As New frmHDFCRtgs
+        t.ShowDialog()
+    End Sub
+
+    Private Sub PartyBankFAvourofToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PartyBankFAvourofToolStripMenuItem.Click
+        Dim t As New frmBankFavourofUpdate
         t.ShowDialog()
     End Sub
 End Class

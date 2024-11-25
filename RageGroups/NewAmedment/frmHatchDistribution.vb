@@ -13,7 +13,7 @@ Public Class frmHatchDistribution
         Sqlsavestr &= "'" & dtHatchdate.Value.ToShortDateString & "',"
         Sqlsavestr &= "'" & txthatchqty.Text & "',"
         Sqlsavestr &= "'" & Val(txtRate.Text) & "',"
-        Sqlsavestr &= "'" & cmbPrdUnit.Text & "',"
+        Sqlsavestr &= "'" & cmbPrdUnit.Text & "'"
         Sqlsavestr &= "'" & GMod.Session & "',"
         Sqlsavestr &= "'" & GMod.Cmpid & "')"
 
@@ -62,12 +62,6 @@ Public Class frmHatchDistribution
             FillGrid()
         End If
     End Sub
-
-    Private Sub dgHatchQty_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgHatchQty.CellContentClick
-
-
-    End Sub
-
     Private Sub dgHatchQty_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgHatchQty.CellDoubleClick
         Dim i As Integer
         Label2.Text = dgHatchQty(0, i).Value.ToString
@@ -80,9 +74,5 @@ Public Class frmHatchDistribution
         'cmbcode.Text = dgPayment(1, i).Value.ToString
         'txtDramt.Text = dgPayment(2, i).Value.ToString
         'txtCrmat.Text = dgPayment(3, i).Value.ToString
-    End Sub
-
-    Private Sub dgHatchQty_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles dgHatchQty.DoubleClick
-
     End Sub
 End Class

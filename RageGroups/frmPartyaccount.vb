@@ -498,9 +498,7 @@ Public Class frmPartyaccount
         End If
     End Sub
     Private Sub cmbAreaCode_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbAreaCode.SelectedIndexChanged
-
         nxtid()
-
         fillgrid("")
     End Sub
     Private Sub cmbAreaName_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles cmbAreaName.KeyDown

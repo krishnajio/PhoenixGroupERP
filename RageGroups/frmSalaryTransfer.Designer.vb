@@ -19,39 +19,39 @@ Partial Class frmSalaryTransfer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.dtSalaryDate = New System.Windows.Forms.DateTimePicker
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.lblvouno = New System.Windows.Forms.TextBox
-        Me.dtVoucherDate = New System.Windows.Forms.DateTimePicker
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.dgvoucher = New System.Windows.Forms.DataGridView
-        Me.srno = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Accode = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.acname = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.narration = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.dramount = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cramount = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.GroupName = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cmbvtype = New System.Windows.Forms.ComboBox
-        Me.btnShow = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.dr = New System.Windows.Forms.Label
-        Me.cr = New System.Windows.Forms.Label
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.cmbPaymode = New System.Windows.Forms.ComboBox
-        Me.RdHO = New System.Windows.Forms.RadioButton
-        Me.Rdothr = New System.Windows.Forms.RadioButton
-        Me.cmborgid = New System.Windows.Forms.ComboBox
-        Me.Label6 = New System.Windows.Forms.Label
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.dtSalaryDate = New System.Windows.Forms.DateTimePicker()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblvouno = New System.Windows.Forms.TextBox()
+        Me.dtVoucherDate = New System.Windows.Forms.DateTimePicker()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.dgvoucher = New System.Windows.Forms.DataGridView()
+        Me.srno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Accode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.acname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.narration = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dramount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cramount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cmbvtype = New System.Windows.Forms.ComboBox()
+        Me.btnShow = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.dr = New System.Windows.Forms.Label()
+        Me.cr = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.cmbPaymode = New System.Windows.Forms.ComboBox()
+        Me.RdHO = New System.Windows.Forms.RadioButton()
+        Me.Rdothr = New System.Windows.Forms.RadioButton()
+        Me.cmborgid = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.dgvoucher, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -340,7 +340,7 @@ Partial Class frmSalaryTransfer
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGray
-        Me.ClientSize = New System.Drawing.Size(1093, 748)
+        Me.ClientSize = New System.Drawing.Size(1093, 745)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cmborgid)
         Me.Controls.Add(Me.RdHO)

@@ -164,6 +164,8 @@ Partial Class frmMDI
         Me.BMToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalePurchaseRegisterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InvoicePrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BankToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HDFCRtgsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem21 = New System.Windows.Forms.ToolStripMenuItem()
         Me.GeneralReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem28 = New System.Windows.Forms.ToolStripMenuItem()
@@ -272,8 +274,7 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.BankToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HDFCRtgsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PartyBankFAvourofToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -618,7 +619,7 @@ Partial Class frmMDI
         '
         'BankToolStripMenuItem
         '
-        Me.BankToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PaymnetOthersToolStripMenuItem, Me.ToolStripMenuItem30, Me.TdsEntryToolStripMenuItem2})
+        Me.BankToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PaymnetOthersToolStripMenuItem, Me.ToolStripMenuItem30, Me.TdsEntryToolStripMenuItem2, Me.PartyBankFAvourofToolStripMenuItem})
         Me.BankToolStripMenuItem.Name = "BankToolStripMenuItem"
         Me.BankToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
         Me.BankToolStripMenuItem.Text = "Bank"
@@ -1162,6 +1163,19 @@ Partial Class frmMDI
         Me.InvoicePrintToolStripMenuItem.Name = "InvoicePrintToolStripMenuItem"
         Me.InvoicePrintToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.InvoicePrintToolStripMenuItem.Text = "Invoice Print"
+        '
+        'BankToolStripMenuItem1
+        '
+        Me.BankToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HDFCRtgsToolStripMenuItem})
+        Me.BankToolStripMenuItem1.Name = "BankToolStripMenuItem1"
+        Me.BankToolStripMenuItem1.Size = New System.Drawing.Size(268, 22)
+        Me.BankToolStripMenuItem1.Text = "Bank"
+        '
+        'HDFCRtgsToolStripMenuItem
+        '
+        Me.HDFCRtgsToolStripMenuItem.Name = "HDFCRtgsToolStripMenuItem"
+        Me.HDFCRtgsToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.HDFCRtgsToolStripMenuItem.Text = "HDFC Rtgs"
         '
         'ToolStripMenuItem21
         '
@@ -1877,18 +1891,11 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
-        'BankToolStripMenuItem1
+        'PartyBankFAvourofToolStripMenuItem
         '
-        Me.BankToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HDFCRtgsToolStripMenuItem})
-        Me.BankToolStripMenuItem1.Name = "BankToolStripMenuItem1"
-        Me.BankToolStripMenuItem1.Size = New System.Drawing.Size(268, 22)
-        Me.BankToolStripMenuItem1.Text = "Bank"
-        '
-        'HDFCRtgsToolStripMenuItem
-        '
-        Me.HDFCRtgsToolStripMenuItem.Name = "HDFCRtgsToolStripMenuItem"
-        Me.HDFCRtgsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.HDFCRtgsToolStripMenuItem.Text = "HDFC Rtgs"
+        Me.PartyBankFAvourofToolStripMenuItem.Name = "PartyBankFAvourofToolStripMenuItem"
+        Me.PartyBankFAvourofToolStripMenuItem.Size = New System.Drawing.Size(222, 22)
+        Me.PartyBankFAvourofToolStripMenuItem.Text = "Party Bank Favourof"
         '
         'frmMDI
         '
@@ -2179,4 +2186,5 @@ Partial Class frmMDI
     Friend WithEvents DMListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BankToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HDFCRtgsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PartyBankFAvourofToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

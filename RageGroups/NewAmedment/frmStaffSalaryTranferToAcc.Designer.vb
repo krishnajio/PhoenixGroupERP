@@ -24,6 +24,10 @@ Partial Class frmStaffSalaryTranferToAcc
     Private Sub InitializeComponent()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblcr = New System.Windows.Forms.TextBox()
+        Me.lbldr = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cmborgid = New System.Windows.Forms.ComboBox()
         Me.cmbPaymode = New System.Windows.Forms.ComboBox()
@@ -59,6 +63,10 @@ Partial Class frmStaffSalaryTranferToAcc
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lblcr)
+        Me.GroupBox1.Controls.Add(Me.lbldr)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.cmborgid)
         Me.GroupBox1.Controls.Add(Me.cmbPaymode)
@@ -76,10 +84,56 @@ Partial Class frmStaffSalaryTranferToAcc
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(0, 31)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1164, 79)
+        Me.GroupBox1.Size = New System.Drawing.Size(1164, 107)
         Me.GroupBox1.TabIndex = 74
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
+        '
+        'lblcr
+        '
+        Me.lblcr.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.lblcr.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblcr.ForeColor = System.Drawing.Color.Red
+        Me.lblcr.Location = New System.Drawing.Point(608, 77)
+        Me.lblcr.MaxLength = 30
+        Me.lblcr.Name = "lblcr"
+        Me.lblcr.ReadOnly = True
+        Me.lblcr.Size = New System.Drawing.Size(138, 24)
+        Me.lblcr.TabIndex = 123
+        Me.lblcr.TabStop = False
+        '
+        'lbldr
+        '
+        Me.lbldr.BackColor = System.Drawing.Color.Gainsboro
+        Me.lbldr.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbldr.ForeColor = System.Drawing.Color.Red
+        Me.lbldr.Location = New System.Drawing.Point(357, 77)
+        Me.lbldr.MaxLength = 30
+        Me.lbldr.Name = "lbldr"
+        Me.lbldr.ReadOnly = True
+        Me.lbldr.Size = New System.Drawing.Size(145, 24)
+        Me.lbldr.TabIndex = 122
+        Me.lbldr.TabStop = False
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(549, 78)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(53, 15)
+        Me.Label9.TabIndex = 121
+        Me.Label9.Text = "CrAmt::"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(297, 78)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(54, 15)
+        Me.Label7.TabIndex = 120
+        Me.Label7.Text = "DrAmt::"
         '
         'Label6
         '
@@ -152,7 +206,7 @@ Partial Class frmStaffSalaryTranferToAcc
         Me.cmbvtype.FormattingEnabled = True
         Me.cmbvtype.Location = New System.Drawing.Point(779, 16)
         Me.cmbvtype.Name = "cmbvtype"
-        Me.cmbvtype.Size = New System.Drawing.Size(168, 21)
+        Me.cmbvtype.Size = New System.Drawing.Size(246, 21)
         Me.cmbvtype.TabIndex = 113
         '
         'lblvouno
@@ -229,9 +283,9 @@ Partial Class frmStaffSalaryTranferToAcc
         '
         Me.dgStaffsaalry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgStaffsaalry.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgStaffsaalry.Location = New System.Drawing.Point(0, 110)
+        Me.dgStaffsaalry.Location = New System.Drawing.Point(0, 138)
         Me.dgStaffsaalry.Name = "dgStaffsaalry"
-        Me.dgStaffsaalry.Size = New System.Drawing.Size(1164, 499)
+        Me.dgStaffsaalry.Size = New System.Drawing.Size(1164, 471)
         Me.dgStaffsaalry.TabIndex = 75
         '
         'frmStaffSalaryTranferToAcc
@@ -243,7 +297,9 @@ Partial Class frmStaffSalaryTranferToAcc
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label4)
         Me.Name = "frmStaffSalaryTranferToAcc"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmStaffSalaryTranferToAcc"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgStaffsaalry, System.ComponentModel.ISupportInitialize).EndInit()
@@ -267,4 +323,8 @@ Partial Class frmStaffSalaryTranferToAcc
     Friend WithEvents dtSalaryDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents dgStaffsaalry As System.Windows.Forms.DataGridView
+    Friend WithEvents lblcr As System.Windows.Forms.TextBox
+    Friend WithEvents lbldr As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
 End Class
