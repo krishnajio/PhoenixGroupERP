@@ -765,4 +765,34 @@ Public Class frmPartyaccount
     Private Sub txtpanno_TextChanged(sender As Object, e As EventArgs) Handles txtpanno.TextChanged
 
     End Sub
+
+    Private Sub txtPANSearch_TextChanged(sender As Object, e As EventArgs) Handles txtPANSearch.TextChanged
+        Try
+            Dim i As Integer
+            sql = "select * from " & GMod.ACC_HEAD & "  where cmp_id='" & GMod.Cmpid & "' and pan_no like '%" & txtPANSearch.Text & "%' and group_name='" & lblgroupname.Text & "' order by  account_head_name,group_name,sub_group_name"
+            GMod.DataSetRet(sql, "accpanser")
+            dgaccounthead.Rows.Clear()
+            For i = 0 To GMod.ds.Tables("accpanser").Rows.Count - 1
+                dgaccounthead.Rows.Add()
+                dgaccounthead(0, i).Value = GMod.ds.Tables("accpanser").Rows(i)("account_code")
+                dgaccounthead(1, i).Value = GMod.ds.Tables("accpanser").Rows(i)("account_head_name")
+                dgaccounthead(2, i).Value = GMod.ds.Tables("accpanser").Rows(i)("group_name")
+                dgaccounthead(3, i).Value = GMod.ds.Tables("accpanser").Rows(i)("sub_group_name")
+                dgaccounthead(4, i).Value = GMod.ds.Tables("accpanser").Rows(i)("opening_dr")
+                dgaccounthead(5, i).Value = GMod.ds.Tables("accpanser").Rows(i)("opening_cr")
+                dgaccounthead(6, i).Value = GMod.ds.Tables("accpanser").Rows(i)("credit_limit")
+                dgaccounthead(7, i).Value = GMod.ds.Tables("accpanser").Rows(i)("credit_days")
+                'dgaccounthead(8, i).Value = GMod.ds.Tables("acc").Rows(i)("interest_rule_id")
+                'dgaccounthead(9, i).Value = GMod.ds.Tables("acc").Rows(i)("rate_of_interest")
+                dgaccounthead(8, i).Value = GMod.ds.Tables("accpanser").Rows(i)("remark3")
+                dgaccounthead(9, i).Value = GMod.ds.Tables("accpanser").Rows(i)("account_type")
+                dgaccounthead(10, i).Value = GMod.ds.Tables("accpanser").Rows(i)("pan_no")
+                dgaccounthead(11, i).Value = GMod.ds.Tables("accpanser").Rows(i)("remark2")
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+   
 End Class

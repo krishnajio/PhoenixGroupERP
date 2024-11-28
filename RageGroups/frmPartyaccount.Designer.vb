@@ -32,6 +32,18 @@ Partial Class frmPartyaccount
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dgaccounthead = New System.Windows.Forms.DataGridView()
+        Me.acheadcode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.accname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.grp = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.subgrp = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dr = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cr = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.crlimit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.crdays = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.inttype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GSTNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PAN = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AADHAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnDosprint = New System.Windows.Forms.Button()
         Me.btnmodify = New System.Windows.Forms.Button()
@@ -85,18 +97,8 @@ Partial Class frmPartyaccount
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtaddress = New System.Windows.Forms.TextBox()
-        Me.acheadcode = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.accname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.grp = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.subgrp = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dr = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cr = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.crlimit = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.crdays = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.inttype = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GSTNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PAN = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AADHAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.txtPANSearch = New System.Windows.Forms.TextBox()
         CType(Me.dgaccounthead, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -107,7 +109,7 @@ Partial Class frmPartyaccount
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(203, 409)
+        Me.Label5.Location = New System.Drawing.Point(12, 409)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(192, 13)
         Me.Label5.TabIndex = 59
@@ -116,10 +118,10 @@ Partial Class frmPartyaccount
         'txtsearch
         '
         Me.txtsearch.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtsearch.Location = New System.Drawing.Point(398, 404)
+        Me.txtsearch.Location = New System.Drawing.Point(207, 404)
         Me.txtsearch.MaxLength = 40
         Me.txtsearch.Name = "txtsearch"
-        Me.txtsearch.Size = New System.Drawing.Size(292, 21)
+        Me.txtsearch.Size = New System.Drawing.Size(327, 21)
         Me.txtsearch.TabIndex = 58
         '
         'txtamt
@@ -243,6 +245,87 @@ Partial Class frmPartyaccount
         Me.dgaccounthead.ReadOnly = True
         Me.dgaccounthead.Size = New System.Drawing.Size(1128, 258)
         Me.dgaccounthead.TabIndex = 50
+        '
+        'acheadcode
+        '
+        Me.acheadcode.HeaderText = "Account Head Code"
+        Me.acheadcode.Name = "acheadcode"
+        Me.acheadcode.ReadOnly = True
+        Me.acheadcode.Width = 80
+        '
+        'accname
+        '
+        Me.accname.HeaderText = "Account Head Name"
+        Me.accname.Name = "accname"
+        Me.accname.ReadOnly = True
+        Me.accname.Width = 160
+        '
+        'grp
+        '
+        Me.grp.HeaderText = "Group"
+        Me.grp.Name = "grp"
+        Me.grp.ReadOnly = True
+        Me.grp.Width = 80
+        '
+        'subgrp
+        '
+        Me.subgrp.HeaderText = "Sub Group"
+        Me.subgrp.Name = "subgrp"
+        Me.subgrp.ReadOnly = True
+        Me.subgrp.Width = 80
+        '
+        'dr
+        '
+        Me.dr.HeaderText = "Opening Dr"
+        Me.dr.Name = "dr"
+        Me.dr.ReadOnly = True
+        Me.dr.Width = 80
+        '
+        'cr
+        '
+        Me.cr.HeaderText = "Opening Cr"
+        Me.cr.Name = "cr"
+        Me.cr.ReadOnly = True
+        Me.cr.Width = 80
+        '
+        'crlimit
+        '
+        Me.crlimit.HeaderText = "Cr. Limit"
+        Me.crlimit.Name = "crlimit"
+        Me.crlimit.ReadOnly = True
+        Me.crlimit.Width = 80
+        '
+        'crdays
+        '
+        Me.crdays.HeaderText = "Cr. Days"
+        Me.crdays.Name = "crdays"
+        Me.crdays.ReadOnly = True
+        Me.crdays.Width = 50
+        '
+        'inttype
+        '
+        Me.inttype.HeaderText = "Int Type"
+        Me.inttype.Name = "inttype"
+        Me.inttype.ReadOnly = True
+        Me.inttype.Width = 50
+        '
+        'GSTNO
+        '
+        Me.GSTNO.HeaderText = "GSTNo"
+        Me.GSTNO.Name = "GSTNO"
+        Me.GSTNO.ReadOnly = True
+        '
+        'PAN
+        '
+        Me.PAN.HeaderText = "PAN"
+        Me.PAN.Name = "PAN"
+        Me.PAN.ReadOnly = True
+        '
+        'AADHAR
+        '
+        Me.AADHAR.HeaderText = "AADHAR"
+        Me.AADHAR.Name = "AADHAR"
+        Me.AADHAR.ReadOnly = True
         '
         'Panel1
         '
@@ -845,86 +928,24 @@ Partial Class frmPartyaccount
         Me.txtaddress.TabIndex = 8
         Me.txtaddress.Text = "-"
         '
-        'acheadcode
+        'Label26
         '
-        Me.acheadcode.HeaderText = "Account Head Code"
-        Me.acheadcode.Name = "acheadcode"
-        Me.acheadcode.ReadOnly = True
-        Me.acheadcode.Width = 80
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(584, 409)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(90, 13)
+        Me.Label26.TabIndex = 60
+        Me.Label26.Text = "Se&arch PAN :"
         '
-        'accname
+        'txtPANSearch
         '
-        Me.accname.HeaderText = "Account Head Name"
-        Me.accname.Name = "accname"
-        Me.accname.ReadOnly = True
-        Me.accname.Width = 160
-        '
-        'grp
-        '
-        Me.grp.HeaderText = "Group"
-        Me.grp.Name = "grp"
-        Me.grp.ReadOnly = True
-        Me.grp.Width = 80
-        '
-        'subgrp
-        '
-        Me.subgrp.HeaderText = "Sub Group"
-        Me.subgrp.Name = "subgrp"
-        Me.subgrp.ReadOnly = True
-        Me.subgrp.Width = 80
-        '
-        'dr
-        '
-        Me.dr.HeaderText = "Opening Dr"
-        Me.dr.Name = "dr"
-        Me.dr.ReadOnly = True
-        Me.dr.Width = 80
-        '
-        'cr
-        '
-        Me.cr.HeaderText = "Opening Cr"
-        Me.cr.Name = "cr"
-        Me.cr.ReadOnly = True
-        Me.cr.Width = 80
-        '
-        'crlimit
-        '
-        Me.crlimit.HeaderText = "Cr. Limit"
-        Me.crlimit.Name = "crlimit"
-        Me.crlimit.ReadOnly = True
-        Me.crlimit.Width = 80
-        '
-        'crdays
-        '
-        Me.crdays.HeaderText = "Cr. Days"
-        Me.crdays.Name = "crdays"
-        Me.crdays.ReadOnly = True
-        Me.crdays.Width = 50
-        '
-        'inttype
-        '
-        Me.inttype.HeaderText = "Int Type"
-        Me.inttype.Name = "inttype"
-        Me.inttype.ReadOnly = True
-        Me.inttype.Width = 50
-        '
-        'GSTNO
-        '
-        Me.GSTNO.HeaderText = "GSTNo"
-        Me.GSTNO.Name = "GSTNO"
-        Me.GSTNO.ReadOnly = True
-        '
-        'PAN
-        '
-        Me.PAN.HeaderText = "PAN"
-        Me.PAN.Name = "PAN"
-        Me.PAN.ReadOnly = True
-        '
-        'AADHAR
-        '
-        Me.AADHAR.HeaderText = "AADHAR"
-        Me.AADHAR.Name = "AADHAR"
-        Me.AADHAR.ReadOnly = True
+        Me.txtPANSearch.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPANSearch.Location = New System.Drawing.Point(680, 404)
+        Me.txtPANSearch.MaxLength = 40
+        Me.txtPANSearch.Name = "txtPANSearch"
+        Me.txtPANSearch.Size = New System.Drawing.Size(274, 21)
+        Me.txtPANSearch.TabIndex = 61
         '
         'frmPartyaccount
         '
@@ -932,6 +953,8 @@ Partial Class frmPartyaccount
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Lavender
         Me.ClientSize = New System.Drawing.Size(1126, 749)
+        Me.Controls.Add(Me.txtPANSearch)
+        Me.Controls.Add(Me.Label26)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label5)
@@ -1032,4 +1055,6 @@ Partial Class frmPartyaccount
     Friend WithEvents GSTNO As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PAN As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents AADHAR As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents txtPANSearch As System.Windows.Forms.TextBox
 End Class
