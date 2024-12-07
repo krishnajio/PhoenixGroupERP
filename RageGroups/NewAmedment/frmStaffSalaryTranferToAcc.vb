@@ -39,28 +39,38 @@ Public Class frmStaffSalaryTranferToAcc
     End Sub
     Dim Sql As String
     Dim ConStrSal As String = "Data Source=192.168.0.150;Initial Catalog=PHXSAL;User ID=sa;Password=Ph@hoenix#g"
+    Public SqlConntrfsal As New SqlConnection(ConStrSal)
     Dim ds3 As New DataSet
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
         Try
+            Sql = "exec TrafertoAcc '" & cmborgid.Text & "','" & dtSalaryDate.Value.ToShortDateString & "','" & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year & "'"
+            'Dim da1 As New SqlDataAdapter(Sql, ConStrSal)
+            'Dim ds2 As New DataSet
+            'da1.Fill(ds2)
+            Dim sqlcmdtrfsal As New SqlCommand(Sql, SqlConntrfsal)
+            sqlcmdtrfsal.CommandTimeout = 3000
+            Try
+                SqlConntrfsal.Open()
+                sqlcmdtrfsal.ExecuteNonQuery()
+            Catch ex As Exception
+                SqlConntrfsal.Close()
+                MsgBox(ex.Message)
+            End Try
+            SqlConntrfsal.Close()
+            sqlcmdtrfsal.Dispose()
 
-       
-        Sql = "exec TrafertoAcc '" & cmborgid.Text & "','" & dtSalaryDate.Value.ToShortDateString & "','" & MonthName(dtSalaryDate.Value.Month).ToUpper & "-" & dtSalaryDate.Value.Year & "'"
-        Dim da1 As New SqlDataAdapter(Sql, ConStrSal)
-        Dim ds2 As New DataSet
-        da1.Fill(ds2)
+            Sql = "select * from TRNASTOACC order by entry_id"
+            Dim da2 As New SqlDataAdapter(Sql, ConStrSal)
 
-        Sql = "select * from TRNASTOACC order by entry_id"
-        Dim da2 As New SqlDataAdapter(Sql, ConStrSal)
-
-        da2.Fill(ds3, "saltrftoacc")
-        dgStaffsaalry.DataSource = ds3.Tables("saltrftoacc")
+            da2.Fill(ds3, "saltrftoacc")
+            dgStaffsaalry.DataSource = ds3.Tables("saltrftoacc")
 
 
-        Sql = "select sum(dramt),sum(cramt) from TRNASTOACC "
-        Dim da3 As New SqlDataAdapter(Sql, ConStrSal)
-        da3.Fill(ds3, "saldrcr")
-        lbldr.Text = ds3.Tables("saldrcr").Rows(0)(0)
-        lblcr.Text = ds3.Tables("saldrcr").Rows(0)(1)
+            Sql = "select sum(dramt),sum(cramt) from TRNASTOACC "
+            Dim da3 As New SqlDataAdapter(Sql, ConStrSal)
+            da3.Fill(ds3, "saldrcr")
+            lbldr.Text = ds3.Tables("saldrcr").Rows(0)(0)
+            lblcr.Text = ds3.Tables("saldrcr").Rows(0)(1)
 
 
         Catch ex As Exception
@@ -86,14 +96,13 @@ Public Class frmStaffSalaryTranferToAcc
                 Sql &= " select '" & GMod.Cmpid & "','" & GMod.username & "',entry_id,'" & lblvouno.Text & "','" & cmbvtype.Text & "', '" & dtVoucherDate.Value.ToShortDateString & "', empid,empname,dramt,cramt,narration,"
                 Sql &= " '-','-','-'  from TRNASTOACC order by entry_id"
 
-            Dim da3 As New SqlDataAdapter(Sql, ConStrSal)
+                Dim da3 As New SqlDataAdapter(Sql, ConStrSal)
                 da3.Fill(ds3, "savesaltoacc")
 
                 If GMod.Cmpid = "PHOE" Then
                     GMod.SqlExecuteNonQuery("update  v_UpdateStaffHeadd set Acc_head = account_head_name , vgrp = group_name , vsgrp = sub_group_name where vou_no = '" & lblvouno.Text & "' ")
                 Else
                     GMod.SqlExecuteNonQuery("update  v_UpdateStaffHeadd_hatchery set Acc_head = account_head_name , vgrp = group_name , vsgrp = sub_group_name where vou_no = '" & lblvouno.Text & "' ")
-
                 End If
 
                 dgStaffsaalry.DataSource = vbNull
