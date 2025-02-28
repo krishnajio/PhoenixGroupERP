@@ -2,7 +2,8 @@
     Dim sql, session, prev As String
     Dim prevprefix, i As Integer
     Private Sub frmUserSessionPermission_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        sql = "select distinct Uname from usertab3"
+        sql = "select distinct Uname from usertab4"
+
         GMod.DataSetRet(sql, "username")
 
         cmbUserName.DataSource = GMod.ds.Tables("username")

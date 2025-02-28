@@ -23,7 +23,7 @@ Public Class frmTrial3
         Dim j As Integer
         Me.Text = "[" & GMod.Cmpname & "]" & " " & GMod.Session
         fillArea()
-        GMod.DataSetRet("select distinct group_name from   " & GMod.ACC_HEAD & "  where group_name not in ('PARTY','STAFF','STAFF(HO)') order by group_name", "grp")
+        GMod.DataSetRet("select distinct group_name from   " & GMod.ACC_HEAD & "  where group_name not in (select GroupNameConcealed from GroupNameConcealed where Cmp_id ='" & GMod.Cmpid & "') order by group_name", "grp")
         cmbgrpname.DataSource = GMod.ds.Tables("grp")
         cmbgrpname.DisplayMember = "group_name"
        
@@ -139,7 +139,7 @@ Public Class frmTrial3
            & " group by acc_head_code ) p " _
            & " Right Join " _
            & " ( select account_code,account_head_name acname ,group_name, isnull(opening_dr,0) odr  , " _
-           & " isnull(opening_cr,0) ocr from " & GMod.ACC_HEAD & " where group_name not in ('CASH IN HAND','STAFF','STAFF(HO)')) q " _
+           & " isnull(opening_cr,0) ocr from " & GMod.ACC_HEAD & " where group_name not in (select GroupNameConcealed from GroupNameConcealed where Cmp_id ='" & GMod.Cmpid & "')) q " _
            & " on p.acc_head_code=q.account_code  " _
           ' & " where ((isnull(p.dramt,0) + q.odr) <> (isnull(p.cramt,0) + q.ocr)) "
         End If
@@ -157,7 +157,7 @@ Public Class frmTrial3
                     & " group by acc_head_code ) p " _
                     & " Right Join " _
                     & " ( select account_code,account_head_name acname ,group_name, isnull(opening_dr,0) odr  , " _
-                    & " isnull(opening_cr,0) ocr from " & GMod.ACC_HEAD & " where group_name not in ('CASH IN HAND','STAFF','STAFF(HO)')) q " _
+                    & " isnull(opening_cr,0) ocr from " & GMod.ACC_HEAD & " where group_name not in (select GroupNameConcealed from GroupNameConcealed where Cmp_id ='" & GMod.Cmpid & "')) q " _
                     & " on p.acc_head_code=q.account_code  " _
                     & " where ((isnull(p.dramt,0) + q.odr) <> (isnull(p.cramt,0) + q.ocr)) and q.group_name<>'CASH IN HAND' "
         End If

@@ -23,7 +23,7 @@ Public Class frmTrial4
         Dim j As Integer
         Me.Text = "[" & GMod.Cmpname & "]" & " " & GMod.Session
         fillArea()
-        GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where  group_name not in ('PARTY','STAFF','STAFF(HO)') order by group_name", "grp")
+        GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where  group_name not in (select GroupNameConcealed from GroupNameConcealed where Cmp_id ='" & GMod.Cmpid & "') order by group_name", "grp")
         cmbgrpname.DataSource = GMod.ds.Tables("grp")
         cmbgrpname.DisplayMember = "group_name"
         

@@ -1499,6 +1499,12 @@
     <Compile Include="NewAmedment\frmCustomerListForTcs.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NewAmedment\frmExcelData.Designer.vb">
+      <DependentUpon>frmExcelData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\frmExcelData.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NewAmedment\frmExpenses.Designer.vb">
       <DependentUpon>frmExpenses.vb</DependentUpon>
     </Compile>
@@ -1643,6 +1649,12 @@
     <Compile Include="NewAmedment\frmPurchaseLedeger.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NewAmedment\frmPurchasePartyAmt.Designer.vb">
+      <DependentUpon>frmPurchasePartyAmt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\frmPurchasePartyAmt.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NewAmedment\frmPurchaseWastageEntry.Designer.vb">
       <DependentUpon>frmPurchaseWastageEntry.vb</DependentUpon>
     </Compile>
@@ -1689,6 +1701,12 @@
       <DependentUpon>frmUserSessionPermission.vb</DependentUpon>
     </Compile>
     <Compile Include="NewAmedment\frmUserSessionPermission.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewAmedment\frmXlsToVoucher.Designer.vb">
+      <DependentUpon>frmXlsToVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\frmXlsToVoucher.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewAmedment\Reports\CrBillDet.vb">
@@ -3209,6 +3227,9 @@
     <EmbeddedResource Include="NewAmedment\frmCustomerListForTcs.resx">
       <DependentUpon>frmCustomerListForTcs.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\frmExcelData.resx">
+      <DependentUpon>frmExcelData.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmExpenses.resx">
       <DependentUpon>frmExpenses.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -3299,6 +3320,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>frmPurchaseLedeger.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\frmPurchasePartyAmt.resx">
+      <DependentUpon>frmPurchasePartyAmt.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmPurchaseWastageEntry.resx">
       <DependentUpon>frmPurchaseWastageEntry.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -3326,6 +3350,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmUserSessionPermission.resx">
       <DependentUpon>frmUserSessionPermission.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\frmXlsToVoucher.resx">
+      <DependentUpon>frmXlsToVoucher.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\CrBillDet.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

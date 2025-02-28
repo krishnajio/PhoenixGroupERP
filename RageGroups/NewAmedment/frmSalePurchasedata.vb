@@ -5,11 +5,6 @@
         GMod.DataSetRet(sql, "ppdata")
         DataGridView1.DataSource = GMod.ds.Tables("ppdata")
     End Sub
-
-    Private Sub frmSalePurchasedata_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-       
-    End Sub
-
     Private Sub rsOtherSale_CheckedChanged(sender As Object, e As EventArgs) Handles rsOtherSale.CheckedChanged
         sql = "select * from OtherSaledata where Session='" & GMod.Session & "' and Cmp_id='PHOE'  order by Vou_type, cast(Vou_no as int)"
         GMod.DataSetRet(sql, "ppdata")

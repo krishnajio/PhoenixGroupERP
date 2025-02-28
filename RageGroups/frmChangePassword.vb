@@ -1,7 +1,7 @@
 Public Class frmChangePassword
 
     Private Sub txtOldPassword_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtOldPassword.Leave
-        sql = "select cast(Pwd as varchar(20)) from Usertab3 where Uname='" & GMod.username & "'"
+        sql = "select cast(Pwd as varchar(20)) from Usertab4 where Uname='" & GMod.username & "'"
         GMod.DataSetRet(sql, "GP")
         If GMod.ds.Tables("GP").Rows(0)(0).ToString = txtOldPassword.Text Then
 
@@ -32,7 +32,7 @@ Public Class frmChangePassword
 
     Private Sub btnmodify_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodify.Click
         Dim sqlupdate As String, sqlresult As String
-        sqlupdate = "update usertab3 set"
+        sqlupdate = "update usertab4 set"
         sqlupdate &= " Pwd=" & " CAST('" & txtpassword.Text & "' as varbinary(128))"
         sqlupdate &= " where  Uname=" & "'" & GMod.username & "'"
         MsgBox(GMod.SqlExecuteNonQuery(sqlupdate))

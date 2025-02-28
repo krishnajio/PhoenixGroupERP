@@ -25,17 +25,31 @@ Public Class frmTrial2WithAddress
         fillArea()
 
 
+        'If GMod.staff1 = 1 And GMod.role = "VIEWER LEVEL-1" Then
+        '    ' GMod.DataSetRet("select * from groups where cmp_id='" & GMod.Cmpid & "' and group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY') order by group_name", "grp")
+        '    GMod.DataSetRet("select distinct group_name from   " & GMod.ACC_HEAD & "  where group_name not in ('PARTY','STAFF(HO)') order by group_name", "grp")
+        'ElseIf GMod.staff1 = 2 And GMod.role = "VIEWER LEVEL-1" Then
+        '    GMod.DataSetRet("select distinct group_name from   " & GMod.ACC_HEAD & "  where group_name not in ('PARTY') order by group_name", "grp")
+        'Else
+        '    'GMod.DataSetRet("select * from groups where cmp_id='" & GMod.Cmpid & "' and group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF') order by group_name", "grp")
+        '    GMod.DataSetRet("select distinct group_name from   " & GMod.ACC_HEAD & "  where group_name not in ('PARTY','STAFF','STAFF(HO)') order by group_name", "grp")
+        'End If
+        'cmbgrpname.DataSource = GMod.ds.Tables("grp")
+        'cmbgrpname.DisplayMember = "group_name"
+
+
         If GMod.staff1 = 1 And GMod.role = "VIEWER LEVEL-1" Then
-            ' GMod.DataSetRet("select * from groups where cmp_id='" & GMod.Cmpid & "' and group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY') order by group_name", "grp")
-            GMod.DataSetRet("select distinct group_name from   " & GMod.ACC_HEAD & "  where group_name not in ('PARTY','STAFF(HO)') order by group_name", "grp")
-        ElseIf GMod.staff1 = 2 And GMod.role = "VIEWER LEVEL-1" Then
-            GMod.DataSetRet("select distinct group_name from   " & GMod.ACC_HEAD & "  where group_name not in ('PARTY') order by group_name", "grp")
+            GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where  group_name NOT IN('')   order by group_name", "grpfortrailwithaddress")
+            cmbgrpname.DataSource = GMod.ds.Tables("grpfortrailwithaddress")
+            cmbgrpname.DisplayMember = "group_name"
+            'cmbgrpname_SelectedIndexChanged(sender, e)
         Else
-            'GMod.DataSetRet("select * from groups where cmp_id='" & GMod.Cmpid & "' and group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF') order by group_name", "grp")
-            GMod.DataSetRet("select distinct group_name from   " & GMod.ACC_HEAD & "  where group_name not in ('PARTY','STAFF','STAFF(HO)') order by group_name", "grp")
+            GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where  group_name NOT IN (select GroupNameConcealed from GroupNameConcealed where Cmp_id ='" & GMod.Cmpid & "') and  group_name NOT IN ('PARTY','CUSTOMER','INTERNAL PARTY') order by group_name", "grpfortrailwithaddress")
+            cmbgrpname.DataSource = GMod.ds.Tables("grpfortrailwithaddress")
+            cmbgrpname.DisplayMember = "group_name"
+            'cmbgrpname_SelectedIndexChanged(sender, e)
         End If
-        cmbgrpname.DataSource = GMod.ds.Tables("grp")
-        cmbgrpname.DisplayMember = "group_name"
+
 
     End Sub
     Public Sub fillArea()
@@ -135,7 +149,7 @@ Public Class frmTrial2WithAddress
            & " group by acc_head_code ) p " _
            & " Right Join " _
            & " ( select account_code,account_head_name acname ,group_name, isnull(opening_dr,0) odr  , " _
-           & " isnull(opening_cr,0) ocr , address, pan_no,  remark2 from " & GMod.ACC_HEAD & " where group_name not in ('CASH IN HAND','STAFF','STAFF(HO)')  ) q " _
+           & " isnull(opening_cr,0) ocr , address, pan_no,  remark2 from " & GMod.ACC_HEAD & " where group_name not in (select GroupNameConcealed from GroupNameConcealed where Cmp_id ='" & GMod.Cmpid & "')) q " _
            & " on p.acc_head_code=q.account_code  " _
            & " where ((isnull(p.dramt,0) + q.odr) <> (isnull(p.cramt,0) + q.ocr)) "
 
@@ -156,7 +170,7 @@ Public Class frmTrial2WithAddress
                     & " ( select account_code,account_head_name acname ,group_name, isnull(opening_dr,0) odr  , " _
                     & " isnull(opening_cr,0) ocr, address, pan_no,  remark2 from " & GMod.ACC_HEAD & " where group_name<>'CASH IN HAND' ) q " _
                     & " on p.acc_head_code=q.account_code  " _
-                    & " where ((isnull(p.dramt,0) + q.odr) <> (isnull(p.cramt,0) + q.ocr)) and q.group_name not in ('CASH IN HAND','STAFF','STAFF(HO)') "
+                    & " where ((isnull(p.dramt,0) + q.odr) <> (isnull(p.cramt,0) + q.ocr)) and q.group_name not in (select GroupNameConcealed from GroupNameConcealed where Cmp_id ='" & GMod.Cmpid & "') )"
         End If
         If BOTH.Checked = True Then
 
@@ -225,7 +239,7 @@ Public Class frmTrial2WithAddress
                     & " group by acc_head_code ) p " _
                     & " Right Join " _
                     & " ( select account_code,account_head_name acname ,group_name, isnull(opening_dr,0) odr  , " _
-                    & " isnull(opening_cr,0) ocr, address, pan_no,  remark2 from " & GMod.ACC_HEAD & " where group_name='" & cmbgrpname.Text & "' ) q " _
+                    & " isnull(opening_cr,0) ocr, address, pan_no,  remark2 from " & GMod.ACC_HEAD & " where group_name='" & cmbgrpname.Text & "') q " _
                     & " on p.acc_head_code=q.account_code  " _
                   & " where ((isnull(p.dramt,0) + q.odr) <> (isnull(p.cramt,0) + q.ocr))  "
         End If

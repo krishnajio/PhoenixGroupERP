@@ -19,37 +19,37 @@ Partial Class frmTrial4
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.cmbgrpname = New System.Windows.Forms.ComboBox
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton
-        Me.rdgeneral = New System.Windows.Forms.RadioButton
-        Me.rdcustomer = New System.Windows.Forms.RadioButton
-        Me.rdPary = New System.Windows.Forms.RadioButton
-        Me.chkallgengrps = New System.Windows.Forms.CheckBox
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox
-        Me.btnprint = New System.Windows.Forms.Button
-        Me.BOTH = New System.Windows.Forms.CheckBox
-        Me.Cr = New System.Windows.Forms.CheckBox
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.btnshow = New System.Windows.Forms.Button
-        Me.rdName = New System.Windows.Forms.RadioButton
-        Me.rdCode = New System.Windows.Forms.RadioButton
-        Me.Dr = New System.Windows.Forms.CheckBox
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.rdwithopening = New System.Windows.Forms.RadioButton
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.edwoopening = New System.Windows.Forms.RadioButton
-        Me.dtTo = New System.Windows.Forms.DateTimePicker
-        Me.dtfrom = New System.Windows.Forms.DateTimePicker
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.chkArea = New System.Windows.Forms.CheckBox
-        Me.cmbAreaName = New System.Windows.Forms.ComboBox
-        Me.cmbAreaCode = New System.Windows.Forms.ComboBox
-        Me.CrViewerGenralLedger = New CrystalDecisions.Windows.Forms.CrystalReportViewer
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cmbgrpname = New System.Windows.Forms.ComboBox()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.rdgeneral = New System.Windows.Forms.RadioButton()
+        Me.rdcustomer = New System.Windows.Forms.RadioButton()
+        Me.rdPary = New System.Windows.Forms.RadioButton()
+        Me.chkallgengrps = New System.Windows.Forms.CheckBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.btnprint = New System.Windows.Forms.Button()
+        Me.BOTH = New System.Windows.Forms.CheckBox()
+        Me.Cr = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnshow = New System.Windows.Forms.Button()
+        Me.rdName = New System.Windows.Forms.RadioButton()
+        Me.rdCode = New System.Windows.Forms.RadioButton()
+        Me.Dr = New System.Windows.Forms.CheckBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.rdwithopening = New System.Windows.Forms.RadioButton()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.edwoopening = New System.Windows.Forms.RadioButton()
+        Me.dtTo = New System.Windows.Forms.DateTimePicker()
+        Me.dtfrom = New System.Windows.Forms.DateTimePicker()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.chkArea = New System.Windows.Forms.CheckBox()
+        Me.cmbAreaName = New System.Windows.Forms.ComboBox()
+        Me.cmbAreaCode = New System.Windows.Forms.ComboBox()
+        Me.CrViewerGenralLedger = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -111,6 +111,7 @@ Partial Class frmTrial4
         Me.cmbgrpname.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbgrpname.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbgrpname.BackColor = System.Drawing.Color.White
+        Me.cmbgrpname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbgrpname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbgrpname.FormattingEnabled = True
         Me.cmbgrpname.Location = New System.Drawing.Point(370, 11)
@@ -419,7 +420,7 @@ Partial Class frmTrial4
         '
         Me.CrViewerGenralLedger.ActiveViewIndex = -1
         Me.CrViewerGenralLedger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CrViewerGenralLedger.DisplayGroupTree = False
+        Me.CrViewerGenralLedger.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrViewerGenralLedger.Dock = System.Windows.Forms.DockStyle.Top
         Me.CrViewerGenralLedger.Location = New System.Drawing.Point(0, 169)
         Me.CrViewerGenralLedger.Name = "CrViewerGenralLedger"

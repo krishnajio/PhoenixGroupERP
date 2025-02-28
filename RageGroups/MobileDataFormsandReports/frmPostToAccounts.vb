@@ -49,9 +49,9 @@
                     'dd = dg(7, i).Value.ToString().Split("/")
                     'vou_date = dd(1) & "/" & dd(0) & "/" & dd(2)
                     If txtAreaCode.Text.ToUpper = "BM" Then
-                        Narration = "By TR NO " & dg(4, i).Value & "Bank Dt." & dg(13, i).Value
+                        Narration = "By TR NO " & dg(4, i).Value & "Bank Dt." & dg(13, i).Value & "#" & dg(9, i).Value.ToString
                     Else
-                        Narration = "By TR NO " & dg(4, i).Value & " Dt." & dg(5, i).Value & " # " & dg(15, i).Value
+                        Narration = "By TR NO " & dg(4, i).Value & " Dt." & dg(5, i).Value & " # " & dg(15, i).Value & "#" & dg(9, i).Value.ToString
                     End If
 
                     'Customer Account Credited

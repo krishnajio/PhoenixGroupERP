@@ -24,12 +24,12 @@ Public Class frmBook
         'Dim sdate As String = "4/1/" & GMod.Session.Substring(0, 2).ToString
         'dtfrom.Value = CDate(sdate)
         listgrp.Items.Clear()
-        If GMod.role.ToUpper = "VIEWER LEVEL-1" Or GMod.role.ToUpper = "ADMIN" Then
-            GMod.DataSetRet("select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vtype not in ('OPEN')  and session ='" & GMod.Session & "' and Vou_no_seq not in ('99')  order by seqorder", "grp")
-        ElseIf GMod.role.ToUpper = "VIEWER LEVEL-1" Or GMod.role.ToUpper = "ADMIN" Then
-            GMod.DataSetRet("select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vtype not in ('OPEN')  and Vou_no_seq='" & GMod.Dept & "' and session = '" & GMod.Session & "' order by seqorder", "grp")
-        ElseIf GMod.role.ToUpper = "VIEWER LEVEL-1" Or GMod.staff1 = 1 Then
-            GMod.DataSetRet("select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vtype not in ('OPEN')  and session ='" & GMod.Session & "'  order by seqorder", "grp")
+        If GMod.role.ToUpper = "VIEWER LEVEL-1" And GMod.staff1 = 0 Then
+            GMod.DataSetRet("select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vtype not in ('OPEN')  and session ='" & GMod.Session & "' and Vou_no_seq not in ('99')   and Vou_no_seq='" & GMod.Dept & "' order by vtype", "grp")
+        ElseIf GMod.role.ToUpper = "ADMIN" And GMod.staff1 = 0 Then
+            'GMod.DataSetRet("select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vtype not in ('OPEN')  and Vou_no_seq='" & GMod.Dept & "' and session = '" & GMod.Session & "' order by seqorder", "grp")
+        ElseIf GMod.role.ToUpper = "VIEWER LEVEL-1" And GMod.staff1 = 1 Then
+            GMod.DataSetRet("select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vtype not in ('OPEN')  and session ='" & GMod.Session & "'  order by vtype", "grp")
         End If
 
         For i = 0 To GMod.ds.Tables("grp").Rows.Count - 1

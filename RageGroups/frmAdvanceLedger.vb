@@ -36,7 +36,7 @@ Public Class frmAdvanceLedger
         rdPrint_Click(sender, e)
         panel1.Visible = False
         Dim sqlrole As String
-        sqlrole = "select [role] from Usertab3 where Uname='" & GMod.username & "'"
+        sqlrole = "select [role] from Usertab4 where Uname='" & GMod.username & "'"
         GMod.DataSetRet(sqlrole, "rr")
         If GMod.ds.Tables("rr").Rows(0)(0).ToString = "LIMITED" Then
             rdPary.Enabled = False
@@ -45,35 +45,31 @@ Public Class frmAdvanceLedger
             drcustomer.Checked = True
             drcustomer_CheckedChanged(sender, e)
         Else
-            Select Case GMod.role.ToUpper
-                Case "ADMIN", "VIEWER LEVEL-1"
+             If GMod.staff1 = 1 And GMod.role = "VIEWER LEVEL-1" Then
                     rdPary.Enabled = True
                     RadioButton1.Enabled = True
                     Dim sql As String
                     sql = "select account_code,account_head_name from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" _
-                           & " and group_name not in ('PARTY','CUSTOMER') order by account_code"
+                           & " and group_name not in ('') order by account_code"
                     GMod.DataSetRet(sql, "acchead")
                     cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
                     cmbacheadcode.DisplayMember = "account_code"
 
                     cmbacheadname.DataSource = GMod.ds.Tables("acchead")
                     cmbacheadname.DisplayMember = "account_head_name"
+            Else
+                rdPary.Enabled = True
+                RadioButton1.Enabled = True
+                Dim sql As String
+                sql = "select account_code,account_head_name from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" _
+                 & " and group_name not in (select GroupNameConcealed from GroupNameConcealed where Cmp_id ='" & GMod.Cmpid & "') order by account_code"
+                GMod.DataSetRet(sql, "acchead")
+                cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
+                cmbacheadcode.DisplayMember = "account_code"
 
-
-                Case Else
-
-                    rdPary.Enabled = True
-                    RadioButton1.Enabled = True
-                    Dim sql As String
-                    sql = "select account_code,account_head_name from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" _
-                     & " and group_name not in ('PARTY','CUSTOMER') order by account_code"
-                    GMod.DataSetRet(sql, "acchead")
-                    cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
-                    cmbacheadcode.DisplayMember = "account_code"
-
-                    cmbacheadname.DataSource = GMod.ds.Tables("acchead")
-                    cmbacheadname.DisplayMember = "account_head_name"
-            End Select
+                cmbacheadname.DataSource = GMod.ds.Tables("acchead")
+                cmbacheadname.DisplayMember = "account_head_name"
+            End If
         End If
         RadioButton1_Click(sender, e)
         cmbgrpname_SelectedIndexChanged(sender, e)
@@ -509,36 +505,50 @@ Public Class frmAdvanceLedger
     End Sub
 
     Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton1.Click
-        Select Case GMod.role.ToUpper
-            Case "ADMIN"
-                If RadioButton1.Checked = True Then
-                    cmbgrpname.Enabled = True
-                    'If GMod.Dept = 0 Then
-                    GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where  group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY') order by group_name", "grp")
-                    'Else
-                    'GMod.DataSetRet("select * from groups where cmp_id='" & GMod.Cmpid & "' and group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF') order by group_name", "grp")
+        'Select Case GMod.role.ToUpper
+        '    Case "ADMIN"
+        '        If RadioButton1.Checked = True Then
+        '            cmbgrpname.Enabled = True
+        '            'If GMod.Dept = 0 Then
+        '            GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where  group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY') order by group_name", "grp")
+        '            'Else
+        '            'GMod.DataSetRet("select * from groups where cmp_id='" & GMod.Cmpid & "' and group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF') order by group_name", "grp")
 
-                    'End If
-                    cmbgrpname.DataSource = GMod.ds.Tables("grp")
-                    cmbgrpname.DisplayMember = "group_name"
-                    cmbgrpname_SelectedIndexChanged(sender, e)
-                End If
-            Case Else
-                If RadioButton1.Checked = True Then
-                    cmbgrpname.Enabled = True
+        '            'End If
+        '            cmbgrpname.DataSource = GMod.ds.Tables("grp")
+        '            cmbgrpname.DisplayMember = "group_name"
+        '            cmbgrpname_SelectedIndexChanged(sender, e)
+        '        End If
+        '    Case Else
+        '        If RadioButton1.Checked = True Then
+        '            cmbgrpname.Enabled = True
 
-                    If GMod.staff1 = 1 And GMod.role = "VIEWER LEVEL-1" Then
-                        GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF(HO)') order by group_name", "grp")
-                    ElseIf GMod.staff1 = 2 And GMod.role = "VIEWER LEVEL-1" Then
-                        GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY') order by group_name", "grp")
-                    Else
-                        GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF','STAFF(HO)') order by group_name", "grp")
-                    End If
-                    cmbgrpname.DataSource = GMod.ds.Tables("grp")
-                    cmbgrpname.DisplayMember = "group_name"
-                    cmbgrpname_SelectedIndexChanged(sender, e)
-                End If
-        End Select
+        '            If GMod.staff1 = 1 And GMod.role = "VIEWER LEVEL-1" Then
+        '                GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF(HO)') order by group_name", "grp")
+        '            ElseIf GMod.staff1 = 2 And GMod.role = "VIEWER LEVEL-1" Then
+        '                GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY') order by group_name", "grp")
+        '            Else
+        '                GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where group_name NOT IN('PARTY','CUSTOMER','INTERNAL PARTY','STAFF','STAFF(HO)') order by group_name", "grp")
+        '            End If
+        '            cmbgrpname.DataSource = GMod.ds.Tables("grp")
+        '            cmbgrpname.DisplayMember = "group_name"
+        '            cmbgrpname_SelectedIndexChanged(sender, e)
+        '        End If
+        'End Select
+
+        If GMod.staff1 = 1 And GMod.role = "VIEWER LEVEL-1" Then
+            GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where  group_name NOT IN('')   order by group_name", "grp")
+            cmbgrpname.DataSource = GMod.ds.Tables("grp")
+            cmbgrpname.DisplayMember = "group_name"
+            cmbgrpname_SelectedIndexChanged(sender, e)
+        Else
+            GMod.DataSetRet("select distinct group_name from " & GMod.ACC_HEAD & " where  group_name NOT IN (select GroupNameConcealed from GroupNameConcealed where Cmp_id ='" & GMod.Cmpid & "') and  group_name NOT IN ('PARTY','CUSTOMER','INTERNAL PARTY') order by group_name", "grp")
+            cmbgrpname.DataSource = GMod.ds.Tables("grp")
+            cmbgrpname.DisplayMember = "group_name"
+            cmbgrpname_SelectedIndexChanged(sender, e)
+        End If
+
+
     End Sub
 
     Private Sub RadioButton1_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles RadioButton1.KeyDown
@@ -1137,27 +1147,6 @@ Public Class frmAdvanceLedger
             Next
         End If
     End Sub
-
-    Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton1.CheckedChanged
-
-    End Sub
-
-    Private Sub Label8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label8.Click
-
-    End Sub
-
-    Private Sub Label5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub dtto_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtto.ValueChanged
-
-    End Sub
-
-    Private Sub dtfrom_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtfrom.ValueChanged
-
-    End Sub
-
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
         Dim codefor10 As String = ""
         CheckBoxSelect.Enabled = False
@@ -1596,6 +1585,10 @@ Public Class frmAdvanceLedger
     End Sub
 
     Private Sub rdPrint_CheckedChanged(sender As Object, e As EventArgs) Handles rdPrint.CheckedChanged
+
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
 
     End Sub
 End Class

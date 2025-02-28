@@ -5,7 +5,6 @@ Public Class frmPartyDueMonthly
     End Sub
     Dim Query As String
     Private Sub frmPartyDueBill_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-      
 
 
     End Sub

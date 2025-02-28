@@ -1592,4 +1592,23 @@ Public Class frmMDI
         Dim t As New frmBankFavourofUpdate
         t.ShowDialog()
     End Sub
+
+    Private Sub XLSToVoucherToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles XLSToVoucherToolStripMenuItem.Click
+        Dim t As New frmXlsToVoucher
+        t.ShowDialog()
+    End Sub
+
+    Private Sub ExcelDataToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExcelDataToolStripMenuItem.Click
+        Dim frmdattoxls As New frmExcelData
+        frmdattoxls.ShowDialog()
+    End Sub
+
+    Private Sub CashCounterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CashCounterToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub PurchasePartyAmountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PurchasePartyAmountToolStripMenuItem.Click
+        Dim frmPurchasepartyAmount As New frmPurchasePartyAmt
+        frmPurchasepartyAmount.ShowDialog()
+    End Sub
 End Class

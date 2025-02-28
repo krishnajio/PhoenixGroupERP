@@ -122,7 +122,7 @@ Public Class frmlogin
         Dim rl As String
         Try
             Dim sqllogin As String
-            sqllogin = "select role,dept,isnull(staff,0) staff from Usertab3 where uname='" & txtuname.Text & "' and cast(Pwd as varchar(50)) = '" & txtpwd.Text & "'"
+            sqllogin = "select role,dept,isnull(staff,0) staff from Usertab4 where uname='" & txtuname.Text & "' and cast(Pwd as varchar(50)) = '" & txtpwd.Text & "'"
             GMod.DataSetRet(sqllogin, "isexists")
             If GMod.ds.Tables("isexists").Rows.Count > 0 Then
 
@@ -614,7 +614,7 @@ Public Class frmlogin
     Private Sub txtuname_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtuname.Leave
         Try
             Dim sqlselect As String
-            sqlselect = "select * from Usertab3 where uname='" & txtuname.Text & "'"
+            sqlselect = "select * from Usertab4 where uname='" & txtuname.Text & "'"
             GMod.DataSetRet(sqlselect, "checkuser")
             If GMod.ds.Tables("checkuser").Rows.Count > 0 Then
                 sqlselect = "select cam.Cmp_id,Cmpname from Cmp_assignment cam "
