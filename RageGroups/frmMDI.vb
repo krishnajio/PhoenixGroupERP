@@ -1611,4 +1611,11 @@ Public Class frmMDI
         Dim frmPurchasepartyAmount As New frmPurchasePartyAmt
         frmPurchasepartyAmount.ShowDialog()
     End Sub
+
+    Private Sub SessionTransferToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SessionTransferToolStripMenuItem.Click
+        If GMod.username = "admin" Then
+            Dim objSessionTableTransfer As New frmSessionTableTransfer
+            objSessionTableTransfer.ShowDialog()
+        End If
+    End Sub
 End Class

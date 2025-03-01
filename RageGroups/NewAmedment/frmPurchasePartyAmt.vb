@@ -7,7 +7,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        sql = "select  p.vou_type, p.vou_no, p.party_code, a.account_head_name , p.Bill_no, p.party_amt from Purchase_Data p inner join ACC_HEAD_PHOE_2425 a on "
+        sql = "select  p.vou_type, p.vou_no, p.party_code, a.account_head_name , p.Bill_no, (p.party_amt - p.varcst_amt) as party_amt from Purchase_Data p inner join ACC_HEAD_PHOE_2425 a on "
         sql &= "   p.party_code = a.account_code where p.session = '" & GMod.Session & "' and p.vou_type='" & voutype.Text & "'"
         sql &= " and cast(vou_no as int) between '" & txtv1.Text & "' and '" & txtv2.Text & "'  ORDER BY cast(vou_no as numeric(18,0)),id"
 

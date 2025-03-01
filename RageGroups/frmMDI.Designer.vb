@@ -244,6 +244,7 @@ Partial Class frmMDI
         Me.SessionPermissionToUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TCSMasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExcelDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SessionTransferToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChequeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem13 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem14 = New System.Windows.Forms.ToolStripMenuItem()
@@ -258,6 +259,7 @@ Partial Class frmMDI
         Me.AuthorizationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VoucherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PurchasePartyAmountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaleRegisterToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaleRegisterOtherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PendingListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -277,7 +279,6 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PurchasePartyAmountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1523,7 +1524,7 @@ Partial Class frmMDI
         '
         'ToolsToolStripMenuItem
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem23, Me.ToolStripMenuItem20, Me.ChangeSessionToolStripMenuItem, Me.ChangePasswordToolStripMenuItem, Me.ToolStripMenuItem26, Me.ToolStripMenuItem12, Me.NarrationUpdateToolStripMenuItem, Me.BonusEntryBankDrToolStripMenuItem, Me.ToolStripMenuItem10, Me.SendBulkSmsToolStripMenuItem, Me.ToolStripMenuItem19, Me.LogOffToolStripMenuItem, Me.BonusTransferToolStripMenuItem, Me.ExitToolStripMenuItem, Me.NoOfDaysToolStripMenuItem, Me.ToolStripMenuItem32, Me.BonusToolStripMenuItem, Me.UnathrToolStripMenuItem, Me.SessionPermissionToUserToolStripMenuItem, Me.TCSMasterToolStripMenuItem, Me.ExcelDataToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem23, Me.ToolStripMenuItem20, Me.ChangeSessionToolStripMenuItem, Me.ChangePasswordToolStripMenuItem, Me.ToolStripMenuItem26, Me.ToolStripMenuItem12, Me.NarrationUpdateToolStripMenuItem, Me.BonusEntryBankDrToolStripMenuItem, Me.ToolStripMenuItem10, Me.SendBulkSmsToolStripMenuItem, Me.ToolStripMenuItem19, Me.LogOffToolStripMenuItem, Me.BonusTransferToolStripMenuItem, Me.ExitToolStripMenuItem, Me.NoOfDaysToolStripMenuItem, Me.ToolStripMenuItem32, Me.BonusToolStripMenuItem, Me.UnathrToolStripMenuItem, Me.SessionPermissionToUserToolStripMenuItem, Me.TCSMasterToolStripMenuItem, Me.ExcelDataToolStripMenuItem, Me.SessionTransferToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
         Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
         Me.ToolsToolStripMenuItem.Text = "&Tools"
@@ -1654,6 +1655,12 @@ Partial Class frmMDI
         Me.ExcelDataToolStripMenuItem.Size = New System.Drawing.Size(236, 22)
         Me.ExcelDataToolStripMenuItem.Text = "Excel Data"
         '
+        'SessionTransferToolStripMenuItem
+        '
+        Me.SessionTransferToolStripMenuItem.Name = "SessionTransferToolStripMenuItem"
+        Me.SessionTransferToolStripMenuItem.Size = New System.Drawing.Size(236, 22)
+        Me.SessionTransferToolStripMenuItem.Text = "Session Transfer"
+        '
         'ChequeToolStripMenuItem
         '
         Me.ChequeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem13, Me.ToolStripMenuItem14, Me.AllotChequeToUserToolStripMenuItem, Me.ToolStripMenuItem15, Me.ChequeLayoutToolStripMenuItem, Me.ToolStripMenuItem9, Me.ChequeIssueToolStripMenuItem, Me.ToolStripMenuItem16, Me.ChequeSearchPrintToolStripMenuItem})
@@ -1741,6 +1748,12 @@ Partial Class frmMDI
         Me.PurchaseToolStripMenuItem.Name = "PurchaseToolStripMenuItem"
         Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
         Me.PurchaseToolStripMenuItem.Text = "Purchase"
+        '
+        'PurchasePartyAmountToolStripMenuItem
+        '
+        Me.PurchasePartyAmountToolStripMenuItem.Name = "PurchasePartyAmountToolStripMenuItem"
+        Me.PurchasePartyAmountToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.PurchasePartyAmountToolStripMenuItem.Text = "Purchase Party Amount"
         '
         'SaleRegisterToolStripMenuItem1
         '
@@ -1911,12 +1924,6 @@ Partial Class frmMDI
         Me.Label2.Size = New System.Drawing.Size(13, 13)
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
-        '
-        'PurchasePartyAmountToolStripMenuItem
-        '
-        Me.PurchasePartyAmountToolStripMenuItem.Name = "PurchasePartyAmountToolStripMenuItem"
-        Me.PurchasePartyAmountToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
-        Me.PurchasePartyAmountToolStripMenuItem.Text = "Purchase Party Amount"
         '
         'frmMDI
         '
@@ -2211,4 +2218,5 @@ Partial Class frmMDI
     Friend WithEvents XLSToVoucherToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExcelDataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PurchasePartyAmountToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SessionTransferToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
