@@ -24,6 +24,7 @@ Module GMod
     Public nxtCR As Int64
     Public setDate As DateTime
     Public nofd As Integer
+    Public setUpdateOpening As Integer
     'For DataBases    
     Public SqlConn As New SqlConnection(Connstr)
     Public ds As New DataSet

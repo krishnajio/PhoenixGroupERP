@@ -122,7 +122,7 @@ Public Class frmlogin
         Dim rl As String
         Try
             Dim sqllogin As String
-            sqllogin = "select role,dept,isnull(staff,0) staff from Usertab4 where uname='" & txtuname.Text & "' and cast(Pwd as varchar(50)) = '" & txtpwd.Text & "'"
+            sqllogin = "select role,dept,isnull(staff,0) staff , isnull(uo,0) uo from Usertab4 where uname='" & txtuname.Text & "' and cast(Pwd as varchar(50)) = '" & txtpwd.Text & "'"
             GMod.DataSetRet(sqllogin, "isexists")
             If GMod.ds.Tables("isexists").Rows.Count > 0 Then
 
@@ -136,6 +136,7 @@ Public Class frmlogin
                 GMod.Session = cmbSession.Text
                 'MsgBox(GMod.Session)
                 GMod.staff1 = GMod.ds.Tables("isexists").Rows(0)("staff")
+                GMod.setUpdateOpening = GMod.ds.Tables("isexists").Rows(0)("uo")
 
                 Try
                     'getting ip address

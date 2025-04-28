@@ -3470,7 +3470,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\CrPrintInvLaserPPall.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrPrintInvLaserPPall.vb</LastGenOutput>
+      <LastGenOutput>CrPrintInvLaserPPall1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\CrPurAgeing.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

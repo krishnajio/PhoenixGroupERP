@@ -279,6 +279,8 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.UpdateOpeningToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateOpeningToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -287,10 +289,10 @@ Partial Class frmMDI
         '
         'MenuStripRagaGroup
         '
-        Me.MenuStripRagaGroup.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MasterEntriesToolStripMenuItem, Me.TranseectionToolStripMenuItem, Me.DisplayPrintToolStripMenuItem, Me.ToolStripMenuItem21, Me.GeneralReportToolStripMenuItem, Me.MisReporToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.ChequeToolStripMenuItem, Me.ChequeIssueReportsToolStripMenuItem, Me.AuthorizationToolStripMenuItem})
+        Me.MenuStripRagaGroup.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MasterEntriesToolStripMenuItem, Me.TranseectionToolStripMenuItem, Me.DisplayPrintToolStripMenuItem, Me.ToolStripMenuItem21, Me.GeneralReportToolStripMenuItem, Me.MisReporToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.ChequeToolStripMenuItem, Me.ChequeIssueReportsToolStripMenuItem, Me.AuthorizationToolStripMenuItem, Me.UpdateOpeningToolStripMenuItem2})
         Me.MenuStripRagaGroup.Location = New System.Drawing.Point(0, 0)
         Me.MenuStripRagaGroup.Name = "MenuStripRagaGroup"
-        Me.MenuStripRagaGroup.Size = New System.Drawing.Size(1011, 24)
+        Me.MenuStripRagaGroup.Size = New System.Drawing.Size(1303, 24)
         Me.MenuStripRagaGroup.TabIndex = 1
         Me.MenuStripRagaGroup.Text = "MenuStrip1"
         '
@@ -1873,7 +1875,7 @@ Partial Class frmMDI
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 546)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1011, 28)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1303, 28)
         Me.StatusStrip1.TabIndex = 91
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -1911,7 +1913,7 @@ Partial Class frmMDI
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(1011, 546)
+        Me.PictureBox3.Size = New System.Drawing.Size(1303, 546)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 89
         Me.PictureBox3.TabStop = False
@@ -1925,12 +1927,25 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
+        'UpdateOpeningToolStripMenuItem2
+        '
+        Me.UpdateOpeningToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateOpeningToolStripMenuItem3})
+        Me.UpdateOpeningToolStripMenuItem2.Name = "UpdateOpeningToolStripMenuItem2"
+        Me.UpdateOpeningToolStripMenuItem2.Size = New System.Drawing.Size(57, 20)
+        Me.UpdateOpeningToolStripMenuItem2.Text = "Update"
+        '
+        'UpdateOpeningToolStripMenuItem3
+        '
+        Me.UpdateOpeningToolStripMenuItem3.Name = "UpdateOpeningToolStripMenuItem3"
+        Me.UpdateOpeningToolStripMenuItem3.Size = New System.Drawing.Size(161, 22)
+        Me.UpdateOpeningToolStripMenuItem3.Text = "Update Opening"
+        '
         'frmMDI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1011, 574)
+        Me.ClientSize = New System.Drawing.Size(1303, 574)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
@@ -2219,4 +2234,6 @@ Partial Class frmMDI
     Friend WithEvents ExcelDataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PurchasePartyAmountToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SessionTransferToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UpdateOpeningToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UpdateOpeningToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
 End Class

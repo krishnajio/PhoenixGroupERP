@@ -334,10 +334,14 @@ Public Class frmSaleInvoice
     Dim tcsper As Double
     Dim tcsamt As Double
     Dim tcshead As String
+   
 
     Private Sub btnsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsave.Click
         Dim smsmsg As String
+        Dim sql As String
+        Dim isPAN As Boolean
         Dim i As Integer
+
         If MessageBox.Show("Are U sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes Then
             If CmbCrHead.FindStringExact(CmbCrHead.Text) = -1 Then
                 MsgBox("Account Code does not exists")
@@ -369,15 +373,16 @@ Public Class frmSaleInvoice
                         Exit Sub
                     End If
                 Next
+
+
+                
             End If
             Dim sqltrans As SqlTransaction
             sqltrans = GMod.SqlConn.BeginTransaction
             Dim sqlneccamt As String
-            Dim sql As String
             Dim neccamt, neccval, discountamount, discountval, productamount As Double
             Dim sqlsavenecc, zero, saveprd, ssaveprdvntry As String
             zero = "0"
-
             Dim c, h, g, s, pn As String
             Dim narration As String
             If btnsave.Enabled = True Then
@@ -401,7 +406,6 @@ Public Class frmSaleInvoice
                     'sql = "delete from Sale_Receipt where vou_type='" & voutype.Text & "' and  vou_no='" & lblno.Text & "' and cmp_id='" & GMod.Cmpid & "' and Session='" & GMod.Session & "'"
                     'Dim cmddel As New SqlCommand(sql, GMod.SqlConn, sqltrans)
                     'cmddel.ExecuteNonQuery()
-
                 End If
 
                 Dim qty As Double
@@ -531,7 +535,6 @@ Public Class frmSaleInvoice
                             'MsgBox(GMod.SqlExecuteNonQuery(sqlsavenecc))
                             Dim cmd3 As New SqlCommand(sqlsavenecc, GMod.SqlConn, sqltrans)
                             cmd3.ExecuteNonQuery()
-
                         End If
                     End If
                     If neccamt > 0 Then
@@ -615,7 +618,7 @@ Public Class frmSaleInvoice
 
                         ssaveprdvntry = "insert into " & GMod.VENTRY & " (Cmp_id, Uname," _
                         & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
-               & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
+                        & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
                         ssaveprdvntry &= "'" & GMod.Cmpid & "',"
                         ssaveprdvntry &= "'" & GMod.username & "',"
                         ssaveprdvntry &= "'0',"
@@ -670,8 +673,8 @@ Public Class frmSaleInvoice
 
 
                         ssaveprdvntry = "insert into " & GMod.VENTRY & " (Cmp_id, Uname," _
-               & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
-               & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
+                         & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
+                            & " Narration, Group_name, Sub_group_name,ch_date) VALUES ("
                         ssaveprdvntry &= "'" & GMod.Cmpid & "',"
                         ssaveprdvntry &= "'" & GMod.username & "',"
                         ssaveprdvntry &= "'0',"
@@ -744,8 +747,8 @@ Public Class frmSaleInvoice
                     sqlsavenecc &= "'" & Val(discountval) & "',"
                     sqlsavenecc &= "'" & Val(neccamt) & "',"
                     sqlsavenecc &= "'" & Val(neccval) & "',"
-                    sqlsavenecc &= "'" & dgSaleVoucher(5, i).Value & "',"
-                    sqlsavenecc &= "'" & dgSaleVoucher(6, i).Value & "',"
+                    sqlsavenecc &= "'" & Val(dgSaleVoucher(5, i).Value) & "',"
+                    sqlsavenecc &= "'" & Val(dgSaleVoucher(6, i).Value) & "',"
                     sqlsavenecc &= "'" & dtHatchdate.Value.ToShortDateString & "',"
                     sqlsavenecc &= "'" & lblno.Text & "',"
                     sqlsavenecc &= "'" & dtdate.Value.ToShortDateString & "',"
@@ -1374,7 +1377,7 @@ Public Class frmSaleInvoice
                 MsgBox("Customer Eligible for TCS...")
             End If
 
-            '
+
 
             GMod.DataSetRet("select pan_no from " & GMod.ACC_HEAD & "  where account_code = '" & cmbacheadcode.Text & "'", "cuspanno")
             If GMod.ds.Tables("cuspanno").Rows(0)(0).ToString.Length > 8 Then
@@ -1390,10 +1393,26 @@ Public Class frmSaleInvoice
 
 
         'TCS elegibiltuy by pan number 
-        sql = "select isnull(sum(dramt),0) from " & GMod.VENTRY & " where Acc_head_code in (select account_code from " & GMod.ACC_HEAD & "  where pan_no='" & lblpan.Text & "')"
-        If Val(GMod.ds.Tables("tcsamtcheck").Rows(0)(0)) >= 5000000 Then
-            MsgBox("Customer Eligible for TCS...")
+        'sql = "select isnull(sum(dramt),0) from " & GMod.VENTRY & " where Acc_head_code in (select account_code from " & GMod.ACC_HEAD & "  where pan_no='" & lblpan.Text & "')"
+        'If Val(GMod.ds.Tables("tcsamtcheck").Rows(0)(0)) >= 5000000 Then
+        'MsgBox("Customer Eligible for TCS...")
+        'End If
+
+        'PAN CHECK FOR TCS--------------------------------------------------------------------------------------------------------
+        GMod.DataSetRet("select pan_no from " & ACC_HEAD & " where account_code = '" & cmbacheadcode.Text & "'", "pancheck")
+        If ds.Tables("pancheck").Rows(0)(0).ToString.Length <= 0 Then
+        ElseIf ds.Tables("pancheck").Rows(0)(0).ToString.Length >= 10 Then
+            sql = "select isnull(sum(dramt),0) from " & VENTRY & " where Acc_head_code in (select account_code from " & ACC_HEAD & "  where pan_no='" & lblpan.Text & "')"
+            GMod.DataSetRet(sql, "tcscheckpan")
+            If Val(ds.Tables("tcscheckpan").Rows(0)(0)) >= 5000000 Then
+                MsgBox("Customer Eligible for TCS...", MsgBoxResult.Ok, MsgBoxStyle.Critical)
+                ' chKtcs.Checked = True
+            Else
+                'chKtcs.Checked = False
+            End If
         End If
+        '------------------------------------------------------------------------------------------------------------------------------'
+
 
 
         sql = "select account_code from " & GMod.ACC_HEAD & " where account_head_name = '" & cmbacheadname.Text & "' and  Area_code ='" & cmbAreaCode.Text & "'"
@@ -1445,7 +1464,7 @@ Public Class frmSaleInvoice
             lblcr.Text = GMod.ds.Tables("custledbal").Rows(0)("CrAmt")
 
 
-           
+
 
 
         Catch ex As Exception

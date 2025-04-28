@@ -1113,7 +1113,7 @@ Partial Class frmSaleInvoice
         '
         Me.chkTDS.AutoSize = True
         Me.chkTDS.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkTDS.Location = New System.Drawing.Point(840, 507)
+        Me.chkTDS.Location = New System.Drawing.Point(840, 510)
         Me.chkTDS.Name = "chkTDS"
         Me.chkTDS.Size = New System.Drawing.Size(51, 17)
         Me.chkTDS.TabIndex = 20

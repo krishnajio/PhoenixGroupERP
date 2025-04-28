@@ -1618,4 +1618,13 @@ Public Class frmMDI
             objSessionTableTransfer.ShowDialog()
         End If
     End Sub
+
+    Private Sub UpdateOpeningToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles UpdateOpeningToolStripMenuItem3.Click
+        If GMod.setUpdateOpening = 1 Then
+            Dim frmupopening As New frmUpdateOpeningofNextSession
+            frmupopening.Show()
+        Else
+            MsgBox("Yor are not authorised for update opening")
+        End If
+    End Sub
 End Class
