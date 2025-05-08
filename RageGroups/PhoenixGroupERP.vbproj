@@ -1876,6 +1876,12 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="NewAmedment\Reports\CrPrintInvLaserHatLR_CRNote.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrPrintInvLaserHatLR_CRNote.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="NewAmedment\Reports\CrPrintInvLaserpp.vb">
       <DependentUpon>CrPrintInvLaserpp.rpt</DependentUpon>
       <SubType>Component</SubType>
@@ -2087,6 +2093,12 @@
       <DependentUpon>frmPartyBankList.vb</DependentUpon>
     </Compile>
     <Compile Include="NewAmedment\Reports\frmPartyBankList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewAmedment\Reports\frmPHCreditNotePrint.Designer.vb">
+      <DependentUpon>frmPHCreditNotePrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\Reports\frmPHCreditNotePrint.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewAmedment\Reports\frmPoAgsBillReport.Designer.vb">
@@ -3464,6 +3476,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrPrintInvLaserHatLR.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\Reports\CrPrintInvLaserHatLR_CRNote.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrPrintInvLaserHatLR_CRNote.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\CrPrintInvLaserpp.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrPrintInvLaserpp.vb</LastGenOutput>
@@ -3593,6 +3609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\frmPartyBankList.resx">
       <DependentUpon>frmPartyBankList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\Reports\frmPHCreditNotePrint.resx">
+      <DependentUpon>frmPHCreditNotePrint.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\Reports\frmPoAgsBillReport.resx">
       <SubType>Designer</SubType>

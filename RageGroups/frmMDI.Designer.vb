@@ -263,6 +263,8 @@ Partial Class frmMDI
         Me.SaleRegisterToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaleRegisterOtherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PendingListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateOpeningToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateOpeningToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -279,8 +281,7 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.UpdateOpeningToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UpdateOpeningToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PHCreditNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -527,7 +528,7 @@ Partial Class frmMDI
         '
         'SaleToolStripMenuItem1
         '
-        Me.SaleToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaleToolStripMenuItem2, Me.OtherSaleToolStripMenuItem, Me.ReceiptToolStripMenuItem1, Me.CrDebitToolStripMenuItem, Me.OtherDetectionVoucherEntryToolStripMenuItem, Me.ToolStripMenuItem38, Me.OtherSaleIUToolStripMenuItem, Me.OtherSaleInvoivePrintToolStripMenuItem})
+        Me.SaleToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaleToolStripMenuItem2, Me.OtherSaleToolStripMenuItem, Me.ReceiptToolStripMenuItem1, Me.CrDebitToolStripMenuItem, Me.OtherDetectionVoucherEntryToolStripMenuItem, Me.ToolStripMenuItem38, Me.OtherSaleIUToolStripMenuItem, Me.OtherSaleInvoivePrintToolStripMenuItem, Me.PHCreditNoteToolStripMenuItem})
         Me.SaleToolStripMenuItem1.Name = "SaleToolStripMenuItem1"
         Me.SaleToolStripMenuItem1.Size = New System.Drawing.Size(249, 22)
         Me.SaleToolStripMenuItem1.Text = "Sale"
@@ -1775,6 +1776,19 @@ Partial Class frmMDI
         Me.PendingListToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
         Me.PendingListToolStripMenuItem.Text = "Pending List"
         '
+        'UpdateOpeningToolStripMenuItem2
+        '
+        Me.UpdateOpeningToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateOpeningToolStripMenuItem3})
+        Me.UpdateOpeningToolStripMenuItem2.Name = "UpdateOpeningToolStripMenuItem2"
+        Me.UpdateOpeningToolStripMenuItem2.Size = New System.Drawing.Size(57, 20)
+        Me.UpdateOpeningToolStripMenuItem2.Text = "Update"
+        '
+        'UpdateOpeningToolStripMenuItem3
+        '
+        Me.UpdateOpeningToolStripMenuItem3.Name = "UpdateOpeningToolStripMenuItem3"
+        Me.UpdateOpeningToolStripMenuItem3.Size = New System.Drawing.Size(161, 22)
+        Me.UpdateOpeningToolStripMenuItem3.Text = "Update Opening"
+        '
         'CrystalReportViewer1
         '
         Me.CrystalReportViewer1.ActiveViewIndex = -1
@@ -1927,18 +1941,11 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
-        'UpdateOpeningToolStripMenuItem2
+        'PHCreditNoteToolStripMenuItem
         '
-        Me.UpdateOpeningToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateOpeningToolStripMenuItem3})
-        Me.UpdateOpeningToolStripMenuItem2.Name = "UpdateOpeningToolStripMenuItem2"
-        Me.UpdateOpeningToolStripMenuItem2.Size = New System.Drawing.Size(57, 20)
-        Me.UpdateOpeningToolStripMenuItem2.Text = "Update"
-        '
-        'UpdateOpeningToolStripMenuItem3
-        '
-        Me.UpdateOpeningToolStripMenuItem3.Name = "UpdateOpeningToolStripMenuItem3"
-        Me.UpdateOpeningToolStripMenuItem3.Size = New System.Drawing.Size(161, 22)
-        Me.UpdateOpeningToolStripMenuItem3.Text = "Update Opening"
+        Me.PHCreditNoteToolStripMenuItem.Name = "PHCreditNoteToolStripMenuItem"
+        Me.PHCreditNoteToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.PHCreditNoteToolStripMenuItem.Text = "PH Credit Note"
         '
         'frmMDI
         '
@@ -2236,4 +2243,5 @@ Partial Class frmMDI
     Friend WithEvents SessionTransferToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UpdateOpeningToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UpdateOpeningToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PHCreditNoteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

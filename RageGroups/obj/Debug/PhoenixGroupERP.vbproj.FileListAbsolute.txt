@@ -2288,3 +2288,4 @@ D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmXlsToVouc
 D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmExcelData.resources
 D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmPurchasePartyAmt.resources
 D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmSessionTableTransfer.resources
+D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmPHCreditNotePrint.resources

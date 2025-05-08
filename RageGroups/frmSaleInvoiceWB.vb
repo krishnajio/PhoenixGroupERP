@@ -12,7 +12,7 @@ Public Class frmSaleInvoiceWB
             dtdate.Value = CDate(GMod.ds.Tables("serverdate").Rows(0)(0).ToString)
         End If
 
-        Label3.Text = "SALE INVOICE  [" & GMod.Cmpname & "]"
+        Label3.Text = "CR NOTE [" & GMod.Cmpname & "]"
         If cmbsubgroup.Text.Length = 0 Then
             cmbsubgroup.Text = "-"
         End If
@@ -20,7 +20,7 @@ Public Class frmSaleInvoiceWB
         fillItems()
         fillArea()
         cmbAreaCode.Text = "JB"
-        'nxtvno()
+        nxtvno()
         Me.Text = Me.Text & "    " & "[" & GMod.Cmpname & "]"
         dgSaleVoucher.Rows.Add()
         Dim Sql As String
@@ -252,11 +252,11 @@ Public Class frmSaleInvoiceWB
                 'deteleing existing data for new modifyinh
                 If btnsave.Enabled = False Then
                     Dim sqldel As String
-                    sqldel = "delete from " & GMod.VENTRY & " where Vou_type='SALE' and Vou_no= " & lblno.Text
+                    sqldel = "delete from " & GMod.VENTRY & " where Vou_type='" & voutype.Text & "' and Vou_no= " & lblno.Text
                     Dim cmddel1 As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
                     cmddel1.ExecuteNonQuery()
 
-                    sqldel = "delete  from PrintData where  Vou_no= '" & lblno.Text & "' and Vou_type='SALE' and Cmp_id='" & GMod.Cmpid & "' and Session='" & GMod.Session & "'"
+                    sqldel = "delete  from PrintData where  Vou_no= '" & lblno.Text & "' and Vou_type='" & voutype.Text & "' and Cmp_id='" & GMod.Cmpid & "' and Session='" & GMod.Session & "'"
                     Dim cmddel2 As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
                     cmddel2.ExecuteNonQuery()
                 End If
@@ -266,10 +266,8 @@ Public Class frmSaleInvoiceWB
                     'MsgBox("SALE OF " & dgSaleVoucher(1, i).Value.ToString)
                     qty = dgSaleVoucher(2, i).Value - dgSaleVoucher(6, i).Value
                     pn = "SALE OF " & dgSaleVoucher(1, i).Value.ToString
-                    narration = "BEING SALE OF " & dgSaleVoucher(1, i).Value.ToString
 
-
-                    narration = "TO INV NO." & txtinvoiceno.Text & " QTY " & dgSaleVoucher(2, i).Value - dgSaleVoucher(6, i).Value & " + " & dgSaleVoucher(6, i).Value & "@ " & dgSaleVoucher(3, i).Value
+                    narration = "BEING CREDIT NOTE ISSUED AGAINST " & txtinvoiceno.Text & " HATCH DATE : " & dtHatchdate.Text & "  QTY " & dgSaleVoucher(2, i).Value - dgSaleVoucher(6, i).Value & " + " & dgSaleVoucher(6, i).Value & "@ " & dgSaleVoucher(3, i).Value & " " & txtnarr.Text
 
                     nar = nar & narration
                     'Getting product head name
@@ -308,8 +306,8 @@ Public Class frmSaleInvoiceWB
                         sqlsavenecc &= "'" & dtHatchdate.Value.ToShortDateString & "',"
                         sqlsavenecc &= "'" & neccode & "',"
                         sqlsavenecc &= "'" & necchead & "',"
-                        sqlsavenecc &= "'" & Val(zero) & "',"
                         sqlsavenecc &= "'" & neccval.ToString & "',"
+                        sqlsavenecc &= "'" & Val(zero) & "',"
                         sqlsavenecc &= "'" & narration & "',"
                         sqlsavenecc &= "'" & neccgrp & "',"
                         sqlsavenecc &= "'" & neccsgrp & "')"
@@ -403,8 +401,9 @@ Public Class frmSaleInvoiceWB
                         ssaveprdvntry &= "'" & dtHatchdate.Value.ToShortDateString & "',"
                         ssaveprdvntry &= "'" & c & "',"
                         ssaveprdvntry &= "'" & h & "',"
-                        ssaveprdvntry &= "'" & Val(zero) & "',"
+
                         ssaveprdvntry &= "'" & cr.ToString & "',"
+                        ssaveprdvntry &= "'" & Val(zero) & "',"
                         ssaveprdvntry &= "'" & narration.ToString & "',"
                         ssaveprdvntry &= "'" & g & "',"
                         ssaveprdvntry &= "'" & s & "')"
@@ -424,8 +423,9 @@ Public Class frmSaleInvoiceWB
                         ssaveprdvntry &= "'" & dtHatchdate.Value.ToShortDateString & "',"
                         ssaveprdvntry &= "'" & c & "',"
                         ssaveprdvntry &= "'" & h & "',"
-                        ssaveprdvntry &= "'" & Val(zero) & "',"
+
                         ssaveprdvntry &= "'" & dgSaleVoucher(4, i).Value & "',"
+                        ssaveprdvntry &= "'" & Val(zero) & "',"
                         ssaveprdvntry &= "'" & narration.ToString & "',"
                         ssaveprdvntry &= "'" & g & "',"
                         ssaveprdvntry &= "'" & s & "')"
@@ -487,8 +487,9 @@ Public Class frmSaleInvoiceWB
                 ssaveprdvntry &= "'" & dtHatchdate.Value.ToShortDateString & "',"
                 ssaveprdvntry &= "'" & cmbacheadcode.Text & "',"
                 ssaveprdvntry &= "'" & cmbacheadname.Text & "',"
-                ssaveprdvntry &= "'" & productamount.ToString & "',"
+
                 ssaveprdvntry &= "'0',"
+                ssaveprdvntry &= "'" & productamount.ToString & "',"
                 ssaveprdvntry &= "'" & nar & "',"
                 ssaveprdvntry &= "'" & ComboBox1.Text & "',"
                 ssaveprdvntry &= "'" & cmbsubgroup.Text & "')"
@@ -499,7 +500,7 @@ Public Class frmSaleInvoiceWB
                 btnsave.Enabled = True
                 btn_modify.Text = "&Modify"
                 sqltrans.Commit()
-                MsgBox("SALE / " & lblno.Text)
+                MsgBox("CREDIT NOTE / " & lblno.Text)
                 dgSaleVoucher.Rows.Clear()
                 dgSaleVoucher.Rows.Add()
                 txtinvoiceno.Focus()
@@ -661,7 +662,7 @@ Public Class frmSaleInvoiceWB
     End Sub
 
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Dim frm As New frmSaleInvoicePrint
+        Dim frm As New frmPHCreditNotePrint
         frm.ShowDialog()
     End Sub
     Private Sub ComboBox3_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ComboBox3.KeyUp
@@ -685,7 +686,7 @@ Public Class frmSaleInvoiceWB
     End Sub
 
 
-    Private Sub CheckBox2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox2.CheckedChanged
+    Private Sub CheckBox2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim t As New frmPartyaccount
         Dim sql As String
         sql = "select Group_name,Suffix from Groups where Group_name like '%PARTY%' and Cmp_id='" & GMod.Cmpid & "'"
@@ -699,11 +700,11 @@ Public Class frmSaleInvoiceWB
         t.lblgroupsuffix.Text = "PA"
         t.Label1.Text = "Party Account Heads"
         t.ShowDialog()
-        CheckBox2.Checked = False
+
         heads()
     End Sub
 
-    Private Sub ChknewCustomer_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChknewCustomer.CheckedChanged
+    Private Sub ChknewCustomer_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim t As New frmPartyaccount
         Dim sql As String
         sql = "select Group_name,Suffix from Groups where Group_name like '%CUSTOMER%' and Cmp_id='" & GMod.Cmpid & "'"
@@ -717,17 +718,11 @@ Public Class frmSaleInvoiceWB
 
         t.Label1.Text = "Customer Account Heads"
         t.ShowDialog()
-        CheckBox2.Checked = False
+
         heads()
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked = True Then
-            Dim r As New frmItemmaster
-            r.ShowDialog()
-            CheckBox1.Checked = False
-        End If
-    End Sub
+   
     Private Sub btnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelete.Click
         Dim r As String, sql As String, i As Integer
         r = InputBox("Enter Sale Voucher Number to be Modified?")
@@ -816,4 +811,7 @@ Public Class frmSaleInvoiceWB
     End Sub
 
  
+    Private Sub lblno_TextChanged(sender As Object, e As EventArgs) Handles lblno.TextChanged
+
+    End Sub
 End Class

@@ -1627,4 +1627,9 @@ Public Class frmMDI
             MsgBox("Yor are not authorised for update opening")
         End If
     End Sub
+
+    Private Sub PHCreditNoteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PHCreditNoteToolStripMenuItem.Click
+        Dim Saleobj As New frmSaleInvoiceWB
+        Saleobj.ShowDialog()
+    End Sub
 End Class
