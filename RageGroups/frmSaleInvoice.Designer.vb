@@ -19,11 +19,11 @@ Partial Class frmSaleInvoice
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSaleInvoice))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtinvoiceno = New System.Windows.Forms.TextBox()
@@ -212,8 +212,8 @@ Partial Class frmSaleInvoice
         '
         'srno
         '
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.srno.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.srno.DefaultCellStyle = DataGridViewCellStyle11
         Me.srno.Frozen = True
         Me.srno.HeaderText = "Sr. No."
         Me.srno.MaxInputLength = 2
@@ -222,8 +222,8 @@ Partial Class frmSaleInvoice
         '
         'pcname
         '
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pcname.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.pcname.DefaultCellStyle = DataGridViewCellStyle12
         Me.pcname.Frozen = True
         Me.pcname.HeaderText = "Product Name"
         Me.pcname.Name = "pcname"
@@ -233,8 +233,8 @@ Partial Class frmSaleInvoice
         '
         'qty
         '
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.qty.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.qty.DefaultCellStyle = DataGridViewCellStyle13
         Me.qty.Frozen = True
         Me.qty.HeaderText = "Qty"
         Me.qty.MaxInputLength = 15
@@ -242,8 +242,8 @@ Partial Class frmSaleInvoice
         '
         'rate
         '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rate.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rate.DefaultCellStyle = DataGridViewCellStyle14
         Me.rate.Frozen = True
         Me.rate.HeaderText = "Rate"
         Me.rate.MaxInputLength = 18
@@ -260,8 +260,8 @@ Partial Class frmSaleInvoice
         '
         'freeper
         '
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.freeper.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.freeper.DefaultCellStyle = DataGridViewCellStyle15
         Me.freeper.Frozen = True
         Me.freeper.HeaderText = "Free Per"
         Me.freeper.MaxInputLength = 3
@@ -576,7 +576,7 @@ Partial Class frmSaleInvoice
         Me.CmbCrHead.FormattingEnabled = True
         Me.CmbCrHead.Location = New System.Drawing.Point(294, 397)
         Me.CmbCrHead.Name = "CmbCrHead"
-        Me.CmbCrHead.Size = New System.Drawing.Size(349, 21)
+        Me.CmbCrHead.Size = New System.Drawing.Size(481, 21)
         Me.CmbCrHead.TabIndex = 11
         Me.CmbCrHead.TabStop = False
         '
@@ -588,7 +588,7 @@ Partial Class frmSaleInvoice
         Me.CmbCrCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.CmbCrCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbCrCode.FormattingEnabled = True
-        Me.CmbCrCode.Location = New System.Drawing.Point(652, 396)
+        Me.CmbCrCode.Location = New System.Drawing.Point(781, 393)
         Me.CmbCrCode.Name = "CmbCrCode"
         Me.CmbCrCode.Size = New System.Drawing.Size(110, 21)
         Me.CmbCrCode.TabIndex = 12
@@ -884,7 +884,7 @@ Partial Class frmSaleInvoice
         Me.cmbTcsHead.FormattingEnabled = True
         Me.cmbTcsHead.Location = New System.Drawing.Point(294, 453)
         Me.cmbTcsHead.Name = "cmbTcsHead"
-        Me.cmbTcsHead.Size = New System.Drawing.Size(424, 21)
+        Me.cmbTcsHead.Size = New System.Drawing.Size(481, 21)
         Me.cmbTcsHead.TabIndex = 14
         Me.cmbTcsHead.TabStop = False
         '

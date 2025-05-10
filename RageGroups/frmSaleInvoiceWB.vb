@@ -40,7 +40,16 @@ Public Class frmSaleInvoiceWB
 
         txtremark1.DataSource = GMod.ds.Tables("aclist1")
         txtremark1.DisplayMember = "remark1"
-        txtinvoiceno.Text = lblno.Text
+
+
+        Sql = " select * from " & GMod.ACC_HEAD & " where Group_name like  '%SALE%'"
+        GMod.DataSetRet(Sql, "salehead")
+
+        CmbCrCode.DataSource = GMod.ds.Tables("salehead")
+        CmbCrCode.DisplayMember = "account_code"
+        CmbCrHead.DataSource = GMod.ds.Tables("salehead")
+        CmbCrHead.DisplayMember = "account_head_name"
+
 
         dtHatchdate.MaxDate = CDate("3/31/" & Mid(GMod.Session, 3, 4))
         dtHatchdate.MinDate = CDate("4/1/" & Mid(GMod.Session, 1, 2)).ToShortDateString
@@ -399,14 +408,14 @@ Public Class frmSaleInvoiceWB
                         ssaveprdvntry &= "'" & lblno.Text & "',"
                         ssaveprdvntry &= "'" & voutype.Text & "',"
                         ssaveprdvntry &= "'" & dtHatchdate.Value.ToShortDateString & "',"
-                        ssaveprdvntry &= "'" & c & "',"
-                        ssaveprdvntry &= "'" & h & "',"
+                        ssaveprdvntry &= "'" & CmbCrCode.Text & "',"
+                        ssaveprdvntry &= "'" & CmbCrHead.Text & "',"
 
                         ssaveprdvntry &= "'" & cr.ToString & "',"
                         ssaveprdvntry &= "'" & Val(zero) & "',"
                         ssaveprdvntry &= "'" & narration.ToString & "',"
-                        ssaveprdvntry &= "'" & g & "',"
-                        ssaveprdvntry &= "'" & s & "')"
+                        ssaveprdvntry &= "'-',"
+                        ssaveprdvntry &= "'-')"
                         'MsgBox(ssaveprdvntry)
                         'MsgBox(GMod.SqlExecuteNonQuery(ssaveprdvntry))
                         Dim cmd4 As New SqlCommand(ssaveprdvntry, GMod.SqlConn, sqltrans)
@@ -421,14 +430,14 @@ Public Class frmSaleInvoiceWB
                         ssaveprdvntry &= "'" & lblno.Text & "',"
                         ssaveprdvntry &= "'" & voutype.Text & "',"
                         ssaveprdvntry &= "'" & dtHatchdate.Value.ToShortDateString & "',"
-                        ssaveprdvntry &= "'" & c & "',"
-                        ssaveprdvntry &= "'" & h & "',"
+                        ssaveprdvntry &= "'" & CmbCrCode.Text & "',"
+                        ssaveprdvntry &= "'" & CmbCrHead.Text & "',"
 
                         ssaveprdvntry &= "'" & dgSaleVoucher(4, i).Value & "',"
                         ssaveprdvntry &= "'" & Val(zero) & "',"
                         ssaveprdvntry &= "'" & narration.ToString & "',"
-                        ssaveprdvntry &= "'" & g & "',"
-                        ssaveprdvntry &= "'" & s & "')"
+                        ssaveprdvntry &= "'-',"
+                        ssaveprdvntry &= "'-')"
                         'MsgBox(ssaveprdvntry)
                         'MsgBox(GMod.SqlExecuteNonQuery(ssaveprdvntry))
                         Dim cmd5 As New SqlCommand(ssaveprdvntry, GMod.SqlConn, sqltrans)
@@ -475,7 +484,7 @@ Public Class frmSaleInvoiceWB
                     discountamount = 0
                     discountval = 0
                 Next
-                'Entry customer values Dr
+                'Entry customer values Cr
                 ssaveprdvntry = "insert into " & GMod.VENTRY & " (Cmp_id, Uname," _
                                     & "Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, Acc_head, dramt, cramt," _
                                     & " Narration, Group_name, Sub_group_name) VALUES ("
@@ -527,9 +536,7 @@ Public Class frmSaleInvoiceWB
 
     End Sub
 
-    Private Sub Label8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label8.Click
-
-    End Sub
+  
 
     Private Sub btn_modify_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_modify.Click
         Try
@@ -542,14 +549,14 @@ Public Class frmSaleInvoiceWB
                 Dim r As String, sql As String, i As Integer
                 r = InputBox("Enter Sale Voucher Number to be Modified?")
                 If r <> "" Then
-                    If LockDataChecks(r, GMod.Session, "SALE") = False Then
+                    If LockDataChecks(r, GMod.Session, voutype.Text) = False Then
                         MessageBox.Show("Duration Exceeds Than The Changing Period", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Exit Sub
                     End If
                     btnsave.Enabled = False
                     btn_modify.Text = "&Update"
                     lblno.Text = r
-                    sql = "select * from PrintData where type='P' and Vou_no= '" & r & "' and Vou_type='SALE' and Cmp_id='" & GMod.Cmpid & "' and Session='" & GMod.Session & "'"
+                    sql = "select * from PrintData where type='P' and Vou_no= '" & r & "' and Vou_type='" & voutype.Text & "' and Cmp_id='" & GMod.Cmpid & "' and Session='" & GMod.Session & "'"
                     GMod.DataSetRet(sql, "PrintData")
                     txtinvoiceno.Text = GMod.ds.Tables("PrintData").Rows(0)("BillNo")
                     dtdate.Value = CDate(GMod.ds.Tables("PrintData").Rows(0)("BillDate"))
@@ -569,6 +576,14 @@ Public Class frmSaleInvoiceWB
                         dgSaleVoucher(6, i).Value = GMod.ds.Tables("PrintData").Rows(i)("freeqty")
                         dgSaleVoucher.Rows.Add()
                     Next
+
+
+                    sql = "select Acc_head , narration from " & GMod.VENTRY & " where dramt >0 and vou_type ='" & voutype.Text & "' and vou_no='" & r & "' and acc_head like '%" & dgSaleVoucher(1, 0).Value & "%'"
+                    GMod.DataSetRet(sql, "crhead")
+                    CmbCrHead.Text = GMod.ds.Tables("crhead").Rows(0)(0).ToString
+                    txtnarr.Text = GMod.ds.Tables("crhead").Rows(0)(1).ToString
+
+
                     dgSaleVoucher.Rows.RemoveAt(i)
                 Else
                     dgSaleVoucher.Rows.Add()
@@ -582,7 +597,7 @@ Public Class frmSaleInvoiceWB
                 End If
             End If
         Catch ex As Exception
-
+            MsgBox("Error in updation ")
         End Try
         
     End Sub
@@ -783,7 +798,7 @@ Public Class frmSaleInvoiceWB
     End Sub
 
     Private Sub txtinvoiceno_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtinvoiceno.TextChanged
-        lblno.Text = txtinvoiceno.Text
+        '  lblno.Text = txtinvoiceno.Text
     End Sub
 
     Private Sub dtHatchdate_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtHatchdate.Leave
