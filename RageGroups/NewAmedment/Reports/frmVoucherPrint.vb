@@ -132,12 +132,12 @@ Public Class frmVoucherPrint
                   " amount, Chq_date, Uname, c.Vouno, c.vou_type, code, c.session,   " & _
                   " a.account_head_name from bank_payment b " & _
                   " left join chq_issue c on b.cmp_id=c.cmp_id and b.session=c.session and b.vou_type=c.vou_type and b.vou_no=c.vouno " & _
-                  " left join " & GMod.ACC_HEAD & " a on c.code=a.account_code where c.vou_type='" & cmbvoutype.Text & "' and c.vouno='" & ComboBox1.Text & "'  and b.session='" & GMod.Session & "'"
+                  " left join " & GMod.ACC_HEAD & " a on c.code=a.account_code where c.vou_type='" & cmbvoutype.Text & "' and c.vouno='" & ComboBox1.Text & "'  and b.session='" & GMod.Session & "'  and b.cmp_id='" & GMod.Cmpid & "'"
             GMod.DataSetRet(sql, "partybilldet")
             Dim bankDetials As String = ""
             Dim bankDetials1 As String = ""
             Try
-                sql = "select ' Bank Name:- ' + bankName + ', Account:- ' + accNumber + ' ,IFSC:- ' + ifscCode + ' , Branch:- ' + branch  from PArtyBankDetials where partyCode ='" & ds.Tables("partybilldet").Rows(0)("party_code") & "'"
+                sql = "select ' Bank Name:- ' + bankName + ', Account:- ' + accNumber + ' ,IFSC:- ' + ifscCode + ' , Branch:- ' + branch  from PArtyBankDetials where partyCode ='" & ds.Tables("partybilldet").Rows(0)("party_code") & "'  and cmp_id ='" & GMod.Cmpid & "'"
                 GMod.DataSetRet(sql, "partybankDetials")
 
                 If ds.Tables("partybilldet").Rows.Count > 0 Then

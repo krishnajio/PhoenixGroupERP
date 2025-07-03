@@ -15,7 +15,7 @@
             Sql = "select Chq_no,amount from chq_issue where session='" & GMod.Session & "' and Cmp_id='PHOE'  and vouno='" & cmbvono.Text & "'"
             GMod.DataSetRet(Sql, "rtgschqdata")
 
-            Sql = "select Acc_head_code from dummy_ventry where Vou_no='" & cmbvono.Text & "' and Vou_type='BANK' and cmp_id='PHOE' and session='" & GMod.Session & "'"
+            Sql = "select Acc_head_code from dummy_ventry where Vou_no='" & cmbvono.Text & "' and Vou_type='BANK' and cmp_id='PHOE' and session='" & GMod.Session & "' and dramt > 0 "
             GMod.DataSetRet(Sql, "rtgsventry")
 
             Sql = "select * from " & GMod.ACC_HEAD & " where account_code='" & GMod.ds.Tables("rtgsventry").Rows(0)("Acc_head_code") & "'"

@@ -1824,7 +1824,8 @@ Public Class frmRepGeneralLedger
                                 .FormatOptions = CrFormatTypeOptions
                             End With
                             r.Export()
-                            Dim ii As Integer
+
+                        Dim ii As Integer
                             For ii = 0 To 1000
 
                             Next
