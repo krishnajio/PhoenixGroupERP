@@ -213,8 +213,8 @@ Public Class frmSaleInvoice
                 sqlrate = "select discount, necc , rate  from ItemMaster where CmP_ID='" & GMod.Cmpid & "' and ItemName='" & dgSaleVoucher(1, dgSaleVoucher.CurrentCell.RowIndex).Value & "'"
                 GMod.DataSetRet(sqlrate, "rate")
 
-                neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
-                'neccamt1 = 0
+                'neccamt1 = Val(GMod.ds.Tables("rate").Rows(0)(1))
+                neccamt1 = 0
                 dis = Val(GMod.ds.Tables("rate").Rows(0)(0)) 'Discount Amount
                 'MsgBox(dis)
                 rate1 = Val(GMod.ds.Tables("rate").Rows(0)(2))
@@ -1833,4 +1833,5 @@ Public Class frmSaleInvoice
         End Try
     End Sub
 
+   
 End Class

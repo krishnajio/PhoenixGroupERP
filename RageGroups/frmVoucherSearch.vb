@@ -49,7 +49,7 @@ Public Class frmVoucherSearch
     End Sub
     Private Sub frmVoucherSearch_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If GMod.staff1 = 1 Then
-            GMod.DataSetRet("select * from vtype where cmp_id='" & GMod.Cmpid & "' and vtype not in ('BANK SAL TRANSFER') and session = '" & GMod.Session & "' order by seqorder", "vty")
+            GMod.DataSetRet("select * from vtype where cmp_id='" & GMod.Cmpid & "' and session = '" & GMod.Session & "' order by seqorder", "vty")
             cmbcptype.DataSource = GMod.ds.Tables("vty")
             cmbcptype.DisplayMember = "vtype"
         Else

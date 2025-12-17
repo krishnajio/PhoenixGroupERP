@@ -579,6 +579,7 @@ Public Class frmSupplementHeadList
                     r.SetParameterValue("accholder", "Account Holder : " & codefor10 & " " & HEAD)
                     r.SetParameterValue("subhead", "Date from :" & dtfrom.Text & " to " & dtto.Text)
                     r.SetParameterValue("uname", GMod.username)
+                    r.SetParameterValue("unauth", "")
                     ' CrViewerGenralLedger.ReportSource = r
                     'For displaying in Data grid  setting fields--------------------
                     'rdOnscreen_Click(sender, e)

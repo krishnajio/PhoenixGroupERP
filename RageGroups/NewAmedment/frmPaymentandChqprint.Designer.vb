@@ -108,6 +108,7 @@ Partial Class frmPaymentandChqprint
         Me.Label20 = New System.Windows.Forms.Label()
         Me.chkTdsEntry = New System.Windows.Forms.CheckBox()
         Me.chkAllVendor = New System.Windows.Forms.CheckBox()
+        Me.lblBankName = New System.Windows.Forms.Label()
         CType(Me.dgPayment, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgBillNo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -573,7 +574,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(770, 352)
+        Me.Label7.Location = New System.Drawing.Point(748, 352)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(70, 15)
         Me.Label7.TabIndex = 191
@@ -586,10 +587,10 @@ Partial Class frmPaymentandChqprint
         Me.cmbfavourof.BackColor = System.Drawing.Color.White
         Me.cmbfavourof.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbfavourof.FormattingEnabled = True
-        Me.cmbfavourof.Location = New System.Drawing.Point(841, 346)
+        Me.cmbfavourof.Location = New System.Drawing.Point(819, 346)
         Me.cmbfavourof.MaxLength = 50
         Me.cmbfavourof.Name = "cmbfavourof"
-        Me.cmbfavourof.Size = New System.Drawing.Size(471, 23)
+        Me.cmbfavourof.Size = New System.Drawing.Size(497, 23)
         Me.cmbfavourof.TabIndex = 189
         '
         'dtchequedate
@@ -597,7 +598,7 @@ Partial Class frmPaymentandChqprint
         Me.dtchequedate.CustomFormat = "dd/MMM/yy"
         Me.dtchequedate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtchequedate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtchequedate.Location = New System.Drawing.Point(841, 320)
+        Me.dtchequedate.Location = New System.Drawing.Point(819, 320)
         Me.dtchequedate.Name = "dtchequedate"
         Me.dtchequedate.Size = New System.Drawing.Size(104, 22)
         Me.dtchequedate.TabIndex = 188
@@ -606,7 +607,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(741, 323)
+        Me.Label11.Location = New System.Drawing.Point(719, 323)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(102, 15)
         Me.Label11.TabIndex = 190
@@ -703,7 +704,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(801, 378)
+        Me.Label12.Location = New System.Drawing.Point(779, 378)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(37, 15)
         Me.Label12.TabIndex = 195
@@ -717,7 +718,7 @@ Partial Class frmPaymentandChqprint
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"PARTY", "FEED", "MEDICINE", "CAPITAL", "IMPREST", "LOCAL PARTY", "HARDWARE & PACKING MAT.", "PARTNER CAPITAL", "PARENTAL BIRD", "P.P.BIRD MARKETING", "ELECTRICITY", "TELEPHONE", "SALARY & WAGES & BONUS", "TAXES FEES & INSURANCE & CONSULTANCY", "GROUP INSURANCE & GRATUITY", "DIESEL & PETROL", "ADVERTISEMENT", "DONATION & CHARITY", "IMPREST & INCENTIVE", "P.H RENT HATHING EGG PAYMENT", "AREA COLLECTION RET TO P.H", "VEHILE REP MAINT.", "MISC EXPS.", "STAFF WELFARE", "BANK TO BANK TRANSFER(INTERNAL)", "INTERNAL UNIT  TRANSFER"})
-        Me.ComboBox3.Location = New System.Drawing.Point(841, 372)
+        Me.ComboBox3.Location = New System.Drawing.Point(819, 372)
         Me.ComboBox3.MaxLength = 50
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(356, 21)
@@ -728,7 +729,7 @@ Partial Class frmPaymentandChqprint
         Me.dtpexpensedate.CustomFormat = "dd/MMM/yy"
         Me.dtpexpensedate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpexpensedate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpexpensedate.Location = New System.Drawing.Point(844, 399)
+        Me.dtpexpensedate.Location = New System.Drawing.Point(821, 399)
         Me.dtpexpensedate.Name = "dtpexpensedate"
         Me.dtpexpensedate.Size = New System.Drawing.Size(116, 20)
         Me.dtpexpensedate.TabIndex = 218
@@ -737,7 +738,7 @@ Partial Class frmPaymentandChqprint
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(736, 399)
+        Me.Label13.Location = New System.Drawing.Point(714, 399)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(105, 16)
         Me.Label13.TabIndex = 219
@@ -1001,12 +1002,24 @@ Partial Class frmPaymentandChqprint
         Me.chkAllVendor.Text = "ALL"
         Me.chkAllVendor.UseVisualStyleBackColor = True
         '
+        'lblBankName
+        '
+        Me.lblBankName.AutoSize = True
+        Me.lblBankName.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBankName.ForeColor = System.Drawing.Color.Red
+        Me.lblBankName.Location = New System.Drawing.Point(931, 320)
+        Me.lblBankName.Name = "lblBankName"
+        Me.lblBankName.Size = New System.Drawing.Size(14, 18)
+        Me.lblBankName.TabIndex = 246
+        Me.lblBankName.Text = "-"
+        '
         'frmPaymentandChqprint
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(1320, 749)
+        Me.Controls.Add(Me.lblBankName)
         Me.Controls.Add(Me.chkAllVendor)
         Me.Controls.Add(Me.chkTdsEntry)
         Me.Controls.Add(Me.Panel1)
@@ -1159,4 +1172,5 @@ Partial Class frmPaymentandChqprint
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents chkTdsEntry As System.Windows.Forms.CheckBox
     Friend WithEvents chkAllVendor As System.Windows.Forms.CheckBox
+    Friend WithEvents lblBankName As System.Windows.Forms.Label
 End Class

@@ -1169,7 +1169,7 @@ Public Class frmMDI
     End Sub
 
     Private Sub CashRecivedToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CashRecivedToolStripMenuItem.Click
-        Dim ghcash As New frmSalePurchasedata
+        Dim ghcash As New frmScheduleReport
         ghcash.ShowDialog()
     End Sub
 
@@ -1343,8 +1343,8 @@ Public Class frmMDI
     Private Sub SalaryBankTransferToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SalaryBankTransferToolStripMenuItem1.Click
         'If GMod.role = "ADMIN" Then
         ' If GMod.Dept = 3 And GMod.role = "VIEWER LEVEL-1" Then
-        Dim objsaltrf As New frmSalaryBankDr
-        objsaltrf.ShowDialog()
+        'Dim objsaltrf As New frmSalaryBankDr
+        'objsaltrf.ShowDialog()
         ' End If
     End Sub
     Private Sub SalaryTransferCasualStaffToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SalaryTransferCasualStaffToolStripMenuItem1.Click
@@ -1352,30 +1352,30 @@ Public Class frmMDI
        
         'If GMod.role = "ADMIN" And GMod.role = "VIEWER LEVEL-1" Then
         ' If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.username.ToLower = "admin") Then
-        Dim saltrf As New frmStaffSalaryTranferToAcc
-        saltrf.ShowDialog()
+        ' Dim saltrf As New frmStaffSalaryTranferToAcc
+        ' saltrf.ShowDialog()
         'End If
         'End If
     End Sub
     Private Sub ProductionIncentiveVoucherToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductionIncentiveVoucherToolStripMenuItem.Click
-        If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.username.ToLower = "admin") Then
-            Dim t As New frmProdincvVoucherDr
-            t.ShowDialog()
-        End If
+        ' If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.username.ToLower = "admin") Then
+        'Dim t As New frmProdincvVoucherDr
+        't.ShowDialog()
+        'End If
     End Sub
     Private Sub SalaryTransferToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SalaryTransferToolStripMenuItem1.Click
-        If GMod.Cmpid = "PHOE" Then
-            'If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.role.ToLower = "admin") Then
-            Dim saltrf As New frmStaffSalaryTranferToAcc
-            saltrf.ShowDialog()
-            'End If
-        ElseIf GMod.Cmpid = "PHHA" Then
+        'If GMod.Cmpid = "PHOE" Then
+        'If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.role.ToLower = "admin") Then
+        'Dim saltrf As New frmStaffSalaryTranferToAcc
+        'saltrf.ShowDialog()
+        'End If
+        'ElseIf GMod.Cmpid = "PHHA" Then
 
         If GMod.staff1 = 1 And (GMod.role = "VIEWER LEVEL-1" Or GMod.role.ToLower = "admin") Then
-                Dim saltrf As New frmStaffSalaryTranferToAcc
+            Dim saltrf As New frmStaffSalaryTranferToAcc
             saltrf.ShowDialog()
         End If
-        End If
+        'End If
     End Sub
 
     Private Sub PartyPendingListToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PartyPendingListToolStripMenuItem.Click
@@ -1410,30 +1410,21 @@ Public Class frmMDI
         Dim frmTdsModify As New frmTdsModification
         frmTdsModify.ShowDialog()
     End Sub
-
-    Private Sub PurchaseToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PurchaseToolStripMenuItem1.Click
-
-    End Sub
-
     Private Sub RCMVoucherToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RCMVoucherToolStripMenuItem.Click
         Dim frmRcm As New frmRCMVou
         frmRcm.ShowDialog()
     End Sub
-
     Private Sub PJTDSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PJTDSToolStripMenuItem.Click
         Dim t As New frmGSTTDS
         t.ShowDialog()
     End Sub
-
     Private Sub GSTRegisterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GSTRegisterToolStripMenuItem.Click
         Dim g As New frmGSTReg
         g.ShowDialog()
     End Sub
-
     Private Sub MissingTRToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MissingTRToolStripMenuItem1.Click
         frmbankstate1.ShowDialog()
     End Sub
-
     Private Sub UpdateOpeningToolStripMenuItem1_Click_1(sender As Object, e As EventArgs) Handles UpdateOpeningToolStripMenuItem1.Click
         Dim frmupopening As New frmUpdateOpeningofNextSession
         frmupopening.Show()

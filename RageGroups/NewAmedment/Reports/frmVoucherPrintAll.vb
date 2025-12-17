@@ -27,7 +27,6 @@ Public Class frmVoucherPrintAll
             GMod.DataSetRet(sql, "vp")
 
 
-
             sql = "SELECT sum(dramt) FROM " & GMod.VENTRY & " where vou_type = '" & cmbvoutype.Text & "' and vou_no ='" & TextBox1.Text & "'"
             GMod.DataSetRet(sql, "sumdr")
 

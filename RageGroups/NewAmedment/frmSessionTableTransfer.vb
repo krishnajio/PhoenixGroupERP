@@ -124,7 +124,6 @@
             sql &= " from ACC_HEAD_" & cmdCompanyCode.Text & "_" & cmbSession.Text
             GMod.SqlExecuteNonQuery(sql)
 
-
             sql = "insert into [dbo].[SessionTrasferData]([CmpCode], [CmpName], [OldSession], [NewSession]) values("
             sql &= "'" & cmdCompanyCode.Text & "',"
             sql &= "'" & cmbCompanyName.Text & "',"
@@ -141,7 +140,6 @@
     Private Sub FillGrid()
         sql = "select * from [SessionTrasferData]"
         GMod.DataSetRet(sql, "SessionTrasferData")
-
         DataGridView1.DataSource = GMod.ds.Tables("SessionTrasferData")
     End Sub
 End Class

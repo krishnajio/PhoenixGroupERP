@@ -506,6 +506,8 @@ Public Class frmPaymentandChqprint
             cmbAcHead.Focus()
             Exit Sub
         End If
+
+
     End Sub
 
     Private Sub txtNarration_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtNarration.KeyPress
@@ -642,6 +644,20 @@ Public Class frmPaymentandChqprint
     Dim acc_code As String
     Private Sub cmbcode_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbcode.Leave
         Try
+            lblBankName.Text = ""
+            sql = "select bankName + ' - ' + accNumber + ' - ' + branch from partyBankDetials where partyCode='" & cmbcode.Text & "'"
+            GMod.DataSetRet(sql, "partybankdet")
+            If GMod.ds.Tables("partybankdet").Rows.Count > 0 Then
+                lblBankName.Text = GMod.ds.Tables("partybankdet").Rows(0)(0).ToString()
+            Else
+                lblBankName.Text = ""
+            End If
+        Catch ex As Exception
+            MsgBox("baNK DETAILS NOT FOUND " + ex.Message)
+
+        End Try
+
+        Try
             'cmbcode.Enabled = False
             sql = "select account_code from " & GMod.ACC_HEAD & " where account_head_name = '" & cmbAcHead.Text & "' and  Area_code ='" & cmbAreaCode.Text & "'"
             GMod.DataSetRet(sql, "account_codepayment")
@@ -730,6 +746,7 @@ Public Class frmPaymentandChqprint
             Me.Close()
         End Try
 
+       
 
         'GMod.DataSetRet("select * from chqlayout where acc_head_code='" & cmbcode.Text & "'", "chq")
     End Sub

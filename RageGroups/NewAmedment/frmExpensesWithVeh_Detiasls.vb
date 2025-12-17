@@ -729,9 +729,9 @@ Public Class frmExpensesWithVeh_Detials
         End Try
         Dim narr As String
         If Val(txtNoChicks.Text) > 0 Then
-            narr = "BEING VEHICLE SUPPLY EXPENSES ON HATCH DATE " & dtpHatchDt.Text & " TO " & txtarea.Text & "," & cmbprd.Text & " QTY. " & txtNoChicks.Text & " THROUGH " & txtDriverName.Text & ""
+            narr = "BEING VEHICLE SUPPLY EXPENSES ON HATCH/SUPPLY DATE " & dtpHatchDt.Text & " TO " & txtarea.Text & "," & cmbprd.Text & " QTY. " & txtNoChicks.Text & " THROUGH " & txtDriverName.Text & ""
         Else
-            narr = "BEING VEHICLE SUPPLY EXPENSES ON  DATE " & dtpHatchDt.Text & " TO " & txtarea.Text & "," & cmbprd.Text & " THROUGH " & txtDriverName.Text & ""
+            narr = "BEING VEHICLE SUPPLY EXPENSES ON HATCH/SUPPLY DATE " & dtpHatchDt.Text & " TO " & txtarea.Text & "," & cmbprd.Text & " THROUGH " & txtDriverName.Text & ""
 
         End If
 
@@ -800,5 +800,18 @@ Public Class frmExpensesWithVeh_Detials
         'dtvdate.Value = GMod.SessionCurrentDate
         dtvdate.MinDate = CDate(GMod.SessionCurrentDate).AddDays(-Val(GMod.nofd))
         dtvdate.MaxDate = GMod.SessionCurrentDate
+    End Sub
+
+    Private Sub txtOpkr_TextChanged(sender As Object, e As EventArgs) Handles txtOpkr.TextChanged
+
+    End Sub
+
+    Sub clac()
+        txtTotalkm.Text = Val(txtCLr.Text) - Val(txtOpkr.Text)
+    End Sub
+
+    
+    Private Sub txtCLr_TextChanged(sender As Object, e As EventArgs) Handles txtCLr.TextChanged
+        clac()
     End Sub
 End Class

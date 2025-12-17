@@ -69,6 +69,7 @@ Partial Class frmMDI
         Me.ToolStripMenuItem38 = New System.Windows.Forms.ToolStripMenuItem()
         Me.OtherSaleIUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OtherSaleInvoivePrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PHCreditNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.TDSEntryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -281,7 +282,6 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PHCreditNoteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -583,6 +583,12 @@ Partial Class frmMDI
         Me.OtherSaleInvoivePrintToolStripMenuItem.Name = "OtherSaleInvoivePrintToolStripMenuItem"
         Me.OtherSaleInvoivePrintToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.OtherSaleInvoivePrintToolStripMenuItem.Text = "Other Sale Invoive Print"
+        '
+        'PHCreditNoteToolStripMenuItem
+        '
+        Me.PHCreditNoteToolStripMenuItem.Name = "PHCreditNoteToolStripMenuItem"
+        Me.PHCreditNoteToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.PHCreditNoteToolStripMenuItem.Text = "PH Credit Note"
         '
         'PurchaseToolStripMenuItem1
         '
@@ -1383,7 +1389,7 @@ Partial Class frmMDI
         '
         Me.CashRecivedToolStripMenuItem.Name = "CashRecivedToolStripMenuItem"
         Me.CashRecivedToolStripMenuItem.Size = New System.Drawing.Size(342, 22)
-        Me.CashRecivedToolStripMenuItem.Text = "Poultry Sale Purchase Data"
+        Me.CashRecivedToolStripMenuItem.Text = "Schedule Report"
         '
         'DailyPaymentReportToolStripMenuItem
         '
@@ -1940,12 +1946,6 @@ Partial Class frmMDI
         Me.Label2.Size = New System.Drawing.Size(13, 13)
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
-        '
-        'PHCreditNoteToolStripMenuItem
-        '
-        Me.PHCreditNoteToolStripMenuItem.Name = "PHCreditNoteToolStripMenuItem"
-        Me.PHCreditNoteToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
-        Me.PHCreditNoteToolStripMenuItem.Text = "PH Credit Note"
         '
         'frmMDI
         '

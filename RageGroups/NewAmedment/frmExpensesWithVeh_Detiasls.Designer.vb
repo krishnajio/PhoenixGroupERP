@@ -240,7 +240,7 @@ Partial Class frmExpensesWithVeh_Detials
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1039, 40)
+        Me.Label1.Size = New System.Drawing.Size(1087, 40)
         Me.Label1.TabIndex = 123
         Me.Label1.Text = "Expenses"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -388,7 +388,7 @@ Partial Class frmExpensesWithVeh_Detials
         Me.Label16.Location = New System.Drawing.Point(0, 625)
         Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(1039, 105)
+        Me.Label16.Size = New System.Drawing.Size(1087, 105)
         Me.Label16.TabIndex = 15
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
@@ -692,7 +692,7 @@ Partial Class frmExpensesWithVeh_Detials
         Me.GroupBox1.Controls.Add(Me.Label29)
         Me.GroupBox1.Location = New System.Drawing.Point(38, 300)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(980, 138)
+        Me.GroupBox1.Size = New System.Drawing.Size(1042, 138)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Vehiicle Detials"
@@ -730,7 +730,7 @@ Partial Class frmExpensesWithVeh_Detials
         'txtGprsr
         '
         Me.txtGprsr.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.txtGprsr.Location = New System.Drawing.Point(95, 98)
+        Me.txtGprsr.Location = New System.Drawing.Point(87, 98)
         Me.txtGprsr.Name = "txtGprsr"
         Me.txtGprsr.Size = New System.Drawing.Size(71, 20)
         Me.txtGprsr.TabIndex = 17
@@ -739,7 +739,7 @@ Partial Class frmExpensesWithVeh_Detials
         '
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(26, 99)
+        Me.Label35.Location = New System.Drawing.Point(18, 99)
         Me.Label35.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(59, 17)
@@ -787,7 +787,7 @@ Partial Class frmExpensesWithVeh_Detials
         'txtShot
         '
         Me.txtShot.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.txtShot.Location = New System.Drawing.Point(838, 17)
+        Me.txtShot.Location = New System.Drawing.Point(938, 17)
         Me.txtShot.Name = "txtShot"
         Me.txtShot.Size = New System.Drawing.Size(84, 20)
         Me.txtShot.TabIndex = 5
@@ -796,7 +796,7 @@ Partial Class frmExpensesWithVeh_Detials
         '
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(794, 19)
+        Me.Label32.Location = New System.Drawing.Point(894, 19)
         Me.Label32.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(42, 17)
@@ -806,7 +806,7 @@ Partial Class frmExpensesWithVeh_Detials
         'txtMor
         '
         Me.txtMor.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.txtMor.Location = New System.Drawing.Point(705, 19)
+        Me.txtMor.Location = New System.Drawing.Point(805, 19)
         Me.txtMor.Name = "txtMor"
         Me.txtMor.Size = New System.Drawing.Size(84, 20)
         Me.txtMor.TabIndex = 4
@@ -815,7 +815,7 @@ Partial Class frmExpensesWithVeh_Detials
         '
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(639, 19)
+        Me.Label31.Location = New System.Drawing.Point(739, 19)
         Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(65, 17)
@@ -825,17 +825,17 @@ Partial Class frmExpensesWithVeh_Detials
         'cmbprd
         '
         Me.cmbprd.FormattingEnabled = True
-        Me.cmbprd.Items.AddRange(New Object() {"BROILER", "LAYER", "COCKEREL"})
-        Me.cmbprd.Location = New System.Drawing.Point(365, 16)
+        Me.cmbprd.Items.AddRange(New Object() {"BROILER CHICKS", "LAYER CHICKS", "COCKEREL CHICKS", "EGGS(COMMERCIAL)", "HATCHING EGGS", "BIRDS", "INFERTILE EGGS"})
+        Me.cmbprd.Location = New System.Drawing.Point(392, 16)
         Me.cmbprd.Name = "cmbprd"
-        Me.cmbprd.Size = New System.Drawing.Size(121, 21)
+        Me.cmbprd.Size = New System.Drawing.Size(213, 21)
         Me.cmbprd.TabIndex = 2
         '
         'Label30
         '
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(337, 19)
+        Me.Label30.Location = New System.Drawing.Point(363, 18)
         Me.Label30.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(32, 17)
@@ -866,7 +866,7 @@ Partial Class frmExpensesWithVeh_Detials
         Me.txtDCash.BackColor = System.Drawing.Color.WhiteSmoke
         Me.txtDCash.Location = New System.Drawing.Point(95, 42)
         Me.txtDCash.Name = "txtDCash"
-        Me.txtDCash.Size = New System.Drawing.Size(70, 20)
+        Me.txtDCash.Size = New System.Drawing.Size(84, 20)
         Me.txtDCash.TabIndex = 6
         '
         'Label13
@@ -931,7 +931,7 @@ Partial Class frmExpensesWithVeh_Detials
         'txtarea
         '
         Me.txtarea.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.txtarea.Location = New System.Drawing.Point(238, 15)
+        Me.txtarea.Location = New System.Drawing.Point(274, 15)
         Me.txtarea.Name = "txtarea"
         Me.txtarea.Size = New System.Drawing.Size(84, 20)
         Me.txtarea.TabIndex = 1
@@ -940,7 +940,7 @@ Partial Class frmExpensesWithVeh_Detials
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(195, 20)
+        Me.Label24.Location = New System.Drawing.Point(231, 18)
         Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(39, 17)
@@ -976,7 +976,7 @@ Partial Class frmExpensesWithVeh_Detials
         Me.txtDriverName.BackColor = System.Drawing.Color.WhiteSmoke
         Me.txtDriverName.Location = New System.Drawing.Point(281, 99)
         Me.txtDriverName.Name = "txtDriverName"
-        Me.txtDriverName.Size = New System.Drawing.Size(116, 20)
+        Me.txtDriverName.Size = New System.Drawing.Size(250, 20)
         Me.txtDriverName.TabIndex = 18
         '
         'txtLA
@@ -998,7 +998,7 @@ Partial Class frmExpensesWithVeh_Detials
         'txtNoChicks
         '
         Me.txtNoChicks.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.txtNoChicks.Location = New System.Drawing.Point(542, 19)
+        Me.txtNoChicks.Location = New System.Drawing.Point(642, 19)
         Me.txtNoChicks.Name = "txtNoChicks"
         Me.txtNoChicks.Size = New System.Drawing.Size(92, 20)
         Me.txtNoChicks.TabIndex = 3
@@ -1007,7 +1007,7 @@ Partial Class frmExpensesWithVeh_Detials
         '
         Me.dtpHatchDt.CustomFormat = "dd/MM/yyyy"
         Me.dtpHatchDt.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpHatchDt.Location = New System.Drawing.Point(95, 16)
+        Me.dtpHatchDt.Location = New System.Drawing.Point(142, 18)
         Me.dtpHatchDt.Name = "dtpHatchDt"
         Me.dtpHatchDt.Size = New System.Drawing.Size(84, 20)
         Me.dtpHatchDt.TabIndex = 0
@@ -1052,9 +1052,9 @@ Partial Class frmExpensesWithVeh_Detials
         Me.Label25.Location = New System.Drawing.Point(14, 18)
         Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(77, 17)
+        Me.Label25.Size = New System.Drawing.Size(127, 17)
         Me.Label25.TabIndex = 214
-        Me.Label25.Text = "Hatch Date:"
+        Me.Label25.Text = "Hatch/Supply Date:"
         '
         'Label26
         '
@@ -1093,7 +1093,7 @@ Partial Class frmExpensesWithVeh_Detials
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Book Antiqua", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(509, 19)
+        Me.Label29.Location = New System.Drawing.Point(610, 19)
         Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(32, 17)
@@ -1116,7 +1116,7 @@ Partial Class frmExpensesWithVeh_Detials
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LavenderBlush
-        Me.ClientSize = New System.Drawing.Size(1039, 730)
+        Me.ClientSize = New System.Drawing.Size(1087, 730)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.dtvdate)

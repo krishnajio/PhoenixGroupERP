@@ -27,7 +27,7 @@ Public Class frmStaffSalaryTranferToAcc
             ' Me.Close()
         End If
         ' Dim ConStrSal As String = "Data Source=192.168.0.150;Initial Catalog=PHXSAL;User ID=sa;Password=@hplgsamsung#"
-        Dim da1 As New SqlDataAdapter("select distinct orgid from  ORGANIZATIONMASTER", ConStrSal)
+        Dim da1 As New SqlDataAdapter("select distinct orgid from  ORGANIZATIONMASTER WHERE cmp_id ='" & GMod.Cmpid & "'", ConStrSal)
         Dim ds1 As New DataSet
         da1.Fill(ds1)
         cmborgid.DataSource = ds1.Tables(0)

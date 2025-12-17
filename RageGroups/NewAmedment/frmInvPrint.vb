@@ -117,7 +117,7 @@
                 gstno = "GSTIN(U.P)  :  09ADDPD8524C1ZW"
                 adrs = "201/15, Ratan Colony, PB.-75 Gorakhpur,JABALPUR-482001"
             End If
-            crobjprnt = New CrPrintInvLaserHatLR
+            crobjprnt = New CrPrintInvLaserHatLREWithoutNecc
             crobjprnt.SetDataSource(GMod.ds.Tables("prntinvleser"))
             crobjprnt.SetParameterValue("gstno", gstno)
             crobjprnt.SetParameterValue("adrs", adrs)
@@ -234,7 +234,7 @@
                     gstno = "GSTIN(U.P)  :  09ADDPD8524C1ZW"
                 End If
 
-                crobjprnt = New CrPrintInvLaserHatLR
+                crobjprnt = New CrPrintInvLaserHatLREWithoutNecc
                 crobjprnt.SetDataSource(GMod.ds.Tables("prntinvleser"))
                 crobjprnt.SetParameterValue("gstno", gstno)
                 CrystalReportViewer1.ReportSource = crobjprnt
