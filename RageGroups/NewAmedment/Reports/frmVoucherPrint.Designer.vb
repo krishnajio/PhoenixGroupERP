@@ -69,7 +69,7 @@ Partial Class frmVoucherPrint
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(542, 14)
+        Me.Button2.Location = New System.Drawing.Point(569, 13)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(132, 23)
         Me.Button2.TabIndex = 185
@@ -79,7 +79,7 @@ Partial Class frmVoucherPrint
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(461, 14)
+        Me.Button1.Location = New System.Drawing.Point(488, 13)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 184
@@ -92,7 +92,7 @@ Partial Class frmVoucherPrint
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Bank"})
-        Me.ComboBox1.Location = New System.Drawing.Point(324, 13)
+        Me.ComboBox1.Location = New System.Drawing.Point(351, 12)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(130, 21)
         Me.ComboBox1.TabIndex = 183
@@ -102,7 +102,7 @@ Partial Class frmVoucherPrint
         Me.cmbvoutype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbvoutype.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbvoutype.FormattingEnabled = True
-        Me.cmbvoutype.Location = New System.Drawing.Point(111, 12)
+        Me.cmbvoutype.Location = New System.Drawing.Point(120, 12)
         Me.cmbvoutype.Name = "cmbvoutype"
         Me.cmbvoutype.Size = New System.Drawing.Size(130, 21)
         Me.cmbvoutype.TabIndex = 180
@@ -121,7 +121,7 @@ Partial Class frmVoucherPrint
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(247, 13)
+        Me.Label14.Location = New System.Drawing.Point(256, 13)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(89, 16)
         Me.Label14.TabIndex = 182
@@ -132,7 +132,7 @@ Partial Class frmVoucherPrint
         Me.dtchequedate.CustomFormat = "dd-MMM-yyyy"
         Me.dtchequedate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtchequedate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtchequedate.Location = New System.Drawing.Point(551, 15)
+        Me.dtchequedate.Location = New System.Drawing.Point(578, 14)
         Me.dtchequedate.Name = "dtchequedate"
         Me.dtchequedate.Size = New System.Drawing.Size(104, 22)
         Me.dtchequedate.TabIndex = 189

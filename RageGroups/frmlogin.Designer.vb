@@ -97,7 +97,7 @@ Partial Class frmlogin
         Me.cmbcmpname.FormattingEnabled = True
         Me.cmbcmpname.Location = New System.Drawing.Point(331, 39)
         Me.cmbcmpname.Name = "cmbcmpname"
-        Me.cmbcmpname.Size = New System.Drawing.Size(327, 231)
+        Me.cmbcmpname.Size = New System.Drawing.Size(461, 231)
         Me.cmbcmpname.TabIndex = 1
         '
         'txtuname
@@ -173,7 +173,7 @@ Partial Class frmlogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.ClientSize = New System.Drawing.Size(661, 367)
+        Me.ClientSize = New System.Drawing.Size(799, 367)
         Me.Controls.Add(Me.cmbSession)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.txtuname)

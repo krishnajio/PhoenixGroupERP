@@ -15,7 +15,7 @@
         '        SALE VARANASI(GST)
         '        SALE WB - 1(GST)
         '        SALE WBH - 1(GST)
-        sql = "select  itemname as fr_head,pd.*,ach.account_head_name,ach.address, account_type as remark2 from Purchase_Data pd"
+        sql = "select  itemname as fr_head,pd.*,ach.account_head_name,ach.address, account_type as remark2 , remark3 from Purchase_Data pd"
         sql &= " left join " & GMod.ACC_HEAD & " ach on pd.party_code= ach.account_code where pd.session='" & GMod.Session & "' and vou_type='" & voutype.Text & "' and pd.cmp_id ='" & GMod.Cmpid & "'" ' and authr<>'-' "
         sql &= " and  cast(vou_no as numeric(18,0)) between " & txtCrNoFrom.Text & " and " & txtCrNoTo.Text & ""
 
@@ -38,7 +38,6 @@
                 CrystalReportViewer1.ReportSource = crobjpp
             End If
         ElseIf voutype.Text = "RCM(EXPS)" Then
-
             Dim crobjpp As New CryInvRCMpp
             If GMod.Cmpid = "PHOE" Then
                 gstno = "GSTIN(M.P)  :  23AAJFP5811H1ZD"
@@ -48,7 +47,6 @@
                 CrystalReportViewer1.ReportSource = crobjpp
             Else
                 gstno = "hatch  :  23AAJFP5811H1ZD"
-
                 crobjpp.SetDataSource(GMod.ds.Tables("prntinvleser"))
                 crobjpp.SetParameterValue("p1", gstno)
                 CrystalReportViewer1.ReportSource = crobjpp
@@ -64,7 +62,6 @@
                 CrystalReportViewer1.ReportSource = crobjpp
             Else
                 gstno = "hatch  :  23AAJFP5811H1ZD"
-
                 crobjpp.SetDataSource(GMod.ds.Tables("prntinvleser"))
                 crobjpp.SetParameterValue("p1", gstno)
                 CrystalReportViewer1.ReportSource = crobjpp
@@ -86,5 +83,9 @@
         'GMod.DataSetRet("select * from vtype where cmp_id='" & GMod.Cmpid & "' and vtype like '%SALE%' and vtype not like '%JOURNAL%'", "vou_typeP")
         'voutype.DataSource = GMod.ds.Tables("vou_typeP")
         'voutype.DisplayMember = "vtype"
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
     End Sub
 End Class

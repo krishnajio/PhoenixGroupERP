@@ -32,6 +32,7 @@ Partial Class frmInvRCMPrint
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtCrNoFrom = New System.Windows.Forms.TextBox()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label6
@@ -132,11 +133,22 @@ Partial Class frmInvRCMPrint
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(1025, 567)
         Me.CrystalReportViewer1.TabIndex = 176
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(865, 36)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(114, 28)
+        Me.Button2.TabIndex = 177
+        Me.Button2.Text = "&Email To Party"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'frmInvRCMPrint
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1046, 649)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.voutype)
         Me.Controls.Add(Me.Label1)
@@ -163,4 +175,5 @@ Partial Class frmInvRCMPrint
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtCrNoFrom As System.Windows.Forms.TextBox
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

@@ -672,7 +672,6 @@ Public Class frmPaymentandChqprint
                 Exit Sub
             End If
 
-
             'check for party balance 
             sql = "select q.account_code,q.acname," _
                         & " DrAmt = case when  ((isnull(p.dramt,0) + 0) - (isnull(p.cramt,0) + 0))  > 0 then  (isnull(p.dramt,0) + 0) - (isnull(p.cramt,0) + 0) else 0 end, " _
@@ -745,9 +744,6 @@ Public Class frmPaymentandChqprint
             MessageBox.Show(ex.Message)
             Me.Close()
         End Try
-
-       
-
         'GMod.DataSetRet("select * from chqlayout where acc_head_code='" & cmbcode.Text & "'", "chq")
     End Sub
     Private Sub cmbRefType_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs)

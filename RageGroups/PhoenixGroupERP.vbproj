@@ -869,6 +869,12 @@
     <Compile Include="frmBook.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBooksData.Designer.vb">
+      <DependentUpon>frmBooksData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBooksData.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCashBook.designer.vb">
       <DependentUpon>frmCashBook.vb</DependentUpon>
     </Compile>
@@ -1539,6 +1545,12 @@
       <DependentUpon>frmInvPrint.vb</DependentUpon>
     </Compile>
     <Compile Include="NewAmedment\frmInvPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewAmedment\frmInvPrint_New.Designer.vb">
+      <DependentUpon>frmInvPrint_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewAmedment\frmInvPrint_New.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewAmedment\frmInvRCMPrint.Designer.vb">
@@ -2855,6 +2867,9 @@
       <DependentUpon>frmBook.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBooksData.resx">
+      <DependentUpon>frmBooksData.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCashBook.resx">
       <DependentUpon>frmCashBook.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -3284,6 +3299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmInvPrint.resx">
       <DependentUpon>frmInvPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAmedment\frmInvPrint_New.resx">
+      <DependentUpon>frmInvPrint_New.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAmedment\frmInvRCMPrint.resx">
       <DependentUpon>frmInvRCMPrint.vb</DependentUpon>

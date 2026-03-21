@@ -27,7 +27,7 @@ Public Class frmRepGeneralLedger
         '    CrViewerGenralLedger.ShowExportButton = False
         'End If
 
-
+        Dim dtAccHead As DataTable
         dtfrom.MaxDate = CDate("3/31/" & Mid(GMod.Session, 3, 4))
         dtfrom.MinDate = CDate("4/1/" & Mid(GMod.Session, 1, 2)).ToShortDateString
 
@@ -55,11 +55,19 @@ Public Class frmRepGeneralLedger
                 Dim sql As String
                 sql = "select account_code,account_head_name from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" _
                        & " and group_name not in ('') order by account_code"
+                'GMod.DataSetRet(sql, "acchead")
+                'cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
+                'cmbacheadcode.DisplayMember = "account_code"
+                'cmbacheadname.DataSource = GMod.ds.Tables("acchead")
+                'cmbacheadname.DisplayMember = "account_head_name"
+
                 GMod.DataSetRet(sql, "acchead")
-                cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
+                dtAccHead = GMod.ds.Tables("acchead")
+
+                cmbacheadcode.DataSource = dtAccHead
                 cmbacheadcode.DisplayMember = "account_code"
 
-                cmbacheadname.DataSource = GMod.ds.Tables("acchead")
+                cmbacheadname.DataSource = dtAccHead.Copy()
                 cmbacheadname.DisplayMember = "account_head_name"
             Else
                 rdPary.Enabled = True
@@ -67,11 +75,18 @@ Public Class frmRepGeneralLedger
                 Dim sql As String
                 sql = "select account_code,account_head_name from " & GMod.ACC_HEAD & " where cmp_id='" & GMod.Cmpid & "'" _
                  & " and group_name not in (select GroupNameConcealed from GroupNameConcealed where Cmp_id ='" & GMod.Cmpid & "') order by account_code"
+                ' GMod.DataSetRet(sql, "acchead")
+                ' cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
+                'cmbacheadcode.DisplayMember = "account_code"
+                'cmbacheadname.DataSource = GMod.ds.Tables("acchead")
+                'cmbacheadname.DisplayMember = "account_head_name"
                 GMod.DataSetRet(sql, "acchead")
-                cmbacheadcode.DataSource = GMod.ds.Tables("acchead")
+                dtAccHead = GMod.ds.Tables("acchead")
+
+                cmbacheadcode.DataSource = dtAccHead
                 cmbacheadcode.DisplayMember = "account_code"
 
-                cmbacheadname.DataSource = GMod.ds.Tables("acchead")
+                cmbacheadname.DataSource = dtAccHead.Copy()
                 cmbacheadname.DisplayMember = "account_head_name"
             End If
         End If
@@ -1549,7 +1564,6 @@ Public Class frmRepGeneralLedger
             MsgBox(ex.Message)
         End Try
     End Sub
-
     Private Sub cmbsubgrpname_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbsubgrpname.SelectedIndexChanged
         If GMod.Cmpid = "PHOE" Then
             Dim sql As String
@@ -1851,6 +1865,10 @@ Public Class frmRepGeneralLedger
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+
+    End Sub
+
+    Private Sub cmbacheadname_DropDown(sender As Object, e As EventArgs) Handles cmbacheadname.DropDown
 
     End Sub
 End Class

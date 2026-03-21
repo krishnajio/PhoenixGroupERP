@@ -746,7 +746,7 @@ Partial Class frmPartyaccount
         Me.GroupBox2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(572, 37)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(388, 313)
+        Me.GroupBox2.Size = New System.Drawing.Size(479, 313)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Other Details"
@@ -920,11 +920,11 @@ Partial Class frmPartyaccount
         '
         Me.txtaddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtaddress.Location = New System.Drawing.Point(107, 22)
-        Me.txtaddress.MaxLength = 30
+        Me.txtaddress.MaxLength = 180
         Me.txtaddress.Multiline = True
         Me.txtaddress.Name = "txtaddress"
         Me.txtaddress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtaddress.Size = New System.Drawing.Size(275, 72)
+        Me.txtaddress.Size = New System.Drawing.Size(366, 72)
         Me.txtaddress.TabIndex = 8
         Me.txtaddress.Text = "-"
         '

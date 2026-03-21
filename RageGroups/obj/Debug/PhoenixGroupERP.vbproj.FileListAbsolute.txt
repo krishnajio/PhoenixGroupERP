@@ -2290,3 +2290,5 @@ D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.exe
 D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.xml
 D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
 D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\PhoenixGroupERP.vbprojResolveAssemblyReference.cache
+D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmBooksData.resources
+D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvPrint_New.resources

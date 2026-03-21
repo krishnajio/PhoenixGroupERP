@@ -106,7 +106,7 @@ Public Class frmVoucherPrint
                 r.SetDataSource(ds.Tables("vp"))
                 'r.Subreports("bill_det").SetDataSource(GMod.ds.Tables("bill_detials"))
                 r.SetParameterValue("p1", "")
-                r.SetParameterValue("cmpid", "(" & GMod.Cmpname & ")")
+                r.SetParameterValue("cmpid", "" & GMod.Cmpname & "")
 
                 r.SetParameterValue("vtype", cmbvoutype.Text.ToUpper & " VOUCHER")
                 r.SetParameterValue("ntow", splitNumber(GMod.ds.Tables("vpdramt").Rows(0)(0)) & " Only.")

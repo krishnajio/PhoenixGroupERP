@@ -31,6 +31,7 @@ Partial Class frmdayBookAuth
         Me.rdPrint = New System.Windows.Forms.RadioButton()
         Me.rdOnscreen = New System.Windows.Forms.RadioButton()
         Me.dgAuth = New System.Windows.Forms.DataGridView()
+        Me.CrystalReportViewer2 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         CType(Me.dgAuth, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -162,12 +163,23 @@ Partial Class frmdayBookAuth
         Me.dgAuth.Size = New System.Drawing.Size(1228, 513)
         Me.dgAuth.TabIndex = 111
         '
+        'CrystalReportViewer2
+        '
+        Me.CrystalReportViewer2.ActiveViewIndex = -1
+        Me.CrystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer2.Location = New System.Drawing.Point(732, 33)
+        Me.CrystalReportViewer2.Name = "CrystalReportViewer2"
+        Me.CrystalReportViewer2.Size = New System.Drawing.Size(166, 111)
+        Me.CrystalReportViewer2.TabIndex = 112
+        '
         'frmdayBookAuth
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FloralWhite
         Me.ClientSize = New System.Drawing.Size(1240, 749)
+        Me.Controls.Add(Me.CrystalReportViewer2)
         Me.Controls.Add(Me.dgAuth)
         Me.Controls.Add(Me.rdPrint)
         Me.Controls.Add(Me.rdOnscreen)
@@ -201,4 +213,5 @@ Partial Class frmdayBookAuth
     Friend WithEvents rdPrint As System.Windows.Forms.RadioButton
     Friend WithEvents rdOnscreen As System.Windows.Forms.RadioButton
     Friend WithEvents dgAuth As System.Windows.Forms.DataGridView
+    Friend WithEvents CrystalReportViewer2 As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

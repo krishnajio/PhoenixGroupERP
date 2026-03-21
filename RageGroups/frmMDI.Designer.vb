@@ -282,6 +282,7 @@ Partial Class frmMDI
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PrintInvoiceHatcheryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripRagaGroup.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -952,7 +953,7 @@ Partial Class frmMDI
         '
         'SaleToolStripMenuItem3
         '
-        Me.SaleToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaleRegisterToolStripMenuItem, Me.SaleRegisterOthersToolStripMenuItem, Me.InvoiceReceiptDetialsToolStripMenuItem, Me.SaleProductWiseToolStripMenuItem, Me.SaleRepAreaDetialsToolStripMenuItem, Me.FinishedProductLedgerToolStripMenuItem, Me.TempInvoiceToolStripMenuItem, Me.MortalityReportToolStripMenuItem, Me.DisbursmentRegisterToolStripMenuItem, Me.CustomerBalanceLetterToolStripMenuItem, Me.MissingToolStripMenuItem, Me.PhoenixHAtchriesGSTR1ToolStripMenuItem, Me.Customer5000000ToolStripMenuItem})
+        Me.SaleToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaleRegisterToolStripMenuItem, Me.SaleRegisterOthersToolStripMenuItem, Me.InvoiceReceiptDetialsToolStripMenuItem, Me.SaleProductWiseToolStripMenuItem, Me.SaleRepAreaDetialsToolStripMenuItem, Me.FinishedProductLedgerToolStripMenuItem, Me.TempInvoiceToolStripMenuItem, Me.MortalityReportToolStripMenuItem, Me.DisbursmentRegisterToolStripMenuItem, Me.CustomerBalanceLetterToolStripMenuItem, Me.MissingToolStripMenuItem, Me.PhoenixHAtchriesGSTR1ToolStripMenuItem, Me.Customer5000000ToolStripMenuItem, Me.PrintInvoiceHatcheryToolStripMenuItem})
         Me.SaleToolStripMenuItem3.Name = "SaleToolStripMenuItem3"
         Me.SaleToolStripMenuItem3.Size = New System.Drawing.Size(269, 22)
         Me.SaleToolStripMenuItem3.Text = "Sale"
@@ -1947,6 +1948,12 @@ Partial Class frmMDI
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "--"
         '
+        'PrintInvoiceHatcheryToolStripMenuItem
+        '
+        Me.PrintInvoiceHatcheryToolStripMenuItem.Name = "PrintInvoiceHatcheryToolStripMenuItem"
+        Me.PrintInvoiceHatcheryToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.PrintInvoiceHatcheryToolStripMenuItem.Text = "Print Invoice Hatchery"
+        '
         'frmMDI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2244,4 +2251,5 @@ Partial Class frmMDI
     Friend WithEvents UpdateOpeningToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UpdateOpeningToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PHCreditNoteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PrintInvoiceHatcheryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

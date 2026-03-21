@@ -1623,4 +1623,18 @@ Public Class frmMDI
         Dim Saleobj As New frmSaleInvoiceWB
         Saleobj.ShowDialog()
     End Sub
+
+    Private Sub BooksToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        Dim t As New frmBooksData
+        t.ShowDialog()
+    End Sub
+
+    Private Sub AuthorizationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AuthorizationToolStripMenuItem.Click
+      
+    End Sub
+
+    Private Sub PrintInvoiceHatcheryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintInvoiceHatcheryToolStripMenuItem.Click
+        Dim t As New frmInvPrint_New
+        t.ShowDialog()
+    End Sub
 End Class

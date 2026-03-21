@@ -21,7 +21,7 @@ Public Class frmServerdetection
     Private Sub btncontinue_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btncontinue.Click
         Try
             'If bool = True Then
-            Dim ConnStr As String = "Data Source= " & cmbserver.Text & ";Initial Catalog=" & txtdb.Text & ";User ID=" & txtusername.Text & ";Password=" & txtpwd1.Text & ";Connect Timeout=3000;"
+            Dim ConnStr As String = "Data Source= " & cmbserver.Text & ";Network Library=DBMSSOCN;Initial Catalog=" & txtdb.Text & ";User ID=" & txtusername.Text & ";Password=" & txtpwd1.Text & ";Connect Timeout=3000;"
             'MsgBox(ConnStr)
             Dim tmpstr As String
             tmpstr = EncryptionStr(ConnStr, True)
