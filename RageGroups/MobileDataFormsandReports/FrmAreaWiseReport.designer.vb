@@ -132,7 +132,7 @@ Partial Class FrmAreaWiseReport
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dg.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.dg.Size = New System.Drawing.Size(1209, 577)
+        Me.dg.Size = New System.Drawing.Size(1267, 577)
         Me.dg.TabIndex = 7
         '
         'Auth

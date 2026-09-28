@@ -254,7 +254,7 @@ Partial Class frmDMPosting
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(41, 108)
+        Me.Label7.Location = New System.Drawing.Point(40, 110)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(95, 20)
         Me.Label7.TabIndex = 49
@@ -366,7 +366,7 @@ Partial Class frmDMPosting
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(38, 142)
+        Me.Label3.Location = New System.Drawing.Point(32, 142)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(107, 20)
         Me.Label3.TabIndex = 63

@@ -197,7 +197,6 @@ Public Class frmMDI
 
     Private Sub frmMDI_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-
         MenuStripRagaGroup.Renderer = New CustomRenderer
 
         'Timer1.Start()
@@ -568,7 +567,7 @@ Public Class frmMDI
     End Sub
 
     Private Sub ToolStripMenuItem21_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem21.Click
-        Dim t As New frmCashBook1
+        Dim t As New frmCashBook
         t.ShowDialog()
     End Sub
     Private Sub ToolStripMenuItem11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -614,7 +613,7 @@ Public Class frmMDI
     End Sub
 
     Private Sub BankStatementToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BankStatementToolStripMenuItem1.Click
-        Dim bas As New frmBankState3
+        Dim bas As New frmDailyBalance
         bas.ShowDialog()
     End Sub
 
@@ -1449,7 +1448,7 @@ Public Class frmMDI
     End Sub
 
     Private Sub UnathrToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnathrToolStripMenuItem.Click
-        If GMod.username = "admin" Or GMod.username = "sysadmin" Then
+        If GMod.isUnAuth = 1 Then
             Dim t As New frmVoucherUnAuthr
             t.ShowDialog()
         End If
@@ -1635,6 +1634,26 @@ Public Class frmMDI
 
     Private Sub PrintInvoiceHatcheryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintInvoiceHatcheryToolStripMenuItem.Click
         Dim t As New frmInvPrint_New
+        t.ShowDialog()
+    End Sub
+
+    Private Sub UpdateSaleHeadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateSaleHeadToolStripMenuItem.Click
+        Dim t As New frmUpdateOtherSaleAccountHead
+        t.ShowDialog()
+    End Sub
+
+    Private Sub FeedTransferIUToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FeedTransferIUToolStripMenuItem.Click
+        Dim t As New frmFeedTransfer
+        t.ShowDialog()
+    End Sub
+
+    Private Sub MonthlyDrTrailToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MonthlyDrTrailToolStripMenuItem.Click
+        Dim t As New frmCustomerMonthlyTrialDR
+        t.ShowDialog()
+    End Sub
+
+    Private Sub DailyBalanceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DailyBalanceToolStripMenuItem.Click
+        Dim t As New frmDailyBalance
         t.ShowDialog()
     End Sub
 End Class

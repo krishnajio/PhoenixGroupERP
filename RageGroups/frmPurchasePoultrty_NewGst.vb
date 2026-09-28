@@ -640,7 +640,6 @@ Public Class frmPurchasePoultrty_NewGst
 
                 End If
 
-
                 'PARTY A/C Cr
                 sqlsave = "insert into " & GMod.VENTRY & " (Cmp_id, Uname, Entry_id, Vou_no," _
                 & " Vou_type, Vou_date, Acc_head_code, Acc_head, cramt, dramt, Pay_mode, Cheque_no, " _
@@ -760,9 +759,7 @@ Public Class frmPurchasePoultrty_NewGst
                     Dim cmdAG As New SqlCommand(sqlsavecr, GMod.SqlConn, sqltrans)
                     cmdAG.ExecuteNonQuery()
                 Else
-
                     gridtotal()
-
                     If totgridamount <> Val(txtTotal.Text) Then
                         MsgBox("Amount not matching!!", MsgBoxStyle.Critical)
                         cmbacheadname.Focus()
@@ -794,7 +791,6 @@ Public Class frmPurchasePoultrty_NewGst
                 '-----------------------------
                 sqltrans.Commit()
                 MessageBox.Show(voutype.Text & "/" & lblvouno.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
                 txtBillNo.Focus()
                 vat = 0
                 cst = 0
@@ -804,9 +800,7 @@ Public Class frmPurchasePoultrty_NewGst
                 txtBillNo.Text = ""
                 ' dgvoucher.Rows.Add()
                 txtFreight.Text = "0"
-
                 txtTotal.Text = ""
-
                 ' txtVat_Leave(sender, e)
                 txtFreight_Leave(sender, e)
                 DataGridView1.Rows.Clear()

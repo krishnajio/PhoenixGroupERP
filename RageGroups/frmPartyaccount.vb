@@ -15,14 +15,14 @@ Public Class frmPartyaccount
         End If
         If GMod.role.ToUpper = "VIEWER LEVEL-1" Then
             btnsave.Enabled = True
-            btnmodify.Enabled = True
+            btn_modify.Enabled = True
             'txtamt.Enabled = True
             'cmbdrcr.Enabled = True
         ElseIf GMod.role.ToUpper = "ADMIN" Then
             btnsave.Enabled = True
             txtamt.Enabled = True
             cmbdrcr.Enabled = True
-            btnmodify.Enabled = True
+            btn_modify.Enabled = True
         End If
         Me.Text = Me.Text & "    " & GMod.Cmpname
         cmbAreaName.Focus()
@@ -60,7 +60,7 @@ Public Class frmPartyaccount
             filltdsparty()
             showdata(tdsdcode)
             btnsave.Enabled = False
-            btnmodify.Enabled = False
+            btn_modify.Enabled = False
         End If
         txtacheadname.Focus()
     End Sub
@@ -122,7 +122,7 @@ Public Class frmPartyaccount
 
         Dim i As Integer
         sql = "select * from " & GMod.ACC_HEAD & "   where  cmp_id='" & GMod.Cmpid & "' and  account_code='" & tdsdcode & "'"
-     
+
         GMod.DataSetRet(sql, "acc")
         dgaccounthead.Rows.Clear()
         For i = 0 To GMod.ds.Tables("acc").Rows.Count - 1
@@ -149,20 +149,20 @@ Public Class frmPartyaccount
             End If
             If cmbdrcr.Text = "Dr" Then
                 sql = "insert into " & GMod.ACC_HEAD & "(cmp_id,account_code,account_head_name,group_name,sub_group_name,"
-                sql += "account_type,opening_dr,opening_cr,credit_days,credit_limit,address,city,state,phone,pan_no,rate_of_interest,interest_rule_id,remark1,remark2,Area_code,remark3)"
+                sql += "account_type,opening_dr,opening_cr,credit_days,credit_limit,address,city,state,phone,pan_no,rate_of_interest,interest_rule_id,remark1,remark2,Area_code,remark3,dobdoi)"
                 sql += " values('" & GMod.Cmpid & "','" & lblacheadcode.Text & "',"
                 sql += "'" & txtacheadname.Text.ToUpper.Trim & "','" & lblgroupname.Text & "','" & cmbsubgrpname.Text & "','" & txtGstIn.Text & "',"
                 sql += Val(txtamt.Text) & ",0,'" & txtcrdays.Text.ToString & "','" & txtcrlimit.Text.ToString & "','" & txtaddress.Text & "',"
                 sql += "'" & txtcity.Text & "','" & txtstate.Text & "','" & txtphno.Text & "','" & txtpanno.Text & "'," & Val(txtintrate.Text) & ",'"
-                sql += GMod.username & "','" & txtremark1.Text & "','" & txtremark2.Text & "','" & cmbAreaCode.Text & "','" & txtEmailID.Text & "')"
+                sql += GMod.username & "','" & txtremark1.Text & "','" & txtremark2.Text & "','" & cmbAreaCode.Text & "','" & txtEmailID.Text & "','" & dtdoidob.Value.ToShortDateString & "')"
             Else
                 sql = "insert into " & GMod.ACC_HEAD & "(cmp_id,account_code,account_head_name,group_name,sub_group_name,"
-                sql += "account_type,opening_Cr,opening_Dr,credit_days,credit_limit,address,city,state,phone,pan_no,rate_of_interest,interest_rule_id,remark1,remark2,Area_code,remark3)"
+                sql += "account_type,opening_Cr,opening_Dr,credit_days,credit_limit,address,city,state,phone,pan_no,rate_of_interest,interest_rule_id,remark1,remark2,Area_code,remark3,dobdoi)"
                 sql += " values('" & GMod.Cmpid & "','" & lblacheadcode.Text & "',"
                 sql += "'" & txtacheadname.Text.ToUpper.Trim & "','" & lblgroupname.Text & "','" & cmbsubgrpname.Text & "','" & Trim(txtGstIn.Text) & "',"
                 sql += Val(txtamt.Text) & ",0,'" & txtcrdays.Text.ToString & "','" & txtcrlimit.Text.ToString & "','" & txtaddress.Text & "',"
                 sql += "'" & txtcity.Text & "','" & txtstate.Text & "','" & txtphno.Text & "','" & txtpanno.Text & "'," & Val(txtintrate.Text) & ",'"
-                sql += GMod.username & "','" & txtremark1.Text & "','" & txtremark2.Text & "','" & cmbAreaCode.Text & "','" & txtEmailID.Text & "')"
+                sql += GMod.username & "','" & txtremark1.Text & "','" & txtremark2.Text & "','" & cmbAreaCode.Text & "','" & txtEmailID.Text & "','" & dtdoidob.Value.ToShortDateString & "')"
             End If
             s = GMod.SqlExecuteNonQuery(sql)
             If s <> "SUCCESS" Then
@@ -178,11 +178,12 @@ Public Class frmPartyaccount
                 btnreset_Click(sender, e)
                 fillgrid("")
                 nxtid()
-                End If
-                txtacheadname.Focus()
+            End If
+            txtacheadname.Focus()
+            End
         End If
     End Sub
-   
+
     Public Sub CreateHeadToNextSession()
         Try
             'For Creating Head to nextsession
@@ -242,7 +243,7 @@ Public Class frmPartyaccount
         txtIFSCCode.Clear()
         txtBranch.Clear()
         'btnsave.Enabled = True
-        btnmodify.Text = "&Modify"
+        btn_modify.Text = "&Modify"
         nxtid()
         fillgrid("")
         cmbAreaCode.Enabled = True
@@ -253,8 +254,6 @@ Public Class frmPartyaccount
     End Sub
     Sub showdata(ByVal ano As String)
         GMod.DataSetRet("select * from " & GMod.ACC_HEAD & " where account_code='" & ano & "'", "ser")
-
-
 
         If GMod.ds.Tables("ser").Rows.Count > 0 Then
             cmbAreaCode.Text = ano.Substring(0, 2)
@@ -294,10 +293,10 @@ Public Class frmPartyaccount
             Catch ex As Exception
                 MessageBox.Show("No Bank Detials Found ")
             End Try
-           
+
 
             btnsave.Enabled = False
-            btnmodify.Text = "&Update"
+            btn_modify.Text = "&Update"
         Else
             MsgBox("Invalid Account Code", MsgBoxStyle.Critical, "Error")
             btnsave.Enabled = True
@@ -325,7 +324,7 @@ Public Class frmPartyaccount
 
     End Sub
 
-    Private Sub btnmodify_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnmodify.Click
+    Private Sub btnmodify_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_modify1.Click
         Dim sqltrans As SqlTransaction
         sqltrans = GMod.SqlConn.BeginTransaction
         Try
@@ -622,7 +621,7 @@ Public Class frmPartyaccount
             If btnsave.Enabled = True Then
                 btnsave.Focus()
             Else
-                btnmodify.Focus()
+                btn_modify.Focus()
             End If
         End If
     End Sub
@@ -795,4 +794,144 @@ Public Class frmPartyaccount
     End Sub
 
    
+    Private Sub btnModift_New_Click(sender As Object, e As EventArgs) Handles btn_modify.Click
+        Dim sqltrans As SqlTransaction = GMod.SqlConn.BeginTransaction()
+
+        Try
+            '================= PREPARE =================
+            Dim accName As String = Trim(txtacheadname.Text)
+
+            If accName = "" Then
+                MsgBox("Please enter account head / Ledger Name", MsgBoxStyle.Critical)
+                Exit Sub
+            End If
+
+            Dim dr As Decimal = 0
+            Dim cr As Decimal = 0
+
+            If cmbdrcr.Text = "Dr" Then
+                dr = Val(txtamt.Text)
+            Else
+                cr = Val(txtamt.Text)
+            End If
+
+            Dim accCodeOld As String = code
+            Dim accCodeNew As String = lblacheadcode.Text
+
+            '================= UPDATE ACC_HEAD =================
+            Dim sql1 As String
+            sql1 = "UPDATE " & GMod.ACC_HEAD & " SET " & _
+                   "group_name=@group, sub_group_name=@subgroup, opening_dr=@dr, opening_cr=@cr," & _
+                   "credit_days=@crdays, credit_limit=@crlimit, address=@address, city=@city, state=@state, " & _
+                   "phone=@phone, pan_no=@pan, rate_of_interest=@roi, interest_rule_id=@ruleid, " & _
+                   "remark1=@remark1, remark2=@remark2, Area_code=@area, remark3=@email, " & _
+                   "account_code=@newcode, account_type=@gst, account_head_name=@name,dobdoi=@dobdoi " & _
+                   "WHERE account_code=@oldcode"
+
+            Dim cmd1 As New SqlCommand(sql1, GMod.SqlConn, sqltrans)
+
+            cmd1.Parameters.Add("@group", SqlDbType.VarChar).Value = lblgroupname.Text
+            cmd1.Parameters.Add("@subgroup", SqlDbType.VarChar).Value = cmbsubgrpname.Text
+            cmd1.Parameters.Add("@dr", SqlDbType.Decimal).Value = dr
+            cmd1.Parameters.Add("@cr", SqlDbType.Decimal).Value = cr
+            cmd1.Parameters.Add("@crdays", SqlDbType.Int).Value = Val(txtcrdays.Text)
+            cmd1.Parameters.Add("@crlimit", SqlDbType.Decimal).Value = Val(txtcrlimit.Text)
+            cmd1.Parameters.Add("@address", SqlDbType.VarChar).Value = txtaddress.Text
+            cmd1.Parameters.Add("@city", SqlDbType.VarChar).Value = txtcity.Text
+            cmd1.Parameters.Add("@state", SqlDbType.VarChar).Value = txtstate.Text
+            cmd1.Parameters.Add("@phone", SqlDbType.VarChar).Value = txtphno.Text
+            cmd1.Parameters.Add("@pan", SqlDbType.VarChar).Value = txtpanno.Text
+            cmd1.Parameters.Add("@roi", SqlDbType.Decimal).Value = Val(txtintrate.Text)
+            cmd1.Parameters.Add("@ruleid", SqlDbType.Int).Value = Val(cmbintruleid.Text)
+            cmd1.Parameters.Add("@remark1", SqlDbType.VarChar).Value = txtremark1.Text
+            cmd1.Parameters.Add("@remark2", SqlDbType.VarChar).Value = txtremark2.Text
+            cmd1.Parameters.Add("@area", SqlDbType.VarChar).Value = cmbAreaCode.Text
+            cmd1.Parameters.Add("@email", SqlDbType.VarChar).Value = txtEmailID.Text
+            cmd1.Parameters.Add("@newcode", SqlDbType.VarChar).Value = accCodeNew
+            cmd1.Parameters.Add("@gst", SqlDbType.VarChar).Value = Trim(txtGstIn.Text)
+            cmd1.Parameters.Add("@name", SqlDbType.VarChar).Value = UCase(accName)
+            cmd1.Parameters.Add("@dobdoi", SqlDbType.DateTime).Value = dtdoidob.Value.ToString
+            cmd1.Parameters.Add("@oldcode", SqlDbType.VarChar).Value = accCodeOld
+            cmd1.ExecuteNonQuery()
+
+            '================= UPDATE VENTRY =================
+            Dim sql2 As String
+            sql2 = "UPDATE " & GMod.VENTRY & " SET " & _
+                   "Acc_head_code=@newcode, Acc_head=@name, Group_name=@group, Sub_group_name=@subgroup " & _
+                   "WHERE Acc_head_code=@code"
+
+            Dim cmd2 As New SqlCommand(sql2, GMod.SqlConn, sqltrans)
+            cmd2.Parameters.Add("@name", SqlDbType.VarChar).Value = accName
+            cmd2.Parameters.Add("@newcode", SqlDbType.VarChar).Value = accCodeNew
+            cmd2.Parameters.Add("@group", SqlDbType.VarChar).Value = lblgroupname.Text
+            cmd2.Parameters.Add("@subgroup", SqlDbType.VarChar).Value = cmbsubgrpname.Text
+            cmd2.Parameters.Add("@code", SqlDbType.VarChar).Value = accCodeOld
+
+            cmd2.ExecuteNonQuery()
+
+            '================= CONDITIONAL UPDATE =================
+            Dim sql3 As String
+
+            If GMod.Cmpid = "PHHA" Or GMod.Cmpid = "PHOE" Or GMod.Cmpid = "JAHA" Or GMod.Cmpid = "PHPO" Then
+                sql3 = "UPDATE PrintData SET AccName=@name WHERE AccCode=@code AND Cmp_id=@cmp AND session=@session"
+            ElseIf GMod.Cmpid = "PHCH" Then
+                sql3 = "UPDATE InvPhxChicken SET Acc_head=@name WHERE Acc_head_code=@code AND Cmp_id=@cmp AND session=@session"
+            Else
+                'sql3 = "UPDATE " & GMod.INVENTORY & " SET Acc_head=@name WHERE Acc_head_code=@code"
+                sql3 = "UPDATE InvPhxChicken SET Acc_head=@name WHERE Acc_head_code=@code AND Cmp_id=@cmp AND session=@session"
+            End If
+
+            Dim cmd3 As New SqlCommand(sql3, GMod.SqlConn, sqltrans)
+
+            cmd3.Parameters.Add("@name", SqlDbType.VarChar).Value = accName
+            cmd3.Parameters.Add("@code", SqlDbType.VarChar).Value = accCodeOld
+
+            If InStr(sql3, "@cmp") > 0 Then
+                cmd3.Parameters.Add("@cmp", SqlDbType.VarChar).Value = GMod.Cmpid
+                cmd3.Parameters.Add("@session", SqlDbType.VarChar).Value = GMod.Session
+            End If
+
+            cmd3.ExecuteNonQuery()
+
+            '================= BANK UPSERT =================
+            If Trim(txtBankAccountNumber.Text) <> "" Then
+
+                Dim sql4 As String
+                sql4 = "IF EXISTS (SELECT 1 FROM partyBankDetials WHERE partyCode=@code AND cmp_id=@cmp) " & _
+                       "BEGIN " & _
+                       "UPDATE partyBankDetials SET bankName=@bank, accNumber=@acc, ifscCode=@ifsc, branch=@branch " & _
+                       "WHERE partyCode=@code AND cmp_id=@cmp " & _
+                       "END " & _
+                       "ELSE " & _
+                       "BEGIN " & _
+                       "INSERT INTO partyBankDetials (partyCode, bankName, accNumber, ifscCode, branch, cmp_id) " & _
+                       "VALUES (@code, @bank, @acc, @ifsc, @branch, @cmp) " & _
+                       "END"
+
+                Dim cmd4 As New SqlCommand(sql4, GMod.SqlConn, sqltrans)
+
+                cmd4.Parameters.Add("@code", SqlDbType.VarChar).Value = accCodeNew
+                cmd4.Parameters.Add("@cmp", SqlDbType.VarChar).Value = GMod.Cmpid
+                cmd4.Parameters.Add("@bank", SqlDbType.VarChar).Value = txtBankName.Text
+                cmd4.Parameters.Add("@acc", SqlDbType.VarChar).Value = txtBankAccountNumber.Text
+                cmd4.Parameters.Add("@ifsc", SqlDbType.VarChar).Value = txtIFSCCode.Text
+                cmd4.Parameters.Add("@branch", SqlDbType.VarChar).Value = txtBranch.Text
+
+                cmd4.ExecuteNonQuery()
+            End If
+            '================= COMMIT =================
+            sqltrans.Commit()
+            Fill_Log_Head(GMod.Cmpid, accCodeNew, accName, Now, GMod.Session, "M", GMod.username)
+            MsgBox("Party/Customer Information updated", MsgBoxStyle.Information)
+
+            btnreset_Click(sender, e)
+            fillgrid("")
+        Catch ex As Exception
+            sqltrans.Rollback()
+            MsgBox("Error: " & ex.Message)
+        End Try
+    End Sub
+
+   
+
 End Class

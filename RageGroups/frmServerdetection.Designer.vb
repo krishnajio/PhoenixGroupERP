@@ -112,7 +112,7 @@ Partial Class frmServerdetection
         Me.cmbserver.Name = "cmbserver"
         Me.cmbserver.Size = New System.Drawing.Size(191, 24)
         Me.cmbserver.TabIndex = 11
-        Me.cmbserver.Text = "192.168.0.130"
+        Me.cmbserver.Text = "192.168.0.130,3759"
         '
         'Label2
         '

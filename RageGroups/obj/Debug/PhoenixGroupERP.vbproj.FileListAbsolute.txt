@@ -2292,3 +2292,9 @@ D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.pdb
 D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\PhoenixGroupERP.vbprojResolveAssemblyReference.cache
 D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmBooksData.resources
 D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmInvPrint_New.resources
+D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmUpdateOtherSaleAccountHead.resources
+D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmFeedTransfer.resources
+D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmCashBookDateWise.resources
+D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmDisplayTrImages.resources
+D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmCustomerMonthlyTrialDR.resources
+D:\RepoGitHub\PhoenixGroupERP\RageGroups\obj\Debug\Phoenix_GroupERP.frmDailyBalance.resources

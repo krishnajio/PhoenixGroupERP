@@ -45,8 +45,9 @@ Partial Class frmPartyaccount
         Me.PAN = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AADHAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btn_modify = New System.Windows.Forms.Button()
         Me.btnDosprint = New System.Windows.Forms.Button()
-        Me.btnmodify = New System.Windows.Forms.Button()
+        Me.btn_modify1 = New System.Windows.Forms.Button()
         Me.btnclose = New System.Windows.Forms.Button()
         Me.btnsave = New System.Windows.Forms.Button()
         Me.btnreset = New System.Windows.Forms.Button()
@@ -99,6 +100,8 @@ Partial Class frmPartyaccount
         Me.txtaddress = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.txtPANSearch = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.dtdoidob = New System.Windows.Forms.DateTimePicker()
         CType(Me.dgaccounthead, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -330,8 +333,9 @@ Partial Class frmPartyaccount
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.btn_modify)
         Me.Panel1.Controls.Add(Me.btnDosprint)
-        Me.Panel1.Controls.Add(Me.btnmodify)
+        Me.Panel1.Controls.Add(Me.btn_modify1)
         Me.Panel1.Controls.Add(Me.btnclose)
         Me.Panel1.Controls.Add(Me.btnsave)
         Me.Panel1.Controls.Add(Me.btnreset)
@@ -340,6 +344,17 @@ Partial Class frmPartyaccount
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(792, 43)
         Me.Panel1.TabIndex = 13
+        '
+        'btn_modify
+        '
+        Me.btn_modify.Enabled = False
+        Me.btn_modify.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_modify.Location = New System.Drawing.Point(197, 4)
+        Me.btn_modify.Name = "btn_modify"
+        Me.btn_modify.Size = New System.Drawing.Size(94, 31)
+        Me.btn_modify.TabIndex = 16
+        Me.btn_modify.Text = "&Modify"
+        Me.btn_modify.UseVisualStyleBackColor = True
         '
         'btnDosprint
         '
@@ -351,16 +366,16 @@ Partial Class frmPartyaccount
         Me.btnDosprint.Text = "&Dos Print"
         Me.btnDosprint.UseVisualStyleBackColor = True
         '
-        'btnmodify
+        'btn_modify1
         '
-        Me.btnmodify.Enabled = False
-        Me.btnmodify.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnmodify.Location = New System.Drawing.Point(197, 4)
-        Me.btnmodify.Name = "btnmodify"
-        Me.btnmodify.Size = New System.Drawing.Size(94, 31)
-        Me.btnmodify.TabIndex = 16
-        Me.btnmodify.Text = "&Modify"
-        Me.btnmodify.UseVisualStyleBackColor = True
+        Me.btn_modify1.Enabled = False
+        Me.btn_modify1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_modify1.Location = New System.Drawing.Point(650, 5)
+        Me.btn_modify1.Name = "btn_modify1"
+        Me.btn_modify1.Size = New System.Drawing.Size(94, 31)
+        Me.btn_modify1.TabIndex = 160
+        Me.btn_modify1.Text = "&Modify"
+        Me.btn_modify1.UseVisualStyleBackColor = True
         '
         'btnclose
         '
@@ -725,6 +740,8 @@ Partial Class frmPartyaccount
         'GroupBox2
         '
         Me.GroupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GroupBox2.Controls.Add(Me.dtdoidob)
+        Me.GroupBox2.Controls.Add(Me.Label27)
         Me.GroupBox2.Controls.Add(Me.txtGstIn)
         Me.GroupBox2.Controls.Add(Me.Label21)
         Me.GroupBox2.Controls.Add(Me.Label20)
@@ -746,7 +763,7 @@ Partial Class frmPartyaccount
         Me.GroupBox2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(572, 37)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(479, 313)
+        Me.GroupBox2.Size = New System.Drawing.Size(479, 361)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Other Details"
@@ -947,6 +964,27 @@ Partial Class frmPartyaccount
         Me.txtPANSearch.Size = New System.Drawing.Size(274, 21)
         Me.txtPANSearch.TabIndex = 61
         '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(36, 306)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(68, 15)
+        Me.Label27.TabIndex = 70
+        Me.Label27.Text = "DOB/DOI:"
+        '
+        'dtdoidob
+        '
+        Me.dtdoidob.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtdoidob.CustomFormat = "dd/MMM/yyyy"
+        Me.dtdoidob.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtdoidob.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtdoidob.Location = New System.Drawing.Point(107, 304)
+        Me.dtdoidob.Name = "dtdoidob"
+        Me.dtdoidob.Size = New System.Drawing.Size(103, 20)
+        Me.dtdoidob.TabIndex = 71
+        '
         'frmPartyaccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -991,7 +1029,7 @@ Partial Class frmPartyaccount
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents dgaccounthead As System.Windows.Forms.DataGridView
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents btnmodify As System.Windows.Forms.Button
+    Friend WithEvents btn_modify1 As System.Windows.Forms.Button
     Friend WithEvents btnclose As System.Windows.Forms.Button
     Friend WithEvents btnsave As System.Windows.Forms.Button
     Friend WithEvents btnreset As System.Windows.Forms.Button
@@ -1057,4 +1095,7 @@ Partial Class frmPartyaccount
     Friend WithEvents AADHAR As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents txtPANSearch As System.Windows.Forms.TextBox
+    Friend WithEvents btn_modify As System.Windows.Forms.Button
+    Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents dtdoidob As System.Windows.Forms.DateTimePicker
 End Class

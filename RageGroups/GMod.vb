@@ -24,6 +24,7 @@ Module GMod
     Public nxtCR As Int64
     Public setDate As DateTime
     Public nofd As Integer
+    Public isUnAuth As Integer
     Public setUpdateOpening As Integer
     'For DataBases    
     Public SqlConn As New SqlConnection(Connstr)
@@ -69,22 +70,41 @@ Module GMod
     Public party_name As String = ""
     Public Billdate As Date
     Public Sub DataSetRet(ByVal sql As String, ByVal tablename As String)
-        Try
-            ds.Tables(tablename).Dispose()
-        Catch ex As Exception
+        'Try
+        '    ds.Tables(tablename).Dispose()
+        'Catch ex As Exception
 
-        End Try
+        'End Try
+        'Try
+        '    ds.Tables(tablename).Clear()
+        'Catch ex As Exception
+        'End Try
+        'Try
+        '    Dim adp As New SqlDataAdapter(sql, Connstr)
+        '    adp.Fill(ds, tablename)
+        '    adp.Dispose()
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message)
+        'End Try
+
         Try
-            ds.Tables(tablename).Clear()
+            Using conn As New SqlConnection(Connstr)
+                Using cmd As New SqlCommand(sql, conn)
+                    Using adp As New SqlDataAdapter(cmd)
+
+                        If ds.Tables.Contains(tablename) Then
+                            ds.Tables(tablename).Clear()
+                        End If
+
+                        adp.Fill(ds, tablename)
+                    End Using
+                End Using
+            End Using
+
         Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
         End Try
-        Try
-            Dim adp As New SqlDataAdapter(sql, Connstr)
-            adp.Fill(ds, tablename)
-            adp.Dispose()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+
     End Sub
     Public Function SqlExecuteNonQuery(ByVal sql As String) As String
 
@@ -105,6 +125,7 @@ Module GMod
         '    GMod.SqlConn.Close()
         'End If
         Return retval
+
     End Function
     Public Function Getsession(ByVal statusdate As DateTime) As String
         Dim year, x As Integer

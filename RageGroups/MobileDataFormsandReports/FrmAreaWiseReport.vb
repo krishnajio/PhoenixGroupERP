@@ -116,4 +116,24 @@ Public Class FrmAreaWiseReport
     End Sub
 
    
+    Private Sub dg_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dg.CellContentDoubleClick
+        Try
+            ' Prevent header click error
+            If e.RowIndex < 0 OrElse e.ColumnIndex < 0 Then Exit Sub
+
+            Dim value = dg.Rows(e.RowIndex).Cells(e.ColumnIndex).Value
+
+
+            If value IsNot Nothing Then
+                'MessageBox.Show("Cell Value: " & value.ToString())
+                Dim frmdisplayimage As New frmDisplayTrImages
+                frmdisplayimage.PictureBox1.Load(value)
+                frmdisplayimage.ShowDialog()
+            End If
+        Catch ex As Exception
+
+        End Try
+       
+
+    End Sub
 End Class

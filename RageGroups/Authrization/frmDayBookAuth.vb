@@ -488,7 +488,7 @@ Public Class frmdayBookAuth
                                     smtp.EnableSsl = True
                                     smtp.Credentials =
                                         New NetworkCredential("purchase@phoenixgrp.co.in",
-                                                              "lzrw qbkw yhui jvov")
+                                                              "hgsv eiqp jtwb wunf")
                                     smtp.Send(mail)
                                 End Using
 
@@ -498,7 +498,7 @@ Public Class frmdayBookAuth
                         End If
                     Next
                 End If
-                MsgBox("Debit Note Email Sent ", MsgBoxStyle.Information)
+                ' MsgBox("Debit Note Email Sent ", MsgBoxStyle.Information)
             Next
 
         Catch ex As Exception

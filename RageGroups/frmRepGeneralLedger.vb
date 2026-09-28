@@ -1361,7 +1361,6 @@ Public Class frmRepGeneralLedger
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
         'Ledger Print With Trasaction
-
         Dim codefor10 As String = ""
         CheckBoxSelect.Enabled = False
         'If chklistled.CheckedItems.Count > 11 Then

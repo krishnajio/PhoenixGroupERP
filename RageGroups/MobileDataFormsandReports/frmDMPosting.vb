@@ -37,13 +37,13 @@ Public Class frmDMPosting
 
         isDm = 1
 
-        tablename = "VENTRY" & "_" & "PHOE" & "_" & GMod.Getsession(Now)
-        sql = "select vtype from Vtype where cmp_id='PHOE'  and session='" & GMod.Getsession(Now) & "' and vtype like '%SALE%'"
+        tablename = "VENTRY" & "_" & "PHOE" & "_" & GMod.Session
+        sql = "select vtype from Vtype where cmp_id='PHOE'  and session='" & GMod.Session & "' and vtype like '%SALE%'"
         GMod.DataSetRet(sql, "CRVT")
         cmbVoucherType.DataSource = GMod.ds.Tables("CRVT")
         cmbVoucherType.DisplayMember = "vtype"
-        headtable = "ACC_HEAD" & "_" & "PHOE" & "_" & GMod.Getsession(Now)
 
+        headtable = "ACC_HEAD" & "_" & "PHOE" & "_" & GMod.Session
         sql = " select * from " & headtable & " where cmp_id='PHOE' " 'and group_name='SALE'"
         GMod.DataSetRet(sql, "aclistins")
         cmbInsCode.DataSource = GMod.ds.Tables("aclistins")
@@ -77,7 +77,7 @@ Public Class frmDMPosting
     Dim i, k As Integer
     Dim Narration, NarrationBody, vou_date As String
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        tablename = "VENTRY" & "_" & "PHOE" & "_" & GMod.Getsession(Now)
+        tablename = "VENTRY" & "_" & "PHOE" & "_" & GMod.Session
         'BY  #TR NO. 002# DT. 02/Apr/19# Cash#SHEETAL#ADVANCE PAYMENT
         Dim amt As Double
         Dim billchicks As Integer
@@ -95,7 +95,7 @@ Public Class frmDMPosting
         Dim tcs_per As Double
         Dim gst_amt As Double = 0
         Dim DMSplit() As String
-
+        Dim voucherList As String = ""
         sql = "SELECT isnull(max(cast(vou_no as numeric(18,0))),0) + 1 FROM " & tablename & " where vou_type = '" & cmbVoucherType.Text & "'"
         GMod.DataSetRet(sql, "vnor")
         getvouno = CInt(ds.Tables("vnor").Rows(0)(0).ToString)
@@ -345,11 +345,8 @@ Public Class frmDMPosting
                             sql &= "'-')"
                             Dim cmdGst As New SqlCommand(sql, GMod.SqlConn, sqltrans)
                             cmdGst.ExecuteNonQuery()
-
                         End If
-
                     Next
-
                     sql = "Update AreaDMPoultry Set isPosted=1  Where DMNo ='" & dg(5, i).Value & "'"
                     Dim cmd4 As New SqlCommand(sql, GMod.SqlConn, sqltrans)
                     cmd4.ExecuteNonQuery()
@@ -366,11 +363,16 @@ Public Class frmDMPosting
                     Narration = ""
                     NarrationBody = ""
                     gst_amt = 0
-                    MessageBox.Show("Invoice No" & vouno.ToString)
+                    ' MessageBox.Show("Invoice No" & vouno.ToString)
+                    voucherList &= vouno.ToString() & ", "
                     counter = counter + 1
                 End If
             Next
             sqltrans.Commit()
+            If voucherList <> "" Then
+                voucherList = voucherList.Substring(0, voucherList.Length - 2)
+            End If
+            MessageBox.Show("✅ Posted Successfully" & vbCrLf & "Voucher No(s): " & voucherList)
             vouno = 0
             counter = 0
             getvouno = 0
@@ -389,7 +391,7 @@ Public Class frmDMPosting
         sqltrans.Dispose()
         getvouno = 0
         ' MessageBox.Show(vouno)
-        MessageBox.Show("Posted to Accounts Successfully ")
+        ' MessageBox.Show("Posted to Accounts Successfully ")
         btnShow_Click(sender, e)
     End Sub
 
