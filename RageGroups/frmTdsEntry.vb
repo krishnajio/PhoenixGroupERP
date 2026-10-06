@@ -379,6 +379,32 @@ Public Class frmTdsEntry
                         cmd8.ExecuteNonQuery()
                     End If
                 End If
+
+                Dim mainDr As Decimal = 0
+                Dim mainCr As Decimal = 0
+
+                'Expense/Freight DR
+                mainDr = CDec(Val(txtPaidAmt.Text))
+
+                'TDS CR
+                mainCr = CDec(Val(txttdsAmount.Text))
+
+                'Party CR
+                mainCr += CDec(Val(txtPaidAmt.Text) -
+                               Val(txttdsAmount.Text))
+
+                If Math.Abs(mainDr - mainCr) > 0.01D Then
+                    MessageBox.Show(
+                        "Main Voucher is not balanced." & vbCrLf & vbCrLf &
+                        "Debit  : " & mainDr.ToString("N2") & vbCrLf &
+                        "Credit : " & mainCr.ToString("N2") & vbCrLf &
+                        "Difference : " &
+                        Math.Abs(mainDr - mainCr).ToString("N2"),
+                        "Dr / Cr Mismatch",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error)
+                    Exit Sub
+                End If
                 trans.Commit()
                 MsgBox(cmbvtype.Text & "/" & lblvouno.Text)
                 fillgrid()

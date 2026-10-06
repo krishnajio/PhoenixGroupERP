@@ -19,66 +19,72 @@ Public Class frmBonusDebitFrmXls
         Else
             GMod.DataSetRet("select * from vtype where cmp_id='" & GMod.Cmpid & "' and vtype NOT in ('PAYMENT','OPEN') order by seqorder", "vty")
         End If
-
         cmbvtype.DataSource = GMod.ds.Tables("vty")
         cmbvtype.DisplayMember = "vtype"
-
-
-
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        If MessageBox.Show("Are u Sure?", "Confirmation", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-            ' If Val(dr.Text) = Val(cr.Text) Then
-            Dim sqlsave As String, i As Integer
-
-            Try
-                sqlsave = "SELECT isnull(max(cast(vou_no as numeric(18,0))),0) + 1 FROM " & GMod.VENTRY & " where vou_type = '" & cmbvtype.Text & "'"
-                GMod.DataSetRet(sqlsave, "vnosal_acc_transfer_casual")
-                lblvouno.Text = ds.Tables("vnosal_acc_transfer_casual").Rows(0)(0)
-            Catch ex As Exception
-                MsgBox(ex.Message)
-                Me.Close()
-            End Try
-            Dim trans As SqlTransaction
-            trans = GMod.SqlConn.BeginTransaction
-            Try
-                For i = 0 To dgvoucher.Rows.Count - 1
-                    'If Val(dgvoucher(4, i).Value) <> 0 And Val(dgvoucher(5, i).Value) <> 0 Then
-                    sqlsave = "insert into " & GMod.VENTRY & "(Cmp_id, Uname, Entry_id, Vou_no, Vou_type, Vou_date,"
-                    sqlsave &= "acc_head_code,Acc_head, dramt, cramt,Narration, Group_name, Sub_group_name"
-                    sqlsave &= ") values( "
-                    sqlsave &= "'" & GMod.Cmpid & "',"
-                    sqlsave &= "'" & GMod.username & "',"
-                    sqlsave &= "'" & Val(dgvoucher(0, i).Value) & "',"
-                    sqlsave &= "'" & lblvouno.Text & "',"
-                    sqlsave &= "'" & cmbvtype.Text & "',"
-                    sqlsave &= "'" & dtVoucherDate.Value.ToShortDateString & "',"
-                    sqlsave &= "'" & dgvoucher(1, i).Value & "',"
-                    sqlsave &= "'" & dgvoucher(2, i).Value & "',"
-                    sqlsave &= "'" & Val(dgvoucher(4, i).Value) & "',"
-                    sqlsave &= "'" & Val(dgvoucher(5, i).Value) & "',"
-                    sqlsave &= "'" & dgvoucher(3, i).Value.ToString().Replace("'", "''") & "',"
-                    sqlsave &= "'" & dgvoucher(6, i).Value & "',"
-                    sqlsave &= "'-')"
-                    ' MsgBox(sqlsave)
-                    Dim cmd As New SqlCommand(sqlsave, GMod.SqlConn, trans)
-                    cmd.ExecuteNonQuery()
-                    'End If
-                Next
-                trans.Commit()
-                dgvoucher.Rows.Clear()
-                MsgBox(lblvouno.Text & "/" & cmbvtype.Text)
-            Catch ex As Exception
-                trans.Rollback()
-                MsgBox(ex.Message)
-            End Try
-            'Else
-            'dr.BackColor = Color.Red
-            ' cr.BackColor = Color.Red
-            MsgBox("Dr<>Cr")
-            ' End If
+        If Val(dr.Text) <> Val(cr.Text) Then
+            MsgBox("Dr <> Cr" & vbCrLf & vbCrLf &
+                   "Debit  : " & Val(dr.Text).ToString("N2") & vbCrLf &
+                   "Credit : " & Val(cr.Text).ToString("N2"),
+                   MsgBoxStyle.Critical,
+                   "Voucher Not Balanced")
+            dr.Focus()
+            Exit Sub
         End If
+        If Val(dr.Text) = Val(cr.Text) Then
+            If MessageBox.Show("Are u Sure?", "Confirmation", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+                Dim sqlsave As String, i As Integer
+
+                Try
+                    sqlsave = "SELECT isnull(max(cast(vou_no as numeric(18,0))),0) + 1 FROM " & GMod.VENTRY & " where vou_type = '" & cmbvtype.Text & "'"
+                    GMod.DataSetRet(sqlsave, "vnosal_acc_transfer_casual")
+                    lblvouno.Text = ds.Tables("vnosal_acc_transfer_casual").Rows(0)(0)
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                    Me.Close()
+                End Try
+                Dim trans As SqlTransaction
+                trans = GMod.SqlConn.BeginTransaction
+                Try
+                    For i = 0 To dgvoucher.Rows.Count - 1
+                        'If Val(dgvoucher(4, i).Value) <> 0 And Val(dgvoucher(5, i).Value) <> 0 Then
+                        sqlsave = "insert into " & GMod.VENTRY & "(Cmp_id, Uname, Entry_id, Vou_no, Vou_type, Vou_date,"
+                        sqlsave &= "acc_head_code,Acc_head, dramt, cramt,Narration, Group_name, Sub_group_name"
+                        sqlsave &= ") values( "
+                        sqlsave &= "'" & GMod.Cmpid & "',"
+                        sqlsave &= "'" & GMod.username & "',"
+                        sqlsave &= "'" & Val(dgvoucher(0, i).Value) & "',"
+                        sqlsave &= "'" & lblvouno.Text & "',"
+                        sqlsave &= "'" & cmbvtype.Text & "',"
+                        sqlsave &= "'" & dtVoucherDate.Value.ToShortDateString & "',"
+                        sqlsave &= "'" & dgvoucher(1, i).Value & "',"
+                        sqlsave &= "'" & dgvoucher(2, i).Value & "',"
+                        sqlsave &= "'" & Val(dgvoucher(4, i).Value) & "',"
+                        sqlsave &= "'" & Val(dgvoucher(5, i).Value) & "',"
+                        sqlsave &= "'" & dgvoucher(3, i).Value.ToString().Replace("'", "''") & "',"
+                        sqlsave &= "'" & dgvoucher(6, i).Value & "',"
+                        sqlsave &= "'-')"
+                        ' MsgBox(sqlsave)
+                        Dim cmd As New SqlCommand(sqlsave, GMod.SqlConn, trans)
+                        cmd.ExecuteNonQuery()
+                        'End If
+                    Next
+                    trans.Commit()
+                    dgvoucher.Rows.Clear()
+                    MsgBox(lblvouno.Text & "/" & cmbvtype.Text)
+                Catch ex As Exception
+                    trans.Rollback()
+                    MsgBox(ex.Message)
+                End Try
+            Else
+                'dr.BackColor = Color.Red
+                ' cr.BackColor = Color.Red
+                MsgBox("Dr<>Cr")
+            End If
+        End If
+
     End Sub
     Private Sub btnShow_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnShow.Click
         Dim i As Integer

@@ -232,6 +232,7 @@ Public Class frmSaleInvoiceWB
         GMod.ds.Tables("heads").Dispose()
         GMod.ds.Tables("heads1").Dispose()
     End Sub
+    Dim totalCr, totalDr As Integer
     Private Sub btnsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsave.Click
         If MessageBox.Show("Are U sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes Then
 
@@ -508,6 +509,24 @@ Public Class frmSaleInvoiceWB
                 cmd6.ExecuteNonQuery()
                 btnsave.Enabled = True
                 btn_modify.Text = "&Modify"
+
+                'Customer CR
+                totalCr += productamount
+
+                '=============================
+                ' CHECK DR = CR BEFORE COMMIT
+                '=============================
+                If Math.Round(totalDr, 2) <> Math.Round(totalCr, 2) Then
+                    MsgBox("Voucher is not balanced." & vbCrLf & vbCrLf &
+                           "DR = " & totalDr.ToString("0.00") & vbCrLf &
+                           "CR = " & totalCr.ToString("0.00"),
+                           MsgBoxStyle.Critical,
+                           "DR / CR Mismatch")
+
+                    sqltrans.Rollback()
+                    Exit Sub
+                End If
+
                 sqltrans.Commit()
                 MsgBox("CREDIT NOTE / " & lblno.Text)
                 dgSaleVoucher.Rows.Clear()

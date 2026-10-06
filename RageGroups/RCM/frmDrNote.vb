@@ -305,6 +305,54 @@ Public Class frmDrNote
     Dim chgFlag As Boolean = False
     Dim vat, cst, fr, total As Double
     Private Sub btnsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsave.Click
+
+        Dim totalDebit As Decimal = 0
+        Dim totalCredit As Decimal = 0
+        Dim i As Integer
+
+        'Party A/C Debit
+        totalDebit = Val(txtTotal.Text)
+
+        'Calculate Credit entries from DataGridView
+        For i = 0 To dgvoucher.Rows.Count - 1
+
+            'Item / Purchase Credit
+            totalCredit += Val(dgvoucher(3, i).Value)
+
+            'SGST Credit
+            If Val(dgvoucher(14, i).Value) > 0 Then
+                totalCredit += Val(dgvoucher(14, i).Value)
+            End If
+
+            'IGST Credit
+            If Val(dgvoucher(18, i).Value) > 0 Then
+                totalCredit += Val(dgvoucher(18, i).Value)
+            End If
+
+            'GST Credit
+            If Val(dgvoucher(10, i).Value) > 0 Then
+                totalCredit += Val(dgvoucher(10, i).Value)
+            End If
+        Next
+        '----------------------------------------------------------
+        ' CHECK
+        '----------------------------------------------------------
+        If Math.Abs(totalDebit - totalCredit) > 0.01D Then
+
+            MessageBox.Show(
+                "Voucher is not balanced." & vbCrLf & vbCrLf &
+                "Debit  : " & totalDebit.ToString("N2") & vbCrLf &
+                "Credit : " & totalCredit.ToString("N2") & vbCrLf &
+                "Difference : " & Math.Abs(totalDebit - totalCredit).ToString("N2"),
+                "Dr / Cr Mismatch",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error)
+
+            Exit Sub
+
+        End If
+
+
         If Val(txtigstamt.Text) > 0 Then
             ChkCform.Checked = True
         Else
@@ -336,7 +384,7 @@ Public Class frmDrNote
                 GMod.Fill_Log(GMod.Cmpid, lblvouno.Text, voutype.Text, dtVdate.Value, Now, GMod.Session, "M", GMod.username)
             End If
             'GetLastVouDate()
-            Dim sqlsave As String, i As Integer, sql, g, s As String
+            Dim sqlsave As String, sql, g, s As String
             Dim sqltrans As SqlTransaction
             Dim narration, narr As String
             sqltrans = GMod.SqlConn.BeginTransaction

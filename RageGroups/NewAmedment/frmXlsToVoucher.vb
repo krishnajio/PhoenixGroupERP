@@ -28,6 +28,16 @@ Public Class frmXlsToVoucher
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        If Val(dr.Text) <> Val(cr.Text) Then
+            MsgBox("Dr <> Cr" & vbCrLf & vbCrLf &
+                   "Debit  : " & Val(dr.Text).ToString("N2") & vbCrLf &
+                   "Credit : " & Val(cr.Text).ToString("N2"),
+                   MsgBoxStyle.Critical,
+                   "Voucher Not Balanced")
+            dr.Focus()
+            Exit Sub
+        End If
+
         If MessageBox.Show("Are u Sure?", "Confirmation", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             ' If Val(dr.Text) = Val(cr.Text) Then
             Dim sqlsave As String, i As Integer

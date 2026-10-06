@@ -1,8 +1,6 @@
 ﻿Public Class frmPostToAccounts
-   
 
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
-
 
 
         If ComboBox1.Text = "ALL AREA" Then
@@ -31,6 +29,41 @@
     Dim i As Integer
     Dim sql, Narration, vou_date As String
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Try
+            For i = 0 To dg.Rows.Count - 1
+
+                If dg(0, i).Value = 1 Then
+
+                    '========================================
+                    ' CHECK DR = CR BEFORE SAVING
+                    '========================================
+                    Dim voucherDr As Decimal = 0
+                    Dim voucherCr As Decimal = 0
+
+                    voucherCr = CDec(Val(dg(10, i).Value))
+                    voucherDr = CDec(Val(dg(10, i).Value))
+
+                    If Math.Abs(voucherDr - voucherCr) > 0.01D Then
+
+                        MessageBox.Show(
+                            "Voucher is not balanced." & vbCrLf & vbCrLf &
+                            "Debit  : " & voucherDr.ToString("N2") & vbCrLf &
+                            "Credit : " & voucherCr.ToString("N2") & vbCrLf &
+                            "Difference : " & Math.Abs(voucherDr - voucherCr).ToString("N2"),
+                            "Dr <> Cr",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error)
+
+                        Exit Sub
+                    End If
+                End If
+                    Next 
+
+        Catch ex As Exception
+
+        End Try
+
         tablename = "VENTRY" & "_" & GMod.Cmpid & "_" & GMod.Getsession(Now)
         'BY  #TR NO. 002# DT. 02/Apr/19# Cash#SHEETAL#ADVANCE PAYMENT
         Dim vouno, getvouno As Integer

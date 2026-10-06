@@ -76,6 +76,8 @@ Public Class frmDMPosting
     End Sub
     Dim i, k As Integer
     Dim Narration, NarrationBody, vou_date As String
+    Dim voucherDr As Decimal = 0D
+    Dim voucherCr As Decimal = 0D
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         tablename = "VENTRY" & "_" & "PHOE" & "_" & GMod.Session
         'BY  #TR NO. 002# DT. 02/Apr/19# Cash#SHEETAL#ADVANCE PAYMENT
@@ -144,6 +146,24 @@ Public Class frmDMPosting
                         gst_amt = gst_amt + Val(GMod.ds.Tables("dm_det").Rows(k).Item(12).ToString)
                     Next
                     Narration = Narration + NarrationBody
+
+
+                    voucherDr = CDec(total + gst_amt)
+                    voucherCr = CDec(sale_amt + ins_amount + tcs_amt + gst_amt)
+                    If Math.Abs(voucherDr - voucherCr) > 0.01D Then
+                        MessageBox.Show(
+                            "Voucher is not balanced." & vbCrLf & vbCrLf &
+                            "Debit  : " & voucherDr.ToString("N2") & vbCrLf &
+                            "Credit : " & voucherCr.ToString("N2") & vbCrLf &
+                            "Difference : " & Math.Abs(voucherDr - voucherCr).ToString("N2") & vbCrLf & vbCrLf &
+                            "DM No : " & dg(5, i).Value.ToString(),
+                            "DR <> CR - Voucher Not Saved",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error)
+                        sqltrans.Rollback()
+                        sqltrans.Dispose()
+                        Exit Sub
+                    End If
 
                     'Customer Dr
                     sql = "insert into " & tablename & "(Cmp_id, Uname, Entry_id, Vou_no, Vou_type, Vou_date, Acc_head_code, "

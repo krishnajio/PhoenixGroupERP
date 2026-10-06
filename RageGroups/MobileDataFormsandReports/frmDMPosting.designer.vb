@@ -72,6 +72,7 @@ Partial Class frmDMPosting
         '
         'cmbBankCode
         '
+        Me.cmbBankCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbBankCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbBankCode.FormattingEnabled = True
         Me.cmbBankCode.Location = New System.Drawing.Point(607, 73)
@@ -262,6 +263,7 @@ Partial Class frmDMPosting
         '
         'cmbInsCode
         '
+        Me.cmbInsCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbInsCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbInsCode.FormattingEnabled = True
         Me.cmbInsCode.Location = New System.Drawing.Point(138, 108)
@@ -292,6 +294,7 @@ Partial Class frmDMPosting
         '
         'cmdTcsCode
         '
+        Me.cmdTcsCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmdTcsCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdTcsCode.FormattingEnabled = True
         Me.cmdTcsCode.Location = New System.Drawing.Point(607, 108)
@@ -344,6 +347,7 @@ Partial Class frmDMPosting
         '
         'cmbGSTCode
         '
+        Me.cmbGSTCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbGSTCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbGSTCode.FormattingEnabled = True
         Me.cmbGSTCode.Location = New System.Drawing.Point(138, 138)

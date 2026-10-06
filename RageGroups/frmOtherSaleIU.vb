@@ -666,6 +666,44 @@ Public Class frmOtherSaleIU
                 Dim cmddd As New SqlCommand("delete from tmpAging where acc_code='" & cmbacheadcode.Text & "' and vou_type='P' and cmp_id='" & GMod.Cmpid & "'", GMod.SqlConn, sqltrans)
                 cmddd.ExecuteNonQuery()
                 '-----------------------------
+                Dim totalDr As Double = 0
+                Dim totalCr As Double = 0
+
+                'Customer A/C DR
+                totalDr = total
+
+                'Voucher rows CR
+                For i = 0 To dgvoucher.Rows.Count - 1
+                    totalCr += Val(dgvoucher(3, i).Value)
+
+                    'GST DR entries
+                    totalDr += Val(dgvoucher(10, i).Value)
+                    totalDr += Val(dgvoucher(18, i).Value)
+                Next
+
+                'Freight
+                If fr > 0 Then
+                    If OtherCheck = 0.0 Then
+                        totalCr += fr
+                    Else
+                        totalDr += fr
+                    End If
+                End If
+
+                If Math.Round(totalDr, 2) <> Math.Round(totalCr, 2) Then
+
+                    MessageBox.Show(
+                        "DR and CR are not equal." & vbCrLf &
+                        "DR = " & totalDr.ToString("0.00") & vbCrLf &
+                        "CR = " & totalCr.ToString("0.00"),
+                        "DR / CR Mismatch",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error)
+
+                    sqltrans.Rollback()
+                    Exit Sub
+                End If
+
                 sqltrans.Commit()
                 MessageBox.Show(voutype.Text & "/" & lblvouno.Text, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
 

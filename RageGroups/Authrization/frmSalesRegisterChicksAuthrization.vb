@@ -6,7 +6,7 @@ Public Class frmSalesRegisterChicksAuthrization
         voutype.Enabled = False
         Dim sql As String, i As Long
         Dim sql2 As String, dd(3) As String
-        Dim sqldet As String
+        Dim sqldet As String = ""
         Try
 
 
