@@ -12,7 +12,9 @@ Public Class frmBook
     End Sub
 
     Private Sub frmBook_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Try
 
+       
         dtfrom.MaxDate = CDate("3/31/" & Mid(GMod.Session, 3, 4))
         dtfrom.MinDate = CDate("4/1/" & Mid(GMod.Session, 1, 2)).ToShortDateString
 
@@ -27,7 +29,7 @@ Public Class frmBook
         If GMod.role.ToUpper = "VIEWER LEVEL-1" And GMod.staff1 = 0 Then
             GMod.DataSetRet("select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vtype not in ('OPEN')  and session ='" & GMod.Session & "' and Vou_no_seq not in ('99')   and Vou_no_seq='" & GMod.Dept & "' order by vtype", "grp")
         ElseIf GMod.role.ToUpper = "ADMIN" And GMod.staff1 = 0 Then
-            'GMod.DataSetRet("select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vtype not in ('OPEN')  and Vou_no_seq='" & GMod.Dept & "' and session = '" & GMod.Session & "' order by seqorder", "grp")
+            GMod.DataSetRet("select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vtype not in ('OPEN')  and Vou_no_seq='" & GMod.Dept & "' and session = '" & GMod.Session & "' order by seqorder", "grp")
         ElseIf GMod.role.ToUpper = "VIEWER LEVEL-1" And GMod.staff1 = 1 Then
             GMod.DataSetRet("select vtype from Vtype where cmp_id='" & GMod.Cmpid & "' and vtype not in ('OPEN')  and session ='" & GMod.Session & "'  order by vtype", "grp")
         End If
@@ -43,6 +45,9 @@ Public Class frmBook
         dgBook.Location = CrystalReportViewer1.Location
         dgBook.Height = Me.Height - 120
         dgBook.Width = CrystalReportViewer1.Width
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
     End Sub
 
     Private Sub btndelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btngroup.Click

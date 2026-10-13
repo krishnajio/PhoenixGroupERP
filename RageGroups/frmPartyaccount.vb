@@ -92,31 +92,89 @@ Public Class frmPartyaccount
         End Try
     End Sub
     Sub fillgrid(ByVal a As String)
-        Dim i As Integer
-        If a = "" Then
-            sql = "select * from " & GMod.ACC_HEAD & "   where group_name='" & lblgroupname.Text & "' and cmp_id='" & GMod.Cmpid & "' and Area_code='" & cmbAreaCode.Text & "' order by account_head_name,group_name,sub_group_name "
-        Else
-            sql = "select * from " & GMod.ACC_HEAD & "  where cmp_id='" & GMod.Cmpid & "' and account_head_name like '%" & a & "%' and group_name='" & lblgroupname.Text & "' and Area_code='" & cmbAreaCode.Text & "' order by  account_head_name,group_name,sub_group_name"
-        End If
-        GMod.DataSetRet(sql, "acc")
-        dgaccounthead.Rows.Clear()
-        For i = 0 To GMod.ds.Tables("acc").Rows.Count - 1
-            dgaccounthead.Rows.Add()
-            dgaccounthead(0, i).Value = GMod.ds.Tables("acc").Rows(i)("account_code")
-            dgaccounthead(1, i).Value = GMod.ds.Tables("acc").Rows(i)("account_head_name")
-            dgaccounthead(2, i).Value = GMod.ds.Tables("acc").Rows(i)("group_name")
-            dgaccounthead(3, i).Value = GMod.ds.Tables("acc").Rows(i)("sub_group_name")
-            dgaccounthead(4, i).Value = GMod.ds.Tables("acc").Rows(i)("opening_dr")
-            dgaccounthead(5, i).Value = GMod.ds.Tables("acc").Rows(i)("opening_cr")
-            dgaccounthead(6, i).Value = GMod.ds.Tables("acc").Rows(i)("credit_limit")
-            dgaccounthead(7, i).Value = GMod.ds.Tables("acc").Rows(i)("credit_days")
-            'dgaccounthead(8, i).Value = GMod.ds.Tables("acc").Rows(i)("interest_rule_id")
-            'dgaccounthead(9, i).Value = GMod.ds.Tables("acc").Rows(i)("rate_of_interest")
-            dgaccounthead(8, i).Value = GMod.ds.Tables("acc").Rows(i)("remark3")
-            dgaccounthead(9, i).Value = GMod.ds.Tables("acc").Rows(i)("account_type")
-            dgaccounthead(10, i).Value = GMod.ds.Tables("acc").Rows(i)("pan_no")
-            dgaccounthead(11, i).Value = GMod.ds.Tables("acc").Rows(i)("remark2")
-        Next
+        'Dim i As Integer
+        'If a = "" Then
+        '    sql = "select * from " & GMod.ACC_HEAD & "   where group_name='" & lblgroupname.Text & "' and cmp_id='" & GMod.Cmpid & "' and Area_code='" & cmbAreaCode.Text & "' order by account_head_name,group_name,sub_group_name "
+        'Else
+        '    sql = "select * from " & GMod.ACC_HEAD & "  where cmp_id='" & GMod.Cmpid & "' and account_head_name like '%" & a & "%' and group_name='" & lblgroupname.Text & "' and Area_code='" & cmbAreaCode.Text & "' order by  account_head_name,group_name,sub_group_name"
+        'End If
+        'GMod.DataSetRet(sql, "acc")
+        'dgaccounthead.Rows.Clear()
+        'For i = 0 To GMod.ds.Tables("acc").Rows.Count - 1
+        '    dgaccounthead.Rows.Add()
+        '    dgaccounthead(0, i).Value = GMod.ds.Tables("acc").Rows(i)("account_code")
+        '    dgaccounthead(1, i).Value = GMod.ds.Tables("acc").Rows(i)("account_head_name")
+        '    dgaccounthead(2, i).Value = GMod.ds.Tables("acc").Rows(i)("group_name")
+        '    dgaccounthead(3, i).Value = GMod.ds.Tables("acc").Rows(i)("sub_group_name")
+        '    dgaccounthead(4, i).Value = GMod.ds.Tables("acc").Rows(i)("opening_dr")
+        '    dgaccounthead(5, i).Value = GMod.ds.Tables("acc").Rows(i)("opening_cr")
+        '    dgaccounthead(6, i).Value = GMod.ds.Tables("acc").Rows(i)("credit_limit")
+        '    dgaccounthead(7, i).Value = GMod.ds.Tables("acc").Rows(i)("credit_days")
+        '    'dgaccounthead(8, i).Value = GMod.ds.Tables("acc").Rows(i)("interest_rule_id")
+        '    'dgaccounthead(9, i).Value = GMod.ds.Tables("acc").Rows(i)("rate_of_interest")
+        '    dgaccounthead(8, i).Value = GMod.ds.Tables("acc").Rows(i)("remark3")
+        '    dgaccounthead(9, i).Value = GMod.ds.Tables("acc").Rows(i)("account_type")
+        '    dgaccounthead(10, i).Value = GMod.ds.Tables("acc").Rows(i)("pan_no")
+        '    dgaccounthead(11, i).Value = GMod.ds.Tables("acc").Rows(i)("remark2")
+        'Next
+
+        Try
+            Dim sql As String
+
+            If a = "" Then
+                sql = "SELECT * FROM " & GMod.ACC_HEAD &
+                      " WHERE group_name='" & lblgroupname.Text &
+                      "' AND cmp_id='" & GMod.Cmpid &
+                      "' AND Area_code='" & cmbAreaCode.Text &
+                      "' ORDER BY account_head_name, group_name, sub_group_name"
+            Else
+                sql = "SELECT * FROM " & GMod.ACC_HEAD &
+                      " WHERE cmp_id='" & GMod.Cmpid &
+                      "' AND account_head_name LIKE '%" & a &
+                      "%' AND group_name='" & lblgroupname.Text &
+                      "' AND Area_code='" & cmbAreaCode.Text &
+                      "' ORDER BY account_head_name, group_name, sub_group_name"
+            End If
+
+            GMod.DataSetRet(sql, "acc")
+
+            If GMod.ds Is Nothing OrElse
+               Not GMod.ds.Tables.Contains("acc") Then
+                Throw New Exception("Account data table 'acc' was not loaded.")
+            End If
+
+            Dim dt As DataTable = GMod.ds.Tables("acc")
+
+            dgaccounthead.Rows.Clear()
+
+            For Each dr As DataRow In dt.Rows
+
+                Dim idx As Integer = dgaccounthead.Rows.Add()
+
+                For col As Integer = 0 To 11
+                    dgaccounthead(col, idx).Value = DBNull.Value
+                Next
+
+                dgaccounthead(0, idx).Value = If(IsDBNull(dr("account_code")), "", dr("account_code").ToString())
+                dgaccounthead(1, idx).Value = If(IsDBNull(dr("account_head_name")), "", dr("account_head_name").ToString())
+                dgaccounthead(2, idx).Value = If(IsDBNull(dr("group_name")), "", dr("group_name").ToString())
+                dgaccounthead(3, idx).Value = If(IsDBNull(dr("sub_group_name")), "", dr("sub_group_name").ToString())
+                dgaccounthead(4, idx).Value = If(IsDBNull(dr("opening_dr")), 0, dr("opening_dr"))
+                dgaccounthead(5, idx).Value = If(IsDBNull(dr("opening_cr")), 0, dr("opening_cr"))
+                dgaccounthead(6, idx).Value = If(IsDBNull(dr("credit_limit")), 0, dr("credit_limit"))
+                dgaccounthead(7, idx).Value = If(IsDBNull(dr("credit_days")), 0, dr("credit_days"))
+                dgaccounthead(8, idx).Value = If(IsDBNull(dr("remark3")), "", dr("remark3").ToString())
+                dgaccounthead(9, idx).Value = If(IsDBNull(dr("account_type")), "", dr("account_type").ToString())
+                dgaccounthead(10, idx).Value = If(IsDBNull(dr("pan_no")), "", dr("pan_no").ToString())
+                dgaccounthead(11, idx).Value = If(IsDBNull(dr("remark2")), "", dr("remark2").ToString())
+
+            Next
+
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString(), "Account Head Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
     End Sub
     Sub filltdsparty()
 
@@ -141,47 +199,50 @@ Public Class frmPartyaccount
         Next
     End Sub
     Private Sub btnsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsave.Click
-        If MessageBox.Show("Are U sure", "Confirmation", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-            If Trim(txtacheadname.Text) = "" Then
-                MsgBox("Please enter account head / Ledger Name", MsgBoxStyle.Critical, GMod.Cmpname)
-                txtacheadname.Focus()
-                Exit Sub
-            End If
-            If cmbdrcr.Text = "Dr" Then
-                sql = "insert into " & GMod.ACC_HEAD & "(cmp_id,account_code,account_head_name,group_name,sub_group_name,"
-                sql += "account_type,opening_dr,opening_cr,credit_days,credit_limit,address,city,state,phone,pan_no,rate_of_interest,interest_rule_id,remark1,remark2,Area_code,remark3,dobdoi)"
-                sql += " values('" & GMod.Cmpid & "','" & lblacheadcode.Text & "',"
-                sql += "'" & txtacheadname.Text.ToUpper.Trim & "','" & lblgroupname.Text & "','" & cmbsubgrpname.Text & "','" & txtGstIn.Text & "',"
-                sql += Val(txtamt.Text) & ",0,'" & txtcrdays.Text.ToString & "','" & txtcrlimit.Text.ToString & "','" & txtaddress.Text & "',"
-                sql += "'" & txtcity.Text & "','" & txtstate.Text & "','" & txtphno.Text & "','" & txtpanno.Text & "'," & Val(txtintrate.Text) & ",'"
-                sql += GMod.username & "','" & txtremark1.Text & "','" & txtremark2.Text & "','" & cmbAreaCode.Text & "','" & txtEmailID.Text & "','" & dtdoidob.Value.ToShortDateString & "')"
-            Else
-                sql = "insert into " & GMod.ACC_HEAD & "(cmp_id,account_code,account_head_name,group_name,sub_group_name,"
-                sql += "account_type,opening_Cr,opening_Dr,credit_days,credit_limit,address,city,state,phone,pan_no,rate_of_interest,interest_rule_id,remark1,remark2,Area_code,remark3,dobdoi)"
-                sql += " values('" & GMod.Cmpid & "','" & lblacheadcode.Text & "',"
-                sql += "'" & txtacheadname.Text.ToUpper.Trim & "','" & lblgroupname.Text & "','" & cmbsubgrpname.Text & "','" & Trim(txtGstIn.Text) & "',"
-                sql += Val(txtamt.Text) & ",0,'" & txtcrdays.Text.ToString & "','" & txtcrlimit.Text.ToString & "','" & txtaddress.Text & "',"
-                sql += "'" & txtcity.Text & "','" & txtstate.Text & "','" & txtphno.Text & "','" & txtpanno.Text & "'," & Val(txtintrate.Text) & ",'"
-                sql += GMod.username & "','" & txtremark1.Text & "','" & txtremark2.Text & "','" & cmbAreaCode.Text & "','" & txtEmailID.Text & "','" & dtdoidob.Value.ToShortDateString & "')"
-            End If
-            s = GMod.SqlExecuteNonQuery(sql)
-            If s <> "SUCCESS" Then
-                MsgBox(s, MsgBoxStyle.Critical, "Error")
-            Else
-                MsgBox("Account Head Created Successfully", MsgBoxStyle.Information, GMod.Cmpname)
-                CreateHeadToNextSession()
-                If txtBankAccountNumber.Text <> "" Then
-                    sql = "insert into [partyBankDetials] (partyCode, bankName, accNumber, ifscCode, branch,Cmp_id)"
-                    sql &= " values ('" & lblacheadcode.Text & "','" & txtBankName.Text & "','" & txtBankAccountNumber.Text & "','" & txtIFSCCode.Text & "','" & txtBranch.Text & "','" & GMod.Cmpid & "')"
-                    GMod.SqlExecuteNonQuery(sql)
-                End If
-                btnreset_Click(sender, e)
-                fillgrid("")
-                nxtid()
-            End If
+        ' If MessageBox.Show("Are U sure", "Confirmation", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+        If Trim(txtacheadname.Text) = "" Then
+            MsgBox("Please enter account head / Ledger Name", MsgBoxStyle.Critical, GMod.Cmpname)
             txtacheadname.Focus()
-            End
+            Exit Sub
         End If
+        If cmbdrcr.Text = "Dr" Then
+            sql = "insert into " & GMod.ACC_HEAD & "(cmp_id,account_code,account_head_name,group_name,sub_group_name,"
+            sql += "account_type,opening_dr,opening_cr,credit_days,credit_limit,address,city,state,phone,pan_no,rate_of_interest,interest_rule_id,remark1,remark2,Area_code,remark3,dobdoi)"
+            sql += " values('" & GMod.Cmpid & "','" & lblacheadcode.Text & "',"
+            sql += "'" & txtacheadname.Text.ToUpper.Trim & "','" & lblgroupname.Text & "','" & cmbsubgrpname.Text & "','" & txtGstIn.Text & "',"
+            sql += Val(txtamt.Text) & ",0,'" & txtcrdays.Text.ToString & "','" & txtcrlimit.Text.ToString & "','" & txtaddress.Text & "',"
+            sql += "'" & txtcity.Text & "','" & txtstate.Text & "','" & txtphno.Text & "','" & txtpanno.Text & "'," & Val(txtintrate.Text) & ",'"
+            sql += GMod.username & "','" & txtremark1.Text & "','" & txtremark2.Text & "','" & cmbAreaCode.Text & "','" & txtEmailID.Text & "','" & dtdoidob.Value.ToShortDateString & "')"
+        Else
+            sql = "insert into " & GMod.ACC_HEAD & "(cmp_id,account_code,account_head_name,group_name,sub_group_name,"
+            sql += "account_type,opening_Cr,opening_Dr,credit_days,credit_limit,address,city,state,phone,pan_no,rate_of_interest,interest_rule_id,remark1,remark2,Area_code,remark3,dobdoi)"
+            sql += " values('" & GMod.Cmpid & "','" & lblacheadcode.Text & "',"
+            sql += "'" & txtacheadname.Text.ToUpper.Trim & "','" & lblgroupname.Text & "','" & cmbsubgrpname.Text & "','" & Trim(txtGstIn.Text) & "',"
+            sql += Val(txtamt.Text) & ",0,'" & txtcrdays.Text.ToString & "','" & txtcrlimit.Text.ToString & "','" & txtaddress.Text & "',"
+            sql += "'" & txtcity.Text & "','" & txtstate.Text & "','" & txtphno.Text & "','" & txtpanno.Text & "'," & Val(txtintrate.Text) & ",'"
+            sql += GMod.username & "','" & txtremark1.Text & "','" & txtremark2.Text & "','" & cmbAreaCode.Text & "','" & txtEmailID.Text & "','" & dtdoidob.Value.ToShortDateString & "')"
+        End If
+
+        Dim sqltrans As SqlTransaction = GMod.SqlConn.BeginTransaction()
+        s = GMod.SqlExecuteNonQuery(sql)
+        If s <> "SUCCESS" Then
+            MsgBox(s, MsgBoxStyle.Critical, "Error")
+        Else
+            MessageBox.Show("Account Head Created Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            If PrevSession = True Then
+                ' CreateHeadToNextSession()
+            End If
+
+            If txtBankAccountNumber.Text <> "" Then
+                sql = "insert into [partyBankDetials] (partyCode, bankName, accNumber, ifscCode, branch,Cmp_id)"
+                sql &= " values ('" & lblacheadcode.Text & "','" & txtBankName.Text & "','" & txtBankAccountNumber.Text & "','" & txtIFSCCode.Text & "','" & txtBranch.Text & "','" & GMod.Cmpid & "')"
+                GMod.SqlExecuteNonQuery(sql)
+            End If
+            btnreset_Click(sender, e)
+        End If
+        'txtacheadname.Focus()
+        'End
+        'End If
     End Sub
 
     Public Sub CreateHeadToNextSession()
@@ -244,13 +305,15 @@ Public Class frmPartyaccount
         txtBranch.Clear()
         'btnsave.Enabled = True
         btn_modify.Text = "&Modify"
-        nxtid()
-        fillgrid("")
+        
         cmbAreaCode.Enabled = True
         cmbAreaName.Enabled = True
         lblgroupname.Enabled = True
         lblgroupsuffix.Enabled = True
         txtacheadname.Focus()
+
+        nxtid()
+        fillgrid("")
     End Sub
     Sub showdata(ByVal ano As String)
         GMod.DataSetRet("select * from " & GMod.ACC_HEAD & " where account_code='" & ano & "'", "ser")
@@ -281,6 +344,12 @@ Public Class frmPartyaccount
             txtremark2.Text = GMod.ds.Tables("ser").Rows(0)("remark2")
             txtinttype.Text = GMod.ds.Tables("ser").Rows(0)("remark3")
             txtGstIn.Text = GMod.ds.Tables("ser").Rows(0)("account_type").ToString.Trim()
+            Try
+                dtdoidob.Value = CDate(GMod.ds.Tables("ser").Rows(0)("dobdoi").ToString.Trim())
+            Catch ex As Exception
+
+            End Try
+
 
             ' bankName, accNumber, ifscCode, branch, id
             Try
@@ -796,7 +865,6 @@ Public Class frmPartyaccount
    
     Private Sub btnModift_New_Click(sender As Object, e As EventArgs) Handles btn_modify.Click
         Dim sqltrans As SqlTransaction = GMod.SqlConn.BeginTransaction()
-
         Try
             '================= PREPARE =================
             Dim accName As String = Trim(txtacheadname.Text)
@@ -932,6 +1000,5 @@ Public Class frmPartyaccount
         End Try
     End Sub
 
-   
-
+    
 End Class

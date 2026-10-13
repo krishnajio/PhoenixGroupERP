@@ -80,6 +80,8 @@ Partial Class frmPartyaccount
         Me.cmbintruleid = New System.Windows.Forms.ComboBox()
         Me.txtinttype = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.dtdoidob = New System.Windows.Forms.DateTimePicker()
+        Me.Label27 = New System.Windows.Forms.Label()
         Me.txtGstIn = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -100,8 +102,6 @@ Partial Class frmPartyaccount
         Me.txtaddress = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.txtPANSearch = New System.Windows.Forms.TextBox()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.dtdoidob = New System.Windows.Forms.DateTimePicker()
         CType(Me.dgaccounthead, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -768,6 +768,27 @@ Partial Class frmPartyaccount
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Other Details"
         '
+        'dtdoidob
+        '
+        Me.dtdoidob.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtdoidob.CustomFormat = "dd/MMM/yyyy"
+        Me.dtdoidob.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtdoidob.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtdoidob.Location = New System.Drawing.Point(107, 304)
+        Me.dtdoidob.Name = "dtdoidob"
+        Me.dtdoidob.Size = New System.Drawing.Size(103, 20)
+        Me.dtdoidob.TabIndex = 71
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(36, 306)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(68, 15)
+        Me.Label27.TabIndex = 70
+        Me.Label27.Text = "DOB/DOI:"
+        '
         'txtGstIn
         '
         Me.txtGstIn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -963,27 +984,6 @@ Partial Class frmPartyaccount
         Me.txtPANSearch.Name = "txtPANSearch"
         Me.txtPANSearch.Size = New System.Drawing.Size(274, 21)
         Me.txtPANSearch.TabIndex = 61
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(36, 306)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(68, 15)
-        Me.Label27.TabIndex = 70
-        Me.Label27.Text = "DOB/DOI:"
-        '
-        'dtdoidob
-        '
-        Me.dtdoidob.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtdoidob.CustomFormat = "dd/MMM/yyyy"
-        Me.dtdoidob.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtdoidob.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtdoidob.Location = New System.Drawing.Point(107, 304)
-        Me.dtdoidob.Name = "dtdoidob"
-        Me.dtdoidob.Size = New System.Drawing.Size(103, 20)
-        Me.dtdoidob.TabIndex = 71
         '
         'frmPartyaccount
         '

@@ -567,8 +567,13 @@ Public Class frmMDI
     End Sub
 
     Private Sub ToolStripMenuItem21_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem21.Click
-        Dim t As New frmCashBook
-        t.ShowDialog()
+        Try
+            Dim t As New frmCashBook1
+            t.ShowDialog()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+      
     End Sub
     Private Sub ToolStripMenuItem11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim t As New frmModifyVoucherDate

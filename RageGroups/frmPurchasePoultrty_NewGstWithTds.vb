@@ -352,13 +352,18 @@ Public Class frmPurchasePoultrty_NewGstWithTds
             Try
                 If btnsave.Enabled = False Then
                     Dim sqldel As String
-                    sqldel = "delete from " & GMod.VENTRY & " where Vou_type='" & voutype.Text & "' and Vou_no= " & lblvouno.Text
+                    sqldel = "delete from " & GMod.VENTRY & " where Vou_type='" & voutype.Text & "' and Vou_no= '" & lblvouno.Text & "'"
                     Dim cmddel1 As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
                     cmddel1.ExecuteNonQuery()
 
-                    sqldel = "delete  from purchase_data where  Vou_no= '" & lblvouno.Text & "' and Vou_type='" & voutype.Text & "' and Cmp_id='" & GMod.Cmpid & "' and Session='" & GMod.Session & "'"
-                    Dim cmddel2 As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
-                    cmddel2.ExecuteNonQuery()
+                    Try
+                        sqldel = "delete  from purchase_data where  Vou_no= '" & lblvouno.Text & "' and Vou_type='" & voutype.Text & "' and Cmp_id='" & GMod.Cmpid & "' and Session='" & GMod.Session & "'"
+                        Dim cmddel2 As New SqlCommand(sqldel, GMod.SqlConn, sqltrans)
+                        cmddel2.ExecuteNonQuery()
+                    Catch ex As Exception
+                        MsgBox(ex.ToString)
+                    End Try
+                   
 
                     sql = "delete from Purchase_Payment where vou_type='" & voutype.Text & "' and  vou_no='" & lblvouno.Text & "' and cmp_id='" & GMod.Cmpid & "' and session='" & GMod.Session & "'"
                     Dim cmddel As New SqlCommand(sql, GMod.SqlConn, sqltrans)

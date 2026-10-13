@@ -224,11 +224,10 @@ Public Class frmVentry
         End If
 
         'getting a/c code from acc head 
-        Try
-            s = "seelct  "
-        Catch ex As Exception
-
-        End Try
+        'Try
+        's = "seelct  "
+        'Catch ex As Exception
+        'End Try
     End Sub
     Sub sumdrcr()
         Try
@@ -475,6 +474,12 @@ Public Class frmVentry
         '        Next
         'End Select
         '--------------------------------------------------------------------------------------------
+        If Val(lblcrsum.Text) <> Val(lbldrsum.Text) Then
+            MsgBox("Dr and Cr Not Tally", MsgBoxStyle.Critical)
+            dgvoucher.Focus()
+            Exit Sub
+        End If
+
         Try
             For x = 0 To dgvoucher.RowCount - 1
                 q = "select account_head_name from " & GMod.ACC_HEAD & " where account_code = '" & dgvoucher(1, x).Value.ToString & "'"

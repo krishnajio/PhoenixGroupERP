@@ -299,6 +299,13 @@ Public Class frmPaymentandChqprint
         '    dtpexpensedate.Focus()
         '    Exit Sub
         'End If
+        'Getting Bill Number For Narraton 10-10-26
+        Try
+
+        Catch ex As Exception
+
+        End Try
+
         If MessageBox.Show("Are U sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes Then
 
             'adiing Dr amount for ckecing to bill amount
@@ -376,7 +383,7 @@ Public Class frmPaymentandChqprint
                     sql &= "'-',"
                     sql &= "'" & dgPayment(7, j).Value.ToString & "',"
                     sql &= "'" & dgPayment(6, j).Value.ToString & "',"
-                    sql &= "'" & dgPayment(4, j).Value & "',"
+                    sql &= "'" & dgPayment(4, j).Value.ToString() & "',"
                     sql &= "'" & dgPayment(5, j).Value & "',"
                     sql &= "'1/1/2000',"
                     sql &= "'1/1/2000',"
@@ -917,9 +924,8 @@ Public Class frmPaymentandChqprint
         ComboBox2.DataSource = GMod.ds.Tables("aclist1")
         ComboBox2.DisplayMember = "sub_group_name"
     End Sub
-
-
     Dim amtchk As Double = 0
+    Dim BillNo As String = ""
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim rcount As Integer = 0
         Dim amt As Double
@@ -929,14 +935,13 @@ Public Class frmPaymentandChqprint
             If dgBillNo(0, rcount).Value = 1 Then
                 amt = amt + (Val(dgBillNo(3, rcount).Value) - Val(dgBillNo(5, rcount).Value) - Val(dgBillNo(6, rcount).Value))
                 amtchk = amt
-
                 ' MessageBox.Show(dgBillNo(0, rcount).Value.ToString() + "  " + dgBillNo(1, rcount).Value.ToString)
+                BillNo = BillNo & dgBillNo(0, rcount).Value.ToString & ","
             End If
         Next
         dgBillNo.Enabled = False
         txtDramt.Text = amt
         amt = 0
-
     End Sub
     Dim ivar As Integer
     Dim headfont As Font

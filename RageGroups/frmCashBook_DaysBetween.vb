@@ -1,4 +1,4 @@
-Public Class frmCashBook
+Public Class frmCashBook_DaysBetween
 
     Private Sub frmCashBook_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Text = Me.Text & "    " & "[" & GMod.Cmpname & "]"

@@ -679,6 +679,14 @@ Public Class frmExpenses
             cmbAcHead.Focus()
             Exit Sub
         End If
+        Try
+            Dim rowIndex As Integer = dgPayment.CurrentCell.RowIndex
+            Dim value As Object = dgPayment.Rows(rowIndex).Cells(11).Value
+            MessageBox.Show(If(value Is Nothing, "", value.ToString()))
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
     Private Sub txtChqNo_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtChqNo.KeyUp
         If e.KeyCode = Keys.Enter Then
@@ -868,4 +876,6 @@ Public Class frmExpenses
         End Try
 
     End Sub
+
+
 End Class

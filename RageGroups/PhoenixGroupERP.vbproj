@@ -54,7 +54,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>Phoenix_GroupERP.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -880,10 +880,10 @@
     <Compile Include="frmBooksData.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCashBook.designer.vb">
-      <DependentUpon>frmCashBook.vb</DependentUpon>
+    <Compile Include="frmCashBook_DaysBetween.designer.vb">
+      <DependentUpon>frmCashBook_DaysBetween.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCashBook.vb">
+    <Compile Include="frmCashBook_DaysBetween.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCashBook2.Designer.vb">
@@ -2908,8 +2908,8 @@
     <EmbeddedResource Include="frmBooksData.resx">
       <DependentUpon>frmBooksData.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCashBook.resx">
-      <DependentUpon>frmCashBook.vb</DependentUpon>
+    <EmbeddedResource Include="frmCashBook_DaysBetween.resx">
+      <DependentUpon>frmCashBook_DaysBetween.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCashBook2.resx">
